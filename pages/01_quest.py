@@ -205,7 +205,7 @@ else:
 st.markdown(
     '<div class="quiz-card">'
     '<div style="font-size:.9rem;color:#aaaacc;text-align:center;margin-bottom:20px;">次の英単語の意味を選んでください ' + diff_stars + bonus + '</div>'
-    '<div class="word-display">' + q.word + '</div>'
+    '<div style="display:flex;align-items:center;justify-content:center;"><div class="word-display" style="margin-bottom:0;">' + q.word + '</div>' + audio_html + '</div>'
     '<div style="text-align:center;"><span class="pos-badge">' + pos_ja + '</span></div>'
     '</div>', unsafe_allow_html=True)
 

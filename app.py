@@ -10,6 +10,8 @@ from core.save_manager import (
     register_user, verify_login, user_exists, is_username_taken,
     get_registered_users
 )
+from core.player import PlayerManager, streak_multiplier, STREAK_BONUS_TABLE
+from core.i18n import t, grade_label, LANG_OPTIONS
 
 st.set_page_config(page_title="英検Quest", page_icon="⚔️", layout="centered", initial_sidebar_state="expanded")
 
@@ -26,10 +28,6 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 </style>""", unsafe_allow_html=True)
 
 
-def _grade_label(k):
-    return {"grade_5":"5級","grade_4":"4級","grade_3":"3級","grade_pre2":"準2級","grade_2":"2級"}.get(k,k)
-
-
 def init_session():
     for k, v in [("logged_in", False), ("username", ""), ("player", None),
                  ("total_correct", 0), ("total_questions", 0), ("streak", 0)]:
@@ -40,7 +38,7 @@ init_session()
 
 
 # ─────────────────────────────────────────
-# ログイン画面
+# ログイン画面（言語切替なし：デフォルト日本語）
 # ─────────────────────────────────────────
 if not st.session_state.logged_in:
     st.markdown(
@@ -118,16 +116,16 @@ if not st.session_state.logged_in:
 # ─────────────────────────────────────────
 def render_sidebar():
     p = st.session_state.player
-    from core.player import PlayerManager, streak_multiplier, STREAK_BONUS_TABLE
+    lang = p.get("language", "ja")
     pm = PlayerManager(p)
     hp_pct = pm.hp_percent() * 100
     exp_pct = pm.exp_percent() * 100
     streak = st.session_state.streak
     total = st.session_state.total_questions
     correct = st.session_state.total_correct
-    accuracy = str(round(correct/total*100)) + "%" if total > 0 else "---"
+    accuracy = str(round(correct / total * 100)) + "%" if total > 0 else "---"
     current_mult = streak_multiplier(streak)
-    next_thresh = next((t for t in sorted(STREAK_BONUS_TABLE) if t > streak), None)
+    next_thresh = next((t_v for t_v in sorted(STREAK_BONUS_TABLE) if t_v > streak), None)
     bonus_html = ""
     if current_mult > 1.0:
         bonus_html = '<b style="color:#ffe066;">EXP x' + str(current_mult) + '</b>'
@@ -139,33 +137,33 @@ def render_sidebar():
             '<div style="text-align:center;padding:16px 0 8px;">'
             '<div style="font-size:3rem;">⚔️</div>'
             '<div style="font-size:1.3rem;font-weight:700;color:#ffe066;margin-top:8px;">' + p["name"] + '</div>'
-            '<div style="font-size:.85rem;color:#aaaacc;">Lv. ' + str(p["level"]) + ' | 英検' + _grade_label(p["grade_target"]) + '</div>'
+            '<div style="font-size:.85rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
-        st.markdown('<div class="stat-label">HP ' + str(p["hp"]) + ' / ' + str(p["hp_max"]) + '</div>', unsafe_allow_html=True)
-        st.markdown('<div class="hp-bar-outer"><div class="hp-bar-inner" style="width:' + str(round(hp_pct,1)) + '%"></div></div>', unsafe_allow_html=True)
-        st.markdown('<div class="stat-label">EXP ' + str(p["exp"]) + ' / ' + str(p["exp_to_next"]) + '</div>', unsafe_allow_html=True)
-        st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct,1)) + '%"></div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="stat-label">' + t("hp", lang) + ' ' + str(p["hp"]) + ' / ' + str(p["hp_max"]) + '</div>', unsafe_allow_html=True)
+        st.markdown('<div class="hp-bar-outer"><div class="hp-bar-inner" style="width:' + str(round(hp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="stat-label">' + t("exp", lang) + ' ' + str(p["exp"]) + ' / ' + str(p["exp_to_next"]) + '</div>', unsafe_allow_html=True)
+        st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
         st.markdown("---")
         st.markdown(
             '<div style="font-size:.82rem;line-height:2.1;color:#ccccee;">'
-            '🔥 連続正解 <b style="color:#ffe066;">' + str(streak) + '</b> 問 ' + bonus_html + '<br>'
-            '📊 正答率 <b style="color:#ffe066;">' + accuracy + '</b><br>'
-            '📝 累計 <b style="color:#ffe066;">' + str(total) + '</b> 問'
+            '🔥 ' + t("streak", lang) + ' <b style="color:#ffe066;">' + str(streak) + '</b> ' + t("questions", lang) + ' ' + bonus_html + '<br>'
+            '📊 ' + t("accuracy", lang) + ' <b style="color:#ffe066;">' + accuracy + '</b><br>'
+            '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang)
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
         if p["hp"] <= 0:
-            st.error("HPが0！正解するとHP回復します")
-        if st.button("💾 セーブ", use_container_width=True):
+            st.error(t("hp0_msg", lang))
+        if st.button(t("save", lang), use_container_width=True):
             save_player(st.session_state.player, st.session_state.username)
-            st.success("セーブしました！")
-        if st.button("🚪 ログアウト", use_container_width=True):
+            st.success("セーブしました！" if lang == "ja" else "已儲存！")
+        if st.button(t("logout", lang), use_container_width=True):
             save_player(st.session_state.player, st.session_state.username)
             for key in list(st.session_state.keys()):
                 del st.session_state[key]
             st.rerun()
-        with st.expander("開発者メニュー"):
-            if st.button("データ削除", use_container_width=True):
+        with st.expander(t("dev_menu", lang)):
+            if st.button(t("data_delete", lang), use_container_width=True):
                 delete_save(st.session_state.username)
                 for key in list(st.session_state.keys()):
                     del st.session_state[key]
@@ -178,40 +176,35 @@ render_sidebar()
 # ホーム画面
 # ─────────────────────────────────────────
 p = st.session_state.player
+lang = p.get("language", "ja")
+
 st.markdown(
     '<div style="font-size:2.5rem;font-weight:700;text-align:center;'
     'background:linear-gradient(135deg,#ffe066,#ffaa00,#ff6600);'
     '-webkit-background-clip:text;-webkit-text-fill-color:transparent;'
     'background-clip:text;margin-bottom:4px;">⚔️ 英検Quest ⚔️</div>'
-    '<div style="text-align:center;color:#888;margin-bottom:24px;">英単語を制して、伝説の勇者へ</div>',
+    '<div style="text-align:center;color:#888;margin-bottom:24px;">' + t("app_subtitle", lang) + '</div>',
     unsafe_allow_html=True)
 
 st.markdown(
     '<div class="info-card">'
     '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">'
-    '⚔️ おかえり、<b style="color:#ffe066;">' + p["name"] + '</b>！<br>'
-    '現在 <b style="color:#fff;">Lv. ' + str(p["level"]) + '</b> | '
-    '英検<b style="color:#fff;">' + _grade_label(p["grade_target"]) + '</b>に挑戦中'
+    '⚔️ ' + t("home_welcome", lang) + '<b style="color:#ffe066;">' + p["name"] + '</b>！<br>'
+    t("level", lang) + ' <b style="color:#fff;">' + str(p["level"]) + '</b> | '
+    + t("home_challenge", lang) + '<b style="color:#fff;">' + grade_label(p["grade_target"], lang) + '</b>' + t("home_challenge_sub", lang)
     '</div></div>',
     unsafe_allow_html=True)
 
 st.markdown(
     '<div class="info-card">'
-    '<div style="font-size:1.05rem;font-weight:700;color:#ffe066;margin-bottom:10px;">📜 今日のミッション</div>'
-    '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">'
-    '✅ クイズを <b style="color:#fff;">10問</b> 解く<br>'
-    '✅ 正答率 <b style="color:#fff;">80%</b> 以上を目指す<br>'
-    '✅ HPを <b style="color:#fff;">0</b> にしないで完走する'
-    '</div></div>'
+    '<div style="font-size:1.05rem;font-weight:700;color:#ffe066;margin-bottom:10px;">' + t("mission_title", lang) + '</div>'
+    '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">' + t("mission_body", lang) + '</div>'
+    '</div>'
     '<div class="info-card">'
-    '<div style="font-size:1.05rem;font-weight:700;color:#ffe066;margin-bottom:10px;">🗺️ 使い方</div>'
-    '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">'
-    '👈 左のサイドバーから <b style="color:#fff;">quest</b> を選んでクイズ開始！<br>'
-    '⚔️ 正解すると <b style="color:#ffe066;">EXP獲得</b> → レベルアップ<br>'
-    '💔 不正解すると <b style="color:#ff8080;">HPが減少</b><br>'
-    '🔥 連続正解で <b style="color:#ffe066;">EXPボーナス</b>（3連続x1.2、5連続x1.5、10連続x2.0）'
-    '</div></div>',
+    '<div style="font-size:1.05rem;font-weight:700;color:#ffe066;margin-bottom:10px;">' + t("howto_title", lang) + '</div>'
+    '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">' + t("howto_body", lang) + '</div>'
+    '</div>',
     unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
-st.page_link("pages/01_quest.py", label="⚔️ クエスト開始！", icon="🗡️")
+st.page_link("pages/01_quest.py", label=t("start_quest", lang), icon="🗡️")

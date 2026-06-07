@@ -8,6 +8,7 @@ if str(_root) not in sys.path:
 
 from core.save_manager import load_player, save_player, get_user_save_path
 from core.player import PlayerManager
+from core.i18n import t, grade_label
 
 st.set_page_config(page_title="単語帳 | 英検Quest", page_icon="📖", layout="centered", initial_sidebar_state="expanded")
 
@@ -25,25 +26,19 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 </style>""", unsafe_allow_html=True)
 
 
-def _grade_label(k):
-    return {"grade_5":"5級","grade_4":"4級","grade_3":"3級","grade_pre2":"準2級","grade_2":"2級"}.get(k,k)
-
-
 def init_session():
     if "player" not in st.session_state:
         st.session_state.player = load_player(st.session_state.get("username", ""))
-    if "total_correct" not in st.session_state:
-        st.session_state.total_correct = 0
-    if "total_questions" not in st.session_state:
-        st.session_state.total_questions = 0
-    if "streak" not in st.session_state:
-        st.session_state.streak = 0
+    for k, v in [("total_correct", 0), ("total_questions", 0), ("streak", 0)]:
+        if k not in st.session_state:
+            st.session_state[k] = v
 
 init_session()
 
 
 def render_sidebar():
     p = st.session_state.player
+    lang = p.get("language", "ja")
     pm = PlayerManager(p)
     hp_pct = pm.hp_percent() * 100
     exp_pct = pm.exp_percent() * 100
@@ -52,13 +47,13 @@ def render_sidebar():
             '<div style="text-align:center;padding:16px 0 8px;">'
             '<div style="font-size:3rem;">⚔️</div>'
             '<div style="font-size:1.3rem;font-weight:700;color:#ffe066;margin-top:8px;">' + p["name"] + '</div>'
-            '<div style="font-size:.85rem;color:#aaaacc;">Lv. ' + str(p["level"]) + ' | 英検' + _grade_label(p["grade_target"]) + '</div>'
+            '<div style="font-size:.85rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
-        st.markdown('<div class="stat-label">HP ' + str(p["hp"]) + ' / ' + str(p["hp_max"]) + '</div>', unsafe_allow_html=True)
-        st.markdown('<div class="hp-bar-outer"><div class="hp-bar-inner" style="width:' + str(round(hp_pct,1)) + '%"></div></div>', unsafe_allow_html=True)
-        st.markdown('<div class="stat-label">EXP ' + str(p["exp"]) + ' / ' + str(p["exp_to_next"]) + '</div>', unsafe_allow_html=True)
-        st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct,1)) + '%"></div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="stat-label">' + t("hp", lang) + ' ' + str(p["hp"]) + ' / ' + str(p["hp_max"]) + '</div>', unsafe_allow_html=True)
+        st.markdown('<div class="hp-bar-outer"><div class="hp-bar-inner" style="width:' + str(round(hp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="stat-label">' + t("exp", lang) + ' ' + str(p["exp"]) + ' / ' + str(p["exp_to_next"]) + '</div>', unsafe_allow_html=True)
+        st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
         st.markdown("---")
 
 render_sidebar()
@@ -67,12 +62,14 @@ render_sidebar()
 # ─────────────────────────────────────────
 # メイン画面
 # ─────────────────────────────────────────
+p = st.session_state.player
+lang = p.get("language", "ja")
+
 st.markdown(
-    '<div style="font-size:2rem;font-weight:700;color:#ffe066;margin-bottom:4px;">📖 単語帳</div>'
-    '<div style="font-size:.9rem;color:#888;margin-bottom:24px;">クエストで間違えた単語を復習しよう</div>',
+    '<div style="font-size:2rem;font-weight:700;color:#ffe066;margin-bottom:4px;">' + t("wordbook_title", lang) + '</div>'
+    '<div style="font-size:.9rem;color:#888;margin-bottom:24px;">' + t("wordbook_subtitle", lang) + '</div>',
     unsafe_allow_html=True)
 
-# セーブデータから苦手単語を読み込む
 import json
 
 weak_words = []
@@ -87,7 +84,6 @@ if username:
         except Exception:
             weak_words = []
 
-# engineがあればセッション中の苦手単語も取得
 session_weak = []
 if "engine" in st.session_state and st.session_state.engine is not None:
     engine = st.session_state.engine
@@ -97,11 +93,13 @@ if "engine" in st.session_state and st.session_state.engine is not None:
             session_weak.append({
                 "word": row["word"],
                 "meaning_ja": row["meaning_ja"],
+                "meaning_zh": "" if str(row.get("meaning_zh", "")) == "nan" else str(row.get("meaning_zh", "")),
                 "miss_count": int(row["miss_count"]),
                 "hint": row.get("hint", ""),
+                "example_en": str(row.get("example_en", "")),
+                "example_ja": str(row.get("example_ja", "")),
             })
 
-# 表示する単語リストを決定（セッション中 > 保存済み）
 display_words = session_weak if session_weak else weak_words
 
 if not display_words:
@@ -109,13 +107,12 @@ if not display_words:
         '<div style="background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:1px solid #3a3a6a;'
         'border-radius:12px;padding:40px;text-align:center;">'
         '<div style="font-size:3rem;margin-bottom:16px;">🎉</div>'
-        '<div style="font-size:1.1rem;color:#ffe066;margin-bottom:8px;">苦手単語はまだありません！</div>'
-        '<div style="font-size:.9rem;color:#888;">クエストに挑戦すると、間違えた単語がここに記録されます。</div>'
+        '<div style="font-size:1.1rem;color:#ffe066;margin-bottom:8px;">' + t("no_weak", lang) + '</div>'
+        '<div style="font-size:.9rem;color:#888;">' + t("no_weak_sub", lang) + '</div>'
         '</div>', unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
-    st.page_link("pages/01_quest.py", label="⚔️ クエストに挑戦する", icon="🗡️")
+    st.page_link("pages/01_quest.py", label=t("start_quest_link", lang), icon="🗡️")
 else:
-    # 統計表示
     total_weak = len(display_words)
     total_misses = sum(w.get("miss_count", 1) for w in display_words)
 
@@ -123,42 +120,43 @@ else:
     with col1:
         st.markdown(
             '<div style="background:#1a1a3a;border-radius:10px;padding:16px;text-align:center;">'
-            '<div style="font-size:.8rem;color:#888;">苦手単語数</div>'
+            '<div style="font-size:.8rem;color:#888;">' + t("weak_count", lang) + '</div>'
             '<div style="font-size:2rem;color:#ff8080;font-weight:700;">' + str(total_weak) + '</div>'
             '</div>', unsafe_allow_html=True)
     with col2:
         st.markdown(
             '<div style="background:#1a1a3a;border-radius:10px;padding:16px;text-align:center;">'
-            '<div style="font-size:.8rem;color:#888;">累計ミス数</div>'
+            '<div style="font-size:.8rem;color:#888;">' + t("miss_count", lang) + '</div>'
             '<div style="font-size:2rem;color:#ffaa44;font-weight:700;">' + str(total_misses) + '</div>'
             '</div>', unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # フィルター
-    sort_option = st.selectbox("並び順", ["ミス回数が多い順", "ミス回数が少ない順", "単語のアルファベット順"])
+    sort_options = [t("sort_most", lang), t("sort_least", lang), t("sort_alpha", lang)]
+    sort_option = st.selectbox(t("sort_label", lang), sort_options)
 
-    if sort_option == "ミス回数が多い順":
+    if sort_option == sort_options[0]:
         display_words = sorted(display_words, key=lambda x: x.get("miss_count", 1), reverse=True)
-    elif sort_option == "ミス回数が少ない順":
+    elif sort_option == sort_options[1]:
         display_words = sorted(display_words, key=lambda x: x.get("miss_count", 1))
     else:
         display_words = sorted(display_words, key=lambda x: x.get("word", ""))
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # 単語カード表示
     for w in display_words:
         miss = w.get("miss_count", 1)
         word = w.get("word", "")
-        meaning = w.get("meaning_ja", "")
+        meaning_zh = w.get("meaning_zh", "")
+        meaning_ja = w.get("meaning_ja", "")
+        meaning = meaning_zh if (lang == "zh" and meaning_zh) else meaning_ja
         hint = w.get("hint", "")
         example_en = w.get("example_en", "")
         example_ja = w.get("example_ja", "")
 
-        # ミス回数に応じてカードの色を変える
         card_class = "word-card-danger" if miss >= 3 else "word-card"
         miss_color = "#ff8080" if miss >= 3 else "#ffaa44"
+        miss_label = t("miss_label", lang).format(n=miss)
 
         hint_html = '<div style="font-size:.8rem;color:#aaaa88;margin-top:6px;">💡 ' + hint + '</div>' if hint else ""
         example_html = (
@@ -170,11 +168,11 @@ else:
             '<div class="' + card_class + '">'
             '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">'
             '<span style="font-size:1.4rem;font-weight:700;color:#ffe066;">' + word + '</span>'
-            '<span style="background:#2a0a0a;color:' + miss_color + ';border-radius:6px;padding:3px 10px;font-size:.85rem;">×' + str(miss) + ' ミス</span>'
+            '<span style="background:#2a0a0a;color:' + miss_color + ';border-radius:6px;padding:3px 10px;font-size:.85rem;">' + miss_label + '</span>'
             '</div>'
             '<div style="font-size:1rem;color:#e0e0e0;margin-bottom:4px;">' + meaning + '</div>'
             + example_html + hint_html +
             '</div>', unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    st.page_link("pages/01_quest.py", label="⚔️ クエストで復習する", icon="🗡️")
+    st.page_link("pages/01_quest.py", label=t("review_link", lang), icon="🗡️")

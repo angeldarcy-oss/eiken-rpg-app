@@ -1,16 +1,16 @@
-word_id,grade,word,part_of_speech,meaning_ja,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,tags,difficulty
-gpre2_001,grade_pre2,absolute,adj,絶対的な,完全な,I have absolute confidence.,私は絶対的な自信があります。,相対的な,部分的な,一時的な,ab（離れた）＋solute（解かれた）→何にも縛られない,academic|adjective,4
-gpre2_002,grade_pre2,accomplish,v,成し遂げる,達成する,She accomplished her goal.,彼女は目標を成し遂げました。,失敗する,諦める,始める,ac＋com（共に）＋plish（満たす）,achievement|verb,4
-gpre2_003,grade_pre2,advantage,n,利点,有利,There are many advantages to this plan.,この計画には多くの利点があります。,欠点,問題,危険,advance（前進）から来ている,business|noun,4
-gpre2_004,grade_pre2,appropriate,adj,適切な,ふさわしい,Please wear appropriate clothes.,適切な服を着てください。,不適切な,派手な,古い,appro（〜へ）＋priate（固有の）→その場にふさわしい,academic|adjective,4
-gpre2_005,grade_pre2,atmosphere,n,雰囲気,大気,The restaurant has a nice atmosphere.,そのレストランは素敵な雰囲気があります。,景色,音楽,サービス,atmos（蒸気）＋sphere（球）→地球を包む空気,science|noun,4
-gpre2_006,grade_pre2,befollow,v,〜に従う,,Please follow the instructions.,指示に従ってください。,無視する,変える,疑う,,action|verb,4
-gpre2_007,grade_pre2,concentrate,v,集中する,,Please concentrate on your work.,仕事に集中してください。,休む,諦める,急ぐ,con（共に）＋centrate（中心に集める）,study|verb,4
-gpre2_008,grade_pre2,convenient,adj,便利な,,This app is very convenient.,このアプリはとても便利です。,不便な,複雑な,高価な,コンビニエンスストアの「コンビニ」,lifestyle|adjective,4
-gpre2_009,grade_pre2,contribute,v,貢献する,寄付する,He contributed to the project.,彼はプロジェクトに貢献しました。,妨害する,批判する,離れる,con（共に）＋tribute（与える）,society|verb,4
-gpre2_010,grade_pre2,determine,v,決定する,〜を決意する,She determined to study abroad.,彼女は留学することを決意しました。,迷う,諦める,忘れる,de（完全に）＋termine（境界を定める）,achievement|verb,4
-gpre2_011,grade_pre2,enormous,adj,巨大な,膨大な,There was an enormous crowd.,巨大な群衆がいました。,小さな,普通の,静かな,e（外）＋norm（規則）＋ous→規則を超えた大きさ,size|adjective,4
-gpre2_012,grade_pre2,examine,v,調べる,試験する,The doctor examined the patient.,医師は患者を診察しました。,無視する,信じる,助ける,ex（外に）＋amine（駆る）→外から詳しく見る,study|verb,4
-gpre2_013,grade_pre2,industry,n,産業,工業,The car industry is changing.,自動車産業は変わっています。,農業,教育,医療,,business|noun,4
-gpre2_014,grade_pre2,involve,v,含む,関与する,This plan involves many people.,この計画は多くの人を含みます。,除外する,簡略化する,終了する,in（中に）＋volve（巻く）→中に巻き込む,abstract|verb,4
-gpre2_015,grade_pre2,obvious,adj,明らかな,明白な,The answer is obvious.,答えは明らかです。,不明な,複雑な,難しい,ob（前に）＋vious（道）→道の前に見えている,academic|adjective,4
+word_id,grade,word,part_of_speech,meaning_ja,meaning_zh,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,tags,difficulty,example_zh
+gpre2_001,grade_pre2,absolute,adj,絶対的な,絕對的,完全な,I have absolute confidence.,私は絶対的な自信があります。,相対的な,部分的な,一時的な,ab（離れた）＋solute（解かれた）→何にも縛られない,academic|adjective,4,
+gpre2_002,grade_pre2,accomplish,v,成し遂げる,達成,達成する,She accomplished her goal.,彼女は目標を成し遂げました。,失敗する,諦める,始める,ac＋com（共に）＋plish（満たす）,achievement|verb,4,
+gpre2_003,grade_pre2,advantage,n,利点,優點,有利,There are many advantages to this plan.,この計画には多くの利点があります。,欠点,問題,危険,advance（前進）から来ている,business|noun,4,
+gpre2_004,grade_pre2,appropriate,adj,適切な,適當的,ふさわしい,Please wear appropriate clothes.,適切な服を着てください。,不適切な,派手な,古い,appro（〜へ）＋priate（固有の）→その場にふさわしい,academic|adjective,4,
+gpre2_005,grade_pre2,atmosphere,n,雰囲気,氣氛,大気,The restaurant has a nice atmosphere.,そのレストランは素敵な雰囲気があります。,景色,音楽,サービス,atmos（蒸気）＋sphere（球）→地球を包む空気,science|noun,4,
+gpre2_006,grade_pre2,befollow,v,〜に従う,,,Please follow the instructions.,指示に従ってください。,無視する,変える,疑う,,action|verb,4,
+gpre2_007,grade_pre2,concentrate,v,集中する,專注,,Please concentrate on your work.,仕事に集中してください。,休む,諦める,急ぐ,con（共に）＋centrate（中心に集める）,study|verb,4,
+gpre2_008,grade_pre2,convenient,adj,便利な,方便的,,This app is very convenient.,このアプリはとても便利です。,不便な,複雑な,高価な,コンビニエンスストアの「コンビニ」,lifestyle|adjective,4,
+gpre2_009,grade_pre2,contribute,v,貢献する,貢獻,寄付する,He contributed to the project.,彼はプロジェクトに貢献しました。,妨害する,批判する,離れる,con（共に）＋tribute（与える）,society|verb,4,
+gpre2_010,grade_pre2,determine,v,決定する,決定,〜を決意する,She determined to study abroad.,彼女は留学することを決意しました。,迷う,諦める,忘れる,de（完全に）＋termine（境界を定める）,achievement|verb,4,
+gpre2_011,grade_pre2,enormous,adj,巨大な,巨大的,膨大な,There was an enormous crowd.,巨大な群衆がいました。,小さな,普通の,静かな,e（外）＋norm（規則）＋ous→規則を超えた大きさ,size|adjective,4,
+gpre2_012,grade_pre2,examine,v,調べる,檢查,試験する,The doctor examined the patient.,医師は患者を診察しました。,無視する,信じる,助ける,ex（外に）＋amine（駆る）→外から詳しく見る,study|verb,4,
+gpre2_013,grade_pre2,industry,n,産業,產業,工業,The car industry is changing.,自動車産業は変わっています。,農業,教育,医療,,business|noun,4,
+gpre2_014,grade_pre2,involve,v,含む,包含,関与する,This plan involves many people.,この計画は多くの人を含みます。,除外する,簡略化する,終了する,in（中に）＋volve（巻く）→中に巻き込む,abstract|verb,4,
+gpre2_015,grade_pre2,obvious,adj,明らかな,明顯的,明白な,The answer is obvious.,答えは明らかです。,不明な,複雑な,難しい,ob（前に）＋vious（道）→道の前に見えている,academic|adjective,4,

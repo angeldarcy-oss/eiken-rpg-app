@@ -320,7 +320,7 @@ class PlayerManager:
 # プレイヤーデータの初期値を生成するファクトリ
 # ─────────────────────────────────────────
 
-def new_player(name: str = "勇者", grade_target: str = "grade_4") -> dict:
+def new_player(name: str = "勇者", grade_target: str = "grade_4", language: str = "ja") -> dict:
     """
     新規プレイヤーの初期ステータス辞書を返す。
     save_manager.py や app.py から呼ぶ。
@@ -343,6 +343,7 @@ def new_player(name: str = "勇者", grade_target: str = "grade_4") -> dict:
         "streak": 0,
         "total_exp_earned": 0,
         "total_damage_taken": 0,
+        "language": language,
     }
 
 

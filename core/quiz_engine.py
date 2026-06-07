@@ -70,14 +70,16 @@ class QuizEngine:
     # 不正解時のHPダメージ（固定）
     HP_DAMAGE = 10
 
-    def __init__(self, grade: str, data_dir: str = "data/words"):
+    def __init__(self, grade: str, data_dir: str = "data/words", language: str = "ja"):
         """
         Args:
             grade: 出題する英検の級。例: "grade_5", "grade_4", "grade_3"
             data_dir: 単語CSVが置いてあるディレクトリのパス
+            language: 表示言語。"ja"（日本語）または "zh"（繁體中文）
         """
         self.grade = grade
         self.data_dir = Path(data_dir)
+        self.language = language
 
         # 単語データをDataFrameとして読み込む
         self.df = self._load_csv()
@@ -241,7 +243,12 @@ class QuizEngine:
     def _build_question(self, row: pd.Series) -> Question:
         """DataFrameの1行からQuestionオブジェクトを組み立てる。"""
 
-        correct = str(row["meaning_ja"])
+        # 言語選択：meaning_zh が存在して空でなければ中国語を使用、なければ日本語にフォールバック
+        if self.language == "zh" and "meaning_zh" in self.df.columns:
+            zh_val = str(row.get("meaning_zh", "")).strip()
+            correct = zh_val if (zh_val and zh_val != "nan") else str(row["meaning_ja"])
+        else:
+            correct = str(row["meaning_ja"])
 
         # ── 選択肢を組み立てる ──
         # CSVにwrong_choice_1〜3がある場合はそれを使う
@@ -267,6 +274,13 @@ class QuizEngine:
         hint = str(row.get("hint", "")).strip()
         hint = "" if hint == "nan" else hint
 
+        # 例文（中国語があれば使用）
+        if self.language == "zh" and "example_zh" in self.df.columns:
+            zh_ex = str(row.get("example_zh", "")).strip()
+            example_ja_or_zh = zh_ex if (zh_ex and zh_ex != "nan") else str(row.get("example_ja", ""))
+        else:
+            example_ja_or_zh = str(row.get("example_ja", ""))
+
         return Question(
             word_id=str(row["word_id"]),
             grade=str(row.get("grade", "")),
@@ -274,7 +288,7 @@ class QuizEngine:
             part_of_speech=str(row["part_of_speech"]),
             meaning_ja=correct,
             example_en=str(row.get("example_en", "")),
-            example_ja=str(row.get("example_ja", "")),
+            example_ja=example_ja_or_zh,
             hint=hint,
             tags=tags,
             difficulty=int(row["difficulty"]),
@@ -284,10 +298,16 @@ class QuizEngine:
 
     def _fill_wrong_choices(self, correct: str, existing: List[str]) -> List[str]:
         """
-        ひっかけ選択肢が足りないとき、他の単語の meaning_ja から補う。
-        正解と重複しないように注意。
+        ひっかけ選択肢が足りないとき、他の単語の意味から補う。
+        中国語モードでは meaning_zh 列を使用（なければ meaning_ja にフォールバック）。
         """
-        all_meanings = self.df["meaning_ja"].dropna().tolist()
+        if self.language == "zh" and "meaning_zh" in self.df.columns:
+            raw = self.df["meaning_zh"].dropna().tolist()
+            all_meanings = [m for m in raw if str(m).strip() and str(m) != "nan"]
+            if len(all_meanings) < 4:
+                all_meanings = self.df["meaning_ja"].dropna().tolist()
+        else:
+            all_meanings = self.df["meaning_ja"].dropna().tolist()
         pool = [m for m in all_meanings if m != correct and m not in existing]
         random.shuffle(pool)
 

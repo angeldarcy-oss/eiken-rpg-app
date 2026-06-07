@@ -1,0 +1,218 @@
+from __future__ import annotations
+
+_T = {
+    "ja": {
+        "grade_5": "5級", "grade_4": "4級", "grade_3": "3級",
+        "grade_pre2": "準2級", "grade_2": "2級",
+        "eiken": "英検",
+        "hp": "HP", "exp": "EXP", "level": "Lv.",
+        "save": "💾 セーブ", "logout": "🚪 ログアウト",
+        "streak": "連続正解", "accuracy": "正答率",
+        "total_q": "累計", "questions": "問",
+        "hp0_msg": "HPが0！正解するとHP回復します",
+        "dev_menu": "開発者メニュー", "reset_all": "全リセット", "data_delete": "データ削除",
+        # Login
+        "login_tab": "🔑 ログイン", "register_tab": "🆕 新規登録",
+        "username": "ユーザー名", "password": "パスワード",
+        "password_confirm": "パスワード（確認）",
+        "username_ph": "登録したユーザー名", "password_ph": "登録したパスワード",
+        "login_btn": "ログイン", "register_btn": "新規登録",
+        "err_empty": "ユーザー名とパスワードを入力してください",
+        "err_no_user": "このユーザー名は登録されていません",
+        "err_wrong_pw": "パスワードが違います",
+        "err_name_short": "ユーザー名は2文字以上にしてください",
+        "err_pw_short": "パスワードは4文字以上にしてください",
+        "err_pw_mismatch": "パスワードが一致しません",
+        "err_name_taken": "このユーザー名は既に使われています",
+        "err_all_fields": "全ての項目を入力してください",
+        "reg_username_ph": "2〜20文字", "reg_pw_ph": "4文字以上で入力", "reg_pw2_ph": "もう一度入力してください",
+        "pw_hint": "🔒 パスワードは4文字以上で設定してください",
+        "pw_confirm_hint": "✅ 上のパスワードをもう一度入力してください",
+        "welcome_msg": "登録完了！ようこそ {name} さん！",
+        "hero_count": "現在 <b>{n}</b> 人の勇者が冒険中！",
+        # Home
+        "app_subtitle": "英単語を制して、伝説の勇者へ",
+        "home_welcome": "おかえり、",
+        "home_challenge": "英検",
+        "home_challenge_sub": "に挑戦中",
+        "mission_title": "📜 今日のミッション",
+        "mission_body": (
+            "✅ クイズを <b style=\"color:#fff;\">10問</b> 解く<br>"
+            "✅ 正答率 <b style=\"color:#fff;\">80%</b> 以上を目指す<br>"
+            "✅ HPを <b style=\"color:#fff;\">0</b> にしないで完走する"
+        ),
+        "howto_title": "🗺️ 使い方",
+        "howto_body": (
+            "👈 左のサイドバーから <b style=\"color:#fff;\">quest</b> を選んでクイズ開始！<br>"
+            "⚔️ 正解すると <b style=\"color:#ffe066;\">EXP獲得</b> → レベルアップ<br>"
+            "💔 不正解すると <b style=\"color:#ff8080;\">HPが減少</b><br>"
+            "🔥 連続正解で <b style=\"color:#ffe066;\">EXPボーナス</b>（3連続x1.2、5連続x1.5、10連続x2.0）"
+        ),
+        "start_quest": "⚔️ クエスト開始！",
+        # Quest
+        "quest_instruction": "次の英単語の意味を選んでください",
+        "progress_label": "進捗",
+        "speak_btn": "🔊 発音を聞く",
+        "correct_msg": "✅ 正解！ +{exp} EXP{bonus}",
+        "wrong_msg": "❌ 不正解 HP -{hp}",
+        "wrong_answer_was": "正解は",
+        "your_answer": "あなたの答え：",
+        "ai_explain_btn": "🤖 ハナ先生に解説してもらう",
+        "ai_teacher_label": "🤖 ハナ先生の解説",
+        "levelup_msg": "✨ Lv.{new} になりました！",
+        "levelup_hp": "HP上限 {old} → {new} 💚 全回復！",
+        "bonus_label": "ボーナス！",
+        "next_btn": "次の問題へ ➡️ （残り {n} 問）",
+        "result_btn": "🏁 結果を見る",
+        "retry_btn": "🔄 もう一度",
+        "quest_done": "🎉 クエスト完了！",
+        "rank_s": "S ランク 🏆", "rank_a": "A ランク ⭐", "rank_b": "B ランク 👍", "rank_c": "C ランク 📖",
+        "stat_total": "出題数", "stat_correct": "正解数", "stat_accuracy": "正答率", "stat_exp": "獲得EXP",
+        # Wordbook
+        "wordbook_title": "📖 単語帳",
+        "wordbook_subtitle": "クエストで間違えた単語を復習しよう",
+        "no_weak": "苦手単語はまだありません！",
+        "no_weak_sub": "クエストに挑戦すると、間違えた単語がここに記録されます。",
+        "start_quest_link": "⚔️ クエストに挑戦する",
+        "review_link": "⚔️ クエストで復習する",
+        "weak_count": "苦手単語数", "miss_count": "累計ミス数",
+        "sort_label": "並び順",
+        "sort_most": "ミス回数が多い順", "sort_least": "ミス回数が少ない順", "sort_alpha": "単語のアルファベット順",
+        "miss_label": "×{n} ミス",
+        # Settings
+        "settings_title": "⚙️ 設定",
+        "settings_subtitle": "プレイヤー情報や挑戦級を変更できます",
+        "player_info_title": "👤 現在のプレイヤー情報",
+        "info_name": "名前", "info_level": "レベル", "info_grade": "挑戦級", "info_total_exp": "累計EXP",
+        "change_name_title": "✏️ 名前を変更する",
+        "new_name_label": "新しい名前", "new_name_ph": "10文字以内で入力",
+        "save_name_btn": "💾 名前を保存",
+        "name_saved_msg": "✅ 名前を「{name}」に変更しました！",
+        "name_empty_err": "名前を入力してください",
+        "change_grade_title": "📚 挑戦する英検の級を変更する",
+        "change_grade_note": "※ 級を変えると出題単語が切り替わります（レベルは維持されます）",
+        "grade_select_label": "挑戦する級",
+        "save_grade_btn": "💾 級を保存",
+        "grade_saved_msg": "✅ 挑戦級を「{grade}」に変更しました！",
+        "lang_setting_title": "🌐 言語設定",
+        "lang_select_label": "言語 / 語言",
+        "lang_saved_msg": "✅ 言語を変更しました！",
+        "danger_title": "⚠️ データリセット",
+        "danger_note": "レベル・EXP・学習履歴が全て削除されます。この操作は取り消せません。",
+        "reset_confirm_label": "リセットすることを理解しました",
+        "reset_btn": "🗑️ 全データをリセットする",
+        "reset_done_msg": "リセットしました。ホーム画面に戻ってください。",
+    },
+    "zh": {
+        "grade_5": "英檢5級", "grade_4": "英檢4級", "grade_3": "英檢3級",
+        "grade_pre2": "英檢準2級", "grade_2": "英檢2級",
+        "eiken": "",
+        "hp": "HP", "exp": "EXP", "level": "Lv.",
+        "save": "💾 儲存", "logout": "🚪 登出",
+        "streak": "連續答對", "accuracy": "正確率",
+        "total_q": "累計", "questions": "題",
+        "hp0_msg": "HP為0！答對可以回復HP",
+        "dev_menu": "開發者選單", "reset_all": "全部重置", "data_delete": "刪除資料",
+        # Login
+        "login_tab": "🔑 登入", "register_tab": "🆕 新用戶註冊",
+        "username": "用戶名", "password": "密碼",
+        "password_confirm": "確認密碼",
+        "username_ph": "已註冊的用戶名", "password_ph": "已設定的密碼",
+        "login_btn": "登入", "register_btn": "註冊",
+        "err_empty": "請輸入用戶名和密碼",
+        "err_no_user": "此用戶名尚未註冊",
+        "err_wrong_pw": "密碼錯誤",
+        "err_name_short": "用戶名請設定2個字以上",
+        "err_pw_short": "密碼請設定4個字以上",
+        "err_pw_mismatch": "兩次輸入的密碼不一致",
+        "err_name_taken": "此用戶名已被使用",
+        "err_all_fields": "請填寫所有欄位",
+        "reg_username_ph": "2〜20個字", "reg_pw_ph": "請輸入4個字以上", "reg_pw2_ph": "請再次輸入",
+        "pw_hint": "🔒 密碼請設定4個字以上",
+        "pw_confirm_hint": "✅ 請再次輸入上方的密碼",
+        "welcome_msg": "註冊完成！歡迎 {name}！",
+        "hero_count": "目前有 <b>{n}</b> 位勇者正在冒險！",
+        # Home
+        "app_subtitle": "征服英語單字，成為傳說勇者",
+        "home_welcome": "歡迎回來，",
+        "home_challenge": "",
+        "home_challenge_sub": "挑戰中",
+        "mission_title": "📜 今日任務",
+        "mission_body": (
+            "✅ 完成 <b style=\"color:#fff;\">10題</b> 測驗<br>"
+            "✅ 目標正確率 <b style=\"color:#fff;\">80%</b> 以上<br>"
+            "✅ HP不歸零，撐到最後"
+        ),
+        "howto_title": "🗺️ 使用方法",
+        "howto_body": (
+            "👈 從左側側邊欄選擇 <b style=\"color:#fff;\">quest</b> 開始測驗！<br>"
+            "⚔️ 答對獲得 <b style=\"color:#ffe066;\">EXP</b> → 升等<br>"
+            "💔 答錯 <b style=\"color:#ff8080;\">HP減少</b><br>"
+            "🔥 連續答對獲得 <b style=\"color:#ffe066;\">EXP加成</b>（連續3題×1.2、5題×1.5、10題×2.0）"
+        ),
+        "start_quest": "⚔️ 開始任務！",
+        # Quest
+        "quest_instruction": "請選擇下列英語單字的意思",
+        "progress_label": "進度",
+        "speak_btn": "🔊 聽發音",
+        "correct_msg": "✅ 正確！ +{exp} EXP{bonus}",
+        "wrong_msg": "❌ 錯誤 HP -{hp}",
+        "wrong_answer_was": "正確答案是",
+        "your_answer": "你的答案：",
+        "ai_explain_btn": "🤖 請花老師解說",
+        "ai_teacher_label": "🤖 花老師的解說",
+        "levelup_msg": "✨ 升到 Lv.{new} 了！",
+        "levelup_hp": "HP上限 {old} → {new} 💚 全回復！",
+        "bonus_label": "加成！",
+        "next_btn": "下一題 ➡️ （剩餘 {n} 題）",
+        "result_btn": "🏁 查看結果",
+        "retry_btn": "🔄 再來一次",
+        "quest_done": "🎉 任務完成！",
+        "rank_s": "S 級 🏆", "rank_a": "A 級 ⭐", "rank_b": "B 級 👍", "rank_c": "C 級 📖",
+        "stat_total": "題數", "stat_correct": "答對數", "stat_accuracy": "正確率", "stat_exp": "獲得EXP",
+        # Wordbook
+        "wordbook_title": "📖 單字本",
+        "wordbook_subtitle": "複習任務中答錯的單字",
+        "no_weak": "目前沒有弱點單字！",
+        "no_weak_sub": "完成任務後，答錯的單字將記錄在這裡。",
+        "start_quest_link": "⚔️ 開始任務",
+        "review_link": "⚔️ 用任務複習",
+        "weak_count": "弱點單字數", "miss_count": "累計錯誤次數",
+        "sort_label": "排序方式",
+        "sort_most": "錯誤次數多→少", "sort_least": "錯誤次數少→多", "sort_alpha": "字母順序",
+        "miss_label": "×{n} 錯誤",
+        # Settings
+        "settings_title": "⚙️ 設定",
+        "settings_subtitle": "可更改玩家資訊和挑戰級數",
+        "player_info_title": "👤 目前玩家資訊",
+        "info_name": "名稱", "info_level": "等級", "info_grade": "挑戰級數", "info_total_exp": "累計EXP",
+        "change_name_title": "✏️ 更改名稱",
+        "new_name_label": "新名稱", "new_name_ph": "10個字以內",
+        "save_name_btn": "💾 儲存名稱",
+        "name_saved_msg": "✅ 名稱已更改為「{name}」！",
+        "name_empty_err": "請輸入名稱",
+        "change_grade_title": "📚 更改挑戰的英檢級數",
+        "change_grade_note": "※ 更改級數後出題單字會切換（等級不受影響）",
+        "grade_select_label": "挑戰級數",
+        "save_grade_btn": "💾 儲存級數",
+        "grade_saved_msg": "✅ 挑戰級數已更改為「{grade}」！",
+        "lang_setting_title": "🌐 語言設定",
+        "lang_select_label": "語言 / 言語",
+        "lang_saved_msg": "✅ 語言已更改！",
+        "danger_title": "⚠️ 重置資料",
+        "danger_note": "等級、EXP、學習記錄將全部刪除。此操作無法復原。",
+        "reset_confirm_label": "我已了解將進行重置",
+        "reset_btn": "🗑️ 重置所有資料",
+        "reset_done_msg": "已重置。請返回首頁。",
+    },
+}
+
+LANG_OPTIONS = {"日本語": "ja", "繁體中文": "zh"}
+
+
+def t(key: str, lang: str = "ja") -> str:
+    return _T.get(lang, _T["ja"]).get(key, _T["ja"].get(key, key))
+
+
+def grade_label(k: str, lang: str = "ja") -> str:
+    return _T.get(lang, _T["ja"]).get(k, _T["ja"].get(k, k))

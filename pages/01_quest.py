@@ -1,6 +1,5 @@
 import sys
 import streamlit as st
-import streamlit.components.v1 as components
 from pathlib import Path
 
 _root = Path(__file__).parent.parent
@@ -31,18 +30,22 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 
 
 def _speak_button(word, label="🔊 発音を聞く"):
-    audio_url = "https://translate.google.com/translate_tts?ie=UTF-8&q=" + word + "&tl=en-us&client=tw-ob"
-    components.html(
-        '<!DOCTYPE html><html><body style="margin:0;padding:0;background:transparent;">'
-        '<button onclick="document.getElementById(\'a\').play();" '
-        'style="background:none;border:1px solid #5a5a8a;border-radius:8px;'
-        'color:#aaaacc;cursor:pointer;font-size:1rem;padding:6px 16px;'
-        'margin:4px auto;display:block;font-family:sans-serif;">'
-        + label + '</button>'
-        '<audio id="a" src="' + audio_url + '"></audio>'
-        '</body></html>',
-        height=50,
-    )
+    key = "audio_" + word
+    if key not in st.session_state:
+        st.session_state[key] = False
+    if st.button(label, key="btn_" + word + "_" + str(st.session_state.get("total_questions", 0))):
+        st.session_state[key] = True
+    if st.session_state[key]:
+        try:
+            from gtts import gTTS
+            import io
+            tts = gTTS(text=word, lang="en", slow=True)
+            buf = io.BytesIO()
+            tts.write_to_fp(buf)
+            buf.seek(0)
+            st.audio(buf, format="audio/mp3", autoplay=True)
+        except Exception as e:
+            st.warning("音声を読み込めませんでした。")
 
 
 def _grade_label(k):

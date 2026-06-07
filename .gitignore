@@ -3,3 +3,5 @@ data/saves/
 __pycache__/
 *.pyc
 .DS_Store
+add_zh_translations.py
+generate_words.py

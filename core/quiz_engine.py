@@ -274,10 +274,10 @@ class QuizEngine:
         hint = str(row.get("hint", "")).strip()
         hint = "" if hint == "nan" else hint
 
-        # 例文（中国語があれば使用）
+        # 例文（中国語があれば使用。なければ zh モードでは空文字にして日本語を表示しない）
         if self.language == "zh" and "example_zh" in self.df.columns:
             zh_ex = str(row.get("example_zh", "")).strip()
-            example_ja_or_zh = zh_ex if (zh_ex and zh_ex != "nan") else str(row.get("example_ja", ""))
+            example_ja_or_zh = zh_ex if (zh_ex and zh_ex != "nan") else ""
         else:
             example_ja_or_zh = str(row.get("example_ja", ""))
 

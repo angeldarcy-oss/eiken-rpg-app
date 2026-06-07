@@ -284,25 +284,27 @@ if st.session_state.answered and st.session_state.last_result:
             bonus_html = ' <span style="color:#ffe066;">(x' + str(gain.streak_multiplier) + ' ' + t("bonus_label", lang) + ')</span>'
         exp_show = str(gain.exp_gained_final) if gain else str(result.exp_gained)
         hint_html = '<div style="font-size:.82rem;color:#aaaa88;margin-top:6px;">💡 ' + q.hint + '</div>' if q.hint else ""
+        ex2 = ('<br>' + q.example_ja) if q.example_ja else ''
         st.markdown(
             '<div style="background:linear-gradient(135deg,#0a2a0a,#1a4a1a);border:1px solid #2a7a2a;border-radius:12px;padding:20px 24px;margin:16px 0;">'
             + levelup_html +
             '<div style="font-size:1.1rem;font-weight:700;color:#88ff88;margin-bottom:10px;">'
             + t("correct_msg", lang).format(exp=exp_show, bonus=bonus_html) + '</div>'
             '<div style="color:#cceebb;font-size:.92rem;margin-bottom:8px;"><b style="color:#fff;">' + q.word + '</b> = ' + q.meaning_ja + '</div>'
-            '<div style="font-size:.88rem;color:#aaccaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + '<br>' + q.example_ja + '</div>'
+            '<div style="font-size:.88rem;color:#aaccaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + ex2 + '</div>'
             + hint_html +
             '</div>', unsafe_allow_html=True)
 
     else:
         hint_html = '<div style="font-size:.82rem;color:#aaaa88;margin-top:6px;">💡 ' + q.hint + '</div>' if q.hint else ""
+        ex2 = ('<br>' + q.example_ja) if q.example_ja else ''
         st.markdown(
             '<div style="background:linear-gradient(135deg,#2a0a0a,#4a1a1a);border:1px solid #7a2a2a;border-radius:12px;padding:20px 24px;margin:16px 0;">'
             '<div style="font-size:1.1rem;font-weight:700;color:#ff8080;margin-bottom:10px;">'
             + t("wrong_msg", lang).format(hp=result.hp_damage) + '</div>'
             '<div style="color:#ffcccc;font-size:.92rem;margin-bottom:8px;">' + t("wrong_answer_was", lang) + ' <b style="color:#ffe066;font-size:1.1rem;">' + q.correct_answer + '</b></div>'
             '<div style="color:#ddbbbb;font-size:.88rem;margin-bottom:8px;">' + t("your_answer", lang) + '<span style="color:#ff8080;">' + result.selected_answer + '</span></div>'
-            '<div style="font-size:.88rem;color:#ccaaaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + '<br>' + q.example_ja + '</div>'
+            '<div style="font-size:.88rem;color:#ccaaaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + ex2 + '</div>'
             + hint_html +
             '</div>', unsafe_allow_html=True)
 

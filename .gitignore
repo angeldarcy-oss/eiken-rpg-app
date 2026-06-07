@@ -6,3 +6,4 @@ __pycache__/
 add_zh_translations.py
 generate_words.py
 fill_example_zh.py
+fill_hint_zh.py

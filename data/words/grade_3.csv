@@ -1,16 +1,16 @@
-word_id,grade,word,part_of_speech,meaning_ja,meaning_zh,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,tags,difficulty,example_zh
-g3_001,grade_3,serious,adj,深刻な,嚴重的/認真的,まじめな,This is a serious problem.,これは深刻な問題です。,軽い,楽しい,簡単な,シリアス（真剣な顔）のイメージ,personality|adjective,3,這是一個嚴重的問題。
-g3_002,grade_3,experience,n,経験,經驗,体験,She has a lot of experience.,彼女は多くの経験を持っています。,知識,記憶,感情,,abstract|noun,3,她有很多經驗。
-g3_003,grade_3,interested,adj,興味がある,感興趣的,,I am interested in music.,私は音楽に興味があります。,退屈している,疲れている,心配している,interest（興味）＋ed,emotion|adjective,3,我對音樂感興趣。
-g3_004,grade_3,society,n,社会,社會,,We live in a modern society.,私たちは現代社会に生きています。,国家,家族,文化,,abstract|noun,3,我們生活在現代社會。
-g3_005,grade_3,provide,v,提供する,提供,,The hotel provides breakfast.,そのホテルは朝食を提供します。,受け取る,要求する,断る,pro（前に）＋vide（見る）→先を見て用意する,business|verb,3,那家酒店提供早餐。
-g3_006,grade_3,protect,v,守る,保護,保護する,We must protect the environment.,私たちは環境を守らなければなりません。,攻撃する,壊す,無視する,pro（前に）＋tect（覆う）→前を覆って守る,nature|verb,3,我們必須保護環境。
-g3_007,grade_3,perhaps,adv,おそらく,也許,たぶん,Perhaps he is right.,おそらく彼は正しいでしょう。,絶対に,決して,いつも,,frequency|adverb,3,也許他是對的。
-g3_008,grade_3,culture,n,文化,文化,,Japan has a rich culture.,日本は豊かな文化を持っています。,自然,経済,政治,,society|noun,3,日本有着豐富的文化。
-g3_009,grade_3,century,n,世紀,世紀,100年,This building is from the 19th century.,この建物は19世紀のものです。,年代,時代,年数,cent（100）が語源,history|noun,3,這座建築建於19世紀。
-g3_010,grade_3,however,adv,しかしながら,然而,,I like cats. However I am allergic.,猫が好きです。しかしアレルギーがあります。,そして,だから,また,,grammar|conjunction,3,喜歡貓。但是過敏。
-g3_011,grade_3,explain,v,説明する,解釋,,Please explain this word.,この単語を説明してください。,質問する,理解する,忘れる,ex（外に）＋plain（平らにする）→わかりやすく広げる,communication|verb,3,請解釋這個詞。
-g3_012,grade_3,continue,v,続ける,繼續,継続する,Please continue your work.,仕事を続けてください。,やめる,始める,終わる,コンティニュー（ゲームの続きをする）,action|verb,3,請繼續工作。
-g3_013,grade_3,decision,n,決断,決定,決定,This was a difficult decision.,これは難しい決断でした。,質問,問題,意見,decide（決める）の名詞形,abstract|noun,3,這是一個艱難的決定。
-g3_014,grade_3,successful,adj,成功した,成功的,,She had a successful career.,彼女は成功したキャリアを持っていました。,失敗した,普通の,短い,success（成功）＋ful,personality|adjective,3,她有一個成功的職業生涯。
-g3_015,grade_3,offer,v,申し出る,提供/提出,提供する,He offered to help me.,彼は私を助けることを申し出ました。,断る,要求する,忘れる,,communication|verb,3,他願意幫助我。
+word_id,grade,word,part_of_speech,meaning_ja,meaning_zh,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,hint_zh,tags,difficulty,example_zh
+g3_001,grade_3,serious,adj,深刻な,嚴重的/認真的,まじめな,This is a serious problem.,これは深刻な問題です。,軽い,楽しい,簡単な,シリアス（真剣な顔）のイメージ,嚴肅（認真的表情）的印象,personality|adjective,3,這是一個嚴重的問題。
+g3_002,grade_3,experience,n,経験,經驗,体験,She has a lot of experience.,彼女は多くの経験を持っています。,知識,記憶,感情,,,abstract|noun,3,她有很多經驗。
+g3_003,grade_3,interested,adj,興味がある,感興趣的,,I am interested in music.,私は音楽に興味があります。,退屈している,疲れている,心配している,interest（興味）＋ed,interest（興趣）+ ed,emotion|adjective,3,我對音樂感興趣。
+g3_004,grade_3,society,n,社会,社會,,We live in a modern society.,私たちは現代社会に生きています。,国家,家族,文化,,,abstract|noun,3,我們生活在現代社會。
+g3_005,grade_3,provide,v,提供する,提供,,The hotel provides breakfast.,そのホテルは朝食を提供します。,受け取る,要求する,断る,pro（前に）＋vide（見る）→先を見て用意する,pro（前）+ vide（看）,business|verb,3,那家酒店提供早餐。
+g3_006,grade_3,protect,v,守る,保護,保護する,We must protect the environment.,私たちは環境を守らなければなりません。,攻撃する,壊す,無視する,pro（前に）＋tect（覆う）→前を覆って守る,pro（前面）+ tect（覆蓋）→覆蓋前面保護,nature|verb,3,我們必須保護環境。
+g3_007,grade_3,perhaps,adv,おそらく,也許,たぶん,Perhaps he is right.,おそらく彼は正しいでしょう。,絶対に,決して,いつも,,,frequency|adverb,3,也許他是對的。
+g3_008,grade_3,culture,n,文化,文化,,Japan has a rich culture.,日本は豊かな文化を持っています。,自然,経済,政治,,,society|noun,3,日本有着豐富的文化。
+g3_009,grade_3,century,n,世紀,世紀,100年,This building is from the 19th century.,この建物は19世紀のものです。,年代,時代,年数,cent（100）が語源,cent（100）的語源,history|noun,3,這座建築建於19世紀。
+g3_010,grade_3,however,adv,しかしながら,然而,,I like cats. However I am allergic.,猫が好きです。しかしアレルギーがあります。,そして,だから,また,,,grammar|conjunction,3,喜歡貓。但是過敏。
+g3_011,grade_3,explain,v,説明する,解釋,,Please explain this word.,この単語を説明してください。,質問する,理解する,忘れる,ex（外に）＋plain（平らにする）→わかりやすく広げる,ex（向外）+ plain（放平）→簡單易懂地展開,communication|verb,3,請解釋這個詞。
+g3_012,grade_3,continue,v,続ける,繼續,継続する,Please continue your work.,仕事を続けてください。,やめる,始める,終わる,コンティニュー（ゲームの続きをする）,連續（繼續遊戲）,action|verb,3,請繼續工作。
+g3_013,grade_3,decision,n,決断,決定,決定,This was a difficult decision.,これは難しい決断でした。,質問,問題,意見,decide（決める）の名詞形,decide（決定）的名詞形式,abstract|noun,3,這是一個艱難的決定。
+g3_014,grade_3,successful,adj,成功した,成功的,,She had a successful career.,彼女は成功したキャリアを持っていました。,失敗した,普通の,短い,success（成功）＋ful,success（成功+ ful）,personality|adjective,3,她有一個成功的職業生涯。
+g3_015,grade_3,offer,v,申し出る,提供/提出,提供する,He offered to help me.,彼は私を助けることを申し出ました。,断る,要求する,忘れる,,,communication|verb,3,他願意幫助我。

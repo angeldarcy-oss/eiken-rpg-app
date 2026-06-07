@@ -1,69 +1,69 @@
-word_id,word,meaning_ja,meaning_zh,part_of_speech,example_en,example_ja,hint,difficulty,example_zh
-g4_001,important,重要な,重要的,adj,This is an important decision.,これは重要な決断です。,import（輸入）と同じ語源。中に運ばれてくるほど価値がある,2,這是一個重要的決定。
-g4_002,message,メッセージ,訊息,n,Please leave a message.,メッセージを残してください。,,2,請留言。
-g4_003,exciting,わくわくする,令人興奮的,adj,The game was very exciting.,その試合はとてもわくわくするものでした。,excite（興奮させる）＋ing,2,那場比賽非常令人興奮。
-g4_004,usually,たいてい,通常,adv,I usually walk to school.,私はたいてい歩いて学校へ行きます。,usual（いつもの）＋ly,2,我通常走着去學校。
-g4_005,hobby,趣味,興趣/嗜好,n,My hobby is playing the guitar.,私の趣味はギターを弾くことです。,,2,的興趣是彈吉他。
-g4_006,popular,人気のある,受歡迎的,adj,This singer is very popular.,この歌手はとても人気があります。,ポピュラー音楽の「ポピュラー」,2,這個歌手很受歡迎。
-g4_007,practice,練習する,練習,v,I practice the piano every day.,私は毎日ピアノを練習します。,practical（実践的な）と同じ語源,2,我每天練習鋼琴。
-g4_008,delicious,おいしい,美味的,adj,This cake is really delicious.,このケーキは本当においしいです。,delice（喜び）が語源。喜びを与える味,2,這個蛋糕真的很好吃。
-g4_009,museum,博物館,博物館,n,Let's go to the museum.,博物館へ行きましょう。,,2,我們去博物館吧。
-g4_010,send,送る,發送,v,I will send you an email.,メールを送ります。,,2,發送郵件。
-g4_011,season,季節,季節,n,My favorite season is autumn.,私の好きな季節は秋です。,,2,我喜歡的季節是秋天。
-g4_012,arrive,到着する,到達,v,The train will arrive at noon.,電車は正午に到着します。,a（方向）＋rive（川岸）→ 岸にたどり着く,3,火車中午到達。
-g4_013,another,別の,另一個,adj,Can I have another piece?,もう一切れもらえますか？,an＋other（別のもの）,2,再給我一片嗎？
-g4_014,foreign,外国の,外國的,adj,She studies foreign languages.,彼女は外国語を勉強しています。,フォーリナー（外国人）そのまま,3,她正在學習外語。
-g4_015,environment,環境,環境,n,We must protect the environment.,私たちは環境を守らなければなりません。,environ（取り囲む）が語源,3,我們必須保護環境。
-grade_4_0016,apple,リンゴ,蘋果,n,I eat an apple every day.,私は毎日リンゴを食べます。,,1,我每天都吃蘋果。
-grade_4_0017,run,走る,跑步,v,I like to run in the park.,私は公園で走ることを好きです。,,1,我喜歡在公園跑步。
-grade_4_0018,big,大きい,大的,adj,This house is big.,この家は大きいです。,,1,房子很大。
-grade_4_0019,quickly,速く,快速地,adv,I can eat quickly.,私は速く食べることができます。,,2,我可以吃得很快。
-grade_4_0020,in,中で,在...裡,prep,The book is in the box.,本は箱の中にあります。,,1,書在盒子裏。
-grade_4_0021,dog,犬,狗,n,I have a dog.,私は犬を飼っています。,,1,我在養狗。
-grade_4_0022,read,読む,閱讀,v,I like to read books.,私は本を読むことを好きです。,,1,我喜歡讀書。
-grade_4_0023,happy,幸せな,快樂的,adj,I am happy today.,私は今日幸せです。,,1,我今天很幸福。
-grade_4_0024,on,上に,在...上,prep,The book is on the table.,本は机の上にあります。,,1,書在桌子上。
-grade_4_0025,cat,猫,貓,n,I have a cat.,私は猫を飼っています。,,1,我在養貓。
-grade_4_0026,write,書く,寫,v,I can write my name.,私は自分の名前を書くことができます。,,1,我可以寫我的名字。
-grade_4_0027,little,小さい,小的/少的,adj,This house is little.,この家は小さいです。,,1,房子很小。
-grade_4_0028,at,に,在,prep,I am at home.,私は家にいます。,,1,在家。
-grade_4_0029,bird,鳥,鳥,n,I can see a bird.,私は鳥を見ることができます。,,1,我可以看到鳥。
-grade_4_0030,listen,聞く,聆聽,v,I like to listen to music.,私は音楽を聞くことを好きです。,,1,我喜歡聽音樂。
-grade_4_0031,old,古い,舊的/老的,adj,This book is old.,この本は古いです。,,1,這本書是舊的。
-grade_4_0032,with,と,和/與,prep,I am with my friend.,私は友達と一緒です。,,1,我和朋友在一起。
-grade_4_0033,fish,魚,魚,n,I like to eat fish.,私は魚を食べることを好きです。,,1,我喜歡吃魚。
-grade_4_0034,look,見る,看,v,I can look at the picture.,私は絵を見ることができます。,,1,我可以看圖片。
-grade_4_0035,new,新しい,新的,adj,This book is new.,この本は新しいです。,,1,這本書是新的。
-grade_4_0036,from,から,從/來自,prep,I am from Tokyo.,私は東京からです。,,1,我從東京來。
-grade_4_0037,tree,木,樹,n,I can see a tree.,私は木を見ることができます。,,1,我可以看到樹。
-grade_4_0038,speak,話す,說話,v,I can speak Japanese.,私は日本語を話すことができます。,,1,我會說日語。
-grade_4_0039,long,長い,長的,adj,This road is long.,この道は長いです。,,1,這條路很長。
-grade_4_0040,under,下に,在...下面,prep,The book is under the table.,本は机の下にあります。,,1,書在桌子下面。
-grade_4_0041,house,家,房子,n,I live in a house.,私は家に住んでいます。,,1,我住在家裏。
-grade_4_0042,eat,食べる,吃,v,I like to eat sushi.,私は寿司を食べることを好きです。,,1,我喜歡吃壽司。
-grade_4_0043,high,高い,高的,adj,This mountain is high.,この山は高いです。,,1,這座山很高。
-grade_4_0044,to,に,到/向,prep,I am going to school.,私は学校に行きます。,,1,我去學校。
-grade_4_0045,car,車,車,n,I have a car.,私は車を所有しています。,,1,我擁有一輛車。
-grade_4_0046,play,遊ぶ,玩耍,v,I like to play soccer.,私はサッカーを遊ぶことを好きです。,,1,我喜歡踢足球。
-grade_4_0047,good,よい,好的,adj,This food is good.,この食べ物はよいです。,,1,這個食物很好。
-grade_4_0048,above,上に,在...上方,prep,The bird is above the tree.,鳥は木の上にあります。,,1,鳥在樹上。
-grade_4_0049,school,学校,學校,n,I go to school every day.,私は毎日学校に行きます。,,1,我每天去學校。
-grade_4_0050,go,行く,去,v,I am going to the park.,私は公園に行きます。,,1,我去公園。
-grade_4_0051,bad,悪い,壞的,adj,This food is bad.,この食べ物は悪いです。,,1,這個食物不好。
-grade_4_0052,between,間に,在...之間,prep,The book is between the two chairs.,本は二つの椅子の間にあります。,,2,書在兩張椅子之間。
-grade_4_0053,friend,友達,朋友,n,I have a friend.,私は友達がいます。,,1,我有朋友。
-grade_4_0054,swim,泳ぐ,游泳,v,I like to swim in the sea.,私は海で泳ぐことを好きです。,,1,我喜歡在海里游泳。
-grade_4_0055,small,小さい,小的,adj,This house is small.,この家は小さいです。,,1,房子很小。
-grade_4_0056,around,周りに,在...周圍,prep,The dog is running around the house.,犬は家の周りを走っています。,,2,狗在房子周圍跑。
-grade_4_0057,family,家族,家人,n,I love my family.,私は私の家族を愛しています。,,1,我愛我的家人。
-grade_4_0058,think,考える,思考,v,I think I can do it.,私はそれができると思います。,,1,我認爲我可以做到。
-grade_4_0059,fast,速い,快的,adj,This car is fast.,この車は速いです。,,1,這輛車很快。
-grade_4_0060,across,横に,橫跨,prep,The bridge is across the river.,橋は川の横にあります。,,2,橋在河的旁邊。
-grade_4_0061,class,クラス,班級/課,n,I have a class today.,私は今日クラスがあります。,,1,我今天有課。
-grade_4_0062,walk,歩く,走路,v,I like to walk in the park.,私は公園で歩くことを好きです。,,1,我喜歡在公園散步。
-grade_4_0063,simple,簡単な,簡單的,adj,This problem is simple.,この問題は簡単です。,,2,這個問題很簡單。
-grade_4_0064,through,通って,穿過,prep,The river is flowing through the city.,川は市を通って流れています。,,2,河流穿過城市。
-grade_4_0065,book,本,書,n,I like to read books.,私は本を読むことを好きです。,,1,我喜歡讀書。
-grade_4_0066,learn,学ぶ,學習,v,I want to learn English.,私は英語を学びたいです。,,1,我想學英語。
-grade_4_0067,easy,簡単な,容易的,adj,This test is easy.,この試験は簡単です。,,1,這個考試很簡單。
-grade_4_0068,without,なくして,沒有,prep,I can't live without my phone.,私は携帯電話なくして生きることができません。,,2,沒有手機我就活不下去。
+word_id,word,meaning_ja,meaning_zh,part_of_speech,example_en,example_ja,hint,hint_zh,difficulty,example_zh
+g4_001,important,重要な,重要的,adj,This is an important decision.,これは重要な決断です。,import（輸入）と同じ語源。中に運ばれてくるほど価値がある,import（進口）的語源相同。越往裏搬越有價值,2,這是一個重要的決定。
+g4_002,message,メッセージ,訊息,n,Please leave a message.,メッセージを残してください。,,,2,請留言。
+g4_003,exciting,わくわくする,令人興奮的,adj,The game was very exciting.,その試合はとてもわくわくするものでした。,excite（興奮させる）＋ing,excite（令人興奮）+ ing,2,那場比賽非常令人興奮。
+g4_004,usually,たいてい,通常,adv,I usually walk to school.,私はたいてい歩いて学校へ行きます。,usual（いつもの）＋ly,usual（通常）+ ly,2,我通常走着去學校。
+g4_005,hobby,趣味,興趣/嗜好,n,My hobby is playing the guitar.,私の趣味はギターを弾くことです。,,,2,的興趣是彈吉他。
+g4_006,popular,人気のある,受歡迎的,adj,This singer is very popular.,この歌手はとても人気があります。,ポピュラー音楽の「ポピュラー」,流行音樂的“大衆”,2,這個歌手很受歡迎。
+g4_007,practice,練習する,練習,v,I practice the piano every day.,私は毎日ピアノを練習します。,practical（実践的な）と同じ語源,practical（實踐的）相同詞源,2,我每天練習鋼琴。
+g4_008,delicious,おいしい,美味的,adj,This cake is really delicious.,このケーキは本当においしいです。,delice（喜び）が語源。喜びを与える味,delice（喜悅）的語源。令人愉悅的味道,2,這個蛋糕真的很好吃。
+g4_009,museum,博物館,博物館,n,Let's go to the museum.,博物館へ行きましょう。,,,2,我們去博物館吧。
+g4_010,send,送る,發送,v,I will send you an email.,メールを送ります。,,,2,發送郵件。
+g4_011,season,季節,季節,n,My favorite season is autumn.,私の好きな季節は秋です。,,,2,我喜歡的季節是秋天。
+g4_012,arrive,到着する,到達,v,The train will arrive at noon.,電車は正午に到着します。,a（方向）＋rive（川岸）→ 岸にたどり着く,a（方向）+ rive（河岸）→到達岸邊,3,火車中午到達。
+g4_013,another,別の,另一個,adj,Can I have another piece?,もう一切れもらえますか？,an＋other（別のもの）,an + other（其他）,2,再給我一片嗎？
+g4_014,foreign,外国の,外國的,adj,She studies foreign languages.,彼女は外国語を勉強しています。,フォーリナー（外国人）そのまま,forliner（外國人）原樣,3,她正在學習外語。
+g4_015,environment,環境,環境,n,We must protect the environment.,私たちは環境を守らなければなりません。,environ（取り囲む）が語源,environ（包圍）是詞源,3,我們必須保護環境。
+grade_4_0016,apple,リンゴ,蘋果,n,I eat an apple every day.,私は毎日リンゴを食べます。,,,1,我每天都吃蘋果。
+grade_4_0017,run,走る,跑步,v,I like to run in the park.,私は公園で走ることを好きです。,,,1,我喜歡在公園跑步。
+grade_4_0018,big,大きい,大的,adj,This house is big.,この家は大きいです。,,,1,房子很大。
+grade_4_0019,quickly,速く,快速地,adv,I can eat quickly.,私は速く食べることができます。,,,2,我可以吃得很快。
+grade_4_0020,in,中で,在...裡,prep,The book is in the box.,本は箱の中にあります。,,,1,書在盒子裏。
+grade_4_0021,dog,犬,狗,n,I have a dog.,私は犬を飼っています。,,,1,我在養狗。
+grade_4_0022,read,読む,閱讀,v,I like to read books.,私は本を読むことを好きです。,,,1,我喜歡讀書。
+grade_4_0023,happy,幸せな,快樂的,adj,I am happy today.,私は今日幸せです。,,,1,我今天很幸福。
+grade_4_0024,on,上に,在...上,prep,The book is on the table.,本は机の上にあります。,,,1,書在桌子上。
+grade_4_0025,cat,猫,貓,n,I have a cat.,私は猫を飼っています。,,,1,我在養貓。
+grade_4_0026,write,書く,寫,v,I can write my name.,私は自分の名前を書くことができます。,,,1,我可以寫我的名字。
+grade_4_0027,little,小さい,小的/少的,adj,This house is little.,この家は小さいです。,,,1,房子很小。
+grade_4_0028,at,に,在,prep,I am at home.,私は家にいます。,,,1,在家。
+grade_4_0029,bird,鳥,鳥,n,I can see a bird.,私は鳥を見ることができます。,,,1,我可以看到鳥。
+grade_4_0030,listen,聞く,聆聽,v,I like to listen to music.,私は音楽を聞くことを好きです。,,,1,我喜歡聽音樂。
+grade_4_0031,old,古い,舊的/老的,adj,This book is old.,この本は古いです。,,,1,這本書是舊的。
+grade_4_0032,with,と,和/與,prep,I am with my friend.,私は友達と一緒です。,,,1,我和朋友在一起。
+grade_4_0033,fish,魚,魚,n,I like to eat fish.,私は魚を食べることを好きです。,,,1,我喜歡吃魚。
+grade_4_0034,look,見る,看,v,I can look at the picture.,私は絵を見ることができます。,,,1,我可以看圖片。
+grade_4_0035,new,新しい,新的,adj,This book is new.,この本は新しいです。,,,1,這本書是新的。
+grade_4_0036,from,から,從/來自,prep,I am from Tokyo.,私は東京からです。,,,1,我從東京來。
+grade_4_0037,tree,木,樹,n,I can see a tree.,私は木を見ることができます。,,,1,我可以看到樹。
+grade_4_0038,speak,話す,說話,v,I can speak Japanese.,私は日本語を話すことができます。,,,1,我會說日語。
+grade_4_0039,long,長い,長的,adj,This road is long.,この道は長いです。,,,1,這條路很長。
+grade_4_0040,under,下に,在...下面,prep,The book is under the table.,本は机の下にあります。,,,1,書在桌子下面。
+grade_4_0041,house,家,房子,n,I live in a house.,私は家に住んでいます。,,,1,我住在家裏。
+grade_4_0042,eat,食べる,吃,v,I like to eat sushi.,私は寿司を食べることを好きです。,,,1,我喜歡吃壽司。
+grade_4_0043,high,高い,高的,adj,This mountain is high.,この山は高いです。,,,1,這座山很高。
+grade_4_0044,to,に,到/向,prep,I am going to school.,私は学校に行きます。,,,1,我去學校。
+grade_4_0045,car,車,車,n,I have a car.,私は車を所有しています。,,,1,我擁有一輛車。
+grade_4_0046,play,遊ぶ,玩耍,v,I like to play soccer.,私はサッカーを遊ぶことを好きです。,,,1,我喜歡踢足球。
+grade_4_0047,good,よい,好的,adj,This food is good.,この食べ物はよいです。,,,1,這個食物很好。
+grade_4_0048,above,上に,在...上方,prep,The bird is above the tree.,鳥は木の上にあります。,,,1,鳥在樹上。
+grade_4_0049,school,学校,學校,n,I go to school every day.,私は毎日学校に行きます。,,,1,我每天去學校。
+grade_4_0050,go,行く,去,v,I am going to the park.,私は公園に行きます。,,,1,我去公園。
+grade_4_0051,bad,悪い,壞的,adj,This food is bad.,この食べ物は悪いです。,,,1,這個食物不好。
+grade_4_0052,between,間に,在...之間,prep,The book is between the two chairs.,本は二つの椅子の間にあります。,,,2,書在兩張椅子之間。
+grade_4_0053,friend,友達,朋友,n,I have a friend.,私は友達がいます。,,,1,我有朋友。
+grade_4_0054,swim,泳ぐ,游泳,v,I like to swim in the sea.,私は海で泳ぐことを好きです。,,,1,我喜歡在海里游泳。
+grade_4_0055,small,小さい,小的,adj,This house is small.,この家は小さいです。,,,1,房子很小。
+grade_4_0056,around,周りに,在...周圍,prep,The dog is running around the house.,犬は家の周りを走っています。,,,2,狗在房子周圍跑。
+grade_4_0057,family,家族,家人,n,I love my family.,私は私の家族を愛しています。,,,1,我愛我的家人。
+grade_4_0058,think,考える,思考,v,I think I can do it.,私はそれができると思います。,,,1,我認爲我可以做到。
+grade_4_0059,fast,速い,快的,adj,This car is fast.,この車は速いです。,,,1,這輛車很快。
+grade_4_0060,across,横に,橫跨,prep,The bridge is across the river.,橋は川の横にあります。,,,2,橋在河的旁邊。
+grade_4_0061,class,クラス,班級/課,n,I have a class today.,私は今日クラスがあります。,,,1,我今天有課。
+grade_4_0062,walk,歩く,走路,v,I like to walk in the park.,私は公園で歩くことを好きです。,,,1,我喜歡在公園散步。
+grade_4_0063,simple,簡単な,簡單的,adj,This problem is simple.,この問題は簡単です。,,,2,這個問題很簡單。
+grade_4_0064,through,通って,穿過,prep,The river is flowing through the city.,川は市を通って流れています。,,,2,河流穿過城市。
+grade_4_0065,book,本,書,n,I like to read books.,私は本を読むことを好きです。,,,1,我喜歡讀書。
+grade_4_0066,learn,学ぶ,學習,v,I want to learn English.,私は英語を学びたいです。,,,1,我想學英語。
+grade_4_0067,easy,簡単な,容易的,adj,This test is easy.,この試験は簡単です。,,,1,這個考試很簡單。
+grade_4_0068,without,なくして,沒有,prep,I can't live without my phone.,私は携帯電話なくして生きることができません。,,,2,沒有手機我就活不下去。

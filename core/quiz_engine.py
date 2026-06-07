@@ -173,10 +173,12 @@ class QuizEngine:
         miss_df = pd.DataFrame(
             [{"word_id": k, "miss_count": v} for k, v in mistakes.items()]
         )
-        merged = miss_df.merge(
-            self.df[["word_id", "word", "meaning_ja", "hint", "example_en", "example_ja"]],
-            on="word_id"
-        )
+        cols = ["word_id", "word", "meaning_ja", "hint", "example_en", "example_ja"]
+        if "meaning_zh" in self.df.columns:
+            cols.append("meaning_zh")
+        if "hint_zh" in self.df.columns:
+            cols.append("hint_zh")
+        merged = miss_df.merge(self.df[cols], on="word_id")
         return merged.sort_values("miss_count", ascending=False).head(top_n)
 
     def get_session_stats(self) -> dict:
@@ -270,8 +272,12 @@ class QuizEngine:
         raw_tags = str(row.get("tags", "")).strip()
         tags = raw_tags.split("|") if raw_tags and raw_tags != "nan" else []
 
-        # ヒント
-        hint = str(row.get("hint", "")).strip()
+        # ヒント（言語に応じて hint_zh / hint を選択）
+        if self.language == "zh" and "hint_zh" in self.df.columns:
+            zh_hint = str(row.get("hint_zh", "")).strip()
+            hint = zh_hint if (zh_hint and zh_hint != "nan") else str(row.get("hint", "")).strip()
+        else:
+            hint = str(row.get("hint", "")).strip()
         hint = "" if hint == "nan" else hint
 
         # 例文（中国語があれば使用。なければ zh モードでは空文字にして日本語を表示しない）

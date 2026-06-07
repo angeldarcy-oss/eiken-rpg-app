@@ -1,16 +1,16 @@
 word_id,grade,word,part_of_speech,meaning_ja,meaning_zh,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,tags,difficulty,example_zh
-g2_001,grade_2,abolish,v,廃止する,廢除,,They abolished the old law.,彼らは古い法律を廃止しました。,設立する,維持する,改正する,ab（完全に）＋olish（壊す）,academic|law|verb,5,
-g2_002,grade_2,accumulate,v,蓄積する,積累,積み重ねる,He accumulated wealth over years.,彼は長年にわたって富を蓄積しました。,失う,分配する,借りる,ac＋cumulate（山を積む）→どんどん積み上げる,business|verb,5,
-g2_003,grade_2,ambiguous,adj,曖昧な,模糊的,多義的な,His answer was ambiguous.,彼の答えは曖昧でした。,明確な,詳細な,正確な,ambi（両方）＋iguous（動く）→どちらとも取れる,academic|adjective,5,
-g2_004,grade_2,anticipate,v,予期する,預期,期待する,We anticipate strong demand.,私たちは強い需要を予期しています。,無視する,否定する,失望する,anti（前に）＋cipate（取る）→前もって取り込む,business|verb,5,
-g2_005,grade_2,arbitrary,adj,恣意的な,任意的,独断的な,The decision seemed arbitrary.,その決定は恣意的に見えました。,論理的な,公平な,合理的な,arbitr（審判）→審判が一人で決める,academic|adjective,5,
-g2_006,grade_2,cease,v,やめる,停止,終止する,The fighting finally ceased.,戦闘はついに終わりました。,始める,続ける,増加する,cease fire（停戦）という表現で覚える,formal|verb,5,
-g2_007,grade_2,coherent,adj,一貫した,連貫的,筋の通った,Please give a coherent explanation.,一貫した説明をしてください。,矛盾した,複雑な,不明確な,co（共に）＋herent（くっつく）→全体がくっついている,academic|adjective,5,
-g2_008,grade_2,compensate,v,補償する,補償,埋め合わせる,The company compensated the workers.,会社は労働者を補償しました。,搾取する,無視する,批判する,com（完全に）＋pensate（重さを量る）→重さを合わせる,law|verb,5,
-g2_009,grade_2,controversy,n,論争,爭議,議論,The policy caused controversy.,その政策は論争を引き起こしました。,合意,協力,理解,contra（反対）＋versy（回す）→反対意見が回り続ける,society|noun,5,
-g2_010,grade_2,deteriorate,v,悪化する,惡化,低下する,His health deteriorated rapidly.,彼の健康は急速に悪化しました。,改善する,安定する,回復する,de（下に）＋teriorate（悪い方へ）,health|verb,5,
-g2_011,grade_2,eloquent,adj,雄弁な,雄辯的,説得力のある,She gave an eloquent speech.,彼女は雄弁なスピーチをしました。,無口な,退屈な,不明瞭な,e（外に）＋loquent（話す）→言葉を外に流暢に出す,communication|adjective,5,
-g2_012,grade_2,fluctuate,v,変動する,波動,上下する,Prices fluctuate daily.,価格は毎日変動します。,安定する,上昇する,下落する,fluctu（流れる）＋ate→流れるように変わる,business|verb,5,
-g2_013,grade_2,inevitable,adj,避けられない,不可避免的,必然的な,Change is inevitable.,変化は避けられません。,防げる,偶然の,望ましい,in（否定）＋evitable（避けられる）,academic|adjective,5,
-g2_014,grade_2,premises,n,前提,前提,施設,We must question our premises.,私たちは前提を疑わなければなりません。,結論,証拠,仮説,pre（前に）＋mise（置く）→前に置かれたもの,academic|noun,5,
-g2_015,grade_2,subsequent,adj,その後の,隨後的,続いて起こる,Subsequent events proved him right.,その後の出来事が彼の正しさを証明しました。,以前の,同時の,無関係な,sub（後に）＋sequent（続く）,academic|adjective,5,
+g2_001,grade_2,abolish,v,廃止する,廢除,,They abolished the old law.,彼らは古い法律を廃止しました。,設立する,維持する,改正する,ab（完全に）＋olish（壊す）,academic|law|verb,5,他們廢除了舊法律。
+g2_002,grade_2,accumulate,v,蓄積する,積累,積み重ねる,He accumulated wealth over years.,彼は長年にわたって富を蓄積しました。,失う,分配する,借りる,ac＋cumulate（山を積む）→どんどん積み上げる,business|verb,5,多年來他積累了財富。
+g2_003,grade_2,ambiguous,adj,曖昧な,模糊的,多義的な,His answer was ambiguous.,彼の答えは曖昧でした。,明確な,詳細な,正確な,ambi（両方）＋iguous（動く）→どちらとも取れる,academic|adjective,5,他的回答很模糊。
+g2_004,grade_2,anticipate,v,予期する,預期,期待する,We anticipate strong demand.,私たちは強い需要を予期しています。,無視する,否定する,失望する,anti（前に）＋cipate（取る）→前もって取り込む,business|verb,5,我們期待着強勁的需求。
+g2_005,grade_2,arbitrary,adj,恣意的な,任意的,独断的な,The decision seemed arbitrary.,その決定は恣意的に見えました。,論理的な,公平な,合理的な,arbitr（審判）→審判が一人で決める,academic|adjective,5,這個決定看起來很隨意。
+g2_006,grade_2,cease,v,やめる,停止,終止する,The fighting finally ceased.,戦闘はついに終わりました。,始める,続ける,増加する,cease fire（停戦）という表現で覚える,formal|verb,5,戰鬥終於結束了。
+g2_007,grade_2,coherent,adj,一貫した,連貫的,筋の通った,Please give a coherent explanation.,一貫した説明をしてください。,矛盾した,複雑な,不明確な,co（共に）＋herent（くっつく）→全体がくっついている,academic|adjective,5,請做出連貫的解釋。
+g2_008,grade_2,compensate,v,補償する,補償,埋め合わせる,The company compensated the workers.,会社は労働者を補償しました。,搾取する,無視する,批判する,com（完全に）＋pensate（重さを量る）→重さを合わせる,law|verb,5,公司賠償了工人。
+g2_009,grade_2,controversy,n,論争,爭議,議論,The policy caused controversy.,その政策は論争を引き起こしました。,合意,協力,理解,contra（反対）＋versy（回す）→反対意見が回り続ける,society|noun,5,那個政策引起了爭論。
+g2_010,grade_2,deteriorate,v,悪化する,惡化,低下する,His health deteriorated rapidly.,彼の健康は急速に悪化しました。,改善する,安定する,回復する,de（下に）＋teriorate（悪い方へ）,health|verb,5,他的健康狀況迅速惡化。
+g2_011,grade_2,eloquent,adj,雄弁な,雄辯的,説得力のある,She gave an eloquent speech.,彼女は雄弁なスピーチをしました。,無口な,退屈な,不明瞭な,e（外に）＋loquent（話す）→言葉を外に流暢に出す,communication|adjective,5,她做了雄辯的演講。
+g2_012,grade_2,fluctuate,v,変動する,波動,上下する,Prices fluctuate daily.,価格は毎日変動します。,安定する,上昇する,下落する,fluctu（流れる）＋ate→流れるように変わる,business|verb,5,價格每天都在波動。
+g2_013,grade_2,inevitable,adj,避けられない,不可避免的,必然的な,Change is inevitable.,変化は避けられません。,防げる,偶然の,望ましい,in（否定）＋evitable（避けられる）,academic|adjective,5,變化是不可避免的。
+g2_014,grade_2,premises,n,前提,前提,施設,We must question our premises.,私たちは前提を疑わなければなりません。,結論,証拠,仮説,pre（前に）＋mise（置く）→前に置かれたもの,academic|noun,5,我們必須懷疑前提。
+g2_015,grade_2,subsequent,adj,その後の,隨後的,続いて起こる,Subsequent events proved him right.,その後の出来事が彼の正しさを証明しました。,以前の,同時の,無関係な,sub（後に）＋sequent（続く）,academic|adjective,5,後來的事情證明了他的正確。

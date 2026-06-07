@@ -205,12 +205,14 @@ else:
 st.markdown(
     '<div class="quiz-card">'
     '<div style="font-size:.9rem;color:#aaaacc;text-align:center;margin-bottom:20px;">次の英単語の意味を選んでください ' + diff_stars + bonus + '</div>'
-    '<div style="display:flex;align-items:center;justify-content:center;">'
     '<div class="word-display">' + q.word + '</div>'
-    + audio_html +
-    '</div>'
     '<div style="text-align:center;"><span class="pos-badge">' + pos_ja + '</span></div>'
     '</div>', unsafe_allow_html=True)
+
+if audio_b64:
+    import base64, io
+    audio_bytes = base64.b64decode(audio_b64)
+    st.audio(audio_bytes, format="audio/mp3")
 
 if not st.session_state.answered:
     cols = st.columns(2)

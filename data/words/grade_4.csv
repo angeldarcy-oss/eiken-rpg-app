@@ -1,16 +1,69 @@
-word_id,grade,word,part_of_speech,meaning_ja,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,tags,difficulty
-g4_001,grade_4,important,adj,重要な,大切な,This is an important decision.,これは重要な決断です。,簡単な,小さな,古い,import（輸入）と同じ語源。中に運ばれてくるほど価値がある,business|adjective,2
-g4_002,grade_4,message,n,メッセージ,伝言,Please leave a message.,メッセージを残してください。,電話,手紙,住所,,communication|noun,2
-g4_003,grade_4,exciting,adj,わくわくする,刺激的な,The game was very exciting.,その試合はとてもわくわくするものでした。,退屈な,悲しい,疲れる,excite（興奮させる）＋ing,emotion|adjective,2
-g4_004,grade_4,usually,adv,たいてい,ふつうは,I usually walk to school.,私はたいてい歩いて学校へ行きます。,めったに,いつも,決して,usual（いつもの）＋ly,frequency|adverb,2
-g4_005,grade_4,hobby,n,趣味,,My hobby is playing the guitar.,私の趣味はギターを弾くことです。,仕事,夢,目標,,lifestyle|noun,2
-g4_006,grade_4,popular,adj,人気のある,広く知られている,This singer is very popular.,この歌手はとても人気があります。,無名の,嫌われている,古い,ポピュラー音楽の「ポピュラー」,social|adjective,2
-g4_007,grade_4,practice,v,練習する,実践する,I practice the piano every day.,私は毎日ピアノを練習します。,やめる,忘れる,失敗する,practical（実践的な）と同じ語源,study|verb,2
-g4_008,grade_4,delicious,adj,おいしい,,This cake is really delicious.,このケーキは本当においしいです。,まずい,辛い,冷たい,delice（喜び）が語源。喜びを与える味,food|adjective,2
-g4_009,grade_4,museum,n,博物館,美術館,Let's go to the museum.,博物館へ行きましょう。,図書館,水族館,動物園,,place|culture,2
-g4_010,grade_4,send,v,送る,伝える,I will send you an email.,メールを送ります。,受け取る,読む,書く,,communication|verb,2
-g4_011,grade_4,season,n,季節,シーズン,My favorite season is autumn.,私の好きな季節は秋です。,天気,時間,月,,nature|noun,2
-g4_012,grade_4,arrive,v,到着する,,The train will arrive at noon.,電車は正午に到着します。,出発する,止まる,通り過ぎる,a（方向）＋rive（川岸）→ 岸にたどり着く,travel|verb,3
-g4_013,grade_4,another,adj,別の,もう一つの,Can I have another piece?,もう一切れもらえますか？,同じ,最初の,最後の,an＋other（別のもの）,grammar|adjective,2
-g4_014,grade_4,foreign,adj,外国の,外来の,She studies foreign languages.,彼女は外国語を勉強しています。,国内の,地元の,古代の,フォーリナー（外国人）そのまま,culture|adjective,3
-g4_015,grade_4,environment,n,環境,,We must protect the environment.,私たちは環境を守らなければなりません。,社会,経済,文化,environ（取り囲む）が語源,nature|academic,3
+word_id,word,meaning_ja,part_of_speech,example_en,example_ja,hint,difficulty
+g4_001,important,重要な,adj,This is an important decision.,これは重要な決断です。,import（輸入）と同じ語源。中に運ばれてくるほど価値がある,2
+g4_002,message,メッセージ,n,Please leave a message.,メッセージを残してください。,,2
+g4_003,exciting,わくわくする,adj,The game was very exciting.,その試合はとてもわくわくするものでした。,excite（興奮させる）＋ing,2
+g4_004,usually,たいてい,adv,I usually walk to school.,私はたいてい歩いて学校へ行きます。,usual（いつもの）＋ly,2
+g4_005,hobby,趣味,n,My hobby is playing the guitar.,私の趣味はギターを弾くことです。,,2
+g4_006,popular,人気のある,adj,This singer is very popular.,この歌手はとても人気があります。,ポピュラー音楽の「ポピュラー」,2
+g4_007,practice,練習する,v,I practice the piano every day.,私は毎日ピアノを練習します。,practical（実践的な）と同じ語源,2
+g4_008,delicious,おいしい,adj,This cake is really delicious.,このケーキは本当においしいです。,delice（喜び）が語源。喜びを与える味,2
+g4_009,museum,博物館,n,Let's go to the museum.,博物館へ行きましょう。,,2
+g4_010,send,送る,v,I will send you an email.,メールを送ります。,,2
+g4_011,season,季節,n,My favorite season is autumn.,私の好きな季節は秋です。,,2
+g4_012,arrive,到着する,v,The train will arrive at noon.,電車は正午に到着します。,a（方向）＋rive（川岸）→ 岸にたどり着く,3
+g4_013,another,別の,adj,Can I have another piece?,もう一切れもらえますか？,an＋other（別のもの）,2
+g4_014,foreign,外国の,adj,She studies foreign languages.,彼女は外国語を勉強しています。,フォーリナー（外国人）そのまま,3
+g4_015,environment,環境,n,We must protect the environment.,私たちは環境を守らなければなりません。,environ（取り囲む）が語源,3
+grade_4_0016,apple,リンゴ,n,I eat an apple every day.,私は毎日リンゴを食べます。,,1
+grade_4_0017,run,走る,v,I like to run in the park.,私は公園で走ることを好きです。,,1
+grade_4_0018,big,大きい,adj,This house is big.,この家は大きいです。,,1
+grade_4_0019,quickly,速く,adv,I can eat quickly.,私は速く食べることができます。,,2
+grade_4_0020,in,中で,prep,The book is in the box.,本は箱の中にあります。,,1
+grade_4_0021,dog,犬,n,I have a dog.,私は犬を飼っています。,,1
+grade_4_0022,read,読む,v,I like to read books.,私は本を読むことを好きです。,,1
+grade_4_0023,happy,幸せな,adj,I am happy today.,私は今日幸せです。,,1
+grade_4_0024,on,上に,prep,The book is on the table.,本は机の上にあります。,,1
+grade_4_0025,cat,猫,n,I have a cat.,私は猫を飼っています。,,1
+grade_4_0026,write,書く,v,I can write my name.,私は自分の名前を書くことができます。,,1
+grade_4_0027,little,小さい,adj,This house is little.,この家は小さいです。,,1
+grade_4_0028,at,に,prep,I am at home.,私は家にいます。,,1
+grade_4_0029,bird,鳥,n,I can see a bird.,私は鳥を見ることができます。,,1
+grade_4_0030,listen,聞く,v,I like to listen to music.,私は音楽を聞くことを好きです。,,1
+grade_4_0031,old,古い,adj,This book is old.,この本は古いです。,,1
+grade_4_0032,with,と,prep,I am with my friend.,私は友達と一緒です。,,1
+grade_4_0033,fish,魚,n,I like to eat fish.,私は魚を食べることを好きです。,,1
+grade_4_0034,look,見る,v,I can look at the picture.,私は絵を見ることができます。,,1
+grade_4_0035,new,新しい,adj,This book is new.,この本は新しいです。,,1
+grade_4_0036,from,から,prep,I am from Tokyo.,私は東京からです。,,1
+grade_4_0037,tree,木,n,I can see a tree.,私は木を見ることができます。,,1
+grade_4_0038,speak,話す,v,I can speak Japanese.,私は日本語を話すことができます。,,1
+grade_4_0039,long,長い,adj,This road is long.,この道は長いです。,,1
+grade_4_0040,under,下に,prep,The book is under the table.,本は机の下にあります。,,1
+grade_4_0041,house,家,n,I live in a house.,私は家に住んでいます。,,1
+grade_4_0042,eat,食べる,v,I like to eat sushi.,私は寿司を食べることを好きです。,,1
+grade_4_0043,high,高い,adj,This mountain is high.,この山は高いです。,,1
+grade_4_0044,to,に,prep,I am going to school.,私は学校に行きます。,,1
+grade_4_0045,car,車,n,I have a car.,私は車を所有しています。,,1
+grade_4_0046,play,遊ぶ,v,I like to play soccer.,私はサッカーを遊ぶことを好きです。,,1
+grade_4_0047,good,よい,adj,This food is good.,この食べ物はよいです。,,1
+grade_4_0048,above,上に,prep,The bird is above the tree.,鳥は木の上にあります。,,1
+grade_4_0049,school,学校,n,I go to school every day.,私は毎日学校に行きます。,,1
+grade_4_0050,go,行く,v,I am going to the park.,私は公園に行きます。,,1
+grade_4_0051,bad,悪い,adj,This food is bad.,この食べ物は悪いです。,,1
+grade_4_0052,between,間に,prep,The book is between the two chairs.,本は二つの椅子の間にあります。,,2
+grade_4_0053,friend,友達,n,I have a friend.,私は友達がいます。,,1
+grade_4_0054,swim,泳ぐ,v,I like to swim in the sea.,私は海で泳ぐことを好きです。,,1
+grade_4_0055,small,小さい,adj,This house is small.,この家は小さいです。,,1
+grade_4_0056,around,周りに,prep,The dog is running around the house.,犬は家の周りを走っています。,,2
+grade_4_0057,family,家族,n,I love my family.,私は私の家族を愛しています。,,1
+grade_4_0058,think,考える,v,I think I can do it.,私はそれができると思います。,,1
+grade_4_0059,fast,速い,adj,This car is fast.,この車は速いです。,,1
+grade_4_0060,across,横に,prep,The bridge is across the river.,橋は川の横にあります。,,2
+grade_4_0061,class,クラス,n,I have a class today.,私は今日クラスがあります。,,1
+grade_4_0062,walk,歩く,v,I like to walk in the park.,私は公園で歩くことを好きです。,,1
+grade_4_0063,simple,簡単な,adj,This problem is simple.,この問題は簡単です。,,2
+grade_4_0064,through,通って,prep,The river is flowing through the city.,川は市を通って流れています。,,2
+grade_4_0065,book,本,n,I like to read books.,私は本を読むことを好きです。,,1
+grade_4_0066,learn,学ぶ,v,I want to learn English.,私は英語を学びたいです。,,1
+grade_4_0067,easy,簡単な,adj,This test is easy.,この試験は簡単です。,,1
+grade_4_0068,without,なくして,prep,I can't live without my phone.,私は携帯電話なくして生きることができません。,,2

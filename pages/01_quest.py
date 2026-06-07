@@ -29,17 +29,18 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 </style>""", unsafe_allow_html=True)
 
 
-def _speak_button(word, label="🔊 発音を聞く", key_suffix=""):
+def _get_audio_b64(word):
     try:
         from gtts import gTTS
-        import io
+        import io, base64
         tts = gTTS(text=word, lang="en", slow=True)
         buf = io.BytesIO()
         tts.write_to_fp(buf)
         buf.seek(0)
-        st.audio(buf, format="audio/mp3")
+        b64 = base64.b64encode(buf.read()).decode()
+        return b64
     except Exception:
-        st.caption("🔊 " + word)
+        return None
 
 
 def _grade_label(k):
@@ -190,14 +191,26 @@ streak = st.session_state.streak
 mult = streak_multiplier(streak)
 bonus = '<span style="background:#2a1a00;color:#ffe066;border:1px solid #5a3a00;border-radius:6px;padding:2px 8px;font-size:.75rem;margin-left:8px;">🔥 EXP x' + str(mult) + '</span>' if mult > 1.0 else ""
 
+audio_b64 = _get_audio_b64(q.word)
+if audio_b64:
+    audio_html = (
+        '<audio id="quiz-audio" src="data:audio/mp3;base64,' + audio_b64 + '"></audio>'
+        '<span onclick="document.getElementById(&quot;quiz-audio&quot;).play()" '
+        'style="cursor:pointer;font-size:1.5rem;margin-left:10px;" title="発音を聞く">🔊</span>'
+    )
+else:
+    audio_html = ""
+
+
 st.markdown(
     '<div class="quiz-card">'
     '<div style="font-size:.9rem;color:#aaaacc;text-align:center;margin-bottom:20px;">次の英単語の意味を選んでください ' + diff_stars + bonus + '</div>'
+    '<div style="display:flex;align-items:center;justify-content:center;">'
     '<div class="word-display">' + q.word + '</div>'
+    + audio_html +
+    '</div>'
     '<div style="text-align:center;"><span class="pos-badge">' + pos_ja + '</span></div>'
     '</div>', unsafe_allow_html=True)
-
-_speak_button(q.word, "🔊 発音を聞く")
 
 if not st.session_state.answered:
     cols = st.columns(2)
@@ -244,7 +257,7 @@ if st.session_state.answered and st.session_state.last_result:
             '<div style="font-size:.88rem;color:#aaccaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + '<br>' + q.example_ja + '</div>'
             + hint_html +
             '</div>', unsafe_allow_html=True)
-        _speak_button(q.word, "🔊 " + q.word + " を聞く")
+        
     else:
         hint_html = '<div style="font-size:.82rem;color:#aaaa88;margin-top:6px;">💡 ' + q.hint + '</div>' if q.hint else ""
         st.markdown(
@@ -255,7 +268,7 @@ if st.session_state.answered and st.session_state.last_result:
             '<div style="font-size:.88rem;color:#ccaaaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + '<br>' + q.example_ja + '</div>'
             + hint_html +
             '</div>', unsafe_allow_html=True)
-        _speak_button(q.word, "🔊 " + q.word + " を聞く")
+        
 
         if st.session_state.ai_explanation is None:
             if st.button("🤖 ハナ先生に解説してもらう", use_container_width=True):

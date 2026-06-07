@@ -251,14 +251,14 @@ class QuizEngine:
             correct = str(row["meaning_ja"])
 
         # ── 選択肢を組み立てる ──
-        # CSVにwrong_choice_1〜3がある場合はそれを使う
+        # 中国語モードでは wrong_choice_1~3（日本語固定）を使わず meaning_zh プールから選ぶ
         wrong_choices = []
-        for col in ["wrong_choice_1", "wrong_choice_2", "wrong_choice_3"]:
-            val = str(row.get(col, "")).strip()
-            if val and val != "nan":
-                wrong_choices.append(val)
+        if self.language != "zh":
+            for col in ["wrong_choice_1", "wrong_choice_2", "wrong_choice_3"]:
+                val = str(row.get(col, "")).strip()
+                if val and val != "nan":
+                    wrong_choices.append(val)
 
-        # CSVのひっかけが足りない場合は他の単語の意味で補う
         if len(wrong_choices) < 3:
             wrong_choices = self._fill_wrong_choices(correct, wrong_choices)
 

@@ -55,10 +55,19 @@ def init_session():
     for k, v in defaults:
         if k not in st.session_state:
             st.session_state[k] = v
-    if st.session_state.engine is None:
+    player_lang = st.session_state.player.get("language", "ja")
+    engine = st.session_state.engine
+    if engine is None or engine.language != player_lang or engine.grade != st.session_state.player["grade_target"]:
         grade = st.session_state.player["grade_target"]
-        lang = st.session_state.player.get("language", "ja")
-        st.session_state.engine = QuizEngine(grade=grade, data_dir="data/words", language=lang)
+        st.session_state.engine = QuizEngine(grade=grade, data_dir="data/words", language=player_lang)
+        st.session_state.current_question = None
+        st.session_state.answered = False
+        st.session_state.last_result = None
+        st.session_state.quest_finished = False
+        st.session_state.session_correct = 0
+        st.session_state.session_total = 0
+        st.session_state.ai_explanation = None
+        st.session_state.last_gain_result = None
 
 init_session()
 

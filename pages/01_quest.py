@@ -1,5 +1,6 @@
 import sys
 import streamlit as st
+import streamlit.components.v1 as components
 from pathlib import Path
 
 _root = Path(__file__).parent.parent
@@ -26,27 +27,19 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .word-display{font-size:3rem;font-weight:700;text-align:center;color:#ffe066;margin-bottom:6px;}
 .pos-badge{display:inline-block;background:#0f3460;color:#88aaff;font-size:.75rem;padding:2px 10px;border-radius:20px;border:1px solid #2244aa;margin-bottom:20px;}
 .progress-label{font-size:.82rem;color:#888;margin-bottom:4px;}
-.speak-btn{background:none;border:1px solid #3a3a6a;border-radius:8px;color:#aaaacc;cursor:pointer;font-size:1.2rem;padding:4px 12px;margin-top:8px;transition:all .2s;}
-.speak-btn:hover{border-color:#ffe066;color:#ffe066;}
 </style>""", unsafe_allow_html=True)
 
-# Web Speech API の JavaScript
-st.markdown("""
-<script>
-function speakWord(word) {
-    if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        var utterance = new SpeechSynthesisUtterance(word);
-        utterance.lang = 'en-US';
-        utterance.rate = 0.8;
-        utterance.pitch = 1.0;
-        window.speechSynthesis.speak(utterance);
-    } else {
-        alert('お使いのブラウザは音声読み上げに対応していません。');
-    }
-}
-</script>
-""", unsafe_allow_html=True)
+
+def _speak_button(word, label="🔊 発音を聞く"):
+    components.html(
+        '<button onclick="var u=new SpeechSynthesisUtterance(\'' + word + '\');'
+        'u.lang=\'en-US\';u.rate=0.8;window.speechSynthesis.speak(u);" '
+        'style="background:none;border:1px solid #5a5a8a;border-radius:8px;'
+        'color:#aaaacc;cursor:pointer;font-size:1rem;padding:6px 16px;'
+        'margin:4px auto;display:block;font-family:sans-serif;">'
+        + label + '</button>',
+        height=50,
+    )
 
 
 def _grade_label(k):
@@ -197,16 +190,14 @@ streak = st.session_state.streak
 mult = streak_multiplier(streak)
 bonus = '<span style="background:#2a1a00;color:#ffe066;border:1px solid #5a3a00;border-radius:6px;padding:2px 8px;font-size:.75rem;margin-left:8px;">🔥 EXP x' + str(mult) + '</span>' if mult > 1.0 else ""
 
-# ── 問題カード（🔊ボタン付き）──
 st.markdown(
     '<div class="quiz-card">'
     '<div style="font-size:.9rem;color:#aaaacc;text-align:center;margin-bottom:20px;">次の英単語の意味を選んでください ' + diff_stars + bonus + '</div>'
     '<div class="word-display">' + q.word + '</div>'
-    '<div style="text-align:center;">'
-    '<span class="pos-badge">' + pos_ja + '</span><br>'
-    '<button class="speak-btn" onclick="speakWord(\'' + q.word + '\')">🔊 発音を聞く</button>'
-    '</div>'
+    '<div style="text-align:center;"><span class="pos-badge">' + pos_ja + '</span></div>'
     '</div>', unsafe_allow_html=True)
+
+_speak_button(q.word, "🔊 発音を聞く")
 
 if not st.session_state.answered:
     cols = st.columns(2)
@@ -252,8 +243,8 @@ if st.session_state.answered and st.session_state.last_result:
             '<div style="color:#cceebb;font-size:.92rem;margin-bottom:8px;"><b style="color:#fff;">' + q.word + '</b> = ' + q.meaning_ja + '</div>'
             '<div style="font-size:.88rem;color:#aaccaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + '<br>' + q.example_ja + '</div>'
             + hint_html +
-            '<div style="margin-top:12px;"><button class="speak-btn" onclick="speakWord(\'' + q.word + '\')">🔊 ' + q.word + ' を聞く</button></div>'
             '</div>', unsafe_allow_html=True)
+        _speak_button(q.word, "🔊 " + q.word + " を聞く")
     else:
         hint_html = '<div style="font-size:.82rem;color:#aaaa88;margin-top:6px;">💡 ' + q.hint + '</div>' if q.hint else ""
         st.markdown(
@@ -263,8 +254,8 @@ if st.session_state.answered and st.session_state.last_result:
             '<div style="color:#ddbbbb;font-size:.88rem;margin-bottom:8px;">あなたの答え：<span style="color:#ff8080;">' + result.selected_answer + '</span></div>'
             '<div style="font-size:.88rem;color:#ccaaaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + '<br>' + q.example_ja + '</div>'
             + hint_html +
-            '<div style="margin-top:12px;"><button class="speak-btn" onclick="speakWord(\'' + q.word + '\')">🔊 ' + q.word + ' を聞く</button></div>'
             '</div>', unsafe_allow_html=True)
+        _speak_button(q.word, "🔊 " + q.word + " を聞く")
 
         if st.session_state.ai_explanation is None:
             if st.button("🤖 ハナ先生に解説してもらう", use_container_width=True):

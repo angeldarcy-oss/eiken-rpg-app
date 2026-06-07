@@ -82,7 +82,7 @@ def render_sidebar():
         if p["hp"] <= 0:
             st.error("HPが0！正解するとHP回復します")
         if st.button("💾 セーブ", use_container_width=True):
-            save_player(st.session_state.player)
+            save_player(st.session_state.player, st.session_state.get("username", ""))
             st.success("セーブしました！")
         with st.expander("開発者メニュー"):
             if st.button("全リセット", use_container_width=True):
@@ -130,7 +130,7 @@ if st.session_state.quest_finished:
     engine = st.session_state.engine
     stats = engine.get_session_stats()
     save_player(st.session_state.player)
-    append_history({**stats, "grade_target": st.session_state.player["grade_target"]})
+    append_history({**stats, "grade_target", st.session_state.get("username", ""): st.session_state.player["grade_target"]})
     accuracy = stats["accuracy"]
     if accuracy >= 90: rank, color = "S ランク 🏆", "#ffe066"
     elif accuracy >= 75: rank, color = "A ランク ⭐", "#88ff88"

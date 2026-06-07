@@ -31,13 +31,16 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 
 
 def _speak_button(word, label="🔊 発音を聞く"):
+    audio_url = "https://translate.google.com/translate_tts?ie=UTF-8&q=" + word + "&tl=en-us&client=tw-ob"
     components.html(
-        '<button onclick="var u=new SpeechSynthesisUtterance(\'' + word + '\');'
-        'u.lang=\'en-US\';u.rate=0.8;window.speechSynthesis.speak(u);" '
+        '<!DOCTYPE html><html><body style="margin:0;padding:0;background:transparent;">'
+        '<button onclick="document.getElementById(\'a\').play();" '
         'style="background:none;border:1px solid #5a5a8a;border-radius:8px;'
         'color:#aaaacc;cursor:pointer;font-size:1rem;padding:6px 16px;'
         'margin:4px auto;display:block;font-family:sans-serif;">'
-        + label + '</button>',
+        + label + '</button>'
+        '<audio id="a" src="' + audio_url + '"></audio>'
+        '</body></html>',
         height=50,
     )
 

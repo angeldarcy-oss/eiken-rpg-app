@@ -209,11 +209,6 @@ st.markdown(
     '<div style="text-align:center;"><span class="pos-badge">' + pos_ja + '</span></div>'
     '</div>', unsafe_allow_html=True)
 
-if audio_b64:
-    import base64, io
-    audio_bytes = base64.b64decode(audio_b64)
-    st.audio(audio_bytes, format="audio/mp3")
-
 if not st.session_state.answered:
     cols = st.columns(2)
     labels = ["Ａ","Ｂ","Ｃ","Ｄ"]

@@ -62,7 +62,7 @@ def _fallback(word, meaning_ja, wrong_answer, error=""):
         "例文を何度か声に出して読んでみると、きっと覚えられるよ！",
     ]
     if error:
-        lines.append("（AI解説エラー: " + error + "）")
+        lines.append("（AI解説は現在利用できません。しばらくしてからお試しください。）")
     return "\n".join(lines)
 
 

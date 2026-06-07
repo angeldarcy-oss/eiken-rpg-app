@@ -192,10 +192,6 @@ mult = streak_multiplier(streak)
 bonus = '<span style="background:#2a1a00;color:#ffe066;border:1px solid #5a3a00;border-radius:6px;padding:2px 8px;font-size:.75rem;margin-left:8px;">🔥 EXP x' + str(mult) + '</span>' if mult > 1.0 else ""
 
 audio_b64 = _get_audio_b64(q.word)
-if st.button("🔊 発音を聞く", key="speak_"+q.word):
-    if audio_b64:
-        import base64
-        st.audio(base64.b64decode(audio_b64), format="audio/mp3")
 if audio_b64:
     audio_html = (
         '<audio id="quiz-audio" src="data:audio/mp3;base64,' + audio_b64 + '"></audio>'
@@ -212,6 +208,10 @@ st.markdown(
     '<div class="word-display">' + q.word + '</div>'
     '<div style="text-align:center;"><span class="pos-badge">' + pos_ja + '</span></div>'
     '</div>', unsafe_allow_html=True)
+if st.button('🔊 発音を聞く', key='speak_'+q.word):
+    if audio_b64:
+        import base64
+        st.audio(base64.b64decode(audio_b64), format='audio/mp3')
 
 if not st.session_state.answered:
     cols = st.columns(2)

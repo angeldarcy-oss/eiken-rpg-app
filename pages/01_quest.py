@@ -90,7 +90,7 @@ def render_sidebar():
             '<div style="font-size:.82rem;line-height:2.1;color:#ccccee;">'
             '🔥 ' + t("streak", lang) + ' <b style="color:#ffe066;">' + str(streak) + '</b> ' + t("questions", lang) + '<br>'
             '📊 ' + t("accuracy", lang) + ' <b style="color:#ffe066;">' + accuracy + '</b><br>'
-            '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang)
+            '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang) +
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
         if p["hp"] <= 0:

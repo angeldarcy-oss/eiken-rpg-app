@@ -149,7 +149,7 @@ def render_sidebar():
             '<div style="font-size:.82rem;line-height:2.1;color:#ccccee;">'
             '🔥 ' + t("streak", lang) + ' <b style="color:#ffe066;">' + str(streak) + '</b> ' + t("questions", lang) + ' ' + bonus_html + '<br>'
             '📊 ' + t("accuracy", lang) + ' <b style="color:#ffe066;">' + accuracy + '</b><br>'
-            '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang)
+            '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang) +
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
         if p["hp"] <= 0:
@@ -189,9 +189,9 @@ st.markdown(
 st.markdown(
     '<div class="info-card">'
     '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">'
-    '⚔️ ' + t("home_welcome", lang) + '<b style="color:#ffe066;">' + p["name"] + '</b>！<br>'
+    '⚔️ ' + t("home_welcome", lang) + '<b style="color:#ffe066;">' + p["name"] + '</b>！<br>' +
     t("level", lang) + ' <b style="color:#fff;">' + str(p["level"]) + '</b> | '
-    + t("home_challenge", lang) + '<b style="color:#fff;">' + grade_label(p["grade_target"], lang) + '</b>' + t("home_challenge_sub", lang)
+    + t("home_challenge", lang) + '<b style="color:#fff;">' + grade_label(p["grade_target"], lang) + '</b>' + t("home_challenge_sub", lang) +
     '</div></div>',
     unsafe_allow_html=True)
 

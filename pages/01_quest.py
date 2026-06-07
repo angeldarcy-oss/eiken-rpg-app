@@ -29,23 +29,17 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 </style>""", unsafe_allow_html=True)
 
 
-def _speak_button(word, label="🔊 発音を聞く"):
-    key = "audio_" + word
-    if key not in st.session_state:
-        st.session_state[key] = False
-    if st.button(label, key="btn_" + word + "_" + str(st.session_state.get("total_questions", 0))):
-        st.session_state[key] = True
-    if st.session_state[key]:
-        try:
-            from gtts import gTTS
-            import io
-            tts = gTTS(text=word, lang="en", slow=True)
-            buf = io.BytesIO()
-            tts.write_to_fp(buf)
-            buf.seek(0)
-            st.audio(buf, format="audio/mp3", autoplay=True)
-        except Exception as e:
-            st.warning("音声を読み込めませんでした。")
+def _speak_button(word, label="🔊 発音を聞く", key_suffix=""):
+    try:
+        from gtts import gTTS
+        import io
+        tts = gTTS(text=word, lang="en", slow=True)
+        buf = io.BytesIO()
+        tts.write_to_fp(buf)
+        buf.seek(0)
+        st.audio(buf, format="audio/mp3")
+    except Exception:
+        st.caption("🔊 " + word)
 
 
 def _grade_label(k):

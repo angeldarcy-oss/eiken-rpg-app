@@ -5,3 +5,4 @@ __pycache__/
 .DS_Store
 add_zh_translations.py
 generate_words.py
+fill_example_zh.py

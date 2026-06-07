@@ -161,6 +161,11 @@ selected_lang_code = LANG_OPTIONS[selected_lang_label]
 if st.button(("💾 言語を保存" if lang == "ja" else "💾 儲存語言"), use_container_width=True):
     st.session_state.player["language"] = selected_lang_code
     save_player(st.session_state.player, st.session_state.get("username", ""))
+    # 言語が変わったのでエンジンを破棄（次回クエスト時に新しい言語で再生成される）
+    for key in ["engine", "current_question", "quest_finished", "answered", "last_result",
+                "session_correct", "session_total", "ai_explanation", "last_gain_result"]:
+        if key in st.session_state:
+            del st.session_state[key]
     st.success(t("lang_saved_msg", selected_lang_code))
     st.rerun()
 

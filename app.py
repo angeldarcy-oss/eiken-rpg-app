@@ -77,8 +77,10 @@ if not st.session_state.logged_in:
     with tab2:
         st.markdown("<br>", unsafe_allow_html=True)
         reg_user = st.text_input("ユーザー名", key="reg_user", placeholder="2〜20文字", max_chars=20)
-        reg_pass = st.text_input("パスワード", key="reg_pass", type="password", placeholder="4文字以上")
-        reg_pass2 = st.text_input("パスワード（確認）", key="reg_pass2", type="password", placeholder="もう一度入力")
+        reg_pass = st.text_input("パスワード", key="reg_pass", type="password", placeholder="4文字以上で入力")
+        st.caption("🔒 パスワードは4文字以上で設定してください")
+        reg_pass2 = st.text_input("パスワード（確認）", key="reg_pass2", type="password", placeholder="もう一度入力してください")
+        st.caption("✅ 上のパスワードをもう一度入力してください")
         if st.button("新規登録", use_container_width=True, type="primary"):
             name = reg_user.strip()
             if not name or not reg_pass:

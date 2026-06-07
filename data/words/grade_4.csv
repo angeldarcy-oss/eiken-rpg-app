@@ -1,0 +1,16 @@
+word_id,grade,word,part_of_speech,meaning_ja,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,tags,difficulty
+g4_001,grade_4,important,adj,重要な,大切な,This is an important decision.,これは重要な決断です。,簡単な,小さな,古い,import（輸入）と同じ語源。中に運ばれてくるほど価値がある,business|adjective,2
+g4_002,grade_4,message,n,メッセージ,伝言,Please leave a message.,メッセージを残してください。,電話,手紙,住所,,communication|noun,2
+g4_003,grade_4,exciting,adj,わくわくする,刺激的な,The game was very exciting.,その試合はとてもわくわくするものでした。,退屈な,悲しい,疲れる,excite（興奮させる）＋ing,emotion|adjective,2
+g4_004,grade_4,usually,adv,たいてい,ふつうは,I usually walk to school.,私はたいてい歩いて学校へ行きます。,めったに,いつも,決して,usual（いつもの）＋ly,frequency|adverb,2
+g4_005,grade_4,hobby,n,趣味,,My hobby is playing the guitar.,私の趣味はギターを弾くことです。,仕事,夢,目標,,lifestyle|noun,2
+g4_006,grade_4,popular,adj,人気のある,広く知られている,This singer is very popular.,この歌手はとても人気があります。,無名の,嫌われている,古い,ポピュラー音楽の「ポピュラー」,social|adjective,2
+g4_007,grade_4,practice,v,練習する,実践する,I practice the piano every day.,私は毎日ピアノを練習します。,やめる,忘れる,失敗する,practical（実践的な）と同じ語源,study|verb,2
+g4_008,grade_4,delicious,adj,おいしい,,This cake is really delicious.,このケーキは本当においしいです。,まずい,辛い,冷たい,delice（喜び）が語源。喜びを与える味,food|adjective,2
+g4_009,grade_4,museum,n,博物館,美術館,Let's go to the museum.,博物館へ行きましょう。,図書館,水族館,動物園,,place|culture,2
+g4_010,grade_4,send,v,送る,伝える,I will send you an email.,メールを送ります。,受け取る,読む,書く,,communication|verb,2
+g4_011,grade_4,season,n,季節,シーズン,My favorite season is autumn.,私の好きな季節は秋です。,天気,時間,月,,nature|noun,2
+g4_012,grade_4,arrive,v,到着する,,The train will arrive at noon.,電車は正午に到着します。,出発する,止まる,通り過ぎる,a（方向）＋rive（川岸）→ 岸にたどり着く,travel|verb,3
+g4_013,grade_4,another,adj,別の,もう一つの,Can I have another piece?,もう一切れもらえますか？,同じ,最初の,最後の,an＋other（別のもの）,grammar|adjective,2
+g4_014,grade_4,foreign,adj,外国の,外来の,She studies foreign languages.,彼女は外国語を勉強しています。,国内の,地元の,古代の,フォーリナー（外国人）そのまま,culture|adjective,3
+g4_015,grade_4,environment,n,環境,,We must protect the environment.,私たちは環境を守らなければなりません。,社会,経済,文化,environ（取り囲む）が語源,nature|academic,3

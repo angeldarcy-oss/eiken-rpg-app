@@ -1,0 +1,16 @@
+word_id,grade,word,part_of_speech,meaning_ja,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,tags,difficulty
+g5_001,grade_5,apple,n,リンゴ,,I eat an apple every day.,私は毎日リンゴを食べます。,オレンジ,バナナ,ブドウ,,fruit|food,1
+g5_002,grade_5,book,n,本,書籍,I read a book last night.,昨夜、本を読みました。,雑誌,新聞,ノート,,study|object,1
+g5_003,grade_5,run,v,走る,経営する,He runs to school every morning.,彼は毎朝学校まで走ります。,泳ぐ,歩く,跳ぶ,,action|verb,1
+g5_004,grade_5,happy,adj,幸せな,嬉しい,She looks very happy today.,彼女は今日とても幸せそうです。,悲しい,怒った,疲れた,ハッピーバースデーの「ハッピー」,emotion|adjective,1
+g5_005,grade_5,school,n,学校,,I go to school by bus.,私はバスで学校へ行きます。,病院,図書館,駅,,place|education,1
+g5_006,grade_5,eat,v,食べる,,We eat dinner at seven.,私たちは7時に夕食を食べます。,飲む,作る,買う,,action|daily,1
+g5_007,grade_5,big,adj,大きい,大型の,That is a big dog.,あれは大きな犬です。,小さい,細い,低い,,size|adjective,1
+g5_008,grade_5,friend,n,友達,友人,She is my best friend.,彼女は私の親友です。,先生,家族,隣人,,people|noun,1
+g5_009,grade_5,play,v,遊ぶ,演奏する,The children play in the park.,子どもたちは公園で遊びます。,勉強する,寝る,働く,,action|daily,1
+g5_010,grade_5,water,n,水,,Please give me some water.,水をください。,ジュース,お茶,牛乳,,food|nature,1
+g5_011,grade_5,like,v,好きである,〜のような,I like music very much.,私は音楽がとても好きです。,嫌いである,知っている,忘れる,,emotion|verb,2
+g5_012,grade_5,small,adj,小さい,小型の,This is a small cat.,これは小さな猫です。,大きい,長い,重い,,size|adjective,1
+g5_013,grade_5,morning,n,朝,午前,I wake up early in the morning.,私は朝早く起きます。,夜,昼,夕方,,time|noun,1
+g5_014,grade_5,nice,adj,良い,素敵な,You have a nice bag.,素敵なバッグを持っていますね。,悪い,古い,汚い,「ナイス！」という掛け声そのまま,compliment|adjective,1
+g5_015,grade_5,family,n,家族,,I love my family.,私は家族が大好きです。,友人,隣人,同僚,,people|home,1

@@ -35,7 +35,8 @@ def _grade_label(k):
 
 def init_session():
     if "player" not in st.session_state:
-        st.session_state.player = load_player()
+        username = st.session_state.get("username", "")
+        st.session_state.player = load_player(username)
     defaults = [("total_correct",0),("total_questions",0),("streak",0),
                 ("engine",None),("current_question",None),("answered",False),
                 ("last_result",None),("quest_finished",False),("session_correct",0),
@@ -58,7 +59,7 @@ def render_sidebar():
     streak = st.session_state.streak
     total = st.session_state.total_questions
     correct = st.session_state.total_correct
-    accuracy = f"{correct/total*100:.0f}%" if total > 0 else "---"
+    accuracy = str(round(correct/total*100)) + "%" if total > 0 else "---"
     with st.sidebar:
         st.markdown(
             '<div style="text-align:center;padding:16px 0 8px;">'
@@ -87,7 +88,7 @@ def render_sidebar():
         with st.expander("開発者メニュー"):
             if st.button("全リセット", use_container_width=True):
                 from core.save_manager import delete_save
-                delete_save()
+                delete_save(st.session_state.get("username", ""))
                 for key in list(st.session_state.keys()):
                     del st.session_state[key]
                 st.rerun()
@@ -129,8 +130,9 @@ def load_next_question():
 if st.session_state.quest_finished:
     engine = st.session_state.engine
     stats = engine.get_session_stats()
-    save_player(st.session_state.player)
-    append_history({**stats, "grade_target", st.session_state.get("username", ""): st.session_state.player["grade_target"]})
+    username = st.session_state.get("username", "")
+    save_player(st.session_state.player, username)
+    append_history({**stats, "grade_target": st.session_state.player["grade_target"]}, username)
     accuracy = stats["accuracy"]
     if accuracy >= 90: rank, color = "S ランク 🏆", "#ffe066"
     elif accuracy >= 75: rank, color = "A ランク ⭐", "#88ff88"
@@ -173,7 +175,7 @@ pos_ja = pos_map.get(q.part_of_speech, q.part_of_speech)
 diff_stars = "⭐" * q.difficulty
 streak = st.session_state.streak
 mult = streak_multiplier(streak)
-bonus = '<span style="background:#2a1a00;color:#ffe066;border:1px solid #5a3a00;border-radius:6px;padding:2px 8px;font-size:.75rem;margin-left:8px;">🔥 EXP ×' + str(mult) + '</span>' if mult > 1.0 else ""
+bonus = '<span style="background:#2a1a00;color:#ffe066;border:1px solid #5a3a00;border-radius:6px;padding:2px 8px;font-size:.75rem;margin-left:8px;">🔥 EXP x' + str(mult) + '</span>' if mult > 1.0 else ""
 
 st.markdown(
     '<div class="quiz-card">'
@@ -216,15 +218,14 @@ if st.session_state.answered and st.session_state.last_result:
                 )
         bonus_html = ""
         if gain and gain.streak_multiplier > 1.0:
-            bonus_html = ' <span style="color:#ffe066;">(×' + str(gain.streak_multiplier) + ' ボーナス！)</span>'
+            bonus_html = ' <span style="color:#ffe066;">(x' + str(gain.streak_multiplier) + ' ボーナス！)</span>'
         exp_show = str(gain.exp_gained_final) if gain else str(result.exp_gained)
         hint_html = '<div style="font-size:.82rem;color:#aaaa88;margin-top:6px;">💡 ' + q.hint + '</div>' if q.hint else ""
-
         st.markdown(
             '<div style="background:linear-gradient(135deg,#0a2a0a,#1a4a1a);border:1px solid #2a7a2a;border-radius:12px;padding:20px 24px;margin:16px 0;">'
             + levelup_html +
             '<div style="font-size:1.1rem;font-weight:700;color:#88ff88;margin-bottom:10px;">✅ 正解！ +' + exp_show + ' EXP' + bonus_html + '</div>'
-            '<div style="color:#cceebb;font-size:.92rem;margin-bottom:8px;"><b style="color:#fff;">' + q.word + '</b> ＝ ' + q.meaning_ja + '</div>'
+            '<div style="color:#cceebb;font-size:.92rem;margin-bottom:8px;"><b style="color:#fff;">' + q.word + '</b> = ' + q.meaning_ja + '</div>'
             '<div style="font-size:.88rem;color:#aaccaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + '<br>' + q.example_ja + '</div>'
             + hint_html +
             '</div>', unsafe_allow_html=True)

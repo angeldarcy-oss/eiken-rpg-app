@@ -161,6 +161,28 @@ def append_history(session_stats: dict, username: str = "") -> bool:
         return False
 
 
+def save_weak_words(weak_words: list, username: str = "") -> bool:
+    try:
+        SAVE_DIR.mkdir(parents=True, exist_ok=True)
+        name = username or "player"
+        save_path = get_user_save_path(name)
+        existing: dict = {}
+        if save_path.exists():
+            try:
+                with open(save_path, encoding="utf-8") as f:
+                    existing = json.load(f)
+            except Exception:
+                pass
+        existing["weak_words"] = weak_words
+        existing["last_saved"] = datetime.now().isoformat(timespec="seconds")
+        with open(save_path, "w", encoding="utf-8") as f:
+            json.dump(existing, f, ensure_ascii=False, indent=2)
+        return True
+    except Exception as e:
+        print("[SaveManager] 苦手単語保存失敗: " + str(e))
+        return False
+
+
 def load_history(username: str = "") -> list:
     if not username:
         return []

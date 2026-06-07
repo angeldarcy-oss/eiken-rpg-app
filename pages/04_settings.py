@@ -38,7 +38,7 @@ def _grade_label(k):
 
 def init_session():
     if "player" not in st.session_state:
-        st.session_state.player = load_player()
+        st.session_state.player = load_player(st.session_state.get("username", ""))
     if "total_correct" not in st.session_state:
         st.session_state.total_correct = 0
     if "total_questions" not in st.session_state:
@@ -115,7 +115,7 @@ new_name = st.text_input("新しい名前", value=p["name"], max_chars=10, place
 if st.button("💾 名前を保存", use_container_width=True):
     if new_name.strip():
         st.session_state.player["name"] = new_name.strip()
-        save_player(st.session_state.player)
+        save_player(st.session_state.player, st.session_state.get("username", ""))
         st.success("✅ 名前を「" + new_name.strip() + "」に変更しました！")
         st.rerun()
     else:
@@ -144,7 +144,7 @@ if st.button("💾 級を保存", use_container_width=True):
         del st.session_state["engine"]
     if "current_question" in st.session_state:
         del st.session_state["current_question"]
-    save_player(st.session_state.player)
+    save_player(st.session_state.player, st.session_state.get("username", ""))
     st.success("✅ 挑戦級を「" + selected_grade_label + "」に変更しました！")
     st.rerun()
 
@@ -160,7 +160,7 @@ st.markdown('<div style="font-size:.85rem;color:#cc8888;margin-bottom:16px;">レ
 confirm = st.checkbox("リセットすることを理解しました")
 if confirm:
     if st.button("🗑️ 全データをリセットする", use_container_width=True):
-        delete_save()
+        delete_save(st.session_state.get("username", ""))
         for key in list(st.session_state.keys()):
             del st.session_state[key]
         st.success("リセットしました。ホーム画面に戻ってください。")

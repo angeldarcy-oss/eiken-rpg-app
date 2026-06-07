@@ -6,7 +6,7 @@ _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
-from core.save_manager import load_player, save_player
+from core.save_manager import load_player, save_player, get_user_save_path
 from core.player import PlayerManager
 
 st.set_page_config(page_title="単語帳 | 英検Quest", page_icon="📖", layout="centered", initial_sidebar_state="expanded")
@@ -31,7 +31,7 @@ def _grade_label(k):
 
 def init_session():
     if "player" not in st.session_state:
-        st.session_state.player = load_player()
+        st.session_state.player = load_player(st.session_state.get("username", ""))
     if "total_correct" not in st.session_state:
         st.session_state.total_correct = 0
     if "total_questions" not in st.session_state:
@@ -73,17 +73,19 @@ st.markdown(
     unsafe_allow_html=True)
 
 # セーブデータから苦手単語を読み込む
-from core.save_manager import SAVE_FILE
 import json
 
 weak_words = []
-if SAVE_FILE.exists():
-    try:
-        with open(SAVE_FILE, encoding="utf-8") as f:
-            data = json.load(f)
-        weak_words = data.get("weak_words", [])
-    except Exception:
-        weak_words = []
+username = st.session_state.get("username", "")
+if username:
+    save_path = get_user_save_path(username)
+    if save_path.exists():
+        try:
+            with open(save_path, encoding="utf-8") as f:
+                data = json.load(f)
+            weak_words = data.get("weak_words", [])
+        except Exception:
+            weak_words = []
 
 # engineがあればセッション中の苦手単語も取得
 session_weak = []

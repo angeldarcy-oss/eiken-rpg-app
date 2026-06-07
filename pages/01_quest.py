@@ -9,7 +9,7 @@ if str(_root) not in sys.path:
 from core.quiz_engine import QuizEngine, Question, QuizResult
 from core.ai_tutor import get_explanation
 from core.player import PlayerManager, streak_multiplier
-from core.save_manager import load_player, save_player, append_history
+from core.save_manager import load_player, save_player, append_history, save_weak_words
 
 st.set_page_config(page_title="クエスト", page_icon="🗡️", layout="centered", initial_sidebar_state="expanded")
 
@@ -112,12 +112,15 @@ render_sidebar()
 
 def apply_correct(result):
     pm = PlayerManager(st.session_state.player)
+    was_zero = (pm.hp == 0)
     streak = pm.increment_streak()
     st.session_state.streak = streak
     gain = pm.gain_exp(base_exp=result.exp_gained, streak=streak)
     st.session_state.last_gain_result = gain
     st.session_state.total_correct += 1
     st.session_state.session_correct += 1
+    if was_zero and not gain.leveled_up:
+        pm.heal(10)
 
 
 def apply_wrong(result):
@@ -147,6 +150,19 @@ if st.session_state.quest_finished:
     username = st.session_state.get("username", "")
     save_player(st.session_state.player, username)
     append_history({**stats, "grade_target": st.session_state.player["grade_target"]}, username)
+    weak_df = engine.get_weak_words(top_n=50)
+    if not weak_df.empty:
+        weak_list = []
+        for _, row in weak_df.iterrows():
+            weak_list.append({
+                "word": row["word"],
+                "meaning_ja": row["meaning_ja"],
+                "miss_count": int(row["miss_count"]),
+                "hint": "" if str(row.get("hint", "")) == "nan" else str(row.get("hint", "")),
+                "example_en": "" if str(row.get("example_en", "")) == "nan" else str(row.get("example_en", "")),
+                "example_ja": "" if str(row.get("example_ja", "")) == "nan" else str(row.get("example_ja", "")),
+            })
+        save_weak_words(weak_list, username)
     accuracy = stats["accuracy"]
     if accuracy >= 90: rank, color = "S ランク 🏆", "#ffe066"
     elif accuracy >= 75: rank, color = "A ランク ⭐", "#88ff88"

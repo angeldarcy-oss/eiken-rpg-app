@@ -172,7 +172,7 @@ class QuizEngine:
             [{"word_id": k, "miss_count": v} for k, v in mistakes.items()]
         )
         merged = miss_df.merge(
-            self.df[["word_id", "word", "meaning_ja", "hint"]],
+            self.df[["word_id", "word", "meaning_ja", "hint", "example_en", "example_ja"]],
             on="word_id"
         )
         return merged.sort_values("miss_count", ascending=False).head(top_n)

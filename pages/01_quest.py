@@ -9,7 +9,7 @@ if str(_root) not in sys.path:
 from core.quiz_engine import QuizEngine, Question, QuizResult
 from core.ai_tutor import get_explanation
 from core.player import PlayerManager, streak_multiplier
-from core.save_manager import load_player, save_player, append_history, save_weak_words
+from core.save_manager import load_player, save_player, append_history
 
 st.set_page_config(page_title="クエスト", page_icon="🗡️", layout="centered", initial_sidebar_state="expanded")
 
@@ -152,6 +152,7 @@ if st.session_state.quest_finished:
     append_history({**stats, "grade_target": st.session_state.player["grade_target"]}, username)
     weak_df = engine.get_weak_words(top_n=50)
     if not weak_df.empty:
+        from core.save_manager import save_weak_words
         weak_list = []
         for _, row in weak_df.iterrows():
             weak_list.append({

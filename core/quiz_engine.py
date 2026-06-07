@@ -269,7 +269,7 @@ class QuizEngine:
 
         return Question(
             word_id=str(row["word_id"]),
-            grade=str(row["grade"]),
+            grade=str(row.get("grade", "")),
             word=str(row["word"]),
             part_of_speech=str(row["part_of_speech"]),
             meaning_ja=correct,

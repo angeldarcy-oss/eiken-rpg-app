@@ -45,7 +45,7 @@ def _get_audio_b64(word):
 
 
 def init_session():
-    if "player" not in st.session_state:
+    if "player" not in st.session_state or st.session_state.player is None:
         username = st.session_state.get("username", "")
         st.session_state.player = load_player(username)
     defaults = [("total_correct", 0), ("total_questions", 0), ("streak", 0),

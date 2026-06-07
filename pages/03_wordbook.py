@@ -27,7 +27,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 
 
 def init_session():
-    if "player" not in st.session_state:
+    if "player" not in st.session_state or st.session_state.player is None:
         st.session_state.player = load_player(st.session_state.get("username", ""))
     for k, v in [("total_correct", 0), ("total_questions", 0), ("streak", 0)]:
         if k not in st.session_state:

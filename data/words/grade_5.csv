@@ -1,323 +1,371 @@
-word_id,word,meaning_ja,meaning_zh,part_of_speech,example_en,example_ja,hint,hint_zh,difficulty,example_zh
-grade_5_0001,apple,りんご,蘋果,n,I like to eat an apple.,私はりんごを食べることが好きです。,赤い果物,紅色水果,1,我喜歡吃蘋果。
-grade_5_0002,dog,犬,狗,n,I have a dog.,私は犬を飼っています。,忠実な動物,忠誠的動物,1,我在養狗。
-grade_5_0003,run,走る,跑步,v,I like to run in the park.,私は公園で走ることが好きです。,運動の一種,運動的一種,1,我喜歡在公園跑步。
-grade_5_0004,big,大きい,大的,adj,This house is big.,この家は大きいです。,大きさを表す,表示大小,1,房子很大。
-grade_5_0005,happy,幸せ,快樂的,adj,I am happy today.,私は今日幸せです。,気分を表す,表示心情,1,我今天很幸福。
-grade_5_0006,school,学校,學校,n,I go to school every day.,私は毎日学校に行きます。,勉強する場所,學習的地方,1,我每天去學校。
-grade_5_0007,friend,友達,朋友,n,My friend is coming over.,私の友達が来ます。,仲の良い人,關係好的人,1,我的朋友來了。
-grade_5_0008,family,家族,家人,n,I love my family.,私は私の家族を愛しています。,血縁関係,血緣關係,1,我愛我的家人。
-grade_5_0009,house,家,房子,n,I live in a house.,私は家に住んでいます。,住む場所,居住的地方,1,我住在家裏。
-grade_5_0010,car,車,車,n,I want to buy a car.,私は車を買いたいです。,乗り物の一種,交通工具的一種,1,我想買車。
-grade_5_0011,book,本,書,n,I like to read books.,私は本を読むことが好きです。,知識を得るためのもの,獲取知識的東西,1,我喜歡讀書。
-grade_5_0012,pencil,鉛筆,鉛筆,n,I need a pencil.,私は鉛筆が必要です。,書くための道具,寫作工具,1,我需要一支鉛筆。
-grade_5_0013,paper,紙,紙,n,I need some paper.,私は紙が必要です。,書くためのもの,用於寫作的東西,1,我需要紙。
-grade_5_0014,desk,机,書桌,n,I sit at my desk.,私は机で座ります。,勉強するための家具,傢俱學習,1,我坐在桌子前。
-grade_5_0015,chair,椅子,椅子,n,I sit in a chair.,私は椅子に座ります。,座るための家具,傢俱坐,1,坐在椅子上。
-grade_5_0016,table,テーブル,桌子,n,I eat at the table.,私はテーブルで食べます。,食事をするための家具,傢俱吃飯,1,我在桌子上吃飯。
-grade_5_0017,bed,ベッド,床,n,I sleep in my bed.,私はベッドで寝ます。,眠るための家具,傢俱睡覺,1,我睡在牀上。
-grade_5_0018,window,窓,窗戶,n,I open the window.,私は窓を開けます。,光を取り入れるためのもの,用來獲取光線的東西,1,我打開窗戶。
-grade_5_0019,door,ドア,門,n,I open the door.,私はドアを開けます。,出入り口,出入口,1,我打開門。
-grade_5_0020,walk,歩く,走路,v,I like to walk in the park.,私は公園で歩くことが好きです。,運動の一種,運動的一種,1,我喜歡在公園散步。
-grade_5_0021,eat,食べる,吃,v,I eat breakfast every day.,私は毎日朝食を食べます。,食事をする,吃飯,1,我每天吃早餐。
-grade_5_0022,drink,飲む,喝,v,I drink water every day.,私は毎日水を飲みます。,水分を取る,攝取水分,1,我每天喝水。
-grade_5_0023,play,遊ぶ,玩耍,v,I like to play soccer.,私はサッカーを遊ぶことが好きです。,楽しいことをする,做快樂的事,1,我喜歡踢足球。
-grade_5_0024,read,読む,閱讀,v,I like to read books.,私は本を読むことが好きです。,知識を得るためのこと,獲取知識,1,我喜歡讀書。
-grade_5_0025,write,書く,寫,v,I write a letter.,私は手紙を書きます。,文字を書く,寫字,1,我寫信。
-grade_5_0026,draw,絵を描く,畫畫,v,I like to draw pictures.,私は絵を描くことが好きです。,芸術的なこと,藝術的東西,1,我喜歡畫畫。
-grade_5_0027,sing,歌う,唱歌,v,I like to sing songs.,私は歌を歌うことが好きです。,音楽を楽しむ,享受音樂,1,我喜歡唱歌。
-grade_5_0028,dance,踊る,跳舞,v,I like to dance to music.,私は音楽に合わせて踊ることが好きです。,身体を動かす,活動身體,1,我喜歡隨着音樂跳舞。
-grade_5_0029,swim,泳ぐ,游泳,v,I like to swim in the pool.,私はプールで泳ぐことが好きです。,水の中で運動する,在水中運動,1,我喜歡在游泳池游泳。
-grade_5_0030,bike,自転車,腳踏車,n,I like to ride my bike.,私は自転車に乗ることが好きです。,環境に優しい乗り物,環保交通工具,1,我喜歡騎自行車。
-grade_5_0031,train,列車,火車,n,I take the train to school.,私は列車で学校に行きます。,公共の乗り物,公共交通工具,1,我坐火車去學校。
-grade_5_0032,bus,バス,公車,n,I take the bus to work.,私はバスで仕事に行きます。,公共の乗り物,公共交通工具,1,我坐公共汽車去上班。
-grade_5_0033,plane,飛行機,飛機,n,I take a plane to travel.,私は飛行機で旅行に行きます。,空を飛ぶ乗り物,在空中飛行的交通工具,1,我坐飛機去旅行。
-grade_5_0034,sun,太陽,太陽,n,The sun is shining.,太陽は輝いています。,地球を温めるもの,溫暖地球的東西,1,陽光燦爛。
-grade_5_0035,moon,月,月亮,n,The moon is full.,月は満月です。,夜の光を与えるもの,給夜晚的光,1,月亮是滿月。
-grade_5_0036,star,星,星星,n,I see a star in the sky.,私は空に星を見ます。,空に光るもの,天空中發光的東西,1,我看到天空中的星星。
-grade_5_0037,cloud,雲,雲,n,The cloud is white.,雲は白いです。,空に浮かぶもの,漂浮在空中的東西,1,雲是白色的。
-grade_5_0038,rain,雨,雨,n,It is raining outside.,外は雨です。,空から降る水,從天而降的水,1,外面在下雨。
-grade_5_0039,snow,雪,雪,n,It is snowing outside.,外は雪です。,冬の景色,冬季景色,1,外面下雪了。
-grade_5_0040,wind,風,風,n,The wind is blowing.,風が吹いています。,空気の流れ,空氣流動,1,風在吹。
-grade_5_0041,tree,木,樹,n,I like to climb trees.,私は木に登ることが好きです。,自然の景色,自然景觀,1,我喜歡爬樹。
-grade_5_0042,flower,花,花,n,I like to pick flowers.,私は花を摘むことが好きです。,美しいもの,美麗的東西,1,我喜歡摘花。
-grade_5_0043,bird,鳥,鳥,n,I like to watch birds.,私は鳥を観察することが好きです。,空を飛ぶ動物,會飛的動物,1,我喜歡觀察鳥類。
-grade_5_0044,fish,魚,魚,n,I like to eat fish.,私は魚を食べることが好きです。,水に住む動物,生活在水中的動物,1,我喜歡吃魚。
-grade_5_0045,cat,猫,貓,n,I have a cat.,私は猫を飼っています。,人気のペット,熱門寵物,1,我在養貓。
-grade_5_0046,and,と,和/與,prep,I like apples and bananas.,私はりんごとバナナが好きです。,繋ぐ言葉,接續詞,1,我喜歡蘋果和香蕉。
-grade_5_0047,with,と一緒に,和...一起,prep,I am with my friends.,私は友達と一緒にいます。,関係を表す,表示關係,1,我和朋友在一起。
-grade_5_0048,in,の中に,在...裡面,prep,I am in the park.,私は公園の中にいます。,場所を表す,表示位置,1,我在公園裏。
-grade_5_0049,on,の上に,在...上面,prep,The book is on the table.,本はテーブルの上にあります。,位置を表す,表示位置,1,書在桌子上。
-grade_5_0050,at,にある,在,prep,I am at the station.,私は駅にいます。,場所を表す,表示位置,1,我在車站。
-grade_5_0051,from,から,從/來自,prep,I am from Japan.,私は日本から来ました。,出身を表す,表示出身,1,我是從日本來的。
-grade_5_0052,to,へ,到/向,prep,I am going to the store.,私は店へ行きます。,方向を表す,表示方向,1,我去商店。
-grade_5_0053,pen,ペン,筆,n,I use a pen to write.,私はペンを使って書きます。,,,1,我用筆寫。
-grade_5_0054,boy,少年,男孩,n,The boy is playing soccer.,少年はサッカーをしている。,,,1,男孩在踢足球。
-grade_5_0055,girl,少女,女孩,n,The girl is reading a book.,少女は本を読んでいる。,,,1,少女正在看書。
-grade_5_0056,baby,赤ちゃん,嬰兒,n,The baby is crying.,赤ちゃんは泣いている。,,,1,嬰兒在哭。
-grade_5_0057,man,男の人,男人,n,The man is working.,男の人は働いている。,,,1,男人在工作。
-grade_5_0058,woman,女の人,女人,n,The woman is cooking.,女の人は料理をしている。,,,1,女人正在做飯。
-grade_5_0059,mother,母,媽媽,n,My mother is kind.,私の母は優しい。,,,1,我媽媽很溫柔。
-grade_5_0060,father,父,爸爸,n,My father is strong.,私の父は強い。,,,1,我父親很堅強。
-grade_5_0061,brother,兄,哥哥/弟弟,n,My brother is tall.,私の兄は背が高い。,,,1,我哥哥個子很高。
-grade_5_0062,sister,妹,姊姊/妹妹,n,My sister is cute.,私の妹はかわいい。,,,1,我妹妹很可愛。
-grade_5_0063,grandmother,祖母,奶奶/外婆,n,My grandmother is wise.,私の祖母は賢い。,,,2,我祖母很聰明。
-grade_5_0064,grandfather,祖父,爺爺/外公,n,My grandfather is kind.,私の祖父は優しい。,,,2,我的祖父很溫柔。
-grade_5_0065,jump,跳ぶ,跳,v,The boy likes to jump.,少年は跳ぶことを好きだ。,,,1,男孩喜歡跳躍。
-grade_5_0066,small,小さい,小的,adj,The small dog is cute.,小さい犬はかわいい。,,,1,小狗很可愛。
-grade_5_0067,sad,悲しい,悲傷的,adj,I am sad today.,私は今日悲しい。,,,1,我今天很傷心。
-grade_5_0068,hot,熱い,熱的,adj,The hot coffee is delicious.,熱いコーヒーは美味しい。,,,1,熱咖啡很好喝。
-grade_5_0069,cold,冷たい,冷的,adj,The cold water is refreshing.,冷たい水はさわやかだ。,,,1,冷水很清爽。
-grade_5_0070,quickly,速く,快速地,adv,I can run quickly.,私は速く走ることができる。,,,2,我可以跑得很快。
-grade_5_0071,slowly,ゆっくり,慢慢地,adv,I like to walk slowly.,私はゆっくり歩くことを好きだ。,,,2,我喜歡慢慢走。
-grade_5_0072,under,下に,在...下面,prep,The book is under the table.,本はテーブルの下にあります。,,,2,書在桌子下面。
-grade_5_0073,above,上に,在...上面,prep,The picture is above the sofa.,絵はソファの上にあります。,,,2,畫在沙發上。
-grade_5_0074,between,間に,在...之間,prep,The park is between the two buildings.,公園は二つの建物の間にあります。,,,2,公園位於兩棟建築之間。
-grade_5_0075,around,周り,在...周圍,prep,The children are playing around the tree.,子供たちは木の周りで遊んでいます。,,,2,孩子們在樹周圍玩耍。
-grade_5_0076,telephone,電話,電話,n,I will call you by telephone.,私は電話で呼びます。,,,2,我打電話叫你。
-grade_5_0077,computer,コンピューター,電腦,n,I use a computer to study.,私はコンピューターを使って勉強します。,,,2,我用電腦學習。
-grade_5_0078,music,音楽,音樂,n,I like listening to music.,私は音楽を聞くことを好きだ。,,,2,我喜歡聽音樂。
-grade_5_0079,movie,映画,電影,n,I want to watch a movie tonight.,私は今夜映画を見たい。,,,2,我今晚想看電影。
-grade_5_0080,sport,スポーツ,運動,n,I like playing sport.,私はスポーツをすることを好きだ。,,,2,我喜歡運動。
-grade_5_0081,hospital,病院,醫院,n,My mother is a doctor at the hospital.,私の母は病院の医者です。,,,2,我媽媽是醫院的醫生。
-grade_5_0082,library,図書館,圖書館,n,I like reading books at the library.,私は図書館で本を読むことを好きだ。,,,2,我喜歡在圖書館看書。
-grade_5_0083,park,公園,公園,n,I like playing in the park.,私は公園で遊ぶことを好きだ。,,,1,我喜歡在公園裏玩。
-grade_5_0084,beach,海岸,海灘,n,I like swimming at the beach.,私は海岸で泳ぐことを好きだ。,,,2,我喜歡在海邊游泳。
-grade_5_0085,mountain,山,山,n,I like hiking in the mountain.,私は山でハイキングすることを好きだ。,,,2,我喜歡在山上遠足。
-grade_5_0086,island,島,島,n,I want to visit a beautiful island.,私は美しい島を訪れることを望みます。,,,2,我希望參觀美麗的島嶼。
-grade_5_0087,city,都市,城市,n,I live in a big city.,私は大きな都市に住んでいます。,,,2,我住在一個大城市。
-grade_5_0088,town,町,小鎮,n,I like living in a small town.,私は小さな町に住むことを好きだ。,,,2,我喜歡住在小城鎮。
-grade_5_0089,village,村,村莊,n,I want to visit a traditional village.,私は伝統的な村を訪れることを望みます。,,,2,我希望參觀傳統村莊。
-grade_5_0090,farm,農場,農場,n,My grandfather has a farm.,私の祖父は農場を持っています。,,,2,我的祖父有一個農場。
-grade_5_0091,garden,庭,花園,n,I like playing in the garden.,私は庭で遊ぶことを好きだ。,,,1,我喜歡在花園裏玩。
-grade_5_0092,home,家,家,n,I'm going home.,私は家に帰る。,,,1,我回家。
-grade_5_0093,food,食べ物,食物,n,I like food.,私は食べ物が好きです。,,,1,我喜歡食物。
-grade_5_0094,game,ゲーム,遊戲,n,I play a game.,私はゲームをします。,,,1,我玩遊戲。
-grade_5_0095,yellow,黄色,黃色,adj,The banana is yellow.,バナナは黄色です。,,,1,香蕉是黃色的。
-grade_5_0096,black,黒,黑色,adj,The cat is black.,猫は黒です。,,,1,貓是黑色的。
-grade_5_0097,white,白,白色,adj,The dog is white.,犬は白です。,,,1,狗是白色的。
-grade_5_0098,red,赤,紅色,adj,The apple is red.,りんごは赤です。,,,1,蘋果是紅色的。
-grade_5_0099,green,緑,綠色,adj,The grass is green.,草は緑です。,,,1,草是綠色的。
-grade_5_0100,blue,青,藍色,adj,The sky is blue.,空は青です。,,,1,天空是藍色的。
-grade_5_0101,sleep,眠る,睡覺,v,I sleep at night.,私は夜眠ります。,,,1,我晚上睡覺。
-grade_5_0102,fast,速く,快的,adv,I run fast.,私は速く走ります。,,,1,我跑得很快。
-grade_5_0103,slow,遅く,慢的,adv,I walk slow.,私は遅く歩きます。,,,1,我走得很慢。
-grade_5_0104,up,上に,向上,prep,The book is up there.,本はそこにあります。,,,1,書在那裏。
-grade_5_0105,down,下に,向下,prep,The ball is down there.,ボールはそこにあります。,,,1,球在那裏。
-grade_5_0106,left,左に,左邊,prep,The door is on the left.,ドアは左側にあります。,,,1,門在左邊。
-grade_5_0107,right,右に,右邊,prep,The door is on the right.,ドアは右側にあります。,,,1,門在右邊。
-grade_5_0108,near,近く,近的,prep,The park is near my house.,公園は私の家の近くにあります。,,,1,公園在我家附近。
-grade_5_0109,far,遠く,遠的,prep,The mountain is far from here.,山はここから遠く離れています。,,,1,山離這裏很遠。
-grade_5_0110,inside,中,裡面,prep,The book is inside the box.,本は箱の中にあります。,,,1,書在盒子裏。
-grade_5_0111,outside,外,外面,prep,The dog is outside.,犬は外にいます。,,,1,狗在外面。
-grade_5_0112,before,前に,之前,prep,I will meet you before the movie.,私は映画の前にあなたに会います。,,,2,我會在電影前見你。
-grade_5_0113,after,後に,之後,prep,I will call you after the meeting.,私は会議の後にあなたに電話します。,,,2,會議結束後給你打電話。
-grade_5_0114,during,間,期間,prep,I will study during the summer.,私は夏に勉強します。,,,2,我夏天學習。
-grade_5_0115,through,を通して,穿過,prep,I will go through the tunnel.,私はトンネルを通って行きます。,,,2,我穿過隧道去。
-grade_5_0116,across,横に,橫跨,prep,I will go across the street.,私は道路を横に渡ります。,,,2,橫過馬路。
-grade_5_0117,over,上に,在...上方,prep,I will go over the bridge.,私は橋を渡ります。,,,2,過橋。
-grade_5_0118,along,沿って,沿著,prep,I will go along the river.,私は川沿いに歩きます。,,,2,我沿着河邊走。
-grade_5_0119,behind,後ろに,在...後面,prep,I will go behind the building.,私は建物の後ろにいきます。,,,2,我去建築物後面。
-grade_5_0120,in front of,前に,在...前面,prep,I will go in front of the store.,私は店の前に行きます。,,,2,我去店前面。
-grade_5_0121,beside,隣に,在...旁邊,prep,I will sit beside you.,私はあなたの隣に座ります。,,,2,我坐在你旁邊。
-grade_5_0122,without,なくして,沒有,prep,I will go without you.,私はあなたのなしで行きます。,,,3,我去沒有你。
-grade_5_0123,despite,にもかかわらず,儘管,prep,I will go despite the rain.,私は雨にもかかわらず行きます。,,,3,我即使下雨也要去。
-grade_5_0124,except,を除いて,除了,prep,I will go except for you.,私はあなたを除いて行きます。,,,3,我去除了你。
-grade_5_0125,instead of,の代わりに,代替,prep,I will go instead of you.,私はあなたの代わりに行きます。,,,3,我代替你去。
-grade_5_0126,until,まで,直到,prep,I will wait until you come.,私はあなたが来るまで待ちます。,,,3,我會等到你來。
-grade_5_0127,since,以来,自從,prep,I have been studying since morning.,私は朝から勉強しています。,,,3,我從早上開始學習。
-grade_5_0128,while,間に,當...的時候,prep,I will study while you sleep.,私はあなたが寝ている間に勉強します。,,,3,我在你睡覺的時候學習。
-grade_5_0129,class,クラス,班級/課,n,I have a class.,私はクラスを受ける。,,,1,我聽課。
-grade_5_0130,teacher,先生,老師,n,My teacher is nice.,私の先生は優しい。,,,1,我的老師很溫柔。
-grade_5_0131,eraser,消しゴム,橡皮擦,n,I use an eraser.,私は消しゴムを使う。,,,1,我用橡皮擦。
-grade_5_0132,sharpener,鉛筆削り,削筆機,n,I need a sharpener.,私は鉛筆削りが必要だ。,,,1,我需要削鉛筆刀。
-grade_5_0133,bag,鞄,書包/袋子,n,I have a bag.,私は鞄を持っている。,,,1,我拿着包。
-grade_5_0134,shoe,靴,鞋子,n,I wear a shoe.,私は靴を履く。,,,1,我穿鞋。
-grade_5_0135,sock,靴下,襪子,n,I wear a sock.,私は靴下を履く。,,,1,我穿襪子。
-grade_5_0136,hat,帽子,帽子,n,I wear a hat.,私は帽子を被る。,,,1,我戴上帽子。
-grade_5_0137,glove,手袋,手套,n,I wear a glove.,私は手袋をはめる。,,,1,我戴手套。
-grade_5_0138,scarf,マフラー,圍巾,n,I wear a scarf.,私はマフラーを巻く。,,,1,我圍圍巾。
-grade_5_0139,watch,時計,手錶,n,I wear a watch.,私は時計をしている。,,,1,我戴着手錶。
-grade_5_0140,camera,カメラ,相機,n,I use a camera.,私はカメラを使う。,,,1,我用照相機。
-grade_5_0141,internet,インターネット,網路,n,I use the internet.,私はインターネットを使う。,,,2,我使用互聯網。
-grade_5_0142,email,メール,電子郵件,n,I send an email.,私はメールを送る。,,,2,我發郵件。
-grade_5_0143,password,パスワード,密碼,n,I need a password.,私はパスワードが必要だ。,,,2,我需要密碼。
-grade_5_0144,login,ログイン,登入,v,I login to the website.,私はウェブサイトにログインする。,,,2,我登錄網站。
-grade_5_0145,logout,ログアウト,登出,v,I logout from the website.,私はウェブサイトからログアウトする。,,,2,我從網站註銷。
-grade_5_0146,search,検索,搜尋,v,I search for information.,私は情報を検索する。,,,2,我搜索信息。
-grade_5_0147,browser,ブラウザ,瀏覽器,n,I use a browser.,私はブラウザを使う。,,,2,我使用瀏覽器。
-grade_5_0148,website,ウェブサイト,網站,n,I visit a website.,私はウェブサイトを訪問する。,,,2,我參觀網站。
-grade_5_0149,link,リンク,連結,n,I click on a link.,私はリンクをクリックする。,,,2,我點擊鏈接。
-grade_5_0150,download,ダウンロード,下載,v,I download a file.,私はファイルをダウンロードする。,,,2,我下載文件。
-grade_5_0151,upload,アップロード,上傳,v,I upload a file.,私はファイルをアップロードする。,,,2,我上傳文件。
-grade_5_0152,file,ファイル,檔案,n,I have a file.,私はファイルを持っている。,,,2,我有一個檔案。
-grade_5_0153,folder,フォルダ,資料夾,n,I have a folder.,私はフォルダを持っている。,,,2,我有一個文件夾。
-grade_5_0154,document,文書,文件,n,I have a document.,私は文書を持っている。,,,2,我有文件。
-grade_5_0155,picture,写真,照片/圖片,n,I have a picture.,私は写真を持っている。,,,1,我有照片。
-grade_5_0156,video,ビデオ,影片,n,I watch a video.,私はビデオを観る。,,,2,我看視頻。
-grade_5_0157,fun,楽しい,有趣的,adj,I have fun.,私は楽しい。,,,1,我很開心。
-grade_5_0158,smile,笑顔,微笑,n,I smile.,私は笑顔だ。,,,1,我微笑着。
-grade_5_0159,laugh,笑う,笑,v,I laugh.,私は笑う。,,,1,我笑了。
-grade_5_0160,joke,冗談,笑話,n,I tell a joke.,私は冗談を言う。,,,2,我開玩笑。
-grade_5_0161,friendship,友情,友情,n,I value friendship.,私は友情を大切にする。,,,2,我珍惜友情。
-grade_5_0162,love,愛,愛,n,I love my family.,私は家族を愛している。,,,2,我愛我的家人。
-grade_5_0163,care,心配,關心,v,I care about you.,私はあなたのことを心配している。,,,2,我很擔心你。
-grade_5_0164,help,助ける,幫助,v,I help my friend.,私は友達を助ける。,,,1,我幫助我的朋友。
-grade_5_0165,share,共有,分享,v,I share my toy.,私は私の玩具を共有する。,,,2,我分享我的玩具。
-grade_5_0166,kind,親切な,親切的,adj,You are kind.,あなたは親切だ。,,,2,你很親切。
-grade_5_0167,polite,礼儀正しい,有禮貌的,adj,You are polite.,あなたは礼儀正しい。,,,2,你很有禮貌。
-grade_5_0168,respect,尊敬,尊重,n,I respect my teacher.,私は先生を尊敬している。,,,2,我尊敬老師。
-grade_5_0169,television,テレビ,電視,n,I watch television.,私はテレビを見ます。,,,2,我看電視。
-grade_5_0170,musician,音楽家,音樂家,n,My friend is a musician.,私の友達は音楽家です。,,,2,我的朋友是音樂家。
-grade_5_0171,athlete,運動選手,運動員,n,He is an athlete.,彼は運動選手です。,,,2,他是運動員。
-grade_5_0172,artist,芸術家,藝術家,n,She is an artist.,彼女は芸術家です。,,,2,她是個藝術家。
-grade_5_0173,scientist,科学者,科學家,n,He is a scientist.,彼は科学者です。,,,2,他是科學家。
-grade_5_0174,engineer,エンジニア,工程師,n,My father is an engineer.,私の父はエンジニアです。,,,2,我的父親是工程師。
-grade_5_0175,doctor,医者,醫生,n,I want to be a doctor.,私は医者になりたいです。,,,2,我想當醫生。
-grade_5_0176,nurse,看護師,護士,n,My mother is a nurse.,私の母は看護師です。,,,2,我媽媽是護士。
-grade_5_0177,lawyer,弁護士,律師,n,He is a lawyer.,彼は弁護士です。,,,2,他是律師。
-grade_5_0178,student,学生,學生,n,I am a student.,私は学生です。,,,1,我是學生。
-grade_5_0179,river,川,河流,n,I like to swim in the river.,私は川で泳ぐことが好きです。,,,2,我喜歡在河裏游泳。
-grade_5_0180,lake,湖,湖,n,I like to go to the lake.,私は湖に行くことが好きです。,,,2,我喜歡去湖邊。
-grade_5_0181,hotel,ホテル,飯店,n,I stay at a hotel.,私はホテルに滞在します。,,,2,我住酒店。
-grade_5_0182,restaurant,レストラン,餐廳,n,I like to go to a restaurant.,私はレストランに行くことが好きです。,,,2,我喜歡去餐館。
-grade_5_0183,store,店,商店,n,I like to go to the store.,私は店に行くことが好きです。,,,1,我喜歡去商店。
-grade_5_0184,bank,銀行,銀行,n,I go to the bank.,私は銀行に行きます。,,,2,我去銀行。
-grade_5_0185,post office,郵便局,郵局,n,I go to the post office.,私は郵便局に行きます。,,,2,我去郵局。
-grade_5_0186,police station,警察署,警察局,n,I go to the police station.,私は警察署に行きます。,,,2,我去警察局。
-grade_5_0187,fire station,消防署,消防局,n,I go to the fire station.,私は消防署に行きます。,,,2,我去消防局。
-grade_5_0188,school bus,学校バス,校車,n,I ride the school bus.,私は学校バスに乗ります。,,,2,我坐校車。
-grade_5_0189,taxi,タクシー,計程車,n,I take a taxi.,私はタクシーに乗ります。,,,2,我坐出租車。
-grade_5_0190,bicycle,自転車,腳踏車,n,I ride a bicycle.,私は自転車に乗ります。,,,2,我騎自行車。
-grade_5_0191,train station,駅,火車站,n,I go to the train station.,私は駅に行きます。,,,2,我去車站。
-grade_5_0192,airport,空港,機場,n,I go to the airport.,私は空港に行きます。,,,2,我去機場。
-grade_5_0193,port,港,港口,n,I go to the port.,私は港に行きます。,,,2,我去港口。
-grade_5_0194,hello,こんにちは,你好,n,"Hello, how are you?",こんにちは、あなたはどうですか?,挨拶,問候,1,你好，你怎麼樣？
-grade_5_0195,kite,凧,風箏,n,I like flying a kite.,私は凧を飛ばすことが好きです。,空を飛ぶ,在空中飛,1,我喜歡放風箏。
-grade_5_0196,mouse,ねずみ,老鼠,n,I have a pet mouse.,私はねずみをペットにします。,小さな動物,小動物,1,我把老鼠當作寵物。
-grade_5_0197,nest,巣,巢,n,The bird built a nest.,鳥は巣を作りました。,鳥の家,鳥之家,1,鳥兒築巢了。
-grade_5_0198,ocean,海,海洋,n,I like swimming in the ocean.,私は海で泳ぐことが好きです。,広い水,寬廣的水,1,我喜歡在海里游泳。
-grade_5_0199,queen,女王,女王,n,The queen is very kind.,女王はとても親切です。,国を治める人,治理國家的人,1,女王非常親切。
-grade_5_0200,sea,海,大海,n,I like swimming in the sea.,私は海で泳ぐことが好きです。,広い水,寬廣的水,1,我喜歡在海里游泳。
-grade_5_0201,umbrella,傘,雨傘,n,I use an umbrella when it rains.,私は雨のとき傘を使います。,雨から守るもの,防雨的東西,1,我下雨的時候用傘。
-grade_5_0202,vase,花瓶,花瓶,n,I have a beautiful vase.,私は美しい花瓶を持っています。,花を入れるもの,放花的東西,1,我有一個漂亮的花瓶。
-grade_5_0203,water,水,水,n,I like drinking water.,私は水を飲むことが好きです。,生命の源,生命之源,1,我喜歡喝水。
-grade_5_0204,x-ray,レントゲン,X光,n,The doctor took an x-ray of my body.,医者は私の体のレントゲンを撮りました。,体の中を見るもの,看身體裏面的東西,2,給我的身體照了x光。
-grade_5_0205,yogurt,ヨーグルト,優格,n,I like eating yogurt.,私はヨーグルトを食べることが好きです。,健康的な食べ物,健康的食物,1,我喜歡吃酸奶。
-grade_5_0206,zipper,ジッパー,拉鍊,n,My jacket has a zipper.,私のジャケットにはジッパーがあります。,開閉するもの,開關的東西,1,我的夾克有拉鍊。
-grade_5_0207,doll,人形,玩偶,n,I have a cute doll.,私はかわいい人形を持っています。,玩具,玩具,1,我有一個可愛的娃娃。
-grade_5_0208,egg,卵,蛋,n,I like eating eggs.,私は卵を食べることが好きです。,鳥の産んだもの,鳥生的東西,1,我喜歡吃雞蛋。
-grade_5_0209,goat,山羊,山羊,n,I saw a goat on the mountain.,私は山で山羊を見ました。,山に住む動物,住在山上的動物,1,我在山上看到了山羊。
-grade_5_0210,horse,馬,馬,n,I like riding a horse.,私は馬に乗ることが好きです。,大きい動物,大型動物,1,我喜歡騎馬。
-grade_5_0211,jacket,ジャケット,夾克,n,I wear a jacket in the winter.,私は冬にジャケットを着ます。,上着,上衣,1,我冬天穿夾克。
-grade_5_0212,kangaroo,カンガルー,袋鼠,n,I saw a kangaroo at the zoo.,私は動物園でカンガルーを見ました。,跳ぶ動物,跳躍的動物,2,我在動物園看到了袋鼠。
-grade_5_0213,lemon,レモン,檸檬,n,I like drinking lemonade.,私はレモネードを飲むことが好きです。,酸っぱい果物,酸水果,1,我喜歡喝檸檬水。
-grade_5_0214,map,地図,地圖,n,I use a map to navigate.,私は地図を利用して移動します。,場所を示すもの,指示位置的東西,1,我利用地圖移動。
-grade_5_0215,nut,ナッツ,堅果,n,I like eating nuts.,私はナッツを食べることが好きです。,木の実,果實,1,我喜歡吃堅果。
-grade_5_0216,owl,ふくろう,貓頭鷹,n,I saw an owl in the forest.,私は森でふくろうを見ました。,夜に活動する鳥,夜間活動的鳥類,1,我在森林裏看到貓頭鷹了。
-grade_5_0217,pear,ナシ,梨子,n,I like eating pears.,私はナシを食べることが好きです。,甘い果物,甜水果,1,我喜歡吃梨。
-grade_5_0218,rabbit,うさぎ,兔子,n,I have a pet rabbit.,私はうさぎをペットにします。,小さな動物,小動物,1,我把兔子當作寵物。
-grade_5_0219,robot,ロボット,機器人,n,I like playing with robots.,私はロボットと遊ぶことが好きです。,機械の人間,機器人,2,我喜歡和機器人玩。
-grade_5_0220,sand,砂,沙,n,I like playing in the sand.,私は砂で遊ぶことが好きです。,細かい石,細小的石頭,1,我喜歡玩沙子。
-grade_5_0221,tiger,トラ,老虎,n,I saw a tiger at the zoo.,私は動物園でトラを見ました。,強い動物,強壯的動物,1,我在動物園看到了老虎。
-grade_5_0222,ukulele,ウクレレ,烏克麗麗,n,I like playing the ukulele.,私はウクレレを弾くことが好きです。,小さな楽器,小樂器,2,我喜歡彈尤克里裏。
-grade_5_0223,violin,バイオリン,小提琴,n,I like playing the violin.,私はバイオリンを弾くことが好きです。,弦楽器,絃樂器,2,我喜歡拉小提琴。
-grade_5_0224,whale,クジラ,鯨魚,n,I saw a whale at the aquarium.,私は水族館でクジラを見ました。,大きい動物,大型動物,2,我在水族館看到了鯨魚。
-grade_5_0225,xerox,コピー,影印,v,I will xerox this document.,私はこの文書をコピーします。,複製する,複製,2,我會複製這個文檔。
-grade_5_0226,yacht,ヨット,遊艇,n,I like sailing on a yacht.,私はヨットで航海することが好きです。,豪華な船,豪華船,2,我喜歡乘遊艇航行。
-grade_5_0227,zoo,動物園,動物園,n,I like visiting the zoo.,私は動物園を訪れることが好きです。,動物の住む場所,動物居住的地方,1,我喜歡參觀動物園。
-grade_5_0228,cloudy,曇り,多雲的,adj,Today is cloudy.,今日は曇りです。,太陽が見えない,看不見太陽,1,今天多雲。
-grade_5_0229,listen,聞く,聆聽,v,I listen to music every day.,私は毎日音楽を聞きます。,耳で感じる,用耳朵感受,1,我每天都聽音樂。
-grade_5_0230,paint,絵を描く,繪畫,v,I like to paint pictures.,私は絵を描くことが好きです。,色で表現,用顏色表達,1,我喜歡畫畫。
-grade_5_0231,phone,電話,電話,n,I use my phone to call my friends.,私は友達に電話するために携帯電話を使います。,声で会話,用聲音對話,1,我爲了給朋友打電話用手機。
-grade_5_0232,rainy,雨,下雨的,adj,Today is rainy.,今日は雨です。,傘が必要,需要一把傘,1,今天下雨。
-grade_5_0233,snowy,雪,下雪的,adj,Today is snowy.,今日は雪です。,白くて冷たい,又白又冷,1,今天下雪。
-grade_5_0234,yesterday,昨日,昨天,n,I went to the park yesterday.,私は昨日公園に行きました。,一日前に,一天前,2,昨天去了公園。
-grade_5_0235,ball,ボール,球,n,I like to play with a ball.,私はボールで遊ぶことが好きです。,丸い物,圓形的東西,1,我喜歡玩球。
-grade_5_0236,brush,ブラシ,刷子,n,I use a brush to clean my teeth.,私はブラシで歯を磨きます。,毛でできている,毛做的,1,我用刷子刷牙。
-grade_5_0237,cake,ケーキ,蛋糕,n,I like to eat cake.,私はケーキを食べることが好きです。,甘い食事,甜的食物,1,我喜歡吃蛋糕。
-grade_5_0238,cloudless,晴れ,晴天的,adj,Today is cloudless.,今日は晴れです。,太陽が見える,看到太陽,2,今天是晴天。
-grade_5_0239,cookie,クッキー,餅乾,n,I like to eat cookies.,私はクッキーを食べることが好きです。,甘い食べ物,甜的食物,1,我喜歡吃餅乾。
-grade_5_0240,dictionary,辞書,字典,n,I use a dictionary to learn new words.,私は辞書で新しい言葉を覚えます。,言葉の意味,詞語的含義,2,我用字典記新詞。
-grade_5_0241,eggplant,ナス,茄子,n,I like to eat eggplant.,私はナスを食べることが好きです。,紫色の野菜,紫色蔬菜,2,我喜歡吃茄子。
-grade_5_0242,football,サッカー,足球,n,I like to play football.,私はサッカーを遊ぶことが好きです。,ボールで遊ぶ,玩球,2,我喜歡踢足球。
-grade_5_0243,glasses,眼鏡,眼鏡,n,I wear glasses to see.,私は眼鏡をして見ます。,見るために使う,用於觀看,1,我戴眼鏡看。
-grade_5_0244,guitar,ギター,吉他,n,I like to play the guitar.,私はギターを弾くことが好きです。,弦で鳴る,用弦響,2,我喜歡彈吉他。
-grade_5_0245,holiday,休み,假日,n,I like to take holidays.,私は休みを取ることが好きです。,休む日,休息日,2,我喜歡休假。
-grade_5_0246,piano,ピアノ,鋼琴,n,I like to play the piano.,私はピアノを弾くことが好きです。,鍵で鳴る,用鑰匙響,2,我喜歡彈鋼琴。
-grade_5_0247,ruler,定規,尺,n,I use a ruler to draw straight lines.,私は定規で直線を引きます。,線を引く,畫線,1,我用尺子畫直線。
-grade_5_0248,sticker,シール,貼紙,n,I like to use stickers.,私はシールを使うことが好きです。,物に貼る,貼在東西上,1,我喜歡使用貼紙。
-grade_5_0249,ticket,切符,票,n,I need a ticket to get on the train.,私は電車に乗るために切符が必要です。,乗るために必要,需要騎,2,我爲了坐電車需要車票。
-grade_5_0250,toothbrush,歯ブラシ,牙刷,n,I use a toothbrush to clean my teeth.,私は歯ブラシで歯を磨きます。,歯を洗う,洗牙,2,我用牙刷刷牙。
-grade_5_0251,vacation,休暇,假期,n,I like to take vacations.,私は休暇を取ることが好きです。,休む期間,休息期間,3,我喜歡休假。
-grade_5_0252,banana,バナナ,香蕉,n,I like bananas.,私はバナナが好きです。,黄色い長い果物,黃色長水果,1,我喜歡香蕉。
-grade_5_0253,good,よい,好的,adj,This is good.,これはよいです。,満足する,滿足,1,這很好。
-grade_5_0254,bad,悪い,壞的,adj,This is bad.,これは悪いです。,満足しない,不滿足,1,這是壞的。
-grade_5_0255,long,長い,長的,adj,The road is long.,道路は長いです。,短くない,不短,1,道路很長。
-grade_5_0256,high,高い,高的,adj,The mountain is high.,山は高いです。,低くない,不低,1,山很高。
-grade_5_0257,low,低い,低的,adj,The price is low.,価格は低いです。,高いくない,不貴,1,價格很低。
-grade_5_0258,old,古い,舊的/老的,adj,The book is old.,本は古いです。,新しくない,不新鮮,1,書是舊的。
-grade_5_0259,new,新しい,新的,adj,The car is new.,車は新しいです。,古くない,不舊,1,汽車是新的。
-grade_5_0260,but,しかし,但是,conj,"I like apples, but I don't like bananas.",私はりんごが好きですが、バナナは好きではありません。,反対の関係,相反的關係,2,我喜歡蘋果，但是不喜歡香蕉。
-grade_5_0261,or,または,或者,conj,Do you like apples or bananas?,あなたはりんごまたはバナナのどちらが好きですか?,選択の関係,選擇的關係,2,你喜歡蘋果還是香蕉？
-grade_5_0262,very,非常に,非常,adv,I am very happy.,私は非常に幸せです。,強調の関係,強調關係,2,我很高興。
-grade_5_0263,really,本当に,真的,adv,I am really happy.,私は本当に幸せです。,真実の関係,真理的關係,2,我真的很幸福。
-grade_5_0264,so,そこで,所以,adv,I am so happy.,私はそこで幸せです。,結果の関係,結果關係,2,我在那裏很幸福。
-grade_5_0265,because,なぜなら,因為,conj,I am happy because I have a friend.,私は友達がいるので幸せです。,理由の関係,原因關係,2,我因爲有朋友所以很幸福。
-grade_5_0266,if,もし,如果,conj,I will be happy if I have a friend.,もし友達がいたら、私は幸せです。,条件の関係,條件關係,2,如果有朋友的話，我很幸福。
-grade_5_0267,although,虽然,雖然,conj,I am happy although I don't have a friend.,私は友達がいないですが、幸せです。,逆接の関係,逆接關係,3,我沒有朋友，但我很幸福。
-grade_5_0268,however,然而,然而,conj,"I am happy, however, I don't have a friend.",私は幸せです、然而、友達がいません。,転換の関係,轉換的關係,3,我很幸福，但我沒有朋友。
-grade_5_0269,well,よく,好好地,adv,I can speak English well.,私は英語をうまく話すことができます。,程度,左右,1,英語說得很好。
-grade_5_0270,loudly,大きく,大聲地,adv,I can sing loudly.,私は大きく歌うことができます。,方法,方法,1,我可以大聲唱歌。
-grade_5_0271,wisely,賢く,明智地,adv,I can think wisely.,私は賢く考えることができます。,方法,方法,2,我可以聰明地思考。
-grade_5_0272,happily,幸せに,快樂地,adv,I can live happily.,私は幸せに生きることができます。,方法,方法,2,我可以幸福地生活。
-grade_5_0273,sadly,悲しく,悲傷地,adv,I can think sadly.,私は悲しく考えることができます。,方法,方法,2,我可以悲傷地思考。
-grade_5_0274,angrily,怒って,生氣地,adv,I can speak angrily.,私は怒って話すことができます。,方法,方法,2,我可以生氣地說話。
-grade_5_0275,today,今日,今天,adv,I am happy today.,私は今日幸せです。,時期,時間,1,我今天很幸福。
-grade_5_0276,tomorrow,明日,明天,adv,I will go to the store tomorrow.,私は明日店に行きます。,時期,時間,1,我明天去店裏。
-grade_5_0277,now,今,現在,adv,I am studying now.,私は今勉強しています。,時期,時間,1,我現在正在學習。
-grade_5_0278,here,ここ,這裡,adv,I am here.,私はここにいます。,場所,地點,1,我在這裏。
-grade_5_0279,there,そこ,那裡,adv,I will go there.,私はそこに行きます。,場所,地點,1,我去那裏。
-grade_5_0280,everywhere,どこでも,到處,adv,I can find it everywhere.,私はどこでもそれを見つけることができます。,場所,地點,2,我可以在任何地方找到它。
-grade_5_0281,nowhere,どこにも,哪裡都不,adv,I can't find it nowhere.,私はどこにもそれを見つけることができません。,場所,地點,2,我找不到任何地方。
-grade_5_0282,look,見る,看,v,I like to look at pictures.,私は絵を見ることが好きです。,感覚,感覺,1,我喜歡看畫。
-grade_5_0283,yes,はい,是/對,interj,"Yes, I like apples.",はい、リンゴが好きです。,同意,同意,1,是的，我喜歡蘋果。
-grade_5_0284,no,いいえ,不,interj,"No, I don't like bananas.",いいえ、バナナは好きではありません。,拒否,拒絕,1,不，我不喜歡香蕉。
-grade_5_0285,thank you,ありがとう,謝謝,interj,Thank you for the apple.,リンゴをありがとう。,感謝,感謝,1,謝謝你的蘋果。
-grade_5_0286,sorry,すみません,對不起,interj,"Sorry, I made a mistake.",すみません、間違いをしました。,謝罪,道歉,1,對不起，我錯了。
-grade_5_0287,excuse me,すみません,不好意思,interj,"Excuse me, where is the toilet?",すみません、トイレはどこですか?,呼び止める,叫住,1,請問洗手間在哪裏？
-grade_5_0288,goodbye,さようなら,再見,interj,"Goodbye, see you tomorrow.",さようなら、明日会いましょう。,別れ,分手,1,再見，明天見。
-grade_5_0289,good morning,おはよう,早安,interj,"Good morning, how are you?",おはよう、元気ですか?,挨拶,問候,1,早上好，你好嗎？
-grade_5_0290,good afternoon,こんにちは,午安,interj,"Good afternoon, how are you?",こんにちは、元気ですか?,挨拶,問候,1,你好，你好嗎？
-grade_5_0291,good evening,こんばんは,晚安,interj,"Good evening, how are you?",こんばんは、元気ですか?,挨拶,問候,1,晚上好嗎？
-grade_5_0292,good night,おやすみ,晚安,interj,"Good night, sleep tight.",おやすみ、ぐっすり眠れ。,別れ,分手,1,晚安，好好睡吧。
-grade_5_0293,short,短い,短的,adj,This is short.,これは短いです。,みじかい,短,1,這很短。
-grade_5_0294,angry,怒った,生氣的,adj,I am angry.,私は怒っています。,おこった,生氣了,1,我很生氣。
-grade_5_0295,tired,疲れた,疲累的,adj,I am tired.,私は疲れました。,つかれた,累了,1,我累了。
-grade_5_0296,sleepy,寝たい,想睡的,adj,I am sleepy.,私は寝たいです。,ねむい,睏倦,1,我想睡覺。
-grade_5_0297,hungry,腹が減った,肚子餓的,adj,I am hungry.,私は腹が減ったです。,はらがへった,肚子餓了,1,肚子餓了。
-grade_5_0298,thirsty,喉が渇いた,口渴的,adj,I am thirsty.,私は喉が渇いたです。,のどがかわいた,嗓子幹了,1,口渴了。
-grade_5_0299,sunny,晴れの,晴天的,adj,Today is sunny.,今日は晴れています。,はれの,哈利諾,1,今天是個晴天。
-grade_5_0300,windy,風の,有風的,adj,Today is windy.,今日は風です。,かぜの,風野,1,今天是風。
-grade_5_0301,eye,目,眼睛,n,I open my eyes.,私は目を開けます。,,,1,我睜開眼睛。
-grade_5_0302,fisherman,漁師,漁夫,n,My father is a fisherman.,私の父は漁師です。,,,1,我的父親是個漁夫。
-grade_5_0303,night,夜,夜晚,n,I sleep at night.,私は夜に寝ます。,,,1,我晚上睡覺。
-grade_5_0304,painter,画家,畫家,n,My friend is a painter.,私の友達は画家です。,,,1,我的朋友是畫家。
-grade_5_0305,parrot,オウム,鸚鵡,n,I have a parrot.,私はオウムを飼っています。,,,1,我在養鸚鵡。
-grade_5_0306,waterfall,滝,瀑布,n,I see a waterfall.,私は滝を見ます。,,,2,我看瀑布。
-grade_5_0307,zookeeper,動物園の飼育員,動物園管理員,n,My friend is a zookeeper.,私の友達は動物園の飼育員です。,,,2,我朋友是動物園的飼養員。
-grade_5_0308,balloon,風船,氣球,n,I have a balloon.,私は風船を持っています。,,,1,我有一個氣球。
-grade_5_0309,elephant,象,大象,n,I see an elephant.,私は象を見ます。,,,2,我看到大象。
-grade_5_0310,frog,カエル,青蛙,n,I see a frog.,私はカエルを見ます。,,,1,我看到青蛙。
-grade_5_0311,floor,床,地板,n,I walk on the floor.,私は床を歩きます。,,,1,我在地板上行走。
-grade_5_0312,wall,壁,牆壁,n,I stand against the wall.,私は壁に立ちます。,,,1,我站在牆上。
-grade_5_0313,ceiling,天井,天花板,n,I look up at the ceiling.,私は天井を見上げます。,,,1,我仰望天花板。
-grade_5_0314,light,光,光/燈,n,I turn on the light.,私は光をつけます。,,,1,我點亮燈光。
-grade_5_0315,keyboard,キーボード,鍵盤,n,I type on the keyboard.,私はキーボードでタイプします。,,,2,我用鍵盤打字。
-grade_5_0316,screen,画面,螢幕,n,I look at the screen.,私は画面を見ます。,,,2,我看屏幕。
-grade_5_0317,speaker,スピーカー,喇叭,n,I listen to music through the speaker.,私はスピーカーで音楽を聞きます。,,,2,我用揚聲器聽音樂。
-grade_5_0318,player,プレイヤー,玩家,n,I am a player in the game.,私はゲームでプレイヤーです。,,,2,我是遊戲中的玩家。
-grade_5_0319,level,レベル,等級,n,I am on level 5.,私はレベル5です。,,,2,我是五級。
-grade_5_0320,score,スコア,分數,n,My score is 100.,私のスコアは100です。,,,2,我的分數是100。
-grade_5_0321,strong,強い,強壯的,adj,I am strong at lifting.,私は重いものを持ち上げるのが強いです。,,,2,我很擅長拿重物。
-grade_5_0322,smart,賢い,聰明的,adj,I am smart at math.,私は数学が賢いです。,,,2,我數學很聰明。
+word_id,word,meaning_ja,meaning_zh,part_of_speech,example_en,example_ja,example_zh,hint,hint_zh,difficulty
+grade_5_0001,apple,りんご,蘋果,n,I like to eat an apple.,私はりんごを食べることが好きです。,我喜歡吃蘋果。,赤い果物,紅色水果,1
+grade_5_0002,dog,犬,狗,n,I have a dog.,私は犬を飼っています。,我在養狗。,忠実な動物,忠誠的動物,1
+grade_5_0003,run,走る,跑,v,I like to run in the park.,私は公園で走ることが好きです。,我喜歡在公園跑步。,運動の一種,運動的一種,1
+grade_5_0004,big,大きい,大,adj,This house is big.,この家は大きいです。,房子很大。,大きさを表す,表示大小,1
+grade_5_0005,happy,幸せ,幸福,adj,I am happy today.,私は今日幸せです。,我今天很幸福。,気分を表す,表示心情,1
+grade_5_0006,school,学校,學校,n,I go to school every day.,私は毎日学校に行きます。,我每天去學校。,勉強する場所,學習的地方,1
+grade_5_0007,friend,友達,朋友,n,My friend is coming over.,私の友達が来ます。,我的朋友來了。,仲の良い人,關係好的人,1
+grade_5_0008,family,家族,家人,n,I love my family.,私は私の家族を愛しています。,我愛我的家人。,血縁関係,血緣關係,1
+grade_5_0009,house,家,家,n,I live in a house.,私は家に住んでいます。,我住在家裏。,住む場所,居住的地方,1
+grade_5_0010,car,車,車,n,I want to buy a car.,私は車を買いたいです。,我想買車。,乗り物の一種,交通工具的一種,1
+grade_5_0011,book,本,書,n,I like to read books.,私は本を読むことが好きです。,我喜歡讀書。,知識を得るためのもの,獲取知識的東西,1
+grade_5_0012,pencil,鉛筆,鉛筆,n,I need a pencil.,私は鉛筆が必要です。,我需要一支鉛筆。,書くための道具,寫作工具,1
+grade_5_0013,paper,紙,紙,n,I need some paper.,私は紙が必要です。,我需要紙。,書くためのもの,用於寫作的東西,1
+grade_5_0014,desk,机,桌子,n,I sit at my desk.,私は机で座ります。,我坐在桌子前。,勉強するための家具,傢俱學習,1
+grade_5_0015,chair,椅子,椅子,n,I sit in a chair.,私は椅子に座ります。,坐在椅子上。,座るための家具,傢俱坐,1
+grade_5_0016,table,テーブル,桌子,n,I eat at the table.,私はテーブルで食べます。,我在桌子上吃飯。,食事をするための家具,傢俱吃飯,1
+grade_5_0017,bed,ベッド,牀,n,I sleep in my bed.,私はベッドで寝ます。,我睡在牀上。,眠るための家具,傢俱睡覺,1
+grade_5_0018,window,窓,窗戶,n,I open the window.,私は窓を開けます。,我打開窗戶。,光を取り入れるためのもの,用來獲取光線的東西,1
+grade_5_0019,door,ドア,門,n,I open the door.,私はドアを開けます。,我打開門。,出入り口,出入口,1
+grade_5_0020,walk,歩く,走路,v,I like to walk in the park.,私は公園で歩くことが好きです。,我喜歡在公園散步。,運動の一種,運動的一種,1
+grade_5_0021,eat,食べる,吃,v,I eat breakfast every day.,私は毎日朝食を食べます。,我每天吃早餐。,食事をする,吃飯,1
+grade_5_0022,drink,飲む,喝,v,I drink water every day.,私は毎日水を飲みます。,我每天喝水。,水分を取る,攝取水分,1
+grade_5_0023,play,遊ぶ,玩,v,I like to play soccer.,私はサッカーを遊ぶことが好きです。,我喜歡踢足球。,楽しいことをする,做快樂的事,1
+grade_5_0024,read,読む,閱讀,v,I like to read books.,私は本を読むことが好きです。,我喜歡讀書。,知識を得るためのこと,獲取知識,1
+grade_5_0025,write,書く,寫,v,I write a letter.,私は手紙を書きます。,我寫信。,文字を書く,寫字,1
+grade_5_0026,draw,絵を描く,畫圖,v,I like to draw pictures.,私は絵を描くことが好きです。,我喜歡畫畫。,芸術的なこと,藝術的東西,1
+grade_5_0027,sing,歌う,唱歌,v,I like to sing songs.,私は歌を歌うことが好きです。,我喜歡唱歌。,音楽を楽しむ,享受音樂,1
+grade_5_0028,dance,踊る,跳舞,v,I like to dance to music.,私は音楽に合わせて踊ることが好きです。,我喜歡隨着音樂跳舞。,身体を動かす,活動身體,1
+grade_5_0029,swim,泳ぐ,游泳,v,I like to swim in the pool.,私はプールで泳ぐことが好きです。,我喜歡在游泳池游泳。,水の中で運動する,在水中運動,1
+grade_5_0030,bike,自転車,自行車,n,I like to ride my bike.,私は自転車に乗ることが好きです。,我喜歡騎自行車。,環境に優しい乗り物,環保交通工具,1
+grade_5_0031,train,列車,列車,n,I take the train to school.,私は列車で学校に行きます。,我坐火車去學校。,公共の乗り物,公共交通工具,1
+grade_5_0032,bus,バス,巴士,n,I take the bus to work.,私はバスで仕事に行きます。,我坐公共汽車去上班。,公共の乗り物,公共交通工具,1
+grade_5_0033,plane,飛行機,飛機,n,I take a plane to travel.,私は飛行機で旅行に行きます。,我坐飛機去旅行。,空を飛ぶ乗り物,在空中飛行的交通工具,1
+grade_5_0034,sun,太陽,陽光,n,The sun is shining.,太陽は輝いています。,陽光燦爛。,地球を温めるもの,溫暖地球的東西,1
+grade_5_0035,moon,月,月,n,The moon is full.,月は満月です。,月亮是滿月。,夜の光を与えるもの,給夜晚的光,1
+grade_5_0036,star,星,星星,n,I see a star in the sky.,私は空に星を見ます。,我看到天空中的星星。,空に光るもの,天空中發光的東西,1
+grade_5_0037,cloud,雲,雲,n,The cloud is white.,雲は白いです。,雲是白色的。,空に浮かぶもの,漂浮在空中的東西,1
+grade_5_0038,rain,雨,雨,n,It is raining outside.,外は雨です。,外面在下雨。,空から降る水,從天而降的水,1
+grade_5_0039,snow,雪,雪,n,It is snowing outside.,外は雪です。,外面下雪了。,冬の景色,冬季景色,1
+grade_5_0040,wind,風,風,n,The wind is blowing.,風が吹いています。,風在吹。,空気の流れ,空氣流動,1
+grade_5_0041,tree,木,樹,n,I like to climb trees.,私は木に登ることが好きです。,我喜歡爬樹。,自然の景色,自然景觀,1
+grade_5_0042,flower,花,花,n,I like to pick flowers.,私は花を摘むことが好きです。,我喜歡摘花。,美しいもの,美麗的東西,1
+grade_5_0043,bird,鳥,鳥,n,I like to watch birds.,私は鳥を観察することが好きです。,我喜歡觀察鳥類。,空を飛ぶ動物,會飛的動物,1
+grade_5_0044,fish,魚,魚,n,I like to eat fish.,私は魚を食べることが好きです。,我喜歡吃魚。,水に住む動物,生活在水中的動物,1
+grade_5_0045,cat,猫,貓,n,I have a cat.,私は猫を飼っています。,我在養貓。,人気のペット,熱門寵物,1
+grade_5_0046,and,と,和,prep,I like apples and bananas.,私はりんごとバナナが好きです。,我喜歡蘋果和香蕉。,繋ぐ言葉,接續詞,1
+grade_5_0047,with,と一緒に,和在一起,prep,I am with my friends.,私は友達と一緒にいます。,我和朋友在一起。,関係を表す,表示關係,1
+grade_5_0048,in,の中に,裏面,prep,I am in the park.,私は公園の中にいます。,我在公園裏。,場所を表す,表示位置,1
+grade_5_0049,on,の上に,在上面,prep,The book is on the table.,本はテーブルの上にあります。,書在桌子上。,位置を表す,表示位置,1
+grade_5_0050,at,にある,在,prep,I am at the station.,私は駅にいます。,我在車站。,場所を表す,表示位置,1
+grade_5_0051,from,から,從,prep,I am from Japan.,私は日本から来ました。,我是從日本來的。,出身を表す,表示出身,1
+grade_5_0052,to,へ,對,prep,I am going to the store.,私は店へ行きます。,我去商店。,方向を表す,表示方向,1
+grade_5_0053,pen,ペン,筆,n,I use a pen to write.,私はペンを使って書きます。,我用筆寫。,,,1
+grade_5_0054,boy,少年,少年,n,The boy is playing soccer.,少年はサッカーをしている。,男孩在踢足球。,,,1
+grade_5_0055,girl,少女,少女,n,The girl is reading a book.,少女は本を読んでいる。,少女正在看書。,,,1
+grade_5_0056,baby,赤ちゃん,嬰兒,n,The baby is crying.,赤ちゃんは泣いている。,嬰兒在哭。,,,1
+grade_5_0057,man,男の人,男人,n,The man is working.,男の人は働いている。,男人在工作。,,,1
+grade_5_0058,woman,女の人,女人,n,The woman is cooking.,女の人は料理をしている。,女人正在做飯。,,,1
+grade_5_0059,mother,母,母親,n,My mother is kind.,私の母は優しい。,我媽媽很溫柔。,,,1
+grade_5_0060,father,父,父親,n,My father is strong.,私の父は強い。,我父親很堅強。,,,1
+grade_5_0061,brother,兄,哥哥,n,My brother is tall.,私の兄は背が高い。,我哥哥個子很高。,,,1
+grade_5_0062,sister,妹,妹妹,n,My sister is cute.,私の妹はかわいい。,我妹妹很可愛。,,,1
+grade_5_0063,grandmother,祖母,祖母,n,My grandmother is wise.,私の祖母は賢い。,我祖母很聰明。,,,2
+grade_5_0064,grandfather,祖父,祖父,n,My grandfather is kind.,私の祖父は優しい。,我的祖父很溫柔。,,,2
+grade_5_0065,jump,跳ぶ,跳,v,The boy likes to jump.,少年は跳ぶことを好きだ。,男孩喜歡跳躍。,,,1
+grade_5_0066,small,小さい,小,adj,The small dog is cute.,小さい犬はかわいい。,小狗很可愛。,,,1
+grade_5_0067,sad,悲しい,悲傷,adj,I am sad today.,私は今日悲しい。,我今天很傷心。,,,1
+grade_5_0068,hot,熱い,熱烈,adj,The hot coffee is delicious.,熱いコーヒーは美味しい。,熱咖啡很好喝。,,,1
+grade_5_0069,cold,冷たい,冰冷,adj,The cold water is refreshing.,冷たい水はさわやかだ。,冷水很清爽。,,,1
+grade_5_0070,quickly,速く,快,adv,I can run quickly.,私は速く走ることができる。,我可以跑得很快。,,,2
+grade_5_0071,slowly,ゆっくり,慢慢來,adv,I like to walk slowly.,私はゆっくり歩くことを好きだ。,我喜歡慢慢走。,,,2
+grade_5_0072,under,下に,下,prep,The book is under the table.,本はテーブルの下にあります。,書在桌子下面。,,,2
+grade_5_0073,above,上に,上,prep,The picture is above the sofa.,絵はソファの上にあります。,畫在沙發上。,,,2
+grade_5_0074,between,間に,之間,prep,The park is between the two buildings.,公園は二つの建物の間にあります。,公園位於兩棟建築之間。,,,2
+grade_5_0075,around,周り,周圍,prep,The children are playing around the tree.,子供たちは木の周りで遊んでいます。,孩子們在樹周圍玩耍。,,,2
+grade_5_0076,telephone,電話,電話,n,I will call you by telephone.,私は電話で呼びます。,我打電話叫你。,,,2
+grade_5_0077,computer,コンピューター,計算機,n,I use a computer to study.,私はコンピューターを使って勉強します。,我用電腦學習。,,,2
+grade_5_0078,music,音楽,音樂,n,I like listening to music.,私は音楽を聞くことを好きだ。,我喜歡聽音樂。,,,2
+grade_5_0079,movie,映画,電影,n,I want to watch a movie tonight.,私は今夜映画を見たい。,我今晚想看電影。,,,2
+grade_5_0080,sport,スポーツ,體育,n,I like playing sport.,私はスポーツをすることを好きだ。,我喜歡運動。,,,2
+grade_5_0081,hospital,病院,醫院,n,My mother is a doctor at the hospital.,私の母は病院の医者です。,我媽媽是醫院的醫生。,,,2
+grade_5_0082,library,図書館,圖書館,n,I like reading books at the library.,私は図書館で本を読むことを好きだ。,我喜歡在圖書館看書。,,,2
+grade_5_0083,park,公園,公園,n,I like playing in the park.,私は公園で遊ぶことを好きだ。,我喜歡在公園裏玩。,,,1
+grade_5_0084,beach,海岸,海岸,n,I like swimming at the beach.,私は海岸で泳ぐことを好きだ。,我喜歡在海邊游泳。,,,2
+grade_5_0085,mountain,山,山,n,I like hiking in the mountain.,私は山でハイキングすることを好きだ。,我喜歡在山上遠足。,,,2
+grade_5_0086,island,島,島,n,I want to visit a beautiful island.,私は美しい島を訪れることを望みます。,我希望參觀美麗的島嶼。,,,2
+grade_5_0087,city,都市,城市,n,I live in a big city.,私は大きな都市に住んでいます。,我住在一個大城市。,,,2
+grade_5_0088,town,町,町,n,I like living in a small town.,私は小さな町に住むことを好きだ。,我喜歡住在小城鎮。,,,2
+grade_5_0089,village,村,村,n,I want to visit a traditional village.,私は伝統的な村を訪れることを望みます。,我希望參觀傳統村莊。,,,2
+grade_5_0090,farm,農場,農場,n,My grandfather has a farm.,私の祖父は農場を持っています。,我的祖父有一個農場。,,,2
+grade_5_0091,garden,庭,院子裏,n,I like playing in the garden.,私は庭で遊ぶことを好きだ。,我喜歡在花園裏玩。,,,1
+grade_5_0092,home,家,家,n,I'm going home.,私は家に帰る。,我回家。,,,1
+grade_5_0093,food,食べ物,食物,n,I like food.,私は食べ物が好きです。,我喜歡食物。,,,1
+grade_5_0094,game,ゲーム,遊戲,n,I play a game.,私はゲームをします。,我玩遊戲。,,,1
+grade_5_0095,yellow,黄色,黃色,adj,The banana is yellow.,バナナは黄色です。,香蕉是黃色的。,,,1
+grade_5_0096,black,黒,黑,adj,The cat is black.,猫は黒です。,貓是黑色的。,,,1
+grade_5_0097,white,白,白,adj,The dog is white.,犬は白です。,狗是白色的。,,,1
+grade_5_0098,red,赤,紅色,adj,The apple is red.,りんごは赤です。,蘋果是紅色的。,,,1
+grade_5_0099,green,緑,綠色,adj,The grass is green.,草は緑です。,草是綠色的。,,,1
+grade_5_0100,blue,青,綠色,adj,The sky is blue.,空は青です。,天空是藍色的。,,,1
+grade_5_0101,sleep,眠る,睡覺,v,I sleep at night.,私は夜眠ります。,我晚上睡覺。,,,1
+grade_5_0102,fast,速く,快,adv,I run fast.,私は速く走ります。,我跑得很快。,,,1
+grade_5_0103,slow,遅く,晚,adv,I walk slow.,私は遅く歩きます。,我走得很慢。,,,1
+grade_5_0104,up,上に,上,prep,The book is up there.,本はそこにあります。,書在那裏。,,,1
+grade_5_0105,down,下に,下,prep,The ball is down there.,ボールはそこにあります。,球在那裏。,,,1
+grade_5_0106,left,左に,"左,",prep,The door is on the left.,ドアは左側にあります。,門在左邊。,,,1
+grade_5_0107,right,右に,向右,prep,The door is on the right.,ドアは右側にあります。,門在右邊。,,,1
+grade_5_0108,near,近く,附近,prep,The park is near my house.,公園は私の家の近くにあります。,公園在我家附近。,,,1
+grade_5_0109,far,遠く,遠處,prep,The mountain is far from here.,山はここから遠く離れています。,山離這裏很遠。,,,1
+grade_5_0110,inside,中,中,prep,The book is inside the box.,本は箱の中にあります。,書在盒子裏。,,,1
+grade_5_0111,outside,外,外,prep,The dog is outside.,犬は外にいます。,狗在外面。,,,1
+grade_5_0112,before,前に,前,prep,I will meet you before the movie.,私は映画の前にあなたに会います。,我會在電影前見你。,,,2
+grade_5_0113,after,後に,"之後,",prep,I will call you after the meeting.,私は会議の後にあなたに電話します。,會議結束後給你打電話。,,,2
+grade_5_0114,during,間,間,prep,I will study during the summer.,私は夏に勉強します。,我夏天學習。,,,2
+grade_5_0115,through,を通して,通過,prep,I will go through the tunnel.,私はトンネルを通って行きます。,我穿過隧道去。,,,2
+grade_5_0116,across,横に,旁邊,prep,I will go across the street.,私は道路を横に渡ります。,橫過馬路。,,,2
+grade_5_0117,over,上に,上,prep,I will go over the bridge.,私は橋を渡ります。,過橋。,,,2
+grade_5_0118,along,沿って,沿着,prep,I will go along the river.,私は川沿いに歩きます。,我沿着河邊走。,,,2
+grade_5_0119,behind,後ろに,後面,prep,I will go behind the building.,私は建物の後ろにいきます。,我去建築物後面。,,,2
+grade_5_0120,in front of,前に,前,prep,I will go in front of the store.,私は店の前に行きます。,我去店前面。,,,2
+grade_5_0121,beside,隣に,旁邊,prep,I will sit beside you.,私はあなたの隣に座ります。,我坐在你旁邊。,,,2
+grade_5_0122,without,なくして,丟了,prep,I will go without you.,私はあなたのなしで行きます。,我去沒有你。,,,3
+grade_5_0123,despite,にもかかわらず,儘管,prep,I will go despite the rain.,私は雨にもかかわらず行きます。,我即使下雨也要去。,,,3
+grade_5_0124,except,を除いて,除了,prep,I will go except for you.,私はあなたを除いて行きます。,我去除了你。,,,3
+grade_5_0125,instead of,の代わりに,代替,prep,I will go instead of you.,私はあなたの代わりに行きます。,我代替你去。,,,3
+grade_5_0126,until,まで,到,prep,I will wait until you come.,私はあなたが来るまで待ちます。,我會等到你來。,,,3
+grade_5_0127,since,以来,以後,prep,I have been studying since morning.,私は朝から勉強しています。,我從早上開始學習。,,,3
+grade_5_0128,while,間に,之間,prep,I will study while you sleep.,私はあなたが寝ている間に勉強します。,我在你睡覺的時候學習。,,,3
+grade_5_0129,class,クラス,班級,n,I have a class.,私はクラスを受ける。,我聽課。,,,1
+grade_5_0130,teacher,先生,老師,n,My teacher is nice.,私の先生は優しい。,我的老師很溫柔。,,,1
+grade_5_0131,eraser,消しゴム,橡皮擦,n,I use an eraser.,私は消しゴムを使う。,我用橡皮擦。,,,1
+grade_5_0132,sharpener,鉛筆削り,鉛筆刀,n,I need a sharpener.,私は鉛筆削りが必要だ。,我需要削鉛筆刀。,,,1
+grade_5_0133,bag,鞄,書包,n,I have a bag.,私は鞄を持っている。,我拿着包。,,,1
+grade_5_0134,shoe,靴,鞋,n,I wear a shoe.,私は靴を履く。,我穿鞋。,,,1
+grade_5_0135,sock,靴下,襪子,n,I wear a sock.,私は靴下を履く。,我穿襪子。,,,1
+grade_5_0136,hat,帽子,帽子,n,I wear a hat.,私は帽子を被る。,我戴上帽子。,,,1
+grade_5_0137,glove,手袋,手套,n,I wear a glove.,私は手袋をはめる。,我戴手套。,,,1
+grade_5_0138,scarf,マフラー,圍巾,n,I wear a scarf.,私はマフラーを巻く。,我圍圍巾。,,,1
+grade_5_0139,watch,時計,手錶,n,I wear a watch.,私は時計をしている。,我戴着手錶。,,,1
+grade_5_0140,camera,カメラ,照相機,n,I use a camera.,私はカメラを使う。,我用照相機。,,,1
+grade_5_0141,internet,インターネット,互聯網,n,I use the internet.,私はインターネットを使う。,我使用互聯網。,,,2
+grade_5_0142,email,メール,電子郵件,n,I send an email.,私はメールを送る。,我發郵件。,,,2
+grade_5_0143,password,パスワード,密碼,n,I need a password.,私はパスワードが必要だ。,我需要密碼。,,,2
+grade_5_0144,login,ログイン,登錄,v,I login to the website.,私はウェブサイトにログインする。,我登錄網站。,,,2
+grade_5_0145,logout,ログアウト,註銷,v,I logout from the website.,私はウェブサイトからログアウトする。,我從網站註銷。,,,2
+grade_5_0146,search,検索,搜索,v,I search for information.,私は情報を検索する。,我搜索信息。,,,2
+grade_5_0147,browser,ブラウザ,瀏覽器,n,I use a browser.,私はブラウザを使う。,我使用瀏覽器。,,,2
+grade_5_0148,website,ウェブサイト,網站,n,I visit a website.,私はウェブサイトを訪問する。,我參觀網站。,,,2
+grade_5_0149,link,リンク,鏈接,n,I click on a link.,私はリンクをクリックする。,我點擊鏈接。,,,2
+grade_5_0150,download,ダウンロード,下載,v,I download a file.,私はファイルをダウンロードする。,我下載文件。,,,2
+grade_5_0151,upload,アップロード,上傳,v,I upload a file.,私はファイルをアップロードする。,我上傳文件。,,,2
+grade_5_0152,file,ファイル,檔案,n,I have a file.,私はファイルを持っている。,我有一個檔案。,,,2
+grade_5_0153,folder,フォルダ,文件夾,n,I have a folder.,私はフォルダを持っている。,我有一個文件夾。,,,2
+grade_5_0154,document,文書,文件,n,I have a document.,私は文書を持っている。,我有文件。,,,2
+grade_5_0155,picture,写真,照片,n,I have a picture.,私は写真を持っている。,我有照片。,,,1
+grade_5_0156,video,ビデオ,視頻,n,I watch a video.,私はビデオを観る。,我看視頻。,,,2
+grade_5_0157,fun,楽しい,好開心,adj,I have fun.,私は楽しい。,我很開心。,,,1
+grade_5_0158,smile,笑顔,笑容,n,I smile.,私は笑顔だ。,我微笑着。,,,1
+grade_5_0159,laugh,笑う,笑一笑,v,I laugh.,私は笑う。,我笑了。,,,1
+grade_5_0160,joke,冗談,開玩笑,n,I tell a joke.,私は冗談を言う。,我開玩笑。,,,2
+grade_5_0161,friendship,友情,友情,n,I value friendship.,私は友情を大切にする。,我珍惜友情。,,,2
+grade_5_0162,love,愛,愛情,n,I love my family.,私は家族を愛している。,我愛我的家人。,,,2
+grade_5_0163,care,心配,擔心,v,I care about you.,私はあなたのことを心配している。,我很擔心你。,,,2
+grade_5_0164,help,助ける,幫助,v,I help my friend.,私は友達を助ける。,我幫助我的朋友。,,,1
+grade_5_0165,share,共有,共享,v,I share my toy.,私は私の玩具を共有する。,我分享我的玩具。,,,2
+grade_5_0166,kind,親切な,親切的,adj,You are kind.,あなたは親切だ。,你很親切。,,,2
+grade_5_0167,polite,礼儀正しい,有禮貌,adj,You are polite.,あなたは礼儀正しい。,你很有禮貌。,,,2
+grade_5_0168,respect,尊敬,尊敬,n,I respect my teacher.,私は先生を尊敬している。,我尊敬老師。,,,2
+grade_5_0169,television,テレビ,電視,n,I watch television.,私はテレビを見ます。,我看電視。,,,2
+grade_5_0170,musician,音楽家,音樂家,n,My friend is a musician.,私の友達は音楽家です。,我的朋友是音樂家。,,,2
+grade_5_0171,athlete,運動選手,運動員,n,He is an athlete.,彼は運動選手です。,他是運動員。,,,2
+grade_5_0172,artist,芸術家,藝術家,n,She is an artist.,彼女は芸術家です。,她是個藝術家。,,,2
+grade_5_0173,scientist,科学者,科學家,n,He is a scientist.,彼は科学者です。,他是科學家。,,,2
+grade_5_0174,engineer,エンジニア,工程師,n,My father is an engineer.,私の父はエンジニアです。,我的父親是工程師。,,,2
+grade_5_0175,doctor,医者,醫生,n,I want to be a doctor.,私は医者になりたいです。,我想當醫生。,,,2
+grade_5_0176,nurse,看護師,護士,n,My mother is a nurse.,私の母は看護師です。,我媽媽是護士。,,,2
+grade_5_0177,lawyer,弁護士,律師,n,He is a lawyer.,彼は弁護士です。,他是律師。,,,2
+grade_5_0178,student,学生,學生,n,I am a student.,私は学生です。,我是學生。,,,1
+grade_5_0179,river,川,川,n,I like to swim in the river.,私は川で泳ぐことが好きです。,我喜歡在河裏游泳。,,,2
+grade_5_0180,lake,湖,湖,n,I like to go to the lake.,私は湖に行くことが好きです。,我喜歡去湖邊。,,,2
+grade_5_0181,hotel,ホテル,酒店,n,I stay at a hotel.,私はホテルに滞在します。,我住酒店。,,,2
+grade_5_0182,restaurant,レストラン,餐廳,n,I like to go to a restaurant.,私はレストランに行くことが好きです。,我喜歡去餐館。,,,2
+grade_5_0183,store,店,店,n,I like to go to the store.,私は店に行くことが好きです。,我喜歡去商店。,,,1
+grade_5_0184,bank,銀行,銀行,n,I go to the bank.,私は銀行に行きます。,我去銀行。,,,2
+grade_5_0185,post office,郵便局,郵局,n,I go to the post office.,私は郵便局に行きます。,我去郵局。,,,2
+grade_5_0186,police station,警察署,警察署,n,I go to the police station.,私は警察署に行きます。,我去警察局。,,,2
+grade_5_0187,fire station,消防署,消防署,n,I go to the fire station.,私は消防署に行きます。,我去消防局。,,,2
+grade_5_0188,school bus,学校バス,學校巴士,n,I ride the school bus.,私は学校バスに乗ります。,我坐校車。,,,2
+grade_5_0189,taxi,タクシー,出租車,n,I take a taxi.,私はタクシーに乗ります。,我坐出租車。,,,2
+grade_5_0190,bicycle,自転車,自行車,n,I ride a bicycle.,私は自転車に乗ります。,我騎自行車。,,,2
+grade_5_0191,train station,駅,車站,n,I go to the train station.,私は駅に行きます。,我去車站。,,,2
+grade_5_0192,airport,空港,機場,n,I go to the airport.,私は空港に行きます。,我去機場。,,,2
+grade_5_0193,port,港,港,n,I go to the port.,私は港に行きます。,我去港口。,,,2
+grade_5_0194,hello,こんにちは,你好,n,"Hello, how are you?",こんにちは、あなたはどうですか?,你好，你怎麼樣？,挨拶,問候,1
+grade_5_0195,kite,凧,風箏,n,I like flying a kite.,私は凧を飛ばすことが好きです。,我喜歡放風箏。,空を飛ぶ,在空中飛,1
+grade_5_0196,mouse,ねずみ,老鼠,n,I have a pet mouse.,私はねずみをペットにします。,我把老鼠當作寵物。,小さな動物,小動物,1
+grade_5_0197,nest,巣,巢,n,The bird built a nest.,鳥は巣を作りました。,鳥兒築巢了。,鳥の家,鳥之家,1
+grade_5_0198,ocean,海,海,n,I like swimming in the ocean.,私は海で泳ぐことが好きです。,我喜歡在海里游泳。,広い水,寬廣的水,1
+grade_5_0199,queen,女王,女王,n,The queen is very kind.,女王はとても親切です。,女王非常親切。,国を治める人,治理國家的人,1
+grade_5_0200,sea,海,海,n,I like swimming in the sea.,私は海で泳ぐことが好きです。,我喜歡在海里游泳。,広い水,寬廣的水,1
+grade_5_0201,umbrella,傘,雨傘,n,I use an umbrella when it rains.,私は雨のとき傘を使います。,我下雨的時候用傘。,雨から守るもの,防雨的東西,1
+grade_5_0202,vase,花瓶,花瓶,n,I have a beautiful vase.,私は美しい花瓶を持っています。,我有一個漂亮的花瓶。,花を入れるもの,放花的東西,1
+grade_5_0203,water,水,水,n,I like drinking water.,私は水を飲むことが好きです。,我喜歡喝水。,生命の源,生命之源,1
+grade_5_0204,x-ray,レントゲン,x光,n,The doctor took an x-ray of my body.,医者は私の体のレントゲンを撮りました。,給我的身體照了x光。,体の中を見るもの,看身體裏面的東西,2
+grade_5_0205,yogurt,ヨーグルト,酸奶,n,I like eating yogurt.,私はヨーグルトを食べることが好きです。,我喜歡吃酸奶。,健康的な食べ物,健康的食物,1
+grade_5_0206,zipper,ジッパー,拉鍊,n,My jacket has a zipper.,私のジャケットにはジッパーがあります。,我的夾克有拉鍊。,開閉するもの,開關的東西,1
+grade_5_0207,doll,人形,玩偶,n,I have a cute doll.,私はかわいい人形を持っています。,我有一個可愛的娃娃。,玩具,玩具,1
+grade_5_0208,egg,卵,雞蛋,n,I like eating eggs.,私は卵を食べることが好きです。,我喜歡吃雞蛋。,鳥の産んだもの,鳥生的東西,1
+grade_5_0209,goat,山羊,山羊,n,I saw a goat on the mountain.,私は山で山羊を見ました。,我在山上看到了山羊。,山に住む動物,住在山上的動物,1
+grade_5_0210,horse,馬,馬,n,I like riding a horse.,私は馬に乗ることが好きです。,我喜歡騎馬。,大きい動物,大型動物,1
+grade_5_0211,jacket,ジャケット,夾克衫,n,I wear a jacket in the winter.,私は冬にジャケットを着ます。,我冬天穿夾克。,上着,上衣,1
+grade_5_0212,kangaroo,カンガルー,袋鼠,n,I saw a kangaroo at the zoo.,私は動物園でカンガルーを見ました。,我在動物園看到了袋鼠。,跳ぶ動物,跳躍的動物,2
+grade_5_0213,lemon,レモン,檸檬,n,I like drinking lemonade.,私はレモネードを飲むことが好きです。,我喜歡喝檸檬水。,酸っぱい果物,酸水果,1
+grade_5_0214,map,地図,地圖,n,I use a map to navigate.,私は地図を利用して移動します。,我利用地圖移動。,場所を示すもの,指示位置的東西,1
+grade_5_0215,nut,ナッツ,堅果,n,I like eating nuts.,私はナッツを食べることが好きです。,我喜歡吃堅果。,木の実,果實,1
+grade_5_0216,owl,ふくろう,貓頭鷹,n,I saw an owl in the forest.,私は森でふくろうを見ました。,我在森林裏看到貓頭鷹了。,夜に活動する鳥,夜間活動的鳥類,1
+grade_5_0217,pear,ナシ,梨,n,I like eating pears.,私はナシを食べることが好きです。,我喜歡吃梨。,甘い果物,甜水果,1
+grade_5_0218,rabbit,うさぎ,兔子,n,I have a pet rabbit.,私はうさぎをペットにします。,我把兔子當作寵物。,小さな動物,小動物,1
+grade_5_0219,robot,ロボット,機器人,n,I like playing with robots.,私はロボットと遊ぶことが好きです。,我喜歡和機器人玩。,機械の人間,機器人,2
+grade_5_0220,sand,砂,沙子,n,I like playing in the sand.,私は砂で遊ぶことが好きです。,我喜歡玩沙子。,細かい石,細小的石頭,1
+grade_5_0221,tiger,トラ,老虎,n,I saw a tiger at the zoo.,私は動物園でトラを見ました。,我在動物園看到了老虎。,強い動物,強壯的動物,1
+grade_5_0222,ukulele,ウクレレ,尤克里裏,n,I like playing the ukulele.,私はウクレレを弾くことが好きです。,我喜歡彈尤克里裏。,小さな楽器,小樂器,2
+grade_5_0223,violin,バイオリン,小提琴,n,I like playing the violin.,私はバイオリンを弾くことが好きです。,我喜歡拉小提琴。,弦楽器,絃樂器,2
+grade_5_0224,whale,クジラ,鯨魚,n,I saw a whale at the aquarium.,私は水族館でクジラを見ました。,我在水族館看到了鯨魚。,大きい動物,大型動物,2
+grade_5_0225,xerox,コピー,複印,v,I will xerox this document.,私はこの文書をコピーします。,我會複製這個文檔。,複製する,複製,2
+grade_5_0226,yacht,ヨット,遊艇,n,I like sailing on a yacht.,私はヨットで航海することが好きです。,我喜歡乘遊艇航行。,豪華な船,豪華船,2
+grade_5_0227,zoo,動物園,動物園,n,I like visiting the zoo.,私は動物園を訪れることが好きです。,我喜歡參觀動物園。,動物の住む場所,動物居住的地方,1
+grade_5_0228,cloudy,曇り,陰,adj,Today is cloudy.,今日は曇りです。,今天多雲。,太陽が見えない,看不見太陽,1
+grade_5_0229,listen,聞く,聽,v,I listen to music every day.,私は毎日音楽を聞きます。,我每天都聽音樂。,耳で感じる,用耳朵感受,1
+grade_5_0230,paint,絵を描く,畫圖,v,I like to paint pictures.,私は絵を描くことが好きです。,我喜歡畫畫。,色で表現,用顏色表達,1
+grade_5_0231,phone,電話,電話,n,I use my phone to call my friends.,私は友達に電話するために携帯電話を使います。,我爲了給朋友打電話用手機。,声で会話,用聲音對話,1
+grade_5_0232,rainy,雨,雨,adj,Today is rainy.,今日は雨です。,今天下雨。,傘が必要,需要一把傘,1
+grade_5_0233,snowy,雪,雪,adj,Today is snowy.,今日は雪です。,今天下雪。,白くて冷たい,又白又冷,1
+grade_5_0234,yesterday,昨日,昨天,n,I went to the park yesterday.,私は昨日公園に行きました。,昨天去了公園。,一日前に,一天前,2
+grade_5_0235,ball,ボール,球,n,I like to play with a ball.,私はボールで遊ぶことが好きです。,我喜歡玩球。,丸い物,圓形的東西,1
+grade_5_0236,brush,ブラシ,刷子,n,I use a brush to clean my teeth.,私はブラシで歯を磨きます。,我用刷子刷牙。,毛でできている,毛做的,1
+grade_5_0237,cake,ケーキ,蛋糕,n,I like to eat cake.,私はケーキを食べることが好きです。,我喜歡吃蛋糕。,甘い食事,甜的食物,1
+grade_5_0238,cloudless,晴れ,晴天,adj,Today is cloudless.,今日は晴れです。,今天是晴天。,太陽が見える,看到太陽,2
+grade_5_0239,cookie,クッキー,餅乾,n,I like to eat cookies.,私はクッキーを食べることが好きです。,我喜歡吃餅乾。,甘い食べ物,甜的食物,1
+grade_5_0240,dictionary,辞書,詞典,n,I use a dictionary to learn new words.,私は辞書で新しい言葉を覚えます。,我用字典記新詞。,言葉の意味,詞語的含義,2
+grade_5_0241,eggplant,ナス,茄子,n,I like to eat eggplant.,私はナスを食べることが好きです。,我喜歡吃茄子。,紫色の野菜,紫色蔬菜,2
+grade_5_0242,football,サッカー,足球,n,I like to play football.,私はサッカーを遊ぶことが好きです。,我喜歡踢足球。,ボールで遊ぶ,玩球,2
+grade_5_0243,glasses,眼鏡,眼鏡,n,I wear glasses to see.,私は眼鏡をして見ます。,我戴眼鏡看。,見るために使う,用於觀看,1
+grade_5_0244,guitar,ギター,吉他,n,I like to play the guitar.,私はギターを弾くことが好きです。,我喜歡彈吉他。,弦で鳴る,用弦響,2
+grade_5_0245,holiday,休み,休息,n,I like to take holidays.,私は休みを取ることが好きです。,我喜歡休假。,休む日,休息日,2
+grade_5_0246,piano,ピアノ,鋼琴,n,I like to play the piano.,私はピアノを弾くことが好きです。,我喜歡彈鋼琴。,鍵で鳴る,用鑰匙響,2
+grade_5_0247,ruler,定規,尺度,n,I use a ruler to draw straight lines.,私は定規で直線を引きます。,我用尺子畫直線。,線を引く,畫線,1
+grade_5_0248,sticker,シール,貼紙,n,I like to use stickers.,私はシールを使うことが好きです。,我喜歡使用貼紙。,物に貼る,貼在東西上,1
+grade_5_0249,ticket,切符,車票,n,I need a ticket to get on the train.,私は電車に乗るために切符が必要です。,我爲了坐電車需要車票。,乗るために必要,需要騎,2
+grade_5_0250,toothbrush,歯ブラシ,牙刷,n,I use a toothbrush to clean my teeth.,私は歯ブラシで歯を磨きます。,我用牙刷刷牙。,歯を洗う,洗牙,2
+grade_5_0251,vacation,休暇,休假,n,I like to take vacations.,私は休暇を取ることが好きです。,我喜歡休假。,休む期間,休息期間,3
+grade_5_0252,banana,バナナ,香蕉,n,I like bananas.,私はバナナが好きです。,我喜歡香蕉。,黄色い長い果物,黃色長水果,1
+grade_5_0253,good,よい,好,adj,This is good.,これはよいです。,這很好。,満足する,滿足,1
+grade_5_0254,bad,悪い,壞,adj,This is bad.,これは悪いです。,這是壞的。,満足しない,不滿足,1
+grade_5_0255,long,長い,長,adj,The road is long.,道路は長いです。,道路很長。,短くない,不短,1
+grade_5_0256,high,高い,高,adj,The mountain is high.,山は高いです。,山很高。,低くない,不低,1
+grade_5_0257,low,低い,低,adj,The price is low.,価格は低いです。,價格很低。,高いくない,不貴,1
+grade_5_0258,old,古い,舊,adj,The book is old.,本は古いです。,書是舊的。,新しくない,不新鮮,1
+grade_5_0259,new,新しい,新,adj,The car is new.,車は新しいです。,汽車是新的。,古くない,不舊,1
+grade_5_0260,but,しかし,但是,conj,"I like apples, but I don't like bananas.",私はりんごが好きですが、バナナは好きではありません。,我喜歡蘋果，但是不喜歡香蕉。,反対の関係,相反的關係,2
+grade_5_0261,or,または,或者,conj,Do you like apples or bananas?,あなたはりんごまたはバナナのどちらが好きですか?,你喜歡蘋果還是香蕉？,選択の関係,選擇的關係,2
+grade_5_0262,very,非常に,非常,adv,I am very happy.,私は非常に幸せです。,我很高興。,強調の関係,強調關係,2
+grade_5_0263,really,本当に,真的,adv,I am really happy.,私は本当に幸せです。,我真的很幸福。,真実の関係,真理的關係,2
+grade_5_0264,so,そこで,在那裏,adv,I am so happy.,私はそこで幸せです。,我在那裏很幸福。,結果の関係,結果關係,2
+grade_5_0265,because,なぜなら,因爲,conj,I am happy because I have a friend.,私は友達がいるので幸せです。,我因爲有朋友所以很幸福。,理由の関係,原因關係,2
+grade_5_0266,if,もし,如果,conj,I will be happy if I have a friend.,もし友達がいたら、私は幸せです。,如果有朋友的話，我很幸福。,条件の関係,條件關係,2
+grade_5_0267,although,虽然,茅盾,conj,I am happy although I don't have a friend.,私は友達がいないですが、幸せです。,我沒有朋友，但我很幸福。,逆接の関係,逆接關係,3
+grade_5_0268,however,然而,然而,conj,"I am happy, however, I don't have a friend.",私は幸せです、然而、友達がいません。,我很幸福，但我沒有朋友。,転換の関係,轉換的關係,3
+grade_5_0269,well,よく,經常,adv,I can speak English well.,私は英語をうまく話すことができます。,英語說得很好。,程度,左右,1
+grade_5_0270,loudly,大きく,很大,adv,I can sing loudly.,私は大きく歌うことができます。,我可以大聲唱歌。,方法,方法,1
+grade_5_0271,wisely,賢く,聰明,adv,I can think wisely.,私は賢く考えることができます。,我可以聰明地思考。,方法,方法,2
+grade_5_0272,happily,幸せに,要幸福,adv,I can live happily.,私は幸せに生きることができます。,我可以幸福地生活。,方法,方法,2
+grade_5_0273,sadly,悲しく,悲傷,adv,I can think sadly.,私は悲しく考えることができます。,我可以悲傷地思考。,方法,方法,2
+grade_5_0274,angrily,怒って,憤怒,adv,I can speak angrily.,私は怒って話すことができます。,我可以生氣地說話。,方法,方法,2
+grade_5_0275,today,今日,今天,adv,I am happy today.,私は今日幸せです。,我今天很幸福。,時期,時間,1
+grade_5_0276,tomorrow,明日,明天,adv,I will go to the store tomorrow.,私は明日店に行きます。,我明天去店裏。,時期,時間,1
+grade_5_0277,now,今,現在,adv,I am studying now.,私は今勉強しています。,我現在正在學習。,時期,時間,1
+grade_5_0278,here,ここ,這裏,adv,I am here.,私はここにいます。,我在這裏。,場所,地點,1
+grade_5_0279,there,そこ,在那裏,adv,I will go there.,私はそこに行きます。,我去那裏。,場所,地點,1
+grade_5_0280,everywhere,どこでも,任何地方,adv,I can find it everywhere.,私はどこでもそれを見つけることができます。,我可以在任何地方找到它。,場所,地點,2
+grade_5_0281,nowhere,どこにも,哪裏都沒有,adv,I can't find it nowhere.,私はどこにもそれを見つけることができません。,我找不到任何地方。,場所,地點,2
+grade_5_0282,look,見る,看,v,I like to look at pictures.,私は絵を見ることが好きです。,我喜歡看畫。,感覚,感覺,1
+grade_5_0283,yes,はい,是,interj,"Yes, I like apples.",はい、リンゴが好きです。,是的，我喜歡蘋果。,同意,同意,1
+grade_5_0284,no,いいえ,否,interj,"No, I don't like bananas.",いいえ、バナナは好きではありません。,不，我不喜歡香蕉。,拒否,拒絕,1
+grade_5_0285,thank you,ありがとう,謝謝,interj,Thank you for the apple.,リンゴをありがとう。,謝謝你的蘋果。,感謝,感謝,1
+grade_5_0286,sorry,すみません,對不起,interj,"Sorry, I made a mistake.",すみません、間違いをしました。,對不起，我錯了。,謝罪,道歉,1
+grade_5_0287,excuse me,すみません,對不起,interj,"Excuse me, where is the toilet?",すみません、トイレはどこですか?,請問洗手間在哪裏？,呼び止める,叫住,1
+grade_5_0288,goodbye,さようなら,再見,interj,"Goodbye, see you tomorrow.",さようなら、明日会いましょう。,再見，明天見。,別れ,分手,1
+grade_5_0289,good morning,おはよう,早上好,interj,"Good morning, how are you?",おはよう、元気ですか?,早上好，你好嗎？,挨拶,問候,1
+grade_5_0290,good afternoon,こんにちは,你好,interj,"Good afternoon, how are you?",こんにちは、元気ですか?,你好，你好嗎？,挨拶,問候,1
+grade_5_0291,good evening,こんばんは,晚上好,interj,"Good evening, how are you?",こんばんは、元気ですか?,晚上好嗎？,挨拶,問候,1
+grade_5_0292,good night,おやすみ,晚安,interj,"Good night, sleep tight.",おやすみ、ぐっすり眠れ。,晚安，好好睡吧。,別れ,分手,1
+grade_5_0293,short,短い,短,adj,This is short.,これは短いです。,這很短。,みじかい,短,1
+grade_5_0294,angry,怒った,生氣了,adj,I am angry.,私は怒っています。,我很生氣。,おこった,生氣了,1
+grade_5_0295,tired,疲れた,累了,adj,I am tired.,私は疲れました。,我累了。,つかれた,累了,1
+grade_5_0296,sleepy,寝たい,我想睡覺,adj,I am sleepy.,私は寝たいです。,我想睡覺。,ねむい,睏倦,1
+grade_5_0297,hungry,腹が減った,肚子餓了,adj,I am hungry.,私は腹が減ったです。,肚子餓了。,はらがへった,肚子餓了,1
+grade_5_0298,thirsty,喉が渇いた,口渴了,adj,I am thirsty.,私は喉が渇いたです。,口渴了。,のどがかわいた,嗓子幹了,1
+grade_5_0299,sunny,晴れの,晴天的,adj,Today is sunny.,今日は晴れています。,今天是個晴天。,はれの,哈利諾,1
+grade_5_0300,windy,風の,風的,adj,Today is windy.,今日は風です。,今天是風。,かぜの,風野,1
+grade_5_0301,eye,目,目,n,I open my eyes.,私は目を開けます。,我睜開眼睛。,,,1
+grade_5_0302,fisherman,漁師,漁夫,n,My father is a fisherman.,私の父は漁師です。,我的父親是個漁夫。,,,1
+grade_5_0303,night,夜,晚上,n,I sleep at night.,私は夜に寝ます。,我晚上睡覺。,,,1
+grade_5_0304,painter,画家,畫家,n,My friend is a painter.,私の友達は画家です。,我的朋友是畫家。,,,1
+grade_5_0305,parrot,オウム,鸚鵡,n,I have a parrot.,私はオウムを飼っています。,我在養鸚鵡。,,,1
+grade_5_0306,waterfall,滝,瀑布,n,I see a waterfall.,私は滝を見ます。,我看瀑布。,,,2
+grade_5_0307,zookeeper,動物園の飼育員,動物園飼養員,n,My friend is a zookeeper.,私の友達は動物園の飼育員です。,我朋友是動物園的飼養員。,,,2
+grade_5_0308,balloon,風船,氣球,n,I have a balloon.,私は風船を持っています。,我有一個氣球。,,,1
+grade_5_0309,elephant,象,大象,n,I see an elephant.,私は象を見ます。,我看到大象。,,,2
+grade_5_0310,frog,カエル,青蛙,n,I see a frog.,私はカエルを見ます。,我看到青蛙。,,,1
+grade_5_0311,floor,床,地板,n,I walk on the floor.,私は床を歩きます。,我在地板上行走。,,,1
+grade_5_0312,wall,壁,牆,n,I stand against the wall.,私は壁に立ちます。,我站在牆上。,,,1
+grade_5_0313,ceiling,天井,天花板,n,I look up at the ceiling.,私は天井を見上げます。,我仰望天花板。,,,1
+grade_5_0314,light,光,光,n,I turn on the light.,私は光をつけます。,我點亮燈光。,,,1
+grade_5_0315,keyboard,キーボード,鍵盤,n,I type on the keyboard.,私はキーボードでタイプします。,我用鍵盤打字。,,,2
+grade_5_0316,screen,画面,畫面,n,I look at the screen.,私は画面を見ます。,我看屏幕。,,,2
+grade_5_0317,speaker,スピーカー,揚聲器,n,I listen to music through the speaker.,私はスピーカーで音楽を聞きます。,我用揚聲器聽音樂。,,,2
+grade_5_0318,player,プレイヤー,玩家,n,I am a player in the game.,私はゲームでプレイヤーです。,我是遊戲中的玩家。,,,2
+grade_5_0319,level,レベル,水平,n,I am on level 5.,私はレベル5です。,我是五級。,,,2
+grade_5_0320,score,スコア,得分,n,My score is 100.,私のスコアは100です。,我的分數是100。,,,2
+grade_5_0321,strong,強い,強烈,adj,I am strong at lifting.,私は重いものを持ち上げるのが強いです。,我很擅長拿重物。,,,2
+grade_5_0322,smart,賢い,聰明,adj,I am smart at math.,私は数学が賢いです。,我數學很聰明。,,,2
+grade_5_0323,key,鍵,鑰匙,n,I need a key.,私は鍵が必要です。,我需要鑰匙。,,,1
+grade_5_0324,lock,鍵穴,鎖眼裏,n,I will lock the door.,私はドアを鍵にします。,我把門鎖上。,,,1
+grade_5_0325,gloves,手袋,手套,n,I will wear gloves.,私は手袋をはきます。,我穿手套。,,,1
+grade_5_0326,coat,コート,大衣,n,I will wear a coat.,私はコートをはきます。,我穿大衣。,,,1
+grade_5_0327,sweater,セーター,毛衣,n,I will wear a sweater.,私はセーターをはきます。,我穿毛衣。,,,1
+grade_5_0328,pants,ズボン,褲子,n,I will wear pants.,私はズボンをはきます。,我穿褲子。,,,1
+grade_5_0329,skirt,スカート,裙子,n,I will wear a skirt.,私はスカートをはきます。,我穿裙子。,,,1
+grade_5_0330,dress,ドレス,連衣裙,n,I will wear a dress.,私はドレスをはきます。,我穿禮服。,,,1
+grade_5_0331,airplane,飛行機,飛機,n,I will take an airplane.,私は飛行機に乗ります。,我坐飛機。,,,1
+grade_5_0332,ship,船,船,n,I will take a ship.,私は船に乗ります。,我坐船。,,,1
+grade_5_0333,police,警察,警察,n,I will call the police.,私は警察に電話します。,我打電話給警察。,,,1
+grade_5_0334,fire,火,火,n,There is a fire.,火があります。,有火。,,,1
+grade_5_0335,fruit,果物,水果,n,I will eat fruit.,私は果物を食べます。,我吃水果。,,,1
+grade_5_0336,vegetable,野菜,蔬菜,n,I will eat vegetables.,私は野菜を食べます。,我吃蔬菜。,,,1
+grade_5_0337,meat,肉,肉,n,I will eat meat.,私は肉を食べます。,我吃肉。,,,1
+grade_5_0338,bread,パン,麪包,n,I will eat bread.,私はパンを食べます。,我吃麪包。,,,1
+grade_5_0339,milk,牛乳,牛奶,n,I will drink milk.,私は牛乳を飲みます。,我喝牛奶。,,,1
+grade_5_0340,coffee,コーヒー,咖啡,n,I will drink coffee.,私はコーヒーを飲みます。,我喝咖啡。,,,1
+grade_5_0341,tea,お茶,茶,n,I will drink tea.,私はお茶を飲みます。,我喝茶。,,,1
+grade_5_0342,sugar,砂糖,糖,n,I will put sugar in my coffee.,私はコーヒーに砂糖を入れる。,我在咖啡里加糖。,,,1
+grade_5_0343,salt,塩,鹽,n,I will put salt on my food.,私は食べ物に塩を置きます。,我把鹽放在食物上。,,,1
+grade_5_0344,little,小さい,小,adj,I like to play with little toys.,私は小さいおもちゃと遊ぶのが好きです。,我喜歡玩小玩具。,,,1
+grade_5_0345,clean,きれいな,好漂亮,adj,I like to keep my room clean.,私は部屋をきれいな状態に保つのが好きです。,我喜歡保持房間乾淨。,,,2
+grade_5_0346,dirty,汚い,骯髒,adj,I don't like to play with dirty toys.,私は汚いおもちゃと遊ぶのが好きではありません。,我不喜歡玩骯髒的玩具。,,,2
+grade_5_0347,child,子供,孩子,n,I have a child.,私は子供がいます。,我有孩子。,,,1
+grade_5_0348,parent,親,親,n,My parent is kind.,私の親は優しいです。,我的父母很溫柔。,,,1
+grade_5_0349,learn,学ぶ,學習,v,I will learn English.,私は英語を学ぶ。,我學習英語。,,,1
+grade_5_0350,shoes,靴,鞋,n,I will wear shoes.,私は靴を履く。,我穿鞋。,,,1
+grade_5_0351,socks,靴下,襪子,n,I will wear socks.,私は靴下をはく。,我穿襪子。,,,1
+grade_5_0352,mirror,鏡,鏡子,n,I will look in the mirror.,私は鏡を見る。,我看着鏡子。,,,1
+grade_5_0353,sit,座る,坐,v,I like to sit.,私は座ることが好きです。,我喜歡坐着。,,,1
+grade_5_0354,stand,立つ,站在,v,I like to stand.,私は立つことが好きです。,我喜歡站立。,,,1
+grade_5_0355,talk,話す,說話,v,I like to talk.,私は話すことが好きです。,我喜歡說話。,,,1
+grade_5_0356,think,考える,思考,v,I like to think.,私は考えることが好きです。,我喜歡思考。,,,1
+grade_5_0357,remember,覚える,記住,v,I like to remember.,私は覚えることが好きです。,我喜歡記憶。,,,1
+grade_5_0358,forget,忘れる,忘記,v,I don't like to forget.,私は忘れることが好きではありません。,我不喜歡忘記。,,,1
+grade_5_0359,glue,接着剤,粘合劑,n,I need glue.,私は接着剤が必要だ。,我需要粘合劑。,,,1
+grade_5_0360,scissors,はさみ,剪刀,n,I have scissors.,私ははさみを持っている。,我有剪刀。,,,1
+grade_5_0361,tape,テープ,磁帶,n,I need tape.,私はテープが必要だ。,我需要磁帶。,,,1
+grade_5_0362,stapler,ホッチキス,訂書器,n,I have a stapler.,私はホッチキスを持っている。,我有一個訂書器。,,,2
+grade_5_0363,feel,感じる,感覺,v,I feel happy.,私は幸せを感じます。,我感到幸福。,,,1
+grade_5_0364,see,見る,看,v,I see a cat.,私は猫を見ます。,我看貓。,,,1
+grade_5_0365,hear,聞く,聽,v,I hear a bird.,私は鳥の声を聞きます。,我聽到鳥的聲音。,,,1
+grade_5_0366,smell,におう,氣味,v,I smell a flower.,私は花のにおいを感じます。,我能聞到花的味道。,,,1
+grade_5_0367,taste,味わう,品嚐,v,I taste a cake.,私はケーキの味を味わいます。,我品嚐蛋糕的味道。,,,1
+grade_5_0368,touch,さわる,摸,v,I touch a cat.,私は猫にさわります。,摸貓。,,,1
+grade_5_0369,hard,難しい,很難,adj,This problem is hard.,この問題は難しいです。,這個問題很難。,難しいと成長する,困難和成長,1
+grade_5_0370,easy,簡単,簡單,adj,This problem is easy.,この問題は簡単です。,這個問題很簡單。,簡単なものは安心,簡單的東西放心,1

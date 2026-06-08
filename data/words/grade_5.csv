@@ -370,3 +370,42 @@ grade_5_0368,touch,さわる,摸,v,I touch a cat.,私は猫にさわります。
 grade_5_0369,hard,難しい,很難,adj,This problem is hard.,この問題は難しいです。,這個問題很難。,難しいと成長する,困難和成長,1
 grade_5_0370,easy,簡単,簡單,adj,This problem is easy.,この問題は簡単です。,這個問題很簡單。,簡単なものは安心,簡單的東西放心,1
 grade_5_0371,tall,背が高い,個子高,adj,He is tall.,彼は背が高いです。,個子很高。,,,1
+grade_5_0372,go,行く,去,v,I will go to school.,私は学校に行きます。,我去學校。,行く英語はgo,去英語go,1
+grade_5_0373,surprised,驚いた,嚇了一跳,adj,I am surprised today.,私は今日驚いています。,我今天很驚訝。,,,2
+grade_5_0374,excited,ワクワク,興奮,adj,I am excited today.,私は今日ワクワクしています。,我今天很興奮。,,,2
+grade_5_0375,boring,面白くない,沒意思,adj,This movie is boring.,この映画は面白くないです。,這部電影不好玩。,,,2
+grade_5_0376,interesting,面白い,有趣,adj,This book is interesting.,この本は面白いです。,這本書很有趣。,,,2
+grade_5_0377,beautiful,美しい,美麗,adj,This flower is beautiful.,この花は美しいです。,這朵花很美。,,,2
+grade_5_0378,delicious,おいしい,好吃,adj,This food is delicious.,この食べ物はおいしいです。,這個食物很好吃。,,,2
+grade_5_0379,quietly,静かに,安靜,adv,Please walk quietly.,静かに歩いてください。,請安靜地走。,,,2
+grade_5_0380,drive,運転する,開車,v,I like to drive my car.,私は車を運転することが好きです。,我喜歡開車。,,,1
+grade_5_0381,ride,乗る,乘坐,v,I like to ride my bicycle.,私は自転車に乗ることが好きです。,我喜歡騎自行車。,,,1
+grade_5_0382,shine,輝く,閃閃發光,v,The sun shines brightly.,太陽は明るく輝いています。,明亮地閃耀着。,,,1
+grade_5_0383,among,の中に,裏面,prep,I am among the trees.,私は木の中にいます。,我在樹上。,,,3
+grade_5_0384,beyond,を超えて,超越,prep,I go beyond the mountain.,私は山を超えて行きます。,我要越過山去。,,,3
+grade_5_0385,by,によって,根據,prep,I am helped by my friend.,私は友達によって助けられます。,我可以得到朋友的幫助。,,,3
+grade_5_0386,into,の中へ,到裏面去,prep,I go into the house.,私は家の中へ行きます。,我去家裏。,,,2
+grade_5_0387,out,の外へ,到外面去,prep,I go out of the house.,私は家の外へ出ます。,我出門。,,,2
+grade_5_0388,stair,階段,樓梯,n,The stair is narrow.,階段は狭いです。,樓梯很窄。,,,3
+grade_5_0389,elevator,エレベーター,電梯,n,The elevator is fast.,エレベーターは速いです。,電梯很快。,,,3
+grade_5_0390,room,部屋,房間,n,My room is small.,私の部屋は小さいです。,我的房間很小。,,,2
+grade_5_0391,closet,クローゼット,衣櫃,n,My clothes are in the closet.,私の服はクローゼットにあります。,我的衣服在衣櫃裏。,,,3
+grade_5_0392,bathroom,風呂,洗澡,n,The bathroom is clean.,風呂はきれいです。,浴室很乾淨。,,,3
+grade_5_0393,kitchen,キッチン,廚房,n,The kitchen is big.,キッチンは大きいです。,廚房很大。,,,3
+grade_5_0394,sink,Sink,sink,n,The sink is dirty.,シンクは汚いです。,水槽很髒。,,,3
+grade_5_0395,toilet,トイレ,廁所,n,The toilet is clean.,トイレはきれいです。,廁所很乾淨。,,,3
+grade_5_0396,shower,シャワー,淋浴,n,I take a shower every day.,私は毎日シャワーを浴びます。,我每天洗澡。,,,3
+grade_5_0397,bathtub,風呂,洗澡,n,The bathtub is big.,風呂は大きいです。,浴室很大。,,,3
+grade_5_0398,fan,扇風機,電風扇,n,The fan is noisy.,扇風機はうるさいです。,風扇很吵。,,,3
+grade_5_0399,air conditioner,エアコン,空調,n,The air conditioner is cool.,エアコンは涼しいです。,空調很涼快。,,,3
+grade_5_0400,heater,ヒーター,加熱器,n,The heater is warm.,ヒーターはあたたかいです。,加熱器很暖和。,,,3
+grade_5_0401,radio,ラジオ,收音機,n,I listen to the radio.,私はラジオを聞きます。,我聽收音機。,,,2
+grade_5_0402,newspaper,新聞,報紙,n,I read the newspaper.,私は新聞を読みます。,我讀報紙。,,,2
+grade_5_0403,magazine,雑誌,雜誌,n,I read a magazine.,私は雑誌を読みます。,我讀雜誌。,,,2
+grade_5_0404,mail,郵便,郵政,n,I send a mail.,私は郵便を送ります。,我寄信。,,,2
+grade_5_0405,letter,手紙,信,n,I write a letter.,私は手紙を書きます。,我寫信。,,,2
+grade_5_0406,postcard,はがき,明信片,n,I send a postcard.,私ははがきを送ります。,發送明信片。,,,3
+grade_5_0407,package,荷物,行李,n,I receive a package.,私は荷物を受け取ります。,我領取行李。,,,3
+grade_5_0408,box,箱,箱子,n,I have a box.,私は箱を持っています。,我有一個盒子。,,,1
+grade_5_0409,envelope,封筒,信封,n,I use an envelope.,私は封筒を使います。,我用信封。,,,3
+grade_5_0410,stamp,切手,郵票,n,I buy a stamp.,私は切手を買います。,我買郵票。,,,3

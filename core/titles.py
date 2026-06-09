@@ -33,6 +33,52 @@ TITLE_DEFS: list[dict] = [
         "desc": "累計1000問正解",
         "check": lambda p: p.get("total_correct_ever", 0) >= 1000,
     },
+    # ダンジョン称号
+    {
+        "id": "dungeon_rookie",
+        "name": "洞窟の探検家",
+        "icon": "🏚️",
+        "desc": "初心者の洞窟をクリア",
+        "check": lambda p: p.get("dungeons", {}).get("cave", {}).get("clears", 0) >= 1,
+    },
+    {
+        "id": "dungeon_explorer",
+        "name": "草原の勇者",
+        "icon": "🌿",
+        "desc": "草原の迷宮をクリア",
+        "check": lambda p: p.get("dungeons", {}).get("prairie", {}).get("clears", 0) >= 1,
+    },
+    {
+        "id": "dungeon_mage",
+        "name": "森の賢者",
+        "icon": "🌲",
+        "desc": "魔法の森をクリア",
+        "check": lambda p: p.get("dungeons", {}).get("forest", {}).get("clears", 0) >= 1,
+    },
+    {
+        "id": "dungeon_knight",
+        "name": "氷の騎士",
+        "icon": "❄️",
+        "desc": "氷の城をクリア",
+        "check": lambda p: p.get("dungeons", {}).get("ice_castle", {}).get("clears", 0) >= 1,
+    },
+    {
+        "id": "dungeon_conqueror",
+        "name": "竜の征服者",
+        "icon": "🐲",
+        "desc": "竜の巣窟をクリア",
+        "check": lambda p: p.get("dungeons", {}).get("dragon_lair", {}).get("clears", 0) >= 1,
+    },
+    {
+        "id": "dungeon_champion",
+        "name": "ダンジョンチャンピオン",
+        "icon": "🏆",
+        "desc": "全5ダンジョンをクリア",
+        "check": lambda p: all(
+            p.get("dungeons", {}).get(d, {}).get("clears", 0) >= 1
+            for d in ["cave", "prairie", "forest", "ice_castle", "dragon_lair"]
+        ),
+    },
 ]
 
 _TITLE_MAP: dict[str, dict] = {d["id"]: d for d in TITLE_DEFS}

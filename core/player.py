@@ -370,6 +370,8 @@ def new_player(name: str = "勇者", grade_target: str = "grade_4", language: st
         "total_questions_ever": 0,
         # パーティーシステム
         "party_code": "",
+        # ダンジョンシステム
+        "dungeons": {},
     }
 
 

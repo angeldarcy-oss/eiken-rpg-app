@@ -241,6 +241,10 @@ def _validate_and_fill(player: dict) -> dict:
         player["party_code"] = ""
     if "guild_code" not in player:
         player["guild_code"] = ""
+    if "event_quests_claimed" not in player:
+        player["event_quests_claimed"] = []
+    if "event_boss_last_attempt" not in player:
+        player["event_boss_last_attempt"] = ""
     if "dungeons" not in player:
         player["dungeons"] = {}
     if "exp_spent" not in player:

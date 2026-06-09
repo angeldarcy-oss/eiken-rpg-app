@@ -134,6 +134,15 @@ ITEMS: dict[str, dict] = {
     "guild_pendant":        {"name": "ギルドの勲章ペンダント", "type": "necklace", "tier": 5, "icon": "🏅", "rare": True},
     "guild_crest_ring":     {"name": "ギルド紋章の指輪",       "type": "ring",     "tier": 5, "icon": "💠", "rare": True},
     "guild_badge_necklace": {"name": "ギルドの証",             "type": "necklace", "tier": 5, "icon": "🎖️", "rare": True},
+    # 季節イベント限定
+    "sakura_sword":           {"name": "桜の刀",              "type": "weapon",   "tier": 4, "icon": "🌸", "rare": True,  "season": "spring"},
+    "spring_cloak":           {"name": "花見のマント",         "type": "cloak",    "tier": 3, "icon": "🌸",               "season": "spring"},
+    "ocean_ring":             {"name": "海の輝き",            "type": "ring",     "tier": 3, "icon": "🌊",               "season": "summer"},
+    "summer_hat":             {"name": "麦わら帽子",          "type": "hat",      "tier": 3, "icon": "👒",               "season": "summer"},
+    "maple_staff":            {"name": "紅葉の杖",            "type": "weapon",   "tier": 4, "icon": "🍁", "rare": True,  "season": "autumn"},
+    "halloween_hat":          {"name": "かぼちゃの帽子",      "type": "hat",      "tier": 3, "icon": "🎃",               "season": "autumn"},
+    "snow_crystal_necklace":  {"name": "雪の結晶ネックレス",  "type": "necklace", "tier": 4, "icon": "❄️", "rare": True,  "season": "winter"},
+    "santa_hat":              {"name": "サンタ帽子",          "type": "hat",      "tier": 3, "icon": "🎅",               "season": "winter"},
 }
 
 # ボス専用レアドロッププール

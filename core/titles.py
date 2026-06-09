@@ -79,6 +79,45 @@ TITLE_DEFS: list[dict] = [
             for d in ["cave", "prairie", "forest", "ice_castle", "dragon_lair"]
         ),
     },
+    # 季節イベント称号（イベントクエスト報酬として付与）
+    {
+        "id": "spring_adventurer",
+        "name": "桜の冒険者",
+        "icon": "🌸",
+        "desc": "春のイベントクエストをコンプリート",
+        "check": lambda p: "sakura_sword" in p.get("inventory", []) and "spring_cloak" in p.get("inventory", []),
+    },
+    {
+        "id": "summer_hero",
+        "name": "夏の英雄",
+        "icon": "🌊",
+        "desc": "夏のイベントクエストをコンプリート",
+        "check": lambda p: "ocean_ring" in p.get("inventory", []) and "summer_hat" in p.get("inventory", []),
+    },
+    {
+        "id": "autumn_sage",
+        "name": "秋の賢者",
+        "icon": "🍁",
+        "desc": "秋のイベントクエストをコンプリート",
+        "check": lambda p: "maple_staff" in p.get("inventory", []) and "halloween_hat" in p.get("inventory", []),
+    },
+    {
+        "id": "winter_knight",
+        "name": "冬の騎士",
+        "icon": "❄️",
+        "desc": "冬のイベントクエストをコンプリート",
+        "check": lambda p: "snow_crystal_necklace" in p.get("inventory", []) and "santa_hat" in p.get("inventory", []),
+    },
+    {
+        "id": "event_legend",
+        "name": "伝説のイベント英雄",
+        "icon": "🌟",
+        "desc": "全季節のイベントレア装備を集める",
+        "check": lambda p: all(
+            item in p.get("inventory", [])
+            for item in ["sakura_sword", "ocean_ring", "maple_staff", "snow_crystal_necklace"]
+        ),
+    },
 ]
 
 _TITLE_MAP: dict[str, dict] = {d["id"]: d for d in TITLE_DEFS}

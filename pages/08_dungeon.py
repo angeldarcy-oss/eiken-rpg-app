@@ -116,7 +116,7 @@ def init_dungeon(dungeon_id: str):
     dungeon = get_dungeon(dungeon_id)
     if dungeon is None:
         return
-    engine = QuizEngine(grade=dungeon["grade"], data_dir="data/words", language=p.get("language", "ja"))
+    engine = QuizEngine(grade=dungeon["grade"], data_dir="data/words", language="ja")
     st.session_state.dungeon_active = True
     st.session_state.dungeon_id = dungeon_id
     st.session_state.dungeon_engine = engine
@@ -163,7 +163,7 @@ def _load_question():
         dungeon = get_dungeon(dungeon_id)
         if dungeon:
             st.session_state.dungeon_engine = QuizEngine(
-                grade=dungeon["grade"], data_dir="data/words", language=p.get("language", "ja"))
+                grade=dungeon["grade"], data_dir="data/words", language="ja")
             q = st.session_state.dungeon_engine.get_next_question()
     st.session_state.dungeon_question = q
     st.session_state.dungeon_answered = False

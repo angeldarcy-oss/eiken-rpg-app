@@ -297,7 +297,8 @@ class QuizEngine:
     def _fill_wrong_choices(self, correct: str, existing: List[str]) -> List[str]:
         """
         ひっかけ選択肢が足りないとき、他の単語の意味から補う。
-        中国語モードでは meaning_zh 列を使用（なければ meaning_ja にフォールバック）。
+        "zh" モードでは meaning_zh 列を使用（なければ meaning_ja にフォールバック）。
+        "ja" モードでは meaning_ja のみを使用し、ASCIIのみ値（英語データ）は除外。
         """
         if self.language == "zh" and "meaning_zh" in self.df.columns:
             raw = self.df["meaning_zh"].dropna().tolist()
@@ -307,7 +308,8 @@ class QuizEngine:
         else:
             raw_ja = self.df["meaning_ja"].dropna().tolist()
             # ASCIIのみの値（英語が混入したデータ）を除外する
-            all_meanings = [m for m in raw_ja if m and m != "nan" and not str(m).encode("ascii", errors="ignore").decode() == str(m)]
+            all_meanings = [m for m in raw_ja if m and m != "nan"
+                            and not str(m).encode("ascii", errors="ignore").decode() == str(m)]
             if len(all_meanings) < 4:
                 all_meanings = raw_ja
         pool = [m for m in all_meanings if m != correct and m not in existing]

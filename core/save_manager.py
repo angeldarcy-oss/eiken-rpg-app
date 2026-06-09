@@ -241,6 +241,8 @@ def _validate_and_fill(player: dict) -> dict:
         player["party_code"] = ""
     if "dungeons" not in player:
         player["dungeons"] = {}
+    if "exp_spent" not in player:
+        player["exp_spent"] = 0
     return player
 
 

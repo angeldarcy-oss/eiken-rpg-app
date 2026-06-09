@@ -372,6 +372,8 @@ def new_player(name: str = "勇者", grade_target: str = "grade_4", language: st
         "party_code": "",
         # ダンジョンシステム
         "dungeons": {},
+        # ショップシステム
+        "exp_spent": 0,
     }
 
 

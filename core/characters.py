@@ -754,9 +754,10 @@ def sidebar_avatar_html(char_id: str | None, equipment: dict | None = None) -> s
     close_start = svg_full.rindex('</')
     svg_inner = svg_full[tag_end:close_start]
     if equipment:
-        from core.equipment import apply_hat_overlay, equipment_badges_html
-        hat_id = equipment.get("hat")
-        svg_inner = apply_hat_overlay(svg_inner, hat_id)
+        from core.equipment import apply_hat_overlay, apply_ring_overlay, apply_necklace_overlay, equipment_badges_html
+        svg_inner = apply_hat_overlay(svg_inner, equipment.get("hat"))
+        svg_inner = apply_ring_overlay(svg_inner, equipment.get("ring"))
+        svg_inner = apply_necklace_overlay(svg_inner, equipment.get("necklace"))
         badges = equipment_badges_html(equipment)
     else:
         badges = ""

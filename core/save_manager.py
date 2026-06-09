@@ -222,7 +222,7 @@ def delete_save(username: str = "") -> bool:
 
 
 def _validate_and_fill(player: dict) -> dict:
-    # 旧セーブの best_streak / boss_defeats を補完（defaults適用より前に行う）
+    # 旧セーブのフィールドを補完（defaults適用より前に行う）
     if "best_streak" not in player:
         player["best_streak"] = player.get("max_streak", 0)
     if "boss_defeats" not in player:
@@ -233,7 +233,7 @@ def _validate_and_fill(player: dict) -> dict:
             player[key] = val
     player["exp_to_next"] = exp_to_next_level(player["level"])
     # ネストした辞書のキーも補完
-    for slot in ("weapon", "armor", "hat", "cloak"):
+    for slot in ("weapon", "armor", "hat", "cloak", "ring", "necklace"):
         player["equipment"].setdefault(slot, None)
     if "last_login" not in player.get("login_streak", {}):
         player["login_streak"] = {"last_login": "", "streak_days": 0, "claimed_milestones": []}
@@ -291,6 +291,8 @@ def update_ranking(player: dict, username: str):
             "max_streak": player.get("max_streak", 0),
             "best_streak": player.get("best_streak", player.get("max_streak", 0)),
             "boss_defeats": player.get("boss_defeats", 0),
+            "active_title": player.get("active_title"),
+            "titles": player.get("titles", []),
             "updated_at": datetime.now().isoformat(timespec="seconds"),
         }
         _save_rankings(data)

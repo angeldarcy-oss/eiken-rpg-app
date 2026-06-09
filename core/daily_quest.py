@@ -114,14 +114,14 @@ def equip_item(player: dict, item_id: str) -> bool:
     item = ITEMS.get(item_id)
     if not item:
         return False
-    equip = player.setdefault("equipment", {"weapon": None, "armor": None, "hat": None, "cloak": None})
+    equip = player.setdefault("equipment", {"weapon": None, "armor": None, "hat": None, "cloak": None, "ring": None, "necklace": None})
     equip[item["type"]] = item_id
     return True
 
 
 def unequip_slot(player: dict, slot: str):
     """スロットの装備を外す。"""
-    equip = player.setdefault("equipment", {"weapon": None, "armor": None, "hat": None, "cloak": None})
+    equip = player.setdefault("equipment", {"weapon": None, "armor": None, "hat": None, "cloak": None, "ring": None, "necklace": None})
     equip[slot] = None
 
 

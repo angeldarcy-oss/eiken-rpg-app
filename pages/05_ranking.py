@@ -10,6 +10,7 @@ from core.save_manager import load_player, save_player, load_rankings, update_ra
 from core.player import PlayerManager
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html, CHARACTERS
+from core.titles import title_badge_html, _TITLE_MAP as _TITLES_MAP
 
 st.set_page_config(page_title="ランキング | 英検Quest", page_icon="🏆", layout="centered", initial_sidebar_state="expanded")
 
@@ -119,12 +120,22 @@ def render_ranking(entries: list, sort_key: str, stat_label: str, stat_fmt):
         name_color = "#ffe066" if is_me else "#ffffff"
         me_badge = ' <span style="background:#ffe066;color:#1a1a2e;font-size:.65rem;padding:1px 6px;border-radius:10px;font-weight:700;">YOU</span>' if is_me else ""
 
+        _title_html = ""
+        _tid = entry.get("active_title") or (entry.get("titles") or [None])[0]
+        if _tid and _tid in _TITLES_MAP:
+            _td = _TITLES_MAP[_tid]
+            _title_html = (
+                ' <span style="background:linear-gradient(135deg,#2a1800,#3a2800);'
+                'border:1px solid #886600;border-radius:8px;padding:1px 6px;'
+                'font-size:.6rem;color:#ffcc44;white-space:nowrap;">'
+                + _td["icon"] + " " + _td["name"] + "</span>"
+            )
         st.markdown(
             f'<div class="rank-row {row_class}">'
             f'<div style="font-size:1.4rem;min-width:36px;text-align:center;">{medal}</div>'
             + _char_svg_small(entry.get("character", "")) +
             f'<div style="flex:1;min-width:0;">'
-            f'<div style="font-size:.95rem;font-weight:700;color:{name_color};">{entry["name"]}{me_badge}</div>'
+            f'<div style="font-size:.95rem;font-weight:700;color:{name_color};">{entry["name"]}{me_badge}{_title_html}</div>'
             f'<div style="font-size:.72rem;color:#aaaacc;">Lv{entry["level"]} | 英検{grade}</div>'
             f'</div>'
             f'<div style="text-align:right;flex-shrink:0;">'

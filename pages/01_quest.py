@@ -15,7 +15,9 @@ from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
 from core.daily_quest import get_or_reset_daily_quests, update_quest_progress, QUEST_DEFS as _QUEST_DEFS
 from core.monsters import get_monster_for_grade, get_weekly_boss, calc_player_damage
-from core.equipment import ITEMS as _EQUIP_ITEMS
+from core.equipment import ITEMS as _EQUIP_ITEMS, BOSS_RARE_DROPS as _BOSS_RARE_DROPS
+from core.pets import get_random_egg, add_egg, update_hatch_gauge, get_pet_exp_bonus, pet_sidebar_html, PET_DEFS as _PET_DEFS
+from core.titles import evaluate_titles, title_badge_html, _TITLE_MAP as _TITLES_MAP
 import random
 
 st.set_page_config(page_title="クエスト", page_icon="🗡️", layout="centered", initial_sidebar_state="expanded")
@@ -190,11 +192,15 @@ def render_sidebar():
     char_id = p.get("character", "")
     equip = p.get("equipment")
     with st.sidebar:
+        from core.titles import title_badge_html as _tbh
+        from core.pets import pet_sidebar_html as _psh
         st.markdown(
             '<div style="text-align:center;padding:12px 0 6px;">'
             + sidebar_avatar_html(char_id, equip) +
             '<div style="font-size:1.2rem;font-weight:700;color:#ffe066;margin-top:6px;">' + p["name"] + '</div>'
             '<div style="font-size:.8rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
+            + _tbh(p, style="sidebar") +
+            _psh(p) +
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
         st.markdown('<div class="stat-label">' + t("hp", lang) + ' ' + str(p["hp"]) + ' / ' + str(p["hp_max"]) + '</div>', unsafe_allow_html=True)
@@ -241,7 +247,10 @@ def apply_correct(result, question=None):
     was_zero = (pm.hp == 0)
     streak = pm.increment_streak()
     st.session_state.streak = streak
-    gain = pm.gain_exp(base_exp=result.exp_gained, streak=streak)
+    # ペットEXPボーナスを適用
+    _pet_bonus = get_pet_exp_bonus(p)
+    _base_exp = max(1, int(result.exp_gained * (1 + _pet_bonus)))
+    gain = pm.gain_exp(base_exp=_base_exp, streak=streak)
     st.session_state.last_gain_result = gain
     st.session_state.total_correct += 1
     st.session_state.session_correct += 1
@@ -274,15 +283,29 @@ def apply_correct(result, question=None):
             st.session_state.battle_boss_defeated = True
             st.session_state["_boss_just_defeated_flash"] = True
             p["boss_defeats"] = p.get("boss_defeats", 0) + 1
-        _monster = st.session_state.get("battle_monster")
-        if _monster and random.random() < _monster.get("drop_rate", 0.2):
-            _drop = random.choice(_monster.get("drop_items", []))
+            # ボス専用：レアアイテムドロップ
+            _rare_drop = random.choice(_BOSS_RARE_DROPS)
             p.setdefault("inventory", [])
-            if _drop not in p["inventory"]:
-                p["inventory"].append(_drop)
-            st.session_state.battle_drop_item = _drop
+            if _rare_drop not in p["inventory"]:
+                p["inventory"].append(_rare_drop)
+            st.session_state.battle_drop_item = _rare_drop
+            # ボス専用：たまごドロップ（50%）
+            if random.random() < 0.5:
+                _egg_type = get_random_egg()
+                add_egg(p, _egg_type)
+                st.session_state["_boss_egg_drop"] = _egg_type
+            else:
+                st.session_state.pop("_boss_egg_drop", None)
         else:
-            st.session_state.battle_drop_item = None
+            _monster = st.session_state.get("battle_monster")
+            if _monster and random.random() < _monster.get("drop_rate", 0.2):
+                _drop = random.choice(_monster.get("drop_items", []))
+                p.setdefault("inventory", [])
+                if _drop not in p["inventory"]:
+                    p["inventory"].append(_drop)
+                st.session_state.battle_drop_item = _drop
+            else:
+                st.session_state.battle_drop_item = None
     else:
         st.session_state.battle_monster_just_defeated = False
 
@@ -316,6 +339,24 @@ def apply_correct(result, question=None):
     else:
         st.session_state.pop("_newly_completed_quests", None)
 
+    # 累計統計更新
+    p["total_correct_ever"] = p.get("total_correct_ever", 0) + 1
+    p["total_questions_ever"] = p.get("total_questions_ever", 0) + 1
+
+    # 孵化ゲージ更新
+    _hatched = update_hatch_gauge(p, 1)
+    if _hatched:
+        st.session_state["_newly_hatched_pets"] = _hatched
+    else:
+        st.session_state.pop("_newly_hatched_pets", None)
+
+    # 称号評価
+    _new_titles = evaluate_titles(p)
+    if _new_titles:
+        st.session_state["_newly_unlocked_titles"] = _new_titles
+    else:
+        st.session_state.pop("_newly_unlocked_titles", None)
+
 
 def apply_wrong(result):
     p = st.session_state.player
@@ -325,12 +366,16 @@ def apply_wrong(result):
     st.session_state.streak = 0
     st.session_state.last_gain_result = None
     p["weekly_total"] = p.get("weekly_total", 0) + 1
+    p["total_questions_ever"] = p.get("total_questions_ever", 0) + 1
 
 
 def load_next_question():
     engine = st.session_state.engine
     st.session_state.pop("_boss_just_defeated_flash", None)
     st.session_state.pop("_newly_completed_quests", None)
+    st.session_state.pop("_newly_hatched_pets", None)
+    st.session_state.pop("_newly_unlocked_titles", None)
+    st.session_state.pop("_boss_egg_drop", None)
 
     # モンスターが倒されている場合、新モンスターを出現させる
     if st.session_state.get("battle_monster_hp", 1) <= 0:
@@ -705,6 +750,49 @@ if st.session_state.answered and st.session_state.last_result:
             '<div style="font-size:.88rem;color:#cc9900;margin-top:10px;">'
             '累計ボス撃破数：<b style="font-size:1.1rem;color:#ffcc00;">'
             + str(_total_bd) + '</b> 体</div>'
+            '</div>', unsafe_allow_html=True)
+
+    # ── ボスたまごドロップ通知 ───────────────────────────────────
+    _egg_drop = st.session_state.get("_boss_egg_drop")
+    if _egg_drop and result.is_correct:
+        _edef = _PET_DEFS.get(_egg_drop, {})
+        st.markdown(
+            '<div style="background:linear-gradient(135deg,#1a0a2a,#2a1a4a);'
+            'border:2px solid #cc66ff;border-radius:12px;padding:10px 18px;'
+            'text-align:center;margin-bottom:8px;">'
+            '<div style="font-size:1rem;font-weight:900;color:#dd88ff;">🥚 たまごをゲット！</div>'
+            '<div style="width:36px;height:36px;margin:6px auto 2px;">' + _edef.get("egg_svg", "🥚") + '</div>'
+            '<div style="font-size:.88rem;color:#ccaaee;">' + _edef.get("egg_name", "たまご") + '</div>'
+            '<div style="font-size:.75rem;color:#9966bb;margin-top:2px;">100問正解で孵化！</div>'
+            '</div>', unsafe_allow_html=True)
+
+    # ── ペット孵化通知 ──────────────────────────────────────────
+    _hatched = st.session_state.get("_newly_hatched_pets", [])
+    for _pet_id in _hatched:
+        _pdef = _PET_DEFS.get(_pet_id, {})
+        st.markdown(
+            '<div style="background:linear-gradient(135deg,#001a2a,#002a4a);'
+            'border:2px solid #44ccff;border-radius:12px;padding:12px 20px;'
+            'text-align:center;margin-bottom:8px;">'
+            '<div style="font-size:1.2rem;font-weight:900;color:#44ccff;">✨ ペットが孵化した！</div>'
+            '<div style="width:48px;height:48px;margin:8px auto 4px;">' + _pdef.get("svg", "") + '</div>'
+            '<div style="font-size:1rem;color:#88eeff;font-weight:700;">'
+            + _pdef.get("emoji", "") + ' ' + _pdef.get("name", "") + '</div>'
+            '<div style="font-size:.8rem;color:#66aacc;margin-top:4px;">EXP +10%ボーナス開始！</div>'
+            '</div>', unsafe_allow_html=True)
+
+    # ── 称号解除通知 ────────────────────────────────────────────
+    _new_titles = st.session_state.get("_newly_unlocked_titles", [])
+    for _tid in _new_titles:
+        _tdef = _TITLES_MAP.get(_tid, {})
+        st.markdown(
+            '<div style="background:linear-gradient(135deg,#1a1200,#3a2800);'
+            'border:2px solid #ffcc00;border-radius:12px;padding:12px 20px;'
+            'text-align:center;margin-bottom:8px;">'
+            '<div style="font-size:1rem;font-weight:900;color:#ffcc00;">🏅 称号解除！</div>'
+            '<div style="font-size:1.1rem;color:#ffe066;margin-top:4px;font-weight:700;">'
+            + _tdef.get("icon", "") + ' ' + _tdef.get("name", "") + '</div>'
+            '<div style="font-size:.8rem;color:#cc9900;margin-top:2px;">' + _tdef.get("desc", "") + '</div>'
             '</div>', unsafe_allow_html=True)
 
     # ── 新記録通知 ──────────────────────────────────────────────

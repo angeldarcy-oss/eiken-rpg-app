@@ -356,8 +356,18 @@ def new_player(name: str = "勇者", grade_target: str = "grade_4", language: st
         "daily_quests": {},
         "login_streak": {"last_login": "", "streak_days": 0, "claimed_milestones": []},
         # 装備・インベントリ
-        "equipment": {"weapon": None, "armor": None, "hat": None, "cloak": None},
+        "equipment": {"weapon": None, "armor": None, "hat": None, "cloak": None, "ring": None, "necklace": None},
         "inventory": [],
+        # ペットシステム
+        "eggs": [],
+        "pets": {},
+        "active_pet": None,
+        # 称号システム
+        "titles": [],
+        "active_title": None,
+        # 累計統計（称号・称号条件判定用）
+        "total_correct_ever": 0,
+        "total_questions_ever": 0,
     }
 
 

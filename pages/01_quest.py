@@ -6,6 +6,7 @@ _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
+import streamlit.components.v1 as components
 from core.quiz_engine import QuizEngine, Question, QuizResult
 from core.ai_tutor import get_explanation
 from core.player import PlayerManager, streak_multiplier
@@ -28,7 +29,58 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .word-display{font-size:3rem;font-weight:700;text-align:center;color:#ffe066;margin-bottom:6px;}
 .pos-badge{display:inline-block;background:#0f3460;color:#88aaff;font-size:.75rem;padding:2px 10px;border-radius:20px;border:1px solid #2244aa;margin-bottom:20px;}
 .progress-label{font-size:.82rem;color:#888;margin-bottom:4px;}
+.speak-link{color:#7788bb;cursor:pointer;font-size:.88rem;user-select:none;letter-spacing:.02em;transition:color .15s;}
+.speak-link:hover{color:#aabbee;}
 </style>""", unsafe_allow_html=True)
+
+
+# ── 効果音：Python で WAV を生成して base64 化（外部ライブラリ不要）─────────
+import struct as _struct
+import math as _math
+import base64 as _base64
+
+
+def _make_wav_b64(notes_durs, sr: int = 8000, vol: float = 0.22) -> str:
+    """sine 波の WAV を Python stdlib だけで生成して base64 文字列を返す。"""
+    samples = []
+    for freq, dur in notes_durs:
+        n = int(sr * dur)
+        fade = max(1, n // 5)
+        for i in range(n):
+            s = vol * _math.sin(2 * _math.pi * freq * i / sr)
+            if i >= n - fade:          # フェードアウト
+                s *= (n - i) / fade
+            samples.append(max(-32767, min(32767, int(s * 32767))))
+    raw = _struct.pack('<' + 'h' * len(samples), *samples)
+    hdr = (b'RIFF' + _struct.pack('<I', 36 + len(raw)) + b'WAVE'
+           + b'fmt ' + _struct.pack('<IHHIIHH', 16, 1, 1, sr, sr * 2, 2, 16)
+           + b'data' + _struct.pack('<I', len(raw)))
+    return _base64.b64encode(hdr + raw).decode()
+
+
+# モジュール読み込み時に一度だけ計算してキャッシュ
+_CORRECT_WAV = _make_wav_b64(
+    [(523.25, 0.10), (659.25, 0.10), (783.99, 0.10), (1046.50, 0.28)])
+_WRONG_WAV = _make_wav_b64(
+    [(392.00, 0.22), (311.13, 0.32)], vol=0.18)
+
+
+def _play_sound(sound_type: str):
+    """WAV データを data URI として iframe 内で再生する。"""
+    b64 = _CORRECT_WAV if sound_type == "correct" else _WRONG_WAV
+    # Web Audio API（AudioContext）は iframe + Streamlit rerun 後に
+    # suspended になる問題があるため、new Audio() を使う。
+    # height=1 で iframe を確実にレンダリングさせる。
+    components.html(
+        '<script>'
+        '(function(){'
+        'var a=new Audio("data:audio/wav;base64,' + b64 + '");'
+        'a.volume=0.65;'
+        'var p=a.play();'
+        'if(p!==undefined){p.catch(function(){});}'
+        '})();'
+        '</script>',
+        height=1, scrolling=False)
 
 
 def _get_audio_b64(word):
@@ -52,7 +104,8 @@ def init_session():
     defaults = [("total_correct", 0), ("total_questions", 0), ("streak", 0),
                 ("engine", None), ("current_question", None), ("answered", False),
                 ("last_result", None), ("quest_finished", False), ("session_correct", 0),
-                ("session_total", 0), ("ai_explanation", None), ("last_gain_result", None)]
+                ("session_total", 0), ("ai_explanation", None), ("last_gain_result", None),
+                ("play_sound", None)]
     for k, v in defaults:
         if k not in st.session_state:
             st.session_state[k] = v
@@ -235,26 +288,24 @@ bonus = ('<span style="background:#2a1a00;color:#ffe066;border:1px solid #5a3a00
          if mult > 1.0 else "")
 
 audio_b64 = _get_audio_b64(q.word)
+audio_id = "qa-" + str(q.word_id)
+speak_html = ""
 if audio_b64:
-    audio_html = (
-        '<audio id="quiz-audio" src="data:audio/mp3;base64,' + audio_b64 + '"></audio>'
-        '<span onclick="document.getElementById(&quot;quiz-audio&quot;).play()" '
-        'style="cursor:pointer;font-size:1.5rem;margin-left:10px;" title="発音を聞く">🔊</span>'
+    speak_html = (
+        '<audio id="' + audio_id + '" src="data:audio/mp3;base64,' + audio_b64 + '"></audio>'
+        '<div style="text-align:center;margin-top:14px;">'
+        '<span class="speak-link" onclick="document.getElementById(&quot;' + audio_id + '&quot;).play()">'
+        '🔊 ' + q.word +
+        '</span></div>'
     )
-else:
-    audio_html = ""
 
 st.markdown(
     '<div class="quiz-card">'
     '<div style="font-size:.9rem;color:#aaaacc;text-align:center;margin-bottom:20px;">' + t("quest_instruction", lang) + ' ' + diff_stars + bonus + '</div>'
     '<div class="word-display">' + q.word + '</div>'
     '<div style="text-align:center;"><span class="pos-badge">' + pos_ja + '</span></div>'
+    + speak_html +
     '</div>', unsafe_allow_html=True)
-
-if st.button(t("speak_btn", lang), key='speak_' + q.word):
-    if audio_b64:
-        import base64
-        st.audio(base64.b64decode(audio_b64), format='audio/mp3')
 
 if not st.session_state.answered:
     cols = st.columns(2)
@@ -269,13 +320,20 @@ if not st.session_state.answered:
                 st.session_state.session_total += 1
                 if result.is_correct:
                     apply_correct(result)
+                    st.session_state.play_sound = "correct"
                 else:
                     apply_wrong(result)
+                    st.session_state.play_sound = "wrong"
                 st.rerun()
 
 if st.session_state.answered and st.session_state.last_result:
     result = st.session_state.last_result
     gain = st.session_state.last_gain_result
+
+    # 回答直後のみ効果音を再生（フラグをクリアして重複再生を防ぐ）
+    if st.session_state.get("play_sound"):
+        _play_sound(st.session_state.play_sound)
+        st.session_state.play_sound = None
 
     if result.is_correct:
         levelup_html = ""

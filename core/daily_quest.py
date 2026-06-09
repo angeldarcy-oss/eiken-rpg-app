@@ -15,15 +15,22 @@ def _today() -> str:
     return date.today().isoformat()
 
 
-def get_or_reset_daily_quests(player: dict) -> list[dict]:
-    """今日のクエストを取得。日付が変わっていたらリセット。"""
+def get_or_reset_daily_quests(player: dict, weak_count: int | None = None) -> list[dict]:
+    """今日のクエストを取得。日付が変わっていたらリセット。
+    weak_count を渡すと「苦手単語」クエストの目標数を実際の苦手単語数に合わせて自動調整する。
+    """
     dq = player.get("daily_quests", {})
     today = _today()
     if dq.get("date") != today:
+        def _target(d: dict) -> int:
+            if d["id"] == "weak3" and weak_count is not None and weak_count >= 1:
+                return min(d["target"], weak_count)
+            return d["target"]
+
         player["daily_quests"] = {
             "date": today,
             "quests": [
-                {"id": d["id"], "progress": 0, "target": d["target"],
+                {"id": d["id"], "progress": 0, "target": _target(d),
                  "completed": False, "claimed": False}
                 for d in QUEST_DEFS
             ],

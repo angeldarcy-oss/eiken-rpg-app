@@ -10,7 +10,8 @@ _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
-from core.save_manager import load_player, save_player
+import json
+from core.save_manager import load_player, save_player, get_user_save_path
 from core.player import PlayerManager
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
@@ -224,8 +225,19 @@ render_sidebar()
 p = st.session_state.player
 username = st.session_state.get("username", "")
 
+# ─── 苦手単語数を取得してクエスト目標を調整 ────────────────
+_weak_count: int | None = None
+if username:
+    _sp = get_user_save_path(username)
+    if _sp.exists():
+        try:
+            with open(_sp, encoding="utf-8") as _f:
+                _weak_count = len(json.load(_f).get("weak_words", []))
+        except Exception:
+            pass
+
 # ─── 新規クリア検出 ─────────────────────────────────────────
-quests = get_or_reset_daily_quests(p)
+quests = get_or_reset_daily_quests(p, weak_count=_weak_count)
 prev_seen = set(st.session_state.get("_daily_seen_completed", []))
 current_completed_ids = {q["id"] for q in quests if q["completed"]}
 newly_completed_ids = current_completed_ids - prev_seen
@@ -319,6 +331,12 @@ for i, (qdef, q) in enumerate(zip(QUEST_DEFS, quests)):
     progress_pct = min(100, round(q["progress"] / q["target"] * 100)) if q["target"] > 0 else 0
     is_newly_done = q["id"] in newly_completed_ids
 
+    # 苦手単語クエストはターゲット数を動的にタイトルへ反映
+    if q["id"] == "weak3":
+        quest_title = f'苦手単語を{q["target"]}問正解する'
+    else:
+        quest_title = qdef["title"]
+
     if q["claimed"]:
         card_class = "quest-claimed"
         status_text = '<span class="check-bounce">✅</span> 受取済'
@@ -338,7 +356,7 @@ for i, (qdef, q) in enumerate(zip(QUEST_DEFS, quests)):
     st.markdown(
         f'<div class="{card_class}">'
         f'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">'
-        f'<div style="font-size:1rem;font-weight:700;color:#fff;">{qdef["icon"]} {qdef["title"]}</div>'
+        f'<div style="font-size:1rem;font-weight:700;color:#fff;">{qdef["icon"]} {quest_title}</div>'
         f'<div style="font-size:.85rem;color:{status_color};">{status_text}</div>'
         f'</div>'
         f'<div style="background:#0a0a1a;border-radius:6px;height:8px;width:100%;margin-bottom:8px;overflow:hidden;">'

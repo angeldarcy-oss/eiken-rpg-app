@@ -180,20 +180,29 @@ def apply_correct(result, question=None):
     if streak > p.get("max_streak", 0):
         p["max_streak"] = streak
 
-    # デイリークエスト進捗
-    get_or_reset_daily_quests(p)
+    # デイリークエスト進捗（苦手単語数を渡してターゲットを自動調整）
+    engine = st.session_state.get("engine")
+    _wc: int | None = None
+    is_weak_word = False
+    if engine is not None:
+        try:
+            wdf = engine.get_weak_words(top_n=50)
+            _wc = 0 if wdf.empty else len(wdf)
+        except Exception:
+            pass
+        if question is not None:
+            word_row = engine.df[engine.df["word"] == question.word]
+            if not word_row.empty and int(word_row.iloc[0].get("miss_count", 0)) > 0:
+                is_weak_word = True
+    get_or_reset_daily_quests(p, weak_count=_wc)
     update_quest_progress(p, "correct10")
     if streak >= 5:
         update_quest_progress(p, "streak5")
     if question is not None:
         if question.difficulty >= 3:
             update_quest_progress(p, "hard5")
-        # 苦手単語チェック（engine の miss_count > 0 の単語を苦手とみなす）
-        engine = st.session_state.get("engine")
-        if engine is not None:
-            word_row = engine.df[engine.df["word"] == question.word]
-            if not word_row.empty and int(word_row.iloc[0].get("miss_count", 0)) > 0:
-                update_quest_progress(p, "weak3")
+        if is_weak_word:
+            update_quest_progress(p, "weak3")
 
 
 def apply_wrong(result):

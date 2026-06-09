@@ -14,6 +14,9 @@ from core.save_manager import load_player, save_player, append_history, update_r
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
 from core.daily_quest import get_or_reset_daily_quests, update_quest_progress
+from core.monsters import get_monster_for_grade, get_weekly_boss, calc_player_damage
+from core.equipment import ITEMS as _EQUIP_ITEMS
+import random
 
 st.set_page_config(page_title="クエスト", page_icon="🗡️", layout="centered", initial_sidebar_state="expanded")
 
@@ -30,6 +33,17 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .word-display{font-size:3rem;font-weight:700;text-align:center;color:#ffe066;margin-bottom:6px;}
 .pos-badge{display:inline-block;background:#0f3460;color:#88aaff;font-size:.75rem;padding:2px 10px;border-radius:20px;border:1px solid #2244aa;margin-bottom:20px;}
 .progress-label{font-size:.82rem;color:#888;margin-bottom:4px;}
+.monster-area{text-align:center;margin:8px 0 12px;}
+.mon-hp-outer{background:#2a0a0a;border-radius:6px;height:12px;overflow:hidden;border:1px solid #5a1a1a;}
+.mon-hp-inner{height:100%;border-radius:6px;}
+@keyframes dmg-flash{0%{filter:brightness(1)}20%{filter:brightness(2.8) sepia(1) saturate(10) hue-rotate(-10deg)}70%{filter:brightness(1.6) sepia(.5) saturate(4)}100%{filter:brightness(1)}}
+@keyframes dmg-float{0%{opacity:1;transform:translateX(-50%) translateY(0) scale(1.4)}100%{opacity:0;transform:translateX(-50%) translateY(-60px) scale(.8)}}
+@keyframes monster-die-anim{0%{opacity:1;transform:scale(1) rotate(0)}40%{opacity:.6;transform:scale(1.1) rotate(-8deg)}100%{opacity:0;transform:scale(.35) rotate(28deg) translateY(32px)}}
+@keyframes boss-pulse{0%,100%{box-shadow:0 0 6px #ff0044}50%{box-shadow:0 0 18px #ff0044,0 0 28px #ff0044}}
+.monster-dmg-flash .m-svg-wrap{animation:dmg-flash .6s ease-out}
+.monster-die .m-svg-wrap{animation:monster-die-anim .8s ease-in forwards}
+.damage-number{position:absolute;top:26%;left:50%;font-size:2.2rem;font-weight:900;color:#ff2222;text-shadow:0 0 10px #ff0000,2px 2px 0 #000;animation:dmg-float .9s ease-out forwards;pointer-events:none;z-index:10}
+.boss-badge{background:linear-gradient(135deg,#3a0033,#5a0044);border:1px solid #ff0066;border-radius:6px;padding:2px 10px;font-size:.72rem;color:#ff88cc;display:inline-block;margin-bottom:4px;animation:boss-pulse 1.6s ease-in-out infinite}
 </style>""", unsafe_allow_html=True)
 
 
@@ -121,6 +135,29 @@ def init_session():
         st.session_state.session_total = 0
         st.session_state.ai_explanation = None
         st.session_state.last_gain_result = None
+        # 級変更時はモンスターもリセット
+        _m = get_monster_for_grade(grade)
+        st.session_state.battle_monster = _m
+        st.session_state.battle_monster_hp = _m["hp"]
+        st.session_state.battle_monsters_defeated = 0
+        st.session_state.battle_damage_this_turn = 0
+        st.session_state.battle_monster_just_defeated = False
+        st.session_state.battle_drop_item = None
+        st.session_state.battle_boss_active = False
+        st.session_state.battle_boss_defeated = False
+
+    # 初回バトル状態の初期化
+    if "battle_monster" not in st.session_state:
+        _grade = st.session_state.player["grade_target"]
+        _m = get_monster_for_grade(_grade)
+        st.session_state.battle_monster = _m
+        st.session_state.battle_monster_hp = _m["hp"]
+        st.session_state.battle_monsters_defeated = 0
+        st.session_state.battle_damage_this_turn = 0
+        st.session_state.battle_monster_just_defeated = False
+        st.session_state.battle_drop_item = None
+        st.session_state.battle_boss_active = False
+        st.session_state.battle_boss_defeated = False
 
 init_session()
 
@@ -157,6 +194,24 @@ def render_sidebar():
             '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang) +
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
+        # ボス挑戦中インジケーター
+        if st.session_state.get("battle_boss_active"):
+            _boss = st.session_state.get("battle_monster", {})
+            _boss_name = _boss.get("name", "BOSS")
+            _boss_hp = st.session_state.get("battle_monster_hp", 0)
+            _boss_max = _boss.get("hp", 1)
+            _boss_pct = max(0, round(_boss_hp / _boss_max * 100, 1)) if _boss_max else 0
+            st.markdown(
+                '<div style="background:linear-gradient(135deg,#3a0022,#5a0033);border:1px solid #ff0055;'
+                'border-radius:10px;padding:10px 14px;text-align:center;margin-bottom:12px;'
+                'animation:boss-pulse 1.6s ease-in-out infinite;">'
+                '<div style="font-size:.72rem;color:#ff88cc;margin-bottom:2px;">👑 週替わりBOSS</div>'
+                '<div style="font-size:1rem;font-weight:700;color:#ff4466;margin-bottom:6px;">' + _boss_name + '</div>'
+                '<div style="background:#2a0a0a;border-radius:5px;height:8px;overflow:hidden;">'
+                '<div style="background:linear-gradient(90deg,#ff2255,#ff88aa);width:' + str(_boss_pct) + '%;height:100%;"></div>'
+                '</div>'
+                '<div style="font-size:.68rem;color:#cc8899;margin-top:2px;">HP ' + str(_boss_hp) + ' / ' + str(_boss_max) + '</div>'
+                '</div>', unsafe_allow_html=True)
 
 render_sidebar()
 
@@ -179,6 +234,31 @@ def apply_correct(result, question=None):
     p["weekly_total"] = p.get("weekly_total", 0) + 1
     if streak > p.get("max_streak", 0):
         p["max_streak"] = streak
+
+    # モンスターバトル：ダメージ計算
+    _diff = getattr(question, "difficulty", 1) if question else 1
+    _dmg = calc_player_damage(_diff)
+    st.session_state.battle_damage_this_turn = _dmg
+    _cur_hp = st.session_state.get("battle_monster_hp", 0)
+    _new_hp = max(0, _cur_hp - _dmg)
+    st.session_state.battle_monster_hp = _new_hp
+    if _new_hp <= 0 and _cur_hp > 0:
+        st.session_state.battle_monster_just_defeated = True
+        st.session_state.battle_monsters_defeated = st.session_state.get("battle_monsters_defeated", 0) + 1
+        if st.session_state.get("battle_boss_active"):
+            st.session_state.battle_boss_active = False
+            st.session_state.battle_boss_defeated = True
+        _monster = st.session_state.get("battle_monster")
+        if _monster and random.random() < _monster.get("drop_rate", 0.2):
+            _drop = random.choice(_monster.get("drop_items", []))
+            p.setdefault("inventory", [])
+            if _drop not in p["inventory"]:
+                p["inventory"].append(_drop)
+            st.session_state.battle_drop_item = _drop
+        else:
+            st.session_state.battle_drop_item = None
+    else:
+        st.session_state.battle_monster_just_defeated = False
 
     # デイリークエスト進捗（苦手単語数を渡してターゲットを自動調整）
     engine = st.session_state.get("engine")
@@ -217,6 +297,26 @@ def apply_wrong(result):
 
 def load_next_question():
     engine = st.session_state.engine
+
+    # モンスターが倒されている場合、新モンスターを出現させる
+    if st.session_state.get("battle_monster_hp", 1) <= 0:
+        st.session_state.battle_monster_just_defeated = False
+        st.session_state.battle_drop_item = None
+        _grade = st.session_state.player["grade_target"]
+        _defeated = st.session_state.get("battle_monsters_defeated", 0)
+        if (_defeated >= 5
+                and not st.session_state.get("battle_boss_active")
+                and not st.session_state.get("battle_boss_defeated")):
+            # 5体倒したら週替わりボス登場
+            _boss = get_weekly_boss()
+            st.session_state.battle_monster = _boss
+            st.session_state.battle_boss_active = True
+        else:
+            st.session_state.battle_monster = get_monster_for_grade(_grade)
+        st.session_state.battle_monster_hp = st.session_state.battle_monster["hp"]
+    # ダメージ表示はクリア（次の問題では表示しない）
+    st.session_state.battle_damage_this_turn = 0
+
     q = engine.get_next_question()
     if q is None:
         st.session_state.quest_finished = True
@@ -226,6 +326,89 @@ def load_next_question():
         st.session_state.last_result = None
         st.session_state.ai_explanation = None
         st.session_state.last_gain_result = None
+
+
+def render_monster():
+    """クエスト画面のモンスター表示エリア"""
+    monster = st.session_state.get("battle_monster")
+    if not monster:
+        return
+
+    monster_hp = st.session_state.get("battle_monster_hp", monster["hp"])
+    monster_hp_max = monster["hp"]
+    damage = st.session_state.get("battle_damage_this_turn", 0)
+    just_defeated = st.session_state.get("battle_monster_just_defeated", False)
+    drop_item = st.session_state.get("battle_drop_item")
+    is_boss = st.session_state.get("battle_boss_active", False)
+
+    hp_pct = max(0.0, monster_hp / monster_hp_max * 100) if monster_hp_max > 0 else 0.0
+    hp_color = "#44ff88" if hp_pct > 50 else ("#ffcc00" if hp_pct > 25 else "#ff4444")
+    svg_size = 118 if is_boss else 90
+
+    anim_class = ""
+    if just_defeated:
+        anim_class = "monster-die"
+    elif damage > 0:
+        anim_class = "monster-dmg-flash"
+
+    damage_html = ""
+    if damage > 0 and not just_defeated:
+        damage_html = '<div class="damage-number">-' + str(damage) + '</div>'
+
+    boss_badge = ""
+    if is_boss:
+        boss_badge = '<div class="boss-badge">👑 週替わりBOSS</div><br>'
+
+    # ドロップアイテム表示
+    drop_html = ""
+    if just_defeated and drop_item:
+        item_info = _EQUIP_ITEMS.get(drop_item, {})
+        item_name = item_info.get("name", drop_item)
+        item_icon = item_info.get("icon", "📦")
+        drop_html = (
+            '<div style="background:linear-gradient(135deg,#1a2a00,#2a4400);'
+            'border:1px solid #88cc00;border-radius:8px;padding:6px 14px;'
+            'text-align:center;margin-top:6px;font-size:.88rem;color:#ccff55;">'
+            + item_icon + ' <b>' + item_name + '</b> をドロップ！'
+            '</div>'
+        )
+    elif just_defeated:
+        drop_html = (
+            '<div style="text-align:center;font-size:.8rem;color:#888;margin-top:4px;">'
+            'ドロップなし</div>'
+        )
+
+    # 倒した時のメッセージ
+    defeated_msg = ""
+    if just_defeated:
+        label = monster["emoji"] + " " + monster["name"] + " を倒した！"
+        defeated_msg = (
+            '<div style="font-size:1rem;font-weight:700;color:#ffe066;'
+            'text-align:center;margin-top:4px;text-shadow:0 0 8px #ffcc00;">'
+            '⚔️ ' + label + '</div>'
+        )
+
+    st.markdown(
+        '<div class="monster-area ' + anim_class + '">'
+        + boss_badge +
+        '<div style="position:relative;display:inline-block;width:' + str(svg_size) + 'px;">'
+        '<div class="m-svg-wrap" style="width:' + str(svg_size) + 'px;height:' + str(svg_size) + 'px;'
+        'display:flex;align-items:center;justify-content:center;">'
+        '<div style="width:100%;height:100%;">' + monster["svg"] + '</div>'
+        '</div>'
+        + damage_html +
+        '</div>'
+        '<div style="font-size:.9rem;font-weight:700;color:#e8d8ff;margin-top:3px;">'
+        + monster["emoji"] + ' ' + monster["name"] + '</div>'
+        '<div style="max-width:' + str(svg_size + 20) + 'px;margin:4px auto 0;">'
+        '<div class="mon-hp-outer"><div class="mon-hp-inner" style="background:linear-gradient(90deg,'
+        + hp_color + ',' + hp_color + 'aa);width:' + str(round(hp_pct, 1)) + '%;"></div></div>'
+        '<div style="font-size:.7rem;color:#888;margin-top:1px;">HP '
+        + str(max(0, monster_hp)) + ' / ' + str(monster_hp_max) + '</div>'
+        '</div>'
+        + defeated_msg + drop_html +
+        '</div>',
+        unsafe_allow_html=True)
 
 
 lang = st.session_state.player.get("language", "ja")
@@ -281,6 +464,16 @@ if st.session_state.quest_finished:
         for key in ["quest_finished", "current_question", "answered", "last_result",
                     "session_correct", "session_total", "ai_explanation", "last_gain_result"]:
             st.session_state[key] = False if key in ("quest_finished", "answered") else (0 if key in ("session_correct", "session_total") else None)
+        # バトル状態もリセット
+        _m = get_monster_for_grade(grade)
+        st.session_state.battle_monster = _m
+        st.session_state.battle_monster_hp = _m["hp"]
+        st.session_state.battle_monsters_defeated = 0
+        st.session_state.battle_damage_this_turn = 0
+        st.session_state.battle_monster_just_defeated = False
+        st.session_state.battle_drop_item = None
+        st.session_state.battle_boss_active = False
+        st.session_state.battle_boss_defeated = False
         st.rerun()
     st.stop()
 
@@ -296,6 +489,8 @@ answered_count = total_words - engine.questions_left()
 
 st.markdown('<div class="progress-label">' + t("progress_label", lang) + ' ' + str(answered_count) + ' / ' + str(total_words) + ' ' + t("questions", lang) + '</div>', unsafe_allow_html=True)
 st.progress(answered_count / total_words)
+
+render_monster()
 
 pos_map = {"n": "名詞" if lang == "ja" else "名詞",
            "v": "動詞" if lang == "ja" else "動詞",

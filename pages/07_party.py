@@ -4,6 +4,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from pathlib import Path
 from core.mobile_css import MOBILE_CSS
+from core.equipment_bonus import sidebar_bonus_html
 
 _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
@@ -83,6 +84,9 @@ def render_sidebar():
         st.markdown('<div class="hp-bar-outer"><div class="hp-bar-inner" style="width:' + str(round(hp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
         st.markdown('<div class="stat-label">' + t("exp", lang) + ' ' + str(p["exp"]) + ' / ' + str(p["exp_to_next"]) + '</div>', unsafe_allow_html=True)
         st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
+        _bhtml = sidebar_bonus_html(p)
+        if _bhtml:
+            st.markdown(_bhtml, unsafe_allow_html=True)
         st.markdown("---")
 
 render_sidebar()

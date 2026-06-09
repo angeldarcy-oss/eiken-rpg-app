@@ -22,6 +22,7 @@ from core.shop import (
     get_weekly_sale_ids, get_weekly_rare_ids,
     get_available_exp, get_final_price, is_owned, purchase, get_item_display,
 )
+from core.equipment_bonus import get_bonus_description, sidebar_bonus_html
 
 st.set_page_config(page_title="ショップ | 英検Quest", page_icon="🏪", layout="centered", initial_sidebar_state="expanded")
 
@@ -78,6 +79,9 @@ def render_sidebar():
         st.markdown('<div class="hp-bar-outer"><div class="hp-bar-inner" style="width:' + str(round(hp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
         st.markdown('<div class="stat-label">' + t("exp", lang) + ' ' + str(p["exp"]) + ' / ' + str(p["exp_to_next"]) + '</div>', unsafe_allow_html=True)
         st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
+        _bhtml = sidebar_bonus_html(p)
+        if _bhtml:
+            st.markdown(_bhtml, unsafe_allow_html=True)
         st.markdown("---")
         st.markdown(
             '<div style="background:linear-gradient(135deg,#1a1000,#2a2000);border:2px solid #ffe066;'
@@ -244,8 +248,9 @@ def render_item_card(item_id: str, col, key_suffix: str = ""):
             '<div style="min-height:20px;margin-bottom:8px;">' + badges + '</div>'
             + icon_html +
             '<div style="font-size:.92rem;font-weight:700;color:#ffe066;margin-bottom:4px;">' + d["name"] + '</div>'
-            '<div style="font-size:.72rem;color:#aaaacc;margin-bottom:8px;min-height:32px;">' + d["desc"] + '</div>'
-            '<div style="font-size:.9rem;margin-bottom:10px;">' + price_html + '</div>'
+            '<div style="font-size:.72rem;color:#aaaacc;margin-bottom:4px;min-height:28px;">' + d["desc"] + '</div>'
+            + ('<div style="font-size:.7rem;color:#88ccaa;font-weight:700;margin-bottom:6px;">' + get_bonus_description(item_id) + '</div>' if get_bonus_description(item_id) else '')
+            + '<div style="font-size:.9rem;margin-bottom:10px;">' + price_html + '</div>'
             '</div>', unsafe_allow_html=True)
 
         # ── ボタン ──

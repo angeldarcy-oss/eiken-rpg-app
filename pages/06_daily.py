@@ -22,6 +22,8 @@ from core.daily_quest import (
     get_claimable_login_bonuses, claim_login_bonus, claim_quest_reward,
     equip_item, unequip_slot,
 )
+from core.equipment_bonus import get_all_bonuses, sidebar_bonus_html
+from datetime import date as _date
 
 # ── 効果音生成（stdlib のみ） ────────────────────────────────
 def _make_wav_b64(notes_durs, sr: int = 8000, vol: float = 0.22) -> str:
@@ -196,8 +198,31 @@ def init_session():
 init_session()
 
 if not st.session_state.get("_login_streak_updated", False):
-    get_login_streak(st.session_state.player)
+    _p_ref = st.session_state.player
+    _prev_login = _p_ref.get("login_streak", {}).get("last_login", "")
+    get_login_streak(_p_ref)
+    _today_str = _date.today().isoformat()
+    _is_new_login = (_prev_login != _today_str)
     st.session_state["_login_streak_updated"] = True
+    if _is_new_login:
+        _bonuses = get_all_bonuses(_p_ref)
+        _login_bonus_applied = False
+        # ネコペット: 毎日ログインEXP+50
+        _cat_exp = _bonuses.get("cat_login_exp", 0)
+        if _cat_exp > 0:
+            PlayerManager(_p_ref).gain_exp(_cat_exp, streak=0)
+            st.session_state["_cat_login_exp_gained"] = _cat_exp
+            _login_bonus_applied = True
+        # ユニコーンペット: 1日1回HP全回復（自動）
+        if _bonuses.get("unicorn_daily_hp") and _p_ref.get("unicorn_heal_used") != _today_str:
+            _p_ref["hp"] = _p_ref.get("hp_max", 100)
+            _p_ref["unicorn_heal_used"] = _today_str
+            st.session_state["_unicorn_healed_today"] = True
+            _login_bonus_applied = True
+        if _login_bonus_applied:
+            _uname = st.session_state.get("username", "")
+            if _uname:
+                save_player(_p_ref, _uname)
 
 
 def render_sidebar():
@@ -220,6 +245,9 @@ def render_sidebar():
         st.markdown('<div class="hp-bar-outer"><div class="hp-bar-inner" style="width:' + str(round(hp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
         st.markdown('<div class="stat-label">' + t("exp", lang) + ' ' + str(p["exp"]) + ' / ' + str(p["exp_to_next"]) + '</div>', unsafe_allow_html=True)
         st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
+        _bhtml = sidebar_bonus_html(p)
+        if _bhtml:
+            st.markdown(_bhtml, unsafe_allow_html=True)
         st.markdown("---")
 
 render_sidebar()
@@ -267,6 +295,24 @@ if all_just_complete:
 elif newly_completed_ids:
     _confetti_component(mega=False)
 
+# ペットログインボーナス通知（ネコEXP / ユニコーンHP回復）
+_cat_exp_gained = st.session_state.pop("_cat_login_exp_gained", 0)
+if _cat_exp_gained:
+    st.markdown(
+        f'<div style="background:linear-gradient(135deg,#1a1a00,#2a2a00);'
+        f'border:1px solid #aaaa44;border-radius:10px;padding:10px 16px;'
+        f'margin-bottom:8px;text-align:center;">'
+        f'<span style="color:#ffee88;">🐱 ネコペット: ログインEXP +{_cat_exp_gained} 獲得！</span>'
+        f'</div>', unsafe_allow_html=True)
+_unicorn_healed = st.session_state.pop("_unicorn_healed_today", False)
+if _unicorn_healed:
+    st.markdown(
+        '<div style="background:linear-gradient(135deg,#1a001a,#2a002a);'
+        'border:1px solid #cc88ff;border-radius:10px;padding:10px 16px;'
+        'margin-bottom:8px;text-align:center;">'
+        '<span style="color:#eeccff;">🦄 ユニコーンペット: HP全回復！（本日1回のみ）</span>'
+        '</div>', unsafe_allow_html=True)
+
 # ─── ログインボーナス ───────────────────────────────────────
 st.markdown(
     '<div style="font-size:1.1rem;font-weight:700;color:#ffe066;margin-bottom:12px;">🔥 連続ログインボーナス</div>',
@@ -307,11 +353,16 @@ for col, days in zip(login_cols, LOGIN_BONUS_THRESHOLDS):
 just_claimed = st.session_state.get("_daily_just_claimed")
 if just_claimed:
     del st.session_state["_daily_just_claimed"]
+    _jc_exp = st.session_state.pop("_daily_claim_exp", 50)
+    _jc_bonus_pct = st.session_state.pop("_daily_claim_exp_bonus_pct", 0)
+    _jc_exp_text = f" ＋ {_jc_exp} EXP"
+    if _jc_bonus_pct > 0:
+        _jc_exp_text += f" (📿+{_jc_bonus_pct}%)"
     components.html(
         _sound_script(_QUEST_WAV)
         + '<div style="font-size:1.05rem;color:#ffe066;text-align:center;'
         'font-family:sans-serif;padding:6px;background:#1a1a2e;border-radius:8px;">'
-        + '✨ ' + just_claimed + ' をゲット！ ✨'
+        + '✨ ' + just_claimed + ' をゲット！' + _jc_exp_text + ' ✨'
         + '</div>',
         height=48, scrolling=False)
 
@@ -371,6 +422,14 @@ for i, (qdef, q) in enumerate(zip(QUEST_DEFS, quests)):
         if st.button("🎁 報酬を受け取る", key=f"claim_quest_{i}", use_container_width=True, type="primary"):
             rewarded = claim_quest_reward(p, q["id"])
             if rewarded:
+                # ネックレスボーナス: デイリー報酬EXPボーナス
+                _dq_bonuses = get_all_bonuses(p)
+                _daily_exp_bonus_pct = _dq_bonuses.get("daily_exp_bonus_pct", 0)
+                _base_claim_exp = 50
+                _claim_exp = max(_base_claim_exp, int(_base_claim_exp * (1 + _daily_exp_bonus_pct / 100)))
+                PlayerManager(p).gain_exp(_claim_exp, streak=0)
+                st.session_state["_daily_claim_exp"] = _claim_exp
+                st.session_state["_daily_claim_exp_bonus_pct"] = _daily_exp_bonus_pct
                 save_player(p, username)
                 st.session_state["_daily_just_claimed"] = ITEMS[rewarded]["name"]
                 st.rerun()
@@ -415,12 +474,16 @@ else:
             bg = "linear-gradient(135deg,#2a2000,#3a3000)" if is_equipped else "linear-gradient(135deg,#1e1e3a,#2a2a4a)"
             tier_stars = "★" * item["tier"] + "☆" * (3 - item["tier"])
             with col:
+                from core.equipment_bonus import get_bonus_description as _gbd
+                _bonus_desc = _gbd(iid)
+                _bonus_line = f'<div style="font-size:.58rem;color:#88ccaa;margin-top:2px;">{_bonus_desc}</div>' if _bonus_desc else ""
                 st.markdown(
                     f'<div style="background:{bg};border:2px solid {border};border-radius:10px;'
                     f'padding:10px 6px;text-align:center;margin-bottom:4px;">'
                     f'<div style="font-size:1.6rem;">{item["icon"]}</div>'
                     f'<div style="font-size:.65rem;color:#ffe066;margin-top:4px;">{item["name"]}</div>'
                     f'<div style="font-size:.6rem;color:#aa8800;">{tier_stars}</div>'
+                    + _bonus_line +
                     f'</div>', unsafe_allow_html=True)
                 if is_equipped:
                     if st.button("外す", key=f"unequip_{slot}_{iid}", use_container_width=True):

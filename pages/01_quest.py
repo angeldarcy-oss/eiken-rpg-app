@@ -20,7 +20,9 @@ from core.monsters import get_monster_for_grade, get_weekly_boss, calc_player_da
 from core.equipment import ITEMS as _EQUIP_ITEMS, BOSS_RARE_DROPS as _BOSS_RARE_DROPS
 from core.pets import get_random_egg, add_egg, update_hatch_gauge, get_pet_exp_bonus, pet_sidebar_html, PET_DEFS as _PET_DEFS
 from core.titles import evaluate_titles, title_badge_html, _TITLE_MAP as _TITLES_MAP
+from core.equipment_bonus import get_all_bonuses, sidebar_bonus_html
 import random
+from datetime import date as _date
 
 st.set_page_config(page_title="クエスト", page_icon="🗡️", layout="centered", initial_sidebar_state="expanded")
 
@@ -215,6 +217,9 @@ def render_sidebar():
         st.markdown('<div class="hp-bar-outer"><div class="hp-bar-inner" style="width:' + str(round(hp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
         st.markdown('<div class="stat-label">' + t("exp", lang) + ' ' + str(p["exp"]) + ' / ' + str(p["exp_to_next"]) + '</div>', unsafe_allow_html=True)
         st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
+        _bhtml = sidebar_bonus_html(p)
+        if _bhtml:
+            st.markdown(_bhtml, unsafe_allow_html=True)
         st.markdown("---")
         best = p.get("best_streak", p.get("max_streak", 0))
         boss_def = p.get("boss_defeats", 0)
@@ -278,15 +283,33 @@ def apply_correct(result, question=None):
     was_zero = (pm.hp == 0)
     streak = pm.increment_streak()
     st.session_state.streak = streak
-    # ペットEXPボーナスを適用
+
+    # 装備・ペットボーナス取得
+    bonuses = get_all_bonuses(p)
+    _weapon_bonus_pct = bonuses.get("exp_bonus_pct", 0)
+    _hat_bonus_pct = bonuses.get("streak_bonus_pct", 0)
+    _mult = streak_multiplier(streak)
+
+    # EXP計算：ペット + 武器 + 帽子ストリーク倍率追加
     _pet_bonus = get_pet_exp_bonus(p)
-    _base_exp = max(1, int(result.exp_gained * (1 + _pet_bonus)))
+    _hat_factor = (1 + _hat_bonus_pct / 100) if (_hat_bonus_pct > 0 and _mult > 1.0) else 1.0
+    _base_exp = max(1, int(result.exp_gained * (1 + _pet_bonus + _weapon_bonus_pct / 100) * _hat_factor))
     gain = pm.gain_exp(base_exp=_base_exp, streak=streak)
     st.session_state.last_gain_result = gain
     st.session_state.total_correct += 1
     st.session_state.session_correct += 1
     if was_zero and not gain.leveled_up:
         pm.heal(10)
+
+    # スライムペット: 正解ごとHP+1
+    _slime_heal = bonuses.get("slime_hp_per_correct", 0)
+    if _slime_heal > 0:
+        pm.heal(_slime_heal)
+
+    # 通知用にボーナス情報を保存
+    st.session_state["_last_weapon_bonus_pct"] = _weapon_bonus_pct
+    st.session_state["_last_hat_bonus_pct"] = _hat_bonus_pct if _mult > 1.0 else 0
+    st.session_state["_last_slime_heal"] = _slime_heal
 
     # 週間統計 & ベストストリーク更新
     p["weekly_correct"] = p.get("weekly_correct", 0) + 1
@@ -299,9 +322,13 @@ def apply_correct(result, question=None):
     else:
         st.session_state.pop("_new_best_streak", None)
 
-    # モンスターバトル：ダメージ計算
+    # モンスターバトル：ダメージ計算（ドラゴンはボス戦でダメージ+30%）
     _diff = getattr(question, "difficulty", 1) if question else 1
+    _is_boss = st.session_state.get("battle_boss_active", False)
     _dmg = calc_player_damage(_diff)
+    _boss_dmg_bonus = bonuses.get("boss_damage_pct", 0)
+    if _is_boss and _boss_dmg_bonus > 0:
+        _dmg = int(_dmg * (1 + _boss_dmg_bonus / 100))
     st.session_state.battle_damage_this_turn = _dmg
     _cur_hp = st.session_state.get("battle_monster_hp", 0)
     _new_hp = max(0, _cur_hp - _dmg)
@@ -309,6 +336,13 @@ def apply_correct(result, question=None):
     if _new_hp <= 0 and _cur_hp > 0:
         st.session_state.battle_monster_just_defeated = True
         st.session_state.battle_monsters_defeated = st.session_state.get("battle_monsters_defeated", 0) + 1
+
+        # マントボーナス: モンスター撃破後HP回復
+        _cloak_heal = bonuses.get("hp_recovery", 0)
+        if _cloak_heal > 0:
+            pm.heal(_cloak_heal)
+        st.session_state["_last_cloak_heal"] = _cloak_heal
+
         if st.session_state.get("battle_boss_active"):
             st.session_state.battle_boss_active = False
             st.session_state.battle_boss_defeated = True
@@ -329,7 +363,11 @@ def apply_correct(result, question=None):
                 st.session_state.pop("_boss_egg_drop", None)
         else:
             _monster = st.session_state.get("battle_monster")
-            if _monster and random.random() < _monster.get("drop_rate", 0.2):
+            # 指輪ボーナス: ドロップ率アップ
+            _drop_bonus_pct = bonuses.get("drop_bonus_pct", 0)
+            _base_rate = _monster.get("drop_rate", 0.2) if _monster else 0.2
+            _final_rate = min(0.9, _base_rate * (1 + _drop_bonus_pct / 100)) if _drop_bonus_pct > 0 else _base_rate
+            if _monster and random.random() < _final_rate:
                 _drop = random.choice(_monster.get("drop_items", []))
                 p.setdefault("inventory", [])
                 if _drop not in p["inventory"]:
@@ -339,6 +377,7 @@ def apply_correct(result, question=None):
                 st.session_state.battle_drop_item = None
     else:
         st.session_state.battle_monster_just_defeated = False
+        st.session_state["_last_cloak_heal"] = 0
 
     # デイリークエスト進捗（苦手単語数を渡してターゲットを自動調整）
     engine = st.session_state.get("engine")
@@ -408,7 +447,26 @@ def apply_correct(result, question=None):
 def apply_wrong(result):
     p = st.session_state.player
     pm = PlayerManager(p)
-    pm.take_damage(result.hp_damage)
+
+    # 防具ボーナス: ダメージ軽減
+    bonuses = get_all_bonuses(p)
+    _reduction_pct = bonuses.get("hp_reduction_pct", 0)
+    _actual_damage = max(1, int(result.hp_damage * (1 - _reduction_pct / 100))) if _reduction_pct > 0 else result.hp_damage
+    dmg_result = pm.take_damage(_actual_damage)
+
+    # フェニックスペット: HP0で1回復活（HP50%で）
+    _today_str = _date.today().isoformat()
+    _revived = False
+    if dmg_result["is_ko"] and bonuses.get("phoenix_revival") and p.get("phoenix_revival_used") != _today_str:
+        _revival_hp = max(1, int(p["hp_max"] * bonuses.get("phoenix_revival_hp_pct", 50) / 100))
+        p["hp"] = _revival_hp
+        p["phoenix_revival_used"] = _today_str
+        _revived = True
+
+    st.session_state["_last_damage_reduction_pct"] = _reduction_pct
+    st.session_state["_last_actual_damage"] = _actual_damage
+    st.session_state["_phoenix_just_revived"] = _revived
+
     pm.reset_streak()
     st.session_state.streak = 0
     st.session_state.last_gain_result = None
@@ -900,6 +958,26 @@ if st.session_state.answered and st.session_state.last_result:
         exp_show = str(gain.exp_gained_final) if gain else str(result.exp_gained)
         hint_html = '<div style="font-size:.82rem;color:#aaaa88;margin-top:6px;">💡 ' + q.hint + '</div>' if q.hint else ""
         ex2 = ('<br>' + q.example_ja) if q.example_ja else ''
+        # 装備ボーナス通知行
+        _eq_bonus_lines: list[str] = []
+        _wb = st.session_state.get("_last_weapon_bonus_pct", 0)
+        _hb = st.session_state.get("_last_hat_bonus_pct", 0)
+        _sl = st.session_state.get("_last_slime_heal", 0)
+        _cl = st.session_state.get("_last_cloak_heal", 0)
+        if _wb > 0:
+            _eq_bonus_lines.append(f"⚔️ 武器ボーナス +{_wb}% EXP")
+        if _hb > 0:
+            _eq_bonus_lines.append(f"🎩 帽子ストリーク +{_hb}%")
+        if _sl > 0:
+            _eq_bonus_lines.append(f"💧 スライム HP+{_sl}")
+        if _cl > 0:
+            _eq_bonus_lines.append(f"🧥 マント HP+{_cl}回復")
+        _eq_bonus_html = ""
+        if _eq_bonus_lines:
+            _eq_bonus_html = (
+                '<div style="font-size:.72rem;color:#88ccaa;margin-top:8px;border-top:1px solid #2a5a2a;padding-top:6px;">'
+                + " &nbsp;|&nbsp; ".join(_eq_bonus_lines) + '</div>'
+            )
         st.markdown(
             '<div style="background:linear-gradient(135deg,#0a2a0a,#1a4a1a);border:1px solid #2a7a2a;border-radius:12px;padding:20px 24px;margin:16px 0;">'
             + levelup_html +
@@ -907,21 +985,39 @@ if st.session_state.answered and st.session_state.last_result:
             + t("correct_msg", lang).format(exp=exp_show, bonus=bonus_html) + '</div>'
             '<div style="color:#cceebb;font-size:.92rem;margin-bottom:8px;"><b style="color:#fff;">' + q.word + '</b> = ' + q.meaning_ja + '</div>'
             '<div style="font-size:.88rem;color:#aaccaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + ex2 + '</div>'
-            + hint_html +
+            + hint_html + _eq_bonus_html +
             '</div>', unsafe_allow_html=True)
 
     else:
         hint_html = '<div style="font-size:.82rem;color:#aaaa88;margin-top:6px;">💡 ' + q.hint + '</div>' if q.hint else ""
         ex2 = ('<br>' + q.example_ja) if q.example_ja else ''
+        _act_dmg = st.session_state.get("_last_actual_damage", result.hp_damage)
+        _red_pct = st.session_state.get("_last_damage_reduction_pct", 0)
+        _dmg_note = ""
+        if _red_pct > 0:
+            _dmg_note = (
+                '<div style="font-size:.72rem;color:#ffaaaa;margin-top:8px;'
+                'border-top:1px solid #5a2a2a;padding-top:6px;">'
+                f'🛡️ 防具軽減 -{_red_pct}%（元ダメージ: {result.hp_damage}HP → 実ダメージ: {_act_dmg}HP）</div>'
+            )
         st.markdown(
             '<div style="background:linear-gradient(135deg,#2a0a0a,#4a1a1a);border:1px solid #7a2a2a;border-radius:12px;padding:20px 24px;margin:16px 0;">'
             '<div style="font-size:1.1rem;font-weight:700;color:#ff8080;margin-bottom:10px;">'
-            + t("wrong_msg", lang).format(hp=result.hp_damage) + '</div>'
+            + t("wrong_msg", lang).format(hp=_act_dmg) + '</div>'
             '<div style="color:#ffcccc;font-size:.92rem;margin-bottom:8px;">' + t("wrong_answer_was", lang) + ' <b style="color:#ffe066;font-size:1.1rem;">' + q.correct_answer + '</b></div>'
             '<div style="color:#ddbbbb;font-size:.88rem;margin-bottom:8px;">' + t("your_answer", lang) + '<span style="color:#ff8080;">' + result.selected_answer + '</span></div>'
             '<div style="font-size:.88rem;color:#ccaaaa;font-style:italic;margin-top:8px;">📖 ' + q.example_en + ex2 + '</div>'
-            + hint_html +
+            + hint_html + _dmg_note +
             '</div>', unsafe_allow_html=True)
+        # フェニックス復活通知
+        if st.session_state.get("_phoenix_just_revived"):
+            st.markdown(
+                '<div style="background:linear-gradient(135deg,#2a0a00,#4a1a00);'
+                'border:2px solid #ff6600;border-radius:12px;padding:12px 20px;'
+                'text-align:center;margin-bottom:8px;">'
+                '<div style="font-size:1.1rem;font-weight:900;color:#ff8800;">🔥 フェニックスが復活させた！</div>'
+                '<div style="font-size:.9rem;color:#ffcc88;margin-top:4px;">HP 50%で復活！今日はあと1回のみ</div>'
+                '</div>', unsafe_allow_html=True)
 
         if st.session_state.ai_explanation is None:
             if st.button(t("ai_explain_btn", lang), use_container_width=True):

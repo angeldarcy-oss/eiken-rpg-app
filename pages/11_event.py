@@ -13,6 +13,7 @@ from core.player import PlayerManager
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html, CHARACTERS
 from core.mobile_css import MOBILE_CSS
+from core.equipment_bonus import sidebar_bonus_html
 from core.quiz_engine import QuizEngine
 from core.monsters import calc_player_damage
 from core.equipment import ITEMS as _EQUIP_ITEMS
@@ -128,6 +129,9 @@ def render_sidebar():
         st.markdown(
             '<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:'
             + str(round(exp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
+        _bhtml = sidebar_bonus_html(p)
+        if _bhtml:
+            st.markdown(_bhtml, unsafe_allow_html=True)
         st.markdown("---")
         if current_season:
             theme = current_season.get("theme", {})

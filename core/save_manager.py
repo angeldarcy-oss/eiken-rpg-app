@@ -237,6 +237,8 @@ def _validate_and_fill(player: dict) -> dict:
         player["equipment"].setdefault(slot, None)
     if "last_login" not in player.get("login_streak", {}):
         player["login_streak"] = {"last_login": "", "streak_days": 0, "claimed_milestones": []}
+    if "party_code" not in player:
+        player["party_code"] = ""
     return player
 
 

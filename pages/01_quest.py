@@ -225,6 +225,29 @@ def render_sidebar():
             '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang) +
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
+        # パーティーバトル中インジケーター
+        _pc = p.get("party_code", "")
+        if _pc:
+            try:
+                from core.party_manager import get_party as _gp
+                _pr = _gp(_pc)
+                if _pr and _pr.get("status") == "battling":
+                    _pbhp = _pr.get("boss_hp", 0)
+                    _pbmax = _pr.get("boss_hp_max", 1)
+                    _pbpct = round(max(0, _pbhp / _pbmax * 100), 1) if _pbmax else 0
+                    _pb_name = _pr.get("boss", {}).get("name", "BOSS")
+                    st.markdown(
+                        '<div style="background:linear-gradient(135deg,#1a0022,#2a0033);border:1px solid #cc44ff;'
+                        'border-radius:8px;padding:6px 10px;margin-bottom:8px;">'
+                        '<div style="font-size:.62rem;color:#cc88ff;margin-bottom:2px;">⚔️ パーティーバトル中</div>'
+                        '<div style="font-size:.8rem;color:#ff66cc;font-weight:700;margin-bottom:4px;">' + _pb_name + '</div>'
+                        '<div style="background:#2a0033;border-radius:4px;height:7px;overflow:hidden;">'
+                        '<div style="background:linear-gradient(90deg,#cc44ff,#ff66ff);width:' + str(_pbpct) + '%;height:100%;"></div>'
+                        '</div>'
+                        '<div style="font-size:.6rem;color:#bb88ff;margin-top:2px;">HP ' + str(_pbhp) + ' / ' + str(_pbmax) + '</div>'
+                        '</div>', unsafe_allow_html=True)
+            except Exception:
+                pass
         # ボス挑戦中インジケーター
         if st.session_state.get("battle_boss_active"):
             _boss = st.session_state.get("battle_monster", {})
@@ -363,6 +386,22 @@ def apply_correct(result, question=None):
     else:
         st.session_state.pop("_newly_unlocked_titles", None)
 
+    # パーティーバトル：正解がパーティーボスへのダメージになる
+    _party_code = p.get("party_code", "")
+    _uname = st.session_state.get("username", "")
+    if _party_code and _uname:
+        try:
+            from core.party_manager import deal_damage as _pd, get_party as _gpq
+            _pr = _gpq(_party_code)
+            if _pr and _pr.get("status") == "battling":
+                _updated_pr = _pd(_party_code, _uname, _dmg)
+                if _updated_pr and _updated_pr.get("status") == "completed":
+                    st.session_state["_party_boss_defeated"] = True
+                else:
+                    st.session_state.pop("_party_boss_defeated", None)
+        except Exception:
+            pass
+
 
 def apply_wrong(result):
     p = st.session_state.player
@@ -382,6 +421,7 @@ def load_next_question():
     st.session_state.pop("_newly_hatched_pets", None)
     st.session_state.pop("_newly_unlocked_titles", None)
     st.session_state.pop("_boss_egg_drop", None)
+    st.session_state.pop("_party_boss_defeated", None)
 
     # モンスターが倒されている場合、新モンスターを出現させる
     if st.session_state.get("battle_monster_hp", 1) <= 0:
@@ -969,6 +1009,19 @@ if st.session_state.answered and st.session_state.last_result:
             '<div style="font-size:1.1rem;color:#ffe066;margin-top:4px;font-weight:700;">'
             + _tdef.get("icon", "") + ' ' + _tdef.get("name", "") + '</div>'
             '<div style="font-size:.8rem;color:#cc9900;margin-top:2px;">' + _tdef.get("desc", "") + '</div>'
+            '</div>', unsafe_allow_html=True)
+
+    # ── パーティーボス撃破通知 ──────────────────────────────────
+    if st.session_state.get("_party_boss_defeated") and result.is_correct:
+        st.session_state.pop("_party_boss_defeated", None)
+        st.markdown(
+            '<div style="background:linear-gradient(135deg,#1a002a,#3a0055,#1a002a);'
+            'border:3px solid #cc44ff;border-radius:16px;padding:16px 24px;'
+            'text-align:center;margin-bottom:12px;">'
+            '<div style="font-size:1.8rem;font-weight:900;color:#cc44ff;'
+            'text-shadow:0 0 20px #aa22ff;">⚔️ パーティー勝利！</div>'
+            '<div style="font-size:.95rem;color:#dd88ff;margin-top:6px;">'
+            'パーティーボスを全員で倒した！パーティー画面で報酬を受け取ろう！</div>'
             '</div>', unsafe_allow_html=True)
 
     # ── 新記録通知 ──────────────────────────────────────────────

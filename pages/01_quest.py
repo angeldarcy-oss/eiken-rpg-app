@@ -25,12 +25,10 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .exp-bar-outer{background:#1a1500;border-radius:8px;height:14px;width:100%;margin:4px 0 12px;overflow:hidden;border:1px solid #5a4a00;}
 .exp-bar-inner{background:linear-gradient(90deg,#c8a000,#ffe066);height:100%;border-radius:8px;}
 .stat-label{font-size:11px;color:#aaaacc !important;}
-.quiz-card{background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:1px solid #3a3a6a;border-radius:16px;padding:28px 32px;margin-bottom:24px;}
+.quiz-card{background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:1px solid #3a3a6a;border-radius:16px;padding:28px 32px;margin-bottom:4px;}
 .word-display{font-size:3rem;font-weight:700;text-align:center;color:#ffe066;margin-bottom:6px;}
 .pos-badge{display:inline-block;background:#0f3460;color:#88aaff;font-size:.75rem;padding:2px 10px;border-radius:20px;border:1px solid #2244aa;margin-bottom:20px;}
 .progress-label{font-size:.82rem;color:#888;margin-bottom:4px;}
-.speak-link{color:#7788bb;cursor:pointer;font-size:.88rem;user-select:none;letter-spacing:.02em;transition:color .15s;}
-.speak-link:hover{color:#aabbee;}
 </style>""", unsafe_allow_html=True)
 
 
@@ -157,18 +155,6 @@ def render_sidebar():
             '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang) +
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
-        if p["hp"] <= 0:
-            st.error(t("hp0_msg", lang))
-        if st.button(t("save", lang), use_container_width=True):
-            save_player(st.session_state.player, st.session_state.get("username", ""))
-            st.success("セーブしました！" if lang == "ja" else "已儲存！")
-        with st.expander(t("dev_menu", lang)):
-            if st.button(t("reset_all", lang), use_container_width=True):
-                from core.save_manager import delete_save
-                delete_save(st.session_state.get("username", ""))
-                for key in list(st.session_state.keys()):
-                    del st.session_state[key]
-                st.rerun()
 
 render_sidebar()
 
@@ -287,25 +273,37 @@ bonus = ('<span style="background:#2a1a00;color:#ffe066;border:1px solid #5a3a00
          'padding:2px 8px;font-size:.75rem;margin-left:8px;">🔥 EXP x' + str(mult) + '</span>'
          if mult > 1.0 else "")
 
-audio_b64 = _get_audio_b64(q.word)
-audio_id = "qa-" + str(q.word_id)
-speak_html = ""
-if audio_b64:
-    speak_html = (
-        '<audio id="' + audio_id + '" src="data:audio/mp3;base64,' + audio_b64 + '"></audio>'
-        '<div style="text-align:center;margin-top:14px;">'
-        '<span class="speak-link" onclick="document.getElementById(&quot;' + audio_id + '&quot;).play()">'
-        '🔊 ' + q.word +
-        '</span></div>'
-    )
-
+# クイズカード（単語・品詞バッジ）
 st.markdown(
     '<div class="quiz-card">'
     '<div style="font-size:.9rem;color:#aaaacc;text-align:center;margin-bottom:20px;">' + t("quest_instruction", lang) + ' ' + diff_stars + bonus + '</div>'
     '<div class="word-display">' + q.word + '</div>'
     '<div style="text-align:center;"><span class="pos-badge">' + pos_ja + '</span></div>'
-    + speak_html +
     '</div>', unsafe_allow_html=True)
+
+# 発音ボタン：st.markdown は React レンダラー経由で onclick を除去するため
+# components.html（実 iframe）内に audio 要素とクリック要素を同居させる
+audio_b64 = _get_audio_b64(q.word)
+if audio_b64:
+    components.html(
+        '<style>'
+        'html,body{margin:0;padding:2px 0 6px;background:transparent;'
+        'text-align:center;overflow:hidden;}'
+        '.sl{color:#7788bb;cursor:pointer;font-size:.9rem;'
+        "font-family:'Noto Sans JP',Arial,sans-serif;user-select:none;}"
+        '.sl:hover{color:#aabbee;}'
+        '</style>'
+        '<script>'
+        'try{var f=window.frameElement;'
+        'f.style.background="transparent";'
+        'f.setAttribute("allowtransparency","true");}catch(e){}'
+        '</script>'
+        '<audio id="sa" src="data:audio/mp3;base64,' + audio_b64 + '"></audio>'
+        "<span class='sl' onclick=\"document.getElementById('sa').play()\">"
+        '🔊 ' + q.word +
+        '</span>',
+        height=34, scrolling=False
+    )
 
 if not st.session_state.answered:
     cols = st.columns(2)

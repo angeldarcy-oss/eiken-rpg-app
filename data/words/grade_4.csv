@@ -1,354 +1,354 @@
-word_id,word,meaning_ja,part_of_speech,example_en,example_ja,hint,difficulty
-g4_001,important,重要な,adj,This is an important decision.,これは重要な決断です。,import（輸入）と同じ語源。中に運ばれてくるほど価値がある,2
-g4_002,message,メッセージ,n,Please leave a message.,メッセージを残してください。,,2
-g4_003,exciting,わくわくする,adj,The game was very exciting.,その試合はとてもわくわくするものでした。,excite（興奮させる）＋ing,2
-g4_004,usually,たいてい,adv,I usually walk to school.,私はたいてい歩いて学校へ行きます。,usual（いつもの）＋ly,2
-g4_005,hobby,趣味,n,My hobby is playing the guitar.,私の趣味はギターを弾くことです。,,2
-g4_006,popular,人気のある,adj,This singer is very popular.,この歌手はとても人気があります。,ポピュラー音楽の「ポピュラー」,2
-g4_007,practice,練習する,v,I practice the piano every day.,私は毎日ピアノを練習します。,practical（実践的な）と同じ語源,2
-g4_008,delicious,おいしい,adj,This cake is really delicious.,このケーキは本当においしいです。,delice（喜び）が語源。喜びを与える味,2
-g4_009,museum,博物館,n,Let's go to the museum.,博物館へ行きましょう。,,2
-g4_010,send,送る,v,I will send you an email.,メールを送ります。,,2
-g4_011,season,季節,n,My favorite season is autumn.,私の好きな季節は秋です。,,2
-g4_012,arrive,到着する,v,The train will arrive at noon.,電車は正午に到着します。,a（方向）＋rive（川岸）→ 岸にたどり着く,3
-g4_013,another,別の,adj,Can I have another piece?,もう一切れもらえますか？,an＋other（別のもの）,2
-g4_014,foreign,外国の,adj,She studies foreign languages.,彼女は外国語を勉強しています。,フォーリナー（外国人）そのまま,3
-g4_015,environment,環境,n,We must protect the environment.,私たちは環境を守らなければなりません。,environ（取り囲む）が語源,3
-grade_4_0016,apple,リンゴ,n,I eat an apple every day.,私は毎日リンゴを食べます。,,1
-grade_4_0017,run,走る,v,I like to run in the park.,私は公園で走ることを好きです。,,1
-grade_4_0018,big,大きい,adj,This house is big.,この家は大きいです。,,1
-grade_4_0019,quickly,速く,adv,I can eat quickly.,私は速く食べることができます。,,2
-grade_4_0020,in,中で,prep,The book is in the box.,本は箱の中にあります。,,1
-grade_4_0021,dog,犬,n,I have a dog.,私は犬を飼っています。,,1
-grade_4_0022,read,読む,v,I like to read books.,私は本を読むことを好きです。,,1
-grade_4_0023,happy,幸せな,adj,I am happy today.,私は今日幸せです。,,1
-grade_4_0024,on,上に,prep,The book is on the table.,本は机の上にあります。,,1
-grade_4_0025,cat,猫,n,I have a cat.,私は猫を飼っています。,,1
-grade_4_0026,write,書く,v,I can write my name.,私は自分の名前を書くことができます。,,1
-grade_4_0027,little,小さい,adj,This house is little.,この家は小さいです。,,1
-grade_4_0028,at,に,prep,I am at home.,私は家にいます。,,1
-grade_4_0029,bird,鳥,n,I can see a bird.,私は鳥を見ることができます。,,1
-grade_4_0030,listen,聞く,v,I like to listen to music.,私は音楽を聞くことを好きです。,,1
-grade_4_0031,old,古い,adj,This book is old.,この本は古いです。,,1
-grade_4_0032,with,と,prep,I am with my friend.,私は友達と一緒です。,,1
-grade_4_0033,fish,魚,n,I like to eat fish.,私は魚を食べることを好きです。,,1
-grade_4_0034,look,見る,v,I can look at the picture.,私は絵を見ることができます。,,1
-grade_4_0035,new,新しい,adj,This book is new.,この本は新しいです。,,1
-grade_4_0036,from,から,prep,I am from Tokyo.,私は東京からです。,,1
-grade_4_0037,tree,木,n,I can see a tree.,私は木を見ることができます。,,1
-grade_4_0038,speak,話す,v,I can speak Japanese.,私は日本語を話すことができます。,,1
-grade_4_0039,long,長い,adj,This road is long.,この道は長いです。,,1
-grade_4_0040,under,下に,prep,The book is under the table.,本は机の下にあります。,,1
-grade_4_0041,house,家,n,I live in a house.,私は家に住んでいます。,,1
-grade_4_0042,eat,食べる,v,I like to eat sushi.,私は寿司を食べることを好きです。,,1
-grade_4_0043,high,高い,adj,This mountain is high.,この山は高いです。,,1
-grade_4_0044,to,に,prep,I am going to school.,私は学校に行きます。,,1
-grade_4_0045,car,車,n,I have a car.,私は車を所有しています。,,1
-grade_4_0046,play,遊ぶ,v,I like to play soccer.,私はサッカーを遊ぶことを好きです。,,1
-grade_4_0047,good,よい,adj,This food is good.,この食べ物はよいです。,,1
-grade_4_0048,above,上に,prep,The bird is above the tree.,鳥は木の上にあります。,,1
-grade_4_0049,school,学校,n,I go to school every day.,私は毎日学校に行きます。,,1
-grade_4_0050,go,行く,v,I am going to the park.,私は公園に行きます。,,1
-grade_4_0051,bad,悪い,adj,This food is bad.,この食べ物は悪いです。,,1
-grade_4_0052,between,間に,prep,The book is between the two chairs.,本は二つの椅子の間にあります。,,2
-grade_4_0053,friend,友達,n,I have a friend.,私は友達がいます。,,1
-grade_4_0054,swim,泳ぐ,v,I like to swim in the sea.,私は海で泳ぐことを好きです。,,1
-grade_4_0055,small,小さい,adj,This house is small.,この家は小さいです。,,1
-grade_4_0056,around,周りに,prep,The dog is running around the house.,犬は家の周りを走っています。,,2
-grade_4_0057,family,家族,n,I love my family.,私は私の家族を愛しています。,,1
-grade_4_0058,think,考える,v,I think I can do it.,私はそれができると思います。,,1
-grade_4_0059,fast,速い,adj,This car is fast.,この車は速いです。,,1
-grade_4_0060,across,横に,prep,The bridge is across the river.,橋は川の横にあります。,,2
-grade_4_0061,class,クラス,n,I have a class today.,私は今日クラスがあります。,,1
-grade_4_0062,walk,歩く,v,I like to walk in the park.,私は公園で歩くことを好きです。,,1
-grade_4_0063,simple,簡単な,adj,This problem is simple.,この問題は簡単です。,,2
-grade_4_0064,through,通って,prep,The river is flowing through the city.,川は市を通って流れています。,,2
-grade_4_0065,book,本,n,I like to read books.,私は本を読むことを好きです。,,1
-grade_4_0066,learn,学ぶ,v,I want to learn English.,私は英語を学びたいです。,,1
-grade_4_0067,easy,簡単な,adj,This test is easy.,この試験は簡単です。,,1
-grade_4_0068,without,なくして,prep,I can't live without my phone.,私は携帯電話なくして生きることができません。,,2
-grade_4_0069,pen,ペン,n,I use a pen to write.,私はペンを使用して書きます。,書くために使うもの,1
-grade_4_0070,pencil,鉛筆,n,I need a pencil for the test.,試験のために鉛筆が必要です。,消しゴムで消せるもの,1
-grade_4_0071,paper,紙,n,I need paper to draw.,私は絵を描くために紙が必要です。,書くものや絵を描くもの,1
-grade_4_0072,desk,机,n,I do my homework at my desk.,私は机で宿題をします。,勉強するときに使うもの,1
-grade_4_0073,chair,椅子,n,Please sit down in the chair.,椅子に座ってください。,座るもの,1
-grade_4_0074,table,テーブル,n,We eat dinner at the table.,私たちはテーブルで夕食を食べます。,食事をするもの,1
-grade_4_0075,window,窓,n,I can see the park from the window.,私は窓から公園が見えます。,光が入るもの,1
-grade_4_0076,door,ドア,n,Please close the door.,ドアを閉めてください。,入るために開くもの,1
-grade_4_0077,floor,床,n,The floor is made of wood.,床は木でできています。,立つもの,1
-grade_4_0078,wall,壁,n,The wall is painted white.,壁は白く塗られています。,部屋の周りを囲むもの,1
-grade_4_0079,ceiling,天井,n,The ceiling is very high.,天井はとても高いです。,頭の上のもの,1
-grade_4_0080,stair,階段,n,I climb the stair to go up.,私は階段を登って上へ行きます。,上へ行くためのもの,1
-grade_4_0081,elevator,エレベーター,n,I take the elevator to go up.,私はエレベーターで上へ行きます。,自動で上下するもの,2
-grade_4_0082,computer,コンピューター,n,I use a computer to study.,私はコンピューターを使用して勉強します。,計算する機械,2
-grade_4_0083,phone,電話,n,I call my friend on the phone.,私は電話で友達に電話します。,話すための機械,1
-grade_4_0084,music,音楽,n,I like listening to music.,私は音楽を聞くのが好きです。,楽しい音,1
-grade_4_0085,movie,映画,n,I watch a movie on TV.,私はテレビで映画を観ます。,動く絵,1
-grade_4_0086,game,ゲーム,n,I play a game with my friends.,私は友達とゲームをします。,楽しく遊ぶこと,1
-grade_4_0087,sport,スポーツ,n,I like playing sports.,私はスポーツを好きです。,体を動かす競技,1
-grade_4_0088,team,チーム,n,I am a member of the team.,私はチームの一員です。,一緒に活動するグループ,1
-grade_4_0089,win,勝つ,v,I want to win the game.,私はゲームに勝ちたいです。,勝利する,1
-grade_4_0090,lose,負ける,v,I don't want to lose the game.,私はゲームに負けたくありません。,敗北する,1
-grade_4_0091,try,努力する,v,I will try my best.,私は頑張ります。,努力する,1
-grade_4_0092,help,助ける,v,I will help you.,私はあなたを助けます。,手伝う,1
-grade_4_0093,sad,悲しい,adj,I am sad today.,私は今日悲しいです。,悲しく思っている,1
-grade_4_0094,hot,熱い,adj,The coffee is hot.,コーヒーは熱いです。,高温の,1
-grade_4_0095,cold,冷たい,adj,The water is cold.,水は冷たいです。,低温の,1
-grade_4_0096,slow,遅い,adj,The bus is slow.,バスは遅いです。,遅く動く,1
-grade_4_0097,slowly,遅く,adv,I will walk slowly.,私は遅く歩きます。,遅く行う,1
-grade_4_0098,well,よく,adv,I sing well.,私は歌をうまく歌います。,うまく行う,1
-grade_4_0099,badly,悪く,adv,I sing badly.,私は歌を下手く歌います。,うまく行かない,1
-grade_4_0100,up,上,prep,The ball is up in the air.,ボールは空の中にあります。,上方向,1
-grade_4_0101,down,下,prep,The ball is down on the ground.,ボールは地面にあります。,下方向,1
-grade_4_0102,left,左,prep,The door is on the left.,ドアは左側にあります。,左側,1
-grade_4_0103,right,右,prep,The door is on the right.,ドアは右側にあります。,右側,1
-grade_4_0104,cloud,雲,n,The cloud is white.,雲は白いです。,,1
-grade_4_0105,cloudy,曇り,adj,The weather is cloudy today.,今日の天気は曇りです。,,1
-grade_4_0106,sun,太陽,n,The sun is shining.,太陽が輝いています。,,1
-grade_4_0107,sunny,晴れ,adj,The weather is sunny today.,今日の天気は晴れです。,,1
-grade_4_0108,rain,雨,n,It's raining outside.,外は雨です。,,1
-grade_4_0109,rainy,雨天,adj,The weather is rainy today.,今日の天気は雨です。,,1
-grade_4_0110,wind,風,n,The wind is blowing.,風が吹いています。,,1
-grade_4_0111,windy,風の強い,adj,The weather is windy today.,今日の天気は風が強いです。,,1
-grade_4_0112,snow,雪,n,It's snowing outside.,外は雪です。,,1
-grade_4_0113,snowy,雪の,adj,The weather is snowy today.,今日の天気は雪です。,,1
-grade_4_0114,mountain,山,n,The mountain is high.,山は高いです。,,1
-grade_4_0115,river,川,n,The river is wide.,川は広いです。,,1
-grade_4_0116,lake,湖,n,The lake is beautiful.,湖は美しいです。,,1
-grade_4_0117,island,島,n,The island is small.,島は小さいです。,,1
-grade_4_0118,beach,海岸,n,The beach is clean.,海岸はきれいです。,,1
-grade_4_0119,flower,花,n,The flower is beautiful.,花は美しいです。,,1
-grade_4_0120,grass,草,n,The grass is green.,草は緑です。,,1
-grade_4_0121,park,公園,n,The park is big.,公園は大きいです。,,1
-grade_4_0122,garden,庭,n,The garden is beautiful.,庭は美しいです。,,1
-grade_4_0123,farm,農場,n,The farm is big.,農場は大きいです。,,1
-grade_4_0124,cow,牛,n,The cow is big.,牛は大きいです。,,1
-grade_4_0125,pig,豚,n,The pig is small.,豚は小さいです。,,1
-grade_4_0126,sheep,羊,n,The sheep is white.,羊は白いです。,,1
-grade_4_0127,horse,馬,n,The horse is big.,馬は大きいです。,,1
-grade_4_0128,bicycle,自転車,n,The bicycle is fun.,自転車は楽しいです。,,2
-grade_4_0129,train,電車,n,The train is fast.,電車は速いです。,,2
-grade_4_0130,bus,バス,n,The bus is big.,バスは大きいです。,,2
-grade_4_0131,taxi,タクシー,n,The taxi is yellow.,タクシーは黄色です。,,2
-grade_4_0132,airport,空港,n,The airport is big.,空港は大きいです。,,2
-grade_4_0133,hotel,ホテル,n,The hotel is nice.,ホテルは素敵です。,,2
-grade_4_0134,restaurant,レストラン,n,The restaurant is delicious.,レストランはおいしいです。,,2
-grade_4_0135,store,店,n,The store is big.,店は大きいです。,,2
-grade_4_0136,hospital,病院,n,The hospital is clean.,病院はきれいです。,,2
-grade_4_0137,police,警察,n,The police are helpful.,警察は役に立ちます。,,2
-grade_4_0138,post,郵便,n,The post is slow.,郵便は遅いです。,,2
-grade_4_0139,bank,銀行,n,The bank is safe.,銀行は安全です。,,2
-grade_4_0140,library,図書館,n,The library is quiet.,図書館は静かです。,,2
-grade_4_0141,gym,体育館,n,The gym is big.,体育館は大きいです。,,2
-grade_4_0142,pool,プール,n,The pool is clean.,プールはきれいです。,,2
-grade_4_0143,jump,跳ぶ,v,I like to jump.,私は跳ぶことを好きです。,,1
-grade_4_0144,angry,怒った,adj,I am angry.,私は怒っています。,,2
-grade_4_0145,tired,疲れた,adj,I am tired.,私は疲れています。,,2
-grade_4_0146,hungry,空腹,adj,I am hungry.,私は空腹です。,,2
-grade_4_0147,thirsty,喉が渇いた,adj,I am thirsty.,私は喉が渇いています。,,2
-grade_4_0148,loudly,うるさく,adv,I can sing loudly.,私はうるさく歌うことができます。,,2
-grade_4_0149,quietly,静かに,adv,I can read quietly.,私は静かに読むことができます。,,2
-grade_4_0150,fun,楽しい,adj,This game is fun.,このゲームは楽しいです。,,2
-grade_4_0151,boring,面白くない,adj,This book is boring.,この本は面白くないです。,,2
-grade_4_0152,interesting,面白い,adj,This story is interesting.,この話は面白いです。,,2
-grade_4_0153,difficult,難しい,adj,This problem is difficult.,この問題は難しいです。,,2
-grade_4_0154,hard,大変,adj,This work is hard.,この仕事は大変です。,,1
-grade_4_0155,complicated,複雑,adj,This machine is complicated.,この機械は複雑です。,,3
-grade_4_0156,clear,明確,adj,The water is clear.,水は明確です。,,2
-grade_4_0157,clean,きれい,adj,The room is clean.,部屋はきれいです。,,1
-grade_4_0158,dirty,汚い,adj,The floor is dirty.,床は汚いです。,,1
-grade_4_0159,loud,うるさい,adj,The music is loud.,音楽はうるさいです。,,2
-grade_4_0160,quiet,静か,adj,The library is quiet.,図書館は静かです。,,2
-grade_4_0161,short,短い,adj,This movie is short.,この映画は短いです。,,1
-grade_4_0162,far,遠い,adj,The city is far.,都市は遠いです。,,2
-grade_4_0163,near,近い,adj,The park is near.,公園は近いです。,,2
-grade_4_0164,full,いっぱい,adj,The bottle is full.,瓶はいっぱいです。,,1
-grade_4_0165,empty,空,adj,The box is empty.,箱は空です。,,1
-grade_4_0166,warm,あたたかい,adj,The room is warm.,部屋はあたたかいです。,,2
-grade_4_0167,cool,涼しい,adj,The breeze is cool.,風は涼しいです。,,2
-grade_4_0168,strong,強い,adj,He is strong.,彼は強いです。,,2
-grade_4_0169,weak,弱い,adj,She is weak.,彼女は弱いです。,,2
-grade_4_0170,light,軽い,adj,The box is light.,箱は軽いです。,,2
-grade_4_0171,heavy,重い,adj,The book is heavy.,本は重いです。,,2
-grade_4_0172,mother,母,n,My mother is kind.,私の母は優しいです。,家族,1
-grade_4_0173,water,水,n,I drink water every day.,私は毎日水を飲みます。,飲み物,1
-grade_4_0174,baby,赤ちゃん,n,The baby is sleeping.,赤ちゃんは寝ています。,子供,1
-grade_4_0175,ball,ボール,n,I play with a ball.,私はボールで遊びます。,玩具,1
-grade_4_0176,brother,兄,n,My brother is tall.,私の兄は背が高いです。,家族,1
-grade_4_0177,father,父,n,My father is kind.,私の父は優しいです。,家族,1
-grade_4_0178,food,食べ物,n,I like Japanese food.,私は日本食が好きです。,料理,1
-grade_4_0179,girl,女の子,n,The girl is smiling.,女の子は笑っています。,子供,1
-grade_4_0180,man,男,n,The man is working.,男は働いています。,大人,1
-grade_4_0181,picture,絵,n,The picture is beautiful.,絵はきれいです。,芸術,1
-grade_4_0182,sister,妹,n,My sister is kind.,私の妹は優しいです。,家族,1
-grade_4_0183,son,息子,n,My son is tall.,私の息子は背が高いです。,家族,1
-grade_4_0184,star,星,n,The star is shining.,星は輝いています。,自然,1
-grade_4_0185,student,学生,n,I am a student.,私は学生です。,学校,1
-grade_4_0186,teacher,先生,n,My teacher is kind.,私の先生は優しいです。,学校,1
-grade_4_0187,woman,女,n,The woman is smiling.,女は笑っています。,大人,1
-grade_4_0188,work,働く,v,I will work tomorrow.,私は明日働きます。,仕事,1
-grade_4_0189,yellow,黄色,adj,The sun is yellow.,太陽は黄色です。,色,1
-grade_4_0190,black,黒,adj,The cat is black.,猫は黒です。,色,1
-grade_4_0191,white,白,adj,The cloud is white.,雲は白いです。,色,1
-grade_4_0192,red,赤,adj,The apple is red.,リンゴは赤です。,色,1
-grade_4_0193,blue,青,adj,The sky is blue.,空は青いです。,色,1
-grade_4_0194,green,緑,adj,The tree is green.,木は緑です。,色,1
-grade_4_0195,dance,踊る,v,I will dance at the party.,私はパーティーで踊ります。,楽しみ,1
-grade_4_0196,sing,歌う,v,I will sing a song.,私は歌を歌います。,楽しみ,1
-grade_4_0197,laugh,笑う,v,I will laugh at the joke.,私は冗談で笑います。,楽しみ,1
-grade_4_0198,cry,泣く,v,I will cry if I am sad.,私は悲しいときに泣きます。,気持ち,1
-grade_4_0199,sleep,眠る,v,I will sleep at night.,私は夜に眠ります。,生活,1
-grade_4_0200,birthday,誕生日,n,My birthday is in July.,私の誕生日は7月です。,記念日,2
-grade_4_0201,Christmas,クリスマス,n,I love celebrating Christmas.,私はクリスマスを祝うことを好きです。,祝日,2
-grade_4_0202,telephone,電話,n,I need to use the telephone.,私は電話を使う必要があります。,通信,2
-grade_4_0203,television,テレビ,n,I like watching television.,私はテレビを見ることを好きです。,娯楽,2
-grade_4_0204,camera,カメラ,n,I like taking pictures with my camera.,私はカメラで写真を撮ることを好きです。,機械,2
-grade_4_0205,guitar,ギター,n,I like playing the guitar.,私はギターを弾くことを好きです。,楽器,2
-grade_4_0206,young,若い,adj,This person is very young.,この人はとても若いです。,年齢,1
-grade_4_0207,excited,興奮した,adj,I am very excited today.,私は今日とても興奮しています。,感情,2
-grade_4_0208,bored,退屈した,adj,I am very bored today.,私は今日とても退屈しています。,感情,2
-grade_4_0209,bag,鞄,n,I forgot my bag at home.,私は鞄を家に忘れた。,,1
-grade_4_0210,box,箱,n,I have a box to store things.,私は物を入れる箱があります。,container,1
-grade_4_0211,travel,旅行,v,I want to travel around the world.,私は世界中を旅行したいです。,adventure,2
-grade_4_0212,language,言語,n,I am learning a new language.,私は新しい言語を学んでいます。,communication,2
-grade_4_0213,culture,文化,n,I am interested in different cultures.,私はさまざまな文化に興味があります。,society,2
-grade_4_0214,history,歴史,n,I like studying history.,私は歴史を学ぶのが好きです。,past,2
-grade_4_0215,science,科学,n,I am interested in science.,私は科学に興味があります。,knowledge,2
-grade_4_0216,technology,技術,n,I like learning about new technology.,私は新しい技術について学ぶのが好きです。,innovation,3
-grade_4_0217,economy,経済,n,The economy is important for a country.,経済は国にとって重要です。,finance,3
-grade_4_0218,society,社会,n,We are all part of society.,私たちはみんな社会の一員です。,community,3
-grade_4_0219,government,政府,n,The government makes laws for the country.,政府は国に法律を作ります。,politics,3
-grade_4_0220,education,教育,n,Education is important for our future.,教育は私たちの未来にとって重要です。,learning,3
-grade_4_0221,health,健康,n,Taking care of our health is important.,私たちの健康を大切にすることは重要です。,wellness,3
-grade_4_0222,moon,月,n,The moon is full tonight.,今夜は満月です。,heavenly body,1
-grade_4_0223,butterfly,蝶,n,The butterfly is flying around the flower.,蝶は花の周りを飛んでいます。,insect,2
-grade_4_0224,rest,休む,v,I need to rest after a long day.,長い一日後には休む必要があります。,action,1
-grade_4_0225,dream,夢を見る,v,I had a nice dream last night.,昨夜は素敵な夢を見ました。,action,2
-grade_4_0226,cozy,心地よい,adj,The cozy room makes me feel relaxed.,心地よい部屋は私をリラックスさせます。,feeling,2
-grade_4_0227,quick,速い,adj,The quick runner finished the race first.,速いランナーはレースを最初に終えました。,speed,1
-grade_4_0228,summer,夏,n,I like summer.,私は夏が好きです。,,1
-grade_4_0229,winter,冬,n,I like winter.,私は冬が好きです。,,1
-grade_4_0230,spring,春,n,I like spring.,私は春が好きです。,,1
-grade_4_0231,autumn,秋,n,I like autumn.,私は秋が好きです。,,1
-grade_4_0232,station,駅,n,I like to take the train.,私は電車に乗ることが好きです。,,2
-grade_4_0233,friendship,友情,n,I value my friendships.,私は友情を大切にします。,,3
-grade_4_0234,happiness,幸せ,n,I am seeking happiness.,私は幸せを求めています。,,3
-grade_4_0235,sorrow,悲しみ,n,I feel sorrow.,私は悲しみを感じます。,,3
-grade_4_0236,joy,喜び,n,I feel joy.,私は喜びを感じます。,,3
-grade_4_0237,love,愛,n,I love my family.,私は私の家族を愛しています。,,2
-grade_4_0238,peace,平和,n,I wish for peace.,私は平和を願っています。,,3
-grade_4_0239,freedom,自由,n,I value my freedom.,私は私の自由を大切にします。,,3
-grade_4_0240,hope,希望,n,I have hope for the future.,私は将来に希望を持っています。,,3
-grade_4_0241,grateful,感謝する,adj,I am grateful for my family.,私は家族に感謝している。,,3
-grade_4_0242,careful,注意深い,adj,I am careful when I drive.,私は運転するときに注意深い。,,2
-grade_4_0243,patient,我慢強い,adj,My mother is patient.,私の母は我慢強い。,,2
-grade_4_0244,kindness,親切,n,Kindness is important.,親切は大切だ。,,3
-grade_4_0245,generous,おごる,adj,My father is generous.,私の父はおごる。,,3
-grade_4_0246,thankful,感謝する,adj,I am thankful for my friends.,私は友達に感謝している。,,3
-grade_4_0247,adventure,冒険,n,I love adventure.,私は冒険が好きだ。,,3
-grade_4_0248,brave,勇気のある,adj,My brother is brave.,私の兄は勇気のある。,,2
-grade_4_0249,courageous,勇気ある,adj,The firefighter is courageous.,消防士は勇気ある。,,3
-grade_4_0250,confident,自信のある,adj,I am confident in my abilities.,私は自分の能力に自信がある。,,3
-grade_4_0251,determined,決心した,adj,I am determined to succeed.,私は成功することを決心した。,,3
-grade_4_0252,creative,創造的な,adj,My sister is creative.,私の妹は創造的な。,,3
-grade_4_0253,imaginative,想像力のある,adj,The author is imaginative.,著者は想像力のある。,,3
-grade_4_0254,inspirational,感動的な,adj,The speech was inspirational.,スピーチは感動的なものだった。,,3
-grade_4_0255,motivational,動機づける,adj,The coach is motivational.,コーチは動機づける。,,3
-grade_4_0256,optimistic,楽観的な,adj,I am optimistic about the future.,私は将来について楽観的な。,,3
-grade_4_0257,positive,ポジティブ,adj,I try to be positive.,私はポジティブであることを目指している。,,2
-grade_4_0258,thoughtful,思慮深い,adj,My mother is thoughtful.,私の母は思慮深い。,,3
-grade_4_0259,understanding,理解のある,adj,My father is understanding.,私の父は理解のある。,,3
-grade_4_0260,wise,賢い,adj,The old man is wise.,老人は賢い。,,2
-grade_4_0261,painting,絵,n,I like painting.,私は絵を描くことが好きだ。,,2
-grade_4_0262,photograph,写真,n,I took a photograph.,私は写真を撮った。,,2
-grade_4_0263,forest,森,n,I like the forest.,私は森が好きだ。,,2
-grade_4_0264,drink,飲む,v,I like to drink tea.,私はお茶を飲むことが好きです。,ドリンク,1
-grade_4_0265,watch,見る,v,I like to watch TV.,私はテレビを見ることが好きです。,ウォッチ,1
-grade_4_0266,and,と,conj,I like apples and bananas.,私はリンゴとバナナが好きです。,アンド,1
-grade_4_0267,but,しかし,conj,"I like apples, but I don't like bananas.",私はリンゴが好きですが、バナナは好きではありません。,バット,1
-grade_4_0268,or,または,conj,Do you like apples or bananas?,あなたはリンゴが好きですか、バナナが好きですか?,オア,1
-grade_4_0269,so,ので,adv,"I'm tired, so I'll sleep.",私は疲れているので、寝ます。,ソー,1
-grade_4_0270,very,とても,adv,I'm very happy.,私はとても幸せです。,ベリー,1
-grade_4_0271,now,今,adv,I'll eat now.,私は今食べます。,ナウ,1
-grade_4_0272,later,後で,adv,I'll eat later.,私は後で食べます。,レイター,1
-grade_4_0273,yesterday,昨日,adv,I ate yesterday.,私は昨日食べました。,イエスタデイ,1
-grade_4_0274,tomorrow,明日,adv,I'll eat tomorrow.,私は明日食べます。,トゥモロー,1
-grade_4_0275,here,ここ,adv,I'm here.,私はここにいます。,ヒア,1
-grade_4_0276,there,そこ,adv,I'll go there.,私はそこに行きます。,ゼア,1
-grade_4_0277,everywhere,どこにでも,adv,I'll go everywhere.,私はどこにでも行きます。,エブリウェア,1
-grade_4_0278,nowhere,どこにも,adv,I'll go nowhere.,私はどこにも行きません。,ナウヘア,1
-grade_4_0279,somewhere,どこか,adv,I'll go somewhere.,私はどこかへ行きます。,サムウェア,1
-grade_4_0280,classroom,教室,n,I like my classroom.,私は私の教室が好きです。,school,1
-grade_4_0281,pencil case,鉛筆ケース,n,I have a new pencil case.,私は新しい鉛筆ケースを持っています。,stationery,1
-grade_4_0282,wake up,起きる,v,I wake up at 7 AM every morning.,私は毎朝7時に起きます。,daily routine,1
-grade_4_0283,sit,座る,v,Please sit down.,座ってください。,,1
-grade_4_0284,stand,立つ,v,Please stand up.,立ってください。,,1
-grade_4_0285,talk,話す,v,I want to talk to you.,あなたと話したいです。,,1
-grade_4_0286,home,家,n,I am going home.,私は家に帰ります。,,2
-grade_4_0287,night,夜,n,I like to sleep at night.,私は夜に寝るのが好きです。,,2
-grade_4_0288,open,開く,v,Please open the door.,ドアを開けてください。,,2
-grade_4_0289,again,もう一度,adv,I want to try again.,私はもう一度挑戦したいです。,,3
-grade_4_0290,always,いつも,adv,I always eat breakfast.,私はいつも朝食を食べます。,,3
-grade_4_0291,because,なぜなら,prep,I am happy because I am with my friends.,私は幸せです。なぜなら私は友達と一緒だからです。,,3
-grade_4_0292,before,前に,prep,I need to eat before I go to the party.,私はパーティーに行く前に食べる必要があります。,,3
-grade_4_0293,however,しかし,adv,"I want to go to the party, however I am tired.",私はパーティーに行きたいですが、しかし私は疲れています。,,3
-grade_4_0294,instead,その代わりに,adv,I will go to the movies instead of studying.,私は勉強する代わりに映画に行きます。,,3
-grade_4_0295,maybe,もしかしたら,adv,Maybe I will go to the party.,もしかしたら私はパーティーに行くかもしれません。,,3
-grade_4_0296,never,決して,adv,I never eat breakfast.,私は決して朝食を食べない。,,3
-grade_4_0297,often,よく,adv,I often go to the gym.,私はよくジムに行きます。,,3
-grade_4_0298,sometimes,時々,adv,I sometimes eat dinner at home.,私は時々家で夕食を食べます。,,3
-grade_4_0299,still,まだ,adv,I am still hungry.,私はまだ空腹です。,,3
-grade_4_0300,until,まで,prep,I will wait until you come.,私はあなたが来るまで待ちます。,,3
-grade_4_0301,close,閉じる,v,Please close the door.,ドアを閉じてください。,動作,1
-grade_4_0302,boat,船,n,I like to sail on a boat.,私は船に乗ることを好みます。,交通機関,1
-grade_4_0303,plane,飛行機,n,I take a plane to travel.,私は飛行機で旅行します。,交通機関,1
-grade_4_0304,shop,店,n,I like to shop on weekends.,私は週末に買い物をすることを好みます。,施設,1
-grade_4_0305,fire,火,n,The fire is burning.,火は燃えています。,自然,1
-grade_4_0306,air,空気,n,I breathe in the air.,私は空気を吸います。,自然,1
-grade_4_0307,earth,地球,n,The earth is our home.,地球は私たちの家です。,自然,1
-grade_4_0308,sky,空,n,The sky is blue.,空は青いです。,自然,1
-grade_4_0309,sea,海,n,I like to swim in the sea.,私は海で泳ぐことを好みます。,自然,1
-grade_4_0310,desert,砂漠,n,I have never been to the desert.,私は砂漠に行ったことがありません。,自然,1
-grade_4_0311,city,都市,n,I live in a city.,私は都市に住んでいます。,都市,1
-grade_4_0312,town,町,n,I like to visit towns.,私は町を訪れることを好みます。,都市,1
-grade_4_0313,village,村,n,I like to visit villages.,私は村を訪れることを好みます。,都市,1
-grade_4_0314,country,国,n,I like to visit countries.,私は国を訪れることを好みます。,国家,1
-grade_4_0315,world,世界,n,I like to travel around the world.,私は世界を旅行することを好みます。,世界,1
-grade_4_0316,stone,石,n,The stone is hard.,石は硬いです。,地面の固いもの,1
-grade_4_0317,ice,氷,n,The ice is cold.,氷は冷たいです。,冷たい固いもの,1
-grade_4_0318,thunder,雷,n,The thunder is loud.,雷はうるさいです。,空の大きい音,1
-grade_4_0319,lightning,電光,n,The lightning is bright.,電光は明るいです。,空の光,1
-grade_4_0320,storm,嵐,n,The storm is coming.,嵐が来ています。,天気の悪いこと,1
-grade_4_0321,weather,天気,n,The weather is nice.,天気はいいです。,空の状態,1
-grade_4_0322,low,低い,adj,The valley is low.,谷は低いです。,高度の低い,1
-grade_4_0323,along,に沿って,prep,I walked along the river.,私は川に沿って歩きました。,,2
-grade_4_0324,by,によって,prep,I was helped by my friend.,私は友達に助けられました。,,2
-grade_4_0325,about,について,prep,I am talking about my hobby.,私は私の趣味について話しています。,,2
-grade_4_0326,after,の後,prep,I will meet you after school.,私は学校の後にお会いします。,,1
-grade_4_0327,during,の間,prep,I will be on vacation during the summer.,私は夏の間、休暇を取ります。,,2
-grade_4_0328,since,以来,prep,I have been studying English since I was a child.,私は子供の頃から英語を勉強しています。,,2
-grade_4_0329,although, хотя,conj,"I will go to the party, although I am tired.",私は疲れているが、パーティーに行きます。,,3
-grade_4_0330,if,もし,conj,I will go to the store if I have time.,時間があるなら、店に行きます。,,2
-grade_4_0331,wisely,賢く,adv,I will make a wise decision.,私は賢い決定を下します。,,3
-grade_4_0332,politely,丁寧に,adv,I will speak politely to my teacher.,私は先生に丁寧に話します。,,3
-grade_4_0333,child,子供,n,I love children.,私は子供を愛しています。,若い人,1
-grade_4_0334,boy,男の子,n,The boy is playing.,男の子は遊んでいます。,男性の子供,1
-grade_4_0335,day,日,n,Today is a sunny day.,今日は晴れた日です。,24時間,1
-grade_4_0336,month,月,n,I have a plan for this month.,私は今月の計画を持っています。,約30-31日,1
-grade_4_0337,year,年,n,I am looking forward to the new year.,私は新しい年を楽しみに待っています。,約365日,1
-grade_4_0338,hour,時間,n,I have an hour to finish this task.,私はこのタスクを終わらせるために1時間あります。,60分,1
-grade_4_0339,minute,分,n,I have a minute to think.,私は考えるために1分あります。,60秒,1
-grade_4_0340,second,秒,n,I have a second to react.,私は反応するために1秒あります。,最小の時間単位,1
-grade_4_0341,smile,微笑む,v,I like to smile at people.,私は人に微笑むことが好きだ。,喜んで顔にする,1
-grade_4_0342,mirror,鏡,n,I am looking in the mirror.,私は鏡を見ている。,自分を見るためのもの,1
-grade_4_0343,bed,ベッド,n,I am sleeping in bed.,私はベッドで寝ている。,眠るための家具,1
-grade_4_0344,shower,シャワー,n,I am taking a shower.,私はシャワーを浴びている。,体を洗うためのもの,1
-grade_4_0345,toothbrush,歯ブラシ,n,I am using a toothbrush.,私は歯ブラシを使っている。,歯を磨くためのもの,1
-grade_4_0346,soap,石鹸,n,I am using soap.,私は石鹸を使っている。,体を洗うためのもの,1
-grade_4_0347,towel,タオル,n,I am using a towel.,私はタオルを使っている。,体を乾かすためのもの,1
-grade_4_0348,relax,リラックス,v,I like to relax.,私はリラックスすることが好きだ。,心を休ませる,1
-grade_4_0349,calm,静か,adj,The music is calm.,音楽は静かだ。,穏やか,1
-grade_4_0350,peaceful,平和,adj,The park is peaceful.,公園は平和だ。,争いがない,2
-grade_4_0351,gently,優しく,adv,I am touching gently.,私は優しく触れている。,強くない,1
-grade_4_0352,kindly,親切に,adv,I am speaking kindly.,私は親切に話している。,優しく,1
-grade_4_0353,behind,後ろ,prep,The book is behind the door.,本はドアの後ろにあります。,後ろにある,1
+word_id,word,meaning_ja,meaning_zh,part_of_speech,example_en,example_ja,example_zh,hint,hint_zh,difficulty
+g4_001,important,重要な,重要的,adj,This is an important decision.,これは重要な決断です。,這是一個重要的決定。,import（輸入）と同じ語源。中に運ばれてくるほど価値がある,import（進口）的語源相同。越往裏搬越有價值,2
+g4_002,message,メッセージ,留言,n,Please leave a message.,メッセージを残してください。,請留言。,,,2
+g4_003,exciting,わくわくする,興奮,adj,The game was very exciting.,その試合はとてもわくわくするものでした。,那場比賽非常令人興奮。,excite（興奮させる）＋ing,excite（令人興奮）+ ing,2
+g4_004,usually,たいてい,大抵,adv,I usually walk to school.,私はたいてい歩いて学校へ行きます。,我通常走着去學校。,usual（いつもの）＋ly,usual（通常）+ ly,2
+g4_005,hobby,趣味,興趣愛好,n,My hobby is playing the guitar.,私の趣味はギターを弾くことです。,的興趣是彈吉他。,,,2
+g4_006,popular,人気のある,受歡迎,adj,This singer is very popular.,この歌手はとても人気があります。,這個歌手很受歡迎。,ポピュラー音楽の「ポピュラー」,流行音樂的“大衆”,2
+g4_007,practice,練習する,練習,v,I practice the piano every day.,私は毎日ピアノを練習します。,我每天練習鋼琴。,practical（実践的な）と同じ語源,practical（實踐的）相同詞源,2
+g4_008,delicious,おいしい,好吃,adj,This cake is really delicious.,このケーキは本当においしいです。,這個蛋糕真的很好吃。,delice（喜び）が語源。喜びを与える味,delice（喜悅）的語源。令人愉悅的味道,2
+g4_009,museum,博物館,博物館,n,Let's go to the museum.,博物館へ行きましょう。,我們去博物館吧。,,,2
+g4_010,send,送る,發送,v,I will send you an email.,メールを送ります。,發送郵件。,,,2
+g4_011,season,季節,季節,n,My favorite season is autumn.,私の好きな季節は秋です。,我喜歡的季節是秋天。,,,2
+g4_012,arrive,到着する,到達,v,The train will arrive at noon.,電車は正午に到着します。,火車中午到達。,a（方向）＋rive（川岸）→ 岸にたどり着く,a（方向）+ rive（河岸）→到達岸邊,3
+g4_013,another,別の,另一個,adj,Can I have another piece?,もう一切れもらえますか？,再給我一片嗎？,an＋other（別のもの）,an + other（其他）,2
+g4_014,foreign,外国の,外國的,adj,She studies foreign languages.,彼女は外国語を勉強しています。,她正在學習外語。,フォーリナー（外国人）そのまま,forliner（外國人）原樣,3
+g4_015,environment,環境,環境,n,We must protect the environment.,私たちは環境を守らなければなりません。,我們必須保護環境。,environ（取り囲む）が語源,environ（包圍）是詞源,3
+grade_4_0016,apple,リンゴ,蘋果,n,I eat an apple every day.,私は毎日リンゴを食べます。,我每天都吃蘋果。,,,1
+grade_4_0017,run,走る,跑,v,I like to run in the park.,私は公園で走ることを好きです。,我喜歡在公園跑步。,,,1
+grade_4_0018,big,大きい,大,adj,This house is big.,この家は大きいです。,房子很大。,,,1
+grade_4_0019,quickly,速く,快,adv,I can eat quickly.,私は速く食べることができます。,我可以吃得很快。,,,2
+grade_4_0020,in,中で,中,prep,The book is in the box.,本は箱の中にあります。,書在盒子裏。,,,1
+grade_4_0021,dog,犬,狗,n,I have a dog.,私は犬を飼っています。,我在養狗。,,,1
+grade_4_0022,read,読む,閱讀,v,I like to read books.,私は本を読むことを好きです。,我喜歡讀書。,,,1
+grade_4_0023,happy,幸せな,幸福的,adj,I am happy today.,私は今日幸せです。,我今天很幸福。,,,1
+grade_4_0024,on,上に,上,prep,The book is on the table.,本は机の上にあります。,書在桌子上。,,,1
+grade_4_0025,cat,猫,貓,n,I have a cat.,私は猫を飼っています。,我在養貓。,,,1
+grade_4_0026,write,書く,寫,v,I can write my name.,私は自分の名前を書くことができます。,我可以寫我的名字。,,,1
+grade_4_0027,little,小さい,小,adj,This house is little.,この家は小さいです。,房子很小。,,,1
+grade_4_0028,at,に,二,prep,I am at home.,私は家にいます。,在家。,,,1
+grade_4_0029,bird,鳥,鳥,n,I can see a bird.,私は鳥を見ることができます。,我可以看到鳥。,,,1
+grade_4_0030,listen,聞く,聽,v,I like to listen to music.,私は音楽を聞くことを好きです。,我喜歡聽音樂。,,,1
+grade_4_0031,old,古い,舊,adj,This book is old.,この本は古いです。,這本書是舊的。,,,1
+grade_4_0032,with,と,和,prep,I am with my friend.,私は友達と一緒です。,我和朋友在一起。,,,1
+grade_4_0033,fish,魚,魚,n,I like to eat fish.,私は魚を食べることを好きです。,我喜歡吃魚。,,,1
+grade_4_0034,look,見る,看,v,I can look at the picture.,私は絵を見ることができます。,我可以看圖片。,,,1
+grade_4_0035,new,新しい,新,adj,This book is new.,この本は新しいです。,這本書是新的。,,,1
+grade_4_0036,from,から,從,prep,I am from Tokyo.,私は東京からです。,我從東京來。,,,1
+grade_4_0037,tree,木,樹,n,I can see a tree.,私は木を見ることができます。,我可以看到樹。,,,1
+grade_4_0038,speak,話す,說話,v,I can speak Japanese.,私は日本語を話すことができます。,我會說日語。,,,1
+grade_4_0039,long,長い,長,adj,This road is long.,この道は長いです。,這條路很長。,,,1
+grade_4_0040,under,下に,下,prep,The book is under the table.,本は机の下にあります。,書在桌子下面。,,,1
+grade_4_0041,house,家,家,n,I live in a house.,私は家に住んでいます。,我住在家裏。,,,1
+grade_4_0042,eat,食べる,吃,v,I like to eat sushi.,私は寿司を食べることを好きです。,我喜歡吃壽司。,,,1
+grade_4_0043,high,高い,高,adj,This mountain is high.,この山は高いです。,這座山很高。,,,1
+grade_4_0044,to,に,二,prep,I am going to school.,私は学校に行きます。,我去學校。,,,1
+grade_4_0045,car,車,車,n,I have a car.,私は車を所有しています。,我擁有一輛車。,,,1
+grade_4_0046,play,遊ぶ,玩,v,I like to play soccer.,私はサッカーを遊ぶことを好きです。,我喜歡踢足球。,,,1
+grade_4_0047,good,よい,好,adj,This food is good.,この食べ物はよいです。,這個食物很好。,,,1
+grade_4_0048,above,上に,上,prep,The bird is above the tree.,鳥は木の上にあります。,鳥在樹上。,,,1
+grade_4_0049,school,学校,學校,n,I go to school every day.,私は毎日学校に行きます。,我每天去學校。,,,1
+grade_4_0050,go,行く,去,v,I am going to the park.,私は公園に行きます。,我去公園。,,,1
+grade_4_0051,bad,悪い,壞,adj,This food is bad.,この食べ物は悪いです。,這個食物不好。,,,1
+grade_4_0052,between,間に,之間,prep,The book is between the two chairs.,本は二つの椅子の間にあります。,書在兩張椅子之間。,,,2
+grade_4_0053,friend,友達,朋友,n,I have a friend.,私は友達がいます。,我有朋友。,,,1
+grade_4_0054,swim,泳ぐ,游泳,v,I like to swim in the sea.,私は海で泳ぐことを好きです。,我喜歡在海里游泳。,,,1
+grade_4_0055,small,小さい,小,adj,This house is small.,この家は小さいです。,房子很小。,,,1
+grade_4_0056,around,周りに,周圍,prep,The dog is running around the house.,犬は家の周りを走っています。,狗在房子周圍跑。,,,2
+grade_4_0057,family,家族,家人,n,I love my family.,私は私の家族を愛しています。,我愛我的家人。,,,1
+grade_4_0058,think,考える,思考,v,I think I can do it.,私はそれができると思います。,我認爲我可以做到。,,,1
+grade_4_0059,fast,速い,快,adj,This car is fast.,この車は速いです。,這輛車很快。,,,1
+grade_4_0060,across,横に,旁邊,prep,The bridge is across the river.,橋は川の横にあります。,橋在河的旁邊。,,,2
+grade_4_0061,class,クラス,班級,n,I have a class today.,私は今日クラスがあります。,我今天有課。,,,1
+grade_4_0062,walk,歩く,走路,v,I like to walk in the park.,私は公園で歩くことを好きです。,我喜歡在公園散步。,,,1
+grade_4_0063,simple,簡単な,簡單的,adj,This problem is simple.,この問題は簡単です。,這個問題很簡單。,,,2
+grade_4_0064,through,通って,通過,prep,The river is flowing through the city.,川は市を通って流れています。,河流穿過城市。,,,2
+grade_4_0065,book,本,書,n,I like to read books.,私は本を読むことを好きです。,我喜歡讀書。,,,1
+grade_4_0066,learn,学ぶ,學習,v,I want to learn English.,私は英語を学びたいです。,我想學英語。,,,1
+grade_4_0067,easy,簡単な,簡單的,adj,This test is easy.,この試験は簡単です。,這個考試很簡單。,,,1
+grade_4_0068,without,なくして,丟了,prep,I can't live without my phone.,私は携帯電話なくして生きることができません。,沒有手機我就活不下去。,,,2
+grade_4_0069,pen,ペン,筆,n,I use a pen to write.,私はペンを使用して書きます。,我用筆寫。,書くために使うもの,寫作用的東西,1
+grade_4_0070,pencil,鉛筆,鉛筆,n,I need a pencil for the test.,試験のために鉛筆が必要です。,考試需要鉛筆。,消しゴムで消せるもの,能用橡皮擦掉的東西,1
+grade_4_0071,paper,紙,紙,n,I need paper to draw.,私は絵を描くために紙が必要です。,我需要紙來畫畫。,書くものや絵を描くもの,寫作和繪畫的東西,1
+grade_4_0072,desk,机,桌子,n,I do my homework at my desk.,私は机で宿題をします。,我在桌子上做作業。,勉強するときに使うもの,學習時使用的東西,1
+grade_4_0073,chair,椅子,椅子,n,Please sit down in the chair.,椅子に座ってください。,請坐在椅子上。,座るもの,坐的東西,1
+grade_4_0074,table,テーブル,桌子,n,We eat dinner at the table.,私たちはテーブルで夕食を食べます。,我們在桌子上吃晚飯。,食事をするもの,吃飯的東西,1
+grade_4_0075,window,窓,窗戶,n,I can see the park from the window.,私は窓から公園が見えます。,我可以從窗戶看到公園。,光が入るもの,光線進入的東西,1
+grade_4_0076,door,ドア,門,n,Please close the door.,ドアを閉めてください。,請把門關上。,入るために開くもの,打開進入的東西,1
+grade_4_0077,floor,床,地板,n,The floor is made of wood.,床は木でできています。,地板是木頭做的。,立つもの,站立的東西,1
+grade_4_0078,wall,壁,牆,n,The wall is painted white.,壁は白く塗られています。,牆壁被漆成白色。,部屋の周りを囲むもの,圍繞房間的東西,1
+grade_4_0079,ceiling,天井,天花板,n,The ceiling is very high.,天井はとても高いです。,天花板很高。,頭の上のもの,頭上的東西,1
+grade_4_0080,stair,階段,樓梯,n,I climb the stair to go up.,私は階段を登って上へ行きます。,爬樓梯往上走。,上へ行くためのもの,爲了往上走的東西,1
+grade_4_0081,elevator,エレベーター,電梯,n,I take the elevator to go up.,私はエレベーターで上へ行きます。,我坐電梯上樓。,自動で上下するもの,自動上下,2
+grade_4_0082,computer,コンピューター,計算機,n,I use a computer to study.,私はコンピューターを使用して勉強します。,我使用電腦學習。,計算する機械,計算機器,2
+grade_4_0083,phone,電話,電話,n,I call my friend on the phone.,私は電話で友達に電話します。,我打電話給我的朋友。,話すための機械,說話機器,1
+grade_4_0084,music,音楽,音樂,n,I like listening to music.,私は音楽を聞くのが好きです。,我喜歡聽音樂。,楽しい音,有趣的聲音,1
+grade_4_0085,movie,映画,電影,n,I watch a movie on TV.,私はテレビで映画を観ます。,在電視上看電影。,動く絵,會動的畫,1
+grade_4_0086,game,ゲーム,遊戲,n,I play a game with my friends.,私は友達とゲームをします。,我和朋友玩遊戲。,楽しく遊ぶこと,玩得開心,1
+grade_4_0087,sport,スポーツ,體育,n,I like playing sports.,私はスポーツを好きです。,我喜歡運動。,体を動かす競技,移動身體的比賽,1
+grade_4_0088,team,チーム,團隊,n,I am a member of the team.,私はチームの一員です。,我是團隊的一員。,一緒に活動するグループ,一起活動的團體,1
+grade_4_0089,win,勝つ,獲勝,v,I want to win the game.,私はゲームに勝ちたいです。,我想贏得比賽。,勝利する,勝利,1
+grade_4_0090,lose,負ける,輸,v,I don't want to lose the game.,私はゲームに負けたくありません。,我不想輸掉遊戲。,敗北する,失敗,1
+grade_4_0091,try,努力する,努力,v,I will try my best.,私は頑張ります。,我會努力。,努力する,努力,1
+grade_4_0092,help,助ける,幫助,v,I will help you.,私はあなたを助けます。,我會幫助你。,手伝う,幫忙,1
+grade_4_0093,sad,悲しい,悲傷,adj,I am sad today.,私は今日悲しいです。,我今天很傷心。,悲しく思っている,感到悲傷,1
+grade_4_0094,hot,熱い,熱烈,adj,The coffee is hot.,コーヒーは熱いです。,咖啡很熱。,高温の,高溫的,1
+grade_4_0095,cold,冷たい,冰冷,adj,The water is cold.,水は冷たいです。,水是冷的。,低温の,低溫的,1
+grade_4_0096,slow,遅い,慢,adj,The bus is slow.,バスは遅いです。,巴士很慢。,遅く動く,動作慢,1
+grade_4_0097,slowly,遅く,晚,adv,I will walk slowly.,私は遅く歩きます。,我走得很慢。,遅く行う,遲到,1
+grade_4_0098,well,よく,經常,adv,I sing well.,私は歌をうまく歌います。,我唱歌很好。,うまく行う,順利進行,1
+grade_4_0099,badly,悪く,差,adv,I sing badly.,私は歌を下手く歌います。,我唱歌唱得不好。,うまく行かない,不順利,1
+grade_4_0100,up,上,上,prep,The ball is up in the air.,ボールは空の中にあります。,球在天空中。,上方向,向上方向,1
+grade_4_0101,down,下,下,prep,The ball is down on the ground.,ボールは地面にあります。,球在地面上。,下方向,向下,1
+grade_4_0102,left,左,左,prep,The door is on the left.,ドアは左側にあります。,門在左邊。,左側,左,1
+grade_4_0103,right,右,右,prep,The door is on the right.,ドアは右側にあります。,門在右邊。,右側,右側,1
+grade_4_0104,cloud,雲,雲,n,The cloud is white.,雲は白いです。,雲是白色的。,,,1
+grade_4_0105,cloudy,曇り,陰,adj,The weather is cloudy today.,今日の天気は曇りです。,今天天氣多雲。,,,1
+grade_4_0106,sun,太陽,陽光,n,The sun is shining.,太陽が輝いています。,陽光燦爛。,,,1
+grade_4_0107,sunny,晴れ,晴天,adj,The weather is sunny today.,今日の天気は晴れです。,今天天氣晴朗。,,,1
+grade_4_0108,rain,雨,雨,n,It's raining outside.,外は雨です。,外面在下雨。,,,1
+grade_4_0109,rainy,雨天,雨天,adj,The weather is rainy today.,今日の天気は雨です。,今天的天氣是雨。,,,1
+grade_4_0110,wind,風,風,n,The wind is blowing.,風が吹いています。,風在吹。,,,1
+grade_4_0111,windy,風の強い,風大,adj,The weather is windy today.,今日の天気は風が強いです。,今天的天氣風很大。,,,1
+grade_4_0112,snow,雪,雪,n,It's snowing outside.,外は雪です。,外面下雪了。,,,1
+grade_4_0113,snowy,雪の,雪的,adj,The weather is snowy today.,今日の天気は雪です。,今天的天氣是雪。,,,1
+grade_4_0114,mountain,山,山,n,The mountain is high.,山は高いです。,山很高。,,,1
+grade_4_0115,river,川,川,n,The river is wide.,川は広いです。,河很寬。,,,1
+grade_4_0116,lake,湖,湖,n,The lake is beautiful.,湖は美しいです。,湖很美。,,,1
+grade_4_0117,island,島,島,n,The island is small.,島は小さいです。,島很小。,,,1
+grade_4_0118,beach,海岸,海岸,n,The beach is clean.,海岸はきれいです。,海岸很漂亮。,,,1
+grade_4_0119,flower,花,花,n,The flower is beautiful.,花は美しいです。,花是美麗的。,,,1
+grade_4_0120,grass,草,草,n,The grass is green.,草は緑です。,草是綠色的。,,,1
+grade_4_0121,park,公園,公園,n,The park is big.,公園は大きいです。,公園很大。,,,1
+grade_4_0122,garden,庭,院子裏,n,The garden is beautiful.,庭は美しいです。,花園很漂亮。,,,1
+grade_4_0123,farm,農場,農場,n,The farm is big.,農場は大きいです。,農場很大。,,,1
+grade_4_0124,cow,牛,牛,n,The cow is big.,牛は大きいです。,牛很大。,,,1
+grade_4_0125,pig,豚,豬,n,The pig is small.,豚は小さいです。,豬很小。,,,1
+grade_4_0126,sheep,羊,羊,n,The sheep is white.,羊は白いです。,羊是白色的。,,,1
+grade_4_0127,horse,馬,馬,n,The horse is big.,馬は大きいです。,馬很大。,,,1
+grade_4_0128,bicycle,自転車,自行車,n,The bicycle is fun.,自転車は楽しいです。,騎自行車很有趣。,,,2
+grade_4_0129,train,電車,電車,n,The train is fast.,電車は速いです。,火車很快。,,,2
+grade_4_0130,bus,バス,巴士,n,The bus is big.,バスは大きいです。,巴士很大。,,,2
+grade_4_0131,taxi,タクシー,出租車,n,The taxi is yellow.,タクシーは黄色です。,出租車是黃色的。,,,2
+grade_4_0132,airport,空港,機場,n,The airport is big.,空港は大きいです。,機場很大。,,,2
+grade_4_0133,hotel,ホテル,酒店,n,The hotel is nice.,ホテルは素敵です。,酒店很漂亮。,,,2
+grade_4_0134,restaurant,レストラン,餐廳,n,The restaurant is delicious.,レストランはおいしいです。,餐廳很好吃。,,,2
+grade_4_0135,store,店,店,n,The store is big.,店は大きいです。,店很大。,,,2
+grade_4_0136,hospital,病院,醫院,n,The hospital is clean.,病院はきれいです。,醫院很乾淨。,,,2
+grade_4_0137,police,警察,警察,n,The police are helpful.,警察は役に立ちます。,警察是有用的。,,,2
+grade_4_0138,post,郵便,郵政,n,The post is slow.,郵便は遅いです。,郵件很慢。,,,2
+grade_4_0139,bank,銀行,銀行,n,The bank is safe.,銀行は安全です。,銀行是安全的。,,,2
+grade_4_0140,library,図書館,圖書館,n,The library is quiet.,図書館は静かです。,圖書館很安靜。,,,2
+grade_4_0141,gym,体育館,體育館,n,The gym is big.,体育館は大きいです。,體育館很大。,,,2
+grade_4_0142,pool,プール,游泳池,n,The pool is clean.,プールはきれいです。,游泳池很乾淨。,,,2
+grade_4_0143,jump,跳ぶ,跳,v,I like to jump.,私は跳ぶことを好きです。,我喜歡跳。,,,1
+grade_4_0144,angry,怒った,生氣了,adj,I am angry.,私は怒っています。,我很生氣。,,,2
+grade_4_0145,tired,疲れた,累了,adj,I am tired.,私は疲れています。,我累了。,,,2
+grade_4_0146,hungry,空腹,空腹,adj,I am hungry.,私は空腹です。,我餓了。,,,2
+grade_4_0147,thirsty,喉が渇いた,口渴了,adj,I am thirsty.,私は喉が渇いています。,我口渴了。,,,2
+grade_4_0148,loudly,うるさく,吵,adv,I can sing loudly.,私はうるさく歌うことができます。,我可以唱得很吵。,,,2
+grade_4_0149,quietly,静かに,安靜,adv,I can read quietly.,私は静かに読むことができます。,我可以安靜地閱讀。,,,2
+grade_4_0150,fun,楽しい,好開心,adj,This game is fun.,このゲームは楽しいです。,這個遊戲很有趣。,,,2
+grade_4_0151,boring,面白くない,沒意思,adj,This book is boring.,この本は面白くないです。,這本書沒意思。,,,2
+grade_4_0152,interesting,面白い,有趣,adj,This story is interesting.,この話は面白いです。,這個故事很有趣。,,,2
+grade_4_0153,difficult,難しい,很難,adj,This problem is difficult.,この問題は難しいです。,這個問題很難。,,,2
+grade_4_0154,hard,大変,辛苦,adj,This work is hard.,この仕事は大変です。,工作很辛苦。,,,1
+grade_4_0155,complicated,複雑,複雜,adj,This machine is complicated.,この機械は複雑です。,機器很複雜。,,,3
+grade_4_0156,clear,明確,明確,adj,The water is clear.,水は明確です。,水是明確的。,,,2
+grade_4_0157,clean,きれい,漂亮,adj,The room is clean.,部屋はきれいです。,房間很乾淨。,,,1
+grade_4_0158,dirty,汚い,骯髒,adj,The floor is dirty.,床は汚いです。,地板很髒。,,,1
+grade_4_0159,loud,うるさい,吵死了,adj,The music is loud.,音楽はうるさいです。,音樂很吵。,,,2
+grade_4_0160,quiet,静か,安靜,adj,The library is quiet.,図書館は静かです。,圖書館很安靜。,,,2
+grade_4_0161,short,短い,短,adj,This movie is short.,この映画は短いです。,這部電影很短。,,,1
+grade_4_0162,far,遠い,遙遠,adj,The city is far.,都市は遠いです。,城市很遠。,,,2
+grade_4_0163,near,近い,近,adj,The park is near.,公園は近いです。,公園很近。,,,2
+grade_4_0164,full,いっぱい,滿滿,adj,The bottle is full.,瓶はいっぱいです。,瓶子滿了。,,,1
+grade_4_0165,empty,空,天空,adj,The box is empty.,箱は空です。,盒子是空的。,,,1
+grade_4_0166,warm,あたたかい,暖和,adj,The room is warm.,部屋はあたたかいです。,房間很暖和。,,,2
+grade_4_0167,cool,涼しい,涼爽,adj,The breeze is cool.,風は涼しいです。,風很涼爽。,,,2
+grade_4_0168,strong,強い,強烈,adj,He is strong.,彼は強いです。,他很堅強。,,,2
+grade_4_0169,weak,弱い,弱,adj,She is weak.,彼女は弱いです。,她很軟弱。,,,2
+grade_4_0170,light,軽い,輕,adj,The box is light.,箱は軽いです。,盒子很輕。,,,2
+grade_4_0171,heavy,重い,沉重,adj,The book is heavy.,本は重いです。,書很重。,,,2
+grade_4_0172,mother,母,母親,n,My mother is kind.,私の母は優しいです。,我媽媽很溫柔。,家族,家人,1
+grade_4_0173,water,水,水,n,I drink water every day.,私は毎日水を飲みます。,我每天喝水。,飲み物,飲料,1
+grade_4_0174,baby,赤ちゃん,嬰兒,n,The baby is sleeping.,赤ちゃんは寝ています。,嬰兒正在睡覺。,子供,孩子,1
+grade_4_0175,ball,ボール,球,n,I play with a ball.,私はボールで遊びます。,我玩球。,玩具,玩具,1
+grade_4_0176,brother,兄,哥哥,n,My brother is tall.,私の兄は背が高いです。,我哥哥個子很高。,家族,家人,1
+grade_4_0177,father,父,父親,n,My father is kind.,私の父は優しいです。,的父親很溫柔。,家族,家人,1
+grade_4_0178,food,食べ物,食物,n,I like Japanese food.,私は日本食が好きです。,我喜歡日本料理。,料理,料理,1
+grade_4_0179,girl,女の子,女孩,n,The girl is smiling.,女の子は笑っています。,女孩在笑。,子供,孩子,1
+grade_4_0180,man,男,男人,n,The man is working.,男は働いています。,男人在工作。,大人,大人,1
+grade_4_0181,picture,絵,畫,n,The picture is beautiful.,絵はきれいです。,畫很漂亮。,芸術,藝術,1
+grade_4_0182,sister,妹,妹妹,n,My sister is kind.,私の妹は優しいです。,我妹妹很溫柔。,家族,家人,1
+grade_4_0183,son,息子,兒子,n,My son is tall.,私の息子は背が高いです。,我兒子個子很高。,家族,家人,1
+grade_4_0184,star,星,星星,n,The star is shining.,星は輝いています。,星星閃耀着。,自然,自然,1
+grade_4_0185,student,学生,學生,n,I am a student.,私は学生です。,我是學生。,学校,學校,1
+grade_4_0186,teacher,先生,老師,n,My teacher is kind.,私の先生は優しいです。,我的老師很溫柔。,学校,學校,1
+grade_4_0187,woman,女,女,n,The woman is smiling.,女は笑っています。,女人在笑。,大人,大人,1
+grade_4_0188,work,働く,工作,v,I will work tomorrow.,私は明日働きます。,我明天工作。,仕事,工作,1
+grade_4_0189,yellow,黄色,黃色,adj,The sun is yellow.,太陽は黄色です。,太陽是黃色的。,色,顏色,1
+grade_4_0190,black,黒,黑,adj,The cat is black.,猫は黒です。,貓是黑色的。,色,顏色,1
+grade_4_0191,white,白,白,adj,The cloud is white.,雲は白いです。,雲是白色的。,色,顏色,1
+grade_4_0192,red,赤,紅色,adj,The apple is red.,リンゴは赤です。,蘋果是紅色的。,色,顏色,1
+grade_4_0193,blue,青,綠色,adj,The sky is blue.,空は青いです。,天空是藍色的。,色,顏色,1
+grade_4_0194,green,緑,綠色,adj,The tree is green.,木は緑です。,樹是綠色的。,色,顏色,1
+grade_4_0195,dance,踊る,跳舞,v,I will dance at the party.,私はパーティーで踊ります。,我在派對上跳舞。,楽しみ,樂趣,1
+grade_4_0196,sing,歌う,唱歌,v,I will sing a song.,私は歌を歌います。,我唱歌。,楽しみ,樂趣,1
+grade_4_0197,laugh,笑う,笑一笑,v,I will laugh at the joke.,私は冗談で笑います。,我開玩笑地笑。,楽しみ,樂趣,1
+grade_4_0198,cry,泣く,哭,v,I will cry if I am sad.,私は悲しいときに泣きます。,我難過的時候哭。,気持ち,心情,1
+grade_4_0199,sleep,眠る,睡覺,v,I will sleep at night.,私は夜に眠ります。,我晚上睡覺。,生活,生活,1
+grade_4_0200,birthday,誕生日,生日,n,My birthday is in July.,私の誕生日は7月です。,我的生日是七月。,記念日,紀念日,2
+grade_4_0201,Christmas,クリスマス,聖誕節,n,I love celebrating Christmas.,私はクリスマスを祝うことを好きです。,我喜歡慶祝聖誕節。,祝日,節日,2
+grade_4_0202,telephone,電話,電話,n,I need to use the telephone.,私は電話を使う必要があります。,我需要使用電話。,通信,通信,2
+grade_4_0203,television,テレビ,電視,n,I like watching television.,私はテレビを見ることを好きです。,我喜歡看電視。,娯楽,娛樂,2
+grade_4_0204,camera,カメラ,照相機,n,I like taking pictures with my camera.,私はカメラで写真を撮ることを好きです。,我喜歡用相機拍照。,機械,機械,2
+grade_4_0205,guitar,ギター,吉他,n,I like playing the guitar.,私はギターを弾くことを好きです。,我喜歡彈吉他。,楽器,樂器,2
+grade_4_0206,young,若い,年輕,adj,This person is very young.,この人はとても若いです。,這個人很年輕。,年齢,年齡,1
+grade_4_0207,excited,興奮した,興奮了,adj,I am very excited today.,私は今日とても興奮しています。,我今天很興奮。,感情,感情,2
+grade_4_0208,bored,退屈した,無聊了,adj,I am very bored today.,私は今日とても退屈しています。,我今天很無聊。,感情,感情,2
+grade_4_0209,bag,鞄,書包,n,I forgot my bag at home.,私は鞄を家に忘れた。,我把包忘在家裏了。,,,1
+grade_4_0210,box,箱,箱子,n,I have a box to store things.,私は物を入れる箱があります。,我有裝東西的箱子。,container,一,1
+grade_4_0211,travel,旅行,旅行,v,I want to travel around the world.,私は世界中を旅行したいです。,我想去世界各地旅行。,adventure,adventure,2
+grade_4_0212,language,言語,語言,n,I am learning a new language.,私は新しい言語を学んでいます。,我正在學習一門新語言。,communication,communication,2
+grade_4_0213,culture,文化,文化,n,I am interested in different cultures.,私はさまざまな文化に興味があります。,我對不同的文化感興趣。,society,society,2
+grade_4_0214,history,歴史,歷史,n,I like studying history.,私は歴史を学ぶのが好きです。,我喜歡學習歷史。,past,卻,2
+grade_4_0215,science,科学,科學,n,I am interested in science.,私は科学に興味があります。,我對科學感興趣。,knowledge,knowledge,2
+grade_4_0216,technology,技術,技術,n,I like learning about new technology.,私は新しい技術について学ぶのが好きです。,我喜歡學習新技術。,innovation,innovation,3
+grade_4_0217,economy,経済,經濟,n,The economy is important for a country.,経済は国にとって重要です。,經濟對國家很重要。,finance,finance,3
+grade_4_0218,society,社会,社會,n,We are all part of society.,私たちはみんな社会の一員です。,我們都是社會的一員。,community,community,3
+grade_4_0219,government,政府,政府,n,The government makes laws for the country.,政府は国に法律を作ります。,政府制定國家法律。,politics,politics,3
+grade_4_0220,education,教育,教育,n,Education is important for our future.,教育は私たちの未来にとって重要です。,教育對我們的未來至關重要。,learning,learning,3
+grade_4_0221,health,健康,健康,n,Taking care of our health is important.,私たちの健康を大切にすることは重要です。,珍惜我們的健康很重要。,wellness,"情況下,",3
+grade_4_0222,moon,月,月,n,The moon is full tonight.,今夜は満月です。,今晚是滿月。,heavenly body,heavenly body,1
+grade_4_0223,butterfly,蝶,蝴蝶,n,The butterfly is flying around the flower.,蝶は花の周りを飛んでいます。,蝴蝶在花周圍飛。,insect,insect,2
+grade_4_0224,rest,休む,休息,v,I need to rest after a long day.,長い一日後には休む必要があります。,漫長的一天後，你需要休息。,action,action,1
+grade_4_0225,dream,夢を見る,做夢,v,I had a nice dream last night.,昨夜は素敵な夢を見ました。,昨晚做了一個漂亮的夢。,action,action,2
+grade_4_0226,cozy,心地よい,舒服,adj,The cozy room makes me feel relaxed.,心地よい部屋は私をリラックスさせます。,舒適的房間讓我放鬆。,feeling,feeling,2
+grade_4_0227,quick,速い,快,adj,The quick runner finished the race first.,速いランナーはレースを最初に終えました。,快速跑者第一個完成了比賽。,speed,speed,1
+grade_4_0228,summer,夏,夏天,n,I like summer.,私は夏が好きです。,我喜歡夏天。,,,1
+grade_4_0229,winter,冬,冬天,n,I like winter.,私は冬が好きです。,我喜歡冬天。,,,1
+grade_4_0230,spring,春,春天,n,I like spring.,私は春が好きです。,我喜歡春天。,,,1
+grade_4_0231,autumn,秋,秋,n,I like autumn.,私は秋が好きです。,我喜歡秋天。,,,1
+grade_4_0232,station,駅,車站,n,I like to take the train.,私は電車に乗ることが好きです。,我喜歡坐火車。,,,2
+grade_4_0233,friendship,友情,友情,n,I value my friendships.,私は友情を大切にします。,我珍惜友情。,,,3
+grade_4_0234,happiness,幸せ,幸福,n,I am seeking happiness.,私は幸せを求めています。,我追求幸福。,,,3
+grade_4_0235,sorrow,悲しみ,悲傷,n,I feel sorrow.,私は悲しみを感じます。,我感到悲傷。,,,3
+grade_4_0236,joy,喜び,喜悅,n,I feel joy.,私は喜びを感じます。,我感到高興。,,,3
+grade_4_0237,love,愛,愛情,n,I love my family.,私は私の家族を愛しています。,我愛我的家人。,,,2
+grade_4_0238,peace,平和,和平,n,I wish for peace.,私は平和を願っています。,我希望和平。,,,3
+grade_4_0239,freedom,自由,自由,n,I value my freedom.,私は私の自由を大切にします。,我珍惜我的自由。,,,3
+grade_4_0240,hope,希望,希望,n,I have hope for the future.,私は将来に希望を持っています。,我對未來充滿希望。,,,3
+grade_4_0241,grateful,感謝する,感謝,adj,I am grateful for my family.,私は家族に感謝している。,我感謝我的家人。,,,3
+grade_4_0242,careful,注意深い,細心,adj,I am careful when I drive.,私は運転するときに注意深い。,我開車的時候很小心。,,,2
+grade_4_0243,patient,我慢強い,忍耐力強,adj,My mother is patient.,私の母は我慢強い。,我媽媽忍耐力很強。,,,2
+grade_4_0244,kindness,親切,親切,n,Kindness is important.,親切は大切だ。,親切很重要。,,,3
+grade_4_0245,generous,おごる,請客,adj,My father is generous.,私の父はおごる。,我爸爸請客。,,,3
+grade_4_0246,thankful,感謝する,感謝,adj,I am thankful for my friends.,私は友達に感謝している。,我感謝我的朋友。,,,3
+grade_4_0247,adventure,冒険,冒險,n,I love adventure.,私は冒険が好きだ。,我喜歡冒險。,,,3
+grade_4_0248,brave,勇気のある,有勇氣,adj,My brother is brave.,私の兄は勇気のある。,我哥哥很勇敢。,,,2
+grade_4_0249,courageous,勇気ある,有勇氣,adj,The firefighter is courageous.,消防士は勇気ある。,消防員很勇敢。,,,3
+grade_4_0250,confident,自信のある,有自信,adj,I am confident in my abilities.,私は自分の能力に自信がある。,我對自己的能力有信心。,,,3
+grade_4_0251,determined,決心した,下定決心了,adj,I am determined to succeed.,私は成功することを決心した。,我決心要成功。,,,3
+grade_4_0252,creative,創造的な,創造性的,adj,My sister is creative.,私の妹は創造的な。,我妹妹是創造性的。,,,3
+grade_4_0253,imaginative,想像力のある,有想象力,adj,The author is imaginative.,著者は想像力のある。,作者有想象力。,,,3
+grade_4_0254,inspirational,感動的な,令人感動的,adj,The speech was inspirational.,スピーチは感動的なものだった。,演講令人感動。,,,3
+grade_4_0255,motivational,動機づける,賦予動機,adj,The coach is motivational.,コーチは動機づける。,教練激勵。,,,3
+grade_4_0256,optimistic,楽観的な,樂觀的,adj,I am optimistic about the future.,私は将来について楽観的な。,我對未來很樂觀。,,,3
+grade_4_0257,positive,ポジティブ,積極,adj,I try to be positive.,私はポジティブであることを目指している。,我以積極爲目標。,,,2
+grade_4_0258,thoughtful,思慮深い,深思熟慮,adj,My mother is thoughtful.,私の母は思慮深い。,我媽媽很體貼。,,,3
+grade_4_0259,understanding,理解のある,理解的,adj,My father is understanding.,私の父は理解のある。,我父親通情達理。,,,3
+grade_4_0260,wise,賢い,聰明,adj,The old man is wise.,老人は賢い。,老人很聰明。,,,2
+grade_4_0261,painting,絵,畫,n,I like painting.,私は絵を描くことが好きだ。,我喜歡畫畫。,,,2
+grade_4_0262,photograph,写真,照片,n,I took a photograph.,私は写真を撮った。,我拍了照片。,,,2
+grade_4_0263,forest,森,森林,n,I like the forest.,私は森が好きだ。,我喜歡森林。,,,2
+grade_4_0264,drink,飲む,喝,v,I like to drink tea.,私はお茶を飲むことが好きです。,我喜歡喝茶。,ドリンク,飲料,1
+grade_4_0265,watch,見る,看,v,I like to watch TV.,私はテレビを見ることが好きです。,我喜歡看電視。,ウォッチ,手錶,1
+grade_4_0266,and,と,和,conj,I like apples and bananas.,私はリンゴとバナナが好きです。,我喜歡蘋果和香蕉。,アンド,和,1
+grade_4_0267,but,しかし,但是,conj,"I like apples, but I don't like bananas.",私はリンゴが好きですが、バナナは好きではありません。,我喜歡蘋果，但不喜歡香蕉。,バット,球棒,1
+grade_4_0268,or,または,或者,conj,Do you like apples or bananas?,あなたはリンゴが好きですか、バナナが好きですか?,你喜歡蘋果還是香蕉？,オア,圓,1
+grade_4_0269,so,ので,所以,adv,"I'm tired, so I'll sleep.",私は疲れているので、寝ます。,我累了，所以要睡覺。,ソー,雷神,1
+grade_4_0270,very,とても,非常,adv,I'm very happy.,私はとても幸せです。,我很幸福。,ベリー,漿果,1
+grade_4_0271,now,今,現在,adv,I'll eat now.,私は今食べます。,我現在吃。,ナウ,now,1
+grade_4_0272,later,後で,後來,adv,I'll eat later.,私は後で食べます。,我稍後再吃。,レイター,萊特,1
+grade_4_0273,yesterday,昨日,昨天,adv,I ate yesterday.,私は昨日食べました。,我昨天吃了。,イエスタデイ,耶斯塔日,1
+grade_4_0274,tomorrow,明日,明天,adv,I'll eat tomorrow.,私は明日食べます。,我明天吃。,トゥモロー,託莫羅,1
+grade_4_0275,here,ここ,這裏,adv,I'm here.,私はここにいます。,我在這裏。,ヒア,西奧(音),1
+grade_4_0276,there,そこ,在那裏,adv,I'll go there.,私はそこに行きます。,我去那裏。,ゼア,前方,1
+grade_4_0277,everywhere,どこにでも,任何地方,adv,I'll go everywhere.,私はどこにでも行きます。,我去任何地方。,エブリウェア,everware,1
+grade_4_0278,nowhere,どこにも,哪裏都沒有,adv,I'll go nowhere.,私はどこにも行きません。,我哪兒也不去。,ナウヘア,瑙黑爾,1
+grade_4_0279,somewhere,どこか,哪裏,adv,I'll go somewhere.,私はどこかへ行きます。,我要去什麼地方。,サムウェア,軟件,1
+grade_4_0280,classroom,教室,教室,n,I like my classroom.,私は私の教室が好きです。,我喜歡我的教室。,school,school,1
+grade_4_0281,pencil case,鉛筆ケース,鉛筆盒,n,I have a new pencil case.,私は新しい鉛筆ケースを持っています。,我有一個新的鉛筆盒。,stationery,stationery,1
+grade_4_0282,wake up,起きる,起牀,v,I wake up at 7 AM every morning.,私は毎朝7時に起きます。,每天早上7點起牀。,daily routine,daily routine,1
+grade_4_0283,sit,座る,坐,v,Please sit down.,座ってください。,請坐。,,,1
+grade_4_0284,stand,立つ,站在,v,Please stand up.,立ってください。,請站起來。,,,1
+grade_4_0285,talk,話す,說話,v,I want to talk to you.,あなたと話したいです。,我想和你說話。,,,1
+grade_4_0286,home,家,家,n,I am going home.,私は家に帰ります。,我要回家。,,,2
+grade_4_0287,night,夜,晚上,n,I like to sleep at night.,私は夜に寝るのが好きです。,我喜歡晚上睡覺。,,,2
+grade_4_0288,open,開く,舉行,v,Please open the door.,ドアを開けてください。,請把門打開。,,,2
+grade_4_0289,again,もう一度,再一次,adv,I want to try again.,私はもう一度挑戦したいです。,我想再挑戰一次。,,,3
+grade_4_0290,always,いつも,總是,adv,I always eat breakfast.,私はいつも朝食を食べます。,我總是吃早餐。,,,3
+grade_4_0291,because,なぜなら,因爲,prep,I am happy because I am with my friends.,私は幸せです。なぜなら私は友達と一緒だからです。,我很幸福。因爲我和朋友在一起。,,,3
+grade_4_0292,before,前に,前,prep,I need to eat before I go to the party.,私はパーティーに行く前に食べる必要があります。,我需要在參加派對之前吃東西。,,,3
+grade_4_0293,however,しかし,但是,adv,"I want to go to the party, however I am tired.",私はパーティーに行きたいですが、しかし私は疲れています。,我想去參加派對，但我累了。,,,3
+grade_4_0294,instead,その代わりに,作爲交換,adv,I will go to the movies instead of studying.,私は勉強する代わりに映画に行きます。,我不學習而是去看電影。,,,3
+grade_4_0295,maybe,もしかしたら,說不定,adv,Maybe I will go to the party.,もしかしたら私はパーティーに行くかもしれません。,我可能會去參加派對。,,,3
+grade_4_0296,never,決して,從來沒有,adv,I never eat breakfast.,私は決して朝食を食べない。,我從來不吃早餐。,,,3
+grade_4_0297,often,よく,經常,adv,I often go to the gym.,私はよくジムに行きます。,我經常去健身房。,,,3
+grade_4_0298,sometimes,時々,有時,adv,I sometimes eat dinner at home.,私は時々家で夕食を食べます。,我有時在家吃晚飯。,,,3
+grade_4_0299,still,まだ,還,adv,I am still hungry.,私はまだ空腹です。,我還餓。,,,3
+grade_4_0300,until,まで,到,prep,I will wait until you come.,私はあなたが来るまで待ちます。,我會等到你來。,,,3
+grade_4_0301,close,閉じる,關閉,v,Please close the door.,ドアを閉じてください。,請把門關上。,動作,動作,1
+grade_4_0302,boat,船,船,n,I like to sail on a boat.,私は船に乗ることを好みます。,我喜歡坐船。,交通機関,交通工具,1
+grade_4_0303,plane,飛行機,飛機,n,I take a plane to travel.,私は飛行機で旅行します。,我坐飛機旅行。,交通機関,交通工具,1
+grade_4_0304,shop,店,店,n,I like to shop on weekends.,私は週末に買い物をすることを好みます。,我喜歡週末購物。,施設,設施,1
+grade_4_0305,fire,火,火,n,The fire is burning.,火は燃えています。,火正在燃燒。,自然,自然,1
+grade_4_0306,air,空気,空氣,n,I breathe in the air.,私は空気を吸います。,我呼吸空氣。,自然,自然,1
+grade_4_0307,earth,地球,地球,n,The earth is our home.,地球は私たちの家です。,地球是我們的家。,自然,自然,1
+grade_4_0308,sky,空,天空,n,The sky is blue.,空は青いです。,天空是藍色的。,自然,自然,1
+grade_4_0309,sea,海,海,n,I like to swim in the sea.,私は海で泳ぐことを好みます。,我喜歡在海里游泳。,自然,自然,1
+grade_4_0310,desert,砂漠,沙漠,n,I have never been to the desert.,私は砂漠に行ったことがありません。,我從來沒有去過沙漠。,自然,自然,1
+grade_4_0311,city,都市,城市,n,I live in a city.,私は都市に住んでいます。,我住在城市。,都市,城市,1
+grade_4_0312,town,町,町,n,I like to visit towns.,私は町を訪れることを好みます。,我喜歡參觀城市。,都市,城市,1
+grade_4_0313,village,村,村,n,I like to visit villages.,私は村を訪れることを好みます。,我喜歡參觀村莊。,都市,城市,1
+grade_4_0314,country,国,國家,n,I like to visit countries.,私は国を訪れることを好みます。,我喜歡訪問這個國家。,国家,國家,1
+grade_4_0315,world,世界,世界,n,I like to travel around the world.,私は世界を旅行することを好みます。,我喜歡環遊世界。,世界,世界,1
+grade_4_0316,stone,石,石頭,n,The stone is hard.,石は硬いです。,石頭是硬的。,地面の固いもの,地面堅硬的東西,1
+grade_4_0317,ice,氷,冰,n,The ice is cold.,氷は冷たいです。,冰是冷的。,冷たい固いもの,冰冷堅硬的東西,1
+grade_4_0318,thunder,雷,雷,n,The thunder is loud.,雷はうるさいです。,雷很吵。,空の大きい音,天空的聲音很大,1
+grade_4_0319,lightning,電光,電子大屏幕,n,The lightning is bright.,電光は明るいです。,電光很亮。,空の光,天空的光,1
+grade_4_0320,storm,嵐,風暴,n,The storm is coming.,嵐が来ています。,風暴來了。,天気の悪いこと,天氣不好,1
+grade_4_0321,weather,天気,天氣,n,The weather is nice.,天気はいいです。,天氣很好。,空の状態,空的狀態,1
+grade_4_0322,low,低い,低,adj,The valley is low.,谷は低いです。,山谷很低。,高度の低い,高度低,1
+grade_4_0323,along,に沿って,沿着,prep,I walked along the river.,私は川に沿って歩きました。,我沿着河邊走了。,,,2
+grade_4_0324,by,によって,根據,prep,I was helped by my friend.,私は友達に助けられました。,我得到了朋友的幫助。,,,2
+grade_4_0325,about,について,關於,prep,I am talking about my hobby.,私は私の趣味について話しています。,我在談論我的愛好。,,,2
+grade_4_0326,after,の後,後,prep,I will meet you after school.,私は学校の後にお会いします。,放學後見你。,,,1
+grade_4_0327,during,の間,之間的,prep,I will be on vacation during the summer.,私は夏の間、休暇を取ります。,我暑假期間休假。,,,2
+grade_4_0328,since,以来,以後,prep,I have been studying English since I was a child.,私は子供の頃から英語を勉強しています。,我從小開始學習英語。,,,2
+grade_4_0329,although, хотя,хотя,conj,"I will go to the party, although I am tired.",私は疲れているが、パーティーに行きます。,我累了，但我要去參加派對。,,,3
+grade_4_0330,if,もし,如果,conj,I will go to the store if I have time.,時間があるなら、店に行きます。,如果有時間，我會去商店。,,,2
+grade_4_0331,wisely,賢く,聰明,adv,I will make a wise decision.,私は賢い決定を下します。,我會做出明智的決定。,,,3
+grade_4_0332,politely,丁寧に,禮貌地,adv,I will speak politely to my teacher.,私は先生に丁寧に話します。,我會禮貌地跟老師說話。,,,3
+grade_4_0333,child,子供,孩子,n,I love children.,私は子供を愛しています。,我愛孩子。,若い人,年輕人,1
+grade_4_0334,boy,男の子,男孩,n,The boy is playing.,男の子は遊んでいます。,男孩在玩。,男性の子供,男人的孩子,1
+grade_4_0335,day,日,日,n,Today is a sunny day.,今日は晴れた日です。,今天是個晴天。,24時間,24小時,1
+grade_4_0336,month,月,月,n,I have a plan for this month.,私は今月の計画を持っています。,我有這個月的計劃。,約30-31日,約30-31天,1
+grade_4_0337,year,年,年,n,I am looking forward to the new year.,私は新しい年を楽しみに待っています。,我期待着新的一年。,約365日,大約365天,1
+grade_4_0338,hour,時間,時間,n,I have an hour to finish this task.,私はこのタスクを終わらせるために1時間あります。,我有一個小時來完成這個任務。,60分,60分鐘,1
+grade_4_0339,minute,分,分,n,I have a minute to think.,私は考えるために1分あります。,我有一分鐘的時間去思考。,60秒,60秒,1
+grade_4_0340,second,秒,秒,n,I have a second to react.,私は反応するために1秒あります。,我有一秒鐘的反應。,最小の時間単位,最小時間單位,1
+grade_4_0341,smile,微笑む,微笑,v,I like to smile at people.,私は人に微笑むことが好きだ。,我喜歡對人微笑。,喜んで顔にする,高興地做表情,1
+grade_4_0342,mirror,鏡,鏡子,n,I am looking in the mirror.,私は鏡を見ている。,我看着鏡子。,自分を見るためのもの,用來審視自己的東西,1
+grade_4_0343,bed,ベッド,牀,n,I am sleeping in bed.,私はベッドで寝ている。,我睡在牀上。,眠るための家具,傢俱睡覺,1
+grade_4_0344,shower,シャワー,淋浴,n,I am taking a shower.,私はシャワーを浴びている。,我正在淋浴。,体を洗うためのもの,用來洗身體的東西,1
+grade_4_0345,toothbrush,歯ブラシ,牙刷,n,I am using a toothbrush.,私は歯ブラシを使っている。,我用牙刷。,歯を磨くためのもの,用來刷牙的東西,1
+grade_4_0346,soap,石鹸,肥皂,n,I am using soap.,私は石鹸を使っている。,我用肥皂。,体を洗うためのもの,用來洗身體的東西,1
+grade_4_0347,towel,タオル,毛巾,n,I am using a towel.,私はタオルを使っている。,我用毛巾。,体を乾かすためのもの,用來曬乾身體的東西,1
+grade_4_0348,relax,リラックス,放鬆,v,I like to relax.,私はリラックスすることが好きだ。,我喜歡放鬆。,心を休ませる,使心情放鬆,1
+grade_4_0349,calm,静か,安靜,adj,The music is calm.,音楽は静かだ。,音樂很安靜。,穏やか,平穩,1
+grade_4_0350,peaceful,平和,和平,adj,The park is peaceful.,公園は平和だ。,公園很和平。,争いがない,沒有爭執,2
+grade_4_0351,gently,優しく,溫柔,adv,I am touching gently.,私は優しく触れている。,我溫柔地撫摸着。,強くない,不強,1
+grade_4_0352,kindly,親切に,親切地,adv,I am speaking kindly.,私は親切に話している。,我親切地說話。,優しく,溫柔,1
+grade_4_0353,behind,後ろ,後面,prep,The book is behind the door.,本はドアの後ろにあります。,書在門後面。,後ろにある,在後面,1

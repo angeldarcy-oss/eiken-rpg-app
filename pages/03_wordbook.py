@@ -98,7 +98,7 @@ if "engine" in st.session_state and st.session_state.engine is not None:
                 "meaning_ja": row["meaning_ja"],
                 "meaning_zh": "" if str(row.get("meaning_zh", "")) == "nan" else str(row.get("meaning_zh", "")),
                 "miss_count": int(row["miss_count"]),
-                "hint": row.get("hint", ""),
+                "hint": "" if str(row.get("hint", "")) == "nan" else str(row.get("hint", "")),
                 "example_en": str(row.get("example_en", "")),
                 "example_ja": str(row.get("example_ja", "")),
             })
@@ -161,6 +161,7 @@ else:
         miss_color = "#ff8080" if miss >= 3 else "#ffaa44"
         miss_label = t("miss_label", lang).format(n=miss)
 
+        hint = str(hint) if hint and str(hint) != "nan" else ""
         hint_html = '<div style="font-size:.8rem;color:#aaaa88;margin-top:6px;">💡 ' + hint + '</div>' if hint else ""
         example_html = (
             '<div style="font-size:.85rem;color:#aaaacc;font-style:italic;margin-top:8px;">'

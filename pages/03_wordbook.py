@@ -9,6 +9,7 @@ if str(_root) not in sys.path:
 from core.save_manager import load_player, save_player, get_user_save_path
 from core.player import PlayerManager
 from core.i18n import t, grade_label
+from core.characters import sidebar_avatar_html
 
 st.set_page_config(page_title="単語帳 | 英検Quest", page_icon="📖", layout="centered", initial_sidebar_state="expanded")
 
@@ -42,12 +43,13 @@ def render_sidebar():
     pm = PlayerManager(p)
     hp_pct = pm.hp_percent() * 100
     exp_pct = pm.exp_percent() * 100
+    char_id = p.get("character", "")
     with st.sidebar:
         st.markdown(
-            '<div style="text-align:center;padding:16px 0 8px;">'
-            '<div style="font-size:3rem;">⚔️</div>'
-            '<div style="font-size:1.3rem;font-weight:700;color:#ffe066;margin-top:8px;">' + p["name"] + '</div>'
-            '<div style="font-size:.85rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
+            '<div style="text-align:center;padding:12px 0 6px;">'
+            + sidebar_avatar_html(char_id) +
+            '<div style="font-size:1.2rem;font-weight:700;color:#ffe066;margin-top:6px;">' + p["name"] + '</div>'
+            '<div style="font-size:.8rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
         st.markdown('<div class="stat-label">' + t("hp", lang) + ' ' + str(p["hp"]) + ' / ' + str(p["hp_max"]) + '</div>', unsafe_allow_html=True)

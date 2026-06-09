@@ -344,6 +344,7 @@ def new_player(name: str = "勇者", grade_target: str = "grade_4", language: st
         "total_exp_earned": 0,
         "total_damage_taken": 0,
         "language": language,
+        "character": "",
     }
 
 

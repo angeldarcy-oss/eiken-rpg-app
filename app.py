@@ -12,6 +12,7 @@ from core.save_manager import (
 )
 from core.player import PlayerManager, streak_multiplier, STREAK_BONUS_TABLE
 from core.i18n import t, grade_label, LANG_OPTIONS
+from core.characters import CHARACTERS, CHARACTER_ORDER, get_character, sidebar_avatar_html
 
 st.set_page_config(page_title="英検Quest", page_icon="⚔️", layout="centered", initial_sidebar_state="expanded")
 
@@ -25,6 +26,9 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .exp-bar-inner{background:linear-gradient(90deg,#c8a000,#ffe066);height:100%;border-radius:8px;}
 .stat-label{font-size:11px;color:#aaaacc !important;}
 .info-card{background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:1px solid #3a3a6a;border-radius:12px;padding:20px 24px;margin-bottom:16px;}
+.char-card{background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:2px solid #3a3a6a;border-radius:16px;padding:16px 12px;text-align:center;cursor:pointer;transition:all .2s;}
+.char-card:hover{border-color:#7766cc;background:linear-gradient(135deg,#2a2a4a,#3a3a6a);}
+.char-card-selected{border-color:#ffe066 !important;background:linear-gradient(135deg,#2a2000,#3a3000) !important;}
 </style>""", unsafe_allow_html=True)
 
 
@@ -38,7 +42,7 @@ init_session()
 
 
 # ─────────────────────────────────────────
-# ログイン画面（言語切替なし：デフォルト日本語）
+# ログイン画面
 # ─────────────────────────────────────────
 if not st.session_state.logged_in:
     st.markdown(
@@ -112,6 +116,70 @@ if not st.session_state.logged_in:
 
 
 # ─────────────────────────────────────────
+# キャラクター選択画面
+# ─────────────────────────────────────────
+def show_character_select(is_change: bool = False):
+    p = st.session_state.player
+    current_char = p.get("character", "")
+
+    st.markdown(
+        '<div style="text-align:center;padding:24px 0 8px;">'
+        '<div style="font-size:2rem;font-weight:700;background:linear-gradient(135deg,#ffe066,#ffaa00);'
+        '-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">'
+        + ("冒険の仲間を選ぼう" if not is_change else "キャラクターを変更する") +
+        '</div>'
+        '<div style="color:#888;font-size:.9rem;margin-top:6px;">'
+        'あなたと共に英知の試練を乗り越えるキャラクターを選んでください'
+        '</div>'
+        '</div>', unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    cols_per_row = 2
+    char_ids = CHARACTER_ORDER
+    rows = [char_ids[i:i+cols_per_row] for i in range(0, len(char_ids), cols_per_row)]
+
+    for row in rows:
+        cols = st.columns(cols_per_row)
+        for col, char_id in zip(cols, row):
+            c = CHARACTERS[char_id]
+            is_selected = (char_id == current_char)
+            border_color = "#ffe066" if is_selected else "#3a3a6a"
+            bg = "linear-gradient(135deg,#2a2000,#3a3000)" if is_selected else "linear-gradient(135deg,#1e1e3a,#2a2a4a)"
+            with col:
+                st.markdown(
+                    f'<div style="background:{bg};border:2px solid {border_color};border-radius:16px;'
+                    f'padding:16px 10px;text-align:center;margin-bottom:4px;">'
+                    f'<div style="width:80px;height:100px;margin:0 auto;">{c["svg"]}</div>'
+                    f'<div style="font-size:1.1rem;font-weight:700;color:#ffe066;margin-top:8px;">{c["name"]}</div>'
+                    f'<div style="font-size:.75rem;color:#aa88ff;margin-bottom:6px;">{c["title"]}</div>'
+                    f'<div style="font-size:.75rem;color:#aaaacc;line-height:1.5;margin-bottom:10px;">{c["story"]}</div>'
+                    f'</div>',
+                    unsafe_allow_html=True)
+                btn_label = "✓ 選択中" if is_selected else "選択する"
+                btn_type = "primary" if not is_selected else "secondary"
+                if st.button(btn_label, key=f"select_char_{char_id}", use_container_width=True, type=btn_type):
+                    st.session_state.player["character"] = char_id
+                    save_player(st.session_state.player, st.session_state.get("username", ""))
+                    st.rerun()
+        st.markdown("<br>", unsafe_allow_html=True)
+
+    if not is_change:
+        st.markdown(
+            '<div style="text-align:center;color:#666;font-size:.82rem;margin-top:8px;">'
+            'キャラクターは後で設定ページからいつでも変更できます'
+            '</div>', unsafe_allow_html=True)
+
+
+# ─────────────────────────────────────────
+# 初回キャラクター選択（未選択なら強制表示）
+# ─────────────────────────────────────────
+if not st.session_state.player.get("character"):
+    show_character_select(is_change=False)
+    st.stop()
+
+
+# ─────────────────────────────────────────
 # ログイン後：サイドバー
 # ─────────────────────────────────────────
 def render_sidebar():
@@ -132,12 +200,17 @@ def render_sidebar():
     elif next_thresh:
         bonus_html = '<span style="color:#888;">あと' + str(next_thresh - streak) + '問でボーナス！</span>'
 
+    char_id = p.get("character", "")
+    c = get_character(char_id)
+
     with st.sidebar:
         st.markdown(
-            '<div style="text-align:center;padding:16px 0 8px;">'
-            '<div style="font-size:3rem;">⚔️</div>'
-            '<div style="font-size:1.3rem;font-weight:700;color:#ffe066;margin-top:8px;">' + p["name"] + '</div>'
-            '<div style="font-size:.85rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
+            '<div style="text-align:center;padding:12px 0 6px;">'
+            + sidebar_avatar_html(char_id) +
+            '<div style="font-size:1.2rem;font-weight:700;color:#ffe066;margin-top:6px;">' + p["name"] + '</div>'
+            '<div style="font-size:.8rem;color:#aaaacc;">'
+            + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) +
+            '</div>'
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
         st.markdown('<div class="stat-label">' + t("hp", lang) + ' ' + str(p["hp"]) + ' / ' + str(p["hp_max"]) + '</div>', unsafe_allow_html=True)
@@ -177,6 +250,7 @@ render_sidebar()
 # ─────────────────────────────────────────
 p = st.session_state.player
 lang = p.get("language", "ja")
+c = get_character(p.get("character", ""))
 
 st.markdown(
     '<div style="font-size:2.5rem;font-weight:700;text-align:center;'
@@ -188,11 +262,14 @@ st.markdown(
 
 st.markdown(
     '<div class="info-card">'
+    '<div style="display:flex;align-items:center;gap:20px;">'
+    '<div style="flex-shrink:0;width:70px;height:88px;">' + c["svg"] + '</div>'
     '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">'
-    '⚔️ ' + t("home_welcome", lang) + '<b style="color:#ffe066;">' + p["name"] + '</b>！<br>' +
-    t("level", lang) + ' <b style="color:#fff;">' + str(p["level"]) + '</b> | '
+    '<b style="color:#ffe066;">' + c["name"] + '</b>（' + c["title"] + '）と共に冒険中！<br>'
+    '⚔️ ' + t("home_welcome", lang) + '<b style="color:#ffe066;">' + p["name"] + '</b>！<br>'
+    + t("level", lang) + ' <b style="color:#fff;">' + str(p["level"]) + '</b> | '
     + t("home_challenge", lang) + '<b style="color:#fff;">' + grade_label(p["grade_target"], lang) + '</b>' + t("home_challenge_sub", lang) +
-    '</div></div>',
+    '</div></div></div>',
     unsafe_allow_html=True)
 
 st.markdown(

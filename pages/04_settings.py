@@ -9,6 +9,7 @@ if str(_root) not in sys.path:
 from core.save_manager import load_player, save_player, delete_save
 from core.player import PlayerManager, new_player
 from core.i18n import t, grade_label, LANG_OPTIONS
+from core.characters import CHARACTERS, CHARACTER_ORDER, get_character, sidebar_avatar_html
 
 st.set_page_config(page_title="設定 | 英検Quest", page_icon="⚙️", layout="centered", initial_sidebar_state="expanded")
 
@@ -23,6 +24,12 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .stat-label{font-size:11px;color:#aaaacc !important;}
 .setting-card{background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:1px solid #3a3a6a;border-radius:12px;padding:24px;margin-bottom:16px;}
 </style>""", unsafe_allow_html=True)
+
+_CHAR_CARD_CSS = """<style>
+.char-mini-card{background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:2px solid #3a3a6a;border-radius:12px;padding:12px 8px;text-align:center;margin-bottom:4px;}
+.char-mini-selected{border-color:#ffe066 !important;background:linear-gradient(135deg,#2a2000,#3a3000) !important;}
+</style>"""
+st.markdown(_CHAR_CARD_CSS, unsafe_allow_html=True)
 
 GRADE_OPTIONS = {
     "grade_5": "英検5級",
@@ -49,12 +56,13 @@ def render_sidebar():
     pm = PlayerManager(p)
     hp_pct = pm.hp_percent() * 100
     exp_pct = pm.exp_percent() * 100
+    char_id = p.get("character", "")
     with st.sidebar:
         st.markdown(
-            '<div style="text-align:center;padding:16px 0 8px;">'
-            '<div style="font-size:3rem;">⚔️</div>'
-            '<div style="font-size:1.3rem;font-weight:700;color:#ffe066;margin-top:8px;">' + p["name"] + '</div>'
-            '<div style="font-size:.85rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
+            '<div style="text-align:center;padding:12px 0 6px;">'
+            + sidebar_avatar_html(char_id) +
+            '<div style="font-size:1.2rem;font-weight:700;color:#ffe066;margin-top:6px;">' + p["name"] + '</div>'
+            '<div style="font-size:.8rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
             '</div>', unsafe_allow_html=True)
         st.markdown("---")
         st.markdown('<div class="stat-label">' + t("hp", lang) + ' ' + str(p["hp"]) + ' / ' + str(p["hp_max"]) + '</div>', unsafe_allow_html=True)
@@ -168,6 +176,46 @@ if st.button(("💾 言語を保存" if lang == "ja" else "💾 儲存語言"), 
             del st.session_state[key]
     st.success(t("lang_saved_msg", selected_lang_code))
     st.rerun()
+
+st.markdown('</div>', unsafe_allow_html=True)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# ── キャラクター変更 ──
+st.markdown('<div class="setting-card">', unsafe_allow_html=True)
+st.markdown(
+    '<div style="font-size:1rem;font-weight:700;color:#ffe066;margin-bottom:4px;">キャラクター変更</div>'
+    '<div style="font-size:.85rem;color:#888;margin-bottom:16px;">冒険を共にするキャラクターを選び直せます</div>',
+    unsafe_allow_html=True)
+
+current_char = p.get("character", "")
+char_cols_per_row = 2
+char_rows = [CHARACTER_ORDER[i:i+char_cols_per_row] for i in range(0, len(CHARACTER_ORDER), char_cols_per_row)]
+
+for char_row in char_rows:
+    ccols = st.columns(char_cols_per_row)
+    for ccol, char_id in zip(ccols, char_row):
+        c = CHARACTERS[char_id]
+        is_selected = (char_id == current_char)
+        border_color = "#ffe066" if is_selected else "#3a3a6a"
+        bg = "linear-gradient(135deg,#2a2000,#3a3000)" if is_selected else "linear-gradient(135deg,#1e1e3a,#2a2a4a)"
+        with ccol:
+            st.markdown(
+                f'<div style="background:{bg};border:2px solid {border_color};border-radius:12px;'
+                f'padding:10px 8px;text-align:center;margin-bottom:4px;">'
+                f'<div style="width:60px;height:75px;margin:0 auto;">{c["svg"]}</div>'
+                f'<div style="font-size:.95rem;font-weight:700;color:#ffe066;margin-top:6px;">{c["name"]}</div>'
+                f'<div style="font-size:.7rem;color:#aa88ff;">{c["title"]}</div>'
+                f'</div>',
+                unsafe_allow_html=True)
+            btn_label = "✓ 選択中" if is_selected else "変更する"
+            btn_type = "primary" if not is_selected else "secondary"
+            if st.button(btn_label, key=f"settings_char_{char_id}", use_container_width=True, type=btn_type):
+                st.session_state.player["character"] = char_id
+                save_player(st.session_state.player, st.session_state.get("username", ""))
+                st.success(f"{c['name']}（{c['title']}）に変更しました！")
+                st.rerun()
+    st.markdown("<br>", unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)
 

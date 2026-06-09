@@ -331,13 +331,32 @@ with st.expander("🎒 所持アイテム一覧（インベントリ）"):
             meta = _EQUIP_ITEMS.get(item_id, {})
             is_eq = item_id in equipped_ids
             glow = "filter:drop-shadow(0 0 4px #ffcc00);" if meta.get("rare") else ""
+            bonus_desc = get_bonus_description(item_id)
+            if bonus_desc and is_eq:
+                bonus_html = (
+                    '<div style="font-size:.62rem;color:#66ee88;font-weight:700;'
+                    'margin-top:4px;line-height:1.4;">' + bonus_desc + '</div>'
+                    '<div style="display:inline-block;background:#0a3a14;border:1px solid #44cc66;'
+                    'border-radius:6px;padding:1px 5px;font-size:.55rem;color:#44ff88;'
+                    'margin-top:2px;">✅ 効果発動中</div>'
+                )
+            elif bonus_desc:
+                bonus_html = (
+                    '<div style="font-size:.62rem;color:#556655;margin-top:4px;">'
+                    + bonus_desc + '</div>'
+                )
+            else:
+                bonus_html = '<div style="font-size:.55rem;color:#88ccff;margin-top:2px;">装備中</div>' if is_eq else ''
             with cols[j % 4]:
                 st.markdown(
-                    '<div style="text-align:center;padding:8px 4px;background:#1a1a2e;'
-                    'border:1px solid ' + ("#ffe066" if is_eq else "#3a3a6a") + ';border-radius:8px;margin-bottom:4px;">'
+                    '<div style="text-align:center;padding:8px 4px;'
+                    'background:' + ("linear-gradient(135deg,#2a2000,#3a3000)" if is_eq else "#1a1a2e") + ';'
+                    'border:1px solid ' + ("#ffe066" if is_eq else "#3a3a6a") + ';'
+                    'border-radius:8px;margin-bottom:4px;min-height:90px;">'
                     '<div style="font-size:1.6rem;' + glow + '">' + meta.get("icon", "📦") + '</div>'
-                    '<div style="font-size:.65rem;color:' + ("#ffe066" if is_eq else "#aaaacc") + ';">'
+                    '<div style="font-size:.65rem;color:' + ("#ffe066" if is_eq else "#aaaacc") + ';'
+                    'font-weight:' + ("700" if is_eq else "400") + ';">'
                     + meta.get("name", item_id) + '</div>'
-                    + ('<div style="font-size:.55rem;color:#88ccff;">装備中</div>' if is_eq else '') +
+                    + bonus_html +
                     '</div>', unsafe_allow_html=True)
-    st.caption("装備の変更は「設定」ページから行えます")
+    st.caption("装備の変更はデイリーページから行えます")

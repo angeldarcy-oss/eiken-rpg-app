@@ -409,3 +409,33 @@ grade_5_0407,package,荷物,行李,n,I receive a package.,私は荷物を受け�
 grade_5_0408,box,箱,箱子,n,I have a box.,私は箱を持っています。,我有一個盒子。,,,1
 grade_5_0409,envelope,封筒,信封,n,I use an envelope.,私は封筒を使います。,我用信封。,,,3
 grade_5_0410,stamp,切手,郵票,n,I buy a stamp.,私は切手を買います。,我買郵票。,,,3
+grade_5_0411,orange,オレンジ,橘子,n,I eat an orange.,私はオレンジを食べます。,我吃橙子。,,,1
+grade_5_0412,photo,写真,照片,n,I take a photo.,私は写真を撮ります。,我拍照。,,,1
+grade_5_0413,toy,おもちゃ,玩具,n,I play with toys.,私はおもちゃで遊びます。,我玩玩具。,,,1
+grade_5_0414,zip,ジップ,拉鍊,n,I zip up my jacket.,私はジャケットのジップを閉じます。,我拉上夾克拉鍊。,,,1
+grade_5_0415,ear,耳,耳朵,n,I listen with my ear.,私は耳で聞きます。,我用耳朵聽。,,,1
+grade_5_0416,face,顔,臉,n,I wash my face.,私は顔を洗います。,我洗臉。,,,1
+grade_5_0417,finger,指,手指,n,I use my finger.,私は指を使用します。,我用我的手指。,,,1
+grade_5_0418,foot,足,腳,n,I walk on my foot.,私は足で歩きます。,我用腳走路。,,,1
+grade_5_0419,hand,手,手,n,I use my hand.,私は手を使います。,我用手。,,,1
+grade_5_0420,head,頭,頭,n,I have a head.,私は頭を持っています。,我有一個頭。,,,1
+grade_5_0421,leg,足,腳,n,I walk on my leg.,私は足で歩きます。,我用腳走路。,,,1
+grade_5_0422,mouth,口,口,n,I eat with my mouth.,私は口で食べます。,我用嘴吃飯。,,,1
+grade_5_0423,nose,鼻,鼻子,n,I breathe with my nose.,私は鼻で息を吸います。,我用鼻子吸氣。,,,1
+grade_5_0424,song,歌,歌,n,I like a song.,私は歌が好きです。,我喜歡唱歌。,,,1
+grade_5_0425,tv,テレビ,電視,n,I watch tv.,私はテレビを見ます。,我看電視。,機器,設備,1
+grade_5_0426,forest,森,森林,n,I walk in the forest.,私は森を歩きます。,我在森林裏散步。,場所,地點,2
+grade_5_0427,about,について,關於,prep,I am talking about the movie.,私は映画について話しています。,我在談論電影。,,,3
+grade_5_0428,country,国,國家,n,I live in a country.,私は国に住んでいます。,我住在該國。,,,1
+grade_5_0429,world,世界,世界,n,I live in the world.,私は世界に住んでいます。,我生活在世界上。,,,1
+grade_5_0430,summer,夏,夏天,n,I like summer.,私は夏が好きです。,我喜歡夏天。,,,1
+grade_5_0431,winter,冬,冬天,n,I like winter.,私は冬が好きです。,我喜歡冬天。,,,1
+grade_5_0432,spring,春,春天,n,I like spring.,私は春が好きです。,我喜歡春天。,,,1
+grade_5_0433,autumn,秋,秋,n,I like autumn.,私は秋が好きです。,我喜歡秋天。,,,1
+grade_5_0434,warm,あたたかい,暖和,adj,The water is warm.,水はあたたかいです。,水是溫暖的。,,,1
+grade_5_0435,cool,涼しい,涼爽,adj,The water is cool.,水は涼しいです。,水是涼爽的。,,,1
+grade_5_0436,classroom,教室,教室,n,I am in the classroom.,私は教室にいます。,我在教室裏。,学校,學校,2
+grade_5_0437,weather,天気,天氣,n,The weather is sunny.,天気は晴れています。,天氣晴朗。,予報,預報,2
+grade_5_0438,toys,玩具,玩具,n,I play with toys.,私は玩具で遊びます。,我玩玩具。,,,1
+grade_5_0439,forward,前,前,adv,I move forward.,私は前進します。,我前進。,,,1
+grade_5_0440,backward,後ろ,後面,adv,I move backward.,私は後ろに移動します。,我向後移動。,,,1

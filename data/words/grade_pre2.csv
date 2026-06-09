@@ -1,16 +1,147 @@
-word_id,grade,word,part_of_speech,meaning_ja,meaning_zh,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,hint_zh,tags,difficulty,example_zh
-gpre2_001,grade_pre2,absolute,adj,絶対的な,絕對的,完全な,I have absolute confidence.,私は絶対的な自信があります。,相対的な,部分的な,一時的な,ab（離れた）＋solute（解かれた）→何にも縛られない,ab（分離）+ solute（解除）→不被任何東西束縛,academic|adjective,4,我有絕對的信心。
-gpre2_002,grade_pre2,accomplish,v,成し遂げる,達成,達成する,She accomplished her goal.,彼女は目標を成し遂げました。,失敗する,諦める,始める,ac＋com（共に）＋plish（満たす）,ac + com（共同）+ plish（滿足）,achievement|verb,4,她實現了目標。
-gpre2_003,grade_pre2,advantage,n,利点,優點,有利,There are many advantages to this plan.,この計画には多くの利点があります。,欠点,問題,危険,advance（前進）から来ている,advance（前進）的意思,business|noun,4,這個計劃有很多好處。
-gpre2_004,grade_pre2,appropriate,adj,適切な,適當的,ふさわしい,Please wear appropriate clothes.,適切な服を着てください。,不適切な,派手な,古い,appro（〜へ）＋priate（固有の）→その場にふさわしい,appro (~) + priate（固有的）→適合場合,academic|adjective,4,穿合適的衣服。
-gpre2_005,grade_pre2,atmosphere,n,雰囲気,氣氛,大気,The restaurant has a nice atmosphere.,そのレストランは素敵な雰囲気があります。,景色,音楽,サービス,atmos（蒸気）＋sphere（球）→地球を包む空気,atmos（蒸汽）+ sphere（球）→環繞地球的空氣,science|noun,4,餐廳有很棒的氣氛。
-gpre2_006,grade_pre2,befollow,v,〜に従う,遵循……,,Please follow the instructions.,指示に従ってください。,無視する,変える,疑う,,,action|verb,4,請按照指示。
-gpre2_007,grade_pre2,concentrate,v,集中する,專注,,Please concentrate on your work.,仕事に集中してください。,休む,諦める,急ぐ,con（共に）＋centrate（中心に集める）,con（在一起）+ centrate（集中在中心）,study|verb,4,請集中精力工作。
-gpre2_008,grade_pre2,convenient,adj,便利な,方便的,,This app is very convenient.,このアプリはとても便利です。,不便な,複雑な,高価な,コンビニエンスストアの「コンビニ」,便利店的“便利店”,lifestyle|adjective,4,這個應用程序非常有用。
-gpre2_009,grade_pre2,contribute,v,貢献する,貢獻,寄付する,He contributed to the project.,彼はプロジェクトに貢献しました。,妨害する,批判する,離れる,con（共に）＋tribute（与える）,con（共同）+ tribute（給予）,society|verb,4,他爲項目做出了貢獻。
-gpre2_010,grade_pre2,determine,v,決定する,決定,〜を決意する,She determined to study abroad.,彼女は留学することを決意しました。,迷う,諦める,忘れる,de（完全に）＋termine（境界を定める）,de（完全）+ termine（確定邊界）,achievement|verb,4,她決定去留學。
-gpre2_011,grade_pre2,enormous,adj,巨大な,巨大的,膨大な,There was an enormous crowd.,巨大な群衆がいました。,小さな,普通の,静かな,e（外）＋norm（規則）＋ous→規則を超えた大きさ,e（外）+ norm（規則）+ ous→超出規則的大小,size|adjective,4,有一個巨大的人羣。
-gpre2_012,grade_pre2,examine,v,調べる,檢查,試験する,The doctor examined the patient.,医師は患者を診察しました。,無視する,信じる,助ける,ex（外に）＋amine（駆る）→外から詳しく見る,ex（外）+ amine（跑）→從外觀看詳細內容,study|verb,4,醫生檢查了病人。
-gpre2_013,grade_pre2,industry,n,産業,產業,工業,The car industry is changing.,自動車産業は変わっています。,農業,教育,医療,,,business|noun,4,汽車行業正在改變。
-gpre2_014,grade_pre2,involve,v,含む,包含,関与する,This plan involves many people.,この計画は多くの人を含みます。,除外する,簡略化する,終了する,in（中に）＋volve（巻く）→中に巻き込む,in（中）+ volve（卷）,abstract|verb,4,這個計劃涉及很多人。
-gpre2_015,grade_pre2,obvious,adj,明らかな,明顯的,明白な,The answer is obvious.,答えは明らかです。,不明な,複雑な,難しい,ob（前に）＋vious（道）→道の前に見えている,ob（前面）+ vious（道路）→道路前面可見,academic|adjective,4,答案很明顯。
+word_id,word,meaning_ja,part_of_speech,example_en,example_ja,hint,difficulty
+gpre2_001,absolute,絶対的な,adj,I have absolute confidence.,私は絶対的な自信があります。,ab（離れた）＋solute（解かれた）→何にも縛られない,4
+gpre2_002,accomplish,成し遂げる,v,She accomplished her goal.,彼女は目標を成し遂げました。,ac＋com（共に）＋plish（満たす）,4
+gpre2_003,advantage,利点,n,There are many advantages to this plan.,この計画には多くの利点があります。,advance（前進）から来ている,4
+gpre2_004,appropriate,適切な,adj,Please wear appropriate clothes.,適切な服を着てください。,appro（〜へ）＋priate（固有の）→その場にふさわしい,4
+gpre2_005,atmosphere,雰囲気,n,The restaurant has a nice atmosphere.,そのレストランは素敵な雰囲気があります。,atmos（蒸気）＋sphere（球）→地球を包む空気,4
+gpre2_006,befollow,〜に従う,v,Please follow the instructions.,指示に従ってください。,,4
+gpre2_007,concentrate,集中する,v,Please concentrate on your work.,仕事に集中してください。,con（共に）＋centrate（中心に集める）,4
+gpre2_008,convenient,便利な,adj,This app is very convenient.,このアプリはとても便利です。,コンビニエンスストアの「コンビニ」,4
+gpre2_009,contribute,貢献する,v,He contributed to the project.,彼はプロジェクトに貢献しました。,con（共に）＋tribute（与える）,4
+gpre2_010,determine,決定する,v,She determined to study abroad.,彼女は留学することを決意しました。,de（完全に）＋termine（境界を定める）,4
+gpre2_011,enormous,巨大な,adj,There was an enormous crowd.,巨大な群衆がいました。,e（外）＋norm（規則）＋ous→規則を超えた大きさ,4
+gpre2_012,examine,調べる,v,The doctor examined the patient.,医師は患者を診察しました。,ex（外に）＋amine（駆る）→外から詳しく見る,4
+gpre2_013,industry,産業,n,The car industry is changing.,自動車産業は変わっています。,,4
+gpre2_014,involve,含む,v,This plan involves many people.,この計画は多くの人を含みます。,in（中に）＋volve（巻く）→中に巻き込む,4
+gpre2_015,obvious,明らかな,adj,The answer is obvious.,答えは明らかです。,ob（前に）＋vious（道）→道の前に見えている,4
+grade_pre2_0016,village,村,n,I live in a small village.,私は小さな村に住んでいます。,,1
+grade_pre2_0017,calculate,計算する,v,Can you calculate the total cost?,合計費用を計算できますか。,,2
+grade_pre2_0018,sunny,晴れた,adj,It's a sunny day today.,今日は晴れています。,,1
+grade_pre2_0019,quickly,速く,adv,Please finish the work quickly.,仕事を速く終わらせてください。,,1
+grade_pre2_0020,library,図書館,n,I often go to the library.,私はよく図書館に行きます。,,1
+grade_pre2_0021,decide,決定する,v,I will decide what to do tomorrow.,私は明日何をするかを決めます。,,2
+grade_pre2_0022,cloudy,曇った,adj,It's a cloudy day today.,今日は曇っています。,,1
+grade_pre2_0023,slowly,ゆっくり,adv,Please speak slowly.,ゆっくり話してください。,,1
+grade_pre2_0024,hospital,病院,n,My mother is in the hospital.,私の母は病院にいます。,,1
+grade_pre2_0025,remember,覚える,v,I will remember your birthday.,私はあなたの誕生日を覚えておきます。,,2
+grade_pre2_0026,beautiful,美しい,adj,The sunset is beautiful.,夕日は美しいです。,,1
+grade_pre2_0027,loudly,うるさく,adv,Please don't speak loudly.,うるさく話さないでください。,,1
+grade_pre2_0028,school,学校,n,I go to school every day.,私は毎日学校に行きます。,,1
+grade_pre2_0029,learn,習う,v,I want to learn English.,私は英語を習いたいです。,,2
+grade_pre2_0030,happy,幸せな,adj,I'm happy today.,私は今日幸せです。,,1
+grade_pre2_0031,quick,速い,adj,He is a quick runner.,彼は速い走者です。,,1
+grade_pre2_0032,proud,誇らしい,adj,I'm proud of my family.,私は私の家族に誇らしいです。,,2
+grade_pre2_0033,store,店,n,I'm going to the store.,私は店に行きます。,,1
+grade_pre2_0034,write,書く,v,I will write a letter.,私は手紙を書きます。,,2
+grade_pre2_0035,tall,背が高い,adj,He is a tall man.,彼は背が高い男性です。,,1
+grade_pre2_0036,short,背が低い,adj,She is a short woman.,彼女は背が低い女性です。,,1
+grade_pre2_0037,big,大きい,adj,This is a big house.,これは大きい家です。,,1
+grade_pre2_0038,small,小さい,adj,This is a small dog.,これは小さい犬です。,,1
+grade_pre2_0039,hot,暑い,adj,It's hot today.,今日は暑いです。,,1
+grade_pre2_0040,cold,寒い,adj,It's cold today.,今日は寒いです。,,1
+grade_pre2_0041,friend,友達,n,My friend is coming over.,私の友達が来ます。,,1
+grade_pre2_0042,family,家族,n,I love my family.,私は私の家族を愛しています。,,1
+grade_pre2_0043,teacher,先生,n,My teacher is very kind.,私の先生はとても親切です。,,1
+grade_pre2_0044,student,学生,n,I am a student.,私は学生です。,,1
+grade_pre2_0045,book,本,n,I'm reading a book.,私は本を読んでいます。,,1
+grade_pre2_0046,pen,ペン,n,I need a pen.,私はペンが必要です。,,1
+grade_pre2_0047,paper,紙,n,I need some paper.,私は紙が必要です。,,1
+grade_pre2_0048,desk,机,n,I'm sitting at my desk.,私は机に座っています。,,1
+grade_pre2_0049,chair,椅子,n,I'm sitting in a chair.,私は椅子に座っています。,,1
+grade_pre2_0050,table,机,n,I'm eating at the table.,私は机で食事をしています。,,1
+grade_pre2_0051,bed,ベッド,n,I'm sleeping in my bed.,私はベッドで寝ています。,,1
+grade_pre2_0052,door,ドア,n,I'm opening the door.,私はドアを開けています。,,1
+grade_pre2_0053,window,窓,n,I'm looking out the window.,私は窓の外を見ています。,,1
+grade_pre2_0054,car,車,n,I'm driving my car.,私は車を運転しています。,,1
+grade_pre2_0055,bike,自転車,n,I'm riding my bike.,私は自転車に乗っています。,,1
+grade_pre2_0056,train,電車,n,I'm taking the train.,私は電車に乗っています。,,1
+grade_pre2_0057,plane,飛行機,n,I'm flying on a plane.,私は飛行機で飛行しています。,,1
+grade_pre2_0058,bus,バス,n,I'm riding the bus.,私はバスに乗っています。,,1
+grade_pre2_0059,taxi,タクシー,n,I'm taking a taxi.,私はタクシーに乗っています。,,1
+grade_pre2_0060,walk,歩く,v,I like to walk in the park.,私は公園で歩くのが好きです。,,2
+grade_pre2_0061,run,走る,v,I like to run in the morning.,私は朝に走るのが好きです。,,2
+grade_pre2_0062,jump,跳ぶ,v,I like to jump rope.,私は縄跳びが好きです。,,2
+grade_pre2_0063,swim,泳ぐ,v,I like to swim in the pool.,私はプールで泳ぐのが好きです。,,2
+grade_pre2_0064,dance,踊る,v,I like to dance to music.,私は音楽に合わせて踊るのが好きです。,,2
+grade_pre2_0065,sing,歌う,v,I like to sing in the shower.,私はシャワーで歌うのが好きです。,,2
+grade_pre2_0066,play,遊ぶ,v,I like to play with my friends.,私は友達と遊ぶのが好きです。,,2
+grade_pre2_0067,read,読む,v,I like to read books.,私は本を読むのが好きです。,,2
+grade_pre2_0068,watch,見る,v,I like to watch TV.,私はテレビを見るのが好きです。,,2
+grade_pre2_0069,listen,聞く,v,I like to listen to music.,私は音楽を聞くのが好きです。,,2
+grade_pre2_0070,think,考える,v,I'm thinking about my future.,私は私の将来について考えています。,,2
+grade_pre2_0071,abandon,放棄する,v,I abandoned my car on the side of the road.,私は道路脇に車を放棄した。,,2
+grade_pre2_0072,abstract,抽象的な,adj,The artist's abstract paintings were very popular.,その芸術家の抽象的な絵画は非常に人気があった。,,2
+grade_pre2_0073,accelerate,加速する,v,The car accelerated down the highway.,車は高速道路を加速して走った。,,2
+grade_pre2_0074,accommodate,収容する,v,The hotel can accommodate 500 guests.,ホテルは500人の客を収容できる。,,2
+grade_pre2_0075,acquire,取得する,v,She acquired a new language skill.,彼女は新しい言語スキルを取得した。,,2
+grade_pre2_0076,adapt,適応する,v,The company will adapt to the new market trends.,会社は新しい市場トレンドに適応する。,,2
+grade_pre2_0077,adequate,十分な,adj,The hotel room was adequate for our needs.,ホテルの部屋は私たちのニーズに十分だった。,,2
+grade_pre2_0078,advertise,広告する,v,The company will advertise their new product on TV.,会社は新製品をテレビで広告する。,,2
+grade_pre2_0079,aesthetic,美的,adj,The aesthetic design of the building was impressive.,建物の美的なデザインは印象的だった。,,2
+grade_pre2_0080,afford,余裕がある,v,I can afford to buy a new car.,私は新車を買う余裕がある。,,2
+grade_pre2_0081,aggressive,攻撃的な,adj,The company has an aggressive marketing strategy.,会社は攻撃的なマーケティング戦略を持っている。,,2
+grade_pre2_0082,alleged,疑わしい,adj,The alleged thief was arrested by the police.,疑わしい泥棒は警察に逮捕された。,,2
+grade_pre2_0083,ambitious,野心的な,adj,She is an ambitious young entrepreneur.,彼女は野心的な若い起業家だ。,,2
+grade_pre2_0084,ancient,古代の,adj,The ancient city was discovered by archaeologists.,古代の都市は考古学者によって発見された。,,2
+grade_pre2_0085,anticipate,予想する,v,I anticipate a big crowd at the concert.,私はコンサートで大勢の群衆を予想する。,,2
+grade_pre2_0086,anxious,心配した,adj,I'm anxious about the upcoming exam.,私は来る試験について心配している。,,2
+grade_pre2_0087,apologize,謝る,v,I apologize for the mistake.,私はミスについて謝る。,,2
+grade_pre2_0088,appeal,訴える,v,The company will appeal the court's decision.,会社は裁判所の決定を訴える。,,2
+grade_pre2_0089,apply,申し込む,v,I will apply for the job.,私はその仕事に申し込む。,,2
+grade_pre2_0090,appoint,任命する,v,The company will appoint a new CEO.,会社は新しいCEOを任命する。,,2
+grade_pre2_0091,appreciate,感謝する,v,I appreciate your help.,私はあなたの助けを感謝する。,,2
+grade_pre2_0092,approach,アプローチ,n,The company will approach the problem with a new strategy.,会社は新しい戦略で問題にアプローチする。,,2
+grade_pre2_0093,approve,承認する,v,The committee will approve the proposal.,委員会は提案を承認する。,,2
+grade_pre2_0094,argue,議論する,v,I will argue for my position.,私は私の立場を議論する。,,2
+grade_pre2_0095,arise,生じる,v,A problem will arise if we don't act now.,私たちが今行動しないと問題が生じる。,,2
+grade_pre2_0096,arrange,配置する,v,I will arrange the furniture in the room.,私は部屋の家具を配置する。,,2
+grade_pre2_0097,articulate,明確な,adj,The professor's articulate explanation helped me understand the concept.,教授の明確な説明が概念を理解するのを助けた。,,2
+grade_pre2_0098,assemble,組み立てる,v,The team will assemble the machine.,チームは機械を組み立てる。,,2
+grade_pre2_0099,assess,評価する,v,The teacher will assess the student's performance.,教師は学生の成績を評価する。,,2
+grade_pre2_0100,assign,割り当てる,v,The manager will assign tasks to the team.,マネージャーはチームにタスクを割り当てる。,,2
+grade_pre2_0101,assist,支援する,v,I will assist you with the project.,私はあなたをプロジェクトで支援する。,,2
+grade_pre2_0102,associate,関連する,v,The company will associate with a new partner.,会社は新しいパートナーと関連する。,,2
+grade_pre2_0103,assume,仮定する,v,I assume you are coming to the party.,私はあなたがパーティーに来ると仮定する。,,2
+grade_pre2_0104,assure,確約する,v,I assure you that the product is of high quality.,私はあなたに製品が高品質であることを確約する。,,2
+grade_pre2_0105,attach,付ける,v,Please attach the file to the email.,ファイルをメールに付けてください。,,2
+grade_pre2_0106,attain,到達する,v,I will attain my goal by the end of the year.,私は今年末までに私の目標を達成する。,,2
+grade_pre2_0107,attend,出席する,v,I will attend the meeting.,私は会議に出席する。,,2
+grade_pre2_0108,attract,引き付ける,v,The company will attract new customers with a promotion.,会社はプロモーションで新しい顧客を引き付ける。,,2
+grade_pre2_0109,attribute,帰属する,v,I attribute my success to hard work.,私は私の成功を努力に帰属する。,,2
+grade_pre2_0110,augment,増強する,v,The company will augment its product line with new items.,会社は新しいアイテムで製品ラインを増強する。,,2
+grade_pre2_0111,authentic,真正の,adj,The authentic Italian restaurant served delicious food.,真正のイタリアンレストランは美味しい食べ物を提供した。,,2
+grade_pre2_0112,authoritative,権威のある,adj,The authoritative book on the subject is widely read.,その主題に関する権威のある本は広く読まれている。,,2
+grade_pre2_0113,automatic,自動の,adj,The automatic door opened with a sensor.,自動ドアはセンサーで開いた。,,2
+grade_pre2_0114,cloud,雲,n,The cloud is white.,雲は白い。,,1
+grade_pre2_0115,date,日付,n,What's the date today?,今日は何日ですか？,,1
+grade_pre2_0116,fear,怖がる,v,I fear snakes.,私はヘビが怖い。,,2
+grade_pre2_0117,gift,贈り物,n,I gave her a gift.,私は彼女に贈り物を贈った。,,1
+grade_pre2_0118,habit,習慣,n,I have a habit of reading before bed.,私は寝る前に本を読む習慣がある。,,2
+grade_pre2_0119,image,イメージ,n,The image of the city is beautiful.,都市のイメージは美しい。,,2
+grade_pre2_0120,kind,親切,adj,She is a kind person.,彼女は親切な人です。,,1
+grade_pre2_0121,lake,湖,n,The lake is beautiful.,湖は美しい。,,1
+grade_pre2_0122,map,地図,n,I need a map to find my way.,私は道を見つけるために地図が必要だ。,,1
+grade_pre2_0123,nation,国,n,The nation is proud of its history.,国はその歴史を誇りに思っている。,,2
+grade_pre2_0124,ocean,海,n,The ocean is vast.,海は広大だ。,,1
+grade_pre2_0125,peace,平和,n,We want peace in the world.,私たちは世界に平和を望む。,,2
+grade_pre2_0126,quiet,静か,adj,The room is quiet.,部屋は静かだ。,,1
+grade_pre2_0127,rest,休む,v,I need to rest.,私は休まなければなりません。,,1
+grade_pre2_0128,river,川,n,The river is beautiful.,川は美しい。,,1
+grade_pre2_0129,safe,安全,adj,The city is safe.,都市は安全だ。,,1
+grade_pre2_0130,scene,シーン,n,The scene of the movie is beautiful.,映画のシーンは美しい。,,2
+grade_pre2_0131,sense,感覚,n,I have a sense of direction.,私は方向感覚がある。,,2
+grade_pre2_0132,series,シリーズ,n,The series of books is popular.,本のシリーズは人気がある。,,2
+grade_pre2_0133,space,空間,n,The space station is in orbit.,宇宙ステーションは軌道上にある。,,2
+grade_pre2_0134,speed,速度,n,The speed of the car is fast.,車の速度は速い。,,2
+grade_pre2_0135,sport,スポーツ,n,I like to play sports.,私はスポーツをやりたい。,,1
+grade_pre2_0136,style,スタイル,n,The style of the building is modern.,建物のスタイルは現代的だ。,,2
+grade_pre2_0137,taste,味,n,The taste of the food is delicious.,食べ物の味は美味しい。,,1
+grade_pre2_0138,theme,テーマ,n,The theme of the movie is love.,映画のテーマは愛だ。,,2
+grade_pre2_0139,town,町,n,The town is small.,町は小さい。,,1
+grade_pre2_0140,trust,信頼,n,I trust my friend.,私は友達を信頼している。,,2
+grade_pre2_0141,voice,声,n,The voice of the singer is beautiful.,歌手の声は美しい。,,1
+grade_pre2_0142,wave,波,n,The wave is big.,波は大きい。,,1
+grade_pre2_0143,wish,願う,v,I wish I could fly.,私は飛べたらいいなと思う。,,2
+grade_pre2_0144,year,年,n,The year is coming to an end.,年が終わりを迎えている。,,1
+grade_pre2_0145,youth,青春,n,The youth of today is important.,今日の青春は重要だ。,,2
+grade_pre2_0146,zone,区域,n,The zone is restricted.,区域は制限されている。,,2

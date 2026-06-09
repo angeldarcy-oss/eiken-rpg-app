@@ -1,16 +1,167 @@
-word_id,grade,word,part_of_speech,meaning_ja,meaning_zh,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,hint_zh,tags,difficulty,example_zh
-g2_001,grade_2,abolish,v,廃止する,廢除,,They abolished the old law.,彼らは古い法律を廃止しました。,設立する,維持する,改正する,ab（完全に）＋olish（壊す）,ab（完全）+ olish（破壞）,academic|law|verb,5,他們廢除了舊法律。
-g2_002,grade_2,accumulate,v,蓄積する,積累,積み重ねる,He accumulated wealth over years.,彼は長年にわたって富を蓄積しました。,失う,分配する,借りる,ac＋cumulate（山を積む）→どんどん積み上げる,ac + cumulate（堆積如山）,business|verb,5,多年來他積累了財富。
-g2_003,grade_2,ambiguous,adj,曖昧な,模糊的,多義的な,His answer was ambiguous.,彼の答えは曖昧でした。,明確な,詳細な,正確な,ambi（両方）＋iguous（動く）→どちらとも取れる,ambi（兩者）+ iguous（動）,academic|adjective,5,他的回答很模糊。
-g2_004,grade_2,anticipate,v,予期する,預期,期待する,We anticipate strong demand.,私たちは強い需要を予期しています。,無視する,否定する,失望する,anti（前に）＋cipate（取る）→前もって取り込む,anti（前）+ cipate（取）,business|verb,5,我們期待着強勁的需求。
-g2_005,grade_2,arbitrary,adj,恣意的な,任意的,独断的な,The decision seemed arbitrary.,その決定は恣意的に見えました。,論理的な,公平な,合理的な,arbitr（審判）→審判が一人で決める,arbitr（審判）由裁判一個人決定,academic|adjective,5,這個決定看起來很隨意。
-g2_006,grade_2,cease,v,やめる,停止,終止する,The fighting finally ceased.,戦闘はついに終わりました。,始める,続ける,増加する,cease fire（停戦）という表現で覚える,用cease fire（停戰）來記憶,formal|verb,5,戰鬥終於結束了。
-g2_007,grade_2,coherent,adj,一貫した,連貫的,筋の通った,Please give a coherent explanation.,一貫した説明をしてください。,矛盾した,複雑な,不明確な,co（共に）＋herent（くっつく）→全体がくっついている,co（一起）+ herent（粘在一起）→整體粘在一起,academic|adjective,5,請做出連貫的解釋。
-g2_008,grade_2,compensate,v,補償する,補償,埋め合わせる,The company compensated the workers.,会社は労働者を補償しました。,搾取する,無視する,批判する,com（完全に）＋pensate（重さを量る）→重さを合わせる,com（完全）+ pensate（稱重）,law|verb,5,公司賠償了工人。
-g2_009,grade_2,controversy,n,論争,爭議,議論,The policy caused controversy.,その政策は論争を引き起こしました。,合意,協力,理解,contra（反対）＋versy（回す）→反対意見が回り続ける,contra（反對）+ versy（旋轉）,society|noun,5,那個政策引起了爭論。
-g2_010,grade_2,deteriorate,v,悪化する,惡化,低下する,His health deteriorated rapidly.,彼の健康は急速に悪化しました。,改善する,安定する,回復する,de（下に）＋teriorate（悪い方へ）,de（下）+ teriorate（壞的）,health|verb,5,他的健康狀況迅速惡化。
-g2_011,grade_2,eloquent,adj,雄弁な,雄辯的,説得力のある,She gave an eloquent speech.,彼女は雄弁なスピーチをしました。,無口な,退屈な,不明瞭な,e（外に）＋loquent（話す）→言葉を外に流暢に出す,e（向外）+ loquent（說）→流利地表達語言,communication|adjective,5,她做了雄辯的演講。
-g2_012,grade_2,fluctuate,v,変動する,波動,上下する,Prices fluctuate daily.,価格は毎日変動します。,安定する,上昇する,下落する,fluctu（流れる）＋ate→流れるように変わる,fluctu（流動）+ ate（流動）,business|verb,5,價格每天都在波動。
-g2_013,grade_2,inevitable,adj,避けられない,不可避免的,必然的な,Change is inevitable.,変化は避けられません。,防げる,偶然の,望ましい,in（否定）＋evitable（避けられる）,in（否定）+ evitable（可避免）,academic|adjective,5,變化是不可避免的。
-g2_014,grade_2,premises,n,前提,前提,施設,We must question our premises.,私たちは前提を疑わなければなりません。,結論,証拠,仮説,pre（前に）＋mise（置く）→前に置かれたもの,pre（前面）+ mise（放置）→放在前面的東西,academic|noun,5,我們必須懷疑前提。
-g2_015,grade_2,subsequent,adj,その後の,隨後的,続いて起こる,Subsequent events proved him right.,その後の出来事が彼の正しさを証明しました。,以前の,同時の,無関係な,sub（後に）＋sequent（続く）,sub（後）+ sequent（後）,academic|adjective,5,後來的事情證明了他的正確。
+word_id,word,meaning_ja,part_of_speech,example_en,example_ja,hint,difficulty
+g2_001,abolish,廃止する,v,They abolished the old law.,彼らは古い法律を廃止しました。,ab（完全に）＋olish（壊す）,5
+g2_002,accumulate,蓄積する,v,He accumulated wealth over years.,彼は長年にわたって富を蓄積しました。,ac＋cumulate（山を積む）→どんどん積み上げる,5
+g2_003,ambiguous,曖昧な,adj,His answer was ambiguous.,彼の答えは曖昧でした。,ambi（両方）＋iguous（動く）→どちらとも取れる,5
+g2_004,anticipate,予期する,v,We anticipate strong demand.,私たちは強い需要を予期しています。,anti（前に）＋cipate（取る）→前もって取り込む,5
+g2_005,arbitrary,恣意的な,adj,The decision seemed arbitrary.,その決定は恣意的に見えました。,arbitr（審判）→審判が一人で決める,5
+g2_006,cease,やめる,v,The fighting finally ceased.,戦闘はついに終わりました。,cease fire（停戦）という表現で覚える,5
+g2_007,coherent,一貫した,adj,Please give a coherent explanation.,一貫した説明をしてください。,co（共に）＋herent（くっつく）→全体がくっついている,5
+g2_008,compensate,補償する,v,The company compensated the workers.,会社は労働者を補償しました。,com（完全に）＋pensate（重さを量る）→重さを合わせる,5
+g2_009,controversy,論争,n,The policy caused controversy.,その政策は論争を引き起こしました。,contra（反対）＋versy（回す）→反対意見が回り続ける,5
+g2_010,deteriorate,悪化する,v,His health deteriorated rapidly.,彼の健康は急速に悪化しました。,de（下に）＋teriorate（悪い方へ）,5
+g2_011,eloquent,雄弁な,adj,She gave an eloquent speech.,彼女は雄弁なスピーチをしました。,e（外に）＋loquent（話す）→言葉を外に流暢に出す,5
+g2_012,fluctuate,変動する,v,Prices fluctuate daily.,価格は毎日変動します。,fluctu（流れる）＋ate→流れるように変わる,5
+g2_013,inevitable,避けられない,adj,Change is inevitable.,変化は避けられません。,in（否定）＋evitable（避けられる）,5
+g2_014,premises,前提,n,We must question our premises.,私たちは前提を疑わなければなりません。,pre（前に）＋mise（置く）→前に置かれたもの,5
+g2_015,subsequent,その後の,adj,Subsequent events proved him right.,その後の出来事が彼の正しさを証明しました。,sub（後に）＋sequent（続く）,5
+grade_2_0016,cloud,雲,n,The cloud is white.,雲は白いです。,,1
+grade_2_0017,run,走る,v,I will run in the park.,私は公園で走ります。,,1
+grade_2_0018,big,大きい,adj,This house is big.,この家は大きいです。,,1
+grade_2_0019,quickly,すぐに,adv,I will finish my homework quickly.,私はすぐに宿題を終わらせます。,,1
+grade_2_0020,in,の中に,prep,The book is in the box.,本は箱の中にあります。,,1
+grade_2_0021,table,机,n,The table is made of wood.,机は木でできています。,,1
+grade_2_0022,read,読む,v,I like to read books.,私は本を読むことを好きです。,,1
+grade_2_0023,happy,幸せな,adj,I am happy today.,私は今日幸せです。,,1
+grade_2_0024,slowly,ゆっくり,adv,Please walk slowly.,ゆっくり歩いてください。,,1
+grade_2_0025,on,の上に,prep,The book is on the table.,本は机の上にあります。,,1
+grade_2_0026,music,音楽,n,I like listening to music.,私は音楽を聴くことを好きです。,,1
+grade_2_0027,write,書く,v,I will write a letter.,私は手紙を書きます。,,1
+grade_2_0028,tall,背が高い,adj,My brother is tall.,私の兄は背が高いです。,,1
+grade_2_0029,loudly,うるさく,adv,Please don't speak loudly.,うるさく話さないでください。,,1
+grade_2_0030,at,に,prep,I will meet you at the station.,私は駅であなたに会います。,,1
+grade_2_0031,flower,花,n,The flower is beautiful.,花は美しいです。,,1
+grade_2_0032,learn,習う,v,I want to learn English.,私は英語を習いたいです。,,1
+grade_2_0033,old,古い,adj,This book is old.,この本は古いです。,,1
+grade_2_0034,quick,速い,adj,He is a quick runner.,彼は速いランナーです。,,1
+grade_2_0035,from,から,prep,I am from Japan.,私は日本から来ました。,,1
+grade_2_0036,bird,鳥,n,The bird is singing.,鳥は歌っています。,,1
+grade_2_0037,swim,泳ぐ,v,I like to swim.,私は泳ぐことを好きです。,,1
+grade_2_0038,long,長い,adj,This road is long.,この道は長いです。,,1
+grade_2_0039,to,へ,prep,I am going to the store.,私は店へ行きます。,,1
+grade_2_0040,fish,魚,n,I like to eat fish.,私は魚を食べることを好きです。,,1
+grade_2_0041,play,遊ぶ,v,I like to play soccer.,私はサッカーを遊ぶことを好きです。,,1
+grade_2_0042,high,高い,adj,The mountain is high.,山は高いです。,,1
+grade_2_0043,with,と,prep,I am with my friends.,私は友達と一緒にいます。,,1
+grade_2_0044,tree,木,n,The tree is green.,木は緑です。,,1
+grade_2_0045,dance,踊る,v,I like to dance.,私は踊ることを好きです。,,1
+grade_2_0046,cold,冷たい,adj,The water is cold.,水は冷たいです。,,1
+grade_2_0047,by,によって,prep,I will meet you by the station.,私は駅の近くであなたに会います。,,1
+grade_2_0048,car,車,n,I have a car.,私は車を持っています。,,1
+grade_2_0049,sing,歌う,v,I like to sing.,私は歌うことを好きです。,,1
+grade_2_0050,hot,熱い,adj,The coffee is hot.,コーヒーは熱いです。,,1
+grade_2_0051,under,下に,prep,The book is under the table.,本は机の下にあります。,,1
+grade_2_0052,dog,犬,n,I have a dog.,私は犬を飼っています。,,1
+grade_2_0053,jump,跳ぶ,v,I like to jump.,私は跳ぶことを好きです。,,1
+grade_2_0054,strong,強い,adj,He is strong.,彼は強いです。,,1
+grade_2_0055,above,上に,prep,The bird is flying above the tree.,鳥は木の上に飛んでいます。,,1
+grade_2_0056,house,家,n,I live in a house.,私は家に住んでいます。,,1
+grade_2_0057,ride,乗る,v,I like to ride a bike.,私は自転車に乗ることを好きです。,,1
+grade_2_0058,fast,速い,adj,He is a fast runner.,彼は速いランナーです。,,1
+grade_2_0059,around,周りに,prep,The park is around the corner.,公園は角を曲がるところにあります。,,1
+grade_2_0060,bicycle,自転車,n,I have a bicycle.,私は自転車を持っています。,,1
+grade_2_0061,walk,歩く,v,I like to walk in the park.,私は公園で歩くことを好きです。,,1
+grade_2_0062,far,遠い,adj,The mountain is far away.,山は遠いです。,,1
+grade_2_0063,through,を通って,prep,I will go through the tunnel.,私はトンネルを通って行きます。,,1
+grade_2_0064,account,勘定、説明,n,I have to give an account of my trip.,私は旅行の報告をしなければなりません。,,2
+grade_2_0065,achieve,達成する,v,She achieved her goal.,彼女は目標を達成した。,,2
+grade_2_0066,action,行動,n,We need to take action now.,今すぐ行動を起こさなければなりません。,,1
+grade_2_0067,active,活動的な,adj,He is an active person.,彼は活動的な人です。,,1
+grade_2_0068,activity,活動,n,I enjoy outdoor activities.,私は屋外活動を楽しむ。,,1
+grade_2_0069,add,加える,v,Add sugar to the coffee.,コーヒーに砂糖を加えます。,,1
+grade_2_0070,address,住所,n,What is your address?,あなたの住所はどこですか?,,1
+grade_2_0071,admit,認める,v,I admit that I made a mistake.,間違いを犯したことを認めます。,,2
+grade_2_0072,advance,進む,v,The technology is advancing rapidly.,技術は急速に進歩しています。,,2
+grade_2_0073,advice,助言,n,I need some advice.,何か助言が必要です。,,1
+grade_2_0074,affect,影響する,v,The weather will affect the crops.,天気は作物に影響します。,,2
+grade_2_0075,again,再び,adv,I will see you again tomorrow.,私は明日またあなたに会います。,,1
+grade_2_0076,agent,代理人,n,He is a real estate agent.,彼は不動産代理人です。,,2
+grade_2_0077,agree,同意する,v,I agree with you.,私はあなたに同意します。,,1
+grade_2_0078,air,空気,n,The air is fresh.,空気は新鮮です。,,1
+grade_2_0079,allow,許す,v,I allow you to go.,あなたは行くことを許します。,,1
+grade_2_0080,almost,ほとんど,adv,I am almost finished.,私はほとんど終わりました。,,1
+grade_2_0081,alone,一人で,adv,I am alone now.,私は今一人です。,,1
+grade_2_0082,along,沿って,prep,The road runs along the river.,道路は川に沿って走っています。,,1
+grade_2_0083,already,もう,adv,I have already eaten.,私はもう食事をしました。,,1
+grade_2_0084,also,また,adv,I also like coffee.,私はコーヒーも好きです。,,1
+grade_2_0085,although, хотя,prep,"Although it is raining, I will go out.",雨が降っているですが、出かけてきます。,,2
+grade_2_0086,always,いつも,adv,I always eat breakfast.,私はいつも朝食を食べます。,,1
+grade_2_0087,amazing,驚くべき,adj,This view is amazing.,この景色は驚くべきです。,,2
+grade_2_0088,ancient,古代の,adj,The ancient city is very interesting.,古代の都市は非常に面白いです。,,2
+grade_2_0089,anger,怒り,n,I feel anger when I see injustice.,不正義を見るといい気持ちにならない。,,2
+grade_2_0090,animal,動物,n,I love animals.,私は動物が好きです。,,1
+grade_2_0091,answer,答える,v,Please answer my question.,私の質問に答えてください。,,1
+grade_2_0092,any,どれかの,adj,Do you have any money?,お金はありますか?,,1
+grade_2_0093,apart,離れて,adv,We are apart now.,私たちは今離れています。,,1
+grade_2_0094,appear,現れる,v,The sun appears in the morning.,太陽は朝に現れます。,,1
+grade_2_0095,apply,適用する,v,I will apply for the job.,私はその仕事に応募します。,,2
+grade_2_0096,approach,接近する,v,The train will approach the station soon.,列車はもうすぐ駅に到着します。,,2
+grade_2_0097,area,地域,n,This area is very crowded.,この地域はとても混雑しています。,,1
+grade_2_0098,argue,議論する,v,I argue with my brother often.,私はよく弟と議論します。,,2
+grade_2_0099,arm,腕,n,I hurt my arm.,私は腕を怪我しました。,,1
+grade_2_0100,army,軍隊,n,The army is protecting the country.,軍隊は国を守っています。,,2
+grade_2_0101,art,芸術,n,I love art.,私は芸術が好きです。,,1
+grade_2_0102,as,として,prep,I work as a teacher.,私は教師として働いています。,,1
+grade_2_0103,ask,尋ねる,v,Can I ask you a question?,質問をしてもいいですか?,,1
+grade_2_0104,asleep,寝ている,adj,The baby is asleep.,赤ちゃんは寝ています。,,1
+grade_2_0105,assistant,助手,n,I need an assistant.,私は助手が必要です。,,2
+grade_2_0106,associate,関連する,v,I associate this smell with my childhood.,私はこのにおいを子供の頃と関連付けます。,,3
+grade_2_0107,assume,仮定する,v,I assume you are right.,あなたが正しいと仮定します。,,2
+grade_2_0108,astronaut,宇宙飛行士,n,He is an astronaut.,彼は宇宙飛行士です。,,2
+grade_2_0109,atom,原子,n,The atom is the smallest unit of matter.,原子は物質の最小の単位です。,,2
+grade_2_0110,attach,取り付ける,v,Please attach the file to the email.,ファイルをメールに添付してください。,,2
+grade_2_0111,attack,攻撃する,v,The enemy will attack us soon.,敵はすぐに私たちを攻撃するでしょう。,,2
+grade_2_0112,attempt,試みる,v,I will attempt to climb the mountain.,私は山を登ることを試みます。,,2
+grade_2_0113,attend,出席する,v,I will attend the meeting.,私は会議に出席します。,,1
+grade_2_0114,attention,注意,n,Please pay attention to the teacher.,先生に注意してください。,,1
+grade_2_0115,attitude,態度,n,Her attitude is very positive.,彼女の態度はとても前向きです。,,2
+grade_2_0116,attract,引き付ける,v,The beautiful scenery attracts many tourists.,美しい風景は多くの観光客を引き付けます。,,2
+grade_2_0117,beach,海岸,n,I like to swim at the beach.,私は海岸で泳ぐのが好きです。,,1
+grade_2_0118,cloudy,曇り,adj,The weather is cloudy today.,今日の天気は曇りです。,,1
+grade_2_0119,dictionary,辞書,n,I use a dictionary to learn new words.,私は新しい単語を学ぶために辞書を使います。,,2
+grade_2_0120,exercise,運動,n,I do exercise every morning.,私は毎朝運動します。,,1
+grade_2_0121,friendly,親切な,adj,My friend is very friendly.,私の友達はとても親切です。,,1
+grade_2_0122,hurry,急ぐ,v,I have to hurry to catch the train.,私は列車に乗るために急ぐ必要があります。,,1
+grade_2_0123,island,島,n,I want to visit a beautiful island.,私は美しい島を訪れたいです。,,1
+grade_2_0124,journal,日記,n,I write in my journal every day.,私は毎日日記を書きます。,,2
+grade_2_0125,kitchen,台所,n,I like to cook in the kitchen.,私は台所で料理をするのが好きです。,,1
+grade_2_0126,laugh,笑う,v,I laugh when I watch a funny movie.,私は面白い映画を見ると笑います。,,1
+grade_2_0127,mountain,山,n,I like to climb mountains.,私は山を登るのが好きです。,,1
+grade_2_0128,neighbor,隣人,n,My neighbor is very kind.,私の隣人はとても親切です。,,1
+grade_2_0129,ocean,海,n,I love to swim in the ocean.,私は海で泳ぐのが好きです。,,1
+grade_2_0130,paint,絵を描く,v,I like to paint in my free time.,私は自由時間に絵を描くのが好きです。,,1
+grade_2_0131,quiet,静か,adj,I like to study in a quiet room.,私は静かな部屋で勉強するのが好きです。,,1
+grade_2_0132,restaurant,レストラン,n,I like to eat at a restaurant.,私はレストランで食事をするのが好きです。,,1
+grade_2_0133,sunset,夕陽,n,I like to watch the sunset.,私は夕陽を見るのが好きです。,,1
+grade_2_0134,teacher,先生,n,My teacher is very kind.,私の先生はとても親切です。,,1
+grade_2_0135,unhappy,不幸,adj,I feel unhappy when I lose my favorite thing.,私が好きな物を失うと不幸に感じます。,,2
+grade_2_0136,vacation,休暇,n,I like to take a vacation to the beach.,私は海への休暇を取るのが好きです。,,1
+grade_2_0137,waterfall,滝,n,I like to visit a beautiful waterfall.,私は美しい滝を訪れたいです。,,2
+grade_2_0138,x-ray,X線,n,The doctor used an x-ray to check my bones.,医者は私の骨を調べるためにX線を使いました。,,2
+grade_2_0139,yoga,ヨガ,n,I like to practice yoga to relax.,私はリラックスするためにヨガを練習します。,,2
+grade_2_0140,zipper,ジッパー,n,I need to fix the zipper on my jacket.,私はジャケットのジッパーを修理する必要があります。,,2
+grade_2_0141,guitar,ギター,n,I like to play the guitar.,私はギターを弾くのが好きです。,,1
+grade_2_0142,helmet,ヘルメット,n,I wear a helmet when I ride a bike.,私は自転車に乗る時にヘルメットを着用します。,,1
+grade_2_0143,hospital,病院,n,I went to the hospital to visit my friend.,私は友達を訪ねるために病院に行きました。,,1
+grade_2_0144,library,図書館,n,I like to study at the library.,私は図書館で勉強するのが好きです。,,1
+grade_2_0145,magazine,雑誌,n,I like to read magazines in my free time.,私は自由時間に雑誌を読むのが好きです。,,1
+grade_2_0146,nation,国,n,I am proud of my nation.,私は私の国を誇りに思います。,,2
+grade_2_0147,nature,自然,n,I like to walk in nature.,私は自然の中を歩くのが好きです。,,1
+grade_2_0148,news,ニュース,n,I watch the news every day.,私は毎日ニュースを見ます。,,1
+grade_2_0149,oath,誓い,n,I took an oath to tell the truth.,私は真実を語る誓いをしました。,,2
+grade_2_0150,painter,画家,n,My friend is a talented painter.,私の友達は才能のある画家です。,,2
+grade_2_0151,poem,詩,n,I like to read poems in my free time.,私は自由時間に詩を読むのが好きです。,,2
+grade_2_0152,queen,女王,n,The queen is a symbol of the nation.,女王は国の象徴です。,,2
+grade_2_0153,radio,ラジオ,n,I listen to the radio every day.,私は毎日ラジオを聞きます。,,1
+grade_2_0154,river,川,n,I like to swim in the river.,私は川で泳ぐのが好きです。,,1
+grade_2_0155,singer,歌手,n,My favorite singer is very talented.,私の好きな歌手はとても才能があります。,,2
+grade_2_0156,snow,雪,n,I like to play in the snow.,私は雪で遊ぶのが好きです。,,1
+grade_2_0157,sports,スポーツ,n,I like to play sports in my free time.,私は自由時間にスポーツをするのが好きです。,,1
+grade_2_0158,star,星,n,I like to look at the stars at night.,私は夜に星を見るのが好きです。,,1
+grade_2_0159,student,学生,n,I am a student at a university.,私は大学の学生です。,,1
+grade_2_0160,taxi,タクシー,n,I took a taxi to the airport.,私は空港までタクシーで行きました。,,1
+grade_2_0161,theater,劇場,n,I like to watch plays at the theater.,私は劇場で劇を見るのが好きです。,,2
+grade_2_0162,town,町,n,I live in a small town.,私は小さな町に住んでいます。,,1
+grade_2_0163,train,列車,n,I took the train to the city.,私は市まで列車で行きました。,,1
+grade_2_0164,university,大学,n,I attend a university in the city.,私は市にある大学に通っています。,,2
+grade_2_0165,village,村,n,I like to visit villages in the countryside.,私は农村の村を訪れたいです。,,2
+grade_2_0166,water,水,n,I like to drink water every day.,私は毎日水を飲むのが好きです。,,1

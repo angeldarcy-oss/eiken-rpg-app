@@ -1,16 +1,99 @@
-word_id,grade,word,part_of_speech,meaning_ja,meaning_zh,meaning_ja_sub,example_en,example_ja,wrong_choice_1,wrong_choice_2,wrong_choice_3,hint,hint_zh,tags,difficulty,example_zh
-g3_001,grade_3,serious,adj,深刻な,嚴重的/認真的,まじめな,This is a serious problem.,これは深刻な問題です。,軽い,楽しい,簡単な,シリアス（真剣な顔）のイメージ,嚴肅（認真的表情）的印象,personality|adjective,3,這是一個嚴重的問題。
-g3_002,grade_3,experience,n,経験,經驗,体験,She has a lot of experience.,彼女は多くの経験を持っています。,知識,記憶,感情,,,abstract|noun,3,她有很多經驗。
-g3_003,grade_3,interested,adj,興味がある,感興趣的,,I am interested in music.,私は音楽に興味があります。,退屈している,疲れている,心配している,interest（興味）＋ed,interest（興趣）+ ed,emotion|adjective,3,我對音樂感興趣。
-g3_004,grade_3,society,n,社会,社會,,We live in a modern society.,私たちは現代社会に生きています。,国家,家族,文化,,,abstract|noun,3,我們生活在現代社會。
-g3_005,grade_3,provide,v,提供する,提供,,The hotel provides breakfast.,そのホテルは朝食を提供します。,受け取る,要求する,断る,pro（前に）＋vide（見る）→先を見て用意する,pro（前）+ vide（看）,business|verb,3,那家酒店提供早餐。
-g3_006,grade_3,protect,v,守る,保護,保護する,We must protect the environment.,私たちは環境を守らなければなりません。,攻撃する,壊す,無視する,pro（前に）＋tect（覆う）→前を覆って守る,pro（前面）+ tect（覆蓋）→覆蓋前面保護,nature|verb,3,我們必須保護環境。
-g3_007,grade_3,perhaps,adv,おそらく,也許,たぶん,Perhaps he is right.,おそらく彼は正しいでしょう。,絶対に,決して,いつも,,,frequency|adverb,3,也許他是對的。
-g3_008,grade_3,culture,n,文化,文化,,Japan has a rich culture.,日本は豊かな文化を持っています。,自然,経済,政治,,,society|noun,3,日本有着豐富的文化。
-g3_009,grade_3,century,n,世紀,世紀,100年,This building is from the 19th century.,この建物は19世紀のものです。,年代,時代,年数,cent（100）が語源,cent（100）的語源,history|noun,3,這座建築建於19世紀。
-g3_010,grade_3,however,adv,しかしながら,然而,,I like cats. However I am allergic.,猫が好きです。しかしアレルギーがあります。,そして,だから,また,,,grammar|conjunction,3,喜歡貓。但是過敏。
-g3_011,grade_3,explain,v,説明する,解釋,,Please explain this word.,この単語を説明してください。,質問する,理解する,忘れる,ex（外に）＋plain（平らにする）→わかりやすく広げる,ex（向外）+ plain（放平）→簡單易懂地展開,communication|verb,3,請解釋這個詞。
-g3_012,grade_3,continue,v,続ける,繼續,継続する,Please continue your work.,仕事を続けてください。,やめる,始める,終わる,コンティニュー（ゲームの続きをする）,連續（繼續遊戲）,action|verb,3,請繼續工作。
-g3_013,grade_3,decision,n,決断,決定,決定,This was a difficult decision.,これは難しい決断でした。,質問,問題,意見,decide（決める）の名詞形,decide（決定）的名詞形式,abstract|noun,3,這是一個艱難的決定。
-g3_014,grade_3,successful,adj,成功した,成功的,,She had a successful career.,彼女は成功したキャリアを持っていました。,失敗した,普通の,短い,success（成功）＋ful,success（成功+ ful）,personality|adjective,3,她有一個成功的職業生涯。
-g3_015,grade_3,offer,v,申し出る,提供/提出,提供する,He offered to help me.,彼は私を助けることを申し出ました。,断る,要求する,忘れる,,,communication|verb,3,他願意幫助我。
+word_id,word,meaning_ja,part_of_speech,example_en,example_ja,hint,difficulty
+g3_001,serious,深刻な,adj,This is a serious problem.,これは深刻な問題です。,シリアス（真剣な顔）のイメージ,3
+g3_002,experience,経験,n,She has a lot of experience.,彼女は多くの経験を持っています。,,3
+g3_003,interested,興味がある,adj,I am interested in music.,私は音楽に興味があります。,interest（興味）＋ed,3
+g3_004,society,社会,n,We live in a modern society.,私たちは現代社会に生きています。,,3
+g3_005,provide,提供する,v,The hotel provides breakfast.,そのホテルは朝食を提供します。,pro（前に）＋vide（見る）→先を見て用意する,3
+g3_006,protect,守る,v,We must protect the environment.,私たちは環境を守らなければなりません。,pro（前に）＋tect（覆う）→前を覆って守る,3
+g3_007,perhaps,おそらく,adv,Perhaps he is right.,おそらく彼は正しいでしょう。,,3
+g3_008,culture,文化,n,Japan has a rich culture.,日本は豊かな文化を持っています。,,3
+g3_009,century,世紀,n,This building is from the 19th century.,この建物は19世紀のものです。,cent（100）が語源,3
+g3_010,however,しかしながら,adv,I like cats. However I am allergic.,猫が好きです。しかしアレルギーがあります。,,3
+g3_011,explain,説明する,v,Please explain this word.,この単語を説明してください。,ex（外に）＋plain（平らにする）→わかりやすく広げる,3
+g3_012,continue,続ける,v,Please continue your work.,仕事を続けてください。,コンティニュー（ゲームの続きをする）,3
+g3_013,decision,決断,n,This was a difficult decision.,これは難しい決断でした。,decide（決める）の名詞形,3
+g3_014,successful,成功した,adj,She had a successful career.,彼女は成功したキャリアを持っていました。,success（成功）＋ful,3
+g3_015,offer,申し出る,v,He offered to help me.,彼は私を助けることを申し出ました。,,3
+grade_3_0016,apple,りんご,n,I eat an apple every day.,私は毎日リンゴを食べます。,,1
+grade_3_0017,run,走る,v,I like to run in the morning.,私は朝に走ることを好きです。,,1
+grade_3_0018,big,大きい,adj,This house is big.,この家は大きいです。,,1
+grade_3_0019,quickly,急いで,adv,I need to finish this work quickly.,私はこの仕事を急いで終わらせなければなりません。,,2
+grade_3_0020,in,の中に,prep,The book is in the box.,本は箱の中にあります。,,1
+grade_3_0021,dog,犬,n,I have a dog.,私は犬を飼っています。,,1
+grade_3_0022,jump,飛ぶ,v,I like to jump high.,私は高く跳ぶことを好きです。,,1
+grade_3_0023,happy,幸せな,adj,I am happy today.,私は今日幸せです。,,1
+grade_3_0024,slowly,ゆっくり,adv,Please walk slowly.,ゆっくり歩いてください。,,2
+grade_3_0025,on,の上に,prep,The book is on the table.,本はテーブルの上にあります。,,1
+grade_3_0026,cat,猫,n,I have a cat.,私は猫を飼っています。,,1
+grade_3_0027,read,読む,v,I like to read books.,私は本を読むことを好きです。,,1
+grade_3_0028,little,小さな,adj,This house is little.,この家は小さなです。,,1
+grade_3_0029,loudly,うるさく,adv,Please don't talk loudly.,うるさく話さないでください。,,2
+grade_3_0030,at,の場所に,prep,I am at home.,私は家にいます。,,1
+grade_3_0031,bird,鳥,n,I like to watch birds.,私は鳥を見ることを好きです。,,1
+grade_3_0032,write,書く,v,I like to write letters.,私は手紙を書くことを好きです。,,1
+grade_3_0033,long,長い,adj,This road is long.,この道路は長いです。,,1
+grade_3_0034,wisely,賢く,adv,You should think wisely.,あなたは賢く考えるべきです。,,2
+grade_3_0035,with,と一緒に,prep,I am with my friend.,私は友達と一緒にいます。,,1
+grade_3_0036,fish,魚,n,I like to eat fish.,私は魚を食べることを好きです。,,1
+grade_3_0037,swim,泳ぐ,v,I like to swim in the pool.,私はプールで泳ぐことを好きです。,,1
+grade_3_0038,old,古い,adj,This book is old.,この本は古いです。,,1
+grade_3_0039,quick,速い,adj,This car is quick.,この車は速いです。,,1
+grade_3_0040,from,から,prep,I am from Japan.,私は日本から来ました。,,1
+grade_3_0041,tree,木,n,I like to climb trees.,私は木に登ることを好きです。,,1
+grade_3_0042,play,遊ぶ,v,I like to play soccer.,私はサッカーを遊ぶことを好きです。,,1
+grade_3_0043,new,新しい,adj,This car is new.,この車は新しいです。,,1
+grade_3_0044,well,よく,adv,You speak English well.,あなたは英語をよく話す。,,2
+grade_3_0045,to,へ,prep,I am going to the store.,私は店へ行きます。,,1
+grade_3_0046,flower,花,n,I like to see flowers.,私は花を見ることを好きです。,,1
+grade_3_0047,dance,踊る,v,I like to dance at parties.,私はパーティーで踊ることを好きです。,,1
+grade_3_0048,high,高い,adj,This mountain is high.,この山は高いです。,,1
+grade_3_0049,far,遠い,adj,This city is far from my home.,この街は私の家から遠いです。,,1
+grade_3_0050,by,で,prep,I was made by my mother.,私は私の母によって作られました。,,1
+grade_3_0051,car,車,n,I like to drive my car.,私は私の車を運転することを好きです。,,1
+grade_3_0052,eat,食べる,v,I like to eat sushi.,私は寿司を食べることを好きです。,,1
+grade_3_0053,good,よい,adj,This food is good.,この食事はよいです。,,1
+grade_3_0054,fast,速い,adj,This car is fast.,この車は速いです。,,1
+grade_3_0055,about,について,prep,I am talking about my trip.,私は私の旅行について話しています。,,1
+grade_3_0056,house,家,n,I like my house.,私は私の家が好きです。,,1
+grade_3_0057,look,見る,v,I like to look at pictures.,私は写真を見ることを好きです。,,1
+grade_3_0058,small,小さな,adj,This house is small.,この家は小さなです。,,1
+grade_3_0059,hard,難しい,adj,This test is hard.,この試験は難しいです。,,1
+grade_3_0060,under,下に,prep,The book is under the table.,本はテーブルの下にあります。,,1
+grade_3_0061,cloud,雲,n,The cloud is white.,雲は白いです。,,1
+grade_3_0062,table,机,n,There is a book on the table.,机の上に本があります。,,1
+grade_3_0063,music,音楽,n,I like listening to music.,音楽を聞くことが好きです。,,1
+grade_3_0064,phone,電話,n,I need to use the phone.,電話を使用したいです。,,1
+grade_3_0065,school,学校,n,I go to school every day.,毎日学校に行きます。,,1
+grade_3_0066,friend,友達,n,My friend is very kind.,私の友達はとても親切です。,,1
+grade_3_0067,book,本,n,I like reading books.,本を読むことが好きです。,,1
+grade_3_0068,pencil,鉛筆,n,I need a pencil to write.,書くために鉛筆が必要です。,,1
+grade_3_0069,paper,紙,n,I need some paper to write on.,紙が書くために必要です。,,1
+grade_3_0070,pen,ペン,n,I like using a pen to write.,ペンで書くことが好きです。,,1
+grade_3_0071,chair,椅子,n,Please sit down in the chair.,椅子に座ってください。,,1
+grade_3_0072,desk,机,n,My desk is very messy.,私の机はとても散らかっています。,,1
+grade_3_0073,black,黒,adj,The black cat is very cute.,黒い猫はとてもかわいいです。,,1
+grade_3_0074,white,白,adj,The white dog is very big.,白い犬はとても大きいです。,,1
+grade_3_0075,red,赤,adj,The red apple is very juicy.,赤いリンゴはとてもジューシーです。,,1
+grade_3_0076,blue,青,adj,The blue sky is very beautiful.,青い空はとても美しいです。,,1
+grade_3_0077,yellow,黄,adj,The yellow sun is very bright.,黄色い太陽はとても明るいです。,,1
+grade_3_0078,green,緑,adj,The green grass is very soft.,緑の草はとても柔らかいです。,,1
+grade_3_0079,sing,歌う,v,I like to sing in the shower.,シャワーで歌うことが好きです。,,1
+grade_3_0080,walk,歩く,v,I like to walk in the park.,公園で歩くことが好きです。,,1
+grade_3_0081,talk,話す,v,I like to talk to my friends.,友達と話すことが好きです。,,1
+grade_3_0082,listen,聞く,v,I like to listen to music.,音楽を聞くことが好きです。,,1
+grade_3_0083,watch,見る,v,I like to watch TV.,テレビを見ることが好きです。,,1
+grade_3_0084,drink,飲む,v,I like to drink water.,水を飲むことが好きです。,,1
+grade_3_0085,sleep,寝る,v,I like to sleep at night.,夜に寝ることが好きです。,,1
+grade_3_0086,think,考える,v,I like to think about my future.,将来について考えることが好きです。,,1
+grade_3_0087,learn,学ぶ,v,I like to learn new things.,新しいことを学ぶことが好きです。,,1
+grade_3_0088,teach,教える,v,I like to teach English.,英語を教えることが好きです。,,1
+grade_3_0089,help,手伝う,v,I like to help my friends.,友達を手伝うことが好きです。,,1
+grade_3_0090,hot,熱い,adj,The hot coffee is very good.,熱いコーヒーはとても美味しいです。,,1
+grade_3_0091,cold,寒い,adj,The cold water is very refreshing.,寒い水はとてもさわやかです。,,1
+grade_3_0092,slow,遅い,adj,The slow music is very relaxing.,遅い音楽はとてもリラックスできます。,,1
+grade_3_0093,easy,簡単,adj,The easy test is very simple.,簡単なテストはとてもシンプルです。,,1
+grade_3_0094,sad,悲しい,adj,I am sad today.,今日は悲しいです。,,1
+grade_3_0095,angry,怒っている,adj,I am angry today.,今日は怒っています。,,1
+grade_3_0096,tired,疲れた,adj,I am tired today.,今日は疲れました。,,1
+grade_3_0097,excited,ワクワク,adj,I am excited for the party.,パーティーにワクワクしています。,,1
+grade_3_0098,bored,退屈,adj,I am bored today.,今日は退屈です。,,1

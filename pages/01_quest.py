@@ -13,7 +13,7 @@ from core.player import PlayerManager, streak_multiplier
 from core.save_manager import load_player, save_player, append_history, update_ranking
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
-from core.daily_quest import get_or_reset_daily_quests, update_quest_progress
+from core.daily_quest import get_or_reset_daily_quests, update_quest_progress, QUEST_DEFS as _QUEST_DEFS
 from core.monsters import get_monster_for_grade, get_weekly_boss, calc_player_damage
 from core.equipment import ITEMS as _EQUIP_ITEMS
 import random
@@ -207,7 +207,7 @@ def render_sidebar():
         st.markdown(
             '<div style="font-size:.82rem;line-height:2.1;color:#ccccee;">'
             '🔥 ' + t("streak", lang) + ' <b style="color:#ffe066;">' + str(streak) + '</b> ' + t("questions", lang) + '<br>'
-            '⭐ ベスト <b style="color:#ffcc44;">' + str(best) + '</b> ' + t("questions", lang) + '<br>'
+            '⭐ 最高連続 <b style="color:#ffcc44;">' + str(best) + '</b> ' + t("questions", lang) + '<br>'
             '👑 ボス撃破 <b style="color:#ffcc44;">' + str(boss_def) + '</b> 体<br>'
             '📊 ' + t("accuracy", lang) + ' <b style="color:#ffe066;">' + accuracy + '</b><br>'
             '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang) +
@@ -301,14 +301,20 @@ def apply_correct(result, question=None):
             if not word_row.empty and int(word_row.iloc[0].get("miss_count", 0)) > 0:
                 is_weak_word = True
     get_or_reset_daily_quests(p, weak_count=_wc)
-    update_quest_progress(p, "correct10")
-    if streak >= 5:
-        update_quest_progress(p, "streak5")
+    _newly_done: list[str] = []
+    if update_quest_progress(p, "correct10"):
+        _newly_done.append("correct10")
+    if streak >= 5 and update_quest_progress(p, "streak5"):
+        _newly_done.append("streak5")
     if question is not None:
-        if question.difficulty >= 3:
-            update_quest_progress(p, "hard5")
-        if is_weak_word:
-            update_quest_progress(p, "weak3")
+        if question.difficulty >= 3 and update_quest_progress(p, "hard5"):
+            _newly_done.append("hard5")
+        if is_weak_word and update_quest_progress(p, "weak3"):
+            _newly_done.append("weak3")
+    if _newly_done:
+        st.session_state["_newly_completed_quests"] = _newly_done
+    else:
+        st.session_state.pop("_newly_completed_quests", None)
 
 
 def apply_wrong(result):
@@ -324,6 +330,7 @@ def apply_wrong(result):
 def load_next_question():
     engine = st.session_state.engine
     st.session_state.pop("_boss_just_defeated_flash", None)
+    st.session_state.pop("_newly_completed_quests", None)
 
     # モンスターが倒されている場合、新モンスターを出現させる
     if st.session_state.get("battle_monster_hp", 1) <= 0:
@@ -594,6 +601,28 @@ if st.session_state.answered and st.session_state.last_result:
         else:
             _play_sound(st.session_state.play_sound)
         st.session_state.play_sound = None
+
+    # ── デイリークエスト達成通知（結果カードの上に表示）──────────────
+    _newly_done_disp = st.session_state.get("_newly_completed_quests", [])
+    if _newly_done_disp:
+        _quest_map = {_d["id"]: _d for _d in _QUEST_DEFS}
+        _player_quests = {_dq["id"]: _dq for _dq in st.session_state.player.get("daily_quests", {}).get("quests", [])}
+        for _qid in _newly_done_disp:
+            _qdef = _quest_map.get(_qid, {})
+            _icon = _qdef.get("icon", "🎉")
+            if _qid == "weak3":
+                _target = _player_quests.get(_qid, {}).get("target", 3)
+                _qtitle = "苦手単語を" + str(_target) + "問正解する"
+            else:
+                _qtitle = _qdef.get("title", _qid)
+            st.markdown(
+                '<div style="background:linear-gradient(135deg,#0a2a1a,#1a4a2a);'
+                'border:2px solid #44ff88;border-radius:12px;padding:12px 20px;'
+                'text-align:center;margin-bottom:8px;">'
+                '<div style="font-size:1.1rem;font-weight:900;color:#44ff88;">🎉 クエスト達成！</div>'
+                '<div style="font-size:.95rem;color:#ccffdd;margin-top:4px;">'
+                + _icon + '「' + _qtitle + '」クリア！</div>'
+                '</div>', unsafe_allow_html=True)
 
     if result.is_correct:
         levelup_html = ""

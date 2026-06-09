@@ -8,11 +8,12 @@ import streamlit as st
 from core.save_manager import (
     load_player, save_player, delete_save,
     register_user, verify_login, user_exists, is_username_taken,
-    get_registered_users
+    get_registered_users, update_ranking
 )
 from core.player import PlayerManager, streak_multiplier, STREAK_BONUS_TABLE
 from core.i18n import t, grade_label, LANG_OPTIONS
 from core.characters import CHARACTERS, CHARACTER_ORDER, get_character, sidebar_avatar_html
+from core.daily_quest import get_login_streak
 
 st.set_page_config(page_title="英検Quest", page_icon="⚔️", layout="centered", initial_sidebar_state="expanded")
 
@@ -74,6 +75,8 @@ if not st.session_state.logged_in:
                 st.session_state.total_correct = 0
                 st.session_state.total_questions = 0
                 st.session_state.streak = 0
+                get_login_streak(st.session_state.player)
+                save_player(st.session_state.player, login_user.strip())
                 st.rerun()
 
     with tab2:
@@ -103,6 +106,8 @@ if not st.session_state.logged_in:
                     st.session_state.total_correct = 0
                     st.session_state.total_questions = 0
                     st.session_state.streak = 0
+                    get_login_streak(st.session_state.player)
+                    save_player(st.session_state.player, name)
                     st.success("登録完了！ようこそ " + name + " さん！")
                     st.rerun()
 
@@ -202,11 +207,12 @@ def render_sidebar():
 
     char_id = p.get("character", "")
     c = get_character(char_id)
+    equip = p.get("equipment")
 
     with st.sidebar:
         st.markdown(
             '<div style="text-align:center;padding:12px 0 6px;">'
-            + sidebar_avatar_html(char_id) +
+            + sidebar_avatar_html(char_id, equip) +
             '<div style="font-size:1.2rem;font-weight:700;color:#ffe066;margin-top:6px;">' + p["name"] + '</div>'
             '<div style="font-size:.8rem;color:#aaaacc;">'
             + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) +
@@ -229,6 +235,7 @@ def render_sidebar():
             st.error(t("hp0_msg", lang))
         if st.button(t("save", lang), use_container_width=True):
             save_player(st.session_state.player, st.session_state.username)
+            update_ranking(st.session_state.player, st.session_state.username)
             st.success("セーブしました！" if lang == "ja" else "已儲存！")
         if st.button(t("logout", lang), use_container_width=True):
             save_player(st.session_state.player, st.session_state.username)

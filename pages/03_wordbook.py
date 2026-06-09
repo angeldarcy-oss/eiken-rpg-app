@@ -44,10 +44,11 @@ def render_sidebar():
     hp_pct = pm.hp_percent() * 100
     exp_pct = pm.exp_percent() * 100
     char_id = p.get("character", "")
+    equip = p.get("equipment")
     with st.sidebar:
         st.markdown(
             '<div style="text-align:center;padding:12px 0 6px;">'
-            + sidebar_avatar_html(char_id) +
+            + sidebar_avatar_html(char_id, equip) +
             '<div style="font-size:1.2rem;font-weight:700;color:#ffe066;margin-top:6px;">' + p["name"] + '</div>'
             '<div style="font-size:.8rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
             '</div>', unsafe_allow_html=True)

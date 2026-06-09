@@ -744,12 +744,25 @@ def get_character(char_id: str | None) -> dict:
     return CHARACTERS[char_id]
 
 
-def sidebar_avatar_html(char_id: str | None) -> str:
+def sidebar_avatar_html(char_id: str | None, equipment: dict | None = None) -> str:
     if not char_id or char_id not in CHARACTERS:
         return '<div style="font-size:3rem;text-align:center;line-height:1;">⚔️</div>'
     c = CHARACTERS[char_id]
-    svg = c["svg"]
+    # SVG内側コンテンツを取り出して帽子オーバーレイを適用
+    svg_full = c["svg"]
+    tag_end = svg_full.index('>') + 1
+    close_start = svg_full.rindex('</')
+    svg_inner = svg_full[tag_end:close_start]
+    if equipment:
+        from core.equipment import apply_hat_overlay, equipment_badges_html
+        hat_id = equipment.get("hat")
+        svg_inner = apply_hat_overlay(svg_inner, hat_id)
+        badges = equipment_badges_html(equipment)
+    else:
+        badges = ""
+    svg_with_overlay = '<svg viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg">' + svg_inner + '</svg>'
     return (
-        '<div style="width:70px;height:88px;margin:0 auto;overflow:hidden;">' + svg + '</div>'
+        '<div style="width:70px;height:88px;margin:0 auto;overflow:hidden;">' + svg_with_overlay + '</div>'
         '<div style="font-size:.72rem;color:#aa88ff;text-align:center;margin-top:2px;">' + c["title"] + '</div>'
+        + badges
     )

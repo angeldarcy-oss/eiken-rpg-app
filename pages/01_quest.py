@@ -10,9 +10,10 @@ import streamlit.components.v1 as components
 from core.quiz_engine import QuizEngine, Question, QuizResult
 from core.ai_tutor import get_explanation
 from core.player import PlayerManager, streak_multiplier
-from core.save_manager import load_player, save_player, append_history
+from core.save_manager import load_player, save_player, append_history, update_ranking
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
+from core.daily_quest import get_or_reset_daily_quests, update_quest_progress
 
 st.set_page_config(page_title="クエスト", page_icon="🗡️", layout="centered", initial_sidebar_state="expanded")
 
@@ -135,10 +136,11 @@ def render_sidebar():
     correct = st.session_state.total_correct
     accuracy = str(round(correct / total * 100)) + "%" if total > 0 else "---"
     char_id = p.get("character", "")
+    equip = p.get("equipment")
     with st.sidebar:
         st.markdown(
             '<div style="text-align:center;padding:12px 0 6px;">'
-            + sidebar_avatar_html(char_id) +
+            + sidebar_avatar_html(char_id, equip) +
             '<div style="font-size:1.2rem;font-weight:700;color:#ffe066;margin-top:6px;">' + p["name"] + '</div>'
             '<div style="font-size:.8rem;color:#aaaacc;">' + t("level", lang) + ' ' + str(p["level"]) + ' | ' + grade_label(p["grade_target"], lang) + '</div>'
             '</div>', unsafe_allow_html=True)
@@ -159,8 +161,9 @@ def render_sidebar():
 render_sidebar()
 
 
-def apply_correct(result):
-    pm = PlayerManager(st.session_state.player)
+def apply_correct(result, question=None):
+    p = st.session_state.player
+    pm = PlayerManager(p)
     was_zero = (pm.hp == 0)
     streak = pm.increment_streak()
     st.session_state.streak = streak
@@ -171,13 +174,36 @@ def apply_correct(result):
     if was_zero and not gain.leveled_up:
         pm.heal(10)
 
+    # 週間統計
+    p["weekly_correct"] = p.get("weekly_correct", 0) + 1
+    p["weekly_total"] = p.get("weekly_total", 0) + 1
+    if streak > p.get("max_streak", 0):
+        p["max_streak"] = streak
+
+    # デイリークエスト進捗
+    get_or_reset_daily_quests(p)
+    update_quest_progress(p, "correct10")
+    if streak >= 5:
+        update_quest_progress(p, "streak5")
+    if question is not None:
+        if question.difficulty >= 3:
+            update_quest_progress(p, "hard5")
+        # 苦手単語チェック（engine の miss_count > 0 の単語を苦手とみなす）
+        engine = st.session_state.get("engine")
+        if engine is not None:
+            word_row = engine.df[engine.df["word"] == question.word]
+            if not word_row.empty and int(word_row.iloc[0].get("miss_count", 0)) > 0:
+                update_quest_progress(p, "weak3")
+
 
 def apply_wrong(result):
-    pm = PlayerManager(st.session_state.player)
+    p = st.session_state.player
+    pm = PlayerManager(p)
     pm.take_damage(result.hp_damage)
     pm.reset_streak()
     st.session_state.streak = 0
     st.session_state.last_gain_result = None
+    p["weekly_total"] = p.get("weekly_total", 0) + 1
 
 
 def load_next_question():
@@ -216,6 +242,8 @@ if st.session_state.quest_finished:
                 "example_ja": "" if str(row.get("example_ja", "")) == "nan" else str(row.get("example_ja", "")),
             })
         save_weak_words(weak_list, username)
+
+    update_ranking(st.session_state.player, username)
 
     accuracy = stats["accuracy"]
     if accuracy >= 90:
@@ -317,7 +345,7 @@ if not st.session_state.answered:
                 st.session_state.total_questions += 1
                 st.session_state.session_total += 1
                 if result.is_correct:
-                    apply_correct(result)
+                    apply_correct(result, question=q)
                     st.session_state.play_sound = "correct"
                 else:
                     apply_wrong(result)

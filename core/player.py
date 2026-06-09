@@ -345,6 +345,17 @@ def new_player(name: str = "勇者", grade_target: str = "grade_4", language: st
         "total_damage_taken": 0,
         "language": language,
         "character": "",
+        # 週間ランキング用
+        "weekly_correct": 0,
+        "weekly_total": 0,
+        "week_start": "",
+        "max_streak": 0,
+        # デイリークエスト・ログインボーナス
+        "daily_quests": {},
+        "login_streak": {"last_login": "", "streak_days": 0, "claimed_milestones": []},
+        # 装備・インベントリ
+        "equipment": {"weapon": None, "armor": None, "hat": None, "cloak": None},
+        "inventory": [],
     }
 
 

@@ -9,6 +9,7 @@ from pathlib import Path
 from core.player import new_player, exp_to_next_level
 
 SAVE_DIR = Path("data/saves")
+RANKINGS_FILE = SAVE_DIR / "rankings.json"
 USERS_FILE = SAVE_DIR / "users.json"
 SAVE_FILE = SAVE_DIR / "player_data.json"  # 後方互換
 
@@ -226,4 +227,77 @@ def _validate_and_fill(player: dict) -> dict:
         if key not in player:
             player[key] = val
     player["exp_to_next"] = exp_to_next_level(player["level"])
+    # ネストした辞書のキーも補完
+    for slot in ("weapon", "armor", "hat", "cloak"):
+        player["equipment"].setdefault(slot, None)
+    if "last_login" not in player.get("login_streak", {}):
+        player["login_streak"] = {"last_login": "", "streak_days": 0, "claimed_milestones": []}
     return player
+
+
+# ─────────────────────────────────────────
+# ランキング管理
+# ─────────────────────────────────────────
+
+def _iso_week_start() -> str:
+    """今週の月曜日の日付文字列を返す"""
+    today = date.today()
+    return (today - __import__("datetime").timedelta(days=today.weekday())).isoformat()
+
+
+def _load_rankings() -> dict:
+    if not RANKINGS_FILE.exists():
+        return {"users": {}, "week_start": _iso_week_start()}
+    try:
+        with open(RANKINGS_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {"users": {}, "week_start": _iso_week_start()}
+
+
+def _save_rankings(data: dict):
+    SAVE_DIR.mkdir(parents=True, exist_ok=True)
+    with open(RANKINGS_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def update_ranking(player: dict, username: str):
+    """プレイヤーのランキングデータを更新する"""
+    if not username:
+        return
+    try:
+        data = _load_rankings()
+        current_week = _iso_week_start()
+        # 週が変わっていたら全ユーザーの週間データをリセット
+        if data.get("week_start") != current_week:
+            for u in data.get("users", {}).values():
+                u["weekly_correct"] = 0
+                u["weekly_total"] = 0
+            data["week_start"] = current_week
+        users = data.setdefault("users", {})
+        users[username] = {
+            "name": player.get("name", username),
+            "character": player.get("character", ""),
+            "level": player.get("level", 1),
+            "total_exp": player.get("total_exp_earned", 0),
+            "grade_target": player.get("grade_target", "grade_5"),
+            "weekly_correct": player.get("weekly_correct", 0),
+            "weekly_total": player.get("weekly_total", 0),
+            "max_streak": player.get("max_streak", 0),
+            "updated_at": datetime.now().isoformat(timespec="seconds"),
+        }
+        _save_rankings(data)
+    except Exception as e:
+        print("[SaveManager] ランキング更新失敗: " + str(e))
+
+
+def load_rankings() -> dict:
+    """ランキングデータを読み込む（全ユーザー）"""
+    data = _load_rankings()
+    current_week = _iso_week_start()
+    if data.get("week_start") != current_week:
+        for u in data.get("users", {}).values():
+            u["weekly_correct"] = 0
+            u["weekly_total"] = 0
+        data["week_start"] = current_week
+    return data

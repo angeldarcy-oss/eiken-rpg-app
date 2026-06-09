@@ -78,11 +78,24 @@ _CORRECT_WAV = _make_wav_b64(
     [(523.25, 0.10), (659.25, 0.10), (783.99, 0.10), (1046.50, 0.28)])
 _WRONG_WAV = _make_wav_b64(
     [(392.00, 0.22), (311.13, 0.32)], vol=0.18)
+# ボス撃破ファンファーレ（10音・豪華）
+_BOSS_WAV = _make_wav_b64([
+    (523.25, 0.09), (659.25, 0.09), (783.99, 0.09), (1046.50, 0.16),
+    (0,      0.04),
+    (783.99, 0.09), (1046.50, 0.09), (1318.51, 0.09), (1567.98, 0.18),
+    (0,      0.05),
+    (1046.50, 0.09), (1318.51, 0.09), (1567.98, 0.60),
+], vol=0.30)
 
 
 def _play_sound(sound_type: str):
     """WAV データを data URI として iframe 内で再生する。"""
-    b64 = _CORRECT_WAV if sound_type == "correct" else _WRONG_WAV
+    if sound_type == "boss_victory":
+        b64 = _BOSS_WAV
+    elif sound_type == "correct":
+        b64 = _CORRECT_WAV
+    else:
+        b64 = _WRONG_WAV
     # Web Audio API（AudioContext）は iframe + Streamlit rerun 後に
     # suspended になる問題があるため、new Audio() を使う。
     # height=1 で iframe を確実にレンダリングさせる。
@@ -190,10 +203,12 @@ def render_sidebar():
         st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
         st.markdown("---")
         best = p.get("best_streak", p.get("max_streak", 0))
+        boss_def = p.get("boss_defeats", 0)
         st.markdown(
             '<div style="font-size:.82rem;line-height:2.1;color:#ccccee;">'
             '🔥 ' + t("streak", lang) + ' <b style="color:#ffe066;">' + str(streak) + '</b> ' + t("questions", lang) + '<br>'
             '⭐ ベスト <b style="color:#ffcc44;">' + str(best) + '</b> ' + t("questions", lang) + '<br>'
+            '👑 ボス撃破 <b style="color:#ffcc44;">' + str(boss_def) + '</b> 体<br>'
             '📊 ' + t("accuracy", lang) + ' <b style="color:#ffe066;">' + accuracy + '</b><br>'
             '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang) +
             '</div>', unsafe_allow_html=True)
@@ -257,6 +272,8 @@ def apply_correct(result, question=None):
         if st.session_state.get("battle_boss_active"):
             st.session_state.battle_boss_active = False
             st.session_state.battle_boss_defeated = True
+            st.session_state["_boss_just_defeated_flash"] = True
+            p["boss_defeats"] = p.get("boss_defeats", 0) + 1
         _monster = st.session_state.get("battle_monster")
         if _monster and random.random() < _monster.get("drop_rate", 0.2):
             _drop = random.choice(_monster.get("drop_items", []))
@@ -306,6 +323,7 @@ def apply_wrong(result):
 
 def load_next_question():
     engine = st.session_state.engine
+    st.session_state.pop("_boss_just_defeated_flash", None)
 
     # モンスターが倒されている場合、新モンスターを出現させる
     if st.session_state.get("battle_monster_hp", 1) <= 0:
@@ -569,9 +587,12 @@ if st.session_state.answered and st.session_state.last_result:
     result = st.session_state.last_result
     gain = st.session_state.last_gain_result
 
-    # 回答直後のみ効果音を再生（フラグをクリアして重複再生を防ぐ）
+    # 回答直後のみ効果音を再生（ボス撃破時はファンファーレを優先）
     if st.session_state.get("play_sound"):
-        _play_sound(st.session_state.play_sound)
+        if st.session_state.get("_boss_just_defeated_flash"):
+            _play_sound("boss_victory")
+        else:
+            _play_sound(st.session_state.play_sound)
         st.session_state.play_sound = None
 
     if result.is_correct:
@@ -634,6 +655,28 @@ if st.session_state.answered and st.session_state.last_result:
                 '<div style="font-size:.8rem;color:#aa88dd;margin-bottom:10px;">' + t("ai_teacher_label", lang) + '</div>'
                 '<div style="font-size:.92rem;color:#e8d8ff;line-height:1.9;">' + st.session_state.ai_explanation.replace("\n", "<br>") + '</div>'
                 '</div>', unsafe_allow_html=True)
+
+    # ── ボス撃破特別演出 ─────────────────────────────────────────
+    if st.session_state.get("_boss_just_defeated_flash") and result.is_correct:
+        st.balloons()
+        _boss_info = st.session_state.get("battle_monster", {})
+        _boss_name = _boss_info.get("name", "ボス")
+        _boss_emoji = _boss_info.get("emoji", "👑")
+        _total_bd = st.session_state.player.get("boss_defeats", 1)
+        st.markdown(
+            '<div style="background:linear-gradient(135deg,#1a1000,#3a2800,#1a1000);'
+            'border:3px solid #ffcc00;border-radius:16px;padding:20px 28px;'
+            'text-align:center;margin-bottom:12px;'
+            'box-shadow:0 0 32px #ffaa0088,0 0 64px #ff880044;">'
+            '<div style="font-size:2rem;font-weight:900;color:#ffcc00;'
+            'text-shadow:0 0 20px #ffaa00,0 0 40px #ff8800;letter-spacing:.06em;">'
+            '👑 ボス撃破！</div>'
+            '<div style="font-size:1.2rem;color:#ffe066;margin-top:8px;font-weight:700;">'
+            + _boss_emoji + ' ' + _boss_name + ' を倒した！</div>'
+            '<div style="font-size:.88rem;color:#cc9900;margin-top:10px;">'
+            '累計ボス撃破数：<b style="font-size:1.1rem;color:#ffcc00;">'
+            + str(_total_bd) + '</b> 体</div>'
+            '</div>', unsafe_allow_html=True)
 
     # ── 新記録通知 ──────────────────────────────────────────────
     _new_best = st.session_state.get("_new_best_streak")

@@ -82,7 +82,7 @@ if not users:
     st.info("まだランキングデータがありません。クエストをプレイしてランクインしよう！")
     st.stop()
 
-tab_weekly, tab_alltime, tab_streak = st.tabs(["📅 週間ランキング", "🌟 総合ランキング", "🔥 ベストストリーク"])
+tab_weekly, tab_alltime, tab_streak, tab_boss = st.tabs(["📅 週間ランキング", "🌟 総合ランキング", "🔥 ベストストリーク", "👑 ボス撃破"])
 
 RANK_MEDALS = {1: "🥇", 2: "🥈", 3: "🥉"}
 GRADE_LABELS = {
@@ -172,6 +172,17 @@ with tab_streak:
             bs = e.get("best_streak", e.get("max_streak", 0))
             return f"{bs} 問連続"
         render_ranking(streak_entries, "best_streak", "最高連続正解", streak_fmt)
+
+with tab_boss:
+    st.markdown('<div style="font-size:.85rem;color:#888;margin-bottom:12px;">週替わりボスの累計撃破数ランキング</div>', unsafe_allow_html=True)
+    boss_entries = [e for e in all_entries if e.get("boss_defeats", 0) > 0]
+    if not boss_entries:
+        st.info("まだボス撃破記録がありません。クエストで5体倒してボスに挑戦しよう！")
+    else:
+        def boss_fmt(e):
+            bd = e.get("boss_defeats", 0)
+            return f"{bd} 体"
+        render_ranking(boss_entries, "boss_defeats", "撃破数", boss_fmt)
 
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown(

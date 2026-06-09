@@ -351,6 +351,7 @@ def new_player(name: str = "勇者", grade_target: str = "grade_4", language: st
         "week_start": "",
         "max_streak": 0,
         "best_streak": 0,
+        "boss_defeats": 0,
         # デイリークエスト・ログインボーナス
         "daily_quests": {},
         "login_streak": {"last_login": "", "streak_days": 0, "claimed_milestones": []},

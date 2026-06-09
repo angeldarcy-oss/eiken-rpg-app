@@ -222,6 +222,9 @@ def delete_save(username: str = "") -> bool:
 
 
 def _validate_and_fill(player: dict) -> dict:
+    # 旧セーブの best_streak を max_streak で補完（defaults適用より前に行う）
+    if "best_streak" not in player:
+        player["best_streak"] = player.get("max_streak", 0)
     defaults = new_player()
     for key, val in defaults.items():
         if key not in player:
@@ -284,6 +287,7 @@ def update_ranking(player: dict, username: str):
             "weekly_correct": player.get("weekly_correct", 0),
             "weekly_total": player.get("weekly_total", 0),
             "max_streak": player.get("max_streak", 0),
+            "best_streak": player.get("best_streak", player.get("max_streak", 0)),
             "updated_at": datetime.now().isoformat(timespec="seconds"),
         }
         _save_rankings(data)

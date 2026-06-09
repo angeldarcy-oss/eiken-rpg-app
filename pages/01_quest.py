@@ -44,6 +44,8 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .monster-die .m-svg-wrap{animation:monster-die-anim .8s ease-in forwards}
 .damage-number{position:absolute;top:26%;left:50%;font-size:2.2rem;font-weight:900;color:#ff2222;text-shadow:0 0 10px #ff0000,2px 2px 0 #000;animation:dmg-float .9s ease-out forwards;pointer-events:none;z-index:10}
 .boss-badge{background:linear-gradient(135deg,#3a0033,#5a0044);border:1px solid #ff0066;border-radius:6px;padding:2px 10px;font-size:.72rem;color:#ff88cc;display:inline-block;margin-bottom:4px;animation:boss-pulse 1.6s ease-in-out infinite}
+@keyframes new-record-glow{0%{box-shadow:0 0 0 #ff8800;opacity:0;transform:scale(.92)}30%{box-shadow:0 0 24px #ff8800,0 0 48px #ffaa00;opacity:1;transform:scale(1.03)}100%{box-shadow:0 0 8px #ff440044;opacity:1;transform:scale(1)}}
+.new-record-banner{animation:new-record-glow .7s ease-out}
 </style>""", unsafe_allow_html=True)
 
 
@@ -187,9 +189,11 @@ def render_sidebar():
         st.markdown('<div class="stat-label">' + t("exp", lang) + ' ' + str(p["exp"]) + ' / ' + str(p["exp_to_next"]) + '</div>', unsafe_allow_html=True)
         st.markdown('<div class="exp-bar-outer"><div class="exp-bar-inner" style="width:' + str(round(exp_pct, 1)) + '%"></div></div>', unsafe_allow_html=True)
         st.markdown("---")
+        best = p.get("best_streak", p.get("max_streak", 0))
         st.markdown(
             '<div style="font-size:.82rem;line-height:2.1;color:#ccccee;">'
             '🔥 ' + t("streak", lang) + ' <b style="color:#ffe066;">' + str(streak) + '</b> ' + t("questions", lang) + '<br>'
+            '⭐ ベスト <b style="color:#ffcc44;">' + str(best) + '</b> ' + t("questions", lang) + '<br>'
             '📊 ' + t("accuracy", lang) + ' <b style="color:#ffe066;">' + accuracy + '</b><br>'
             '📝 ' + t("total_q", lang) + ' <b style="color:#ffe066;">' + str(total) + '</b> ' + t("questions", lang) +
             '</div>', unsafe_allow_html=True)
@@ -229,11 +233,16 @@ def apply_correct(result, question=None):
     if was_zero and not gain.leveled_up:
         pm.heal(10)
 
-    # 週間統計
+    # 週間統計 & ベストストリーク更新
     p["weekly_correct"] = p.get("weekly_correct", 0) + 1
     p["weekly_total"] = p.get("weekly_total", 0) + 1
-    if streak > p.get("max_streak", 0):
-        p["max_streak"] = streak
+    prev_best = p.get("best_streak", p.get("max_streak", 0))
+    if streak > prev_best:
+        p["best_streak"] = streak
+        p["max_streak"] = streak      # 後方互換
+        st.session_state["_new_best_streak"] = streak
+    else:
+        st.session_state.pop("_new_best_streak", None)
 
     # モンスターバトル：ダメージ計算
     _diff = getattr(question, "difficulty", 1) if question else 1
@@ -625,6 +634,17 @@ if st.session_state.answered and st.session_state.last_result:
                 '<div style="font-size:.8rem;color:#aa88dd;margin-bottom:10px;">' + t("ai_teacher_label", lang) + '</div>'
                 '<div style="font-size:.92rem;color:#e8d8ff;line-height:1.9;">' + st.session_state.ai_explanation.replace("\n", "<br>") + '</div>'
                 '</div>', unsafe_allow_html=True)
+
+    # ── 新記録通知 ──────────────────────────────────────────────
+    _new_best = st.session_state.get("_new_best_streak")
+    if _new_best and result.is_correct:
+        st.markdown(
+            '<div class="new-record-banner" style="background:linear-gradient(135deg,#2a1500,#4a2a00);'
+            'border:2px solid #ff8800;border-radius:12px;padding:12px 20px;text-align:center;margin-bottom:8px;">'
+            '<div style="font-size:1.25rem;font-weight:900;color:#ffaa00;letter-spacing:.04em;">🔥 新記録！</div>'
+            '<div style="font-size:1rem;color:#ffe066;margin-top:2px;">連続 <b style="font-size:1.4rem;">'
+            + str(_new_best) + '</b> 問正解！</div>'
+            '</div>', unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
     remaining = engine.questions_left()

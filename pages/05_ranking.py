@@ -82,7 +82,7 @@ if not users:
     st.info("まだランキングデータがありません。クエストをプレイしてランクインしよう！")
     st.stop()
 
-tab_weekly, tab_alltime = st.tabs(["📅 週間ランキング", "🌟 総合ランキング"])
+tab_weekly, tab_alltime, tab_streak = st.tabs(["📅 週間ランキング", "🌟 総合ランキング", "🔥 ベストストリーク"])
 
 RANK_MEDALS = {1: "🥇", 2: "🥈", 3: "🥉"}
 GRADE_LABELS = {
@@ -157,6 +157,21 @@ with tab_alltime:
     def alltime_fmt(e):
         return f"{e.get('total_exp', 0):,} EXP"
     render_ranking(all_entries, "total_exp", "累計EXP", alltime_fmt)
+
+with tab_streak:
+    st.markdown('<div style="font-size:.85rem;color:#888;margin-bottom:12px;">連続正解の最高記録ランキング</div>', unsafe_allow_html=True)
+    streak_entries = [e for e in all_entries if e.get("best_streak", e.get("max_streak", 0)) > 0]
+    if not streak_entries:
+        st.info("まだ連続正解記録がありません。クエストで連続正解に挑戦しよう！")
+    else:
+        # best_streak を正規化（旧データは max_streak で補完）
+        for e in streak_entries:
+            if "best_streak" not in e:
+                e["best_streak"] = e.get("max_streak", 0)
+        def streak_fmt(e):
+            bs = e.get("best_streak", e.get("max_streak", 0))
+            return f"{bs} 問連続"
+        render_ranking(streak_entries, "best_streak", "最高連続正解", streak_fmt)
 
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown(

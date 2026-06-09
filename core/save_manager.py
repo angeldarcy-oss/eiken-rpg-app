@@ -239,6 +239,8 @@ def _validate_and_fill(player: dict) -> dict:
         player["login_streak"] = {"last_login": "", "streak_days": 0, "claimed_milestones": []}
     if "party_code" not in player:
         player["party_code"] = ""
+    if "guild_code" not in player:
+        player["guild_code"] = ""
     if "dungeons" not in player:
         player["dungeons"] = {}
     if "exp_spent" not in player:

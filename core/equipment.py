@@ -130,6 +130,10 @@ ITEMS: dict[str, dict] = {
     "hero_necklace":    {"name": "勇者のネックレス",    "type": "necklace", "tier": 3, "icon": "📿"},
     "crystal_necklace": {"name": "クリスタルネックレス","type": "necklace", "tier": 3, "icon": "💎"},
     "moon_pendant":     {"name": "月のペンダント",      "type": "necklace", "tier": 4, "icon": "🌙", "rare": True},
+    # ギルドボス限定ドロップ
+    "guild_pendant":        {"name": "ギルドの勲章ペンダント", "type": "necklace", "tier": 5, "icon": "🏅", "rare": True},
+    "guild_crest_ring":     {"name": "ギルド紋章の指輪",       "type": "ring",     "tier": 5, "icon": "💠", "rare": True},
+    "guild_badge_necklace": {"name": "ギルドの証",             "type": "necklace", "tier": 5, "icon": "🎖️", "rare": True},
 }
 
 # ボス専用レアドロッププール

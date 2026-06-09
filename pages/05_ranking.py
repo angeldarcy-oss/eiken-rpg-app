@@ -6,6 +6,8 @@ _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
+from core.mobile_css import MOBILE_CSS
+
 from core.save_manager import load_player, save_player, load_rankings, update_ranking
 from core.player import PlayerManager
 from core.i18n import t, grade_label
@@ -28,6 +30,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .rank-row-other{background:linear-gradient(135deg,#1a1a2e,#222244);border:1px solid #3a3a6a;}
 .rank-row-top3{background:linear-gradient(135deg,#1e1800,#2e2a00);border:1px solid #aa8800;}
 </style>""", unsafe_allow_html=True)
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 
 def init_session():

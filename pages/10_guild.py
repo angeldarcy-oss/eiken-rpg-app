@@ -3,6 +3,7 @@ import sys
 import streamlit as st
 import streamlit.components.v1 as components
 from pathlib import Path
+from core.mobile_css import MOBILE_CSS
 
 _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
@@ -48,6 +49,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 @keyframes victory-glow{0%{box-shadow:0 0 0 #ffcc00;opacity:0}30%{box-shadow:0 0 28px #ffcc00;opacity:1;transform:scale(1.02)}100%{box-shadow:0 0 10px #ff880044;opacity:1;transform:scale(1)}}
 .victory-banner{animation:victory-glow .8s ease-out;}
 </style>""", unsafe_allow_html=True)
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 _ROLE_LABEL = {"master": "👑 ギルドマスター", "officer": "⚔️ オフィサー", "member": "🧑 メンバー"}
 _ROLE_COLOR = {"master": "#ffcc00", "officer": "#88ccff", "member": "#aaaacc"}

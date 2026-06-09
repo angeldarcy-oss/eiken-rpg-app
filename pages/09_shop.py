@@ -7,6 +7,8 @@ _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
+from core.mobile_css import MOBILE_CSS
+
 from core.save_manager import load_player, save_player, update_ranking
 from core.player import PlayerManager
 from core.i18n import t, grade_label
@@ -35,6 +37,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 @keyframes shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
 @keyframes rare-glow{0%,100%{box-shadow:0 0 8px #ffaa0055,0 0 20px #ffcc0033}50%{box-shadow:0 0 16px #ffaa00aa,0 0 40px #ffcc0066}}
 </style>""", unsafe_allow_html=True)
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 
 def init_session():

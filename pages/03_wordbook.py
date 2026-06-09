@@ -6,6 +6,8 @@ _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
+from core.mobile_css import MOBILE_CSS
+
 from core.save_manager import load_player, save_player, get_user_save_path
 from core.player import PlayerManager
 from core.i18n import t, grade_label
@@ -25,6 +27,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .word-card{background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:1px solid #3a3a6a;border-radius:12px;padding:20px 24px;margin-bottom:12px;}
 .word-card-danger{background:linear-gradient(135deg,#2a0a0a,#3a1a1a);border:1px solid #7a2a2a;border-radius:12px;padding:20px 24px;margin-bottom:12px;}
 </style>""", unsafe_allow_html=True)
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 
 def init_session():

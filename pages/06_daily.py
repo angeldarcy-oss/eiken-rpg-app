@@ -5,6 +5,7 @@ import base64 as _base64
 import streamlit as st
 import streamlit.components.v1 as components
 from pathlib import Path
+from core.mobile_css import MOBILE_CSS
 
 _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
@@ -182,6 +183,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
   50%{box-shadow:0 0 28px rgba(68,255,136,0.9),0 0 55px rgba(68,255,136,0.35);}
 }
 </style>""", unsafe_allow_html=True)
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 
 def init_session():

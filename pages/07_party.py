@@ -3,6 +3,7 @@ import sys
 import streamlit as st
 import streamlit.components.v1 as components
 from pathlib import Path
+from core.mobile_css import MOBILE_CSS
 
 _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
@@ -41,6 +42,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .log-entry{font-size:.8rem;color:#aaaacc;margin-bottom:4px;}
 @keyframes party-pulse{0%,100%{box-shadow:0 0 8px #4466ff44}50%{box-shadow:0 0 20px #4466ffaa}}
 </style>""", unsafe_allow_html=True)
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 
 def init_session():

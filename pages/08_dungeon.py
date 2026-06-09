@@ -9,6 +9,8 @@ _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
+from core.mobile_css import MOBILE_CSS
+
 from core.save_manager import load_player, save_player, update_ranking
 from core.player import PlayerManager, streak_multiplier
 from core.i18n import t, grade_label
@@ -54,6 +56,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .progress-bar-inner{background:linear-gradient(90deg,#4488ff,#88ccff);height:100%;border-radius:8px;transition:width .5s ease;}
 @keyframes boss-pulse{0%,100%{filter:drop-shadow(0 0 4px #ff0044)}50%{filter:drop-shadow(0 0 14px #ff0044)}}
 </style>""", unsafe_allow_html=True)
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 _GRADE_MAP = {
     "grade_5": "5級", "grade_4": "4級", "grade_3": "3級",
@@ -376,11 +379,15 @@ def render_battle():
     if audio_b64:
         components.html(
             '<style>'
-            'html,body{margin:0;padding:2px 0 6px;background:transparent;'
-            'text-align:center;overflow:hidden;}'
-            '.sl{color:#7788bb;cursor:pointer;font-size:.9rem;'
-            "font-family:'Noto Sans JP',Arial,sans-serif;user-select:none;}"
-            '.sl:hover{color:#aabbee;}'
+            'html,body{margin:0;padding:0;background:transparent;text-align:center;overflow:hidden;}'
+            '.sl{display:inline-flex;align-items:center;justify-content:center;'
+            'color:#7788bb;cursor:pointer;font-size:.95rem;'
+            "font-family:'Noto Sans JP',Arial,sans-serif;user-select:none;"
+            'min-height:44px;padding:6px 20px;border-radius:22px;'
+            'touch-action:manipulation;-webkit-tap-highlight-color:transparent;'
+            'background:rgba(119,136,187,0.1);border:1px solid rgba(119,136,187,0.25);'
+            'transition:background .15s;}'
+            '.sl:hover,.sl:active{color:#aabbee;background:rgba(170,187,238,0.18);}'
             '</style>'
             '<script>'
             'try{var f=window.frameElement;'
@@ -391,7 +398,7 @@ def render_battle():
             "<span class='sl' onclick=\"document.getElementById('da').play()\">"
             '🔊 ' + q.word +
             '</span>',
-            height=34, scrolling=False
+            height=52, scrolling=False
         )
 
     # ── 選択肢ボタン ──

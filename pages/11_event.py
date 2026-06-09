@@ -12,6 +12,7 @@ from core.save_manager import load_player, save_player, update_ranking
 from core.player import PlayerManager
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html, CHARACTERS
+from core.mobile_css import MOBILE_CSS
 from core.quiz_engine import QuizEngine
 from core.monsters import calc_player_damage
 from core.equipment import ITEMS as _EQUIP_ITEMS
@@ -95,6 +96,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 @keyframes boss-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes countdown-glow{0%,100%{filter:drop-shadow(0 0 4px #ff4400)}50%{filter:drop-shadow(0 0 12px #ff8800)}}
 </style>""", unsafe_allow_html=True)
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 
 # ── サイドバー ─────────────────────────────────────────────────

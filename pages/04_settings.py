@@ -6,6 +6,8 @@ _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
+from core.mobile_css import MOBILE_CSS
+
 from core.save_manager import load_player, save_player, delete_save
 from core.player import PlayerManager, new_player
 from core.i18n import t, grade_label, LANG_OPTIONS
@@ -24,6 +26,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .stat-label{font-size:11px;color:#aaaacc !important;}
 .setting-card{background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:1px solid #3a3a6a;border-radius:12px;padding:24px;margin-bottom:16px;}
 </style>""", unsafe_allow_html=True)
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 _CHAR_CARD_CSS = """<style>
 .char-mini-card{background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:2px solid #3a3a6a;border-radius:12px;padding:12px 8px;text-align:center;margin-bottom:4px;}

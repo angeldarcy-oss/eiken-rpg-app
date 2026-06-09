@@ -6,6 +6,8 @@ _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
+from core.mobile_css import MOBILE_CSS
+
 import streamlit.components.v1 as components
 from core.quiz_engine import QuizEngine, Question, QuizResult
 from core.ai_tutor import get_explanation
@@ -55,7 +57,7 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .boss-battle-side{text-align:center;flex-shrink:0;position:relative;}
 .vs-text{font-size:1.6rem;color:#ff6644;text-shadow:0 0 8px #ff4400;font-weight:900;flex-shrink:0;}
 </style>""", unsafe_allow_html=True)
-
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 
 # ── 効果音：Python で WAV を生成して base64 化（外部ライブラリ不要）─────────
 import struct as _struct
@@ -804,11 +806,15 @@ audio_b64 = _get_audio_b64(q.word)
 if audio_b64:
     components.html(
         '<style>'
-        'html,body{margin:0;padding:2px 0 6px;background:transparent;'
-        'text-align:center;overflow:hidden;}'
-        '.sl{color:#7788bb;cursor:pointer;font-size:.9rem;'
-        "font-family:'Noto Sans JP',Arial,sans-serif;user-select:none;}"
-        '.sl:hover{color:#aabbee;}'
+        'html,body{margin:0;padding:0;background:transparent;text-align:center;overflow:hidden;}'
+        '.sl{display:inline-flex;align-items:center;justify-content:center;'
+        'color:#7788bb;cursor:pointer;font-size:.95rem;'
+        "font-family:'Noto Sans JP',Arial,sans-serif;user-select:none;"
+        'min-height:44px;padding:6px 20px;border-radius:22px;'
+        'touch-action:manipulation;-webkit-tap-highlight-color:transparent;'
+        'background:rgba(119,136,187,0.1);border:1px solid rgba(119,136,187,0.25);'
+        'transition:background .15s;}'
+        '.sl:hover,.sl:active{color:#aabbee;background:rgba(170,187,238,0.18);}'
         '</style>'
         '<script>'
         'try{var f=window.frameElement;'
@@ -819,7 +825,7 @@ if audio_b64:
         "<span class='sl' onclick=\"document.getElementById('sa').play()\">"
         '🔊 ' + q.word +
         '</span>',
-        height=34, scrolling=False
+        height=52, scrolling=False
     )
 
 if not st.session_state.answered:

@@ -83,7 +83,7 @@ grade_2_0081,alone,一人で,一個人,adv,I am alone now.,私は今一人です
 grade_2_0082,along,沿って,沿着,prep,The road runs along the river.,道路は川に沿って走っています。,沿着河流行駛。,,,1
 grade_2_0083,already,もう,另,adv,I have already eaten.,私はもう食事をしました。,已經吃過飯了。,,,1
 grade_2_0084,also,また,另外,adv,I also like coffee.,私はコーヒーも好きです。,我也喜歡咖啡。,,,1
-grade_2_0085,although,〜にもかかわらず,雖然,prep,"Although it is raining, I will go out.",雨が降っているですが、出かけてきます。,雖然下着雨，但我還是要出門。,,,2
+grade_2_0085,although,〜にもかかわらず,儘管~,prep,"Although it is raining, I will go out.",雨が降っているですが、出かけてきます。,雖然下着雨，但我還是要出門。,,,2
 grade_2_0086,always,いつも,總是,adv,I always eat breakfast.,私はいつも朝食を食べます。,我總是吃早餐。,,,1
 grade_2_0087,amazing,驚くべき,令人驚歎,adj,This view is amazing.,この景色は驚くべきです。,這個景色令人驚歎。,,,2
 grade_2_0088,ancient,古代の,古代的,adj,The ancient city is very interesting.,古代の都市は非常に面白いです。,古城是非常有趣的。,,,2
@@ -165,3 +165,47 @@ grade_2_0163,train,列車,列車,n,I took the train to the city.,私は市まで
 grade_2_0164,university,大学,大學,n,I attend a university in the city.,私は市にある大学に通っています。,我在市裏的大學上學。,,,2
 grade_2_0165,village,村,村,n,I like to visit villages in the countryside.,私は农村の村を訪れたいです。,我想參觀農村的村莊。,,,2
 grade_2_0166,water,水,水,n,I like to drink water every day.,私は毎日水を飲むのが好きです。,我喜歡每天喝水。,,,1
+grade_2_0167,apple,リンゴ,蘋果,n,I eat an apple every day.,私は毎日リンゴを１個食べます。,我每天吃一個蘋果。,果物の一種,水果的一種,1
+grade_2_0168,basic,基本的な,基本的,adj,This is a basic English course.,これは基本的な英語コースです。,這是一個基本的英語課程。,初心者向け,面向初學者,2
+grade_2_0169,celebrate,祝う,慶祝,v,We celebrate our birthday with friends.,私たちは友達と共に誕生日を祝います。,我們和朋友一起慶祝生日。,パーティーで祝う,在晚會上慶祝,2
+grade_2_0170,electric,電気の,電力的,adj,This electric toothbrush is convenient.,この電気歯ブラシは便利です。,這個電動牙刷很方便。,コンピューターも電気で動く,計算機也用電,2
+grade_2_0171,fluent,流暢な,流暢的,adj,She is fluent in English.,彼女は英語を流暢に話すことができます。,她英語說得很流利。,自然に会話できる,可以自然對話,3
+grade_2_0172,generous,寛大な,慷慨的,adj,He is a generous person.,彼は寛大な人です。,是個寬宏大量的人。,贅沢な,奢侈的,3
+grade_2_0173,honest,正直な,誠實的,adj,He is an honest person.,彼は正直な人です。,他是個誠實的人。,嘘を言わない,不說謊,2
+grade_2_0174,imagine,想像する,想象,v,I imagine a beautiful beach.,私は美しい海岸を想像しています。,我想象着美麗的海岸。,頭の中に描く,在腦海中描繪,3
+grade_2_0175,jealous,嫉妬的な,嫉妒的,adj,She is jealous of my success.,彼女は私の成功を嫉妬しています。,她嫉妒我的成功。,他人の成功を妬む,嫉妒別人的成功,3
+grade_2_0176,kindness,親切,親切,n,I appreciate your kindness.,あなたの親切は感謝しています。,我很感謝你的好意。,優しい気持ち,溫柔的心情,3
+grade_2_0177,laughable,笑える,好笑,adj,This movie is laughable.,この映画は笑える。,這部電影很搞笑。,面白い,有趣,3
+grade_2_0178,meticulous,細かい,細小,adj,She is meticulous about her work.,彼女は仕事について細かいです。,她對工作很細緻。,注意深い,細心,3
+grade_2_0179,narrate,語る,談論,v,He narrates his experience.,彼は自分の経験を語ります。,他講述了自己的經歷。,話す,說話,3
+grade_2_0180,obvious,明らかな,明顯的,adj,It is obvious that he is tired.,彼は疲れていることは明らかです。,很明顯他累了。,わかりやすい,易懂,3
+grade_2_0181,precise,正確な,準確的,adj,This watch is precise.,この時計は正確です。,這個表很準。,細かい,細小,3
+grade_2_0182,remarkable,特徴的な,有特色的,adj,This restaurant is remarkable.,このレストランは特徴的です。,這家餐廳很有特色。,目立つ,顯眼,3
+grade_2_0183,sensitive,敏感な,敏感的,adj,She is sensitive to noise.,彼女は音に対して敏感です。,她對聲音很敏感。,細かい,細小,3
+grade_2_0184,tactful,思慮深い,深思熟慮,adj,He is tactful in his dealings with others.,彼は他者との取り引きにおいて思慮深いです。,他在與他人的交易中很深思熟慮。,他人を傷つけない,不傷害別人,3
+grade_2_0185,understand,理解する,理解,v,I understand what you mean.,私はあなたの意味を理解します。,我理解你的意思。,意味を知る,瞭解意思,2
+grade_2_0186,vague,漠然とした,模糊的,adj,His idea is vague.,彼の考えは漠然としています。,他的想法很模糊。,はっきりしない,不清楚,3
+grade_2_0187,wonderful,すばらしい,太棒了,adj,This view is wonderful.,この景色はすばらしいです。,這個景色很棒。,感動的,令人感動,3
+grade_2_0188,xenon,キセノン,氙,n,Xenon is a rare gas.,キセノンは希ガスです。,氙是稀有氣體。,化学元素,化學元素,3
+grade_2_0189,yearn,切に願う,懇切期望,v,I yearn for freedom.,私は自由を切に願っています。,我渴望自由。,心から願う,衷心希望,3
+grade_2_0190,zest,活気,活力,n,This food has a lot of zest.,この食べ物にはたくさんの活気があります。,這個食物有很多活力。,元気,健康,3
+grade_2_0191,courage,勇気,勇氣,n,He showed great courage in the face of danger.,彼は危険に直面して大きな勇気を見せた。,他面對危險表現出極大的勇氣。,怖がらない,不害怕,3
+grade_2_0192,dynamite,ダイナマイト,炸藥,n,The workers used dynamite to blast the rocks.,作業員は岩を破壊するためにダイナマイトを使った。,工作人員使用炸藥來破壞岩石。,爆発物,爆炸物,3
+grade_2_0193,elegance,優雅,優雅,n,The elegance of the dress impressed me.,ドレスの優雅さに私は感銘を受けた。,禮服的優雅讓我印象深刻。,美しい,美麗,3
+grade_2_0194,finesse,繊細さ,細膩,n,The finesse of the craftsmanship was impressive.,職人の繊細さは感銘的だった。,工匠的細心令人感動。,細かい,細小,3
+grade_2_0195,giggle,にやにや笑う,賊笑,v,The children giggled at the clown's antics.,子供たちはピエロの行為ににやにや笑った。,孩子們對小丑的行爲嗤笑起來。,小さな笑い,小小的笑,3
+grade_2_0196,hurdle,障害,障礙,n,The team had to overcome a few hurdles to win the game.,チームはゲームに勝つためにいくつかの障害を克服しなければなりませんでした。,球隊必須克服一些障礙才能贏得比賽。,超える,超過,3
+grade_2_0197,insight,洞察力,洞察力,n,She had a deep insight into human nature.,彼女は人間の性質に対して深い洞察力を持っていました。,她對人性有深刻的洞察力。,理解力,理解力,3
+grade_2_0198,jubilant,歓喜的な,歡喜的,adj,The crowd was jubilant after the team's victory.,チームの勝利の後、群衆は歓喜的でした。,球隊勝利後，人羣歡呼雀躍。,喜んだ,我很高興,3
+grade_2_0199,kaleidoscope,万華鏡,萬花筒,n,The kaleidoscope of colors was mesmerizing.,色の万華鏡は魅了的なものでした。,彩色萬花筒是迷人的。,色ful,顏色ful,3
+grade_2_0200,lethargic,怠惰な,懶惰,adj,The lethargic cat slept all day.,怠惰な猫は一日中眠っていました。,懶惰的貓睡了一整天。,元気がない,無精打采,3
+grade_2_0201,melodious,美しい,美麗,adj,The melodious sound of the piano was soothing.,ピアノの美しい音は心地よかったです。,鋼琴優美的聲音聽起來很舒服。,音楽的,音樂的,3
+grade_2_0202,narrative,物語,故事,n,The narrative of the book was engaging.,本の物語は面白かったです。,書裏的故事很有趣。,話,故事,3
+grade_2_0203,opaque,不透明な,不透明的,adj,The opaque glass blocked the light.,不透明なガラスが光を遮いでいた。,不透明的玻璃遮住了光線。,見えにくい,很難看到,3
+grade_2_0204,perfidious,不忠な,不忠,adj,The perfidious traitor was punished.,不忠な裏切者は処罰されました。,不忠的叛徒受到了懲罰。,裏切る,背叛,3
+grade_2_0205,quixotic,空想的,空想,adj,The quixotic idea was impractical.,空想的な考えは非現実的でした。,幻想的想法是不現實的。,現実的でない,不現實,3
+grade_2_0206,reclusive,引き籠もった,閉門不出,adj,The reclusive author rarely gave interviews.,引き籠もった著者はめったにインタビューをしませんでした。,閉門不出的作者很少接受採訪。,外に出ない,不出去,3
+grade_2_0207,sagacious,賢い,聰明,adj,The sagacious investor made a fortune.,賢い投資家は大金を稼いだ。,聰明的投資者賺了很多錢。,知恵のある,有智慧,3
+grade_2_0208,taciturn,寡黙な,沉默寡言,adj,The taciturn person rarely spoke.,寡黙な人物はめったに話しませんでした。,沉默寡言的人很少說話。,少しだけ話す,說幾句,3
+grade_2_0209,ubiquitous,至る所にある,到處都有,adj,The ubiquitous presence of smartphones is remarkable.,スマートフォンの至る所にある存在は特徴的です。,智能手機無處不在的存在是獨特的。,どこでも,任何地方,3
+grade_2_0210,vigilant,注意深い,細心,adj,The vigilant guard caught the thief.,注意深い警備員が泥棒を捕まえました。,細心的警衛抓住了小偷。,気をつける,小心,3

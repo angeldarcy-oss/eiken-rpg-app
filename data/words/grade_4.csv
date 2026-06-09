@@ -327,7 +327,7 @@ grade_4_0325,about,について,關於,prep,I am talking about my hobby.,私は�
 grade_4_0326,after,の後,後,prep,I will meet you after school.,私は学校の後にお会いします。,放學後見你。,,,1
 grade_4_0327,during,の間,之間的,prep,I will be on vacation during the summer.,私は夏の間、休暇を取ります。,我暑假期間休假。,,,2
 grade_4_0328,since,以来,以後,prep,I have been studying English since I was a child.,私は子供の頃から英語を勉強しています。,我從小開始學習英語。,,,2
-grade_4_0329,although,〜だけれど,雖然,conj,"I will go to the party, although I am tired.",私は疲れているが、パーティーに行きます。,我累了，但我要去參加派對。,,,3
+grade_4_0329,although,〜だけれど,雖然~,conj,"I will go to the party, although I am tired.",私は疲れているが、パーティーに行きます。,我累了，但我要去參加派對。,,,3
 grade_4_0330,if,もし,如果,conj,I will go to the store if I have time.,時間があるなら、店に行きます。,如果有時間，我會去商店。,,,2
 grade_4_0331,wisely,賢く,聰明,adv,I will make a wise decision.,私は賢い決定を下します。,我會做出明智的決定。,,,3
 grade_4_0332,politely,丁寧に,禮貌地,adv,I will speak politely to my teacher.,私は先生に丁寧に話します。,我會禮貌地跟老師說話。,,,3
@@ -352,3 +352,43 @@ grade_4_0350,peaceful,平和,和平,adj,The park is peaceful.,公園は平和だ
 grade_4_0351,gently,優しく,溫柔,adv,I am touching gently.,私は優しく触れている。,我溫柔地撫摸着。,強くない,不強,1
 grade_4_0352,kindly,親切に,親切地,adv,I am speaking kindly.,私は親切に話している。,我親切地說話。,優しく,溫柔,1
 grade_4_0353,behind,後ろ,後面,prep,The book is behind the door.,本はドアの後ろにあります。,書在門後面。,後ろにある,在後面,1
+grade_4_0354,banana,バナナ,香蕉,n,Monkeys love bananas.,サルはバナナが好きだ。,猴子喜歡香蕉。,,,1
+grade_4_0355,carrot,にんじん,胡蘿蔔,n,I like to eat carrots.,私はにんじんが好きだ。,我喜歡胡蘿蔔。,,,1
+grade_4_0356,bathroom,バスルーム,浴室,n,I am in the bathroom.,私はバスルームにいます。,我在浴室裏。,,,2
+grade_4_0357,kitchen,キッチン,廚房,n,I am in the kitchen.,私はキッチンにいます。,我在廚房。,,,2
+grade_4_0358,living room,リビング,客廳,n,I am in the living room.,私はリビングにいます。,我在客廳。,,,2
+grade_4_0359,tv,テレビ,電視,n,I watch tv.,私はテレビを見る。,我看電視。,,,2
+grade_4_0360,radio,ラジオ,收音機,n,I listen to the radio.,私はラジオを聞く。,我聽收音機。,,,2
+grade_4_0361,newspaper,新聞,報紙,n,I read a newspaper.,私は新聞を読む。,我看報紙。,,,2
+grade_4_0362,magazine,雑誌,雜誌,n,I read a magazine.,私は雑誌を読む。,我讀雜誌。,,,2
+grade_4_0363,bookshelf,本棚,書架,n,I have a bookshelf.,私は本棚を持っています。,我有一個書架。,,,2
+grade_4_0364,desk lamp,机のランプ,檯燈,n,I use a desk lamp.,私は机のランプを使う。,我用檯燈。,,,2
+grade_4_0365,curtain,カーテン,窗簾,n,I close the curtain.,私はカーテンを閉じる。,我拉上窗簾。,,,2
+grade_4_0366,blanket,毛布,毛毯,n,I use a blanket.,私は毛布を使う。,我用毯子。,,,2
+grade_4_0367,pillow,枕,枕頭,n,I rest my head on a pillow.,私は枕に頭を置く。,我把頭放在枕頭上。,,,2
+grade_4_0368,ship,船,船,n,I sail on a ship.,私は船で航海します。,我坐船航行。,海を渡る乗り物,跨海交通工具,2
+grade_4_0369,universe,宇宙,宇宙,n,I learn about the universe.,私は宇宙について学びます。,我學習宇宙。,全てのものの集合,所有事物的集合,3
+grade_4_0370,ride,乗る,乘坐,v,I will ride a bike.,私は自転車に乗ります。,我騎自行車。,,,1
+grade_4_0371,drive,運転する,開車,v,I will drive to the store.,私は店まで運転します。,我開車去商店。,,,1
+grade_4_0372,bike,自転車,自行車,n,I like to ride my bike.,私は自転車に乗ることを好きです。,我喜歡騎自行車。,乗り物,交通工具,1
+grade_4_0373,wide,広い,廣闊,adj,This river is wide.,この川は広いです。,這條河很寬。,大きさ,大小,1
+grade_4_0374,narrow,狭い,狹窄,adj,This road is narrow.,この道は狭いです。,這條路很窄。,大きさ,大小,1
+grade_4_0375,for,ために,爲了,prep,I will study for the exam.,私は試験のために勉強します。,我爲了考試而學習。,目的を表す,表示目的,2
+grade_4_0376,wait,待つ,等待,v,I will wait for you.,私はあなたを待ちます。,我等你。,時間を過ごす,打發時間,1
+grade_4_0377,into,の中に,裏面,prep,I will go into the room.,私は部屋の中に入ります。,我走進房間。,方向を表す,表示方向,2
+grade_4_0378,orange,みかん,橘子,n,I like eating oranges.,私はみかんが好きです。,我喜歡橘子。,,,1
+grade_4_0379,grape,ぶどう,葡萄,n,I like eating grapes.,私はぶどうが好きです。,我喜歡葡萄。,,,1
+grade_4_0380,pear,ナシ,梨,n,I like eating pears.,私はナシが好きです。,我喜歡梨。,,,1
+grade_4_0381,peach,桃,桃子,n,I like eating peaches.,私は桃が好きです。,我喜歡桃子。,,,1
+grade_4_0382,juice,ジュース,果汁,n,I like drinking juice.,私はジュースが好きです。,我喜歡果汁。,,,1
+grade_4_0383,tea,お茶,茶,n,I like drinking tea.,私はお茶が好きです。,我喜歡喝茶。,,,1
+grade_4_0384,coffee,コーヒー,咖啡,n,I like drinking coffee.,私はコーヒーが好きです。,我喜歡咖啡。,,,1
+grade_4_0385,milk,牛乳,牛奶,n,I like drinking milk.,私は牛乳が好きです。,我喜歡牛奶。,,,1
+grade_4_0386,egg,卵,雞蛋,n,I like eating eggs.,私は卵が好きです。,我喜歡雞蛋。,,,1
+grade_4_0387,meat,肉,肉,n,I like eating meat.,私は肉が好きです。,我喜歡吃肉。,,,1
+grade_4_0388,rice,ご飯,飯,n,I like eating rice.,私はご飯が好きです。,我喜歡吃飯。,,,1
+grade_4_0389,noodle,ヌードル,麪條,n,I like eating noodles.,私はヌードルが好きです。,我喜歡麪條。,,,1
+grade_4_0390,bread,パン,麪包,n,I like eating bread.,私はパンが好きです。,我喜歡麪包。,,,1
+grade_4_0391,cake,ケーキ,蛋糕,n,I like eating cake.,私はケーキが好きです。,我喜歡蛋糕。,,,1
+grade_4_0392,bridge,橋,橋,n,I like crossing the bridge.,私は橋を渡るのが好きです。,我喜歡過橋。,,,2
+grade_4_0393,road,道路,道路,n,I like driving on the road.,私は道路を運転するのが好きです。,我喜歡在路上開車。,,,2

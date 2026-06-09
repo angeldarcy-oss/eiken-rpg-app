@@ -145,3 +145,44 @@ grade_pre2_0143,wish,願う,希望,v,I wish I could fly.,私は飛べたらい�
 grade_pre2_0144,year,年,年,n,The year is coming to an end.,年が終わりを迎えている。,一年即將結束。,,,1
 grade_pre2_0145,youth,青春,青春,n,The youth of today is important.,今日の青春は重要だ。,今天的青春很重要。,,,2
 grade_pre2_0146,zone,区域,區域,n,The zone is restricted.,区域は制限されている。,區域是有限的。,,,2
+grade_pre2_0147,consider,考える,思考,v,I consider this problem very important.,私はこの問題を非常に重要だと考えている。,我認爲這個問題非常重要。,con-は「一緒に」という意味がある,con-有“一起”的意思,2
+grade_pre2_0148,society,社会,社會,n,The society we live in is very complex.,私たちが住んでいる社会は非常に複雑である。,我們生活的社會非常複雜。,,,2
+grade_pre2_0149,technology,技術,技術,n,New technology has changed our lives.,新しい技術は私たちの生活を変えている。,新技術正在改變我們的生活。,,,2
+grade_pre2_0150,environment,環境,環境,n,We should protect the environment.,私たちは環境を保護するべきだ。,我們應該保護環境。,,,2
+grade_pre2_0151,economy,経済,經濟,n,The economy is very important for a country.,経済は国にとって非常に重要である。,經濟對一個國家非常重要。,,,2
+grade_pre2_0152,culture,文化,文化,n,Every country has its own culture.,各国にはそれぞれ独自の文化がある。,每個國家都有自己的文化。,,,2
+grade_pre2_0153,history,歴史,歷史,n,History is very interesting.,歴史は非常に面白い。,歷史非常有趣。,,,1
+grade_pre2_0154,politics,政治,政治,n,Politics is a very complex subject.,政治は非常に複雑な主題である。,政治是一個非常複雜的主題。,,,2
+grade_pre2_0155,education,教育,教育,n,Education is very important for our future.,教育は私たちの将来にとって非常に重要である。,教育對我們的未來非常重要。,,,2
+grade_pre2_0156,health,健康,健康,n,Health is the most important thing in life.,健康は人生で最も重要なものである。,健康是生命中最重要的東西。,,,1
+grade_pre2_0157,media,メディア,媒體,n,The media plays a very important role in our society.,メディアは私たちの社会で非常に重要な役割を果たしている。,媒體在我們的社會中扮演着非常重要的角色。,,,2
+grade_pre2_0158,communication,コミュニケーション,溝通,n,Communication is key to any successful relationship.,コミュニケーションはどのような関係でも重要である。,溝通在任何關係中都很重要。,,,2
+grade_pre2_0159,community,コミュニティ,社區,n,The community came together to support the local charity.,コミュニティは地元の慈善団体を支援するために一体となった。,社區團結起來支持當地慈善機構。,,,2
+grade_pre2_0160,development,発展,發展,n,The development of new technology has changed our lives.,新しい技術の発展は私たちの生活を変えている。,新技術的發展改變着我們的生活。,,,2
+grade_pre2_0161,progress,進歩,進步,n,We have made great progress in the field of medicine.,私たちは医療の分野で大きな進歩を遂げている。,我們在醫療領域取得了很大的進步。,,,2
+grade_pre2_0162,challenge,課題,課題,n,The challenge of learning a new language is very rewarding.,新しい言語を学ぶという課題は非常に報われる。,學習一門新語言的挑戰是非常有益的。,,,2
+grade_pre2_0163,opportunity,機会,機會,n,This is a great opportunity for me to learn and grow.,これは私が学び成長するための良い機会である。,這是我學習和成長的好機會。,,,2
+grade_pre2_0164,responsibility,責任,責任,n,"As a parent, it is my responsibility to take care of my children.",親として、子供の世話をすることは私の責任である。,作爲父母，照顧孩子是我的責任。,,,2
+grade_pre2_0165,freedom,自由,自由,n,Freedom is a fundamental human right.,自由は基本的人権である。,自由是一項基本人權。,,,2
+grade_pre2_0166,democracy,民主主義,民主主義,n,Democracy is a system of government where power is held by the people.,民主主義は、権力が人民によって持たれる政治システムである。,民主是權力由人民掌握的政治制度。,,,2
+grade_pre2_0167,equality,平等,平等,n,Equality is a fundamental principle of human rights.,平等は人権の基本原則である。,平等是人權的基本原則。,,,2
+grade_pre2_0168,justice,正義,正義,n,Justice is a fundamental principle of a fair society.,正義は公正な社会の基本原則である。,正義是公正社會的基本原則。,,,2
+grade_pre2_0169,rights,権利,權利,n,Human rights are fundamental to a fair and just society.,人権は公正で公平な社会にとって基本的である。,人權對公正公平的社會至關重要。,,,2
+grade_pre2_0170,law,法律,法律,n,The law is in place to protect citizens and maintain order.,法律は市民を保護し秩序を維持するためにある。,法律是用來保護市民和維持秩序的。,,,1
+grade_pre2_0171,government,政府,政府,n,The government is responsible for making and enforcing laws.,政府は法律を作り実施する責任がある。,政府有責任制定和實施法律。,,,2
+grade_pre2_0172,business,ビジネス,商務,n,The business world is highly competitive.,ビジネスの世界は非常に競争的である。,商業世界是非常競爭的。,,,2
+grade_pre2_0173,management,管理,管理,n,Effective management is crucial for a company's success.,効果的な管理は会社の成功にとって非常に重要である。,有效的管理對公司的成功至關重要。,,,2
+grade_pre2_0174,marketing,マーケティング,市場營銷,n,Marketing is a key component of any successful business.,マーケティングはどの成功したビジネスにも重要な要素である。,營銷是任何成功企業的重要組成部分。,,,2
+grade_pre2_0175,finance,金融,金融,n,Finance is a critical aspect of any business or organization.,金融はどのビジネスや組織でも重要な側面である。,金融是任何企業或組織的重要方面。,,,2
+grade_pre2_0176,investment,投資,投資,n,A wise investment can lead to significant financial gains.,賢い投資は大きい財政上の利益につながることができる。,明智的投資可能導致巨大財政贏利。,,,2
+grade_pre2_0177,trade,貿易,貿易,n,International trade is essential for the global economy.,国際貿易は世界経済にとって非常に重要である。,國際貿易對世界經濟非常重要。,,,2
+grade_pre2_0178,innovation,革新,革新,n,Innovation is key to staying ahead in a competitive market.,革新は競争的な市場で先んじるために重要である。,創新對於在競爭市場中領先至關重要。,,,2
+grade_pre2_0179,entrepreneur,起業家,企業家,n,An entrepreneur takes risks to start and run a business.,起業家はビジネスを始め運営するためにリスクを取る。,企業家承擔風險開始和經營企業。,,,2
+grade_pre2_0180,leadership,リーダーシップ,領導力,n,Effective leadership is crucial for a company's success.,効果的なリーダーシップは会社の成功にとって非常に重要である。,有效的領導能力對公司的成功至關重要。,,,2
+grade_pre2_0181,strategy,戦略,戰略,n,A well-planned strategy is essential for achieving business goals.,しっかりと計画された戦略はビジネスの目標を達成するために不可欠である。,精心策劃的戰略對於實現業務目標至關重要。,,,2
+grade_pre2_0182,teamwork,チームワーク,團隊合作,n,Teamwork is essential for achieving common goals.,チームワークは共通の目標を達成するために不可欠である。,團隊合作對於實現共同目標至關重要。,,,2
+grade_pre2_0183,problem,問題,問題,n,We need to solve this problem as soon as possible.,私たちはこの問題をできるだけ早く解決する必要がある。,我們有必要儘早解決這個問題。,,,1
+grade_pre2_0184,solution,解決,解決,n,The solution to this problem is not easy to find.,この問題の解決は簡単には見つからない。,解決這個問題並不容易。,,,2
+grade_pre2_0185,result,結果,結果,n,The result of the election was unexpected.,選挙の結果は予想外だった。,選舉結果出乎意料。,,,2
+grade_pre2_0186,decision,決定,決定,n,Making a decision can be difficult sometimes.,決定を下すことは時々難しいことがある。,做出決定有時很難。,,,2
+grade_pre2_0187,conclusion,結論,結論,n,The conclusion of the report was very interesting.,報告書の結論は非常に面白かった。,報告的結論非常有趣。,,,2

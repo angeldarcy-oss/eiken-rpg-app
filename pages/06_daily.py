@@ -442,6 +442,8 @@ st.markdown(
     '<div style="font-size:.82rem;color:#888;margin-bottom:12px;">アイテムをクリックして装備・解除できます</div>',
     unsafe_allow_html=True)
 
+from core.equipment_bonus import get_bonus_description as _gbd
+
 inventory = p.get("inventory", [])
 equip = p.get("equipment", {})
 
@@ -452,40 +454,64 @@ if not inventory:
         'まだアイテムがありません。<br>デイリークエストやログインボーナスで装備をゲットしよう！'
         '</div>', unsafe_allow_html=True)
 else:
-    slot_names = {"hat": "🎩 帽子", "weapon": "⚔️ 武器", "armor": "🛡️ 防具", "cloak": "🧥 マント"}
-    slot_items: dict = {"hat": [], "weapon": [], "armor": [], "cloak": []}
+    _ALL_SLOTS = {
+        "weapon": "⚔️ 武器",
+        "armor":  "🛡️ 防具",
+        "hat":    "🎩 帽子",
+        "cloak":  "🧥 マント",
+        "ring":   "💍 指輪",
+        "necklace": "📿 ネックレス",
+    }
+    _slot_items: dict[str, list[str]] = {s: [] for s in _ALL_SLOTS}
     for iid in inventory:
-        item = ITEMS.get(iid)
-        if item:
-            slot_items[item["type"]].append(iid)
+        _item = ITEMS.get(iid)
+        if _item and _item["type"] in _slot_items:
+            _slot_items[_item["type"]].append(iid)
 
-    for slot, slot_label in slot_names.items():
-        items_in_slot = slot_items[slot]
-        equipped_id = equip.get(slot)
-        st.markdown(f'<div style="font-size:.9rem;font-weight:700;color:#aaaacc;margin:12px 0 6px;">{slot_label}</div>', unsafe_allow_html=True)
-        if not items_in_slot:
-            st.markdown('<div style="font-size:.8rem;color:#555;margin-bottom:8px;">なし</div>', unsafe_allow_html=True)
+    for slot, slot_label in _ALL_SLOTS.items():
+        _in_slot = _slot_items[slot]
+        _eq_id = equip.get(slot)
+        st.markdown(
+            f'<div style="font-size:.9rem;font-weight:700;color:#aaaacc;margin:14px 0 6px;">'
+            f'{slot_label}</div>', unsafe_allow_html=True)
+        if not _in_slot:
+            st.markdown('<div style="font-size:.8rem;color:#444;margin-bottom:6px;">所持なし</div>', unsafe_allow_html=True)
             continue
-        cols = st.columns(min(len(items_in_slot), 4))
-        for col, iid in zip(cols, items_in_slot):
-            item = ITEMS[iid]
-            is_equipped = (equipped_id == iid)
-            border = "#ffe066" if is_equipped else "#3a3a6a"
-            bg = "linear-gradient(135deg,#2a2000,#3a3000)" if is_equipped else "linear-gradient(135deg,#1e1e3a,#2a2a4a)"
-            tier_stars = "★" * item["tier"] + "☆" * (3 - item["tier"])
-            with col:
-                from core.equipment_bonus import get_bonus_description as _gbd
-                _bonus_desc = _gbd(iid)
-                _bonus_line = f'<div style="font-size:.58rem;color:#88ccaa;margin-top:2px;">{_bonus_desc}</div>' if _bonus_desc else ""
+        _cols = st.columns(min(len(_in_slot), 4))
+        for _col, iid in zip(_cols, _in_slot):
+            _item = ITEMS[iid]
+            _is_eq = (_eq_id == iid)
+            _border = "#ffe066" if _is_eq else "#3a3a6a"
+            _bg = "linear-gradient(135deg,#2a2000,#3a3000)" if _is_eq else "linear-gradient(135deg,#1e1e3a,#2a2a4a)"
+            _stars = "★" * _item["tier"] + "☆" * max(0, 4 - _item["tier"])
+            _desc = _gbd(iid)
+            # ボーナス行：装備中は緑＋「発動中」バッジ、未装備はグレー
+            if _desc and _is_eq:
+                _bonus_html = (
+                    f'<div style="font-size:.64rem;color:#66ee88;font-weight:700;margin-top:5px;'
+                    f'line-height:1.4;">{_desc}</div>'
+                    f'<div style="display:inline-block;background:#0a3a14;border:1px solid #44cc66;'
+                    f'border-radius:8px;padding:1px 6px;font-size:.58rem;color:#44ff88;'
+                    f'margin-top:3px;">✅ 効果発動中</div>'
+                )
+            elif _desc:
+                _bonus_html = (
+                    f'<div style="font-size:.64rem;color:#778877;margin-top:5px;'
+                    f'line-height:1.4;">{_desc}</div>'
+                    f'<div style="font-size:.58rem;color:#555;margin-top:2px;">（未装備）</div>'
+                )
+            else:
+                _bonus_html = ""
+            with _col:
                 st.markdown(
-                    f'<div style="background:{bg};border:2px solid {border};border-radius:10px;'
-                    f'padding:10px 6px;text-align:center;margin-bottom:4px;">'
-                    f'<div style="font-size:1.6rem;">{item["icon"]}</div>'
-                    f'<div style="font-size:.65rem;color:#ffe066;margin-top:4px;">{item["name"]}</div>'
-                    f'<div style="font-size:.6rem;color:#aa8800;">{tier_stars}</div>'
-                    + _bonus_line +
+                    f'<div style="background:{_bg};border:2px solid {_border};border-radius:10px;'
+                    f'padding:10px 6px;text-align:center;margin-bottom:4px;min-height:120px;">'
+                    f'<div style="font-size:1.7rem;">{_item["icon"]}</div>'
+                    f'<div style="font-size:.68rem;color:#ffe066;font-weight:700;margin-top:4px;">{_item["name"]}</div>'
+                    f'<div style="font-size:.58rem;color:#aa8800;">{_stars}</div>'
+                    + _bonus_html +
                     f'</div>', unsafe_allow_html=True)
-                if is_equipped:
+                if _is_eq:
                     if st.button("外す", key=f"unequip_{slot}_{iid}", use_container_width=True):
                         unequip_slot(p, slot)
                         save_player(p, username)
@@ -498,21 +524,35 @@ else:
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# ─── 現在の装備まとめ ──────────────────────────────────────
-st.markdown('<div style="font-size:.9rem;font-weight:700;color:#ffe066;margin-bottom:8px;">装備中のアイテム</div>', unsafe_allow_html=True)
-equip_display = []
-for slot, slot_label in [("hat", "帽子"), ("weapon", "武器"), ("armor", "防具"), ("cloak", "マント")]:
-    iid = equip.get(slot)
-    if iid and iid in ITEMS:
-        item = ITEMS[iid]
-        equip_display.append(f'{item["icon"]} {slot_label}：{item["name"]}')
+# ─── 現在の装備まとめ（アクティブボーナス一覧）─────────────────
+st.markdown(
+    '<div style="font-size:.9rem;font-weight:700;color:#ffe066;margin-bottom:8px;">⚡ アクティブボーナス（装備中の効果）</div>',
+    unsafe_allow_html=True)
+_active_lines: list[str] = []
+_slot_labels_full = {
+    "weapon": "⚔️ 武器", "armor": "🛡️ 防具", "hat": "🎩 帽子",
+    "cloak": "🧥 マント", "ring": "💍 指輪", "necklace": "📿 ネックレス",
+}
+for _s, _sl in _slot_labels_full.items():
+    _eid = equip.get(_s)
+    if _eid and _eid in ITEMS:
+        _eit = ITEMS[_eid]
+        _bd = _gbd(_eid)
+        _bonus_part = f' <span style="color:#66ee88;font-weight:700;">{_bd}</span>' if _bd else \
+                      ' <span style="color:#666;">ボーナスなし</span>'
+        _active_lines.append(
+            f'{_sl}：<span style="color:#fff;">{_eit["icon"]} {_eit["name"]}</span>{_bonus_part}'
+        )
     else:
-        equip_display.append(f'〈{slot_label}〉なし')
+        _active_lines.append(f'{_sl}：<span style="color:#444;">なし</span>')
 
 st.markdown(
-    '<div style="background:linear-gradient(135deg,#1e1e3a,#2a2a4a);border:1px solid #3a3a6a;'
-    'border-radius:10px;padding:14px 18px;">'
-    + "".join(f'<div style="font-size:.88rem;color:#ccccee;line-height:2;">{line}</div>' for line in equip_display)
+    '<div style="background:linear-gradient(135deg,#0a0a1a,#1a1a2a);border:1px solid #3a3a6a;'
+    'border-radius:12px;padding:16px 20px;">'
+    + "".join(
+        f'<div style="font-size:.85rem;color:#aaaacc;line-height:2.2;">{ln}</div>'
+        for ln in _active_lines
+    )
     + '</div>', unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)

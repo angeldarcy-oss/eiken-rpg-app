@@ -48,6 +48,12 @@ html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
 .boss-badge{background:linear-gradient(135deg,#3a0033,#5a0044);border:1px solid #ff0066;border-radius:6px;padding:2px 10px;font-size:.72rem;color:#ff88cc;display:inline-block;margin-bottom:4px;animation:boss-pulse 1.6s ease-in-out infinite}
 @keyframes new-record-glow{0%{box-shadow:0 0 0 #ff8800;opacity:0;transform:scale(.92)}30%{box-shadow:0 0 24px #ff8800,0 0 48px #ffaa00;opacity:1;transform:scale(1.03)}100%{box-shadow:0 0 8px #ff440044;opacity:1;transform:scale(1)}}
 .new-record-banner{animation:new-record-glow .7s ease-out}
+@keyframes char-attack{0%{transform:translateX(0) scale(1)}30%{transform:translateX(22px) scale(1.1)}65%{transform:translateX(8px)}100%{transform:translateX(0) scale(1)}}
+.char-attack-anim{animation:char-attack .55s ease-out}
+.boss-battle-layout{display:flex;align-items:center;justify-content:center;gap:20px;padding:6px 0;}
+.char-battle-side{text-align:center;flex-shrink:0;}
+.boss-battle-side{text-align:center;flex-shrink:0;position:relative;}
+.vs-text{font-size:1.6rem;color:#ff6644;text-shadow:0 0 8px #ff4400;font-weight:900;flex-shrink:0;}
 </style>""", unsafe_allow_html=True)
 
 
@@ -390,6 +396,7 @@ def load_next_question():
             _boss = get_weekly_boss()
             st.session_state.battle_monster = _boss
             st.session_state.battle_boss_active = True
+            st.session_state["_boss_just_appeared"] = True
         else:
             st.session_state.battle_monster = get_monster_for_grade(_grade)
         st.session_state.battle_monster_hp = st.session_state.battle_monster["hp"]
@@ -405,6 +412,89 @@ def load_next_question():
         st.session_state.last_result = None
         st.session_state.ai_explanation = None
         st.session_state.last_gain_result = None
+
+
+def _render_boss_appear_overlay() -> None:
+    """ボス登場演出：赤フラッシュ＋テキスト＋バトル画面＋重低音BGM"""
+    boss = st.session_state.get("battle_monster", {})
+    boss_name = boss.get("name", "BOSS")
+    boss_emoji = boss.get("emoji", "👑")
+    boss_svg = boss.get("svg", "")
+    boss_hp = boss.get("hp", 100)
+
+    audio_js = (
+        "(function(){"
+        "try{"
+        "var ctx=new(window.AudioContext||window.webkitAudioContext)();"
+        # ノイズバースト（重い衝撃音）
+        "var n=Math.floor(ctx.sampleRate*0.38);"
+        "var buf=ctx.createBuffer(1,n,ctx.sampleRate);"
+        "var d=buf.getChannelData(0);"
+        "for(var i=0;i<n;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/n,1.4);"
+        "var s=ctx.createBufferSource();s.buffer=buf;"
+        "var lp=ctx.createBiquadFilter();lp.type='lowpass';lp.frequency.value=200;"
+        "var g=ctx.createGain();g.gain.value=0.75;"
+        "s.connect(lp);lp.connect(g);g.connect(ctx.destination);s.start();"
+        # 低音ドローン3重
+        "[55,50,46].forEach(function(fr,i){"
+        "var o=ctx.createOscillator();o.type='sawtooth';"
+        "o.frequency.setValueAtTime(fr*1.6,ctx.currentTime+i*0.07);"
+        "o.frequency.exponentialRampToValueAtTime(fr,ctx.currentTime+i*0.07+1.7);"
+        "var gn=ctx.createGain();gn.gain.setValueAtTime(0.18,ctx.currentTime+i*0.07);"
+        "gn.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+i*0.07+2.3);"
+        "o.connect(gn);gn.connect(ctx.destination);"
+        "o.start(ctx.currentTime+i*0.07);o.stop(ctx.currentTime+i*0.07+2.3);});"
+        # 警告スタブ音
+        "[0.38,0.62,0.88].forEach(function(t){"
+        "var o=ctx.createOscillator();o.type='square';"
+        "o.frequency.setValueAtTime(220,ctx.currentTime+t);"
+        "o.frequency.exponentialRampToValueAtTime(100,ctx.currentTime+t+0.18);"
+        "var gn=ctx.createGain();gn.gain.setValueAtTime(0.4,ctx.currentTime+t);"
+        "gn.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+t+0.22);"
+        "o.connect(gn);gn.connect(ctx.destination);"
+        "o.start(ctx.currentTime+t);o.stop(ctx.currentTime+t+0.26);});"
+        "}catch(e){}"
+        "})();"
+    )
+
+    html = (
+        "<style>"
+        "html,body{margin:0;padding:0;background:#000;overflow:hidden;}"
+        "@keyframes bg-a{0%{background:rgba(200,0,0,.97)}25%{background:rgba(130,0,0,.92)}"
+        "65%{background:rgba(25,0,0,.78)}90%{opacity:.5}100%{opacity:.1}}"
+        "@keyframes title-a{0%{transform:scale(.2) translateY(-30px);opacity:0}"
+        "18%{transform:scale(1.3);opacity:1}35%{transform:scale(1);opacity:1}"
+        "85%{opacity:1}100%{opacity:.15}}"
+        "@keyframes shake-a{0%,100%{transform:scale(1)}"
+        "20%,60%{transform:translateX(-11px) scale(1.07)}"
+        "40%,80%{transform:translateX(11px) scale(1.07)}}"
+        "@keyframes name-a{0%,14%{opacity:0}28%{opacity:1}85%{opacity:1}100%{opacity:.15}}"
+        ".ov{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;"
+        "flex-direction:column;align-items:center;justify-content:center;"
+        "animation:bg-a 3s ease-out forwards;}"
+        ".tit{font-size:2.2rem;font-weight:900;color:#ff2200;font-family:sans-serif;"
+        "animation:title-a 3s ease-out forwards;"
+        "text-shadow:0 0 22px #ff0000,0 0 44px #ff6600;letter-spacing:.04em;"
+        "text-align:center;padding:0 10px;}"
+        ".bar{width:75%;height:2px;background:linear-gradient(90deg,transparent,#ff4400,transparent);"
+        "margin:10px auto;animation:name-a 3s ease-out forwards;}"
+        ".bsv{width:140px;height:140px;margin:8px auto;"
+        "animation:shake-a .42s ease-in-out .28s 2;}"
+        ".bnm{font-size:1.7rem;font-weight:700;color:#ffcc00;font-family:sans-serif;"
+        "text-shadow:0 0 12px #ffaa00;animation:name-a 3s ease-out forwards;}"
+        ".bhp{font-size:.85rem;color:#ff8888;font-family:sans-serif;"
+        "margin-top:5px;animation:name-a 3s ease-out forwards;}"
+        "</style>"
+        '<div class="ov">'
+        '<div class="tit">⚠️ BOSS APPEARS！</div>'
+        '<div class="bar"></div>'
+        '<div class="bsv">' + boss_svg + '</div>'
+        '<div class="bnm">' + boss_emoji + ' ' + boss_name + '</div>'
+        '<div class="bhp">HP ' + str(boss_hp) + '</div>'
+        '</div>'
+        '<script>' + audio_js + '</script>'
+    )
+    components.html(html, height=370, scrolling=False)
 
 
 def render_monster():
@@ -467,27 +557,76 @@ def render_monster():
             '⚔️ ' + label + '</div>'
         )
 
-    st.markdown(
-        '<div class="monster-area ' + anim_class + '">'
-        + boss_badge +
-        '<div style="position:relative;display:inline-block;width:' + str(svg_size) + 'px;">'
-        '<div class="m-svg-wrap" style="width:' + str(svg_size) + 'px;height:' + str(svg_size) + 'px;'
-        'display:flex;align-items:center;justify-content:center;">'
-        '<div style="width:100%;height:100%;">' + monster["svg"] + '</div>'
-        '</div>'
-        + damage_html +
-        '</div>'
-        '<div style="font-size:.9rem;font-weight:700;color:#e8d8ff;margin-top:3px;">'
-        + monster["emoji"] + ' ' + monster["name"] + '</div>'
-        '<div style="max-width:' + str(svg_size + 20) + 'px;margin:4px auto 0;">'
-        '<div class="mon-hp-outer"><div class="mon-hp-inner" style="background:linear-gradient(90deg,'
-        + hp_color + ',' + hp_color + 'aa);width:' + str(round(hp_pct, 1)) + '%;"></div></div>'
-        '<div style="font-size:.7rem;color:#888;margin-top:1px;">HP '
-        + str(max(0, monster_hp)) + ' / ' + str(monster_hp_max) + '</div>'
-        '</div>'
-        + defeated_msg + drop_html +
-        '</div>',
-        unsafe_allow_html=True)
+    if is_boss and not just_defeated:
+        # ── ボスバトルレイアウト：キャラクター vs ボス ──
+        from core.characters import get_character
+        from core.equipment import apply_hat_overlay, apply_ring_overlay, apply_necklace_overlay
+        _char_def = get_character(st.session_state.player.get("character", ""))
+        _svg_full = _char_def["svg"]
+        _tag_end = _svg_full.index(">") + 1
+        _close = _svg_full.rindex("</")
+        _inner = _svg_full[_tag_end:_close]
+        _equip = st.session_state.player.get("equipment", {})
+        _inner = apply_hat_overlay(_inner, _equip.get("hat"))
+        _inner = apply_ring_overlay(_inner, _equip.get("ring"))
+        _inner = apply_necklace_overlay(_inner, _equip.get("necklace"))
+        _char_svg = (
+            '<svg viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg"'
+            ' style="width:65px;height:81px;">' + _inner + '</svg>'
+        )
+        _char_name = st.session_state.player.get("name", "プレイヤー")
+        _attack_cls = "char-attack-anim" if damage > 0 else ""
+
+        st.markdown(
+            '<div class="monster-area boss-battle-layout">'
+            # 左：プレイヤーキャラクター（右向きにflip）
+            '<div class="char-battle-side">'
+            '<div class="' + _attack_cls + '" style="display:inline-block;">'
+            '<div style="transform:scaleX(-1);display:inline-block;">' + _char_svg + '</div>'
+            '</div>'
+            '<div style="font-size:.7rem;color:#88aaff;margin-top:2px;">' + _char_name + '</div>'
+            '</div>'
+            # 中央：VS
+            '<div class="vs-text">⚔️</div>'
+            # 右：ボス
+            '<div class="boss-battle-side">'
+            + boss_badge +
+            '<div class="' + anim_class + '" style="position:relative;display:inline-block;width:' + str(svg_size) + 'px;">'
+            '<div class="m-svg-wrap" style="width:' + str(svg_size) + 'px;height:' + str(svg_size) + 'px;'
+            'display:flex;align-items:center;justify-content:center;">'
+            '<div style="width:100%;height:100%;">' + monster["svg"] + '</div>'
+            '</div>'
+            + damage_html +
+            '</div>'
+            '<div style="font-size:.85rem;font-weight:700;color:#ffaacc;margin-top:2px;">'
+            + monster["emoji"] + ' ' + monster["name"] + '</div>'
+            '</div>'
+            '</div>'
+            + defeated_msg + drop_html,
+            unsafe_allow_html=True)
+    else:
+        # ── 通常レイアウト（通常モンスター or 撃破直後） ──
+        st.markdown(
+            '<div class="monster-area ' + anim_class + '">'
+            + boss_badge +
+            '<div style="position:relative;display:inline-block;width:' + str(svg_size) + 'px;">'
+            '<div class="m-svg-wrap" style="width:' + str(svg_size) + 'px;height:' + str(svg_size) + 'px;'
+            'display:flex;align-items:center;justify-content:center;">'
+            '<div style="width:100%;height:100%;">' + monster["svg"] + '</div>'
+            '</div>'
+            + damage_html +
+            '</div>'
+            '<div style="font-size:.9rem;font-weight:700;color:#e8d8ff;margin-top:3px;">'
+            + monster["emoji"] + ' ' + monster["name"] + '</div>'
+            '<div style="max-width:' + str(svg_size + 20) + 'px;margin:4px auto 0;">'
+            '<div class="mon-hp-outer"><div class="mon-hp-inner" style="background:linear-gradient(90deg,'
+            + hp_color + ',' + hp_color + 'aa);width:' + str(round(hp_pct, 1)) + '%;"></div></div>'
+            '<div style="font-size:.7rem;color:#888;margin-top:1px;">HP '
+            + str(max(0, monster_hp)) + ' / ' + str(monster_hp_max) + '</div>'
+            '</div>'
+            + defeated_msg + drop_html +
+            '</div>',
+            unsafe_allow_html=True)
 
 
 lang = st.session_state.player.get("language", "ja")
@@ -566,8 +705,35 @@ engine = st.session_state.engine
 total_words = len(engine.df)
 answered_count = total_words - engine.questions_left()
 
+# ── ボス登場演出（初回のみ） ─────────────────────────────────
+if st.session_state.get("_boss_just_appeared"):
+    _render_boss_appear_overlay()
+    st.session_state.pop("_boss_just_appeared", None)
+
 st.markdown('<div class="progress-label">' + t("progress_label", lang) + ' ' + str(answered_count) + ' / ' + str(total_words) + ' ' + t("questions", lang) + '</div>', unsafe_allow_html=True)
 st.progress(answered_count / total_words)
+
+# ── ボス戦中：大型HPバー ─────────────────────────────────────
+if st.session_state.get("battle_boss_active"):
+    _b = st.session_state.get("battle_monster", {})
+    _bhp = st.session_state.get("battle_monster_hp", 0)
+    _bmax = _b.get("hp", 1)
+    _bpct = max(0.0, round(_bhp / _bmax * 100, 1))
+    _bcol = "#44ff88" if _bpct > 50 else ("#ffcc00" if _bpct > 25 else "#ff2222")
+    st.markdown(
+        '<div style="background:linear-gradient(135deg,#2a0011,#44001a);'
+        'border:2px solid #ff0044;border-radius:12px;padding:11px 16px;margin-bottom:10px;">'
+        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">'
+        '<div style="font-size:1rem;font-weight:700;color:#ff4466;">'
+        + _b.get("emoji", "👑") + ' ' + _b.get("name", "BOSS") + '</div>'
+        '<div style="font-size:.8rem;color:#cc3355;">HP '
+        + str(max(0, _bhp)) + ' / ' + str(_bmax) + '</div>'
+        '</div>'
+        '<div style="background:#1a0008;border-radius:6px;height:16px;overflow:hidden;border:1px solid #550022;">'
+        '<div style="background:linear-gradient(90deg,' + _bcol + ',' + _bcol + '88);'
+        'width:' + str(_bpct) + '%;height:100%;border-radius:6px;transition:width .5s ease;"></div>'
+        '</div>'
+        '</div>', unsafe_allow_html=True)
 
 render_monster()
 
@@ -732,6 +898,16 @@ if st.session_state.answered and st.session_state.last_result:
 
     # ── ボス撃破特別演出 ─────────────────────────────────────────
     if st.session_state.get("_boss_just_defeated_flash") and result.is_correct:
+        # 白フラッシュオーバーレイ
+        components.html(
+            "<style>"
+            "html,body{margin:0;padding:0;overflow:hidden;}"
+            "@keyframes wf{0%{opacity:0}8%{opacity:1;background:#ffffff}"
+            "35%{opacity:.8;background:#ffffcc}100%{opacity:0}}"
+            ".f{position:fixed;top:0;left:0;width:100%;height:100%;"
+            "animation:wf 1.4s ease-out forwards;pointer-events:none;}"
+            "</style><div class='f'></div>",
+            height=1, scrolling=False)
         st.balloons()
         _boss_info = st.session_state.get("battle_monster", {})
         _boss_name = _boss_info.get("name", "ボス")

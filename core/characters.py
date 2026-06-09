@@ -7,503 +7,650 @@ CHARACTER_ORDER = [
     "noah", "drake", "luna", "finn", "sera",
 ]
 
+
 def _svg(inner: str) -> str:
     return '<svg viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg">' + inner + '</svg>'
 
 
 # ─────────────────────────────────────────
-# 1. アレン（勇者）- 赤い鎧、金髪、剣と盾
+# 1. アレン（勇者）- 青テーマ
 # ─────────────────────────────────────────
 _ALLEN = _svg(
     # 足・ブーツ
-    '<rect x="27" y="71" width="11" height="23" fill="#3355aa" rx="2"/>'
-    '<rect x="42" y="71" width="11" height="23" fill="#3355aa" rx="2"/>'
-    '<rect x="26" y="82" width="13" height="12" fill="#221100" rx="2"/>'
-    '<rect x="41" y="82" width="13" height="12" fill="#221100" rx="2"/>'
-    # マント
-    '<path d="M22 47 L7 96 L26 79Z" fill="#aa2200"/>'
-    '<path d="M58 47 L73 96 L54 79Z" fill="#aa2200"/>'
-    # 体（赤い鎧）
-    '<rect x="21" y="42" width="38" height="31" fill="#cc3333" rx="4"/>'
-    '<rect x="31" y="42" width="18" height="5" fill="#aa2222" rx="1"/>'
-    '<polygon points="40,48 44,57 40,54 36,57" fill="#ffe066"/>'
+    '<rect x="27" y="70" width="11" height="22" fill="#1a4fcc" rx="2"/>'
+    '<rect x="42" y="70" width="11" height="22" fill="#1a4fcc" rx="2"/>'
+    '<rect x="25" y="80" width="15" height="12" fill="#0d2d88" rx="2"/>'
+    '<rect x="40" y="80" width="15" height="12" fill="#0d2d88" rx="2"/>'
+    # 胴体（青い鎧）
+    '<rect x="21" y="40" width="38" height="30" fill="#1a4fcc" rx="4"/>'
+    '<path d="M21 40 L40 35 L59 40 L59 46 L40 41 L21 46Z" fill="#3377ff"/>'
+    '<polygon points="40,47 43,53 49,53 45,57 47,62 40,58 33,62 35,57 31,53 37,53" fill="#ffe066"/>'
+    '<rect x="21" y="68" width="38" height="4" fill="#0a2070" rx="1"/>'
+    '<rect x="36" y="66" width="8" height="7" fill="#ffe066" rx="1"/>'
+    # 肩アーマー
+    '<ellipse cx="21" cy="42" rx="7" ry="6" fill="#2255ee"/>'
+    '<ellipse cx="59" cy="42" rx="7" ry="6" fill="#2255ee"/>'
     # 腕
-    '<rect x="8" y="43" width="14" height="9" fill="#cc3333" rx="3"/>'
-    '<rect x="58" y="43" width="14" height="9" fill="#cc3333" rx="3"/>'
+    '<rect x="5" y="42" width="17" height="10" fill="#1a4fcc" rx="3"/>'
+    '<rect x="58" y="42" width="17" height="10" fill="#1a4fcc" rx="3"/>'
     # 盾（左）
-    '<rect x="2" y="49" width="12" height="18" fill="#2244bb" rx="2"/>'
-    '<rect x="4" y="51" width="8" height="14" fill="#3366cc" rx="1"/>'
-    '<circle cx="8" cy="58" r="3" fill="#ffe066" opacity="0.6"/>'
+    '<rect x="-2" y="46" width="13" height="20" fill="#0d2d88" rx="3"/>'
+    '<rect x="-1" y="47" width="11" height="18" fill="#1a4fcc" rx="2"/>'
+    '<polygon points="5.5,50 9,56 5.5,63 2,56" fill="#ffe066"/>'
     # 剣（右）
-    '<rect x="68" y="14" width="4" height="37" fill="#dddddd" rx="1"/>'
-    '<rect x="62" y="28" width="16" height="4" fill="#886600" rx="1"/>'
-    '<polygon points="70,4 73,18 67,18" fill="#eeeeee"/>'
+    '<rect x="70" y="7" width="4" height="46" fill="#c8deff" rx="1"/>'
+    '<polygon points="72,1 76,11 68,11" fill="#e8f0ff"/>'
+    '<rect x="63" y="26" width="18" height="4" fill="#ffe066" rx="1"/>'
     # 首
-    '<rect x="33" y="36" width="14" height="8" fill="#f0c07a" rx="2"/>'
+    '<rect x="33" y="35" width="14" height="7" fill="#f5c5a3" rx="2"/>'
     # 頭
-    '<circle cx="40" cy="23" r="14" fill="#f0c07a"/>'
-    # 金色の髪（上向きスパイク）
-    '<ellipse cx="40" cy="12" rx="11" ry="7" fill="#ffdd22"/>'
-    '<rect x="36" y="3" width="3" height="8" fill="#ffdd22" rx="1" transform="rotate(-10 37 7)"/>'
-    '<rect x="40" y="2" width="3" height="9" fill="#ffdd22" rx="1"/>'
-    '<rect x="43" y="3" width="3" height="8" fill="#ffdd22" rx="1" transform="rotate(10 44 7)"/>'
-    '<path d="M28 20 C25 11 31 6 37 9 C33 13 29 17 28 20Z" fill="#ffdd22"/>'
-    '<path d="M52 20 C55 11 49 6 43 9 C47 13 51 17 52 20Z" fill="#ffdd22"/>'
-    # 目（青）
-    '<ellipse cx="35" cy="23" rx="3" ry="2.5" fill="#2244aa"/>'
-    '<ellipse cx="45" cy="23" rx="3" ry="2.5" fill="#2244aa"/>'
-    '<circle cx="36" cy="22" r="1" fill="#fff"/>'
-    '<circle cx="46" cy="22" r="1" fill="#fff"/>'
+    '<circle cx="40" cy="22" r="15" fill="#f5c5a3"/>'
+    # 金髪スパイク
+    '<ellipse cx="40" cy="11" rx="14" ry="9" fill="#ffdd22"/>'
+    '<polygon points="30,13 27,-1 34,11" fill="#ffcc00"/>'
+    '<polygon points="39,10 38,-3 44,8" fill="#ffee44"/>'
+    '<polygon points="48,12 49,-1 54,11" fill="#ffcc00"/>'
+    '<path d="M25 19 C23 11 27 4 31 8" stroke="#ffdd22" stroke-width="5" fill="none" stroke-linecap="round"/>'
+    '<path d="M55 19 C57 11 53 4 49 8" stroke="#ddbb00" stroke-width="5" fill="none" stroke-linecap="round"/>'
+    # 目（大・青）
+    '<ellipse cx="33" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="47" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="33" cy="24" rx="3.5" ry="4.5" fill="#2288ff"/>'
+    '<ellipse cx="47" cy="24" rx="3.5" ry="4.5" fill="#2288ff"/>'
+    '<ellipse cx="33" cy="26" rx="3.5" ry="2" fill="#0044cc"/>'
+    '<ellipse cx="47" cy="26" rx="3.5" ry="2" fill="#0044cc"/>'
+    '<ellipse cx="33" cy="24" rx="1.5" ry="2" fill="#050d1a"/>'
+    '<ellipse cx="47" cy="24" rx="1.5" ry="2" fill="#050d1a"/>'
+    '<circle cx="30.5" cy="21" r="1.8" fill="white"/>'
+    '<circle cx="44.5" cy="21" r="1.8" fill="white"/>'
+    '<path d="M28 19 Q33 15 38 19" stroke="#221100" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 19 Q47 15 52 19" stroke="#221100" stroke-width="2" fill="none" stroke-linecap="round"/>'
     # 眉
-    '<path d="M32 18 Q35 16 38 18" stroke="#886600" stroke-width="1.5" fill="none"/>'
-    '<path d="M42 18 Q45 16 48 18" stroke="#886600" stroke-width="1.5" fill="none"/>'
-    # 口（微笑み）
-    '<path d="M37 29 Q40 32 43 29" stroke="#cc8855" stroke-width="1.5" fill="none" stroke-linecap="round"/>'
+    '<path d="M27 14 Q33 10 39 13" stroke="#cc9900" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
+    '<path d="M41 13 Q47 10 53 14" stroke="#cc9900" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
+    # 口
+    '<path d="M35 30 Q40 35 45 30" stroke="#cc7755" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 頬
+    '<circle cx="28" cy="27" r="4" fill="#ff9977" opacity="0.35"/>'
+    '<circle cx="52" cy="27" r="4" fill="#ff9977" opacity="0.35"/>'
 )
 
 # ─────────────────────────────────────────
-# 2. リリア（魔法使い）- 紫の尖り帽子、杖
+# 2. リリア（魔法使い）- 紫テーマ
 # ─────────────────────────────────────────
 _LIRIA = _svg(
-    # 足・靴
-    '<rect x="29" y="76" width="10" height="18" fill="#5533aa" rx="2"/>'
-    '<rect x="41" y="76" width="10" height="18" fill="#5533aa" rx="2"/>'
-    '<rect x="28" y="84" width="12" height="10" fill="#221133" rx="2"/>'
-    '<rect x="40" y="84" width="12" height="10" fill="#221133" rx="2"/>'
-    # ローブ（長い）
-    '<rect x="19" y="42" width="42" height="36" fill="#7744cc" rx="5"/>'
-    '<path d="M19 60 L15 94 L35 80Z" fill="#6633bb"/>'
-    '<path d="M61 60 L65 94 L45 80Z" fill="#6633bb"/>'
-    # ローブ装飾
-    '<rect x="34" y="42" width="12" height="4" fill="#9966ee" rx="2"/>'
-    '<path d="M33 56 Q40 62 47 56" stroke="#bb88ff" stroke-width="1.5" fill="none"/>'
+    # 足・ローブ裾
+    '<path d="M26 72 L22 94 L37 85 L40 94 L43 85 L58 94 L54 72Z" fill="#6622cc"/>'
+    # 胴体（紫ローブ）
+    '<rect x="19" y="40" width="42" height="34" fill="#7733dd" rx="5"/>'
+    '<rect x="19" y="40" width="4" height="34" fill="#5511bb" rx="2"/>'
+    '<rect x="57" y="40" width="4" height="34" fill="#5511bb" rx="2"/>'
+    '<path d="M19 40 L40 35 L61 40 L61 46 L40 41 L19 46Z" fill="#9955ff"/>'
+    # 星紋様
+    '<circle cx="40" cy="55" r="5" fill="none" stroke="#cc99ff" stroke-width="1.5"/>'
+    '<polygon points="40,49 41.5,53.5 46,53.5 42.5,56.5 43.5,61 40,58 36.5,61 37.5,56.5 34,53.5 38.5,53.5" fill="#cc99ff" opacity="0.6"/>'
     # 腕
-    '<rect x="7" y="43" width="13" height="8" fill="#7744cc" rx="3"/>'
-    '<rect x="60" y="43" width="13" height="8" fill="#7744cc" rx="3"/>'
-    # 魔法の杖（左）星型
-    '<rect x="5" y="32" width="3" height="30" fill="#886644" rx="1"/>'
-    '<circle cx="6" cy="28" r="6" fill="#aa77ff" opacity="0.3"/>'
-    '<circle cx="6" cy="28" r="4" fill="#cc99ff"/>'
-    '<circle cx="6" cy="28" r="2" fill="#ffffff"/>'
+    '<rect x="6" y="42" width="14" height="9" fill="#7733dd" rx="3"/>'
+    '<rect x="60" y="42" width="14" height="9" fill="#7733dd" rx="3"/>'
+    # 杖（左）
+    '<rect x="4" y="26" width="3" height="32" fill="#8866aa" rx="1"/>'
+    '<circle cx="5.5" cy="22" r="7" fill="#cc88ff" opacity="0.4"/>'
+    '<circle cx="5.5" cy="22" r="5" fill="#bb66ff"/>'
+    '<circle cx="5.5" cy="22" r="3" fill="#eeccff"/>'
+    '<circle cx="5.5" cy="22" r="1.5" fill="white"/>'
+    # 右手の光
+    '<circle cx="72" cy="50" r="5" fill="#9944ff" opacity="0.3"/>'
+    '<circle cx="72" cy="50" r="3" fill="#cc88ff" opacity="0.5"/>'
     # 首
-    '<rect x="34" y="36" width="12" height="8" fill="#f0c0e0" rx="2"/>'
+    '<rect x="34" y="35" width="12" height="7" fill="#f0c0e0" rx="2"/>'
     # 頭
-    '<circle cx="40" cy="23" r="14" fill="#f0c0e0"/>'
-    # 銀紫の長髪（両サイド）
-    '<path d="M27 20 C24 14 26 8 30 8 C28 14 27 20 26 34 C24 38 22 42 21 50 C22 40 24 28 27 20Z" fill="#ccbbee"/>'
-    '<path d="M53 20 C56 14 54 8 50 8 C52 14 53 20 54 34 C56 38 58 42 59 50 C58 40 56 28 53 20Z" fill="#ccbbee"/>'
-    # 尖り帽子（大きく上へ）
-    '<polygon points="40,-4 26,27 54,27" fill="#7744cc"/>'
-    '<polygon points="40,-4 30,15 50,15" fill="#9955dd"/>'
-    '<rect x="24" y="26" width="32" height="5" fill="#5533aa" rx="2"/>'
-    # 目（紫）
-    '<ellipse cx="35" cy="23" rx="2.5" ry="2" fill="#663399"/>'
-    '<ellipse cx="45" cy="23" rx="2.5" ry="2" fill="#663399"/>'
-    '<circle cx="36" cy="22" r="0.8" fill="#fff"/>'
-    '<circle cx="46" cy="22" r="0.8" fill="#fff"/>'
+    '<circle cx="40" cy="22" r="14" fill="#f0c0e0"/>'
+    # 尖り帽子
+    '<polygon points="40,-6 24,27 56,27" fill="#6622cc"/>'
+    '<polygon points="40,-6 31,12 49,12" fill="#8833ee"/>'
+    '<rect x="22" y="25" width="36" height="6" fill="#5511bb" rx="3"/>'
+    '<circle cx="40" cy="-2" r="3" fill="#cc88ff"/>'
+    '<circle cx="40" cy="-2" r="1.5" fill="white"/>'
+    # シルバーピンクの髪
+    '<path d="M27 22 C24 14 26 7 30 9 C27 14 26 20 25 30 C24 38 22 46 20 52 L22 52 C24 46 26 38 27 30Z" fill="#ddbbee"/>'
+    '<path d="M53 22 C56 14 54 7 50 9 C53 14 54 20 55 30 C56 38 58 46 60 52 L58 52 C56 46 54 38 53 30Z" fill="#ccaae0"/>'
+    '<ellipse cx="40" cy="14" rx="12" ry="6" fill="#ddbbee"/>'
+    # 目（大・紫）
+    '<ellipse cx="33" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="47" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="33" cy="24" rx="3.5" ry="4.5" fill="#9933cc"/>'
+    '<ellipse cx="47" cy="24" rx="3.5" ry="4.5" fill="#9933cc"/>'
+    '<ellipse cx="33" cy="26" rx="3.5" ry="2" fill="#6611aa"/>'
+    '<ellipse cx="47" cy="26" rx="3.5" ry="2" fill="#6611aa"/>'
+    '<ellipse cx="33" cy="24" rx="1.5" ry="2" fill="#110022"/>'
+    '<ellipse cx="47" cy="24" rx="1.5" ry="2" fill="#110022"/>'
+    '<circle cx="30.5" cy="21" r="1.8" fill="white"/>'
+    '<circle cx="44.5" cy="21" r="1.8" fill="white"/>'
+    '<path d="M28 19 Q33 15 38 19" stroke="#330066" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 19 Q47 15 52 19" stroke="#330066" stroke-width="2" fill="none" stroke-linecap="round"/>'
     # 眉
-    '<path d="M33 18 Q35 17 37 18" stroke="#553388" stroke-width="1.2" fill="none"/>'
-    '<path d="M43 18 Q45 17 47 18" stroke="#553388" stroke-width="1.2" fill="none"/>'
+    '<path d="M28 14 Q33 10 38 13" stroke="#7733aa" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 13 Q47 10 52 14" stroke="#7733aa" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
     # 口
-    '<path d="M37 29 Q40 31 43 29" stroke="#cc88bb" stroke-width="1.2" fill="none" stroke-linecap="round"/>'
+    '<path d="M36 30 Q40 34 44 30" stroke="#cc88bb" stroke-width="1.5" fill="none" stroke-linecap="round"/>'
+    # 頬
+    '<circle cx="28" cy="27" r="3.5" fill="#ff99cc" opacity="0.3"/>'
+    '<circle cx="52" cy="27" r="3.5" fill="#ff99cc" opacity="0.3"/>'
 )
 
 # ─────────────────────────────────────────
-# 3. ガレス（騎士）- 銀の鎧、青い盾
+# 3. ガレス（騎士）- シルバーテーマ（フルアーマー）
 # ─────────────────────────────────────────
 _GARES = _svg(
     # 足・グリーブ
-    '<rect x="27" y="71" width="11" height="23" fill="#8899bb" rx="2"/>'
-    '<rect x="42" y="71" width="11" height="23" fill="#8899bb" rx="2"/>'
-    '<rect x="26" y="80" width="13" height="14" fill="#778899" rx="2"/>'
-    '<rect x="41" y="80" width="13" height="14" fill="#778899" rx="2"/>'
-    # 体（重厚な鎧）
-    '<rect x="18" y="40" width="44" height="33" fill="#aabbcc" rx="4"/>'
-    '<rect x="26" y="40" width="28" height="6" fill="#99aacc" rx="2"/>'
-    '<rect x="30" y="46" width="20" height="3" fill="#778899"/>'
-    # 胸の紋章
-    '<polygon points="40,50 44,58 40,55 36,58" fill="#2255cc"/>'
-    # 腕（プレートアーマー）
-    '<rect x="6" y="41" width="13" height="11" fill="#aabbcc" rx="3"/>'
-    '<rect x="61" y="41" width="13" height="11" fill="#aabbcc" rx="3"/>'
-    # 大きな盾（左）
-    '<rect x="-2" y="46" width="16" height="24" fill="#2244aa" rx="3"/>'
-    '<polygon points="6,49 14,49 14,65 6,70 -2,65 -2,49" fill="#3355bb"/>'
-    '<polygon points="6,52 11,58 6,64 1,58" fill="#ffe066" opacity="0.7"/>'
+    '<rect x="26" y="70" width="12" height="22" fill="#9aa8b8" rx="2"/>'
+    '<rect x="42" y="70" width="12" height="22" fill="#9aa8b8" rx="2"/>'
+    '<rect x="24" y="80" width="16" height="12" fill="#6a7888" rx="2"/>'
+    '<rect x="40" y="80" width="16" height="12" fill="#6a7888" rx="2"/>'
+    '<rect x="24" y="80" width="16" height="3" fill="#bbccdd" rx="1"/>'
+    '<rect x="40" y="80" width="16" height="3" fill="#bbccdd" rx="1"/>'
+    # 胴体（重厚な銀鎧）
+    '<rect x="18" y="39" width="44" height="31" fill="#aabbcc" rx="4"/>'
+    '<path d="M18 39 L40 33 L62 39 L62 46 L40 40 L18 46Z" fill="#ccdded"/>'
+    '<path d="M34 48 L40 44 L46 48 L46 58 L40 62 L34 58Z" fill="#3355cc"/>'
+    '<path d="M35 49 L40 46 L45 49 L45 57 L40 60 L35 57Z" fill="#4466ee"/>'
+    '<polygon points="40,49 41.5,53 43,53 41.5,55 42,58 40,56 38,58 38.5,55 37,53 38.5,53" fill="#ffe066"/>'
+    '<rect x="18" y="68" width="44" height="4" fill="#6a7888" rx="1"/>'
+    # 肩鎧
+    '<ellipse cx="18" cy="41" rx="9" ry="7" fill="#bbccdd"/>'
+    '<ellipse cx="62" cy="41" rx="9" ry="7" fill="#bbccdd"/>'
+    '<ellipse cx="18" cy="41" rx="6" ry="4" fill="#ccdded"/>'
+    '<ellipse cx="62" cy="41" rx="6" ry="4" fill="#ccdded"/>'
+    # 腕
+    '<rect x="4" y="41" width="15" height="11" fill="#aabbcc" rx="3"/>'
+    '<rect x="61" y="41" width="15" height="11" fill="#aabbcc" rx="3"/>'
+    # 大盾（左）
+    '<rect x="-4" y="44" width="14" height="24" fill="#778899" rx="3"/>'
+    '<rect x="-3" y="45" width="12" height="22" fill="#99aacc" rx="2"/>'
+    '<polygon points="3,48 8,52 8,62 3,67 -2,62 -2,52" fill="#aabbdd"/>'
+    '<polygon points="3,52 6,56 3,62 0,56" fill="#ffe066" opacity="0.7"/>'
     # 槍（右）
-    '<rect x="70" y="8" width="4" height="60" fill="#aaaaaa" rx="1"/>'
-    '<polygon points="72,-2 75,12 69,12" fill="#cccccc"/>'
-    '<rect x="68" y="28" width="8" height="3" fill="#886600" rx="1"/>'
-    # 首（兜のカバー）
-    '<rect x="31" y="35" width="18" height="8" fill="#aabbcc" rx="2"/>'
-    # 頭（兜）
-    '<ellipse cx="40" cy="24" rx="16" ry="14" fill="#aabbcc"/>'
-    '<rect x="24" y="26" width="32" height="10" fill="#99aacc" rx="1"/>'
-    # 目のスリット
-    '<rect x="30" y="27" width="8" height="4" fill="#112244" rx="1"/>'
-    '<rect x="42" y="27" width="8" height="4" fill="#112244" rx="1"/>'
-    '<rect x="31" y="28" width="6" height="2" fill="#4477cc" rx="1"/>'
-    '<rect x="43" y="28" width="6" height="2" fill="#4477cc" rx="1"/>'
-    # 青いプルーム（羽飾り）
-    '<path d="M40 10 C38 0 34 -4 36 2 C38-2 40 4 40 10Z" fill="#3366cc"/>'
-    '<path d="M40 10 C42 0 46 -4 44 2 C42-2 40 4 40 10Z" fill="#5588ee"/>'
-    '<path d="M40 10 C36 2 30 -2 33 4 C36 0 38 5 40 10Z" fill="#2255bb"/>'
+    '<rect x="70" y="2" width="5" height="64" fill="#c0c8d8" rx="2"/>'
+    '<polygon points="72.5,-4 77,10 68,10" fill="#e0e8f8"/>'
+    '<rect x="67" y="24" width="11" height="5" fill="#ffe066" rx="1"/>'
+    # フルフェイス兜
+    '<ellipse cx="40" cy="24" rx="17" ry="16" fill="#aabbcc"/>'
+    '<ellipse cx="40" cy="24" rx="16" ry="15" fill="#bbccdd"/>'
+    '<path d="M23 24 Q23 15 40 12 Q57 15 57 24" fill="#ccdded"/>'
+    '<rect x="24" y="25" width="32" height="8" fill="#778899" rx="2"/>'
+    '<rect x="25" y="26" width="14" height="5" fill="#1133aa" rx="1"/>'
+    '<rect x="41" y="26" width="14" height="5" fill="#1133aa" rx="1"/>'
+    '<rect x="26" y="27" width="12" height="3" fill="#3366ff" rx="1" opacity="0.7"/>'
+    '<rect x="42" y="27" width="12" height="3" fill="#3366ff" rx="1" opacity="0.7"/>'
+    '<rect x="37" y="33" width="6" height="5" fill="#9aa8b8" rx="2"/>'
+    # 青いプルーム
+    '<path d="M40 8 C37 -2 32 -6 34 2 C36 -4 39 2 40 8Z" fill="#2255cc"/>'
+    '<path d="M40 8 C43 -2 48 -6 46 2 C44 -4 41 2 40 8Z" fill="#3366ee"/>'
+    '<path d="M40 8 C38 0 35 -4 37 2 C38 -2 39 3 40 8Z" fill="#4488ff"/>'
+    '<path d="M40 8 C42 0 45 -4 43 2 C42 -2 41 3 40 8Z" fill="#1144bb"/>'
 )
 
 # ─────────────────────────────────────────
-# 4. シア（盗賊）- 暗緑のフード、短剣
+# 4. シア（盗賊）- 緑テーマ
 # ─────────────────────────────────────────
 _SHIA = _svg(
-    # 足・靴
-    '<rect x="28" y="72" width="10" height="22" fill="#334422" rx="2"/>'
-    '<rect x="42" y="72" width="10" height="22" fill="#334422" rx="2"/>'
-    '<rect x="27" y="82" width="12" height="12" fill="#1a1100" rx="2"/>'
-    '<rect x="41" y="82" width="12" height="12" fill="#1a1100" rx="2"/>'
-    # 体（革鎧）
-    '<rect x="22" y="42" width="36" height="32" fill="#554422" rx="4"/>'
-    '<rect x="30" y="42" width="20" height="4" fill="#443311" rx="1"/>'
-    # ベルト
-    '<rect x="22" y="61" width="36" height="5" fill="#332211" rx="1"/>'
-    '<rect x="36" y="60" width="8" height="7" fill="#775533" rx="1"/>'
+    # 足・ブーツ
+    '<rect x="27" y="71" width="11" height="21" fill="#2d5522" rx="2"/>'
+    '<rect x="42" y="71" width="11" height="21" fill="#2d5522" rx="2"/>'
+    '<rect x="25" y="81" width="15" height="11" fill="#1a2e11" rx="2"/>'
+    '<rect x="40" y="81" width="15" height="11" fill="#1a2e11" rx="2"/>'
+    # 体（革鎧・ダークグリーン）
+    '<rect x="22" y="40" width="36" height="31" fill="#3d6e2d" rx="4"/>'
+    '<path d="M22 40 L40 35 L58 40 L58 46 L40 41 L22 46Z" fill="#5a9945"/>'
+    '<path d="M22 42 C20 36 22 30 40 28 C58 30 60 36 58 42Z" fill="#2d5522"/>'
+    '<rect x="22" y="65" width="36" height="5" fill="#1a2e11" rx="1"/>'
+    '<rect x="34" y="62" width="12" height="10" fill="#2d4011" rx="1"/>'
+    '<rect x="23" y="55" width="8" height="9" fill="#4a3011" rx="2"/>'
+    '<rect x="49" y="55" width="8" height="9" fill="#4a3011" rx="2"/>'
     # 腕
-    '<rect x="10" y="43" width="13" height="8" fill="#554422" rx="3"/>'
-    '<rect x="57" y="43" width="13" height="8" fill="#554422" rx="3"/>'
-    # 短剣（腰に）
-    '<rect x="14" y="59" width="3" height="14" fill="#aaaaaa" rx="1" transform="rotate(-20 15 65)"/>'
-    '<rect x="12" y="62" width="7" height="2" fill="#663300" rx="1" transform="rotate(-20 15 65)"/>'
-    '<rect x="58" y="59" width="3" height="14" fill="#aaaaaa" rx="1" transform="rotate(20 60 65)"/>'
-    '<rect x="55" y="62" width="7" height="2" fill="#663300" rx="1" transform="rotate(20 60 65)"/>'
-    # 首（フードで隠れる）
-    '<rect x="33" y="35" width="14" height="9" fill="#c4884a" rx="2"/>'
-    # 頭（フード）
-    '<circle cx="40" cy="24" r="14" fill="#c4884a"/>'
-    # 暗緑のフード
-    '<ellipse cx="40" cy="17" rx="17" ry="12" fill="#335522"/>'
-    '<path d="M23 24 C22 16 28 10 40 8 C52 10 58 16 57 24 C54 18 46 14 40 14 C34 14 26 18 23 24Z" fill="#446633"/>'
-    '<path d="M23 24 C24 34 26 42 22 46 C20 40 20 32 23 24Z" fill="#335522"/>'
-    '<path d="M57 24 C56 34 54 42 58 46 C60 40 60 32 57 24Z" fill="#335522"/>'
-    # 目（鋭い）
-    '<ellipse cx="35" cy="25" rx="2.5" ry="2" fill="#336611"/>'
-    '<ellipse cx="45" cy="25" rx="2.5" ry="2" fill="#336611"/>'
-    '<circle cx="36" cy="24" r="0.8" fill="#fff"/>'
-    '<circle cx="46" cy="24" r="0.8" fill="#fff"/>'
+    '<rect x="9" y="41" width="14" height="9" fill="#3d6e2d" rx="3"/>'
+    '<rect x="57" y="41" width="14" height="9" fill="#3d6e2d" rx="3"/>'
+    # 短剣（両側）
+    '<rect x="4" y="52" width="3" height="18" fill="#c8c8c8" rx="1" transform="rotate(-15 5 60)"/>'
+    '<rect x="2" y="56" width="8" height="3" fill="#5a3a11" rx="1" transform="rotate(-15 5 60)"/>'
+    '<rect x="66" y="52" width="3" height="18" fill="#c8c8c8" rx="1" transform="rotate(15 68 60)"/>'
+    '<rect x="63" y="56" width="8" height="3" fill="#5a3a11" rx="1" transform="rotate(15 68 60)"/>'
+    # 首
+    '<rect x="34" y="35" width="12" height="7" fill="#c8906a" rx="2"/>'
+    # 頭
+    '<circle cx="40" cy="22" r="14" fill="#c8906a"/>'
+    # ダークグリーンフード
+    '<ellipse cx="40" cy="16" rx="18" ry="13" fill="#2d5522"/>'
+    '<path d="M22 22 C22 14 28 8 40 6 C52 8 58 14 58 22 C54 16 47 12 40 12 C33 12 26 16 22 22Z" fill="#3d6e2d"/>'
+    '<path d="M22 22 C22 32 24 40 20 46 C18 40 18 31 22 22Z" fill="#2d5522"/>'
+    '<path d="M58 22 C58 32 56 40 60 46 C62 40 62 31 58 22Z" fill="#2d5522"/>'
+    # 目（大・緑）
+    '<ellipse cx="33" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="47" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="33" cy="24" rx="3.5" ry="4.5" fill="#33aa44"/>'
+    '<ellipse cx="47" cy="24" rx="3.5" ry="4.5" fill="#33aa44"/>'
+    '<ellipse cx="33" cy="26" rx="3.5" ry="2" fill="#116622"/>'
+    '<ellipse cx="47" cy="26" rx="3.5" ry="2" fill="#116622"/>'
+    '<ellipse cx="33" cy="24" rx="1.5" ry="2" fill="#081100"/>'
+    '<ellipse cx="47" cy="24" rx="1.5" ry="2" fill="#081100"/>'
+    '<circle cx="30.5" cy="21" r="1.8" fill="white"/>'
+    '<circle cx="44.5" cy="21" r="1.8" fill="white"/>'
+    '<path d="M28 19 Q33 15 38 19" stroke="#112200" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 19 Q47 15 52 19" stroke="#112200" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 眉（鋭い）
+    '<path d="M28 14 Q33 11 38 14" stroke="#3d2211" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 14 Q47 11 52 14" stroke="#3d2211" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
     # 口（ニヤリ）
-    '<path d="M36 31 Q40 30 44 31" stroke="#cc8855" stroke-width="1.2" fill="none"/>'
-    '<path d="M36 31 Q36 33 37 31" stroke="#cc8855" stroke-width="1" fill="none"/>'
+    '<path d="M35 30 Q38 28 40 30 Q42 28 45 30" stroke="#9a5533" stroke-width="1.8" fill="none" stroke-linecap="round"/>'
 )
 
 # ─────────────────────────────────────────
-# 5. エルウィン（弓使い）- 銀髪、青緑の服、弓
+# 5. エルウィン（弓使い）- 茶色テーマ
 # ─────────────────────────────────────────
 _ERWIN = _svg(
-    # 足・靴
-    '<rect x="28" y="72" width="10" height="22" fill="#335544" rx="2"/>'
-    '<rect x="42" y="72" width="10" height="22" fill="#335544" rx="2"/>'
-    '<rect x="27" y="82" width="12" height="12" fill="#442211" rx="2"/>'
-    '<rect x="41" y="82" width="12" height="12" fill="#442211" rx="2"/>'
-    # 体（青緑のチュニック）
-    '<rect x="22" y="42" width="36" height="32" fill="#227766" rx="4"/>'
-    '<rect x="30" y="42" width="20" height="4" fill="#115544" rx="1"/>'
-    # クローク的装飾
-    '<path d="M22 50 L18 75 L28 65Z" fill="#115544" opacity="0.7"/>'
+    # 足・ブーツ
+    '<rect x="27" y="71" width="11" height="21" fill="#7a5533" rx="2"/>'
+    '<rect x="42" y="71" width="11" height="21" fill="#7a5533" rx="2"/>'
+    '<rect x="25" y="81" width="15" height="11" fill="#4a2e11" rx="2"/>'
+    '<rect x="40" y="81" width="15" height="11" fill="#4a2e11" rx="2"/>'
+    # 体（茶色レンジャー服）
+    '<rect x="22" y="40" width="36" height="31" fill="#8b6240" rx="4"/>'
+    '<path d="M22 40 L40 35 L58 40 L58 46 L40 41 L22 46Z" fill="#aa7a55"/>'
+    '<rect x="34" y="40" width="12" height="2" fill="#6a4820" rx="1"/>'
+    '<rect x="22" y="55" width="36" height="3" fill="#6a4820" rx="1"/>'
+    '<path d="M22 48 L16 72 L28 64Z" fill="#6a4820" opacity="0.8"/>'
+    '<rect x="22" y="66" width="36" height="5" fill="#4a2e11" rx="1"/>'
     # 腕
-    '<rect x="10" y="43" width="13" height="8" fill="#227766" rx="3"/>'
-    '<rect x="57" y="43" width="13" height="8" fill="#227766" rx="3"/>'
-    # 弓（右側、曲線）
-    '<path d="M70 18 C78 30 78 50 70 62" stroke="#886644" stroke-width="3" fill="none" stroke-linecap="round"/>'
-    '<line x1="70" y1="18" x2="70" y2="62" stroke="#aaaaaa" stroke-width="1" stroke-dasharray="2,2"/>'
-    # 矢
-    '<line x1="62" y1="40" x2="78" y2="40" stroke="#886644" stroke-width="1.5"/>'
-    '<polygon points="78,40 74,38 74,42" fill="#886644"/>'
+    '<rect x="9" y="41" width="14" height="9" fill="#8b6240" rx="3"/>'
+    '<rect x="57" y="41" width="14" height="9" fill="#8b6240" rx="3"/>'
+    # 弓（右側）
+    '<path d="M68 14 C78 24 78 52 68 62" stroke="#8b6240" stroke-width="4" fill="none" stroke-linecap="round"/>'
+    '<path d="M68 14 C74 24 74 52 68 62" stroke="#aa8855" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<line x1="68" y1="14" x2="68" y2="62" stroke="#c8a878" stroke-width="1.2" stroke-dasharray="3,2"/>'
+    '<line x1="58" y1="38" x2="76" y2="38" stroke="#aa8855" stroke-width="1.5"/>'
+    '<polygon points="76,38 72,36 72,40" fill="#8b6240"/>'
+    '<rect x="57" y="36" width="4" height="4" fill="#cc3333" rx="1"/>'
     # 首
-    '<rect x="34" y="36" width="12" height="8" fill="#e8d0a0" rx="2"/>'
+    '<rect x="33" y="35" width="14" height="7" fill="#e8d0a0" rx="2"/>'
     # 頭
-    '<circle cx="40" cy="24" r="14" fill="#e8d0a0"/>'
-    # 銀白色の長髪
-    '<path d="M27 20 C24 13 26 6 30 8 C28 13 27 20 26 36 C25 44 24 52 22 58 L24 58 C26 52 27 44 28 36 C27 20 27 20 27 20Z" fill="#dde8f0"/>'
-    '<path d="M53 20 C56 13 54 6 50 8 C52 13 53 20 54 36 C55 44 56 52 58 58 L56 58 C54 52 53 44 52 36 C53 20 53 20 53 20Z" fill="#dde8f0"/>'
-    '<ellipse cx="40" cy="13" rx="11" ry="7" fill="#dde8f0"/>'
-    # 目（灰青）
-    '<ellipse cx="35" cy="24" rx="2.5" ry="2" fill="#5577aa"/>'
-    '<ellipse cx="45" cy="24" rx="2.5" ry="2" fill="#5577aa"/>'
-    '<circle cx="36" cy="23" r="0.8" fill="#fff"/>'
-    '<circle cx="46" cy="23" r="0.8" fill="#fff"/>'
+    '<circle cx="40" cy="22" r="15" fill="#e8d0a0"/>'
+    # 銀白髪
+    '<ellipse cx="40" cy="11" rx="14" ry="9" fill="#dde8f0"/>'
+    '<path d="M25 19 C23 11 26 4 30 8" stroke="#dde8f0" stroke-width="6" fill="none" stroke-linecap="round"/>'
+    '<path d="M55 19 C57 11 54 4 50 8" stroke="#c8d8e8" stroke-width="6" fill="none" stroke-linecap="round"/>'
+    '<rect x="28" y="9" width="4" height="10" fill="#c8d8e8" rx="2" transform="rotate(-8 30 14)"/>'
+    '<rect x="48" y="9" width="4" height="10" fill="#dde8f0" rx="2" transform="rotate(8 50 14)"/>'
+    # ヘアバンド
+    '<rect x="25" y="16" width="30" height="4" fill="#8b6240" rx="2"/>'
+    # 目（大・灰青）
+    '<ellipse cx="33" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="47" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="33" cy="24" rx="3.5" ry="4.5" fill="#6688aa"/>'
+    '<ellipse cx="47" cy="24" rx="3.5" ry="4.5" fill="#6688aa"/>'
+    '<ellipse cx="33" cy="26" rx="3.5" ry="2" fill="#446688"/>'
+    '<ellipse cx="47" cy="26" rx="3.5" ry="2" fill="#446688"/>'
+    '<ellipse cx="33" cy="24" rx="1.5" ry="2" fill="#0a1020"/>'
+    '<ellipse cx="47" cy="24" rx="1.5" ry="2" fill="#0a1020"/>'
+    '<circle cx="30.5" cy="21" r="1.8" fill="white"/>'
+    '<circle cx="44.5" cy="21" r="1.8" fill="white"/>'
+    '<path d="M28 19 Q33 15 38 19" stroke="#331100" stroke-width="1.8" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 19 Q47 15 52 19" stroke="#331100" stroke-width="1.8" fill="none" stroke-linecap="round"/>'
     # 眉（細い）
-    '<path d="M33 19 Q35 18 37 19" stroke="#aaaaaa" stroke-width="1.2" fill="none"/>'
-    '<path d="M43 19 Q45 18 47 19" stroke="#aaaaaa" stroke-width="1.2" fill="none"/>'
+    '<path d="M28 14 Q33 11 38 14" stroke="#9a9090" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 14 Q47 11 52 14" stroke="#9a9090" stroke-width="2" fill="none" stroke-linecap="round"/>'
     # 口（冷静）
-    '<line x1="37" y1="30" x2="43" y2="30" stroke="#cc9966" stroke-width="1.2" stroke-linecap="round"/>'
+    '<line x1="36" y1="31" x2="44" y2="31" stroke="#bb8855" stroke-width="1.8" stroke-linecap="round"/>'
 )
 
 # ─────────────────────────────────────────
-# 6. ノア（僧侶）- 白いローブ、回復のオーブ
+# 6. ノア（僧侶）- 白/金テーマ
 # ─────────────────────────────────────────
 _NOAH = _svg(
-    # 足・靴
-    '<rect x="28" y="76" width="10" height="18" fill="#ddd8c0" rx="2"/>'
-    '<rect x="42" y="76" width="10" height="18" fill="#ddd8c0" rx="2"/>'
-    '<rect x="27" y="84" width="12" height="10" fill="#998855" rx="2"/>'
-    '<rect x="41" y="84" width="12" height="10" fill="#998855" rx="2"/>'
-    # 白いローブ（長い）
-    '<rect x="19" y="41" width="42" height="37" fill="#eeeecc" rx="5"/>'
-    '<path d="M19 60 L17 94 L34 78Z" fill="#e8e8c0"/>'
-    '<path d="M61 60 L63 94 L46 78Z" fill="#e8e8c0"/>'
-    # ローブの金の縁取り
-    '<rect x="33" y="41" width="14" height="4" fill="#ddcc88" rx="2"/>'
-    '<rect x="19" y="41" width="4" height="37" fill="#ddcc88" rx="2"/>'
-    '<rect x="57" y="41" width="4" height="37" fill="#ddcc88" rx="2"/>'
-    # 胸の十字
-    '<rect x="38" y="48" width="4" height="12" fill="#ffe066" rx="1"/>'
-    '<rect x="34" y="53" width="12" height="4" fill="#ffe066" rx="1"/>'
+    # 足・ローブ裾
+    '<path d="M26 72 L23 94 L38 86 L40 92 L42 86 L57 94 L54 72Z" fill="#eeeecc"/>'
+    # 胴体（白金ローブ）
+    '<rect x="19" y="40" width="42" height="33" fill="#eeeecc" rx="5"/>'
+    '<rect x="19" y="40" width="5" height="33" fill="#ffe066" rx="2"/>'
+    '<rect x="56" y="40" width="5" height="33" fill="#ffe066" rx="2"/>'
+    '<path d="M19 40 L40 34 L61 40 L61 47 L40 41 L19 47Z" fill="#fafae8"/>'
+    # 胸の十字紋章
+    '<rect x="37" y="48" width="6" height="14" fill="#ffe066" rx="2"/>'
+    '<rect x="32" y="53" width="16" height="6" fill="#ffe066" rx="2"/>'
+    '<rect x="38" y="49" width="4" height="12" fill="#ffcc00" rx="1"/>'
+    '<rect x="33" y="54" width="14" height="4" fill="#ffcc00" rx="1"/>'
     # 腕
-    '<rect x="7" y="42" width="13" height="8" fill="#eeeecc" rx="3"/>'
-    '<rect x="60" y="42" width="13" height="8" fill="#eeeecc" rx="3"/>'
-    # 回復のオーブ（左手に輝く）
-    '<circle cx="8" cy="56" r="7" fill="#ffe066" opacity="0.3"/>'
-    '<circle cx="8" cy="56" r="5" fill="#ffe066" opacity="0.5"/>'
-    '<circle cx="8" cy="56" r="3" fill="#ffffff"/>'
-    '<circle cx="8" cy="56" r="1.5" fill="#ffee88"/>'
+    '<rect x="6" y="42" width="14" height="9" fill="#eeeecc" rx="3"/>'
+    '<rect x="60" y="42" width="14" height="9" fill="#eeeecc" rx="3"/>'
+    # 聖なる杖（左）
+    '<rect x="3" y="24" width="4" height="36" fill="#aa8833" rx="2"/>'
+    '<circle cx="5" cy="20" r="8" fill="#ffe066" opacity="0.4"/>'
+    '<circle cx="5" cy="20" r="6" fill="#ffe066" opacity="0.6"/>'
+    '<circle cx="5" cy="20" r="4" fill="#ffcc00"/>'
+    '<circle cx="5" cy="20" r="2.5" fill="#ffffaa"/>'
+    '<circle cx="5" cy="20" r="1" fill="white"/>'
+    # 右手の光輪
+    '<circle cx="73" cy="49" r="6" fill="#ffe066" opacity="0.3"/>'
+    '<circle cx="73" cy="49" r="4" fill="#ffe066" opacity="0.5"/>'
     # 首
-    '<rect x="34" y="36" width="12" height="7" fill="#f0c07a" rx="2"/>'
+    '<rect x="34" y="35" width="12" height="7" fill="#f0c07a" rx="2"/>'
     # 頭
-    '<circle cx="40" cy="24" r="14" fill="#f0c07a"/>'
-    # 温かみのある金髪
-    '<ellipse cx="40" cy="13" rx="12" ry="8" fill="#ddcc66"/>'
-    '<path d="M28 20 C26 12 30 6 34 9 C30 13 28 18 28 20Z" fill="#ddcc66"/>'
-    '<path d="M52 20 C54 12 50 6 46 9 C50 13 52 18 52 20Z" fill="#ddcc66"/>'
-    # 目（温かい茶色）
-    '<ellipse cx="35" cy="24" rx="2.5" ry="2" fill="#885522"/>'
-    '<ellipse cx="45" cy="24" rx="2.5" ry="2" fill="#885522"/>'
-    '<circle cx="36" cy="23" r="0.8" fill="#fff"/>'
-    '<circle cx="46" cy="23" r="0.8" fill="#fff"/>'
-    # 眉（優しい曲線）
-    '<path d="M33 19 Q35 17 37 19" stroke="#885522" stroke-width="1.2" fill="none"/>'
-    '<path d="M43 19 Q45 17 47 19" stroke="#885522" stroke-width="1.2" fill="none"/>'
-    # 口（優しい微笑み）
-    '<path d="M36 29 Q40 33 44 29" stroke="#cc8855" stroke-width="1.5" fill="none" stroke-linecap="round"/>'
+    '<circle cx="40" cy="22" r="15" fill="#f0c07a"/>'
+    # 金色ウェーブヘア
+    '<ellipse cx="40" cy="11" rx="14" ry="9" fill="#ffe033"/>'
+    '<path d="M25 19 C23 12 26 5 30 8 C27 13 26 19 25 22Z" fill="#ffe033"/>'
+    '<path d="M55 19 C57 12 54 5 50 8 C53 13 54 19 55 22Z" fill="#ddcc22"/>'
+    '<path d="M25 22 C23 28 24 38 22 46 L24 46 C26 38 25 28 26 22Z" fill="#ddcc22"/>'
+    '<path d="M55 22 C57 28 56 38 58 46 L56 46 C54 38 55 28 54 22Z" fill="#ddcc22"/>'
+    # 目（大・温かみのある茶色）
+    '<ellipse cx="33" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="47" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="33" cy="24" rx="3.5" ry="4.5" fill="#aa6633"/>'
+    '<ellipse cx="47" cy="24" rx="3.5" ry="4.5" fill="#aa6633"/>'
+    '<ellipse cx="33" cy="26" rx="3.5" ry="2" fill="#774422"/>'
+    '<ellipse cx="47" cy="26" rx="3.5" ry="2" fill="#774422"/>'
+    '<ellipse cx="33" cy="24" rx="1.5" ry="2" fill="#1a0800"/>'
+    '<ellipse cx="47" cy="24" rx="1.5" ry="2" fill="#1a0800"/>'
+    '<circle cx="30.5" cy="21" r="1.8" fill="white"/>'
+    '<circle cx="44.5" cy="21" r="1.8" fill="white"/>'
+    '<path d="M28 19 Q33 15 38 19" stroke="#221100" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 19 Q47 15 52 19" stroke="#221100" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 眉（優しい）
+    '<path d="M28 14 Q33 11 38 14" stroke="#aa7722" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 14 Q47 11 52 14" stroke="#aa7722" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
+    # 口（優しい笑顔）
+    '<path d="M35 30 Q40 35 45 30" stroke="#cc8855" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 頬
+    '<circle cx="27" cy="27" r="4" fill="#ffaa66" opacity="0.35"/>'
+    '<circle cx="53" cy="27" r="4" fill="#ffaa66" opacity="0.35"/>'
 )
 
 # ─────────────────────────────────────────
-# 7. ドラク（ドラゴン戦士）- 角、鱗の鎧、尻尾
+# 7. ドラク（ドラゴン戦士）- 赤テーマ
 # ─────────────────────────────────────────
 _DRAKE = _svg(
     # 尻尾
-    '<path d="M58 74 C68 70 76 80 72 90 C68 96 62 94 58 88" stroke="#2d6e22" stroke-width="6" fill="none" stroke-linecap="round"/>'
-    # 足・爪
-    '<rect x="27" y="71" width="11" height="23" fill="#336622" rx="2"/>'
-    '<rect x="42" y="71" width="11" height="23" fill="#336622" rx="2"/>'
-    '<polygon points="27,94 29,100 31,94" fill="#224411"/>'
-    '<polygon points="33,94 35,100 37,94" fill="#224411"/>'
-    '<polygon points="43,94 45,100 47,94" fill="#224411"/>'
-    '<polygon points="49,94 51,100 53,94" fill="#224411"/>'
-    # 体（鱗の鎧）
-    '<rect x="20" y="41" width="40" height="32" fill="#2d6e22" rx="4"/>'
-    # 鱗模様
-    '<ellipse cx="28" cy="48" rx="5" ry="3" fill="#224411" opacity="0.6"/>'
-    '<ellipse cx="36" cy="48" rx="5" ry="3" fill="#224411" opacity="0.6"/>'
-    '<ellipse cx="44" cy="48" rx="5" ry="3" fill="#224411" opacity="0.6"/>'
-    '<ellipse cx="52" cy="48" rx="5" ry="3" fill="#224411" opacity="0.6"/>'
-    '<ellipse cx="32" cy="55" rx="5" ry="3" fill="#224411" opacity="0.6"/>'
-    '<ellipse cx="40" cy="55" rx="5" ry="3" fill="#224411" opacity="0.6"/>'
-    '<ellipse cx="48" cy="55" rx="5" ry="3" fill="#224411" opacity="0.6"/>'
-    '<ellipse cx="28" cy="62" rx="5" ry="3" fill="#224411" opacity="0.5"/>'
-    '<ellipse cx="36" cy="62" rx="5" ry="3" fill="#224411" opacity="0.5"/>'
-    '<ellipse cx="44" cy="62" rx="5" ry="3" fill="#224411" opacity="0.5"/>'
-    '<ellipse cx="52" cy="62" rx="5" ry="3" fill="#224411" opacity="0.5"/>'
-    # 腕（爪付き）
-    '<rect x="8" y="42" width="13" height="10" fill="#2d6e22" rx="3"/>'
-    '<rect x="59" y="42" width="13" height="10" fill="#2d6e22" rx="3"/>'
-    '<polygon points="8,52 10,58 12,52" fill="#224411"/>'
-    '<polygon points="13,52 15,58 17,52" fill="#224411"/>'
+    '<path d="M54 72 C66 68 76 76 72 90 C68 98 60 96 56 88" stroke="#cc2211" stroke-width="8" fill="none" stroke-linecap="round"/>'
+    '<path d="M54 72 C66 68 76 76 72 90" stroke="#ff4433" stroke-width="4" fill="none" stroke-linecap="round"/>'
+    # 足・ブーツ
+    '<rect x="27" y="70" width="11" height="22" fill="#cc2211" rx="2"/>'
+    '<rect x="42" y="70" width="11" height="22" fill="#cc2211" rx="2"/>'
+    '<rect x="25" y="80" width="15" height="12" fill="#881100" rx="2"/>'
+    '<rect x="40" y="80" width="15" height="12" fill="#881100" rx="2"/>'
+    '<polygon points="26,92 28,99 30,92" fill="#440000"/>'
+    '<polygon points="32,92 34,99 36,92" fill="#440000"/>'
+    '<polygon points="42,92 44,99 46,92" fill="#440000"/>'
+    '<polygon points="48,92 50,99 52,92" fill="#440000"/>'
+    # 胴体（赤い鱗鎧）
+    '<rect x="20" y="39" width="40" height="31" fill="#cc2211" rx="4"/>'
+    '<path d="M20 39 L40 33 L60 39 L60 46 L40 41 L20 46Z" fill="#ee4433"/>'
+    '<ellipse cx="28" cy="48" rx="6" ry="3.5" fill="#991100" opacity="0.7"/>'
+    '<ellipse cx="36" cy="48" rx="6" ry="3.5" fill="#991100" opacity="0.7"/>'
+    '<ellipse cx="44" cy="48" rx="6" ry="3.5" fill="#991100" opacity="0.7"/>'
+    '<ellipse cx="52" cy="48" rx="6" ry="3.5" fill="#991100" opacity="0.7"/>'
+    '<ellipse cx="32" cy="56" rx="6" ry="3.5" fill="#991100" opacity="0.6"/>'
+    '<ellipse cx="40" cy="56" rx="6" ry="3.5" fill="#991100" opacity="0.6"/>'
+    '<ellipse cx="48" cy="56" rx="6" ry="3.5" fill="#991100" opacity="0.6"/>'
+    '<rect x="20" y="68" width="40" height="4" fill="#881100" rx="1"/>'
+    # 肩（棘付き）
+    '<ellipse cx="20" cy="42" rx="8" ry="6" fill="#dd3322"/>'
+    '<polygon points="14,38 12,30 18,36" fill="#cc2211"/>'
+    '<polygon points="20,36 18,26 24,34" fill="#cc2211"/>'
+    '<ellipse cx="60" cy="42" rx="8" ry="6" fill="#dd3322"/>'
+    '<polygon points="66,38 68,30 62,36" fill="#cc2211"/>'
+    '<polygon points="60,36 62,26 56,34" fill="#cc2211"/>'
+    # 腕
+    '<rect x="5" y="41" width="16" height="11" fill="#cc2211" rx="3"/>'
+    '<rect x="59" y="41" width="16" height="11" fill="#cc2211" rx="3"/>'
+    # 大斧（右）
+    '<rect x="70" y="20" width="5" height="50" fill="#888880" rx="2"/>'
+    '<path d="M72.5 8 C82 10 84 24 74 26 C82 20 80 10 72.5 8Z" fill="#a0a8a0"/>'
+    '<path d="M72.5 8 C63 10 61 24 71 26 C63 20 65 10 72.5 8Z" fill="#c0c8c0"/>'
+    '<ellipse cx="72.5" cy="17" rx="4" ry="2" fill="#ffe066"/>'
     # 首（鱗）
-    '<rect x="33" y="35" width="14" height="8" fill="#3d8e32" rx="2"/>'
-    # 頭（緑がかった肌）
-    '<circle cx="40" cy="23" r="14" fill="#5da84a"/>'
-    # ドラゴンの角（2本）
-    '<path d="M33 14 C30 6 26 2 28 8 C30 4 34 10 34 16Z" fill="#2a5020"/>'
-    '<path d="M47 14 C50 6 54 2 52 8 C50 4 46 10 46 16Z" fill="#2a5020"/>'
-    # 頭部の鱗
-    '<ellipse cx="35" cy="18" rx="4" ry="2" fill="#3d8020" opacity="0.5"/>'
-    '<ellipse cx="45" cy="18" rx="4" ry="2" fill="#3d8020" opacity="0.5"/>'
-    # 目（縦長の瞳孔・ドラゴン目）
-    '<ellipse cx="35" cy="23" rx="3" ry="3" fill="#dd6600"/>'
-    '<ellipse cx="45" cy="23" rx="3" ry="3" fill="#dd6600"/>'
-    '<ellipse cx="35" cy="23" rx="1" ry="2.5" fill="#221100"/>'
-    '<ellipse cx="45" cy="23" rx="1" ry="2.5" fill="#221100"/>'
-    '<circle cx="35.5" cy="22" r="0.7" fill="#fff" opacity="0.5"/>'
-    '<circle cx="45.5" cy="22" r="0.7" fill="#fff" opacity="0.5"/>'
-    # 鼻孔
-    '<circle cx="38" cy="27" r="1" fill="#3a6030"/>'
-    '<circle cx="42" cy="27" r="1" fill="#3a6030"/>'
-    # 口（牙あり）
-    '<path d="M35 31 Q40 35 45 31" stroke="#2a5020" stroke-width="2" fill="none"/>'
-    '<rect x="38" y="31" width="2" height="4" fill="#f0f0e0" rx="1"/>'
-    '<rect x="42" y="31" width="2" height="4" fill="#f0f0e0" rx="1"/>'
+    '<rect x="33" y="34" width="14" height="7" fill="#a85040" rx="2"/>'
+    # 頭（ドラゴン肌）
+    '<circle cx="40" cy="22" r="15" fill="#a85040"/>'
+    # ドラゴンの角
+    '<path d="M31 14 C27 4 22 0 24 8 C26 3 30 10 32 16Z" fill="#770000"/>'
+    '<path d="M49 14 C53 4 58 0 56 8 C54 3 50 10 48 16Z" fill="#770000"/>'
+    '<path d="M31 14 C29 6 25 3 27 9 C28 5 30 10 32 16Z" fill="#aa1100" opacity="0.6"/>'
+    '<path d="M49 14 C51 6 55 3 53 9 C52 5 50 10 48 16Z" fill="#aa1100" opacity="0.6"/>'
+    # スパイク赤髪
+    '<ellipse cx="40" cy="11" rx="13" ry="8" fill="#cc2211"/>'
+    '<polygon points="34,12 31,-2 36,10" fill="#dd3322"/>'
+    '<polygon points="40,9 39,-3 44,8" fill="#ee4433"/>'
+    '<polygon points="46,12 48,-2 52,11" fill="#cc2211"/>'
+    # 目（縦長瞳孔・オレンジ）
+    '<ellipse cx="33" cy="23" rx="4.5" ry="5" fill="white"/>'
+    '<ellipse cx="47" cy="23" rx="4.5" ry="5" fill="white"/>'
+    '<ellipse cx="33" cy="23" rx="3.5" ry="4" fill="#ff8811"/>'
+    '<ellipse cx="47" cy="23" rx="3.5" ry="4" fill="#ff8811"/>'
+    '<ellipse cx="33" cy="23" rx="1.2" ry="3.5" fill="#110000"/>'
+    '<ellipse cx="47" cy="23" rx="1.2" ry="3.5" fill="#110000"/>'
+    '<ellipse cx="33" cy="26" rx="3.5" ry="1.5" fill="#cc5500"/>'
+    '<ellipse cx="47" cy="26" rx="3.5" ry="1.5" fill="#cc5500"/>'
+    '<circle cx="30.5" cy="21" r="1.5" fill="white" opacity="0.8"/>'
+    '<circle cx="44.5" cy="21" r="1.5" fill="white" opacity="0.8"/>'
+    '<path d="M28 19 Q33 15 38 19" stroke="#330000" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 19 Q47 15 52 19" stroke="#330000" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 眉（怒り気味）
+    '<path d="M28 14 Q33 11 37 14" stroke="#770000" stroke-width="3" fill="none" stroke-linecap="round" transform="rotate(6 33 14)"/>'
+    '<path d="M43 14 Q47 11 52 14" stroke="#770000" stroke-width="3" fill="none" stroke-linecap="round" transform="rotate(-6 47 14)"/>'
+    # 口（牙）
+    '<path d="M34 30 Q40 35 46 30" stroke="#771100" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<rect x="38" y="30" width="2.5" height="5" fill="#f0eed8" rx="1"/>'
+    '<rect x="41.5" y="30" width="2.5" height="5" fill="#f0eed8" rx="1"/>'
 )
 
 # ─────────────────────────────────────────
-# 8. ルナ（闇魔法使い）- 黒いローブ、紫の月
+# 8. ルナ（闇魔法使い）- 黒/紫テーマ
 # ─────────────────────────────────────────
 _LUNA = _svg(
-    # 足・靴
-    '<rect x="29" y="76" width="10" height="18" fill="#221133" rx="2"/>'
-    '<rect x="41" y="76" width="10" height="18" fill="#221133" rx="2"/>'
-    '<rect x="28" y="84" width="12" height="10" fill="#110022" rx="2"/>'
-    '<rect x="40" y="84" width="12" height="10" fill="#110022" rx="2"/>'
-    # 黒いローブ（紫の縁）
-    '<rect x="18" y="41" width="44" height="37" fill="#221133" rx="5"/>'
-    '<rect x="18" y="41" width="4" height="37" fill="#6622aa" rx="2"/>'
-    '<rect x="58" y="41" width="4" height="37" fill="#6622aa" rx="2"/>'
-    '<path d="M18 62 L14 94 L32 79Z" fill="#1a0f28"/>'
-    '<path d="M62 62 L66 94 L48 79Z" fill="#1a0f28"/>'
-    # 胸の三日月紋章
-    '<path d="M38 52 C36 48 38 44 42 44 C38 44 36 48 38 52Z" fill="#aa66ff"/>'
-    '<circle cx="41" cy="48" r="5" fill="none" stroke="#aa66ff" stroke-width="1.5"/>'
-    '<circle cx="44" cy="47" r="4" fill="#221133"/>'
+    # 魔法の粒子（背景）
+    '<circle cx="12" cy="20" r="3" fill="#9933ff" opacity="0.4"/>'
+    '<circle cx="8" cy="35" r="2" fill="#cc66ff" opacity="0.3"/>'
+    '<circle cx="68" cy="25" r="3" fill="#9933ff" opacity="0.4"/>'
+    '<circle cx="72" cy="40" r="2" fill="#cc66ff" opacity="0.3"/>'
+    # 足
+    '<rect x="29" y="74" width="10" height="18" fill="#1a0a2e" rx="2"/>'
+    '<rect x="41" y="74" width="10" height="18" fill="#1a0a2e" rx="2"/>'
+    '<rect x="27" y="82" width="14" height="10" fill="#110022" rx="2"/>'
+    '<rect x="39" y="82" width="14" height="10" fill="#110022" rx="2"/>'
+    # 黒いローブ（紫縁取り）
+    '<rect x="18" y="40" width="44" height="35" fill="#1a0a2e" rx="5"/>'
+    '<rect x="18" y="40" width="5" height="35" fill="#7722cc" rx="2"/>'
+    '<rect x="57" y="40" width="5" height="35" fill="#7722cc" rx="2"/>'
+    '<path d="M18 40 L40 34 L62 40 L62 47 L40 41 L18 47Z" fill="#2d1155"/>'
+    '<path d="M18 64 L14 92 L32 78Z" fill="#110022"/>'
+    '<path d="M62 64 L66 92 L48 78Z" fill="#110022"/>'
+    # 三日月紋章
+    '<circle cx="40" cy="55" r="7" fill="none" stroke="#9933ff" stroke-width="1.5"/>'
+    '<circle cx="44" cy="53" r="6" fill="#1a0a2e"/>'
+    '<circle cx="40" cy="48" r="3" fill="#9933ff" opacity="0.5"/>'
     # 腕
-    '<rect x="6" y="42" width="13" height="8" fill="#221133" rx="3"/>'
-    '<rect x="61" y="42" width="13" height="8" fill="#221133" rx="3"/>'
-    # 魔法の光（両手）
-    '<circle cx="8" cy="56" r="5" fill="#9933ff" opacity="0.4"/>'
-    '<circle cx="8" cy="56" r="3" fill="#cc88ff" opacity="0.6"/>'
-    '<circle cx="72" cy="56" r="5" fill="#9933ff" opacity="0.4"/>'
-    '<circle cx="72" cy="56" r="3" fill="#cc88ff" opacity="0.6"/>'
+    '<rect x="5" y="42" width="14" height="9" fill="#1a0a2e" rx="3"/>'
+    '<rect x="61" y="42" width="14" height="9" fill="#1a0a2e" rx="3"/>'
+    # 両手の闇の球
+    '<circle cx="7" cy="56" r="6" fill="#9933ff" opacity="0.3"/>'
+    '<circle cx="7" cy="56" r="4" fill="#bb55ff" opacity="0.5"/>'
+    '<circle cx="7" cy="56" r="2" fill="#cc88ff"/>'
+    '<circle cx="73" cy="56" r="6" fill="#9933ff" opacity="0.3"/>'
+    '<circle cx="73" cy="56" r="4" fill="#bb55ff" opacity="0.5"/>'
+    '<circle cx="73" cy="56" r="2" fill="#cc88ff"/>'
     # 首
-    '<rect x="34" y="35" width="12" height="8" fill="#d0a8d0" rx="2"/>'
+    '<rect x="34" y="35" width="12" height="7" fill="#e0c0e8" rx="2"/>'
     # 頭（青白い肌）
-    '<circle cx="40" cy="23" r="14" fill="#d8b8d8"/>'
-    # 暗紫色の長い髪（両サイドに流れる）
-    '<path d="M27 17 C24 10 25 4 29 5 C27 10 26 18 25 28 C24 38 22 48 20 56 L22 57 C24 48 26 38 27 28 C27 18 27 17 27 17Z" fill="#553388"/>'
-    '<path d="M53 17 C56 10 55 4 51 5 C53 10 54 18 55 28 C56 38 58 48 60 56 L58 57 C56 48 54 38 53 28 C53 18 53 17 53 17Z" fill="#553388"/>'
-    '<ellipse cx="40" cy="12" rx="11" ry="7" fill="#553388"/>'
-    # 目（神秘的な紫）
-    '<ellipse cx="35" cy="24" rx="3" ry="2.5" fill="#8833cc"/>'
-    '<ellipse cx="45" cy="24" rx="3" ry="2.5" fill="#8833cc"/>'
-    '<circle cx="36" cy="23" r="0.8" fill="#ffffff" opacity="0.7"/>'
-    '<circle cx="46" cy="23" r="0.8" fill="#ffffff" opacity="0.7"/>'
-    # まつ毛（半眼）
-    '<path d="M32 21 L32 23" stroke="#553388" stroke-width="1.2"/>'
-    '<path d="M34 20 L34 22" stroke="#553388" stroke-width="1.2"/>'
-    '<path d="M46 20 L46 22" stroke="#553388" stroke-width="1.2"/>'
-    '<path d="M48 21 L48 23" stroke="#553388" stroke-width="1.2"/>'
-    # 口（ミステリアス）
-    '<path d="M37 30 Q40 32 43 30" stroke="#cc88cc" stroke-width="1.2" fill="none" stroke-linecap="round"/>'
-    # 星の飾り
-    '<circle cx="28" cy="9" r="1.5" fill="#aa66ff" opacity="0.8"/>'
-    '<circle cx="52" cy="9" r="1.5" fill="#aa66ff" opacity="0.8"/>'
-    '<circle cx="20" cy="6" r="1" fill="#8833cc" opacity="0.6"/>'
-    '<circle cx="60" cy="6" r="1" fill="#8833cc" opacity="0.6"/>'
+    '<circle cx="40" cy="22" r="15" fill="#e0c0e8"/>'
+    # 白髪（長い）
+    '<ellipse cx="40" cy="11" rx="13" ry="8" fill="#e8e0f8"/>'
+    '<path d="M26 19 C23 11 25 4 29 7 C27 12 26 18 25 28 C24 38 22 50 20 58 L22 58 C24 50 26 38 27 28 C27 18 26 19 26 19Z" fill="#ddd8f0"/>'
+    '<path d="M54 19 C57 11 55 4 51 7 C53 12 54 18 55 28 C56 38 58 50 60 58 L58 58 C56 50 54 38 53 28 C53 18 54 19 54 19Z" fill="#ddd8f0"/>'
+    '<circle cx="30" cy="8" r="2" fill="#aa66ff" opacity="0.8"/>'
+    '<circle cx="50" cy="8" r="2" fill="#aa66ff" opacity="0.8"/>'
+    '<circle cx="24" cy="4" r="1.2" fill="#8844cc" opacity="0.6"/>'
+    '<circle cx="56" cy="4" r="1.2" fill="#8844cc" opacity="0.6"/>'
+    # 目（大・紫）
+    '<ellipse cx="33" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="47" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="33" cy="24" rx="3.5" ry="4.5" fill="#8833cc"/>'
+    '<ellipse cx="47" cy="24" rx="3.5" ry="4.5" fill="#8833cc"/>'
+    '<ellipse cx="33" cy="26" rx="3.5" ry="2" fill="#5511aa"/>'
+    '<ellipse cx="47" cy="26" rx="3.5" ry="2" fill="#5511aa"/>'
+    '<ellipse cx="33" cy="24" rx="1.5" ry="2" fill="#110022"/>'
+    '<ellipse cx="47" cy="24" rx="1.5" ry="2" fill="#110022"/>'
+    '<circle cx="30.5" cy="21" r="1.8" fill="white"/>'
+    '<circle cx="44.5" cy="21" r="1.8" fill="white"/>'
+    # 半眼（ミステリアス）
+    '<path d="M28 20 Q33 19.5 38 20" stroke="#1a0a2e" stroke-width="4" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 20 Q47 19.5 52 20" stroke="#1a0a2e" stroke-width="4" fill="none" stroke-linecap="round"/>'
+    '<path d="M28 20 Q33 16.5 38 20" stroke="#331155" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 20 Q47 16.5 52 20" stroke="#331155" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 眉
+    '<path d="M29 14 Q33 11 37 13" stroke="#6622aa" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M43 13 Q47 11 51 14" stroke="#6622aa" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 口
+    '<path d="M36 30 Q40 33 44 30" stroke="#cc88ee" stroke-width="1.5" fill="none" stroke-linecap="round"/>'
 )
 
 # ─────────────────────────────────────────
-# 9. フィン（吟遊詩人）- 羽飾りの帽子、リュート
+# 9. フィン（吟遊詩人）- オレンジテーマ
 # ─────────────────────────────────────────
 _FINN = _svg(
-    # 足・靴
-    '<rect x="28" y="72" width="10" height="22" fill="#cc7722" rx="2"/>'
-    '<rect x="42" y="72" width="10" height="22" fill="#cc7722" rx="2"/>'
-    '<rect x="27" y="82" width="12" height="12" fill="#332200" rx="2"/>'
-    '<rect x="41" y="82" width="12" height="12" fill="#332200" rx="2"/>'
-    # リュート（背中）
-    '<ellipse cx="63" cy="60" rx="8" ry="10" fill="#886633"/>'
-    '<ellipse cx="63" cy="60" rx="6" ry="8" fill="#aa8844"/>'
-    '<circle cx="63" cy="60" r="2" fill="#664422"/>'
-    '<rect x="62" y="45" width="2" height="18" fill="#665533" rx="1"/>'
-    '<line x1="60" y1="46" x2="63" y2="55" stroke="#ccbb88" stroke-width="0.8"/>'
-    '<line x1="62" y1="46" x2="63" y2="55" stroke="#ccbb88" stroke-width="0.8"/>'
-    '<line x1="64" y1="46" x2="63" y2="55" stroke="#ccbb88" stroke-width="0.8"/>'
-    # 体（カラフルな服）
-    '<rect x="22" y="42" width="36" height="32" fill="#ff9933" rx="4"/>'
-    '<rect x="30" y="42" width="20" height="4" fill="#ee7700" rx="2"/>'
-    # 縞模様
-    '<rect x="22" y="50" width="36" height="4" fill="#ffcc44" rx="1"/>'
-    '<rect x="22" y="58" width="36" height="4" fill="#ee7700" rx="1"/>'
+    # 足・ブーツ
+    '<rect x="27" y="71" width="11" height="21" fill="#cc5500" rx="2"/>'
+    '<rect x="42" y="71" width="11" height="21" fill="#cc5500" rx="2"/>'
+    '<rect x="25" y="81" width="15" height="11" fill="#882200" rx="2"/>'
+    '<rect x="40" y="81" width="15" height="11" fill="#882200" rx="2"/>'
+    # 体（カラフルな詩人服）
+    '<rect x="21" y="40" width="38" height="31" fill="#ff7722" rx="4"/>'
+    '<path d="M21 40 L40 35 L59 40 L59 46 L40 41 L21 46Z" fill="#ffaa44"/>'
+    '<rect x="21" y="50" width="38" height="5" fill="#ffcc44" rx="1"/>'
+    '<rect x="21" y="58" width="38" height="4" fill="#ee6600" rx="1"/>'
+    '<rect x="21" y="66" width="38" height="5" fill="#662200" rx="1"/>'
+    '<rect x="35" y="64" width="10" height="8" fill="#ffe066" rx="2"/>'
     # 腕
-    '<rect x="10" y="43" width="13" height="8" fill="#ff9933" rx="3"/>'
-    '<rect x="57" y="43" width="13" height="8" fill="#ff9933" rx="3"/>'
+    '<rect x="9" y="41" width="13" height="9" fill="#ff7722" rx="3"/>'
+    '<rect x="58" y="41" width="13" height="9" fill="#ff7722" rx="3"/>'
+    # リュート（右側）
+    '<ellipse cx="66" cy="58" rx="9" ry="11" fill="#aa7733"/>'
+    '<ellipse cx="66" cy="58" rx="7" ry="9" fill="#cc9944"/>'
+    '<circle cx="66" cy="58" r="3" fill="#885522"/>'
+    '<rect x="65" y="42" width="2" height="20" fill="#775533" rx="1"/>'
+    '<line x1="63" y1="44" x2="66" y2="54" stroke="#ddc888" stroke-width="0.8"/>'
+    '<line x1="65" y1="43" x2="66" y2="54" stroke="#ddc888" stroke-width="0.8"/>'
+    '<line x1="67" y1="43" x2="66" y2="54" stroke="#ddc888" stroke-width="0.8"/>'
+    '<line x1="69" y1="44" x2="66" y2="54" stroke="#ddc888" stroke-width="0.8"/>'
     # 首
-    '<rect x="34" y="36" width="12" height="8" fill="#f0c07a" rx="2"/>'
+    '<rect x="34" y="35" width="12" height="7" fill="#f0c07a" rx="2"/>'
     # 頭
-    '<circle cx="40" cy="24" r="14" fill="#f0c07a"/>'
-    # 羽飾りのある帽子（つばが広い）
-    '<ellipse cx="40" cy="15" rx="20" ry="6" fill="#cc4422"/>'
-    '<ellipse cx="40" cy="14" rx="14" ry="8" fill="#dd5533"/>'
-    '<path d="M52 10 C56 2 60 -2 58 4 C56 0 54 4 52 8 C54 4 56 0 56 6 C54 4 53 8 52 10Z" fill="#3355cc"/>'
-    '<path d="M52 10 C55 4 58 2 56 8 C54 6 52 10 52 10Z" fill="#5577ee"/>'
-    # 目（楽しげ）
-    '<ellipse cx="35" cy="24" rx="3" ry="2.5" fill="#884422"/>'
-    '<ellipse cx="45" cy="24" rx="3" ry="2.5" fill="#884422"/>'
-    '<circle cx="36" cy="23" r="1" fill="#fff"/>'
-    '<circle cx="46" cy="23" r="1" fill="#fff"/>'
-    # 眉（明るい表情）
-    '<path d="M32 19 Q35 17 38 19" stroke="#664422" stroke-width="1.5" fill="none"/>'
-    '<path d="M42 19 Q45 17 48 19" stroke="#664422" stroke-width="1.5" fill="none"/>'
+    '<circle cx="40" cy="22" r="14" fill="#f0c07a"/>'
+    # 赤オレンジの髪
+    '<ellipse cx="40" cy="12" rx="13" ry="8" fill="#ee4411"/>'
+    '<path d="M26 18 C24 11 27 4 31 8" stroke="#ee4411" stroke-width="5" fill="none" stroke-linecap="round"/>'
+    '<path d="M54 18 C56 11 53 4 49 8" stroke="#dd3300" stroke-width="5" fill="none" stroke-linecap="round"/>'
+    # 羽飾りの帽子
+    '<ellipse cx="40" cy="14" rx="22" ry="7" fill="#882200"/>'
+    '<ellipse cx="40" cy="13" rx="16" ry="9" fill="#aa3311"/>'
+    '<path d="M52 8 C58 -2 64 -6 62 2 C60 -4 56 0 53 6 C57 0 60 -2 58 4 C56 2 54 6 52 10Z" fill="#3366cc"/>'
+    '<path d="M52 10 C56 2 60 -2 58 4 C56 0 53 5 52 10Z" fill="#5588ff"/>'
+    '<path d="M52 10 C54 4 58 2 57 7 C56 4 53 8 52 10Z" fill="#88aaff"/>'
+    # 目（大・明るい茶色）
+    '<ellipse cx="33" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="47" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="33" cy="24" rx="3.5" ry="4.5" fill="#bb6622"/>'
+    '<ellipse cx="47" cy="24" rx="3.5" ry="4.5" fill="#bb6622"/>'
+    '<ellipse cx="33" cy="26" rx="3.5" ry="2" fill="#884411"/>'
+    '<ellipse cx="47" cy="26" rx="3.5" ry="2" fill="#884411"/>'
+    '<ellipse cx="33" cy="24" rx="1.5" ry="2" fill="#110800"/>'
+    '<ellipse cx="47" cy="24" rx="1.5" ry="2" fill="#110800"/>'
+    '<circle cx="30.5" cy="21" r="1.8" fill="white"/>'
+    '<circle cx="44.5" cy="21" r="1.8" fill="white"/>'
+    '<path d="M28 19 Q33 15 38 19" stroke="#221100" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 19 Q47 15 52 19" stroke="#221100" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 眉
+    '<path d="M27 14 Q33 10 39 13" stroke="#882200" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
+    '<path d="M41 13 Q47 10 53 14" stroke="#882200" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
     # 大きな笑顔
-    '<path d="M35 29 Q40 35 45 29" stroke="#cc6633" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M34 30 Q40 36 46 30" stroke="#cc6633" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
     # 頬紅
-    '<circle cx="32" cy="28" r="4" fill="#ff8866" opacity="0.3"/>'
-    '<circle cx="48" cy="28" r="4" fill="#ff8866" opacity="0.3"/>'
+    '<circle cx="27" cy="27" r="5" fill="#ff6633" opacity="0.3"/>'
+    '<circle cx="53" cy="27" r="5" fill="#ff6633" opacity="0.3"/>'
 )
 
 # ─────────────────────────────────────────
-# 10. セラ（精霊使い）- 花冠、精霊の光
+# 10. セラ（精霊使い）- 水色テーマ
 # ─────────────────────────────────────────
 _SERA = _svg(
-    # 精霊の光（浮遊するオーブ）
-    '<circle cx="12" cy="30" r="5" fill="#88ff88" opacity="0.4"/>'
-    '<circle cx="12" cy="30" r="3" fill="#aaffaa" opacity="0.6"/>'
-    '<circle cx="12" cy="30" r="1.5" fill="#ffffff"/>'
-    '<circle cx="68" cy="35" r="4" fill="#88ffaa" opacity="0.4"/>'
-    '<circle cx="68" cy="35" r="2.5" fill="#aaffcc" opacity="0.6"/>'
-    '<circle cx="68" cy="35" r="1.2" fill="#ffffff"/>'
-    '<circle cx="15" cy="65" r="3.5" fill="#66ff99" opacity="0.35"/>'
-    '<circle cx="15" cy="65" r="2" fill="#99ffbb" opacity="0.5"/>'
-    '<circle cx="15" cy="65" r="1" fill="#ffffff"/>'
-    # 足・靴
-    '<rect x="28" y="76" width="10" height="18" fill="#88cc88" rx="2"/>'
-    '<rect x="42" y="76" width="10" height="18" fill="#88cc88" rx="2"/>'
-    '<rect x="27" y="84" width="12" height="10" fill="#556644" rx="2"/>'
-    '<rect x="41" y="84" width="12" height="10" fill="#556644" rx="2"/>'
-    # 白緑のドレス（長い）
-    '<rect x="19" y="41" width="42" height="37" fill="#cceecc" rx="5"/>'
-    '<path d="M19 63 L15 94 L34 80Z" fill="#bbddbb"/>'
-    '<path d="M61 63 L65 94 L46 80Z" fill="#bbddbb"/>'
-    # ドレス装飾（葉と花）
-    '<ellipse cx="30" cy="52" rx="4" ry="6" fill="#88bb88" opacity="0.5" transform="rotate(-20 30 52)"/>'
-    '<ellipse cx="50" cy="52" rx="4" ry="6" fill="#88bb88" opacity="0.5" transform="rotate(20 50 52)"/>'
-    '<circle cx="40" cy="50" r="3" fill="#ffeeaa" opacity="0.7"/>'
-    # ベルト（葉っぱモチーフ）
-    '<rect x="26" y="62" width="28" height="4" fill="#6a9a6a" rx="2"/>'
+    # 妖精の羽（透明感）
+    '<ellipse cx="18" cy="50" rx="14" ry="22" fill="#88eeff" opacity="0.25" transform="rotate(-20 18 50)"/>'
+    '<ellipse cx="18" cy="50" rx="10" ry="16" fill="#aaeeff" opacity="0.2" transform="rotate(-20 18 50)"/>'
+    '<ellipse cx="62" cy="50" rx="14" ry="22" fill="#88eeff" opacity="0.25" transform="rotate(20 62 50)"/>'
+    '<ellipse cx="62" cy="50" rx="10" ry="16" fill="#aaeeff" opacity="0.2" transform="rotate(20 62 50)"/>'
+    '<ellipse cx="14" cy="44" rx="6" ry="12" fill="none" stroke="#66ccff" stroke-width="1.5" opacity="0.5" transform="rotate(-20 14 44)"/>'
+    '<ellipse cx="66" cy="44" rx="6" ry="12" fill="none" stroke="#66ccff" stroke-width="1.5" opacity="0.5" transform="rotate(20 66 44)"/>'
+    # 精霊の光
+    '<circle cx="10" cy="28" r="4" fill="#88ffee" opacity="0.5"/>'
+    '<circle cx="10" cy="28" r="2.5" fill="#aafff0" opacity="0.7"/>'
+    '<circle cx="10" cy="28" r="1" fill="white"/>'
+    '<circle cx="70" cy="32" r="3.5" fill="#88ffcc" opacity="0.5"/>'
+    '<circle cx="70" cy="32" r="2" fill="#aaffd8" opacity="0.7"/>'
+    '<circle cx="70" cy="32" r="1" fill="white"/>'
+    # 足・ブーツ
+    '<rect x="28" y="74" width="10" height="18" fill="#88ccee" rx="2"/>'
+    '<rect x="42" y="74" width="10" height="18" fill="#88ccee" rx="2"/>'
+    '<rect x="26" y="82" width="14" height="10" fill="#5599bb" rx="2"/>'
+    '<rect x="40" y="82" width="14" height="10" fill="#5599bb" rx="2"/>'
+    # 水色のドレス
+    '<rect x="19" y="41" width="42" height="34" fill="#88ccee" rx="5"/>'
+    '<path d="M19 64 L15 92 L34 78Z" fill="#77bbdd"/>'
+    '<path d="M61 64 L65 92 L46 78Z" fill="#77bbdd"/>'
+    '<path d="M19 41 L40 35 L61 41 L61 48 L40 42 L19 48Z" fill="#aadeee"/>'
+    '<circle cx="30" cy="54" r="4" fill="#66bbdd" opacity="0.5"/>'
+    '<circle cx="50" cy="54" r="4" fill="#66bbdd" opacity="0.5"/>'
+    '<circle cx="40" cy="60" r="3.5" fill="#55aacc" opacity="0.5"/>'
     # 腕
-    '<rect x="7" y="42" width="13" height="8" fill="#cceecc" rx="3"/>'
-    '<rect x="60" y="42" width="13" height="8" fill="#cceecc" rx="3"/>'
+    '<rect x="6" y="42" width="14" height="9" fill="#88ccee" rx="3"/>'
+    '<rect x="60" y="42" width="14" height="9" fill="#88ccee" rx="3"/>'
     # 首
-    '<rect x="34" y="35" width="12" height="8" fill="#f0d0c0" rx="2"/>'
+    '<rect x="34" y="35" width="12" height="8" fill="#f5d0b8" rx="2"/>'
     # 頭
-    '<circle cx="40" cy="23" r="14" fill="#f0d0c0"/>'
-    # 緑がかった髪（ウェーブ）
-    '<ellipse cx="40" cy="13" rx="11" ry="7" fill="#88cc66"/>'
-    '<path d="M28 20 C25 12 28 6 32 8 C29 13 28 18 28 20Z" fill="#88cc66"/>'
-    '<path d="M52 20 C55 12 52 6 48 8 C51 13 52 18 52 20Z" fill="#88cc66"/>'
+    '<circle cx="40" cy="22" r="15" fill="#f5d0b8"/>'
+    # ミントグリーンの髪
+    '<ellipse cx="40" cy="11" rx="14" ry="9" fill="#77cc99"/>'
+    '<path d="M25 20 C23 12 26 5 30 8" stroke="#77cc99" stroke-width="6" fill="none" stroke-linecap="round"/>'
+    '<path d="M55 20 C57 12 54 5 50 8" stroke="#66bb88" stroke-width="6" fill="none" stroke-linecap="round"/>'
     # 花冠
-    '<circle cx="33" cy="12" r="3" fill="#ff88aa"/>'
-    '<circle cx="40" cy="9" r="3" fill="#ffaa44"/>'
-    '<circle cx="47" cy="12" r="3" fill="#ff88aa"/>'
-    '<circle cx="36" cy="10" r="2.5" fill="#ffcc66"/>'
-    '<circle cx="44" cy="10" r="2.5" fill="#ff99bb"/>'
-    '<circle cx="33" cy="12" r="1.5" fill="#ffffaa"/>'
-    '<circle cx="40" cy="9" r="1.5" fill="#ffffff"/>'
-    '<circle cx="47" cy="12" r="1.5" fill="#ffffaa"/>'
-    # 目（緑）
-    '<ellipse cx="35" cy="24" rx="2.5" ry="2" fill="#336633"/>'
-    '<ellipse cx="45" cy="24" rx="2.5" ry="2" fill="#336633"/>'
-    '<circle cx="36" cy="23" r="0.8" fill="#fff"/>'
-    '<circle cx="46" cy="23" r="0.8" fill="#fff"/>'
-    # 眉（柔らかい）
-    '<path d="M33 19 Q35 17 37 19" stroke="#668844" stroke-width="1.2" fill="none"/>'
-    '<path d="M43 19 Q45 17 47 19" stroke="#668844" stroke-width="1.2" fill="none"/>'
-    # 口（穏やか）
-    '<path d="M37 29 Q40 32 43 29" stroke="#cc9977" stroke-width="1.3" fill="none" stroke-linecap="round"/>'
+    '<circle cx="32" cy="11" r="3.5" fill="#ff88aa"/>'
+    '<circle cx="39" cy="8" r="3.5" fill="#ffaa44"/>'
+    '<circle cx="46" cy="9" r="3.5" fill="#ff88cc"/>'
+    '<circle cx="53" cy="12" r="3" fill="#ff7799"/>'
+    '<circle cx="32" cy="11" r="2" fill="#ffffaa"/>'
+    '<circle cx="39" cy="8" r="2" fill="#ffffff"/>'
+    '<circle cx="46" cy="9" r="2" fill="#ffeecc"/>'
+    '<circle cx="53" cy="12" r="1.7" fill="#ffddcc"/>'
+    '<ellipse cx="25" cy="17" rx="5" ry="3" fill="#77cc99" opacity="0.6" transform="rotate(-30 25 17)"/>'
+    '<ellipse cx="55" cy="17" rx="5" ry="3" fill="#66bb88" opacity="0.6" transform="rotate(30 55 17)"/>'
+    # 目（大・アクア）
+    '<ellipse cx="33" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="47" cy="23" rx="4.5" ry="5.5" fill="white"/>'
+    '<ellipse cx="33" cy="24" rx="3.5" ry="4.5" fill="#22aacc"/>'
+    '<ellipse cx="47" cy="24" rx="3.5" ry="4.5" fill="#22aacc"/>'
+    '<ellipse cx="33" cy="26" rx="3.5" ry="2" fill="#117799"/>'
+    '<ellipse cx="47" cy="26" rx="3.5" ry="2" fill="#117799"/>'
+    '<ellipse cx="33" cy="24" rx="1.5" ry="2" fill="#040f14"/>'
+    '<ellipse cx="47" cy="24" rx="1.5" ry="2" fill="#040f14"/>'
+    '<circle cx="30.5" cy="21" r="1.8" fill="white"/>'
+    '<circle cx="44.5" cy="21" r="1.8" fill="white"/>'
+    '<path d="M28 19 Q33 15 38 19" stroke="#112233" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 19 Q47 15 52 19" stroke="#112233" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 眉
+    '<path d="M28 14 Q33 11 38 14" stroke="#448866" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    '<path d="M42 14 Q47 11 52 14" stroke="#448866" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 口
+    '<path d="M35 30 Q40 35 45 30" stroke="#cc8877" stroke-width="2" fill="none" stroke-linecap="round"/>'
+    # 頬
+    '<circle cx="27" cy="27" r="4" fill="#88ccff" opacity="0.4"/>'
+    '<circle cx="53" cy="27" r="4" fill="#88ccff" opacity="0.4"/>'
 )
 
 
@@ -513,7 +660,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "アレン",
         "title": "勇者",
         "story": "辺境の村で生まれた若者。剣と盾で世界を守る王道の主人公。バランス型でどんな状況にも冷静に対応できる。",
-        "color": "#cc3333",
+        "color": "#1a4fcc",
         "svg": _ALLEN,
     },
     "liria": {
@@ -521,7 +668,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "リリア",
         "title": "魔法使い",
         "story": "古の魔法書を読み解いた天才少女。知識こそが最強の武器と信じ、言葉の魔法で英知の扉を開く。",
-        "color": "#7744cc",
+        "color": "#7733dd",
         "svg": _LIRIA,
     },
     "gares": {
@@ -529,7 +676,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "ガレス",
         "title": "騎士",
         "story": "王国騎士団の重鎮。重装備の守り手として仲間を守り抜く。不屈の意志と鋼の盾が彼の誇り。",
-        "color": "#7799cc",
+        "color": "#aabbcc",
         "svg": _GARES,
     },
     "shia": {
@@ -537,7 +684,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "シア",
         "title": "盗賊",
         "story": "影に生きる素早き者。正確無比な短剣さばきで難題を切り抜ける。誰よりも鋭く、誰よりも速い。",
-        "color": "#446633",
+        "color": "#3d6e2d",
         "svg": _SHIA,
     },
     "erwin": {
@@ -545,7 +692,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "エルウィン",
         "title": "弓使い",
         "story": "遠距離から冷静に的を射る銀髪の射手。感情を乱さず、どんな難問も精密に攻略する。",
-        "color": "#227766",
+        "color": "#8b6240",
         "svg": _ERWIN,
     },
     "noah": {
@@ -553,7 +700,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "ノア",
         "title": "僧侶",
         "story": "回復と支援の達人。仲間の挫けそうな心を癒し、どんな困難も乗り越えさせる光の体現者。",
-        "color": "#bb9933",
+        "color": "#ffe066",
         "svg": _NOAH,
     },
     "drake": {
@@ -561,7 +708,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "ドラク",
         "title": "ドラゴン戦士",
         "story": "半竜の血を引く孤高の戦士。強靭な鱗と炎の意志で英単語の試練に真正面から挑む。",
-        "color": "#3d8022",
+        "color": "#cc2211",
         "svg": _DRAKE,
     },
     "luna": {
@@ -569,7 +716,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "ルナ",
         "title": "闇魔法使い",
         "story": "謎めいた力を操る月の魔法使い。暗闇から星の言葉を呼び起こし、未知の英知を解き明かす。",
-        "color": "#7733aa",
+        "color": "#7722cc",
         "svg": _LUNA,
     },
     "finn": {
@@ -577,7 +724,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "フィン",
         "title": "吟遊詩人",
         "story": "言葉と音楽で世界を旅する詩人。英語の韻律を奏でながら、言葉の力で敵を魅了し打ち破る。",
-        "color": "#cc6611",
+        "color": "#ff7722",
         "svg": _FINN,
     },
     "sera": {
@@ -585,7 +732,7 @@ CHARACTERS: dict[str, dict] = {
         "name": "セラ",
         "title": "精霊使い",
         "story": "自然と共に生きる精霊の使い手。花と風が語りかける声を英知に変え、世界と調和しながら戦う。",
-        "color": "#4a9944",
+        "color": "#88ccee",
         "svg": _SERA,
     },
 }

@@ -253,16 +253,8 @@ class QuizEngine:
             correct = str(row["meaning_ja"])
 
         # ── 選択肢を組み立てる ──
-        # 中国語モードでは wrong_choice_1~3（日本語固定）を使わず meaning_zh プールから選ぶ
-        wrong_choices = []
-        if self.language != "zh":
-            for col in ["wrong_choice_1", "wrong_choice_2", "wrong_choice_3"]:
-                val = str(row.get(col, "")).strip()
-                if val and val != "nan":
-                    wrong_choices.append(val)
-
-        if len(wrong_choices) < 3:
-            wrong_choices = self._fill_wrong_choices(correct, wrong_choices)
+        # 常に meaning_ja / meaning_zh プールから選ぶ（英語が混入しないよう wrong_choice列は使わない）
+        wrong_choices = self._fill_wrong_choices(correct, [])
 
         # 正解を混ぜてシャッフル
         choices = wrong_choices[:3] + [correct]
@@ -313,7 +305,11 @@ class QuizEngine:
             if len(all_meanings) < 4:
                 all_meanings = self.df["meaning_ja"].dropna().tolist()
         else:
-            all_meanings = self.df["meaning_ja"].dropna().tolist()
+            raw_ja = self.df["meaning_ja"].dropna().tolist()
+            # ASCIIのみの値（英語が混入したデータ）を除外する
+            all_meanings = [m for m in raw_ja if m and m != "nan" and not str(m).encode("ascii", errors="ignore").decode() == str(m)]
+            if len(all_meanings) < 4:
+                all_meanings = raw_ja
         pool = [m for m in all_meanings if m != correct and m not in existing]
         random.shuffle(pool)
 

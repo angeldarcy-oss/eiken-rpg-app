@@ -22,6 +22,20 @@ from core.dungeon_manager import (
     record_clear, update_dungeon_ranking, get_dungeon_ranking,
 )
 
+
+def _get_audio_b64(word: str):
+    try:
+        from gtts import gTTS
+        import io, base64
+        tts = gTTS(text=word, lang="en", slow=True)
+        buf = io.BytesIO()
+        tts.write_to_fp(buf)
+        buf.seek(0)
+        return base64.b64encode(buf.read()).decode()
+    except Exception:
+        return None
+
+
 st.set_page_config(page_title="ダンジョン | 英検Quest", page_icon="🏚️", layout="centered", initial_sidebar_state="expanded")
 
 st.markdown("""<style>
@@ -357,6 +371,28 @@ def render_battle():
         + '⭐' * q.difficulty + bonus_span + '</div>'
         '<div style="font-size:2.8rem;font-weight:700;text-align:center;color:#ffe066;margin-bottom:6px;">'
         + q.word + '</div></div>', unsafe_allow_html=True)
+
+    audio_b64 = _get_audio_b64(q.word)
+    if audio_b64:
+        components.html(
+            '<style>'
+            'html,body{margin:0;padding:2px 0 6px;background:transparent;'
+            'text-align:center;overflow:hidden;}'
+            '.sl{color:#7788bb;cursor:pointer;font-size:.9rem;'
+            "font-family:'Noto Sans JP',Arial,sans-serif;user-select:none;}"
+            '.sl:hover{color:#aabbee;}'
+            '</style>'
+            '<script>'
+            'try{var f=window.frameElement;'
+            'f.style.background="transparent";'
+            'f.setAttribute("allowtransparency","true");}catch(e){}'
+            '</script>'
+            '<audio id="da" src="data:audio/mp3;base64,' + audio_b64 + '"></audio>'
+            "<span class='sl' onclick=\"document.getElementById('da').play()\">"
+            '🔊 ' + q.word +
+            '</span>',
+            height=34, scrolling=False
+        )
 
     # ── 選択肢ボタン ──
     if not st.session_state.dungeon_answered:

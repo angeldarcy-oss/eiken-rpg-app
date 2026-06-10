@@ -3,12 +3,6 @@ from __future__ import annotations
 import streamlit as st
 from core.i18n import t
 
-# Streamlit自動生成ナビを非表示
-HIDE_NAV_CSS = (
-    '<style>[data-testid="stSidebarNav"]{display:none!important;}</style>'
-)
-
-# (file path for st.switch_page, i18n key)
 _NAV_PAGES: list[tuple[str, str]] = [
     ("app.py",               "nav_home"),
     ("pages/01_quest.py",    "nav_quest"),
@@ -25,13 +19,8 @@ _NAV_PAGES: list[tuple[str, str]] = [
 
 
 def render_nav(lang: str = "ja") -> None:
-    """サイドバーナビゲーションを描画する（with st.sidebar: 内で呼ぶこと）。
-    st.button + st.switch_page を使用。stSidebarNav に依存しない。
-    """
-    st.markdown(HIDE_NAV_CSS, unsafe_allow_html=True)
+    """サイドバーナビゲーションリンクを描画する（with st.sidebar: 内で呼ぶこと）。"""
     nav_label = "ページ移動" if lang == "ja" else "頁面導覽"
     st.caption(nav_label)
     for path, key in _NAV_PAGES:
-        btn_key = "nav_" + path.replace("/", "_").replace(".", "_")
-        if st.button(t(key, lang), key=btn_key, use_container_width=True):
-            st.switch_page(path)
+        st.page_link(path, label=t(key, lang))

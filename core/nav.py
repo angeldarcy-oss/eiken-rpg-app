@@ -4,7 +4,7 @@ import streamlit as st
 from core.i18n import t
 
 _NAV_PAGES: list[tuple[str, str]] = [
-    ("app.py",               "nav_home"),
+    ("home.py",              "nav_home"),
     ("pages/01_quest.py",    "nav_quest"),
     ("pages/02_dungeon.py",  "nav_dungeon"),
     ("pages/03_daily.py",    "nav_daily"),

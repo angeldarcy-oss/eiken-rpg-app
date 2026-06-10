@@ -1,6 +1,9 @@
 """core/mobile_css.py — モバイル最適化CSS（全ページ共通）"""
 
 MOBILE_CSS: str = """<style>
+/* デフォルトのStreamlitサイドバーナビを非表示 */
+[data-testid="stSidebarNav"] { display: none !important; }
+
 /* ══════════════════════════════════════════
    英検Quest モバイル最適化 CSS
    対応: スマートフォン 375px〜428px / タブレット〜768px

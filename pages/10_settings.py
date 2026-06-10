@@ -15,8 +15,7 @@ from core.player import PlayerManager, new_player
 from core.i18n import t, grade_label, LANG_OPTIONS
 from core.characters import CHARACTERS, CHARACTER_ORDER, get_character, sidebar_avatar_html
 
-_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
-st.set_page_config(page_title=(t("pt_settings", _page_lang) + " | 英検Quest"), page_icon="⚙️", layout="centered", initial_sidebar_state="expanded")
+
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}

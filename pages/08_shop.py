@@ -27,8 +27,7 @@ from core.nav import render_nav
 from core.gacha import GACHA_TYPES, gacha_pull, rarity_label, rarity_color, gacha_animation_html
 import streamlit.components.v1 as _components
 
-_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
-st.set_page_config(page_title=(t("pt_shop", _page_lang) + " | 英検Quest"), page_icon="🏪", layout="centered", initial_sidebar_state="expanded")
+
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}

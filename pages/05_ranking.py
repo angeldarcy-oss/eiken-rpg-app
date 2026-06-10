@@ -16,8 +16,7 @@ from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html, CHARACTERS
 from core.titles import title_badge_html, _TITLE_MAP as _TITLES_MAP
 
-_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
-st.set_page_config(page_title=(t("pt_ranking", _page_lang) + " | 英検Quest"), page_icon="🏆", layout="centered", initial_sidebar_state="expanded")
+
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}

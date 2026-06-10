@@ -27,13 +27,6 @@ from core.seasonal_events import (
     get_quest_progress, is_quest_complete, is_quest_claimed, claim_quest,
 )
 
-_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
-st.set_page_config(
-    page_title=(t("pt_event", _page_lang) + " | 英検Quest"),
-    page_icon="🎪",
-    layout="centered",
-    initial_sidebar_state="expanded",
-)
 
 # ── ログインチェック ────────────────────────────────────────────
 if "player" not in st.session_state or st.session_state.player is None:

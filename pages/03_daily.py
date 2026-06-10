@@ -148,8 +148,6 @@ def _confetti_component(mega: bool):
 
 
 # ────────────────────────────────────────────────────────────
-_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
-st.set_page_config(page_title=(t("pt_daily", _page_lang) + " | 英検Quest"), page_icon="📅", layout="centered", initial_sidebar_state="expanded")
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}

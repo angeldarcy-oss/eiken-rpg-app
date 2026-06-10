@@ -256,46 +256,66 @@ def render_sidebar():
         st.markdown("---")
         render_nav(lang)
 
-render_sidebar()
+def _home_page():
+    render_sidebar()
+
+    # ─────────────────────────────────────────
+    # ホーム画面
+    # ─────────────────────────────────────────
+    p = st.session_state.player
+    lang = p.get("language", "ja")
+    c = get_character(p.get("character", ""))
+
+    st.markdown(
+        '<div style="font-size:2.5rem;font-weight:700;text-align:center;'
+        'background:linear-gradient(135deg,#ffe066,#ffaa00,#ff6600);'
+        '-webkit-background-clip:text;-webkit-text-fill-color:transparent;'
+        'background-clip:text;margin-bottom:4px;">⚔️ 英検Quest ⚔️</div>'
+        '<div style="text-align:center;color:#888;margin-bottom:24px;">' + t("app_subtitle", lang) + '</div>',
+        unsafe_allow_html=True)
+
+    st.markdown(
+        '<div class="info-card">'
+        '<div style="display:flex;align-items:center;gap:20px;">'
+        '<div style="flex-shrink:0;width:70px;height:88px;">' + c["svg"] + '</div>'
+        '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">'
+        '<b style="color:#ffe066;">' + c["name"] + '</b>（' + c["title"] + '）と共に冒険中！<br>'
+        '⚔️ ' + t("home_welcome", lang) + '<b style="color:#ffe066;">' + p["name"] + '</b>！<br>'
+        + t("level", lang) + ' <b style="color:#fff;">' + str(p["level"]) + '</b> | '
+        + t("home_challenge", lang) + '<b style="color:#fff;">' + grade_label(p["grade_target"], lang) + '</b>' + t("home_challenge_sub", lang) +
+        '</div></div></div>',
+        unsafe_allow_html=True)
+
+    st.markdown(
+        '<div class="info-card">'
+        '<div style="font-size:1.05rem;font-weight:700;color:#ffe066;margin-bottom:10px;">' + t("mission_title", lang) + '</div>'
+        '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">' + t("mission_body", lang) + '</div>'
+        '</div>'
+        '<div class="info-card">'
+        '<div style="font-size:1.05rem;font-weight:700;color:#ffe066;margin-bottom:10px;">' + t("howto_title", lang) + '</div>'
+        '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">' + t("howto_body", lang) + '</div>'
+        '</div>',
+        unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.page_link("pages/01_quest.py", label=t("start_quest", lang), icon="🗡️")
 
 
-# ─────────────────────────────────────────
-# ホーム画面
-# ─────────────────────────────────────────
-p = st.session_state.player
-lang = p.get("language", "ja")
-c = get_character(p.get("character", ""))
-
-st.markdown(
-    '<div style="font-size:2.5rem;font-weight:700;text-align:center;'
-    'background:linear-gradient(135deg,#ffe066,#ffaa00,#ff6600);'
-    '-webkit-background-clip:text;-webkit-text-fill-color:transparent;'
-    'background-clip:text;margin-bottom:4px;">⚔️ 英検Quest ⚔️</div>'
-    '<div style="text-align:center;color:#888;margin-bottom:24px;">' + t("app_subtitle", lang) + '</div>',
-    unsafe_allow_html=True)
-
-st.markdown(
-    '<div class="info-card">'
-    '<div style="display:flex;align-items:center;gap:20px;">'
-    '<div style="flex-shrink:0;width:70px;height:88px;">' + c["svg"] + '</div>'
-    '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">'
-    '<b style="color:#ffe066;">' + c["name"] + '</b>（' + c["title"] + '）と共に冒険中！<br>'
-    '⚔️ ' + t("home_welcome", lang) + '<b style="color:#ffe066;">' + p["name"] + '</b>！<br>'
-    + t("level", lang) + ' <b style="color:#fff;">' + str(p["level"]) + '</b> | '
-    + t("home_challenge", lang) + '<b style="color:#fff;">' + grade_label(p["grade_target"], lang) + '</b>' + t("home_challenge_sub", lang) +
-    '</div></div></div>',
-    unsafe_allow_html=True)
-
-st.markdown(
-    '<div class="info-card">'
-    '<div style="font-size:1.05rem;font-weight:700;color:#ffe066;margin-bottom:10px;">' + t("mission_title", lang) + '</div>'
-    '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">' + t("mission_body", lang) + '</div>'
-    '</div>'
-    '<div class="info-card">'
-    '<div style="font-size:1.05rem;font-weight:700;color:#ffe066;margin-bottom:10px;">' + t("howto_title", lang) + '</div>'
-    '<div style="font-size:.9rem;color:#ccccee;line-height:1.9;">' + t("howto_body", lang) + '</div>'
-    '</div>',
-    unsafe_allow_html=True)
-
-st.markdown("<br>", unsafe_allow_html=True)
-st.page_link("pages/01_quest.py", label=t("start_quest", lang), icon="🗡️")
+_lang = (st.session_state.get("player") or {}).get("language", "ja")
+pg = st.navigation(
+    [
+        st.Page(_home_page,              title="英検Quest",                              default=True),
+        st.Page("pages/01_quest.py",    title=t("pt_quest",    _lang) + " | 英検Quest"),
+        st.Page("pages/02_dungeon.py",  title=t("pt_dungeon",  _lang) + " | 英検Quest"),
+        st.Page("pages/03_daily.py",    title=t("pt_daily",    _lang) + " | 英検Quest"),
+        st.Page("pages/04_wordbook.py", title=t("pt_wordbook", _lang) + " | 英検Quest"),
+        st.Page("pages/05_ranking.py",  title=t("pt_ranking",  _lang) + " | 英検Quest"),
+        st.Page("pages/06_party.py",    title=t("pt_party",    _lang) + " | 英検Quest"),
+        st.Page("pages/07_guild.py",    title=t("pt_guild",    _lang) + " | 英検Quest"),
+        st.Page("pages/08_shop.py",     title=t("pt_shop",     _lang) + " | 英検Quest"),
+        st.Page("pages/09_event.py",    title=t("pt_event",    _lang) + " | 英検Quest"),
+        st.Page("pages/10_settings.py", title=t("pt_settings", _lang) + " | 英検Quest"),
+    ],
+    position="hidden",
+)
+pg.run()

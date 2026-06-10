@@ -1,4 +1,4 @@
-"""pages/11_event.py — 季節イベント画面"""
+"""pages/09_event.py — 季節イベント画面"""
 import sys
 import streamlit as st
 from pathlib import Path
@@ -14,6 +14,7 @@ from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html, CHARACTERS
 from core.mobile_css import MOBILE_CSS
 from core.equipment_bonus import sidebar_bonus_html
+from core.nav import render_nav
 from core.quiz_engine import QuizEngine
 from core.monsters import calc_player_damage
 from core.equipment import ITEMS as _EQUIP_ITEMS
@@ -26,8 +27,9 @@ from core.seasonal_events import (
     get_quest_progress, is_quest_complete, is_quest_claimed, claim_quest,
 )
 
+_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
 st.set_page_config(
-    page_title="季節イベント | 英検Quest",
+    page_title=(t("pt_event", _page_lang) + " | 英検Quest"),
     page_icon="🎪",
     layout="centered",
     initial_sidebar_state="expanded",
@@ -149,6 +151,8 @@ def render_sidebar():
                 '⏳ 残り <b>' + str(remaining) + '</b> 日'
                 + (' ⚠️' if remaining <= 7 else '') + '</div>'
                 '</div>', unsafe_allow_html=True)
+        st.markdown("---")
+        render_nav(lang)
 
 
 render_sidebar()

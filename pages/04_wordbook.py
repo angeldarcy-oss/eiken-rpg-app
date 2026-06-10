@@ -8,13 +8,15 @@ if str(_root) not in sys.path:
 
 from core.mobile_css import MOBILE_CSS
 from core.equipment_bonus import sidebar_bonus_html
+from core.nav import render_nav
 
 from core.save_manager import load_player, save_player, get_user_save_path
 from core.player import PlayerManager
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
 
-st.set_page_config(page_title="単語帳 | 英検Quest", page_icon="📖", layout="centered", initial_sidebar_state="expanded")
+_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
+st.set_page_config(page_title=(t("pt_wordbook", _page_lang) + " | 英検Quest"), page_icon="📖", layout="centered", initial_sidebar_state="expanded")
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
@@ -65,6 +67,7 @@ def render_sidebar():
         if _bhtml:
             st.markdown(_bhtml, unsafe_allow_html=True)
         st.markdown("---")
+        render_nav(lang)
 
 render_sidebar()
 

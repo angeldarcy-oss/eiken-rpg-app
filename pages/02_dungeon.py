@@ -1,4 +1,4 @@
-"""pages/08_dungeon.py — ダンジョン画面"""
+"""pages/02_dungeon.py — ダンジョン画面"""
 import sys
 import time
 import streamlit as st
@@ -11,6 +11,7 @@ if str(_root) not in sys.path:
 
 from core.mobile_css import MOBILE_CSS
 from core.equipment_bonus import sidebar_bonus_html
+from core.nav import render_nav
 
 from core.save_manager import load_player, save_player, update_ranking
 from core.player import PlayerManager, streak_multiplier
@@ -39,7 +40,8 @@ def _get_audio_b64(word: str):
         return None
 
 
-st.set_page_config(page_title="ダンジョン | 英検Quest", page_icon="🏚️", layout="centered", initial_sidebar_state="expanded")
+_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
+st.set_page_config(page_title=(t("pt_dungeon", _page_lang) + " | 英検Quest"), page_icon="🏚️", layout="centered", initial_sidebar_state="expanded")
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
@@ -113,6 +115,8 @@ def render_sidebar():
             '<div style="font-size:.82rem;color:#ccccee;">'
             '🏚️ クリア済み <b style="color:#ffe066;">' + str(clears) + '</b> / 5 ダンジョン'
             '</div>', unsafe_allow_html=True)
+        st.markdown("---")
+        render_nav(lang)
 
 
 render_sidebar()

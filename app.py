@@ -14,6 +14,8 @@ from core.player import PlayerManager, streak_multiplier, STREAK_BONUS_TABLE
 from core.i18n import t, grade_label, LANG_OPTIONS
 from core.characters import CHARACTERS, CHARACTER_ORDER, get_character, sidebar_avatar_html
 from core.daily_quest import get_login_streak
+from core.nav import render_nav, HIDE_NAV_CSS
+from core.equipment_bonus import sidebar_bonus_html
 
 st.set_page_config(page_title="英検Quest", page_icon="⚔️", layout="centered", initial_sidebar_state="expanded")
 
@@ -248,6 +250,11 @@ def render_sidebar():
                 for key in list(st.session_state.keys()):
                     del st.session_state[key]
                 st.rerun()
+        _bhtml = sidebar_bonus_html(p)
+        if _bhtml:
+            st.markdown(_bhtml, unsafe_allow_html=True)
+        st.markdown("---")
+        render_nav(lang)
 
 render_sidebar()
 

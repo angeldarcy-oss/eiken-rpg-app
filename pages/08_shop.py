@@ -1,4 +1,4 @@
-"""pages/09_shop.py — 装備ショップ"""
+"""pages/08_shop.py — 装備ショップ"""
 import sys
 import streamlit as st
 from pathlib import Path
@@ -23,8 +23,10 @@ from core.shop import (
     get_available_exp, get_final_price, is_owned, purchase, get_item_display,
 )
 from core.equipment_bonus import get_bonus_description, sidebar_bonus_html
+from core.nav import render_nav
 
-st.set_page_config(page_title="ショップ | 英検Quest", page_icon="🏪", layout="centered", initial_sidebar_state="expanded")
+_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
+st.set_page_config(page_title=(t("pt_shop", _page_lang) + " | 英検Quest"), page_icon="🏪", layout="centered", initial_sidebar_state="expanded")
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
@@ -92,6 +94,8 @@ def render_sidebar():
             '<div style="font-size:.65rem;color:#888888;margin-top:2px;">'
             '累計 ' + f'{p.get("total_exp_earned", 0):,}' + ' | 使用済 ' + f'{p.get("exp_spent", 0):,}' +
             '</div></div>', unsafe_allow_html=True)
+        st.markdown("---")
+        render_nav(lang)
 
 
 render_sidebar()

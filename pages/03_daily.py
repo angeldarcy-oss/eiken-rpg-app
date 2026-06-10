@@ -23,6 +23,7 @@ from core.daily_quest import (
     equip_item, unequip_slot,
 )
 from core.equipment_bonus import get_all_bonuses, sidebar_bonus_html
+from core.nav import render_nav
 from datetime import date as _date
 
 # ── 効果音生成（stdlib のみ） ────────────────────────────────
@@ -147,7 +148,8 @@ def _confetti_component(mega: bool):
 
 
 # ────────────────────────────────────────────────────────────
-st.set_page_config(page_title="デイリー | 英検Quest", page_icon="📅", layout="centered", initial_sidebar_state="expanded")
+_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
+st.set_page_config(page_title=(t("pt_daily", _page_lang) + " | 英検Quest"), page_icon="📅", layout="centered", initial_sidebar_state="expanded")
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
@@ -249,6 +251,7 @@ def render_sidebar():
         if _bhtml:
             st.markdown(_bhtml, unsafe_allow_html=True)
         st.markdown("---")
+        render_nav(lang)
 
 render_sidebar()
 

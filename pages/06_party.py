@@ -1,10 +1,11 @@
-"""pages/07_party.py — パーティー画面"""
+"""pages/06_party.py — パーティー画面"""
 import sys
 import streamlit as st
 import streamlit.components.v1 as components
 from pathlib import Path
 from core.mobile_css import MOBILE_CSS
 from core.equipment_bonus import sidebar_bonus_html
+from core.nav import render_nav
 
 _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
@@ -22,7 +23,8 @@ from core.party_manager import (
     get_member_player, get_all_parties,
 )
 
-st.set_page_config(page_title="パーティー | 英検Quest", page_icon="⚔️", layout="centered", initial_sidebar_state="expanded")
+_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
+st.set_page_config(page_title=(t("pt_party", _page_lang) + " | 英検Quest"), page_icon="⚔️", layout="centered", initial_sidebar_state="expanded")
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
@@ -88,6 +90,7 @@ def render_sidebar():
         if _bhtml:
             st.markdown(_bhtml, unsafe_allow_html=True)
         st.markdown("---")
+        render_nav(lang)
 
 render_sidebar()
 

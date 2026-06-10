@@ -21,10 +21,12 @@ from core.equipment import ITEMS as _EQUIP_ITEMS, BOSS_RARE_DROPS as _BOSS_RARE_
 from core.pets import get_random_egg, add_egg, update_hatch_gauge, get_pet_exp_bonus, pet_sidebar_html, PET_DEFS as _PET_DEFS
 from core.titles import evaluate_titles, title_badge_html, _TITLE_MAP as _TITLES_MAP
 from core.equipment_bonus import get_all_bonuses, sidebar_bonus_html
+from core.nav import render_nav
 import random
 from datetime import date as _date
 
-st.set_page_config(page_title="クエスト", page_icon="🗡️", layout="centered", initial_sidebar_state="expanded")
+_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
+st.set_page_config(page_title=(t("pt_quest", _page_lang) + " | 英検Quest"), page_icon="🗡️", layout="centered", initial_sidebar_state="expanded")
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}
@@ -273,6 +275,8 @@ def render_sidebar():
                 '</div>'
                 '<div style="font-size:.68rem;color:#cc8899;margin-top:2px;">HP ' + str(_boss_hp) + ' / ' + str(_boss_max) + '</div>'
                 '</div>', unsafe_allow_html=True)
+        st.markdown("---")
+        render_nav(lang)
 
 render_sidebar()
 

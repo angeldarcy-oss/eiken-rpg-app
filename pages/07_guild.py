@@ -1,10 +1,11 @@
-"""pages/10_guild.py — ギルド画面"""
+"""pages/07_guild.py — ギルド画面"""
 import sys
 import streamlit as st
 import streamlit.components.v1 as components
 from pathlib import Path
 from core.mobile_css import MOBILE_CSS
 from core.equipment_bonus import sidebar_bonus_html
+from core.nav import render_nav
 
 _root = Path(__file__).parent.parent
 if str(_root) not in sys.path:
@@ -28,7 +29,8 @@ from core.guild_manager import (
     GUILD_BOSS_DROPS,
 )
 
-st.set_page_config(page_title="ギルド | 英検Quest", page_icon="🏰", layout="centered",
+_page_lang = (st.session_state.get("player") or {}).get("language", "ja")
+st.set_page_config(page_title=(t("pt_guild", _page_lang) + " | 英検Quest"), page_icon="🏰", layout="centered",
                    initial_sidebar_state="expanded")
 
 st.markdown("""<style>
@@ -123,6 +125,8 @@ def render_sidebar():
                     '<div style="font-size:.82rem;color:#ccccee;">🏰 ギルド: <b style="color:#cc88ff;">'
                     + guild.get("icon", "🏰") + ' ' + guild.get("name", "") + '</b></div>',
                     unsafe_allow_html=True)
+        st.markdown("---")
+        render_nav(lang)
 
 
 render_sidebar()

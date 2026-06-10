@@ -279,8 +279,8 @@ def render_item_card(item_id: str, col, key_suffix: str = ""):
 
 
 # ─── カテゴリタブ ──────────────────────────────────────────────────
-ALL_CATS = ["🎰 ガチャ", "すべて", "⚔️ 武器", "🛡️ 防具", "🎩 帽子", "🧥 マント", "📿 ネックレス", "💍 指輪", "🥚 ペットたまご"]
-CAT_KEYS = ["gacha", "all", "weapon", "armor", "hat", "cloak", "necklace", "ring", "egg"]
+ALL_CATS = ["すべて", "🎰 ガチャ", "⚔️ 武器", "🛡️ 防具", "🎩 帽子", "🧥 マント", "📿 ネックレス", "💍 指輪", "🥚 ペットたまご"]
+CAT_KEYS = ["all", "gacha", "weapon", "armor", "hat", "cloak", "necklace", "ring", "egg"]
 
 tabs = st.tabs(ALL_CATS)
 

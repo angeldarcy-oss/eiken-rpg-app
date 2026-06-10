@@ -208,23 +208,20 @@ if not st.session_state.get("_login_streak_updated", False):
     st.session_state["_login_streak_updated"] = True
     if _is_new_login:
         _bonuses = get_all_bonuses(_p_ref)
-        _login_bonus_applied = False
         # ネコペット: 毎日ログインEXP+50
         _cat_exp = _bonuses.get("cat_login_exp", 0)
         if _cat_exp > 0:
             PlayerManager(_p_ref).gain_exp(_cat_exp, streak=0)
             st.session_state["_cat_login_exp_gained"] = _cat_exp
-            _login_bonus_applied = True
         # ユニコーンペット: 1日1回HP全回復（自動）
         if _bonuses.get("unicorn_daily_hp") and _p_ref.get("unicorn_heal_used") != _today_str:
             _p_ref["hp"] = _p_ref.get("hp_max", 100)
             _p_ref["unicorn_heal_used"] = _today_str
             st.session_state["_unicorn_healed_today"] = True
-            _login_bonus_applied = True
-        if _login_bonus_applied:
-            _uname = st.session_state.get("username", "")
-            if _uname:
-                save_player(_p_ref, _uname)
+        # 新規ログイン日なら必ずストリークを保存
+        _uname = st.session_state.get("username", "")
+        if _uname:
+            save_player(_p_ref, _uname)
 
 
 def render_sidebar():

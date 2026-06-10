@@ -24,6 +24,8 @@ from core.shop import (
 )
 from core.equipment_bonus import get_bonus_description, sidebar_bonus_html
 from core.nav import render_nav
+from core.gacha import GACHA_TYPES, gacha_pull, rarity_label, rarity_color, gacha_animation_html
+import streamlit.components.v1 as _components
 
 _page_lang = (st.session_state.get("player") or {}).get("language", "ja")
 st.set_page_config(page_title=(t("pt_shop", _page_lang) + " | 英検Quest"), page_icon="🏪", layout="centered", initial_sidebar_state="expanded")
@@ -277,14 +279,145 @@ def render_item_card(item_id: str, col, key_suffix: str = ""):
 
 
 # ─── カテゴリタブ ──────────────────────────────────────────────────
-ALL_CATS = ["すべて", "⚔️ 武器", "🛡️ 防具", "🎩 帽子", "🧥 マント", "📿 ネックレス", "💍 指輪", "🥚 ペットたまご"]
-CAT_KEYS = ["all", "weapon", "armor", "hat", "cloak", "necklace", "ring", "egg"]
+ALL_CATS = ["🎰 ガチャ", "すべて", "⚔️ 武器", "🛡️ 防具", "🎩 帽子", "🧥 マント", "📿 ネックレス", "💍 指輪", "🥚 ペットたまご"]
+CAT_KEYS = ["gacha", "all", "weapon", "armor", "hat", "cloak", "necklace", "ring", "egg"]
 
 tabs = st.tabs(ALL_CATS)
 
 for tab_i, (tab, cat_key) in enumerate(zip(tabs, CAT_KEYS)):
     with tab:
-        if cat_key == "all":
+        if cat_key == "gacha":
+            # ─── ガチャ演出エリア ──────────────────────────────────────
+            _gr = st.session_state.get("gacha_result")
+            if _gr:
+                _gtype_info = GACHA_TYPES[st.session_state.get("gacha_type", "normal")]
+                _meta = _EQUIP_ITEMS.get(_gr["item_id"])
+                if _meta:
+                    _icon = _meta["icon"]
+                    _name = _meta["name"]
+                else:
+                    # ペットたまご
+                    _pet_key = _gr["item_id"][4:] if _gr["item_id"].startswith("egg_") else ""
+                    _pet_def = PET_DEFS.get(_pet_key, {})
+                    _icon = _pet_def.get("emoji", "🥚")
+                    _name = _pet_def.get("egg_name", "ペットたまご")
+                _components.html(
+                    gacha_animation_html(
+                        _icon, _name, _gr["rarity"],
+                        _gtype_info["ball_top"], _gtype_info["ball_bot"],
+                    ),
+                    height=280,
+                )
+                if _gr.get("duplicate"):
+                    st.warning("⚠️ すでに所持中のアイテムでした！（インベントリには追加されません）")
+                _close_cols = st.columns([1, 2, 1])
+                with _close_cols[1]:
+                    if st.button("✨ 閉じる", key="gacha_close", use_container_width=True):
+                        st.session_state.gacha_result = None
+                        st.session_state.gacha_type = None
+                        st.rerun()
+                st.markdown("---")
+
+            # ─── ガチャ機カード ────────────────────────────────────────
+            st.markdown(
+                '<div style="font-size:1.5rem;font-weight:700;color:#ffe066;'
+                'text-align:center;margin-bottom:4px;">🎰 ガチャ</div>'
+                '<div style="font-size:.82rem;color:#888;text-align:center;'
+                'margin-bottom:20px;">EXPを使ってランダムでアイテムをゲット！</div>',
+                unsafe_allow_html=True)
+
+            _gcols = st.columns(3)
+            for _gi, (_gkey, _ginfo) in enumerate(GACHA_TYPES.items()):
+                _gcost = _ginfo["cost"]
+                _gname = _ginfo["name"] if lang == "ja" else _ginfo["name_zh"]
+                _gdesc = _ginfo["desc"] if lang == "ja" else _ginfo["desc_zh"]
+                _can_roll = available >= _gcost
+                with _gcols[_gi]:
+                    # ガチャボール SVG
+                    _btop = _ginfo["ball_top"]
+                    _bbot = _ginfo["ball_bot"]
+                    _ball_svg = (
+                        f'<svg viewBox="0 0 100 100" width="64" height="64">'
+                        f'<defs><radialGradient id="sg{_gi}" cx="38%" cy="32%" r="55%">'
+                        f'<stop offset="0%" stop-color="#fff" stop-opacity=".45"/>'
+                        f'<stop offset="100%" stop-color="#000" stop-opacity="0"/>'
+                        f'</radialGradient></defs>'
+                        f'<ellipse cx="50" cy="93" rx="26" ry="5" fill="#000" opacity=".25"/>'
+                        f'<circle cx="50" cy="48" r="44" fill="{_bbot}"/>'
+                        f'<path d="M6,48 A44,44 0 0,1 94,48 Z" fill="{_btop}"/>'
+                        f'<circle cx="50" cy="48" r="44" fill="url(#sg{_gi})"/>'
+                        f'<rect x="5" y="44" width="90" height="8" fill="#fff" rx="4" opacity=".75"/>'
+                        f'<circle cx="50" cy="48" r="44" fill="none" stroke="#555" stroke-width="1.5"/>'
+                        f'</svg>'
+                    )
+                    # レアリティ表 HTML
+                    _rates_html = "".join(
+                        f'<span style="color:{clr};font-size:.58rem;margin-right:6px;">'
+                        f'{lbl} {w}%</span>'
+                        for star, w, lbl, clr in
+                        [(1,60,"★1","#888"),(2,30,"★2","#4499ff"),(3,8,"★3","#cc44ff"),(4,2,"★4","#ffaa00")]
+                    )
+                    _bg = ("linear-gradient(135deg,#1a1500,#2a2200)" if _gkey == "premium"
+                           else "linear-gradient(135deg,#1a0a2a,#2a1040)" if _gkey == "rare"
+                           else "linear-gradient(135deg,#0a1a2a,#102038)")
+                    _border = ("#ffaa00" if _gkey == "premium"
+                               else "#aa44ff" if _gkey == "rare"
+                               else "#4488cc")
+                    st.markdown(
+                        f'<div style="background:{_bg};border:2px solid {_border};'
+                        f'border-radius:14px;padding:16px 10px;text-align:center;margin-bottom:8px;">'
+                        f'<div style="margin-bottom:8px;">{_ball_svg}</div>'
+                        f'<div style="font-size:.95rem;font-weight:700;color:#ffe066;'
+                        f'margin-bottom:4px;">{_gname}</div>'
+                        f'<div style="font-size:.72rem;color:#aaaacc;margin-bottom:10px;'
+                        f'min-height:32px;">{_gdesc}</div>'
+                        f'<div style="margin-bottom:10px;">{_rates_html}</div>'
+                        f'<div style="font-size:1.1rem;font-weight:700;color:#ffe066;">'
+                        f'💰 {_gcost:,} EXP</div>'
+                        f'</div>',
+                        unsafe_allow_html=True)
+                    if not _can_roll:
+                        st.button(
+                            f"💰 EXP不足",
+                            key=f"gacha_{_gkey}",
+                            disabled=True, use_container_width=True)
+                    else:
+                        if st.button(
+                            f"🎰 ガチャを引く",
+                            key=f"gacha_{_gkey}",
+                            use_container_width=True, type="primary"):
+                            _result = gacha_pull(p, _gkey)
+                            if _result:
+                                from core.titles import evaluate_titles as _et
+                                _et(p)
+                                save_player(p, username)
+                                update_ranking(p, username)
+                                st.session_state.gacha_result = _result
+                                st.session_state.gacha_type = _gkey
+                                st.rerun()
+
+            # ガチャ排出率説明
+            st.markdown("<br>", unsafe_allow_html=True)
+            with st.expander("📊 排出率について"):
+                cols4 = st.columns(4)
+                rate_info = [
+                    ("★1 コモン",       "60%", "#888888"),
+                    ("★2 レア",         "30%", "#4499ff"),
+                    ("★3 スーパーレア", " 8%", "#cc44ff"),
+                    ("★4 ウルトラレア", " 2%", "#ffaa00"),
+                ]
+                for _col, (_rl, _rp, _rc) in zip(cols4, rate_info):
+                    with _col:
+                        st.markdown(
+                            f'<div style="text-align:center;padding:10px 4px;'
+                            f'background:#1a1a2e;border:1px solid {_rc};'
+                            f'border-radius:8px;">'
+                            f'<div style="font-size:.82rem;font-weight:700;color:{_rc};">{_rl}</div>'
+                            f'<div style="font-size:1.1rem;font-weight:700;color:#ffe066;">{_rp}</div>'
+                            f'</div>',
+                            unsafe_allow_html=True)
+
+        elif cat_key == "all":
             # ─ すべてタブ：セール → レア入荷 → 通常の順に表示
             sections = [
                 ("🔥 週替わりセール", [i for i in _sale_ids]),

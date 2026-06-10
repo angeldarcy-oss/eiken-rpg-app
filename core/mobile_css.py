@@ -1,8 +1,8 @@
 """core/mobile_css.py — モバイル最適化CSS（全ページ共通）"""
 
 MOBILE_CSS: str = """<style>
-/* デフォルトのStreamlitサイドバーナビを非表示 */
-[data-testid="stSidebarNav"] { display: none !important; }
+/* Streamlit自動生成のページリストのみ非表示（st.page_link は残す） */
+[data-testid="stSidebarNav"] > ul { display: none !important; }
 
 /* ══════════════════════════════════════════
    英検Quest モバイル最適化 CSS

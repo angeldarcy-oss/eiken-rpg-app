@@ -4,7 +4,7 @@ import streamlit as st
 from core.i18n import t
 
 HIDE_NAV_CSS = (
-    '<style>[data-testid="stSidebarNav"]{display:none!important;}</style>'
+    '<style>[data-testid="stSidebarNav"]>ul{display:none!important;}</style>'
 )
 
 _NAV_PAGES: list[tuple[str, str]] = [

@@ -188,15 +188,8 @@ def claim_rewards(code: str, username: str) -> list[str]:
 
 
 def get_member_player(username: str) -> dict | None:
-    from core.save_manager import get_user_save_path
-    p = get_user_save_path(username)
-    if not p.exists():
-        return None
-    try:
-        with open(p, encoding="utf-8") as f:
-            return json.load(f).get("player")
-    except Exception:
-        return None
+    from core.save_manager import load_player_if_exists
+    return load_player_if_exists(username)
 
 
 def get_all_parties() -> list[dict]:

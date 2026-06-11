@@ -12,7 +12,7 @@ if str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
 import json
-from core.save_manager import load_player, save_player, get_user_save_path
+from core.save_manager import load_player, save_player, load_weak_words
 from core.player import PlayerManager
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
@@ -256,13 +256,7 @@ username = st.session_state.get("username", "")
 # ─── 苦手単語数を取得してクエスト目標を調整 ────────────────
 _weak_count: int | None = None
 if username:
-    _sp = get_user_save_path(username)
-    if _sp.exists():
-        try:
-            with open(_sp, encoding="utf-8") as _f:
-                _weak_count = len(json.load(_f).get("weak_words", []))
-        except Exception:
-            pass
+    _weak_count = len(load_weak_words(username))
 
 # ─── 新規クリア検出 ─────────────────────────────────────────
 quests = get_or_reset_daily_quests(p, weak_count=_weak_count)

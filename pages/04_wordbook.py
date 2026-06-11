@@ -10,7 +10,7 @@ from core.mobile_css import MOBILE_CSS
 from core.equipment_bonus import sidebar_bonus_html
 from core.nav import render_nav
 
-from core.save_manager import load_player, save_player, get_user_save_path
+from core.save_manager import load_player, save_player, load_weak_words
 from core.player import PlayerManager
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
@@ -87,14 +87,7 @@ import json
 weak_words = []
 username = st.session_state.get("username", "")
 if username:
-    save_path = get_user_save_path(username)
-    if save_path.exists():
-        try:
-            with open(save_path, encoding="utf-8") as f:
-                data = json.load(f)
-            weak_words = data.get("weak_words", [])
-        except Exception:
-            weak_words = []
+    weak_words = load_weak_words(username)
 
 session_weak = []
 if "engine" in st.session_state and st.session_state.engine is not None:

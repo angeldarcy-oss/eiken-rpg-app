@@ -906,6 +906,8 @@ if not st.session_state.answered:
                 else:
                     apply_wrong(result)
                     st.session_state.play_sound = "wrong"
+                # 途中でページを閉じてもEXPが消えないよう毎回保存する
+                save_player(st.session_state.player, st.session_state.get("username", ""))
                 st.rerun()
 
 if st.session_state.answered and st.session_state.last_result:

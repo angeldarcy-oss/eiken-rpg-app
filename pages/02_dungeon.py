@@ -424,6 +424,8 @@ def render_battle():
                         _on_correct(result, q)
                     else:
                         _on_wrong(result)
+                    # 途中でページを閉じてもEXPが消えないよう毎回保存する
+                    save_player(st.session_state.player, st.session_state.get("username", ""))
                     st.rerun()
 
     # ── 結果表示 ──

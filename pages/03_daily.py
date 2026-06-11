@@ -13,6 +13,7 @@ if str(_root) not in sys.path:
 
 import json
 from core.save_manager import load_player, save_player, load_weak_words
+from core.sound import render_sound_bootstrap, play_js
 from core.player import PlayerManager
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
@@ -59,13 +60,15 @@ _MEGA_WAV = _make_wav_b64([
 ], vol=0.33)
 
 
+_DAILY_SOUNDS = {
+    "daily_quest": _QUEST_WAV,
+    "daily_mega": _MEGA_WAV,
+}
+
+
 def _sound_script(b64: str) -> str:
-    return (
-        '<script>(function(){'
-        'var a=new Audio("data:audio/wav;base64,' + b64 + '");'
-        'a.volume=0.85;var p=a.play();if(p)p.catch(function(){});'
-        '})();</script>'
-    )
+    name = "daily_mega" if b64 is _MEGA_WAV else "daily_quest"
+    return play_js(name, b64, volume=0.85)
 
 
 def _confetti_component(mega: bool):
@@ -250,11 +253,14 @@ def render_sidebar():
 
 render_sidebar()
 
+# 効果音を親ページに登録（最初のタップでモバイルの再生制限を解除）
+render_sound_bootstrap(_DAILY_SOUNDS)
+
 p = st.session_state.player
 username = st.session_state.get("username", "")
 
 # ─── 苦手単語数を取得してクエスト目標を調整 ────────────────
-_weak_count: int | None = None
+_weak_count = None  # int | None（Python 3.9でも動くよう実行時評価される注釈は避ける）
 if username:
     _weak_count = len(load_weak_words(username))
 

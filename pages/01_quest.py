@@ -13,6 +13,7 @@ from core.quiz_engine import QuizEngine, Question, QuizResult
 from core.ai_tutor import get_explanation
 from core.player import PlayerManager, streak_multiplier
 from core.save_manager import load_player, save_player, append_history, update_ranking
+from core.sound import render_sound_bootstrap, play_sound
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
 from core.daily_quest import get_or_reset_daily_quests, update_quest_progress, QUEST_DEFS as _QUEST_DEFS
@@ -100,28 +101,17 @@ _BOSS_WAV = _make_wav_b64([
     (1046.50, 0.09), (1318.51, 0.09), (1567.98, 0.60),
 ], vol=0.30)
 
+_SOUNDS = {
+    "correct": _CORRECT_WAV,
+    "wrong": _WRONG_WAV,
+    "boss_victory": _BOSS_WAV,
+}
+
 
 def _play_sound(sound_type: str):
-    """WAV データを data URI として iframe 内で再生する。"""
-    if sound_type == "boss_victory":
-        b64 = _BOSS_WAV
-    elif sound_type == "correct":
-        b64 = _CORRECT_WAV
-    else:
-        b64 = _WRONG_WAV
-    # Web Audio API（AudioContext）は iframe + Streamlit rerun 後に
-    # suspended になる問題があるため、new Audio() を使う。
-    # height=1 で iframe を確実にレンダリングさせる。
-    components.html(
-        '<script>'
-        '(function(){'
-        'var a=new Audio("data:audio/wav;base64,' + b64 + '");'
-        'a.volume=0.65;'
-        'var p=a.play();'
-        'if(p!==undefined){p.catch(function(){});}'
-        '})();'
-        '</script>',
-        height=1, scrolling=False)
+    """効果音を再生する（モバイル対応の仕組みは core/sound.py 参照）。"""
+    key = sound_type if sound_type in _SOUNDS else "wrong"
+    play_sound(key, _SOUNDS[key], volume=0.65)
 
 
 def _get_audio_b64(word):
@@ -733,6 +723,9 @@ def render_monster():
 
 
 lang = st.session_state.player.get("language", "ja")
+
+# 効果音を親ページに登録（最初のタップでモバイルの再生制限を解除）
+render_sound_bootstrap(_SOUNDS)
 
 if st.session_state.quest_finished:
     engine = st.session_state.engine

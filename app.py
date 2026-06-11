@@ -195,6 +195,7 @@ pg = st.navigation(
         st.Page("pages/03_daily.py",    title=t("pt_daily",    _lang) + " | 英検Quest"),
         st.Page("pages/04_wordbook.py", title=t("pt_wordbook", _lang) + " | 英検Quest"),
         st.Page("pages/05_ranking.py",  title=t("pt_ranking",  _lang) + " | 英検Quest"),
+        st.Page("pages/11_progress.py", title=t("pt_progress", _lang) + " | 英検Quest"),
         st.Page("pages/06_party.py",    title=t("pt_party",    _lang) + " | 英検Quest"),
         st.Page("pages/07_guild.py",    title=t("pt_guild",    _lang) + " | 英検Quest"),
         st.Page("pages/08_shop.py",     title=t("pt_shop",     _lang) + " | 英検Quest"),

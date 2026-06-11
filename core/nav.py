@@ -10,6 +10,7 @@ _NAV_PAGES: list[tuple[str, str]] = [
     ("pages/03_daily.py",    "nav_daily"),
     ("pages/04_wordbook.py", "nav_wordbook"),
     ("pages/05_ranking.py",  "nav_ranking"),
+    ("pages/11_progress.py", "nav_progress"),
     ("pages/06_party.py",    "nav_party"),
     ("pages/07_guild.py",    "nav_guild"),
     ("pages/08_shop.py",     "nav_shop"),

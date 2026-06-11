@@ -392,3 +392,128 @@ grade_4_0390,bread,パン,麪包,n,I like eating bread.,私はパンが好きで
 grade_4_0391,cake,ケーキ,蛋糕,n,I like eating cake.,私はケーキが好きです。,我喜歡蛋糕。,,,1
 grade_4_0392,bridge,橋,橋,n,I like crossing the bridge.,私は橋を渡るのが好きです。,我喜歡過橋。,,,2
 grade_4_0393,road,道路,道路,n,I like driving on the road.,私は道路を運転するのが好きです。,我喜歡在路上開車。,,,2
+grade_4_0394,begin,始める,開始,v,School begins at eight.,学校は8時に始まります。,學校八點開始。,ビギナー＝始めたばかりの人,初學者＝剛開始的人,2
+grade_4_0395,bring,持ってくる,帶來,v,Please bring your lunch.,お弁当を持ってきてください。,請帶你的午餐來。,,,2
+grade_4_0396,borrow,借りる,借入,v,Can I borrow your pen?,ペンを借りてもいいですか。,我可以借你的筆嗎？,図書館で本をborrow,在圖書館borrow書,2
+grade_4_0397,build,建てる,建造,v,They build a new house.,彼らは新しい家を建てます。,他們蓋新房子。,ビルを建てる,蓋大樓,2
+grade_4_0398,buy,買う,買,v,I buy milk at the store.,私は店で牛乳を買います。,我在商店買牛奶。,,,1
+grade_4_0399,call,電話する・呼ぶ,打電話、叫,v,Please call me tonight.,今夜電話してください。,今晚請打電話給我。,,,1
+grade_4_0400,carry,運ぶ,搬運,v,He carries a big bag.,彼は大きなかばんを運びます。,他搬著一個大包包。,キャリーバッグは運ぶかばん,行李箱就是用來搬運的包,2
+grade_4_0401,catch,つかまえる,抓住,v,I catch the ball.,私はボールをつかまえます。,我接住球。,キャッチボール,接球遊戲,1
+grade_4_0402,change,変える,改變,v,Let's change the plan.,計画を変えましょう。,我們改變計畫吧。,チェンジ！交代の合図,Change！交換的信號,2
+grade_4_0403,check,確認する,檢查,v,Check your answers.,答えを確認しなさい。,檢查你的答案。,テストのチェック,檢查考卷,2
+grade_4_0404,choose,選ぶ,選擇,v,Choose one card.,カードを1枚選びなさい。,選一張卡片。,,,2
+grade_4_0405,climb,登る,爬,v,We climb the mountain.,私たちは山に登ります。,我們爬山。,クライミングは登るスポーツ,攀岩就是爬的運動,2
+grade_4_0406,come,来る,來,v,Come to my house.,私の家に来てください。,來我家吧。,,,1
+grade_4_0407,cook,料理する,做菜,v,My father cooks dinner.,父は夕食を作ります。,我爸爸做晚餐。,コックさんは料理する人,廚師就是做菜的人,1
+grade_4_0408,cut,切る,切,v,Cut the paper with scissors.,はさみで紙を切りなさい。,用剪刀剪紙。,カッターで切る,用美工刀切,1
+grade_4_0409,enjoy,楽しむ,享受,v,I enjoy playing soccer.,私はサッカーを楽しみます。,我喜歡踢足球。,エンジョイ！楽しもう,Enjoy！盡情享受,1
+grade_4_0410,feel,感じる,感覺,v,I feel happy today.,今日は幸せに感じます。,我今天覺得很開心。,フィーリングが合う,感覺很合得來,2
+grade_4_0411,find,見つける,找到,v,I can't find my key.,かぎが見つかりません。,我找不到我的鑰匙。,,,1
+grade_4_0412,finish,終える,完成,v,Finish your homework first.,まず宿題を終えなさい。,先完成你的作業。,フィニッシュ！ゴールの瞬間,Finish！到達終點的瞬間,1
+grade_4_0413,fly,飛ぶ,飛,v,Birds fly in the sky.,鳥は空を飛びます。,鳥在天空飛。,フライトは飛行機の旅,航班就是飛機之旅,1
+grade_4_0414,forget,忘れる,忘記,v,Don't forget your umbrella.,かさを忘れないで。,別忘了你的雨傘。,,,2
+grade_4_0415,get,手に入れる,得到,v,I get a letter every week.,私は毎週手紙をもらいます。,我每週收到一封信。,ゲットだぜ！,Get到了！,1
+grade_4_0416,give,あげる,給,v,I give him a present.,私は彼にプレゼントをあげます。,我送他禮物。,ギブアンドテイク,施與受,1
+grade_4_0417,grow,育つ・育てる,成長、種植,v,Flowers grow in spring.,花は春に育ちます。,花在春天生長。,,,2
+grade_4_0418,hear,聞こえる,聽到,v,I hear a strange sound.,変な音が聞こえます。,我聽到奇怪的聲音。,耳（ear）が入っている,裡面有ear（耳朵）,1
+grade_4_0419,hold,持つ・にぎる,拿著,v,Hold my hand.,私の手をにぎって。,牽著我的手。,ホールド＝しっかり持つ,Hold＝緊緊抓住,2
+grade_4_0420,invite,招待する,邀請,v,I invite my friends to the party.,私は友達をパーティーに招待します。,我邀請朋友來派對。,招待状はインビテーション,邀請函就是invitation,2
+grade_4_0421,join,参加する,參加,v,Join our team!,私たちのチームに参加して！,加入我們的隊伍吧！,ジョイントは「つなぐ」,Join就是連在一起,2
+grade_4_0422,know,知っている,知道,v,I know his name.,私は彼の名前を知っています。,我知道他的名字。,,,1
+grade_4_0423,leave,出発する・去る,離開,v,The train leaves at nine.,電車は9時に出発します。,火車九點出發。,,,2
+grade_4_0424,live,住む,住,v,I live in Tokyo.,私は東京に住んでいます。,我住在東京。,ライブは「生」の意味も,Live也有「現場直播」的意思,1
+grade_4_0425,make,作る,做,v,Let's make a cake.,ケーキを作りましょう。,我們來做蛋糕吧。,,,1
+grade_4_0426,meet,会う,見面,v,Nice to meet you.,はじめまして。,很高興認識你。,ミーティングは会う集まり,Meeting就是見面的聚會,1
+grade_4_0427,move,動く・引っこす,移動、搬家,v,Don't move!,動かないで！,不要動！,ムービーは動く絵,Movie就是會動的畫,2
+grade_4_0428,need,必要とする,需要,v,I need your help.,あなたの助けが必要です。,我需要你的幫助。,,,2
+grade_4_0429,paint,ぬる・描く,畫、塗,v,We paint the wall white.,私たちはかべを白くぬります。,我們把牆漆成白色。,ペンキはpaintから,油漆就是來自paint,1
+grade_4_0430,pay,支払う,付錢,v,I pay 500 yen for lunch.,昼食に500円払います。,我付500日圓買午餐。,ペイペイで支払う,用支付工具pay錢,2
+grade_4_0431,put,置く,放,v,Put the book on the desk.,本を机の上に置きなさい。,把書放在桌上。,,,1
+grade_4_0432,remember,覚えている,記得,v,I remember her birthday.,彼女の誕生日を覚えています。,我記得她的生日。,forgetの反対,forget的相反,2
+grade_4_0433,return,帰る・返す,回來、歸還,v,Return the book to the library.,本を図書館に返しなさい。,把書還給圖書館。,リターン＝もどる,Return＝返回,2
+grade_4_0434,say,言う,說,v,What did you say?,何と言いましたか。,你說了什麼？,,,1
+grade_4_0435,see,見る・見える,看見,v,I see a rainbow.,にじが見えます。,我看見彩虹。,,,1
+grade_4_0436,sell,売る,賣,v,They sell fruit here.,ここでは果物を売っています。,這裡賣水果。,buyの反対,buy的相反,2
+grade_4_0437,show,見せる,給看,v,Show me your notebook.,ノートを見せてください。,給我看你的筆記本。,ショーは見せる催し,Show就是表演給人看,1
+grade_4_0438,start,始める・出発する,開始,v,The game starts at noon.,試合は正午に始まります。,比賽中午開始。,スタートライン,起跑線,1
+grade_4_0439,stay,とどまる・滞在する,停留,v,"Stay here, please.",ここにいてください。,請待在這裡。,ホームステイ,寄宿家庭homestay,2
+grade_4_0440,stop,止まる・やめる,停止,v,Stop the car here.,ここで車を止めて。,在這裡停車。,ストップ！,Stop！,1
+grade_4_0441,study,勉強する,學習,v,I study English every day.,私は毎日英語を勉強します。,我每天學英文。,,,1
+grade_4_0442,take,取る・連れていく,拿、帶,v,Take an umbrella with you.,かさを持っていきなさい。,帶把傘吧。,テイクアウト,外帶takeout,1
+grade_4_0443,teach,教える,教,v,She teaches music.,彼女は音楽を教えています。,她教音樂。,ティーチャーは教える人,Teacher就是教書的人,1
+grade_4_0444,tell,伝える・話す,告訴,v,Tell me the story.,その話を聞かせて。,告訴我那個故事。,,,1
+grade_4_0445,use,使う,使用,v,Can I use your phone?,電話を使ってもいいですか。,我可以用你的電話嗎？,ユーザーは使う人,User就是使用的人,1
+grade_4_0446,visit,訪れる,拜訪,v,We visit our grandmother.,私たちは祖母を訪ねます。,我們去看奶奶。,ビジターは訪問者,Visitor就是訪客,2
+grade_4_0447,want,ほしい,想要,v,I want a new bike.,新しい自転車がほしいです。,我想要一輛新腳踏車。,,,1
+grade_4_0448,wash,洗う,洗,v,Wash your hands.,手を洗いなさい。,洗手。,ウォッシュレット,沖洗器,1
+grade_4_0449,wear,着る・身につける,穿、戴,v,She wears a red dress.,彼女は赤いドレスを着ています。,她穿著紅色洋裝。,,,2
+grade_4_0450,worry,心配する,擔心,v,Don't worry about it.,心配しないで。,別擔心。,ドンマイ＝Don't worry,沒關係＝Don't worry,2
+grade_4_0451,morning,朝,早上,n,I run every morning.,私は毎朝走ります。,我每天早上跑步。,グッドモーニング,早安Good morning,1
+grade_4_0452,afternoon,午後,下午,n,See you this afternoon.,また今日の午後に。,今天下午見。,noon（正午）のafter（後）,Noon（中午）的after（之後）,1
+grade_4_0453,evening,夕方,傍晚,n,I watch TV in the evening.,私は夕方にテレビを見ます。,我傍晚看電視。,,,1
+grade_4_0454,week,週,星期,n,See you next week.,また来週。,下週見。,ウィークリーは週刊,Weekly就是每週的,1
+grade_4_0455,weekend,週末,週末,n,What do you do on weekends?,週末は何をしますか。,你週末做什麼？,weekのend（終わり）,Week的end（結尾）,1
+grade_4_0456,breakfast,朝食,早餐,n,I eat breakfast at seven.,私は7時に朝食を食べます。,我七點吃早餐。,断食（fast）をbreak（破る）,打破（break）禁食（fast）,1
+grade_4_0457,lunch,昼食,午餐,n,Let's have lunch together.,一緒に昼食を食べましょう。,我們一起吃午餐吧。,ランチタイム,午餐時間,1
+grade_4_0458,dinner,夕食,晚餐,n,Dinner is ready.,夕食ができましたよ。,晚餐準備好了。,ディナーは豪華な夕食,Dinner是豐盛的晚餐,1
+grade_4_0459,homework,宿題,作業,n,I have a lot of homework.,宿題がたくさんあります。,我有很多作業。,home（家）でするwork（仕事）,在home（家）做的work（工作）,1
+grade_4_0460,test,テスト・試験,考試,n,We have a math test today.,今日は数学のテストがあります。,我們今天有數學考試。,,,1
+grade_4_0461,money,お金,錢,n,I don't have much money.,あまりお金を持っていません。,我沒有很多錢。,マネーゲーム,金錢遊戲,1
+grade_4_0462,present,プレゼント・贈り物,禮物,n,This present is for you.,このプレゼントはあなたへです。,這個禮物是給你的。,,,1
+grade_4_0463,ticket,切符・チケット,票,n,I have two tickets for the movie.,映画のチケットを2枚持っています。,我有兩張電影票。,,,1
+grade_4_0464,umbrella,かさ,雨傘,n,Take your umbrella.,かさを持っていきなさい。,帶上你的雨傘。,アンブレラ,雨傘umbrella,1
+grade_4_0465,clock,時計,時鐘,n,The clock on the wall is old.,かべの時計は古いです。,牆上的時鐘很舊。,かべかけはclock、うで時計はwatch,掛鐘是clock，手錶是watch,1
+grade_4_0466,dictionary,辞書,字典,n,Use a dictionary.,辞書を使いなさい。,用字典。,ディクショナリー,字典dictionary,2
+grade_4_0467,notebook,ノート,筆記本,n,Write it in your notebook.,ノートに書きなさい。,寫在筆記本上。,note（メモ）のbook（本）,記事的book（本子）,1
+grade_4_0468,map,地図,地圖,n,Look at the map.,地図を見て。,看地圖。,マップアプリ,地圖APP,1
+grade_4_0469,key,かぎ,鑰匙,n,Where is my key?,私のかぎはどこですか。,我的鑰匙在哪裡？,キーホルダー,鑰匙圈,1
+grade_4_0470,doctor,医者,醫生,n,My dream is to be a doctor.,私の夢は医者になることです。,我的夢想是當醫生。,ドクター,醫生doctor,1
+grade_4_0471,nurse,看護師,護理師,n,The nurse is very kind.,その看護師はとても親切です。,那位護理師很親切。,ナース,護士nurse,1
+grade_4_0472,zoo,動物園,動物園,n,Let's go to the zoo.,動物園に行きましょう。,我們去動物園吧。,,,1
+grade_4_0473,supermarket,スーパーマーケット,超市,n,Mom is at the supermarket.,お母さんはスーパーにいます。,媽媽在超市。,super（超）なmarket（市場）,Super（超級）的market（市場）,1
+grade_4_0474,street,通り,街道,n,The street is very busy.,その通りはとてもにぎやかです。,那條街很熱鬧。,ストリートダンス,街舞street dance,1
+grade_4_0475,lion,ライオン,獅子,n,The lion is the king of animals.,ライオンは動物の王様です。,獅子是萬獸之王。,,,1
+grade_4_0476,elephant,ゾウ,大象,n,The elephant has a long nose.,ゾウは鼻が長いです。,大象的鼻子很長。,,,1
+grade_4_0477,monkey,サル,猴子,n,Monkeys like bananas.,サルはバナナが好きです。,猴子喜歡香蕉。,,,1
+grade_4_0478,bear,クマ,熊,n,A bear lives in the forest.,クマは森に住んでいます。,熊住在森林裡。,テディベア,泰迪熊Teddy bear,1
+grade_4_0479,rabbit,ウサギ,兔子,n,The rabbit has long ears.,ウサギは耳が長いです。,兔子的耳朵很長。,,,1
+grade_4_0480,strawberry,イチゴ,草莓,n,I like strawberry cake.,私はイチゴケーキが好きです。,我喜歡草莓蛋糕。,,,1
+grade_4_0481,potato,ジャガイモ,馬鈴薯,n,French fries are made from potatoes.,フライドポテトはジャガイモから作られます。,薯條是馬鈴薯做的。,ポテトチップス,洋芋片,1
+grade_4_0482,tomato,トマト,番茄,n,This tomato is fresh.,このトマトは新鮮です。,這個番茄很新鮮。,,,1
+grade_4_0483,pizza,ピザ,披薩,n,We order pizza on Friday.,金曜日にピザを注文します。,我們星期五訂披薩。,,,1
+grade_4_0484,sandwich,サンドイッチ,三明治,n,I make a sandwich for lunch.,昼食にサンドイッチを作ります。,我做三明治當午餐。,,,1
+grade_4_0485,chocolate,チョコレート,巧克力,n,She gives me chocolate.,彼女は私にチョコレートをくれます。,她給我巧克力。,,,1
+grade_4_0486,grandfather,祖父,爺爺、外公,n,My grandfather is 80 years old.,祖父は80歳です。,我爺爺80歲。,grand（大きい）father,Grand（大）的father,1
+grade_4_0487,grandmother,祖母,奶奶、外婆,n,My grandmother makes good cookies.,祖母はおいしいクッキーを作ります。,我奶奶做的餅乾很好吃。,grand（大きい）mother,Grand（大）的mother,1
+grade_4_0488,uncle,おじ,叔叔、伯伯,n,My uncle lives in Osaka.,おじは大阪に住んでいます。,我叔叔住在大阪。,アンクル,叔叔uncle,2
+grade_4_0489,aunt,おば,阿姨、姑姑,n,My aunt is a teacher.,おばは教師です。,我阿姨是老師。,,,2
+grade_4_0490,cousin,いとこ,表兄弟姊妹,n,I play with my cousins.,私はいとこと遊びます。,我和表兄弟姊妹一起玩。,,,2
+grade_4_0491,daughter,娘,女兒,n,She has two daughters.,彼女には娘が2人います。,她有兩個女兒。,sonの反対,Son的相反,2
+grade_4_0492,head,頭,頭,n,I hit my head.,頭をぶつけました。,我撞到頭了。,ヘディングは頭で打つ,頭球就是用頭頂,1
+grade_4_0493,face,顔,臉,n,Wash your face.,顔を洗いなさい。,洗臉。,フェイスタオル,洗臉毛巾,1
+grade_4_0494,eye,目,眼睛,n,She has blue eyes.,彼女は青い目をしています。,她有藍色的眼睛。,アイコンタクト,眼神交流eye contact,1
+grade_4_0495,hand,手,手,n,Raise your hand.,手を挙げなさい。,舉手。,ハンドクリーム,護手霜hand cream,1
+grade_4_0496,leg,脚,腿,n,The dog has four legs.,犬には4本の脚があります。,狗有四條腿。,,,1
+grade_4_0497,foot,足,腳,n,I hurt my foot.,足をけがしました。,我的腳受傷了。,フットサルは足で,足球用foot（腳）,1
+grade_4_0498,beautiful,美しい,美麗的,adj,What a beautiful flower!,なんて美しい花でしょう！,多麼美麗的花啊！,ビューティフル,美麗beautiful,1
+grade_4_0499,busy,忙しい,忙碌的,adj,My mother is busy today.,母は今日忙しいです。,我媽媽今天很忙。,ビジネスマンは忙しい,商務人士很busy,1
+grade_4_0500,cheap,安い,便宜的,adj,This shirt is cheap.,このシャツは安いです。,這件襯衫很便宜。,expensiveの反対,expensive的相反,2
+grade_4_0501,expensive,高価な,昂貴的,adj,That car is expensive.,あの車は高価です。,那輛車很貴。,cheapの反対,cheap的相反,2
+grade_4_0502,famous,有名な,有名的,adj,He is a famous singer.,彼は有名な歌手です。,他是有名的歌手。,フェイマス,有名famous,2
+grade_4_0503,favorite,お気に入りの,最喜歡的,adj,What's your favorite color?,お気に入りの色は何ですか。,你最喜歡的顏色是什麼？,,,1
+grade_4_0504,funny,おもしろい,好笑的,adj,His story is funny.,彼の話はおもしろいです。,他的故事很好笑。,fun（楽しい）から,來自fun（樂趣）,1
+grade_4_0505,glad,うれしい,高興的,adj,I'm glad to see you.,あなたに会えてうれしいです。,很高興見到你。,,,2
+grade_4_0506,great,すばらしい,很棒的,adj,That's a great idea!,それはすばらしい考えです！,那是個很棒的主意！,グレート！,太棒了Great！,1
+grade_4_0507,kind,親切な,親切的,adj,She is kind to everyone.,彼女はみんなに親切です。,她對每個人都很親切。,,,1
+grade_4_0508,large,大きい,大的,adj,I want a large pizza.,Lサイズのピザがほしいです。,我要一個大披薩。,LサイズのL,L尺寸的L,1
+grade_4_0509,late,遅い・遅れた,遲的,adj,I was late for school.,学校に遅刻しました。,我上學遲到了。,,,1
+grade_4_0510,early,早い・早く,早的,adj,I get up early.,私は早起きします。,我很早起床。,lateの反対,late的相反,1
+grade_4_0511,lucky,幸運な,幸運的,adj,You are so lucky!,あなたはとても幸運です！,你真幸運！,ラッキー！,好幸運Lucky！,1
+grade_4_0512,nice,すてきな,好的,adj,Have a nice day!,よい一日を！,祝你有美好的一天！,,,1
+grade_4_0513,pretty,かわいい・きれいな,漂亮的,adj,What a pretty dress!,なんてかわいいドレス！,多漂亮的洋裝啊！,プリティー,漂亮pretty,1
+grade_4_0514,same,同じ,相同的,adj,We are in the same class.,私たちは同じクラスです。,我們同班。,differentの反対,different的相反,2
+grade_4_0515,different,ちがう・異なる,不同的,adj,My idea is different from yours.,私の考えはあなたのとちがいます。,我的想法和你的不同。,sameの反対,same的相反,2
+grade_4_0516,sick,病気の,生病的,adj,He is sick in bed.,彼は病気で寝ています。,他生病臥床。,,,1
+grade_4_0517,sweet,あまい,甜的,adj,This cake is too sweet.,このケーキはあますぎます。,這個蛋糕太甜了。,スイーツはあまいお菓子,甜點sweets就是甜的,1
+grade_4_0518,tall,背が高い,高的,adj,My brother is very tall.,兄はとても背が高いです。,我哥哥很高。,,,1

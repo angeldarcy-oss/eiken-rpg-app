@@ -97,3 +97,247 @@ grade_3_0095,angry,怒っている,在生氣,adj,I am angry today.,今日は怒�
 grade_3_0096,tired,疲れた,累了,adj,I am tired today.,今日は疲れました。,今天累了。,,,1
 grade_3_0097,excited,ワクワク,興奮,adj,I am excited for the party.,パーティーにワクワクしています。,我對派對很興奮。,,,1
 grade_3_0098,bored,退屈,無聊,adj,I am bored today.,今日は退屈です。,今天很無聊。,,,1
+grade_3_0099,agree,賛成する,同意,v,I agree with you.,あなたに賛成です。,我同意你。,,,2
+grade_3_0100,appear,現れる,出現,v,A rainbow appeared in the sky.,空ににじが現れました。,天空出現了彩虹。,,,3
+grade_3_0101,arrive,到着する,到達,v,The bus arrived at the station.,バスが駅に到着しました。,公車到站了。,アライバル＝到着,Arrival＝抵達,2
+grade_3_0102,attend,出席する,出席,v,I attended the meeting.,私は会議に出席しました。,我出席了會議。,,,3
+grade_3_0103,avoid,避ける,避免,v,Avoid eating too much.,食べすぎを避けなさい。,避免吃太多。,,,3
+grade_3_0104,bake,（パンなどを）焼く,烘焙,v,She bakes bread every morning.,彼女は毎朝パンを焼きます。,她每天早上烤麵包。,ベーカリーは焼く店,Bakery就是烘焙店,2
+grade_3_0105,become,〜になる,變成,v,He became a doctor.,彼は医者になりました。,他成為了醫生。,,,2
+grade_3_0106,believe,信じる,相信,v,I believe his story.,私は彼の話を信じます。,我相信他的話。,,,2
+grade_3_0107,belong,所属する,屬於,v,I belong to the tennis club.,私はテニス部に所属しています。,我屬於網球社。,,,3
+grade_3_0108,break,壊す・休けい,打破、休息,v,Don't break the window.,窓を壊さないで。,別打破窗戶。,ブレイクタイム＝休けい,Break time＝休息時間,2
+grade_3_0109,burn,燃える・焼く,燃燒,v,The wood is burning.,まきが燃えています。,木柴在燃燒。,,,2
+grade_3_0110,celebrate,祝う,慶祝,v,We celebrate her birthday.,私たちは彼女の誕生日を祝います。,我們慶祝她的生日。,セレブレーション＝お祝い,Celebration＝慶典,2
+grade_3_0111,collect,集める,收集,v,He collects old coins.,彼は古いコインを集めています。,他收集舊硬幣。,コレクション＝収集品,Collection＝收藏品,2
+grade_3_0112,communicate,伝え合う,溝通,v,We communicate by email.,私たちはメールで連絡を取り合います。,我們用電子郵件聯絡。,コミュニケーション,溝通communication,3
+grade_3_0113,cost,（お金が）かかる,花費,v,"This bag costs 3,000 yen.",このかばんは3千円かかります。,這個包要三千日圓。,コスト＝費用,Cost＝成本,2
+grade_3_0114,count,数える,數,v,Count from one to ten.,1から10まで数えなさい。,從一數到十。,カウントダウン,倒數countdown,1
+grade_3_0115,cover,おおう,覆蓋,v,Snow covered the town.,雪が町をおおいました。,雪覆蓋了城鎮。,本のカバー,書的封面cover,2
+grade_3_0116,decide,決める,決定,v,I decided to study abroad.,私は留学することを決めました。,我決定去留學。,,,2
+grade_3_0117,discover,発見する,發現,v,They discovered a new star.,彼らは新しい星を発見しました。,他們發現了一顆新星。,cover（おおい）をdis（外す）,把cover（蓋子）dis（拿掉）,3
+grade_3_0118,drop,落とす,掉落,v,I dropped my phone.,電話を落としてしまいました。,我把手機掉了。,,,2
+grade_3_0119,enter,入る,進入,v,Please enter the room.,部屋に入ってください。,請進房間。,エンターキーで入力,按Enter鍵輸入,2
+grade_3_0120,exchange,交換する,交換,v,We exchanged presents.,私たちはプレゼントを交換しました。,我們交換了禮物。,両替もexchange,換錢也是exchange,3
+grade_3_0121,fail,失敗する,失敗,v,Don't be afraid to fail.,失敗をおそれないで。,別害怕失敗。,,,2
+grade_3_0122,fall,落ちる・転ぶ,掉落、跌倒,v,Leaves fall in autumn.,秋には葉が落ちます。,秋天樹葉掉落。,フォール＝落下,Fall＝落下,2
+grade_3_0123,feed,えさをやる,餵,v,I feed my dog twice a day.,私は1日2回犬にえさをやります。,我一天餵狗兩次。,food（食べ物）をあげる,給food（食物）,2
+grade_3_0124,fight,戦う,打架、戰鬥,v,Don't fight with your brother.,弟とけんかしないで。,別和弟弟打架。,ファイト！,加油Fight！,2
+grade_3_0125,fix,直す,修理,v,Can you fix my bike?,自転車を直してくれますか。,你能修我的腳踏車嗎？,,,2
+grade_3_0126,gather,集まる,聚集,v,People gathered in the park.,人々が公園に集まりました。,人們聚集在公園。,,,3
+grade_3_0127,graduate,卒業する,畢業,v,She graduated from high school.,彼女は高校を卒業しました。,她高中畢業了。,,,3
+grade_3_0128,guess,推測する,猜,v,Guess what I have!,何を持っているか当ててみて！,猜猜我有什麼！,,,2
+grade_3_0129,happen,起こる,發生,v,What happened here?,ここで何が起こったのですか。,這裡發生了什麼事？,ハプニング＝出来事,Happening＝突發事件,2
+grade_3_0130,hide,かくす・かくれる,躲藏,v,The cat is hiding under the bed.,ネコがベッドの下にかくれています。,貓躲在床下。,かくれんぼはhide-and-seek,捉迷藏是hide-and-seek,2
+grade_3_0131,hurry,急ぐ,趕快,v,"Hurry up, or you'll be late.",急ぎなさい、さもないと遅れますよ。,快點，不然你會遲到。,ハリーアップ！,快點Hurry up！,2
+grade_3_0132,hurt,傷つける・痛む,受傷、疼痛,v,My leg hurts.,脚が痛みます。,我的腿很痛。,,,2
+grade_3_0133,imagine,想像する,想像,v,Imagine a world without war.,戦争のない世界を想像してみて。,想像一個沒有戰爭的世界。,イメージする,在腦中描繪image,3
+grade_3_0134,improve,上達する・改善する,改善,v,My English is improving.,私の英語は上達しています。,我的英文在進步。,,,3
+grade_3_0135,introduce,紹介する,介紹,v,Let me introduce myself.,自己紹介をさせてください。,讓我自我介紹。,,,2
+grade_3_0136,invent,発明する,發明,v,Edison invented many things.,エジソンは多くのものを発明しました。,愛迪生發明了很多東西。,インベンション＝発明,Invention＝發明,3
+grade_3_0137,keep,保つ・飼う,保持,v,Keep your room clean.,部屋をきれいに保ちなさい。,保持房間整潔。,キープする,保留keep住,2
+grade_3_0138,lend,貸す,借出,v,Can you lend me 100 yen?,100円貸してくれますか。,你能借我100日圓嗎？,borrowの反対,borrow的相反,3
+grade_3_0139,marry,結婚する,結婚,v,He married my sister.,彼は私の姉と結婚しました。,他和我姊姊結婚了。,,,2
+grade_3_0140,miss,のがす・さびしく思う,錯過、想念,v,I missed the last train.,終電をのがしました。,我錯過了末班車。,,,2
+grade_3_0141,notice,気づく,注意到,v,I noticed a change.,変化に気づきました。,我注意到了變化。,,,3
+grade_3_0142,order,注文する,點餐、訂購,v,I ordered a hamburger.,ハンバーガーを注文しました。,我點了漢堡。,オーダーする,下訂單order,2
+grade_3_0143,pass,合格する・手渡す,通過、傳遞,v,She passed the test.,彼女は試験に合格しました。,她通過了考試。,パスする,傳球pass,2
+grade_3_0144,plan,計画する,計畫,v,We are planning a trip.,私たちは旅行を計画しています。,我們在計畫旅行。,プラン＝計画,Plan＝計畫,1
+grade_3_0145,prepare,準備する,準備,v,Prepare for the exam.,試験の準備をしなさい。,為考試做準備。,,,2
+grade_3_0146,promise,約束する,承諾,v,I promise to come back.,もどってくると約束します。,我保證會回來。,,,2
+grade_3_0147,pull,引く,拉,v,Pull the door open.,ドアを引いて開けなさい。,把門拉開。,pushの反対,push的相反,1
+grade_3_0148,push,押す,推,v,Push the button.,ボタンを押しなさい。,按按鈕。,プッシュ通知,推播通知push,1
+grade_3_0149,raise,上げる・育てる,舉起、養育,v,Raise your hand if you know.,わかったら手を上げなさい。,知道的話請舉手。,,,3
+grade_3_0150,reach,着く・届く,到達,v,We reached the top of the mountain.,私たちは山頂に着きました。,我們到達了山頂。,,,3
+grade_3_0151,receive,受け取る,收到,v,I received a letter from her.,彼女から手紙を受け取りました。,我收到了她的信。,レシーブはボールを受ける,接球receive,3
+grade_3_0152,recycle,リサイクルする,回收,v,We recycle plastic bottles.,私たちはペットボトルをリサイクルします。,我們回收寶特瓶。,,,2
+grade_3_0153,repair,修理する,修理,v,He repaired the old clock.,彼は古い時計を修理しました。,他修好了舊時鐘。,リペア＝修理,Repair＝修理,3
+grade_3_0154,repeat,くり返す,重複,v,Repeat after me.,私のあとにくり返しなさい。,跟著我說一遍。,リピート再生,重複播放repeat,2
+grade_3_0155,rescue,救助する,救援,v,They rescued the cat from the tree.,彼らは木からネコを救助しました。,他們從樹上救下了貓。,レスキュー隊,救援隊rescue,3
+grade_3_0156,respect,尊敬する,尊敬,v,I respect my teacher.,私は先生を尊敬しています。,我尊敬我的老師。,リスペクト,尊重respect,2
+grade_3_0157,rise,のぼる・上がる,上升,v,The sun rises in the east.,太陽は東からのぼります。,太陽從東方升起。,サンライズ＝日の出,Sunrise＝日出,3
+grade_3_0158,save,救う・貯める,拯救、儲存,v,Save money for the future.,将来のためにお金を貯めなさい。,為將來存錢。,データをセーブ,儲存資料save,2
+grade_3_0159,share,分け合う,分享,v,Let's share this cake.,このケーキを分け合いましょう。,我們分這個蛋糕吧。,シェアする,分享share,2
+grade_3_0160,shake,ふる,搖,v,Shake the bottle well.,ボトルをよくふりなさい。,把瓶子搖一搖。,シェイクは混ぜた飲み物,奶昔shake是搖出來的,2
+grade_3_0161,shine,かがやく,發光,v,The stars are shining.,星がかがやいています。,星星在閃耀。,,,2
+grade_3_0162,smell,においがする,聞起來,v,This flower smells sweet.,この花はあまいにおいがします。,這朵花聞起來很香。,,,2
+grade_3_0163,solve,解決する,解決,v,I solved the problem.,私はその問題を解きました。,我解決了那個問題。,,,3
+grade_3_0164,spend,（時間・お金を）使う,花費,v,I spent two hours on homework.,宿題に2時間使いました。,我花了兩小時做作業。,,,3
+grade_3_0165,steal,ぬすむ,偷,v,Someone stole my bike.,だれかが私の自転車をぬすみました。,有人偷了我的腳踏車。,,,3
+grade_3_0166,succeed,成功する,成功,v,She succeeded in the experiment.,彼女は実験に成功しました。,她實驗成功了。,サクセス＝成功,Success＝成功,3
+grade_3_0167,suggest,提案する,建議,v,He suggested a new plan.,彼は新しい計画を提案しました。,他提出了新計畫。,,,3
+grade_3_0168,support,支える・応援する,支持,v,My family supports me.,家族は私を支えてくれます。,我的家人支持我。,サポーター,支持者supporter,2
+grade_3_0169,survive,生き残る,生存,v,The plants survived the winter.,その植物は冬を生きのびました。,那些植物熬過了冬天。,サバイバル,生存遊戲survival,3
+grade_3_0170,taste,味がする,嚐起來,v,This soup tastes good.,このスープはおいしい味がします。,這湯很好喝。,,,2
+grade_3_0171,throw,投げる,丟,v,Throw the ball to me.,ボールを私に投げて。,把球丟給我。,,,2
+grade_3_0172,trust,信頼する,信任,v,I trust my best friend.,私は親友を信頼しています。,我信任我最好的朋友。,,,3
+grade_3_0173,turn,曲がる・回す,轉彎、轉動,v,Turn left at the corner.,角を左に曲がりなさい。,在轉角左轉。,Uターン,U-turn迴轉,2
+grade_3_0174,wonder,不思議に思う,想知道,v,I wonder why she is late.,なぜ彼女が遅いのかしらと思います。,我想知道她為什麼遲到。,ワンダーランド＝不思議の国,Wonderland＝奇境,3
+grade_3_0175,accident,事故,事故,n,There was a car accident.,自動車事故がありました。,發生了車禍。,アクシデント,意外accident,2
+grade_3_0176,activity,活動,活動,n,Club activities start at four.,部活動は4時に始まります。,社團活動四點開始。,アクティビティ,活動activity,2
+grade_3_0177,advice,助言・アドバイス,建議,n,Thank you for your advice.,アドバイスをありがとう。,謝謝你的建議。,,,2
+grade_3_0178,ambulance,救急車,救護車,n,Call an ambulance!,救急車を呼んで！,叫救護車！,,,3
+grade_3_0179,answer,答え,答案,n,The answer is easy.,答えは簡単です。,答案很簡單。,アンサー,回答answer,1
+grade_3_0180,area,地域・area,區域,n,This area is quiet.,この地域は静かです。,這個區域很安靜。,エリア,區域area,2
+grade_3_0181,audience,観客,觀眾,n,The audience clapped loudly.,観客は大きな拍手をしました。,觀眾大聲鼓掌。,,,3
+grade_3_0182,average,平均,平均,n,My score is above average.,私の点数は平均より上です。,我的分數高於平均。,アベレージ,平均average,3
+grade_3_0183,award,賞,獎,n,She won an award.,彼女は賞を取りました。,她得獎了。,アワード＝授賞式,頒獎典禮award,3
+grade_3_0184,bakery,パン屋,麵包店,n,The bakery opens at seven.,そのパン屋は7時に開きます。,那家麵包店七點開門。,,,2
+grade_3_0185,bell,ベル・かね,鈴,n,The bell is ringing.,ベルが鳴っています。,鈴聲在響。,,,1
+grade_3_0186,body,体,身體,n,Exercise is good for your body.,運動は体によいです。,運動對身體好。,ボディ,身體body,1
+grade_3_0187,bottle,びん・ボトル,瓶子,n,"A bottle of water, please.",水を1本ください。,請給我一瓶水。,ペットボトル,寶特瓶bottle,1
+grade_3_0188,bottom,底・一番下,底部,n,Look at the bottom of the page.,ページの一番下を見なさい。,看頁面的最下面。,topの反対,top的相反,2
+grade_3_0189,business,仕事・商売,生意,n,He is in Tokyo on business.,彼は仕事で東京にいます。,他因公務在東京。,ビジネス,商業business,2
+grade_3_0190,camp,キャンプ,露營,n,We went to a summer camp.,私たちはサマーキャンプに行きました。,我們去了夏令營。,,,1
+grade_3_0191,captain,キャプテン・船長,隊長、船長,n,He is the captain of our team.,彼は私たちのチームのキャプテンです。,他是我們隊的隊長。,,,2
+grade_3_0192,ceremony,式典,典禮,n,The graduation ceremony is in March.,卒業式は3月です。,畢業典禮在三月。,,,3
+grade_3_0193,chance,機会・チャンス,機會,n,This is your last chance.,これが最後のチャンスです。,這是你最後的機會。,,,2
+grade_3_0194,charity,慈善,慈善,n,They collected money for charity.,彼らは慈善のためにお金を集めました。,他們為慈善募款。,チャリティーイベント,慈善活動charity,3
+grade_3_0195,chef,シェフ・料理長,主廚,n,The chef made a special dish.,シェフは特別な料理を作りました。,主廚做了特別的菜。,,,2
+grade_3_0196,classmate,同級生,同學,n,She is my classmate.,彼女は私の同級生です。,她是我的同學。,class（クラス）のmate（仲間）,Class（班級）的mate（夥伴）,1
+grade_3_0197,college,大学,大學,n,My brother goes to college.,兄は大学に通っています。,我哥哥上大學。,,,2
+grade_3_0198,company,会社,公司,n,My father works for a big company.,父は大きな会社で働いています。,我爸爸在大公司工作。,カンパニー,公司company,2
+grade_3_0199,concert,コンサート,音樂會,n,We went to a piano concert.,私たちはピアノコンサートに行きました。,我們去聽了鋼琴音樂會。,,,1
+grade_3_0200,contest,コンテスト,比賽,n,She won the speech contest.,彼女はスピーチコンテストで優勝しました。,她在演講比賽中獲勝。,,,2
+grade_3_0201,corner,角,角落,n,Turn right at the next corner.,次の角を右に曲がりなさい。,在下個轉角右轉。,コーナーキック,角球corner kick,2
+grade_3_0202,customer,客,顧客,n,The store has many customers.,その店には多くの客がいます。,那家店有很多顧客。,カスタマーセンター,客服中心customer center,2
+grade_3_0203,dentist,歯医者,牙醫,n,I went to the dentist yesterday.,昨日歯医者に行きました。,我昨天去看牙醫。,,,2
+grade_3_0204,dessert,デザート,甜點,n,What's for dessert?,デザートは何ですか。,甜點是什麼？,,,2
+grade_3_0205,dish,皿・料理,盤子、菜餚,n,This dish is delicious.,この料理はおいしいです。,這道菜很好吃。,,,2
+grade_3_0206,earthquake,地震,地震,n,A big earthquake hit the city.,大きな地震がその都市をおそいました。,大地震襲擊了那座城市。,earth（地球）がquake（ゆれる）,Earth（大地）quake（搖動）,3
+grade_3_0207,event,行事・イベント,活動,n,The school event is next week.,学校行事は来週です。,學校活動在下週。,,,1
+grade_3_0208,exam,試験,考試,n,I have an exam tomorrow.,明日試験があります。,我明天有考試。,examination の略,Examination的簡稱,2
+grade_3_0209,example,例,例子,n,Give me an example.,例を挙げてください。,給我一個例子。,for example＝例えば,For example＝例如,2
+grade_3_0210,exercise,運動,運動,n,Exercise every day.,毎日運動しなさい。,每天運動。,,,2
+grade_3_0211,festival,祭り,祭典,n,The summer festival is fun.,夏祭りは楽しいです。,夏日祭典很好玩。,フェスティバル,慶典festival,1
+grade_3_0212,fever,熱,發燒,n,I have a fever.,熱があります。,我發燒了。,,,2
+grade_3_0213,future,未来・将来,未來,n,What do you want to be in the future?,将来何になりたいですか。,你將來想做什麼？,,,2
+grade_3_0214,garbage,ごみ,垃圾,n,Take out the garbage.,ごみを出しなさい。,把垃圾拿出去。,,,2
+grade_3_0215,goal,目標・ゴール,目標,n,My goal is to win the game.,私の目標は試合に勝つことです。,我的目標是贏得比賽。,,,1
+grade_3_0216,grade,学年・成績,年級、成績,n,I'm in the seventh grade.,私は中学1年生です。,我是七年級生。,,,2
+grade_3_0217,group,グループ,團體,n,Make groups of four.,4人のグループを作りなさい。,四人一組。,,,1
+grade_3_0218,guest,客,客人,n,We have a guest today.,今日はお客さんが来ます。,今天我們有客人。,ゲスト出演,來賓guest,2
+grade_3_0219,guide,ガイド・案内人,導遊,n,The guide showed us the castle.,ガイドが私たちに城を案内してくれました。,導遊帶我們參觀城堡。,,,2
+grade_3_0220,habit,習慣,習慣,n,Reading is a good habit.,読書はよい習慣です。,閱讀是好習慣。,,,3
+grade_3_0221,headache,頭痛,頭痛,n,I have a headache.,頭が痛いです。,我頭痛。,head（頭）のache（痛み）,Head（頭）的ache（痛）,2
+grade_3_0222,holiday,休日・祝日,假日,n,Next Monday is a holiday.,次の月曜日は祝日です。,下週一是假日。,ホリデー,假期holiday,1
+grade_3_0223,hometown,故郷,家鄉,n,My hometown is a small town.,私の故郷は小さな町です。,我的家鄉是個小鎮。,home（家）のtown（町）,Home（家）的town（鎮）,2
+grade_3_0224,husband,夫,丈夫,n,Her husband is a pilot.,彼女の夫はパイロットです。,她的丈夫是飛行員。,,,2
+grade_3_0225,idea,考え・アイデア,主意,n,That's a good idea!,それはいい考えです！,那是個好主意！,,,1
+grade_3_0226,information,情報,資訊,n,I need more information.,もっと情報が必要です。,我需要更多資訊。,インフォメーション,資訊information,3
+grade_3_0227,insect,昆虫,昆蟲,n,My brother likes insects.,弟は昆虫が好きです。,我弟弟喜歡昆蟲。,,,2
+grade_3_0228,instrument,楽器,樂器,n,Can you play any instruments?,何か楽器を演奏できますか。,你會演奏什麼樂器嗎？,,,3
+grade_3_0229,interview,面接・インタビュー,面試、採訪,n,He had a job interview.,彼は就職の面接を受けました。,他參加了工作面試。,,,2
+grade_3_0230,jacket,ジャケット・上着,夾克,n,Wear your jacket. It's cold.,上着を着なさい。寒いですよ。,穿上夾克，天氣很冷。,,,1
+grade_3_0231,lesson,授業・レッスン,課程,n,I have a piano lesson today.,今日はピアノのレッスンがあります。,我今天有鋼琴課。,,,1
+grade_3_0232,machine,機械,機器,n,This machine makes coffee.,この機械はコーヒーを作ります。,這台機器會煮咖啡。,マシン,機器machine,2
+grade_3_0233,meal,食事,一餐,n,Wash your hands before meals.,食事の前に手を洗いなさい。,飯前要洗手。,,,2
+grade_3_0234,medicine,薬,藥,n,Take this medicine after lunch.,昼食後にこの薬を飲みなさい。,午餐後吃這個藥。,,,2
+grade_3_0235,member,メンバー・一員,成員,n,He is a member of the soccer team.,彼はサッカー部の一員です。,他是足球隊的成員。,,,1
+grade_3_0236,memory,思い出・記憶,回憶、記憶,n,I have good memories of the trip.,その旅行のよい思い出があります。,我對那次旅行有美好的回憶。,メモリーカード,記憶卡memory card,2
+grade_3_0237,mistake,まちがい,錯誤,n,Don't be afraid of making mistakes.,まちがいをおそれないで。,別害怕犯錯。,,,2
+grade_3_0238,moment,瞬間・ちょっとの間,片刻,n,"Wait a moment, please.",ちょっと待ってください。,請稍等一下。,,,3
+grade_3_0239,musician,音楽家,音樂家,n,She wants to be a musician.,彼女は音楽家になりたいです。,她想成為音樂家。,music（音楽）の人,Music（音樂）的人,2
+grade_3_0240,nature,自然,大自然,n,We enjoyed the beautiful nature.,私たちは美しい自然を楽しみました。,我們欣賞了美麗的大自然。,ナチュラル＝自然な,Natural＝自然的,2
+grade_3_0241,neighbor,隣人・近所の人,鄰居,n,My neighbor is very friendly.,近所の人はとても親切です。,我的鄰居很友善。,,,3
+grade_3_0242,news,ニュース・知らせ,新聞、消息,n,I have good news for you.,あなたによい知らせがあります。,我有好消息要告訴你。,,,1
+grade_3_0243,noise,騒音・物音,噪音,n,Don't make so much noise.,そんなに音を立てないで。,別那麼吵。,ノイズ,雜音noise,2
+grade_3_0244,ocean,海・大洋,海洋,n,The Pacific Ocean is very large.,太平洋はとても大きいです。,太平洋非常大。,seaより大きい海,比sea更大的海,2
+grade_3_0245,opinion,意見,意見,n,Tell me your opinion.,あなたの意見を聞かせて。,告訴我你的意見。,,,3
+grade_3_0246,pain,痛み,疼痛,n,I feel a pain in my back.,背中に痛みを感じます。,我背痛。,,,3
+grade_3_0247,parade,パレード,遊行,n,We watched the parade.,私たちはパレードを見ました。,我們看了遊行。,,,1
+grade_3_0248,passenger,乗客,乘客,n,The train was full of passengers.,電車は乗客でいっぱいでした。,火車上滿是乘客。,,,3
+grade_3_0249,planet,惑星,行星,n,The earth is a planet.,地球は惑星です。,地球是行星。,プラネタリウム,天文館planetarium,2
+grade_3_0250,pocket,ポケット,口袋,n,The key is in my pocket.,かぎはポケットの中です。,鑰匙在我的口袋裡。,,,1
+grade_3_0251,pollution,汚染,污染,n,Air pollution is a big problem.,大気汚染は大きな問題です。,空氣污染是個大問題。,,,3
+grade_3_0252,price,値段,價格,n,The price of this watch is high.,この時計の値段は高いです。,這支手錶的價格很高。,プライスカード＝値札,價格標籤price tag,2
+grade_3_0253,prize,賞品・賞,獎品,n,I won first prize!,1等賞を取りました！,我得了第一名！,,,2
+grade_3_0254,problem,問題,問題,n,No problem!,問題ありません！,沒問題！,,,1
+grade_3_0255,program,番組・プログラム,節目、程式,n,I like this TV program.,私はこのテレビ番組が好きです。,我喜歡這個電視節目。,,,2
+grade_3_0256,question,質問,問題、提問,n,May I ask a question?,質問してもいいですか。,我可以問個問題嗎？,クエスチョンマーク＝？,問號question mark,1
+grade_3_0257,race,競走・レース,賽跑,n,He won the race.,彼はレースで勝ちました。,他贏了賽跑。,,,1
+grade_3_0258,reason,理由,理由,n,Tell me the reason.,理由を教えて。,告訴我理由。,,,3
+grade_3_0259,recipe,レシピ・作り方,食譜,n,This is my mother's recipe.,これは母のレシピです。,這是我媽媽的食譜。,,,2
+grade_3_0260,report,レポート・報告,報告,n,I wrote a report about whales.,クジラについてレポートを書きました。,我寫了一篇關於鯨魚的報告。,,,2
+grade_3_0261,result,結果,結果,n,The test results come out tomorrow.,テストの結果は明日出ます。,考試結果明天公布。,リザルト画面＝結果画面,Result畫面＝結果畫面,3
+grade_3_0262,rule,規則・ルール,規則,n,Follow the school rules.,校則を守りなさい。,遵守校規。,,,1
+grade_3_0263,schedule,予定・スケジュール,行程,n,What's your schedule for tomorrow?,明日の予定は何ですか。,你明天的行程是什麼？,,,2
+grade_3_0264,scientist,科学者,科學家,n,She is a famous scientist.,彼女は有名な科学者です。,她是有名的科學家。,science（科学）の人,Science（科學）的人,2
+grade_3_0265,score,得点・スコア,分數,n,What was the score of the game?,試合のスコアはどうでしたか。,比賽的比數是多少？,,,2
+grade_3_0266,secret,秘密,秘密,n,Can you keep a secret?,秘密を守れますか。,你能保守秘密嗎？,シークレット,機密secret,2
+grade_3_0267,sign,標識・看板,標誌,n,Look at that sign.,あの標識を見なさい。,看那個標誌。,サイン＝署名の意味も,Sign也有簽名的意思,2
+grade_3_0268,skill,技術・うで前,技能,n,Reading skills are important.,読む技術は大切です。,閱讀技能很重要。,スキルアップ,提升技能skill up,3
+grade_3_0269,sound,音,聲音,n,I heard a strange sound.,変な音が聞こえました。,我聽到奇怪的聲音。,サウンド,音效sound,1
+grade_3_0270,space,宇宙・空間,太空、空間,n,I want to travel in space.,宇宙を旅行したいです。,我想去太空旅行。,スペースシャトル,太空梭space shuttle,2
+grade_3_0271,speech,スピーチ・演説,演講,n,She made a speech in English.,彼女は英語でスピーチをしました。,她用英文演講。,speak（話す）の名詞,Speak（說）的名詞,2
+grade_3_0272,stadium,スタジアム・競技場,體育場,n,The stadium was full of fans.,スタジアムはファンでいっぱいでした。,體育場擠滿了球迷。,,,2
+grade_3_0273,stomachache,腹痛,肚子痛,n,I have a stomachache.,おなかが痛いです。,我肚子痛。,stomach（胃）のache（痛み）,Stomach(胃)的ache(痛),2
+grade_3_0274,stranger,見知らぬ人,陌生人,n,Don't talk to strangers.,知らない人と話してはいけません。,別和陌生人說話。,strange（奇妙な）人,Strange（奇怪）的人,3
+grade_3_0275,tournament,トーナメント・大会,錦標賽,n,Our team won the tournament.,私たちのチームは大会で優勝しました。,我們隊贏得了錦標賽。,,,2
+grade_3_0276,tradition,伝統,傳統,n,This festival is an old tradition.,この祭りは古い伝統です。,這個祭典是古老的傳統。,トラディショナル＝伝統的,Traditional＝傳統的,3
+grade_3_0277,traffic,交通,交通,n,The traffic is heavy today.,今日は交通量が多いです。,今天交通很繁忙。,,,2
+grade_3_0278,trip,旅行,旅行,n,How was your trip?,旅行はどうでしたか。,你的旅行怎麼樣？,,,1
+grade_3_0279,trouble,困りごと・トラブル,麻煩,n,I'm in trouble.,困っています。,我有麻煩了。,,,2
+grade_3_0280,uniform,制服,制服,n,Our school uniform is blue.,私たちの制服は青色です。,我們的制服是藍色的。,ユニフォーム,制服uniform,1
+grade_3_0281,vacation,休暇,假期,n,Where did you go during summer vacation?,夏休みはどこに行きましたか。,暑假你去了哪裡？,バケーション,度假vacation,1
+grade_3_0282,vegetable,野菜,蔬菜,n,Eat more vegetables.,もっと野菜を食べなさい。,多吃蔬菜。,ベジタブル,蔬菜vegetable,1
+grade_3_0283,victory,勝利,勝利,n,The team celebrated the victory.,チームは勝利を祝いました。,球隊慶祝勝利。,Vサインのvictory,V手勢的victory,3
+grade_3_0284,visitor,訪問者・観光客,訪客,n,Kyoto has many visitors.,京都には多くの観光客が来ます。,京都有很多觀光客。,visit（訪れる）人,Visit（拜訪）的人,2
+grade_3_0285,voice,声,聲音,n,She has a beautiful voice.,彼女は美しい声をしています。,她的聲音很美。,ボイスメッセージ,語音訊息voice message,1
+grade_3_0286,volunteer,ボランティア,志工,n,I work as a volunteer.,私はボランティアとして働いています。,我擔任志工。,,,2
+grade_3_0287,weight,重さ・体重,重量,n,What is the weight of this box?,この箱の重さはどれくらいですか。,這個箱子有多重？,ウェイトトレーニング,重量訓練weight training,3
+grade_3_0288,wing,つばさ,翅膀,n,The bird spread its wings.,鳥はつばさを広げました。,鳥張開了翅膀。,,,2
+grade_3_0289,abroad,外国に・外国で,在國外,adv,She studies abroad.,彼女は外国で勉強しています。,她在國外讀書。,,,3
+grade_3_0290,afraid,こわがって,害怕的,adj,I'm afraid of dogs.,私は犬がこわいです。,我怕狗。,,,2
+grade_3_0291,almost,ほとんど,幾乎,adv,It's almost noon.,もうすぐ正午です。,快中午了。,,,2
+grade_3_0292,alone,ひとりで,獨自,adv,He lives alone.,彼はひとりで住んでいます。,他一個人住。,,,2
+grade_3_0293,already,すでに・もう,已經,adv,I already finished my homework.,宿題はもう終わりました。,我已經做完作業了。,,,2
+grade_3_0294,anywhere,どこでも・どこにも,任何地方,adv,I can't find it anywhere.,どこにも見つかりません。,我到處都找不到。,any＋where,Any＋where,2
+grade_3_0295,bright,明るい,明亮的,adj,The moon is bright tonight.,今夜は月が明るいです。,今晚月亮很亮。,,,2
+grade_3_0296,comfortable,快適な,舒適的,adj,This sofa is comfortable.,このソファは快適です。,這張沙發很舒服。,,,3
+grade_3_0297,common,ふつうの・共通の,常見的,adj,Tanaka is a common name in Japan.,田中は日本でよくある名前です。,田中在日本是常見的名字。,,,3
+grade_3_0298,convenient,便利な,方便的,adj,This app is very convenient.,このアプリはとても便利です。,這個APP很方便。,コンビニ＝convenience store,便利商店convenience store,3
+grade_3_0299,crowded,こんでいる,擁擠的,adj,The train was crowded.,電車はこんでいました。,火車很擁擠。,crowd（群衆）でいっぱい,擠滿crowd（人群）,2
+grade_3_0300,dangerous,危険な,危險的,adj,Swimming here is dangerous.,ここで泳ぐのは危険です。,在這裡游泳很危險。,デンジャラス,危險dangerous,2
+grade_3_0301,deep,深い,深的,adj,This river is deep.,この川は深いです。,這條河很深。,,,2
+grade_3_0302,dry,かわいた,乾的,adj,Keep your feet dry.,足をかわいたままにしなさい。,保持腳乾燥。,ドライヤーでかわかす,用吹風機dryer弄乾,2
+grade_3_0303,each,それぞれの,每個,adj,Each student has a tablet.,それぞれの生徒がタブレットを持っています。,每個學生都有平板。,,,2
+grade_3_0304,enough,十分な,足夠的,adj,We have enough time.,時間は十分あります。,我們有足夠的時間。,,,3
+grade_3_0305,especially,特に,特別是,adv,"I like fruit, especially apples.",果物、特にりんごが好きです。,我喜歡水果，特別是蘋果。,スペシャル（特別）から,來自special（特別）,3
+grade_3_0306,everybody,みんな,每個人,pron,Everybody likes her.,みんな彼女が好きです。,每個人都喜歡她。,every＋body,Every＋body,1
+grade_3_0307,few,少しの・ほとんどない,很少的,adj,I have a few questions.,いくつか質問があります。,我有幾個問題。,,,3
+grade_3_0308,finally,ついに・最後に,終於,adv,"Finally, we won!",ついに勝ちました！,我們終於贏了！,ファイナル（最終）に,到final（最後）,2
+grade_3_0309,healthy,健康な,健康的,adj,Vegetables are healthy.,野菜は健康によいです。,蔬菜有益健康。,health（健康）な状態,Health（健康）的狀態,2
+grade_3_0310,local,地元の,當地的,adj,We ate at a local restaurant.,私たちは地元のレストランで食べました。,我們在當地餐廳吃飯。,ローカル線,地方路線local line,3
+grade_3_0311,lonely,さびしい,寂寞的,adj,I felt lonely without you.,あなたがいなくてさびしかったです。,沒有你我很寂寞。,alone（ひとり）の気持ち,Alone（獨自）的感覺,2
+grade_3_0312,main,主な,主要的,adj,What is the main idea?,主な考えは何ですか。,主旨是什麼？,メインディッシュ,主菜main dish,2
+grade_3_0313,national,国の・国民の,國家的,adj,Today is a national holiday.,今日は国民の祝日です。,今天是國定假日。,nation（国家）の,Nation（國家）的,3
+grade_3_0314,nearly,ほとんど・もう少しで,幾乎,adv,It's nearly five o'clock.,もうすぐ5時です。,快五點了。,near（近い）から,來自near（近）,3
+grade_3_0315,necessary,必要な,必要的,adj,Water is necessary for life.,水は生命に必要です。,水是生命所必需的。,,,3
+grade_3_0316,nervous,緊張して,緊張的,adj,I was nervous before the test.,テストの前は緊張しました。,考試前我很緊張。,,,2
+grade_3_0317,once,一度・かつて,一次,adv,I've been there once.,一度そこに行ったことがあります。,我去過那裡一次。,ワンス＝1回,Once＝一次,2
+grade_3_0318,own,自分自身の,自己的,adj,I have my own room.,自分の部屋を持っています。,我有自己的房間。,オーナー＝所有者,Owner＝擁有者,3
+grade_3_0319,perfect,完ぺきな,完美的,adj,Your answer is perfect!,あなたの答えは完ぺきです！,你的答案很完美！,パーフェクト！,完美Perfect！,2
+grade_3_0320,probably,たぶん,可能,adv,It will probably rain tomorrow.,明日はたぶん雨でしょう。,明天可能會下雨。,,,3
+grade_3_0321,quite,かなり,相當,adv,The movie was quite good.,その映画はかなりよかったです。,那部電影相當不錯。,,,3
+grade_3_0322,recently,最近,最近,adv,I saw him recently.,最近彼に会いました。,我最近見過他。,,,3
+grade_3_0323,safe,安全な,安全的,adj,This town is safe at night.,この町は夜でも安全です。,這個鎮晚上很安全。,セーフ！,安全上壘Safe！,2
+grade_3_0324,scared,こわがった,害怕的,adj,I was scared of the dark.,暗やみがこわかったです。,我怕黑。,,,2
+grade_3_0325,several,いくつかの,幾個的,adj,I called him several times.,彼に何度か電話しました。,我打了好幾次電話給他。,,,3
+grade_3_0326,similar,似ている,相似的,adj,Our bags are similar.,私たちのかばんは似ています。,我們的包包很相似。,,,3
+grade_3_0327,smart,かしこい,聰明的,adj,My dog is very smart.,私の犬はとてもかしこいです。,我的狗很聰明。,スマートフォン＝かしこい電話,智慧型手機smart phone,1
+grade_3_0328,someday,いつか,總有一天,adv,I want to visit Paris someday.,いつかパリを訪れたいです。,總有一天我想去巴黎。,some（ある）day（日）,Some（某）day（天）,2
+grade_3_0329,straight,まっすぐに,直的,adv,Go straight down this street.,この道をまっすぐ行きなさい。,沿這條街直走。,ストレート,直球straight,2
+grade_3_0330,strange,奇妙な,奇怪的,adj,I heard a strange noise.,奇妙な音が聞こえました。,我聽到奇怪的聲音。,ストレンジ,奇怪strange,2
+grade_3_0331,suddenly,突然,突然,adv,"Suddenly, it started to rain.",突然、雨が降り始めました。,突然下起雨來。,,,3
+grade_3_0332,surprised,驚いた,驚訝的,adj,I was surprised at the news.,その知らせに驚きました。,我對那消息感到驚訝。,サプライズ,驚喜surprise,2
+grade_3_0333,terrible,ひどい,糟糕的,adj,The weather was terrible.,天気はひどかったです。,天氣很糟。,,,2
+grade_3_0334,thick,厚い,厚的,adj,This book is thick.,この本は厚いです。,這本書很厚。,thinの反対,thin的相反,3
+grade_3_0335,thin,うすい・やせた,薄的、瘦的,adj,The ice is too thin.,氷がうすすぎます。,冰太薄了。,thickの反対,thick的相反,3
+grade_3_0336,true,本当の,真的,adj,Is that story true?,その話は本当ですか。,那個故事是真的嗎？,トゥルー,真實true,2
+grade_3_0337,twice,2回・2倍,兩次,adv,I clean my room twice a week.,週に2回部屋をそうじします。,我一週打掃房間兩次。,two（2）回,Two（兩）次,2
+grade_3_0338,useful,役に立つ,有用的,adj,This dictionary is useful.,この辞書は役に立ちます。,這本字典很有用。,use（使う）のにfull（満ちた）,充滿（full）用途（use）,2
+grade_3_0339,whole,全体の,整個的,adj,I read the whole book.,本を全部読みました。,我讀完了整本書。,,,3
+grade_3_0340,wild,野生の,野生的,adj,Wild animals live in this forest.,野生動物がこの森に住んでいます。,野生動物住在這座森林。,ワイルドだろ？,狂野wild,2
+grade_3_0341,worried,心配して,擔心的,adj,My mother looked worried.,母は心配そうでした。,我媽媽看起來很擔心。,,,2
+grade_3_0342,yet,まだ・もう,還（沒）,adv,I haven't finished yet.,まだ終わっていません。,我還沒做完。,,,3

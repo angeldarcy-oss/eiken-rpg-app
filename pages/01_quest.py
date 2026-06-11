@@ -114,6 +114,7 @@ def _play_sound(sound_type: str):
     play_sound(key, _SOUNDS[key], volume=0.65)
 
 
+@st.cache_data(show_spinner=False, max_entries=600)
 def _get_audio_b64(word):
     try:
         from gtts import gTTS
@@ -809,6 +810,11 @@ if st.session_state.get("_boss_just_appeared"):
 st.markdown('<div class="progress-label">' + t("progress_label", lang) + ' ' + str(answered_count) + ' / ' + str(total_words) + ' ' + t("questions", lang) + '</div>', unsafe_allow_html=True)
 st.progress(answered_count / total_words)
 
+# ── リスニングモード切り替え ─────────────────────────────────
+st.toggle(
+    ("🎧 リスニングモード（音声を聞いて答える）" if lang == "ja" else "🎧 聽力模式（聽發音作答）"),
+    key="listening_mode")
+
 # ── ボス戦中：大型HPバー ─────────────────────────────────────
 if st.session_state.get("battle_boss_active"):
     _b = st.session_state.get("battle_monster", {})
@@ -846,17 +852,27 @@ bonus = ('<span style="background:#2a1a00;color:#ffe066;border:1px solid #5a3a00
          'padding:2px 8px;font-size:.75rem;margin-left:8px;">🔥 EXP x' + str(mult) + '</span>'
          if mult > 1.0 else "")
 
+# リスニングモード：音声生成に成功し、まだ回答していない間だけ単語を隠す
+audio_b64 = _get_audio_b64(q.word)
+listening_active = bool(
+    st.session_state.get("listening_mode") and audio_b64 and not st.session_state.answered)
+
 # クイズカード（単語・品詞バッジ）
+if listening_active:
+    _instr = "音声を聞いて、意味を選んでください" if lang == "ja" else "請聽發音，選出正確的意思"
+    _word_html = '<div class="word-display" style="letter-spacing:6px;">🎧 ？？？</div>'
+else:
+    _instr = t("quest_instruction", lang)
+    _word_html = '<div class="word-display">' + q.word + '</div>'
 st.markdown(
     '<div class="quiz-card">'
-    '<div style="font-size:.9rem;color:#aaaacc;text-align:center;margin-bottom:20px;">' + t("quest_instruction", lang) + ' ' + diff_stars + bonus + '</div>'
-    '<div class="word-display">' + q.word + '</div>'
+    '<div style="font-size:.9rem;color:#aaaacc;text-align:center;margin-bottom:20px;">' + _instr + ' ' + diff_stars + bonus + '</div>'
+    + _word_html +
     '<div style="text-align:center;"><span class="pos-badge">' + pos_ja + '</span></div>'
     '</div>', unsafe_allow_html=True)
 
 # 発音ボタン：st.markdown は React レンダラー経由で onclick を除去するため
 # components.html（実 iframe）内に audio 要素とクリック要素を同居させる
-audio_b64 = _get_audio_b64(q.word)
 if audio_b64:
     components.html(
         '<style>'
@@ -876,8 +892,12 @@ if audio_b64:
         'f.setAttribute("allowtransparency","true");}catch(e){}'
         '</script>'
         '<audio id="sa" src="data:audio/mp3;base64,' + audio_b64 + '"></audio>'
-        "<span class='sl' onclick=\"document.getElementById('sa').play()\">"
-        '🔊 ' + q.word +
+        "<span class='sl'" +
+        (' style="font-size:1.15rem;color:#ffe066;background:rgba(255,224,102,0.12);'
+         'border-color:rgba(255,224,102,0.4);"' if listening_active else '') +
+        " onclick=\"document.getElementById('sa').play()\">" +
+        (('🔊 ' + ("タップして聞く" if lang == "ja" else "點擊聽發音")) if listening_active
+         else ('🔊 ' + q.word)) +
         '</span>',
         height=52, scrolling=False
     )

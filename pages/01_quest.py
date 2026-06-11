@@ -14,6 +14,7 @@ from core.ai_tutor import get_explanation
 from core.player import PlayerManager, streak_multiplier
 from core.save_manager import load_player, save_player, append_history, update_ranking
 from core.sound import render_sound_bootstrap, play_sound
+from core.srs import record_result as srs_record, due_words as srs_due_words
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
 from core.daily_quest import get_or_reset_daily_quests, update_quest_progress, QUEST_DEFS as _QUEST_DEFS
@@ -497,7 +498,9 @@ def load_next_question():
     # ダメージ表示はクリア（次の問題では表示しない）
     st.session_state.battle_damage_this_turn = 0
 
-    q = engine.get_next_question()
+    # SRS: 復習期限が来ている単語を60%の確率で優先出題
+    _due = srs_due_words(st.session_state.player)
+    q = engine.get_next_question(preferred_words=_due if _due else None)
     if q is None:
         st.session_state.quest_finished = True
     else:
@@ -919,6 +922,8 @@ if not st.session_state.answered:
                 else:
                     apply_wrong(result)
                     st.session_state.play_sound = "wrong"
+                # SRS: 単語ごとの復習スケジュールを更新
+                srs_record(st.session_state.player, q.word, result.is_correct)
                 # 途中でページを閉じてもEXPが消えないよう毎回保存する
                 save_player(st.session_state.player, st.session_state.get("username", ""))
                 st.rerun()

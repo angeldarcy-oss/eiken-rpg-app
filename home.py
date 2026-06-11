@@ -17,6 +17,7 @@ from core.daily_quest import (
     get_or_reset_daily_quests, get_claimable_login_bonuses, QUEST_DEFS,
 )
 from core.equipment import LOGIN_BONUS_THRESHOLDS
+from core.srs import due_words, mastered_count
 
 
 def render_sidebar():
@@ -123,6 +124,20 @@ def render():
     next_milestone = next((m for m in LOGIN_BONUS_THRESHOLDS if m > streak_days), None)
     tomorrow_exp = daily_login_exp_amount(streak_days + 1)
 
+    # SRS: 今日の復習対象
+    _due_count = len(due_words(p))
+    _mastered = mastered_count(p)
+    _srs_html = ""
+    if _due_count > 0:
+        _srs_html = ('📚 <b style="color:#ffe066;">'
+                     + (("今日の復習 " + str(_due_count) + " 語") if _ja
+                        else ("今日複習 " + str(_due_count) + " 個單字"))
+                     + '</b>'
+                     + ((' — クエストで優先的に出題されるよ' if _ja else ' — 任務中會優先出題')) + '<br>')
+    elif _mastered > 0:
+        _srs_html = ('📚 ' + (("マスターした単語 " + str(_mastered) + " 語！") if _ja
+                              else ("已精通 " + str(_mastered) + " 個單字！")) + '<br>')
+
     milestone_html = ""
     if claimable:
         milestone_html = ('<span style="color:#ffe066;">🎁 ' +
@@ -143,6 +158,7 @@ def render():
         '<div style="font-size:.85rem;color:#ccccee;margin-top:8px;line-height:1.9;">'
         '📅 ' + (("デイリークエスト " + str(done) + "/" + str(len(QUEST_DEFS)) + " 達成") if _ja
                  else ("每日任務完成 " + str(done) + "/" + str(len(QUEST_DEFS)))) + '<br>'
+        + _srs_html +
         '✨ ' + (("明日ログインすると +" + str(tomorrow_exp) + " EXP もらえるよ！") if _ja
                  else ("明天登入可獲得 +" + str(tomorrow_exp) + " EXP！")) +
         '</div></div>',

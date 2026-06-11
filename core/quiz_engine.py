@@ -88,6 +88,9 @@ class QuizEngine:
         self.remaining_ids: List[str] = list(self.df["word_id"])
         random.shuffle(self.remaining_ids)
 
+        # word_id → 単語 の対応（SRS優先出題で使う）
+        self._word_by_id: Dict[str, str] = dict(zip(self.df["word_id"], self.df["word"]))
+
         # セッション中の履歴
         self.history: List[QuizResult] = []
 
@@ -95,12 +98,17 @@ class QuizEngine:
     # パブリックメソッド（外から呼ぶ関数）
     # ──────────────────────────────────────
 
-    def get_next_question(self, prioritize_weak: bool = False) -> Optional["Question"]:
+    def get_next_question(self, prioritize_weak: bool = False,
+                          preferred_words: Optional[List[str]] = None,
+                          preferred_prob: float = 0.6) -> Optional["Question"]:
         """
         次の問題を1問返す。
 
         Args:
-            prioritize_weak: Trueにすると苦手単語を優先して出題する
+            prioritize_weak:  Trueにすると苦手単語を優先して出題する
+            preferred_words:  優先して出題したい単語リスト（SRSの復習対象など）。
+                              preferred_prob の確率でこの中から出題する。
+            preferred_prob:   preferred_words から出題する確率（0.0〜1.0）
 
         Returns:
             Question オブジェクト。出題できる単語がなければ None を返す。
@@ -108,10 +116,19 @@ class QuizEngine:
         if not self.remaining_ids:
             return None  # 全問出題済み
 
+        word_id = None
+        # SRS復習優先モード
+        if preferred_words and random.random() < preferred_prob:
+            preferred_set = set(preferred_words)
+            cand = [wid for wid in self.remaining_ids
+                    if self._word_by_id.get(wid) in preferred_set]
+            if cand:
+                word_id = random.choice(cand)
+                self.remaining_ids.remove(word_id)
         # 苦手単語優先モード
-        if prioritize_weak:
-            word_id = self._pick_weak_word() or self.remaining_ids.pop(0)
-        else:
+        if word_id is None and prioritize_weak:
+            word_id = self._pick_weak_word()
+        if word_id is None:
             word_id = self.remaining_ids.pop(0)
 
         # DataFrameから対象行を取得

@@ -334,6 +334,8 @@ def _validate_and_fill(player: dict) -> dict:
         player["dungeons"] = {}
     if "exp_spent" not in player:
         player["exp_spent"] = 0
+    if "srs" not in player:
+        player["srs"] = {}
     return player
 
 

@@ -374,6 +374,8 @@ def new_player(name: str = "勇者", grade_target: str = "grade_4", language: st
         "dungeons": {},
         # ショップシステム
         "exp_spent": 0,
+        # 間隔反復（SRS）: {単語: {"box": 1-5, "due": "YYYY-MM-DD"}}
+        "srs": {},
     }
 
 

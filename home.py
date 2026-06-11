@@ -12,6 +12,11 @@ from core.characters import get_character, sidebar_avatar_html
 from core.nav import render_nav
 from core.equipment_bonus import sidebar_bonus_html
 from core.mobile_css import MOBILE_CSS
+from core.daily_quest import (
+    get_login_streak, claim_daily_login_exp, daily_login_exp_amount,
+    get_or_reset_daily_quests, get_claimable_login_bonuses, QUEST_DEFS,
+)
+from core.equipment import LOGIN_BONUS_THRESHOLDS
 
 
 def render_sidebar():
@@ -96,6 +101,55 @@ def render():
         'background-clip:text;margin-bottom:4px;">⚔️ 英検Quest ⚔️</div>'
         '<div style="text-align:center;color:#888;margin-bottom:24px;">' + t("app_subtitle", lang) + '</div>',
         unsafe_allow_html=True)
+
+    # ── 毎日ログインダッシュボード ──────────────────────────
+    _ja = (lang == "ja")
+    ls = get_login_streak(p)
+    streak_days = ls.get("streak_days", 1)
+    bonus_exp = claim_daily_login_exp(p)
+    if bonus_exp:
+        username = st.session_state.get("username", "")
+        save_player(p, username)
+        update_ranking(p, username)
+        st.balloons()
+        st.success(
+            ("🎁 ログインボーナス +" + str(bonus_exp) + " EXP！（連続" + str(streak_days) + "日目）")
+            if _ja else
+            ("🎁 登入獎勵 +" + str(bonus_exp) + " EXP！（連續第" + str(streak_days) + "天）"))
+
+    quests = get_or_reset_daily_quests(p)
+    done = sum(1 for q in quests if q.get("completed"))
+    claimable = get_claimable_login_bonuses(p)
+    next_milestone = next((m for m in LOGIN_BONUS_THRESHOLDS if m > streak_days), None)
+    tomorrow_exp = daily_login_exp_amount(streak_days + 1)
+
+    milestone_html = ""
+    if claimable:
+        milestone_html = ('<span style="color:#ffe066;">🎁 ' +
+                          ("受け取れる報酬があります！" if _ja else "有可領取的獎勵！") + '</span>')
+    elif next_milestone:
+        _days_left = next_milestone - streak_days
+        milestone_html = ('<span style="color:#888;">🎁 ' +
+                          (("あと" + str(_days_left) + "日で記念日報酬") if _ja
+                           else ("再" + str(_days_left) + "天獲得里程碑獎勵")) + '</span>')
+
+    st.markdown(
+        '<div class="info-card">'
+        '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">'
+        '<div style="font-size:1.05rem;font-weight:700;color:#ffaa00;">🔥 '
+        + (("連続ログイン " + str(streak_days) + " 日目") if _ja else ("連續登入第 " + str(streak_days) + " 天")) +
+        '</div>' + milestone_html +
+        '</div>'
+        '<div style="font-size:.85rem;color:#ccccee;margin-top:8px;line-height:1.9;">'
+        '📅 ' + (("デイリークエスト " + str(done) + "/" + str(len(QUEST_DEFS)) + " 達成") if _ja
+                 else ("每日任務完成 " + str(done) + "/" + str(len(QUEST_DEFS)))) + '<br>'
+        '✨ ' + (("明日ログインすると +" + str(tomorrow_exp) + " EXP もらえるよ！") if _ja
+                 else ("明天登入可獲得 +" + str(tomorrow_exp) + " EXP！")) +
+        '</div></div>',
+        unsafe_allow_html=True)
+    if done < len(QUEST_DEFS) or claimable:
+        st.page_link("pages/03_daily.py",
+                     label=("📅 今日のクエストを見る" if _ja else "📅 查看今日任務"), icon="➡️")
 
     st.markdown(
         '<div class="info-card">'

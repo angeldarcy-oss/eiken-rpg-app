@@ -69,6 +69,36 @@ def get_login_streak(player: dict) -> dict:
     return ls
 
 
+# 毎日のログインEXPボーナス: 基本20 + 連続日数×5（10日目以降は上限）
+LOGIN_EXP_BASE = 20
+LOGIN_EXP_PER_DAY = 5
+LOGIN_EXP_STREAK_CAP = 10
+
+
+def daily_login_exp_amount(streak_days: int) -> int:
+    """連続ログイン日数に応じた今日のボーナスEXP額を返す。"""
+    streak = max(1, streak_days)
+    return LOGIN_EXP_BASE + LOGIN_EXP_PER_DAY * (min(streak, LOGIN_EXP_STREAK_CAP) - 1)
+
+
+def claim_daily_login_exp(player: dict) -> int:
+    """1日1回、連続日数に応じたログインEXPを付与する。
+
+    付与したEXP額を返す。今日すでに受け取り済みなら0を返す。
+    """
+    ls = player.setdefault("login_streak", {
+        "last_login": "", "streak_days": 0, "claimed_milestones": []
+    })
+    today = _today()
+    if ls.get("last_exp_claim") == today:
+        return 0
+    exp = daily_login_exp_amount(ls.get("streak_days", 1))
+    ls["last_exp_claim"] = today
+    from core.player import PlayerManager
+    PlayerManager(player).gain_exp(exp)
+    return exp
+
+
 def get_claimable_login_bonuses(player: dict) -> list[int]:
     """受け取り可能なログインボーナスのしきい値リストを返す。"""
     from core.equipment import LOGIN_BONUS_THRESHOLDS

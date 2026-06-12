@@ -1,10 +1,19 @@
 from __future__ import annotations
-from typing import Dict
+from typing import Dict, Optional
 import os
-import google.generativeai as genai
+from google import genai
 from dotenv import load_dotenv
 
 load_dotenv()
+
+_client: Optional["genai.Client"] = None
+
+
+def _get_genai_client(api_key: str) -> "genai.Client":
+    global _client
+    if _client is None:
+        _client = genai.Client(api_key=api_key)
+    return _client
 
 _GRADE_PERSONA = {
     "grade_5": {"label":"5級","age":"小学生","style":"ひらがなをたくさん使って、やさしいことばで","length":"3〜4文"},
@@ -27,8 +36,7 @@ def get_explanation(word, meaning_ja, wrong_answer, example_en, example_ja, grad
         return _fallback(word, meaning_ja, wrong_answer)
 
     try:
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-2.0-flash")
+        client = _get_genai_client(api_key)
         persona = _GRADE_PERSONA.get(grade, _GRADE_PERSONA["grade_4"])
         hint_section = "ヒント: " + hint if hint else ""
         prompt = (
@@ -47,8 +55,11 @@ def get_explanation(word, meaning_ja, wrong_answer, example_en, example_ja, grad
             "4. 覚え方で締める\n"
             "マークダウン不要"
         )
-        response = model.generate_content(prompt)
-        explanation = response.text.strip()
+        response = client.models.generate_content(
+            model="gemini-2.0-flash", contents=prompt)
+        explanation = (response.text or "").strip()
+        if not explanation:
+            return _fallback(word, meaning_ja, wrong_answer)
         _explanation_cache[cache_key] = explanation
         return explanation
     except Exception as e:

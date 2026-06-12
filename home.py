@@ -167,6 +167,24 @@ def render():
         st.page_link("pages/03_daily.py",
                      label=("📅 今日のクエストを見る" if _ja else "📅 查看今日任務"), icon="➡️")
 
+    # ── クエスト開始CTA（大きく・目立つ位置に） ──────────────
+    st.markdown(
+        '<style>'
+        'div.stButton > button[kind="primary"],'
+        'div.stButton > button[data-testid="stBaseButton-primary"]{'
+        'background:linear-gradient(135deg,#ffaa00,#ff6600)!important;'
+        'color:#fff!important;font-size:1.25rem!important;font-weight:900!important;'
+        'padding:0.85rem 1rem!important;border:none!important;border-radius:14px!important;'
+        'letter-spacing:.05em;'
+        'animation:questGlow 2s ease-in-out infinite;}'
+        '@keyframes questGlow{'
+        '0%,100%{box-shadow:0 4px 14px rgba(255,140,0,.45);}'
+        '50%{box-shadow:0 4px 24px rgba(255,170,0,.85);}}'
+        '</style>', unsafe_allow_html=True)
+    if st.button(("⚔️ クエストをはじめる！" if _ja else "⚔️ 開始任務！"),
+                 type="primary", use_container_width=True, key="start_quest_top"):
+        st.switch_page("pages/01_quest.py")
+
     st.markdown(
         '<div class="info-card">'
         '<div style="display:flex;align-items:center;gap:20px;">'
@@ -191,7 +209,9 @@ def render():
         unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    st.page_link("pages/01_quest.py", label=t("start_quest", lang), icon="🗡️")
+    if st.button(t("start_quest", lang), type="primary",
+                 use_container_width=True, key="start_quest_bottom"):
+        st.switch_page("pages/01_quest.py")
 
 
 render_sidebar()

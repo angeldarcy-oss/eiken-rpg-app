@@ -54,25 +54,22 @@ def _manifest_data_uri() -> str:
     return "data:application/manifest+json;base64," + payload
 
 
-def _touch_icon_url() -> str:
-    """apple-touch-icon用のURLを返す。
+def _render_hidden_icon() -> None:
+    """アイコンPNGをst.imageとして（不可視で）描画する。
 
-    Streamlitのメディアファイルマネージャ（st.imageが使う /media/ 配信）に
-    登録できればそのURLを、できなければ data: URLを返す。
+    画面要素に紐づいた画像はStreamlit標準の/media/配信の対象になり、
+    Cloudのエッジも確実に通すため、このimgのURLをapple-touch-iconに使う。
     """
+    import streamlit as st
     try:
-        from streamlit.runtime import get_instance
-        mgr = get_instance().media_file_mgr
-        url = mgr.add(
-            (_ASSETS_DIR / "icon-180.png").read_bytes(),
-            "image/png",
-            "eiken-pwa-touch-icon",
-        )
-        if url:
-            return url
+        with st.container(key="eiken-pwa-icon"):
+            # widthは指定しない（指定すると配信画像自体がそのサイズに縮小される）
+            st.image(str(_ASSETS_DIR / "icon-180.png"))
+        st.markdown(
+            '<style>.st-key-eiken-pwa-icon{display:none;}</style>',
+            unsafe_allow_html=True)
     except Exception:
-        pass
-    return "data:image/png;base64," + _icon_b64("icon-180.png")
+        pass  # 古いStreamlit等でkey付きcontainer非対応の場合はdata URIで賄う
 
 
 def inject_pwa_tags() -> None:
@@ -83,13 +80,19 @@ def inject_pwa_tags() -> None:
     apple-touch-icon を取り除いてから自分のタグを挿入する。
     後からホスティング側がタグを再注入してもMutationObserverで排除する。
     """
+    _render_hidden_icon()
     manifest_href = _manifest_data_uri()
-    icon_href = _touch_icon_url()
+    icon_fallback = "data:image/png;base64," + _icon_b64("icon-180.png")
     html_embed(
         '<script>(function(){'
         'var d=window.parent.document;'
         'var MF=' + json.dumps(manifest_href) + ';'
-        'var IC=' + json.dumps(icon_href) + ';'
+        'var IC_FB=' + json.dumps(icon_fallback) + ';'
+        # 不可視描画したst.imageのURL（/media/...）を優先、まだ無ければdata URI
+        'function iconHref(){'
+        'var img=d.querySelector(".st-key-eiken-pwa-icon img");'
+        'return (img&&img.src)?img.src:IC_FB;'
+        '}'
         'function apply(){'
         # 自分のもの以外の manifest / apple-touch-icon を排除
         'd.querySelectorAll(\'link[rel="manifest"],link[rel~="apple-touch-icon"]\')'
@@ -98,7 +101,7 @@ def inject_pwa_tags() -> None:
         '});'
         'var tags=['
         '["link",{rel:"manifest",href:MF,id:"eiken-pwa"}],'
-        '["link",{rel:"apple-touch-icon",sizes:"180x180",href:IC,id:"eiken-pwa-icon"}],'
+        '["link",{rel:"apple-touch-icon",sizes:"180x180",href:iconHref(),id:"eiken-pwa-icon"}],'
         '["meta",{name:"apple-mobile-web-app-capable",content:"yes"}],'
         '["meta",{name:"mobile-web-app-capable",content:"yes"}],'
         '["meta",{name:"apple-mobile-web-app-status-bar-style",content:"black-translucent"}],'
@@ -115,6 +118,9 @@ def inject_pwa_tags() -> None:
         '});'
         '}'
         'apply();'
+        # st.imageの描画完了が遅れてもURLを反映できるよう一定時間再適用する
+        'var n=0;'
+        'var t=setInterval(function(){apply();if(++n>=20)clearInterval(t);},500);'
         # ホスティング側が後からタグを注入しても常に排除する
         'if(!window.parent.__eikenPwaObserver){'
         'var obs=new MutationObserver(function(){apply();});'

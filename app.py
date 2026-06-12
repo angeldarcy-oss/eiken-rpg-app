@@ -144,7 +144,7 @@ if not st.session_state.logged_in:
             '}else{out.push("✗ touch-icon: なし");}'
             'out.push((tt&&tt.content==="\\u82f1\\u691cQuest"?"✓":"✗")+" app-title: "+(tt?tt.content:"なし"));'
             '}catch(e){out.push("✗ 親ページ参照: 不可 "+e);}'
-            'out.push("ビルド: 2026-06-12-E");'
+            'out.push("ビルド: 2026-06-12-F");'
             'document.getElementById("r").innerText=out.join("\\n");'
             '})();</script>',
             height=170)

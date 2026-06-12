@@ -510,3 +510,53 @@ grade_5_0508,salad,サラダ,沙拉,n,I eat salad every morning.,毎朝サラダ
 grade_5_0509,soccer,サッカー,足球,n,Soccer is fun.,サッカーは楽しいです。,足球很好玩。,,,1
 grade_5_0510,soup,スープ,湯,n,This soup is hot.,このスープは熱いです。,這湯很燙。,,,1
 grade_5_0511,spoon,スプーン,湯匙,n,I eat soup with a spoon.,スプーンでスープを飲みます。,我用湯匙喝湯。,,,1
+grade_5_0512,thirteen,13（の）,十三,n,She is thirteen years old.,彼女は13歳です。,她十三歲。,,,1
+grade_5_0513,fourteen,14（の）,十四,n,There are fourteen girls in my class.,クラスに女子が14人います。,我們班有十四個女生。,,,1
+grade_5_0514,fifteen,15（の）,十五,n,The break is fifteen minutes.,休み時間は15分です。,休息時間是十五分鐘。,,,1
+grade_5_0515,sixteen,16（の）,十六,n,My sister is sixteen.,姉は16歳です。,我姊姊十六歲。,,,1
+grade_5_0516,seventeen,17（の）,十七,n,"Page seventeen, please.",17ページを開いてください。,請翻到第十七頁。,,,1
+grade_5_0517,eighteen,18（の）,十八,n,He becomes eighteen next month.,彼は来月18歳になります。,他下個月滿十八歲。,,,1
+grade_5_0518,nineteen,19（の）,十九,n,Nineteen students joined the club.,19人の生徒がクラブに入りました。,十九個學生加入了社團。,,,1
+grade_5_0519,sixty,60（の）,六十,n,One hour is sixty minutes.,1時間は60分です。,一小時是六十分鐘。,,,1
+grade_5_0520,seventy,70（の）,七十,n,My grandfather is seventy.,祖父は70歳です。,我爺爺七十歲。,,,1
+grade_5_0521,eighty,80（の）,八十,n,The bus seats eighty people.,そのバスは80人乗りです。,那輛巴士可坐八十人。,,,1
+grade_5_0522,ninety,90（の）,九十,n,I got ninety points!,90点を取りました！,我得了九十分！,,,1
+grade_5_0523,first,1番目の・最初の,第一的,adj,Today is the first day of school.,今日は学校の初日です。,今天是開學第一天。,1st,1st,1
+grade_5_0524,third,3番目の,第三的,adj,My classroom is on the third floor.,教室は3階にあります。,我的教室在三樓。,3rd,3rd,1
+grade_5_0525,tennis,テニス,網球,n,Let's play tennis after school.,放課後テニスをしましょう。,放學後我們打網球吧。,,,1
+grade_5_0526,volleyball,バレーボール,排球,n,She is on the volleyball team.,彼女はバレーボール部です。,她是排球隊的。,,,1
+grade_5_0527,ski,スキーをする,滑雪,v,We ski in winter.,冬にスキーをします。,我們冬天滑雪。,,,1
+grade_5_0528,skate,スケートをする,溜冰,v,Can you skate?,スケートできますか。,你會溜冰嗎？,,,1
+grade_5_0529,art,美術・芸術,美術,n,Art is my favorite subject.,美術は大好きな教科です。,美術是我最喜歡的科目。,,,1
+grade_5_0530,English,英語,英文,n,I study English every day.,毎日英語を勉強します。,我每天學英文。,,,1
+grade_5_0531,Japanese,日本語・日本人（の）,日語、日本人,n,She speaks Japanese well.,彼女は日本語が上手です。,她日語說得很好。,,,1
+grade_5_0532,flute,フルート,長笛,n,She plays the flute.,彼女はフルートを吹きます。,她吹長笛。,,,1
+grade_5_0533,trumpet,トランペット,小號,n,He practices the trumpet.,彼はトランペットを練習します。,他練習小號。,,,1
+grade_5_0534,harmonica,ハーモニカ,口琴,n,I can play the harmonica.,ハーモニカが吹けます。,我會吹口琴。,,,1
+grade_5_0535,deer,シカ,鹿,n,We saw deer in Nara.,奈良でシカを見ました。,我們在奈良看到鹿。,,,1
+grade_5_0536,wolf,オオカミ,狼,n,A wolf lives in the mountains.,オオカミは山に住んでいます。,狼住在山裡。,,,1
+grade_5_0537,turtle,カメ,烏龜,n,The turtle walks slowly.,カメはゆっくり歩きます。,烏龜走得很慢。,,,1
+grade_5_0538,crab,カニ,螃蟹,n,We caught a crab at the beach.,浜辺でカニをつかまえました。,我們在海邊抓到螃蟹。,,,1
+grade_5_0539,octopus,タコ,章魚,n,An octopus has eight legs.,タコは足が8本あります。,章魚有八隻腳。,,,1
+grade_5_0540,melon,メロン,哈密瓜,n,This melon is sweet.,このメロンはあまいです。,這哈密瓜很甜。,,,1
+grade_5_0541,watermelon,スイカ,西瓜,n,We eat watermelon in summer.,夏にスイカを食べます。,我們夏天吃西瓜。,water（水）のmelon,Water（水）的melon,1
+grade_5_0542,pudding,プリン,布丁,n,My favorite dessert is pudding.,大好きなデザートはプリンです。,我最喜歡的甜點是布丁。,,,1
+grade_5_0543,rice ball,おにぎり,飯糰,n,I made rice balls for lunch.,昼食におにぎりを作りました。,我做了飯糰當午餐。,,,1
+grade_5_0544,aquarium,水族館,水族館,n,Let's go to the aquarium.,水族館に行きましょう。,我們去水族館吧。,,,1
+grade_5_0545,bookstore,本屋,書店,n,I bought a comic at the bookstore.,本屋でマンガを買いました。,我在書店買了漫畫。,book＋store,Book＋store,1
+grade_5_0546,flower shop,花屋,花店,n,The flower shop is near the station.,花屋は駅の近くです。,花店在車站附近。,,,1
+grade_5_0547,shampoo,シャンプー,洗髮精,n,I wash my hair with shampoo.,シャンプーで髪を洗います。,我用洗髮精洗頭。,,,1
+grade_5_0548,toothpaste,歯みがき粉,牙膏,n,Put toothpaste on your toothbrush.,歯ブラシに歯みがき粉をつけなさい。,把牙膏擠在牙刷上。,tooth＋paste,Tooth＋paste,1
+grade_5_0549,pajamas,パジャマ,睡衣,n,Change into your pajamas.,パジャマに着がえなさい。,換上睡衣。,,,1
+grade_5_0550,slippers,スリッパ,拖鞋,n,Wear slippers in the house.,家の中ではスリッパをはきなさい。,在家裡穿拖鞋。,,,1
+grade_5_0551,ribbon,リボン,緞帶,n,She wears a red ribbon.,彼女は赤いリボンをつけています。,她戴著紅色緞帶。,,,1
+grade_5_0552,candle,ろうそく,蠟燭,n,Blow out the candles!,ろうそくを吹き消して！,吹熄蠟燭！,,,1
+grade_5_0553,picnic,ピクニック,野餐,n,We had a picnic in the park.,公園でピクニックをしました。,我們在公園野餐。,,,1
+grade_5_0554,swing,ブランコ,鞦韆,n,The children play on the swings.,子どもたちはブランコで遊びます。,孩子們盪鞦韆。,,,1
+grade_5_0555,slide,すべり台,溜滑梯,n,The slide is fun.,すべり台は楽しいです。,溜滑梯很好玩。,,,1
+grade_5_0556,ladybug,テントウムシ,瓢蟲,n,A ladybug is on the leaf.,テントウムシが葉の上にいます。,瓢蟲在葉子上。,,,1
+grade_5_0557,beetle,カブトムシ,甲蟲,n,Boys love beetles.,男の子はカブトムシが大好きです。,男孩們喜歡甲蟲。,,,1
+grade_5_0558,snail,カタツムリ,蝸牛,n,A snail moves very slowly.,カタツムリはとてもゆっくり動きます。,蝸牛動得很慢。,,,1
+grade_5_0559,spider,クモ,蜘蛛,n,A spider makes a web.,クモは巣を作ります。,蜘蛛結網。,,,1
+grade_5_0560,grasshopper,バッタ,蚱蜢,n,A grasshopper jumps high.,バッタは高くとびます。,蚱蜢跳得很高。,,,1
+grade_5_0561,goldfish,金魚,金魚,n,I have three goldfish.,金魚を3びき飼っています。,我養了三條金魚。,gold（金）のfish,Gold（金）的fish,1

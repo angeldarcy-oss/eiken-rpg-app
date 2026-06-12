@@ -587,3 +587,58 @@ grade_4_0585,midnight,真夜中,午夜,n,He came home at midnight.,彼は真夜�
 grade_4_0586,playground,遊び場・校庭,遊樂場,n,The playground is full of children.,遊び場は子どもでいっぱいです。,遊樂場滿是孩子。,play（遊ぶ）ground（場所）,Play（玩）的ground（場地）,1
 grade_4_0587,shrine,神社,神社,n,We visited a shrine on New Year's Day.,元日に神社に行きました。,我們元旦去了神社。,,,2
 grade_4_0588,temple,寺,寺廟,n,The old temple is famous.,その古いお寺は有名です。,那座古老的寺廟很有名。,,,2
+grade_4_0589,act,行動する・演じる,行動、演戲,v,Act quickly in an emergency.,緊急時はすばやく行動しなさい。,緊急時要迅速行動。,アクション,動作action,2
+grade_4_0590,add,加える,加,v,Add some sugar to the tea.,お茶に砂糖を加えなさい。,在茶裡加點糖。,,,2
+grade_4_0591,copy,写す・コピーする,抄寫、複製,v,Copy the words in your notebook.,ノートに単語を写しなさい。,把單字抄在筆記本上。,,,1
+grade_4_0592,fold,折りたたむ,摺疊,v,Fold the paper in half.,紙を半分に折りなさい。,把紙對摺。,,,2
+grade_4_0593,follow,ついていく・従う,跟隨,v,"Follow me, please.",私についてきてください。,請跟我來。,フォローする,跟隨follow,2
+grade_4_0594,hate,大きらいである,討厭,v,I hate carrots.,ニンジンが大きらいです。,我討厭紅蘿蔔。,loveの反対,Love的相反,1
+grade_4_0595,hike,ハイキングをする,健行,v,We hiked in the mountains.,山でハイキングをしました。,我們去山裡健行。,ハイキング,健行hiking,1
+grade_4_0596,hug,だきしめる,擁抱,v,She hugged her dog.,彼女は犬をだきしめました。,她抱了抱她的狗。,ハグする,擁抱hug,1
+grade_4_0597,land,着陸する・土地,降落、土地,v,The plane landed safely.,飛行機は無事に着陸しました。,飛機安全降落。,,,2
+grade_4_0598,melt,とける,融化,v,The snow is melting.,雪がとけています。,雪正在融化。,,,2
+grade_4_0599,mix,混ぜる,混合,v,Mix the eggs and milk.,卵と牛乳を混ぜなさい。,把蛋和牛奶混合。,ミックスジュース,混合果汁mix juice,1
+grade_4_0600,plant,植える・植物,種植、植物,v,We planted flowers in the garden.,庭に花を植えました。,我們在花園種了花。,,,1
+grade_4_0601,pour,注ぐ,倒,v,Pour the milk into the glass.,コップに牛乳を注ぎなさい。,把牛奶倒進杯子。,,,2
+grade_4_0602,print,印刷する,列印,v,Print your name here.,ここに名前を書いて（活字体で）ください。,在這裡用正楷寫上名字。,プリンター,印表機printer,2
+grade_4_0603,rent,借りる（有料で）,租,v,We rented bikes at the park.,公園で自転車を借りました。,我們在公園租了腳踏車。,レンタル,出租rental,2
+grade_4_0604,roll,転がる・転がす,滾動,v,The ball rolled down the hill.,ボールは坂を転がり落ちました。,球滾下山坡。,ロールケーキ,瑞士捲roll cake,2
+grade_4_0605,sail,航海する,航行,v,The ship sails tomorrow.,船は明日出航します。,船明天啟航。,ヨットのセール（帆）,帆船的帆sail,2
+grade_4_0606,shout,さけぶ,大叫,v,Don't shout in the library.,図書館でさけんではいけません。,在圖書館不要大聲叫。,,,2
+grade_4_0607,stretch,のばす・ストレッチする,伸展,v,Stretch before you run.,走る前にストレッチしなさい。,跑步前要做伸展。,,,2
+grade_4_0608,surf,サーフィンをする・ネットを見る,衝浪,v,He surfs every weekend.,彼は毎週末サーフィンをします。,他每個週末衝浪。,ネットサーフィン,網上衝浪net surfing,2
+grade_4_0609,tie,結ぶ・ネクタイ,綁、領帶,v,Tie your shoes.,くつのひもを結びなさい。,綁好你的鞋帶。,ネクタイ,領帶necktie,2
+grade_4_0610,wrap,包む,包,v,I wrapped the present.,プレゼントを包みました。,我把禮物包起來了。,ラップで包む,用保鮮膜wrap包,2
+grade_4_0611,address,住所,地址,n,Write your name and address.,名前と住所を書きなさい。,寫上你的名字和地址。,メールアドレス,郵件地址address,2
+grade_4_0612,age,年齢,年齡,n,We are the same age.,私たちは同い年です。,我們同年齡。,,,2
+grade_4_0613,block,区画・ブロック,街區、積木,n,The school is two blocks away.,学校は2区画先です。,學校在兩個街區外。,,,2
+grade_4_0614,capital,首都,首都,n,Tokyo is the capital of Japan.,東京は日本の首都です。,東京是日本的首都。,,,2
+grade_4_0615,center,中心・センター,中心,n,The shop is in the center of town.,その店は町の中心にあります。,那家店在市中心。,センター,中心center,2
+grade_4_0616,coin,硬貨・コイン,硬幣,n,I found an old coin.,古い硬貨を見つけました。,我找到一枚舊硬幣。,,,1
+grade_4_0617,gift,贈り物,禮物,n,This is a gift for you.,これはあなたへの贈り物です。,這是給你的禮物。,ギフト,禮品gift,1
+grade_4_0618,host,主人・主催者,主人、主辦者,n,Our city is the host of the festival.,私たちの市がお祭りの主催です。,我們市是慶典的主辦方。,ホストファミリー,寄宿家庭host family,2
+grade_4_0619,king,王様,國王,n,The king lives in the castle.,王様は城に住んでいます。,國王住在城堡裡。,キング,國王king,1
+grade_4_0620,lady,女性・婦人,女士,n,A kind lady helped me.,親切な女性が助けてくれました。,一位親切的女士幫了我。,レディーファースト,女士優先lady first,2
+grade_4_0621,line,線・列,線、隊伍,n,"Stand in line, please.",列に並んでください。,請排隊。,ライン,線line,1
+grade_4_0622,list,リスト・一覧,清單,n,Make a list of the words.,単語のリストを作りなさい。,把單字列成清單。,,,1
+grade_4_0623,menu,メニュー,菜單,n,May I see the menu?,メニューを見せてもらえますか。,可以看一下菜單嗎？,,,1
+grade_4_0624,model,模型・モデル,模型、模特兒,n,He makes plastic models.,彼はプラモデルを作ります。,他做塑膠模型。,,,2
+grade_4_0625,neck,首,脖子,n,A giraffe has a long neck.,キリンは首が長いです。,長頸鹿的脖子很長。,ネックレスは首かざり,項鍊necklace戴在脖子上,1
+grade_4_0626,note,メモ・注意書き,筆記,n,I took notes in class.,授業でメモを取りました。,我上課做了筆記。,ノートはnotebook,筆記本是notebook,2
+grade_4_0627,owner,持ち主,主人、擁有者,n,Who is the owner of this dog?,この犬の飼い主はだれですか。,這隻狗的主人是誰？,own（所有する）人,Own（擁有）的人,2
+grade_4_0628,page,ページ,頁,n,Open your book to page 30.,本の30ページを開きなさい。,把書翻到第三十頁。,,,1
+grade_4_0629,pair,1組・ペア,一雙、一對,n,I bought a pair of shoes.,くつを1足買いました。,我買了一雙鞋。,ペア,一對pair,2
+grade_4_0630,bitter,にがい,苦的,adj,This coffee is bitter.,このコーヒーはにがいです。,這咖啡很苦。,,,2
+grade_4_0631,fat,太った,胖的,adj,My cat is a little fat.,うちのネコは少し太っています。,我家的貓有點胖。,,,1
+grade_4_0632,fine,元気な・晴れた・すばらしい,好的、晴朗的,adj,"I'm fine, thank you.",元気です、ありがとう。,我很好，謝謝。,,,1
+grade_4_0633,flat,平らな,平的,adj,The land here is flat.,ここの土地は平らです。,這裡的地很平。,,,2
+grade_4_0634,honest,正直な,誠實的,adj,He is an honest boy.,彼は正直な少年です。,他是個誠實的男孩。,,,2
+grade_4_0635,huge,巨大な,巨大的,adj,We saw a huge whale.,巨大なクジラを見ました。,我們看到一頭巨大的鯨魚。,,,2
+grade_4_0636,modern,現代の・近代的な,現代的,adj,This is a modern building.,これは近代的な建物です。,這是現代化的建築。,モダンな,現代modern,2
+grade_4_0637,noisy,うるさい,吵鬧的,adj,The classroom was noisy.,教室はうるさかったです。,教室裡很吵。,noise（騒音）な状態,充滿noise（噪音）,2
+grade_4_0638,proud,ほこりに思う,驕傲的,adj,I'm proud of my team.,私はチームをほこりに思います。,我為我的隊伍感到驕傲。,,,2
+grade_4_0639,round,丸い,圓的,adj,The earth is round.,地球は丸いです。,地球是圓的。,ラウンド,圓round,1
+grade_4_0640,rude,失礼な,無禮的,adj,Don't be rude to others.,人に失礼なことをしてはいけません。,對人不要無禮。,politeの反対,Polite的相反,2
+grade_4_0641,sharp,するどい,銳利的,adj,Be careful. The knife is sharp.,気をつけて。ナイフはするどいです。,小心，刀子很利。,シャープな,鋒利sharp,2
+grade_4_0642,smooth,なめらかな,光滑的,adj,The road is smooth.,道はなめらかです。,路面很平滑。,スムーズ,順暢smooth,2
+grade_4_0643,soft,やわらかい,軟的,adj,This pillow is soft.,このまくらはやわらかいです。,這個枕頭很軟。,ソフトクリーム,霜淇淋soft cream,1

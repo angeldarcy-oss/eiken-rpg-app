@@ -310,3 +310,56 @@ grade_pre2_0308,emotion,感情,情感,n,Music expresses emotions.,音楽は感�
 grade_pre2_0309,emphasize,強調する,強調,v,The teacher emphasized the point.,先生はその点を強調しました。,老師強調了那一點。,,,4
 grade_pre2_0310,employ,雇う,僱用,v,The factory employs 200 workers.,その工場は200人を雇っています。,那家工廠僱用兩百名工人。,,,3
 grade_pre2_0311,encourage,励ます,鼓勵,v,My parents encouraged me to try.,両親は挑戦するよう励ましてくれました。,我父母鼓勵我嘗試。,,,3
+grade_pre2_0312,entertain,楽しませる,娛樂,v,The clown entertained the children.,ピエロは子どもたちを楽しませました。,小丑逗孩子們開心。,エンターテイメント,娛樂entertainment,3
+grade_pre2_0313,equal,等しい・平等な,相等的,adj,Everyone has equal rights.,だれもが平等な権利を持っています。,每個人都有平等的權利。,イコール（＝）,等號equal,3
+grade_pre2_0314,equipment,装備・設備,設備,n,The gym has new equipment.,ジムには新しい設備があります。,健身房有新設備。,equip（備える）の名詞,Equip的名詞,3
+grade_pre2_0315,error,誤り・エラー,錯誤,n,I found an error in the report.,レポートに誤りを見つけました。,我在報告中發現一個錯誤。,エラー,錯誤error,3
+grade_pre2_0316,escape,逃げる,逃跑,v,The bird escaped from the cage.,鳥はかごから逃げました。,鳥從籠子裡逃走了。,,,3
+grade_pre2_0317,essay,作文・小論文,文章、論文,n,Write an essay about your dream.,夢について作文を書きなさい。,寫一篇關於夢想的文章。,,,3
+grade_pre2_0318,evil,邪悪な,邪惡的,adj,The hero fought the evil dragon.,勇者は邪悪なドラゴンと戦いました。,勇者與邪惡的龍戰鬥。,,,3
+grade_pre2_0319,exact,正確な,精確的,adj,Tell me the exact time.,正確な時間を教えてください。,告訴我確切的時間。,,,3
+grade_pre2_0320,except,〜を除いて,除了,prep,Everyone came except Tom.,トム以外は全員来ました。,除了湯姆，大家都來了。,,,3
+grade_pre2_0321,exhibit,展示する・展示品,展示,v,The museum exhibits old paintings.,美術館は古い絵画を展示しています。,美術館展出古畫。,,,4
+grade_pre2_0322,exist,存在する,存在,v,Do aliens really exist?,宇宙人は本当に存在しますか。,外星人真的存在嗎？,,,3
+grade_pre2_0323,expand,拡大する,擴大,v,The company expanded its business.,その会社は事業を拡大しました。,那家公司擴大了業務。,,,4
+grade_pre2_0324,expect,期待する・予期する,期待,v,I expect good news from you.,あなたからのよい知らせを期待しています。,我期待你的好消息。,,,3
+grade_pre2_0325,expense,費用・出費,費用,n,Travel expenses are high.,旅費は高いです。,旅費很高。,,,4
+grade_pre2_0326,experiment,実験,實驗,n,We did an experiment in science class.,理科の授業で実験をしました。,我們在自然課做了實驗。,,,3
+grade_pre2_0327,explore,探検する,探索,v,They explored the cave.,彼らはどうくつを探検しました。,他們探索了洞穴。,エクスプローラー＝探検家,探險家explorer,3
+grade_pre2_0328,export,輸出する,出口,v,Japan exports many cars.,日本は多くの車を輸出しています。,日本出口很多汽車。,importの反対,Import的相反,4
+grade_pre2_0329,express,表現する,表達,v,It's hard to express my feelings.,気持ちを表現するのは難しいです。,表達感受很難。,,,3
+grade_pre2_0330,extra,余分の・追加の,額外的,adj,Bring an extra shirt.,予備のシャツを持ってきなさい。,多帶一件襯衫。,,,3
+grade_pre2_0331,extreme,極端な,極端的,adj,The desert has extreme heat.,砂漠は極端に暑いです。,沙漠極度炎熱。,,,4
+grade_pre2_0332,factor,要因,因素,n,Luck was a big factor in the win.,勝利には運が大きな要因でした。,運氣是獲勝的重要因素。,,,4
+grade_pre2_0333,fade,色あせる・薄れる,褪色,v,The jeans faded after washing.,ジーンズは洗濯して色あせました。,牛仔褲洗過後褪色了。,フェードアウト,淡出fade out,4
+grade_pre2_0334,fancy,高級な・装飾的な,高級的,adj,We ate at a fancy restaurant.,高級レストランで食事しました。,我們在高級餐廳用餐。,,,4
+grade_pre2_0335,fare,運賃,車資,n,The bus fare is 220 yen.,バスの運賃は220円です。,公車車資是220日圓。,,,4
+grade_pre2_0336,fasten,しめる・固定する,繫緊,v,Please fasten your seat belt.,シートベルトをおしめください。,請繫好安全帶。,,,4
+grade_pre2_0337,fault,責任・欠点,過錯,n,It's not your fault.,あなたのせいではありません。,不是你的錯。,,,3
+grade_pre2_0338,favor,親切な行い・お願い,恩惠、請求,n,May I ask you a favor?,お願いがあるのですが。,可以請你幫個忙嗎？,,,3
+grade_pre2_0339,feature,特徴,特徵,n,The new phone has many features.,新しい電話には多くの機能があります。,新手機有很多功能。,,,4
+grade_pre2_0340,fiction,フィクション・小説,小說,n,She reads science fiction.,彼女はSF小説を読みます。,她讀科幻小說。,ノンフィクションの反対,Nonfiction的相反,3
+grade_pre2_0341,figure,数字・人物・図,數字、人物,n,Look at figure 2 on page 10.,10ページの図2を見なさい。,看第十頁的圖二。,フィギュア,人偶figure,4
+grade_pre2_0342,firm,会社・かたい,公司、堅固的,n,She works for a law firm.,彼女は法律事務所で働いています。,她在法律事務所工作。,,,4
+grade_pre2_0343,fit,合う・健康な,合身、健康的,v,These shoes fit me well.,このくつは私にぴったり合います。,這雙鞋很合我的腳。,フィットネス,健身fitness,3
+grade_pre2_0344,flavor,風味・味,風味,n,Which flavor do you like?,どの味が好きですか。,你喜歡哪種口味？,,,3
+grade_pre2_0345,flexible,柔軟な,靈活的,adj,Our plan is flexible.,私たちの計画は柔軟です。,我們的計畫很有彈性。,,,4
+grade_pre2_0346,flood,洪水,洪水,n,The flood damaged many houses.,洪水で多くの家が被害を受けました。,洪水損壞了許多房屋。,,,3
+grade_pre2_0347,flow,流れる,流動,v,The river flows to the sea.,川は海へ流れます。,河流入海。,,,3
+grade_pre2_0348,focus,集中する・焦点,專注、焦點,v,Focus on your study.,勉強に集中しなさい。,專心讀書。,ピントもfocus,對焦focus,3
+grade_pre2_0349,forbid,禁止する,禁止,v,Smoking is forbidden here.,ここは禁煙です。,這裡禁止吸菸。,,,4
+grade_pre2_0350,force,力・強制する,力量、強迫,n,The force of the wind was strong.,風の力は強かったです。,風力很強。,フォース,原力force,3
+grade_pre2_0351,forecast,予報,預報,n,The weather forecast says rain.,天気予報は雨と言っています。,氣象預報說會下雨。,fore（前もって）cast,預先（fore）播報（cast）,3
+grade_pre2_0352,forgive,許す,原諒,v,Please forgive me.,どうか許してください。,請原諒我。,,,3
+grade_pre2_0353,form,形・用紙・形成する,形式、表格,n,"Fill in this form, please.",この用紙に記入してください。,請填寫這張表格。,フォーム,表單form,3
+grade_pre2_0354,formal,正式の,正式的,adj,Wear formal clothes to the ceremony.,式典には正装で来なさい。,參加典禮要穿正式服裝。,フォーマル,正式formal,3
+grade_pre2_0355,former,前の・元の,以前的,adj,He is a former soccer player.,彼は元サッカー選手です。,他是前足球員。,,,4
+grade_pre2_0356,fortune,財産・運,財富、運氣,n,He made a fortune in business.,彼は事業で財産を築きました。,他靠生意賺了大錢。,フォーチュンクッキー,幸運餅乾fortune cookie,4
+grade_pre2_0357,frame,わく・フレーム,框架,n,I put the photo in a frame.,写真をフレームに入れました。,我把照片放進相框。,,,3
+grade_pre2_0358,freeze,こおる,結冰,v,Water freezes at zero degrees.,水は0度でこおります。,水在零度結冰。,フリーザー＝冷凍庫,冷凍庫freezer,3
+grade_pre2_0359,frequent,頻繁な,頻繁的,adj,He is a frequent visitor here.,彼はここの常連です。,他常來這裡。,,,4
+grade_pre2_0360,fuel,燃料,燃料,n,The plane needs more fuel.,飛行機はもっと燃料が必要です。,飛機需要更多燃料。,,,3
+grade_pre2_0361,function,機能,功能,n,This watch has many functions.,この時計には多くの機能があります。,這支手錶有很多功能。,,,4
+grade_pre2_0362,fund,資金,資金,n,They collected funds for the school.,彼らは学校のための資金を集めました。,他們為學校募集資金。,クラウドファンディング,群眾募資crowdfunding,4
+grade_pre2_0363,furniture,家具,家具,n,We bought new furniture.,新しい家具を買いました。,我們買了新家具。,,,3
+grade_pre2_0364,further,さらなる・もっと遠くに,更進一步,adv,"For further information, call us.",詳しくはお電話ください。,欲知詳情請來電。,,,4

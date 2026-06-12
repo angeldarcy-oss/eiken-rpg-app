@@ -416,3 +416,53 @@ grade_3_0414,fee,料金,費用,n,The entrance fee is 500 yen.,入場料は500円
 grade_3_0415,female,女性の,女性的,adj,The female lion hunts for food.,メスのライオンがえさを狩ります。,母獅子獵食。,maleの反対,Male的相反,3
 grade_3_0416,flag,旗,旗子,n,The flag of Japan is white and red.,日本の旗は白と赤です。,日本國旗是白色和紅色的。,,,2
 grade_3_0417,flight,飛行・便,航班,n,Our flight leaves at noon.,私たちの便は正午に出発します。,我們的航班中午起飛。,fly（飛ぶ）の名詞,Fly（飛）的名詞,2
+grade_3_0418,amusement park,遊園地,遊樂園,n,We went to an amusement park.,遊園地に行きました。,我們去了遊樂園。,,,2
+grade_3_0419,apron,エプロン,圍裙,n,Mom wears an apron in the kitchen.,母は台所でエプロンをつけます。,媽媽在廚房圍著圍裙。,,,2
+grade_3_0420,arrow,矢・矢印,箭、箭頭,n,Follow the arrows on the floor.,床の矢印に従ってください。,跟著地上的箭頭走。,,,2
+grade_3_0421,attack,攻撃する・攻撃,攻擊,v,The team attacked well in the game.,チームは試合でよく攻めました。,隊伍在比賽中進攻得很好。,,,2
+grade_3_0422,backpack,リュックサック,背包,n,My backpack is heavy today.,今日はリュックが重いです。,我今天的背包很重。,back（背中）のpack,背在back（背上）的pack,2
+grade_3_0423,balance,バランス・つり合い,平衡,n,Keep your balance on the bike.,自転車でバランスを保ちなさい。,騎車要保持平衡。,,,2
+grade_3_0424,band,バンド・楽団,樂團,n,He plays in a band.,彼はバンドで演奏しています。,他在樂團裡演奏。,,,1
+grade_3_0425,bandage,包帯,繃帶,n,The nurse put a bandage on my arm.,看護師がうでに包帯を巻いてくれました。,護理師在我手臂上綁了繃帶。,バンドエイド,OK繃band-aid,3
+grade_3_0426,barbecue,バーベキュー,烤肉,n,We had a barbecue by the river.,川辺でバーベキューをしました。,我們在河邊烤肉。,BBQ,BBQ,2
+grade_3_0427,basement,地下室,地下室,n,The gym is in the basement.,ジムは地下にあります。,健身房在地下室。,B1のB＝basement,B1的B＝basement,3
+grade_3_0428,battery,電池,電池,n,The battery is dead.,電池が切れています。,電池沒電了。,,,2
+grade_3_0429,beard,あごひげ,鬍子,n,My uncle has a beard.,おじはあごひげを生やしています。,我叔叔留著鬍子。,,,3
+grade_3_0430,belt,ベルト,皮帶,n,Fasten your seat belt.,シートベルトをしめなさい。,繫好安全帶。,,,2
+grade_3_0431,bite,かむ,咬,v,The dog doesn't bite.,その犬はかみません。,那隻狗不咬人。,,,2
+grade_3_0432,blood,血,血,n,Blood is red.,血は赤いです。,血是紅色的。,,,2
+grade_3_0433,blossom,花（木の）,花（樹上的）,n,The cherry blossoms are beautiful.,桜の花が美しいです。,櫻花很美。,桜＝cherry blossom,櫻花cherry blossom,3
+grade_3_0434,board,板・黒板・委員会,板子,n,Write the answer on the board.,答えを黒板に書きなさい。,把答案寫在黑板上。,ボード,板board,2
+grade_3_0435,boil,ゆでる・わかす,煮沸,v,Boil the eggs for ten minutes.,卵を10分ゆでなさい。,把蛋煮十分鐘。,,,2
+grade_3_0436,border,国境・境界,邊界,n,The river is the border between the two countries.,その川が両国の国境です。,那條河是兩國的邊界。,,,3
+grade_3_0437,boss,上司・ボス,老闆,n,Her boss is very kind.,彼女の上司はとても親切です。,她的老闆很親切。,,,2
+grade_3_0438,bother,なやませる・じゃまをする,打擾,v,Sorry to bother you.,おじゃましてすみません。,抱歉打擾你。,,,3
+grade_3_0439,bow,おじぎする,鞠躬,v,Japanese people bow when they meet.,日本人は会うとおじぎをします。,日本人見面時會鞠躬。,,,3
+grade_3_0440,brake,ブレーキ,煞車,n,Use the brakes on the hill.,坂ではブレーキを使いなさい。,下坡要用煞車。,,,2
+grade_3_0441,branch,枝・支店,樹枝、分店,n,A bird sat on the branch.,鳥が枝にとまりました。,鳥停在樹枝上。,,,3
+grade_3_0442,breathe,呼吸する,呼吸,v,Breathe deeply and relax.,深く呼吸してリラックスしなさい。,深呼吸放鬆。,breath（息）の動詞,Breath（呼吸）的動詞,3
+grade_3_0443,brick,レンガ,磚頭,n,The house is made of bricks.,その家はレンガでできています。,那房子是磚造的。,,,3
+grade_3_0444,bubble,あわ,泡泡,n,The children love soap bubbles.,子どもたちはシャボン玉が大好きです。,孩子們喜歡吹泡泡。,バブル,泡泡bubble,2
+grade_3_0445,bucket,バケツ,水桶,n,Fill the bucket with water.,バケツに水を入れなさい。,把水桶裝滿水。,,,2
+grade_3_0446,bug,虫,蟲子,n,There is a bug on the window.,窓に虫がいます。,窗戶上有隻蟲。,,,1
+grade_3_0447,bury,うめる,埋,v,The dog buried a bone.,犬は骨をうめました。,狗把骨頭埋起來了。,,,3
+grade_3_0448,bush,低木・しげみ,灌木叢,n,A rabbit hid in the bush.,ウサギがしげみにかくれました。,兔子躲進灌木叢。,,,3
+grade_3_0449,button,ボタン,按鈕、鈕扣,n,Press the red button.,赤いボタンを押しなさい。,按紅色按鈕。,,,1
+grade_3_0450,cage,かご・おり,籠子,n,The bird is in the cage.,鳥はかごの中にいます。,鳥在籠子裡。,,,2
+grade_3_0451,cancel,取り消す,取消,v,The game was canceled because of rain.,試合は雨で中止になりました。,比賽因雨取消了。,キャンセル,取消cancel,2
+grade_3_0452,cash,現金,現金,n,I paid in cash.,現金で払いました。,我付了現金。,キャッシュレス,無現金cashless,2
+grade_3_0453,caterpillar,毛虫・イモムシ,毛毛蟲,n,A caterpillar becomes a butterfly.,イモムシはチョウになります。,毛毛蟲會變成蝴蝶。,,,3
+grade_3_0454,cause,原因・引き起こす,原因、導致,n,What was the cause of the fire?,火事の原因は何でしたか。,火災的原因是什麼？,,,3
+grade_3_0455,chase,追いかける,追,v,The cat chased the mouse.,ネコはネズミを追いかけました。,貓追老鼠。,カーチェイス,飛車追逐car chase,2
+grade_3_0456,chew,かむ（よくかむ）,咀嚼,v,Chew your food well.,食べ物をよくかみなさい。,食物要好好咀嚼。,チューインガム,口香糖chewing gum,3
+grade_3_0457,chimney,えんとつ,煙囪,n,Smoke comes from the chimney.,えんとつからけむりが出ています。,煙從煙囪冒出來。,,,3
+grade_3_0458,clap,拍手する,拍手,v,Everyone clapped after the speech.,スピーチのあと、みんなが拍手しました。,演講結束後大家鼓掌。,,,2
+grade_3_0459,clay,ねん土,黏土,n,We made cups with clay.,ねん土でコップを作りました。,我們用黏土做了杯子。,,,2
+grade_3_0460,cliff,がけ,懸崖,n,Don't go near the cliff.,がけに近づかないで。,別靠近懸崖。,,,3
+grade_3_0461,climate,気候,氣候,n,The climate here is warm.,ここの気候は温暖です。,這裡的氣候溫暖。,気候変動＝climate change,氣候變遷climate change,3
+grade_3_0462,clinic,診療所・クリニック,診所,n,I went to the clinic for a cold.,かぜでクリニックに行きました。,我感冒去了診所。,,,2
+grade_3_0463,clue,手がかり・ヒント,線索,n,Give me a clue!,ヒントをちょうだい！,給我一點線索！,,,3
+grade_3_0464,coal,石炭,煤,n,Coal was used for trains long ago.,昔は汽車に石炭が使われました。,以前火車用煤。,,,3
+grade_3_0465,comb,くし,梳子,n,She combs her hair every morning.,彼女は毎朝かみをとかします。,她每天早上梳頭。,,,3
+grade_3_0466,countryside,いなか,鄉下,n,My grandparents live in the countryside.,祖父母はいなかに住んでいます。,我的祖父母住在鄉下。,country（いなか）side,鄉間countryside,2
+grade_3_0467,crash,衝突する・衝突,撞毀,v,The car crashed into the wall.,車がかべに衝突しました。,車子撞上了牆。,,,3

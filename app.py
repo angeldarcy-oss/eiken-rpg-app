@@ -13,8 +13,10 @@ from core.save_manager import (
 from core.i18n import t
 from core.characters import CHARACTERS, CHARACTER_ORDER
 from core.daily_quest import get_login_streak
+from core.pwa import inject_pwa_tags
 
 st.set_page_config(page_title="英検Quest", page_icon="⚔️", layout="centered", initial_sidebar_state="expanded")
+inject_pwa_tags()
 
 st.markdown("""<style>
 html,body,[class*="css"]{font-family:'Noto Sans JP',sans-serif;}

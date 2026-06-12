@@ -1,0 +1,6 @@
+[server]
+# static/ ディレクトリを /app/static/ で配信する（PWAマニフェスト・アイコン用）
+enableStaticServing = true
+
+[theme]
+base = "dark"

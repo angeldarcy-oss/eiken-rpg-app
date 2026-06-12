@@ -213,6 +213,22 @@ def _render_party_ranking():
 
 
 # ─── ロビー画面 ────────────────────────────────────────────────────
+@st.fragment(run_every="5s")
+def _lobby_members_fragment(code: str):
+    """ロビーのメンバーリスト。5秒ごとに再取得し、開始されたら全体を再描画する。"""
+    pt = get_party(code)
+    if pt is None or pt.get("status") != "waiting":
+        st.rerun(scope="app")
+        return
+    n = len(pt.get("members", {}))
+    st.markdown('<div style="font-size:1rem;font-weight:700;color:#ffe066;margin:12px 0 6px;">👥 メンバー（'
+                + str(n) + ' / 4 人）</div>', unsafe_allow_html=True)
+    members_html = ""
+    for uname, mdata in pt.get("members", {}).items():
+        members_html += _member_card(uname, mdata, is_leader=(pt.get("leader") == uname))
+    st.markdown(members_html, unsafe_allow_html=True)
+
+
 def render_lobby(party: dict):
     code = party["code"]
     is_leader = (party.get("leader") == username)
@@ -247,12 +263,8 @@ def render_lobby(party: dict):
         '</div>'
         '</div>', unsafe_allow_html=True)
 
-    # メンバーリスト
-    st.markdown('<div style="font-size:1rem;font-weight:700;color:#ffe066;margin:12px 0 6px;">👥 メンバー</div>', unsafe_allow_html=True)
-    members_html = ""
-    for uname, mdata in party.get("members", {}).items():
-        members_html += _member_card(uname, mdata, is_leader=(party.get("leader") == uname))
-    st.markdown(members_html, unsafe_allow_html=True)
+    # メンバーリスト（5秒ごとに自動更新。バトルが始まったら全体を再描画）
+    _lobby_members_fragment(code)
 
     # リーダーのバトル開始ボタン
     if is_leader:
@@ -264,9 +276,7 @@ def render_lobby(party: dict):
             else:
                 st.rerun()
     else:
-        st.info("リーダーがバトルを開始するのを待っています…")
-        if st.button("🔄 更新", use_container_width=True):
-            st.rerun()
+        st.info("リーダーがバトルを開始するのを待っています…（自動で更新されます）")
 
     st.markdown("<br>", unsafe_allow_html=True)
     if st.button("🚪 パーティーを抜ける", use_container_width=True):
@@ -277,23 +287,22 @@ def render_lobby(party: dict):
 
 
 # ─── バトル画面 ────────────────────────────────────────────────────
-def render_battle(party: dict):
-    code = party["code"]
+@st.fragment(run_every="5s")
+def _battle_status_fragment(code: str):
+    """ボスHP・メンバー貢献度・バトルログ。5秒ごとに再取得して部分更新する。"""
+    party = get_party(code)
+    if party is None or party.get("status") != "battling":
+        st.rerun(scope="app")  # 勝利・解散などの状態変化は全体を再描画
+        return
+
     boss_info = party.get("boss", {})
-    boss_id = boss_info.get("id", "")
-    boss_def = BOSS_MONSTERS.get(boss_id, {})
+    boss_def = BOSS_MONSTERS.get(boss_info.get("id", ""), {})
     boss_svg = boss_def.get("svg", "")
     boss_hp = party.get("boss_hp", 0)
     boss_hp_max = party.get("boss_hp_max", 1)
     boss_pct = round(max(0, boss_hp / boss_hp_max * 100), 1) if boss_hp_max else 0
     boss_col = "#44ff88" if boss_pct > 50 else ("#ffcc00" if boss_pct > 25 else "#ff2222")
-
     my_damage = party.get("members", {}).get(username, {}).get("damage_dealt", 0)
-
-    st.markdown(
-        '<div style="font-size:1.8rem;font-weight:700;color:#ff4466;margin-bottom:4px;">⚔️ パーティーバトル中！</div>'
-        '<div style="font-size:.85rem;color:#888;margin-bottom:10px;">クエストで正解すると、みんなのダメージがボスに入る！</div>',
-        unsafe_allow_html=True)
 
     # ボスHPバー
     st.markdown(
@@ -312,22 +321,6 @@ def render_battle(party: dict):
         '</div>'
         '<div style="font-size:.75rem;color:#886677;text-align:right;">あなたの貢献: <b style="color:#ff8877;">' + str(my_damage) + ' ダメージ</b></div>'
         '</div>', unsafe_allow_html=True)
-
-    # クエストページへの誘導
-    st.markdown(
-        '<div style="background:linear-gradient(135deg,#1a1500,#2a2500);border:1px solid #554400;'
-        'border-radius:10px;padding:10px 16px;text-align:center;margin:8px 0;">'
-        '<div style="font-size:.9rem;color:#ffe066;">🗡️ クエスト画面で問題を解いてボスを攻撃しよう！</div>'
-        '<div style="font-size:.75rem;color:#888;margin-top:2px;">正解するたびにパーティーボスにもダメージが入ります</div>'
-        '</div>', unsafe_allow_html=True)
-
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("🗡️ クエストへ", use_container_width=True, type="primary"):
-            st.switch_page("pages/01_quest.py")
-    with col2:
-        if st.button("🔄 更新", use_container_width=True):
-            st.rerun()
 
     # メンバー貢献度
     st.markdown('<div style="font-size:1rem;font-weight:700;color:#ffe066;margin:14px 0 6px;">👥 メンバー貢献度</div>', unsafe_allow_html=True)
@@ -352,6 +345,30 @@ def render_battle(party: dict):
     else:
         st.markdown('<div style="color:#555;font-size:.82rem;">まだ誰も攻撃していません</div>', unsafe_allow_html=True)
 
+
+def render_battle(party: dict):
+    code = party["code"]
+
+    st.markdown(
+        '<div style="font-size:1.8rem;font-weight:700;color:#ff4466;margin-bottom:4px;">⚔️ パーティーバトル中！</div>'
+        '<div style="font-size:.85rem;color:#888;margin-bottom:10px;">クエストで正解すると、みんなのダメージがボスに入る！'
+        '（ボスHPは自動で更新されます）</div>',
+        unsafe_allow_html=True)
+
+    # ボスHP・貢献度・ログ（5秒ごとに自動更新）
+    _battle_status_fragment(code)
+
+    # クエストページへの誘導
+    st.markdown(
+        '<div style="background:linear-gradient(135deg,#1a1500,#2a2500);border:1px solid #554400;'
+        'border-radius:10px;padding:10px 16px;text-align:center;margin:8px 0;">'
+        '<div style="font-size:.9rem;color:#ffe066;">🗡️ クエスト画面で問題を解いてボスを攻撃しよう！</div>'
+        '<div style="font-size:.75rem;color:#888;margin-top:2px;">正解するたびにパーティーボスにもダメージが入ります</div>'
+        '</div>', unsafe_allow_html=True)
+
+    if st.button("🗡️ クエストへ", use_container_width=True, type="primary"):
+        st.switch_page("pages/01_quest.py")
+
     # パーティーチャット
     _render_chat(party)
 
@@ -361,11 +378,6 @@ def render_battle(party: dict):
         p["party_code"] = ""
         save_player(p, username)
         st.rerun()
-
-    # 自動更新（12秒ごと）
-    components.html(
-        '<script>setTimeout(function(){try{window.parent.location.reload();}catch(e){}},12000);</script>',
-        height=0)
 
 
 # ─── 勝利画面 ──────────────────────────────────────────────────────

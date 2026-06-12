@@ -846,7 +846,8 @@ pos_map = {"n": "名詞" if lang == "ja" else "名詞",
            "v": "動詞" if lang == "ja" else "動詞",
            "adj": "形容詞" if lang == "ja" else "形容詞",
            "adv": "副詞" if lang == "ja" else "副詞",
-           "prep": "前置詞" if lang == "ja" else "介詞"}
+           "prep": "前置詞" if lang == "ja" else "介詞",
+           "phr": "熟語" if lang == "ja" else "片語"}
 pos_ja = pos_map.get(q.part_of_speech, q.part_of_speech)
 diff_stars = "⭐" * q.difficulty
 streak = st.session_state.streak

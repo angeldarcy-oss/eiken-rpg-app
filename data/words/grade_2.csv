@@ -209,3 +209,73 @@ grade_2_0207,sagacious,賢い,聰明,adj,The sagacious investor made a fortune.,
 grade_2_0208,taciturn,寡黙な,沉默寡言,adj,The taciturn person rarely spoke.,寡黙な人物はめったに話しませんでした。,沉默寡言的人很少說話。,少しだけ話す,說幾句,3
 grade_2_0209,ubiquitous,至る所にある,到處都有,adj,The ubiquitous presence of smartphones is remarkable.,スマートフォンの至る所にある存在は特徴的です。,智能手機無處不在的存在是獨特的。,どこでも,任何地方,3
 grade_2_0210,vigilant,注意深い,細心,adj,The vigilant guard caught the thief.,注意深い警備員が泥棒を捕まえました。,細心的警衛抓住了小偷。,気をつける,小心,3
+grade_2_0211,absorb,吸収する,吸收,v,Plants absorb water from the soil.,植物は土から水を吸収します。,植物從土壤吸收水分。,,,3
+grade_2_0212,accompany,同行する,陪同,v,I accompanied her to the station.,私は彼女に駅まで同行しました。,我陪她到車站。,,,4
+grade_2_0213,accuse,非難する・告発する,指控,v,He was accused of stealing.,彼はぬすみで告発されました。,他被指控偷竊。,,,4
+grade_2_0214,acknowledge,認める,承認,v,She acknowledged her mistake.,彼女は自分のまちがいを認めました。,她承認了自己的錯誤。,,,4
+grade_2_0215,adjust,調整する,調整,v,"Adjust the volume, please.",音量を調整してください。,請調整音量。,,,3
+grade_2_0216,administration,管理・行政,行政,n,She works in the administration office.,彼女は管理部門で働いています。,她在行政部門工作。,,,4
+grade_2_0217,agriculture,農業,農業,n,Agriculture is important to this region.,農業はこの地域にとって重要です。,農業對這個地區很重要。,アグリカルチャー,農業agriculture,3
+grade_2_0218,alter,変える,改變,v,We had to alter our plans.,私たちは計画を変えなければなりませんでした。,我們不得不改變計畫。,オルタナティブ＝代わりの,Alternative＝替代的,4
+grade_2_0219,alternative,代わりの・選択肢,替代方案,n,We need an alternative plan.,代わりの計画が必要です。,我們需要替代方案。,,,3
+grade_2_0220,analyze,分析する,分析,v,Scientists analyzed the data.,科学者たちはデータを分析しました。,科學家分析了數據。,アナリスト＝分析する人,分析師analyst,3
+grade_2_0221,annoy,いらいらさせる,惹惱,v,The noise annoyed everyone.,その騒音はみんなをいらいらさせました。,噪音惹惱了大家。,,,3
+grade_2_0222,apparent,明らかな,明顯的,adj,It was apparent that she was tired.,彼女が疲れているのは明らかでした。,她顯然累了。,appear（現れる）から,來自appear（顯現）,4
+grade_2_0223,appetite,食欲,食慾,n,I have no appetite today.,今日は食欲がありません。,我今天沒有食慾。,,,3
+grade_2_0224,appliance,電化製品,家電,n,This store sells kitchen appliances.,この店は台所用電化製品を売っています。,這家店賣廚房家電。,,,4
+grade_2_0225,assumption,仮定・思いこみ,假設,n,Your assumption is wrong.,あなたの思いこみはまちがっています。,你的假設是錯的。,assume（仮定する）の名詞,Assume（假設）的名詞,4
+grade_2_0226,authority,権威・当局,權威、當局,n,The city authorities closed the road.,市当局は道路を閉鎖しました。,市政當局封閉了道路。,,,3
+grade_2_0227,available,利用できる,可用的,adj,This service is available for free.,このサービスは無料で利用できます。,這項服務可免費使用。,,,3
+grade_2_0228,aware,気づいて,意識到,adj,I was not aware of the problem.,その問題に気づいていませんでした。,我沒有意識到那個問題。,,,3
+grade_2_0229,barrier,障壁・かべ,障礙,n,Language is not a barrier.,言語は障壁ではありません。,語言不是障礙。,バリアフリー,無障礙barrier-free,3
+grade_2_0230,behalf,代わり・ため,代表,n,I spoke on behalf of the team.,チームを代表して話しました。,我代表團隊發言。,on behalf of＝〜を代表して,On behalf of＝代表,4
+grade_2_0231,biology,生物学,生物學,n,She teaches biology at high school.,彼女は高校で生物を教えています。,她在高中教生物。,bio（生命）のlogy（学問）,Bio（生命）的logy（學問）,3
+grade_2_0232,blame,責める,責備,v,Don't blame yourself.,自分を責めないで。,別責備自己。,,,3
+grade_2_0233,boost,高める,提升,v,The win boosted the team's confidence.,勝利はチームの自信を高めました。,勝利提升了球隊的信心。,ブースト＝加速,加速boost,3
+grade_2_0234,border,国境・境界,邊界,n,The river forms the border.,その川が国境になっています。,那條河形成邊界。,,,3
+grade_2_0235,breed,繁殖する・品種,繁殖、品種,v,Pandas rarely breed in zoos.,パンダは動物園ではめったに繁殖しません。,熊貓在動物園很少繁殖。,,,4
+grade_2_0236,browse,閲覧する,瀏覽,v,I browsed the internet for news.,ネットでニュースを閲覧しました。,我上網瀏覽新聞。,ブラウザ＝閲覧ソフト,瀏覽器browser,3
+grade_2_0237,bury,埋める,埋,v,The dog buried a bone.,犬は骨を埋めました。,狗埋了一根骨頭。,,,3
+grade_2_0238,capture,とらえる,捕捉,v,The photo captured the moment.,その写真はその瞬間をとらえました。,那張照片捕捉了那一刻。,キャプチャー,截圖capture,3
+grade_2_0239,casual,気軽な・ふだんの,休閒的,adj,Wear casual clothes to the party.,パーティーにはふだん着で来てください。,穿休閒服來參加派對。,カジュアルな服装,休閒casual穿著,3
+grade_2_0240,category,分類・カテゴリー,類別,n,Books are sorted by category.,本は分類ごとに並んでいます。,書按類別排列。,,,3
+grade_2_0241,caution,用心・注意,謹慎,n,Handle the glass with caution.,ガラスは用心して扱いなさい。,小心處理玻璃。,,,4
+grade_2_0242,characteristic,特徴,特徵,n,Kindness is her main characteristic.,親切さが彼女の一番の特徴です。,親切是她的主要特質。,キャラの特徴,Character的特徵,4
+grade_2_0243,chemistry,化学,化學,n,Chemistry is my favorite subject.,化学は私の好きな科目です。,化學是我最喜歡的科目。,,,3
+grade_2_0244,circumstance,状況・事情,情況,n,It depends on the circumstances.,それは状況によります。,那要視情況而定。,,,4
+grade_2_0245,civilization,文明,文明,n,Ancient civilizations built great cities.,古代文明は偉大な都市を築きました。,古代文明建造了偉大的城市。,civil（市民の）から,來自civil（公民的）,4
+grade_2_0246,classify,分類する,分類,v,Classify the animals into groups.,動物をグループに分類しなさい。,把動物分類。,クラス分けする,分class（類別）,4
+grade_2_0247,collapse,崩壊する,倒塌,v,The old bridge collapsed.,古い橋が崩れ落ちました。,舊橋倒塌了。,,,4
+grade_2_0248,commerce,商業,商業,n,The city is a center of commerce.,その都市は商業の中心地です。,那座城市是商業中心。,Eコマース＝電子商取引,電子商務e-commerce,4
+grade_2_0249,commute,通勤する,通勤,v,I commute to work by train.,私は電車で通勤しています。,我搭火車通勤。,,,3
+grade_2_0250,comparison,比較,比較,n,"In comparison with last year, sales rose.",昨年と比較して売上は伸びました。,與去年相比，銷售額上升了。,compare（比べる）の名詞,Compare（比較）的名詞,4
+grade_2_0251,complicated,複雑な,複雜的,adj,The rules are too complicated.,ルールが複雑すぎます。,規則太複雜了。,,,3
+grade_2_0252,component,部品・要素,零件、成分,n,Each component is tested carefully.,各部品は入念にテストされます。,每個零件都經過仔細測試。,,,4
+grade_2_0253,compose,構成する・作曲する,組成、作曲,v,He composed a beautiful song.,彼は美しい曲を作曲しました。,他作了一首美麗的曲子。,作曲家＝composer,作曲家composer,4
+grade_2_0254,comprehend,理解する,理解,v,I couldn't comprehend the meaning.,その意味を理解できませんでした。,我無法理解那個意思。,,,4
+grade_2_0255,compromise,妥協・妥協する,妥協,n,They reached a compromise.,彼らは妥協に達しました。,他們達成了妥協。,,,4
+grade_2_0256,conceal,かくす,隱藏,v,He concealed the truth.,彼は真実をかくしました。,他隱瞞了真相。,,,4
+grade_2_0257,concept,概念・コンセプト,概念,n,The concept of time is interesting.,時間という概念は興味深いです。,時間的概念很有趣。,,,3
+grade_2_0258,concrete,具体的な,具體的,adj,Give me a concrete example.,具体的な例を挙げてください。,給我一個具體的例子。,コンクリートは「固まった」,混凝土concrete也是「凝固」,4
+grade_2_0259,confess,告白する・白状する,坦白,v,He confessed his mistake.,彼は自分のまちがいを白状しました。,他坦白了自己的錯誤。,,,4
+grade_2_0260,congress,議会,國會,n,Congress passed the new law.,議会は新しい法律を可決しました。,國會通過了新法律。,,,4
+grade_2_0261,conquer,征服する,征服,v,The empire conquered many lands.,その帝国は多くの土地を征服しました。,那個帝國征服了許多土地。,,,4
+grade_2_0262,conscience,良心,良心,n,My conscience told me to be honest.,良心が正直になれと告げました。,我的良心告訴我要誠實。,,,4
+grade_2_0263,consensus,合意,共識,n,The group reached a consensus.,グループは合意に達しました。,團隊達成了共識。,,,4
+grade_2_0264,considerable,かなりの,相當大的,adj,It took considerable time.,かなりの時間がかかりました。,花了相當多的時間。,,,4
+grade_2_0265,constitute,構成する,構成,v,Women constitute half of the workers.,女性が労働者の半分を構成しています。,女性占勞工的一半。,,,4
+grade_2_0266,consultant,コンサルタント・相談役,顧問,n,She works as a business consultant.,彼女は経営コンサルタントとして働いています。,她是商業顧問。,,,3
+grade_2_0267,contemporary,現代の,當代的,adj,I like contemporary art.,現代アートが好きです。,我喜歡當代藝術。,,,4
+grade_2_0268,contradict,矛盾する,矛盾,v,His words contradict his actions.,彼の言葉は行動と矛盾しています。,他的言行矛盾。,,,4
+grade_2_0269,convert,変換する,轉換,v,Convert the file to PDF.,ファイルをPDFに変換しなさい。,把檔案轉成PDF。,,,3
+grade_2_0270,convey,伝える,傳達,v,Words cannot convey my feelings.,言葉では気持ちを伝えられません。,言語無法傳達我的感受。,ベルトコンベア＝運ぶ機械,輸送帶conveyor,4
+grade_2_0271,coordinate,調整する,協調,v,She coordinated the whole event.,彼女はイベント全体を調整しました。,她協調了整個活動。,コーディネーター,協調者coordinator,4
+grade_2_0272,corporation,大企業・法人,公司,n,He works for a large corporation.,彼は大企業で働いています。,他在大公司工作。,,,3
+grade_2_0273,correspond,一致する・文通する,對應、通信,v,The two reports correspond.,2つの報告は一致しています。,兩份報告一致。,,,4
+grade_2_0274,corrupt,腐敗した,腐敗的,adj,The corrupt official was arrested.,腐敗した役人は逮捕されました。,腐敗的官員被逮捕了。,,,4
+grade_2_0275,cottage,小さな家・コテージ,小屋,n,We stayed in a cottage by the lake.,湖のほとりのコテージに泊まりました。,我們住在湖邊小屋。,,,3
+grade_2_0276,criticism,批判・批評,批評,n,He accepted the criticism calmly.,彼は批判を冷静に受け止めました。,他冷靜地接受批評。,criticize（批判する）の名詞,Criticize（批評）的名詞,3
+grade_2_0277,crude,粗雑な・原油の,粗糙的、原油的,adj,Crude oil prices are rising.,原油価格が上がっています。,原油價格在上漲。,,,4
+grade_2_0278,cultivate,耕す・育てる,耕種、培養,v,Farmers cultivate rice here.,ここでは農家が米を育てています。,農夫在這裡種稻。,,,4
+grade_2_0279,currency,通貨,貨幣,n,The yen is the currency of Japan.,円は日本の通貨です。,日圓是日本的貨幣。,current（流通している）もの,流通的（current）東西,4
+grade_2_0280,curriculum,カリキュラム・教育課程,課程,n,The school changed its curriculum.,学校はカリキュラムを変えました。,學校改變了課程。,,,3

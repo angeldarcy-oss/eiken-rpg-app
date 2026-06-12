@@ -19,6 +19,7 @@ from __future__ import annotations
 import json
 
 import streamlit.components.v1 as components
+from core.compat import html_embed
 
 
 def render_sound_bootstrap(sounds: dict) -> None:
@@ -29,7 +30,7 @@ def render_sound_bootstrap(sounds: dict) -> None:
     Args:
         sounds: {効果音名: WAVデータのbase64文字列}
     """
-    components.html(
+    html_embed(
         '<script>(function(){'
         'var P=window.parent;'
         'var DATA=' + json.dumps(sounds) + ';'
@@ -87,4 +88,4 @@ def play_js(name: str, b64: str, volume: float = 0.65) -> str:
 
 def play_sound(name: str, b64: str, volume: float = 0.65) -> None:
     """効果音を再生する。render_sound_bootstrap() で登録済みの名前を渡すこと。"""
-    components.html(play_js(name, b64, volume), height=1, scrolling=False)
+    html_embed(play_js(name, b64, volume), height=1, scrolling=False)

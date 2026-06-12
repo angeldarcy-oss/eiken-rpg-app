@@ -25,6 +25,7 @@ from core.dungeon_manager import (
     DUNGEONS, get_dungeon, get_player_dungeon_progress,
     record_clear, update_dungeon_ranking, get_dungeon_ranking,
 )
+from core.compat import html_embed
 
 
 def _get_audio_b64(word: str):
@@ -384,7 +385,7 @@ def render_battle():
 
     audio_b64 = _get_audio_b64(q.word)
     if audio_b64:
-        components.html(
+        html_embed(
             '<style>'
             'html,body{margin:0;padding:0;background:transparent;text-align:center;overflow:hidden;}'
             '.sl{display:inline-flex;align-items:center;justify-content:center;'

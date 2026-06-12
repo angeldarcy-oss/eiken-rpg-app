@@ -14,6 +14,7 @@ if str(_root) not in sys.path:
 import json
 from core.save_manager import load_player, save_player, load_weak_words
 from core.sound import render_sound_bootstrap, play_js
+from core.compat import html_embed
 from core.player import PlayerManager
 from core.i18n import t, grade_label
 from core.characters import sidebar_avatar_html
@@ -147,7 +148,7 @@ def _confetti_component(mega: bool):
         + sound_js
         + "<script>" + js + "</script>"
     )
-    components.html(html, height=height, scrolling=False)
+    html_embed(html, height=height, scrolling=False)
 
 
 # ────────────────────────────────────────────────────────────
@@ -356,7 +357,7 @@ if just_claimed:
     _jc_exp_text = f" ＋ {_jc_exp} EXP"
     if _jc_bonus_pct > 0:
         _jc_exp_text += f" (📿+{_jc_bonus_pct}%)"
-    components.html(
+    html_embed(
         _sound_script(_QUEST_WAV)
         + '<div style="font-size:1.05rem;color:#ffe066;text-align:center;'
         'font-family:sans-serif;padding:6px;background:#1a1a2e;border-radius:8px;">'

@@ -26,6 +26,7 @@ from core.equipment_bonus import get_bonus_description, sidebar_bonus_html
 from core.nav import render_nav
 from core.gacha import GACHA_TYPES, gacha_pull, rarity_label, rarity_color, gacha_animation_html
 import streamlit.components.v1 as _components
+from core.compat import html_embed
 
 
 
@@ -300,7 +301,7 @@ for tab_i, (tab, cat_key) in enumerate(zip(tabs, CAT_KEYS)):
                     _pet_def = PET_DEFS.get(_pet_key, {})
                     _icon = _pet_def.get("emoji", "🥚")
                     _name = _pet_def.get("egg_name", "ペットたまご")
-                _components.html(
+                html_embed(
                     gacha_animation_html(
                         _icon, _name, _gr["rarity"],
                         _gtype_info["ball_top"], _gtype_info["ball_bot"],

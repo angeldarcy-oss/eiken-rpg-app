@@ -68,6 +68,7 @@ st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 import struct as _struct
 import math as _math
 import base64 as _base64
+from core.compat import html_embed
 
 
 def _make_wav_b64(notes_durs, sr: int = 8000, vol: float = 0.22) -> str:
@@ -591,7 +592,7 @@ def _render_boss_appear_overlay() -> None:
         '</div>'
         '<script>' + audio_js + '</script>'
     )
-    components.html(html, height=370, scrolling=False)
+    html_embed(html, height=370, scrolling=False)
 
 
 def render_monster():
@@ -878,7 +879,7 @@ st.markdown(
 # 発音ボタン：st.markdown は React レンダラー経由で onclick を除去するため
 # components.html（実 iframe）内に audio 要素とクリック要素を同居させる
 if audio_b64:
-    components.html(
+    html_embed(
         '<style>'
         'html,body{margin:0;padding:0;background:transparent;text-align:center;overflow:hidden;}'
         '.sl{display:inline-flex;align-items:center;justify-content:center;'
@@ -1065,7 +1066,7 @@ if st.session_state.answered and st.session_state.last_result:
     # ── ボス撃破特別演出 ─────────────────────────────────────────
     if st.session_state.get("_boss_just_defeated_flash") and result.is_correct:
         # 白フラッシュオーバーレイ
-        components.html(
+        html_embed(
             "<style>"
             "html,body{margin:0;padding:0;overflow:hidden;}"
             "@keyframes wf{0%{opacity:0}8%{opacity:1;background:#ffffff}"

@@ -13,6 +13,7 @@ from __future__ import annotations
 from pathlib import Path
 
 import streamlit.components.v1 as components
+from core.compat import html_embed
 
 # アセット配信専用のダミーコンポーネント（呼び出しはしない）
 _ASSETS_DIR = Path(__file__).parent / "pwa_assets"
@@ -29,7 +30,7 @@ def inject_pwa_tags() -> None:
     後からホスティング側が再注入するケースに備えて、数秒間は
     定期的に競合タグを排除し続ける。
     """
-    components.html(
+    html_embed(
         '<script>(function(){'
         'var d=window.parent.document;'
         'function apply(){'

@@ -20,8 +20,25 @@ from core.supabase_client import get_client
 
 
 def _hash_password(password: str) -> str:
-    """パスワードをSHA-256でハッシュ化する"""
+    """パスワードをSHA-256でハッシュ化する（旧形式・検証専用に残す）"""
     return hashlib.sha256(password.encode("utf-8")).hexdigest()
+
+
+def _hash_password_bcrypt(password: str) -> str:
+    """パスワードをbcryptでハッシュ化する（新規登録・再ハッシュで使う）"""
+    import bcrypt
+    return bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
+
+
+def _check_password(password: str, stored_hash: str) -> bool:
+    """保存済みハッシュと照合する。bcrypt（$2で始まる）と旧SHA-256の両対応。"""
+    if stored_hash.startswith("$2"):
+        import bcrypt
+        try:
+            return bcrypt.checkpw(password.encode("utf-8"), stored_hash.encode("utf-8"))
+        except ValueError:
+            return False
+    return stored_hash == _hash_password(password)
 
 
 def _now_iso() -> str:
@@ -81,7 +98,7 @@ def register_user(username: str, password: str) -> bool:
         name = username.strip()
         res = client.table("users").insert({
             "username": name,
-            "password_hash": _hash_password(password),
+            "password_hash": _hash_password_bcrypt(password),
         }).execute()
         user_id = res.data[0]["id"]
         # 初期プレイヤーデータを作成
@@ -99,11 +116,24 @@ def register_user(username: str, password: str) -> bool:
 
 
 def verify_login(username: str, password: str) -> bool:
-    """ユーザー名とパスワードを検証する"""
+    """ユーザー名とパスワードを検証する。
+
+    旧SHA-256ハッシュのユーザーは、ログイン成功時に透過的にbcryptへ再ハッシュする。
+    """
     row = _get_user_row(username)
     if not row:
         return False
-    return row.get("password_hash") == _hash_password(password)
+    stored = row.get("password_hash", "")
+    if not _check_password(password, stored):
+        return False
+    if not stored.startswith("$2"):
+        try:
+            get_client().table("users").update(
+                {"password_hash": _hash_password_bcrypt(password)}
+            ).eq("id", row["id"]).execute()
+        except Exception as e:
+            print("[SaveManager] bcrypt再ハッシュ失敗（ログインは成功）: " + str(e))
+    return True
 
 
 def user_exists(username: str) -> bool:

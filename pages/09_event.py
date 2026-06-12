@@ -1,4 +1,5 @@
 """pages/09_event.py — 季節イベント画面"""
+from __future__ import annotations
 import sys
 import streamlit as st
 from pathlib import Path

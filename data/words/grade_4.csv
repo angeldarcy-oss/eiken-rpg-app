@@ -103,11 +103,11 @@ grade_4_0101,down,下,下,prep,The ball is down on the ground.,ボールは地�
 grade_4_0102,left,左,左,prep,The door is on the left.,ドアは左側にあります。,門在左邊。,左側,左,1
 grade_4_0103,right,右,右,prep,The door is on the right.,ドアは右側にあります。,門在右邊。,右側,右側,1
 grade_4_0104,cloud,雲,雲,n,The cloud is white.,雲は白いです。,雲是白色的。,,,1
-grade_4_0105,cloudy,曇り,陰,adj,The weather is cloudy today.,今日の天気は曇りです。,今天天氣多雲。,,,1
+grade_4_0105,cloudy,曇りの,陰,adj,The weather is cloudy today.,今日の天気は曇りです。,今天天氣多雲。,,,1
 grade_4_0106,sun,太陽,陽光,n,The sun is shining.,太陽が輝いています。,陽光燦爛。,,,1
-grade_4_0107,sunny,晴れ,晴天,adj,The weather is sunny today.,今日の天気は晴れです。,今天天氣晴朗。,,,1
+grade_4_0107,sunny,晴れた,晴天,adj,The weather is sunny today.,今日の天気は晴れです。,今天天氣晴朗。,,,1
 grade_4_0108,rain,雨,雨,n,It's raining outside.,外は雨です。,外面在下雨。,,,1
-grade_4_0109,rainy,雨天,雨天,adj,The weather is rainy today.,今日の天気は雨です。,今天的天氣是雨。,,,1
+grade_4_0109,rainy,雨の,雨天,adj,The weather is rainy today.,今日の天気は雨です。,今天的天氣是雨。,,,1
 grade_4_0110,wind,風,風,n,The wind is blowing.,風が吹いています。,風在吹。,,,1
 grade_4_0111,windy,風の強い,風大,adj,The weather is windy today.,今日の天気は風が強いです。,今天的天氣風很大。,,,1
 grade_4_0112,snow,雪,雪,n,It's snowing outside.,外は雪です。,外面下雪了。,,,1
@@ -144,7 +144,7 @@ grade_4_0142,pool,プール,游泳池,n,The pool is clean.,プールはきれい
 grade_4_0143,jump,跳ぶ,跳,v,I like to jump.,私は跳ぶことを好きです。,我喜歡跳。,,,1
 grade_4_0144,angry,怒った,生氣了,adj,I am angry.,私は怒っています。,我很生氣。,,,2
 grade_4_0145,tired,疲れた,累了,adj,I am tired.,私は疲れています。,我累了。,,,2
-grade_4_0146,hungry,空腹,空腹,adj,I am hungry.,私は空腹です。,我餓了。,,,2
+grade_4_0146,hungry,空腹の・おなかがすいた,空腹,adj,I am hungry.,私は空腹です。,我餓了。,,,2
 grade_4_0147,thirsty,喉が渇いた,口渴了,adj,I am thirsty.,私は喉が渇いています。,我口渴了。,,,2
 grade_4_0148,loudly,うるさく,吵,adv,I can sing loudly.,私はうるさく歌うことができます。,我可以唱得很吵。,,,2
 grade_4_0149,quietly,静かに,安靜,adv,I can read quietly.,私は静かに読むことができます。,我可以安靜地閱讀。,,,2
@@ -152,18 +152,18 @@ grade_4_0150,fun,楽しい,好開心,adj,This game is fun.,このゲームは楽
 grade_4_0151,boring,面白くない,沒意思,adj,This book is boring.,この本は面白くないです。,這本書沒意思。,,,2
 grade_4_0152,interesting,面白い,有趣,adj,This story is interesting.,この話は面白いです。,這個故事很有趣。,,,2
 grade_4_0153,difficult,難しい,很難,adj,This problem is difficult.,この問題は難しいです。,這個問題很難。,,,2
-grade_4_0154,hard,大変,辛苦,adj,This work is hard.,この仕事は大変です。,工作很辛苦。,,,1
-grade_4_0155,complicated,複雑,複雜,adj,This machine is complicated.,この機械は複雑です。,機器很複雜。,,,3
-grade_4_0156,clear,明確,明確,adj,The water is clear.,水は明確です。,水是明確的。,,,2
+grade_4_0154,hard,大変な・かたい,辛苦,adj,This work is hard.,この仕事は大変です。,工作很辛苦。,,,1
+grade_4_0155,complicated,複雑な,複雜,adj,This machine is complicated.,この機械は複雑です。,機器很複雜。,,,3
+grade_4_0156,clear,澄んだ・明らかな,清澈的、明顯的,adj,The water is clear.,水は澄んでいます。,水很清澈。,,,2
 grade_4_0157,clean,きれい,漂亮,adj,The room is clean.,部屋はきれいです。,房間很乾淨。,,,1
 grade_4_0158,dirty,汚い,骯髒,adj,The floor is dirty.,床は汚いです。,地板很髒。,,,1
 grade_4_0159,loud,うるさい,吵死了,adj,The music is loud.,音楽はうるさいです。,音樂很吵。,,,2
-grade_4_0160,quiet,静か,安靜,adj,The library is quiet.,図書館は静かです。,圖書館很安靜。,,,2
+grade_4_0160,quiet,静かな,安靜,adj,The library is quiet.,図書館は静かです。,圖書館很安靜。,,,2
 grade_4_0161,short,短い,短,adj,This movie is short.,この映画は短いです。,這部電影很短。,,,1
 grade_4_0162,far,遠い,遙遠,adj,The city is far.,都市は遠いです。,城市很遠。,,,2
 grade_4_0163,near,近い,近,adj,The park is near.,公園は近いです。,公園很近。,,,2
 grade_4_0164,full,いっぱい,滿滿,adj,The bottle is full.,瓶はいっぱいです。,瓶子滿了。,,,1
-grade_4_0165,empty,空,天空,adj,The box is empty.,箱は空です。,盒子是空的。,,,1
+grade_4_0165,empty,空（から）の,天空,adj,The box is empty.,箱は空っぽです。,盒子是空的。,,,1
 grade_4_0166,warm,あたたかい,暖和,adj,The room is warm.,部屋はあたたかいです。,房間很暖和。,,,2
 grade_4_0167,cool,涼しい,涼爽,adj,The breeze is cool.,風は涼しいです。,風很涼爽。,,,2
 grade_4_0168,strong,強い,強烈,adj,He is strong.,彼は強いです。,他很堅強。,,,2
@@ -255,7 +255,7 @@ grade_4_0253,imaginative,想像力のある,有想象力,adj,The author is imagi
 grade_4_0254,inspirational,感動的な,令人感動的,adj,The speech was inspirational.,スピーチは感動的なものだった。,演講令人感動。,,,3
 grade_4_0255,motivational,動機づける,賦予動機,adj,The coach is motivational.,コーチは動機づける。,教練激勵。,,,3
 grade_4_0256,optimistic,楽観的な,樂觀的,adj,I am optimistic about the future.,私は将来について楽観的な。,我對未來很樂觀。,,,3
-grade_4_0257,positive,ポジティブ,積極,adj,I try to be positive.,私はポジティブであることを目指している。,我以積極爲目標。,,,2
+grade_4_0257,positive,前向きな・ポジティブな,積極,adj,I try to be positive.,私はポジティブであることを目指している。,我以積極爲目標。,,,2
 grade_4_0258,thoughtful,思慮深い,深思熟慮,adj,My mother is thoughtful.,私の母は思慮深い。,我媽媽很體貼。,,,3
 grade_4_0259,understanding,理解のある,理解的,adj,My father is understanding.,私の父は理解のある。,我父親通情達理。,,,3
 grade_4_0260,wise,賢い,聰明,adj,The old man is wise.,老人は賢い。,老人很聰明。,,,2
@@ -347,8 +347,8 @@ grade_4_0345,toothbrush,歯ブラシ,牙刷,n,I am using a toothbrush.,私は歯
 grade_4_0346,soap,石鹸,肥皂,n,I am using soap.,私は石鹸を使っている。,我用肥皂。,体を洗うためのもの,用來洗身體的東西,1
 grade_4_0347,towel,タオル,毛巾,n,I am using a towel.,私はタオルを使っている。,我用毛巾。,体を乾かすためのもの,用來曬乾身體的東西,1
 grade_4_0348,relax,リラックス,放鬆,v,I like to relax.,私はリラックスすることが好きだ。,我喜歡放鬆。,心を休ませる,使心情放鬆,1
-grade_4_0349,calm,静か,安靜,adj,The music is calm.,音楽は静かだ。,音樂很安靜。,穏やか,平穩,1
-grade_4_0350,peaceful,平和,和平,adj,The park is peaceful.,公園は平和だ。,公園很和平。,争いがない,沒有爭執,2
+grade_4_0349,calm,おだやかな・落ち着いた,安靜,adj,The music is calm.,音楽はおだやかだ。,音樂很安靜。,穏やか,平穩,1
+grade_4_0350,peaceful,平和な・のどかな,和平,adj,The park is peaceful.,公園はのどかだ。,公園很和平。,争いがない,沒有爭執,2
 grade_4_0351,gently,優しく,溫柔,adv,I am touching gently.,私は優しく触れている。,我溫柔地撫摸着。,強くない,不強,1
 grade_4_0352,kindly,親切に,親切地,adv,I am speaking kindly.,私は親切に話している。,我親切地說話。,優しく,溫柔,1
 grade_4_0353,behind,後ろ,後面,prep,The book is behind the door.,本はドアの後ろにあります。,書在門後面。,後ろにある,在後面,1
@@ -636,7 +636,7 @@ grade_4_0634,honest,正直な,誠實的,adj,He is an honest boy.,彼は正直な
 grade_4_0635,huge,巨大な,巨大的,adj,We saw a huge whale.,巨大なクジラを見ました。,我們看到一頭巨大的鯨魚。,,,2
 grade_4_0636,modern,現代の・近代的な,現代的,adj,This is a modern building.,これは近代的な建物です。,這是現代化的建築。,モダンな,現代modern,2
 grade_4_0637,noisy,うるさい,吵鬧的,adj,The classroom was noisy.,教室はうるさかったです。,教室裡很吵。,noise（騒音）な状態,充滿noise（噪音）,2
-grade_4_0638,proud,ほこりに思う,驕傲的,adj,I'm proud of my team.,私はチームをほこりに思います。,我為我的隊伍感到驕傲。,,,2
+grade_4_0638,proud,ほこらしい・ほこりに思う,驕傲的,adj,I'm proud of my team.,私はチームをほこりに思います。,我為我的隊伍感到驕傲。,,,2
 grade_4_0639,round,丸い,圓的,adj,The earth is round.,地球は丸いです。,地球是圓的。,ラウンド,圓round,1
 grade_4_0640,rude,失礼な,無禮的,adj,Don't be rude to others.,人に失礼なことをしてはいけません。,對人不要無禮。,politeの反対,Polite的相反,2
 grade_4_0641,sharp,するどい,銳利的,adj,Be careful. The knife is sharp.,気をつけて。ナイフはするどいです。,小心，刀子很利。,シャープな,鋒利sharp,2

@@ -75,7 +75,7 @@ grade_3_0073,black,黒,黑,adj,The black cat is very cute.,黒い猫はとても
 grade_3_0074,white,白,白,adj,The white dog is very big.,白い犬はとても大きいです。,白狗非常大。,,,1
 grade_3_0075,red,赤,紅色,adj,The red apple is very juicy.,赤いリンゴはとてもジューシーです。,紅蘋果非常多汁。,,,1
 grade_3_0076,blue,青,綠色,adj,The blue sky is very beautiful.,青い空はとても美しいです。,藍色的天空很美。,,,1
-grade_3_0077,yellow,黄,黃,adj,The yellow sun is very bright.,黄色い太陽はとても明るいです。,黃色的太陽非常明亮。,,,1
+grade_3_0077,yellow,黄色,黃,adj,The yellow sun is very bright.,黄色い太陽はとても明るいです。,黃色的太陽非常明亮。,,,1
 grade_3_0078,green,緑,綠色,adj,The green grass is very soft.,緑の草はとても柔らかいです。,綠草非常柔軟。,,,1
 grade_3_0079,sing,歌う,唱歌,v,I like to sing in the shower.,シャワーで歌うことが好きです。,我喜歡在淋浴時唱歌。,,,1
 grade_3_0080,walk,歩く,走路,v,I like to walk in the park.,公園で歩くことが好きです。,我喜歡在公園散步。,,,1
@@ -91,12 +91,12 @@ grade_3_0089,help,手伝う,幫忙,v,I like to help my friends.,友達を手伝�
 grade_3_0090,hot,熱い,熱烈,adj,The hot coffee is very good.,熱いコーヒーはとても美味しいです。,熱咖啡非常好喝。,,,1
 grade_3_0091,cold,寒い,冷,adj,The cold water is very refreshing.,寒い水はとてもさわやかです。,冷水很清爽。,,,1
 grade_3_0092,slow,遅い,慢,adj,The slow music is very relaxing.,遅い音楽はとてもリラックスできます。,慢音樂非常放鬆。,,,1
-grade_3_0093,easy,簡単,簡單,adj,The easy test is very simple.,簡単なテストはとてもシンプルです。,簡單的測試非常簡單。,,,1
+grade_3_0093,easy,簡単な・やさしい,簡單,adj,The easy test is very simple.,簡単なテストはとてもシンプルです。,簡單的測試非常簡單。,,,1
 grade_3_0094,sad,悲しい,悲傷,adj,I am sad today.,今日は悲しいです。,今天很傷心。,,,1
 grade_3_0095,angry,怒っている,在生氣,adj,I am angry today.,今日は怒っています。,我今天很生氣。,,,1
 grade_3_0096,tired,疲れた,累了,adj,I am tired today.,今日は疲れました。,今天累了。,,,1
-grade_3_0097,excited,ワクワク,興奮,adj,I am excited for the party.,パーティーにワクワクしています。,我對派對很興奮。,,,1
-grade_3_0098,bored,退屈,無聊,adj,I am bored today.,今日は退屈です。,今天很無聊。,,,1
+grade_3_0097,excited,ワクワクした,興奮,adj,I am excited for the party.,パーティーにワクワクしています。,我對派對很興奮。,,,1
+grade_3_0098,bored,退屈した,無聊,adj,I am bored today.,今日は退屈です。,今天很無聊。,,,1
 grade_3_0099,agree,賛成する,同意,v,I agree with you.,あなたに賛成です。,我同意你。,,,2
 grade_3_0100,appear,現れる,出現,v,A rainbow appeared in the sky.,空ににじが現れました。,天空出現了彩虹。,,,3
 grade_3_0101,arrive,到着する,到達,v,The bus arrived at the station.,バスが駅に到着しました。,公車到站了。,アライバル＝到着,Arrival＝抵達,2

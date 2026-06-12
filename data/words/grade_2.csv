@@ -116,7 +116,7 @@ grade_2_0114,attention,注意,注意,n,Please pay attention to the teacher.,先�
 grade_2_0115,attitude,態度,態度,n,Her attitude is very positive.,彼女の態度はとても前向きです。,的態度非常積極。,,,2
 grade_2_0116,attract,引き付ける,吸引,v,The beautiful scenery attracts many tourists.,美しい風景は多くの観光客を引き付けます。,美麗的風景吸引了許多遊客。,,,2
 grade_2_0117,beach,海岸,海岸,n,I like to swim at the beach.,私は海岸で泳ぐのが好きです。,我喜歡在海邊游泳。,,,1
-grade_2_0118,cloudy,曇り,陰,adj,The weather is cloudy today.,今日の天気は曇りです。,今天天氣多雲。,,,1
+grade_2_0118,cloudy,曇りの,陰,adj,The weather is cloudy today.,今日の天気は曇りです。,今天天氣多雲。,,,1
 grade_2_0119,dictionary,辞書,詞典,n,I use a dictionary to learn new words.,私は新しい単語を学ぶために辞書を使います。,我使用字典來學習新單詞。,,,2
 grade_2_0120,exercise,運動,運動,n,I do exercise every morning.,私は毎朝運動します。,我每天早上運動。,,,1
 grade_2_0121,friendly,親切な,親切的,adj,My friend is very friendly.,私の友達はとても親切です。,我的朋友非常親切。,,,1
@@ -129,11 +129,11 @@ grade_2_0127,mountain,山,山,n,I like to climb mountains.,私は山を登るの
 grade_2_0128,neighbor,隣人,鄰居,n,My neighbor is very kind.,私の隣人はとても親切です。,我的鄰居很親切。,,,1
 grade_2_0129,ocean,海,海,n,I love to swim in the ocean.,私は海で泳ぐのが好きです。,我喜歡在海里游泳。,,,1
 grade_2_0130,paint,絵を描く,畫圖,v,I like to paint in my free time.,私は自由時間に絵を描くのが好きです。,我喜歡在空閒時間畫畫。,,,1
-grade_2_0131,quiet,静か,安靜,adj,I like to study in a quiet room.,私は静かな部屋で勉強するのが好きです。,我喜歡在安靜的房間裏學習。,,,1
+grade_2_0131,quiet,静かな,安靜,adj,I like to study in a quiet room.,私は静かな部屋で勉強するのが好きです。,我喜歡在安靜的房間裏學習。,,,1
 grade_2_0132,restaurant,レストラン,餐廳,n,I like to eat at a restaurant.,私はレストランで食事をするのが好きです。,我喜歡在餐廳吃飯。,,,1
 grade_2_0133,sunset,夕陽,夕陽,n,I like to watch the sunset.,私は夕陽を見るのが好きです。,我喜歡看夕陽。,,,1
 grade_2_0134,teacher,先生,老師,n,My teacher is very kind.,私の先生はとても親切です。,我的老師非常親切。,,,1
-grade_2_0135,unhappy,不幸,不幸,adj,I feel unhappy when I lose my favorite thing.,私が好きな物を失うと不幸に感じます。,失去我喜歡的東西會感到不幸。,,,2
+grade_2_0135,unhappy,不幸な・悲しい,不幸,adj,I feel unhappy when I lose my favorite thing.,私が好きな物を失うと不幸に感じます。,失去我喜歡的東西會感到不幸。,,,2
 grade_2_0136,vacation,休暇,休假,n,I like to take a vacation to the beach.,私は海への休暇を取るのが好きです。,我喜歡去海邊度假。,,,1
 grade_2_0137,waterfall,滝,瀑布,n,I like to visit a beautiful waterfall.,私は美しい滝を訪れたいです。,我想去美麗的瀑布。,,,2
 grade_2_0138,x-ray,X線,x線,n,The doctor used an x-ray to check my bones.,医者は私の骨を調べるためにX線を使いました。,醫生爲了檢查我的骨頭使用了X光。,,,2
@@ -203,7 +203,7 @@ grade_2_0201,melodious,美しい,美麗,adj,The melodious sound of the piano was
 grade_2_0202,narrative,物語,故事,n,The narrative of the book was engaging.,本の物語は面白かったです。,書裏的故事很有趣。,話,故事,3
 grade_2_0203,opaque,不透明な,不透明的,adj,The opaque glass blocked the light.,不透明なガラスが光を遮いでいた。,不透明的玻璃遮住了光線。,見えにくい,很難看到,3
 grade_2_0204,perfidious,不忠な,不忠,adj,The perfidious traitor was punished.,不忠な裏切者は処罰されました。,不忠的叛徒受到了懲罰。,裏切る,背叛,3
-grade_2_0205,quixotic,空想的,空想,adj,The quixotic idea was impractical.,空想的な考えは非現実的でした。,幻想的想法是不現實的。,現実的でない,不現實,3
+grade_2_0205,quixotic,空想的な,空想,adj,The quixotic idea was impractical.,空想的な考えは非現実的でした。,幻想的想法是不現實的。,現実的でない,不現實,3
 grade_2_0206,reclusive,引き籠もった,閉門不出,adj,The reclusive author rarely gave interviews.,引き籠もった著者はめったにインタビューをしませんでした。,閉門不出的作者很少接受採訪。,外に出ない,不出去,3
 grade_2_0207,sagacious,賢い,聰明,adj,The sagacious investor made a fortune.,賢い投資家は大金を稼いだ。,聰明的投資者賺了很多錢。,知恵のある,有智慧,3
 grade_2_0208,taciturn,寡黙な,沉默寡言,adj,The taciturn person rarely spoke.,寡黙な人物はめったに話しませんでした。,沉默寡言的人很少說話。,少しだけ話す,說幾句,3

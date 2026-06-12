@@ -3,7 +3,7 @@ grade_5_0001,apple,りんご,蘋果,n,I like to eat an apple.,私はりんごを
 grade_5_0002,dog,犬,狗,n,I have a dog.,私は犬を飼っています。,我在養狗。,忠実な動物,忠誠的動物,1
 grade_5_0003,run,走る,跑,v,I like to run in the park.,私は公園で走ることが好きです。,我喜歡在公園跑步。,運動の一種,運動的一種,1
 grade_5_0004,big,大きい,大,adj,This house is big.,この家は大きいです。,房子很大。,大きさを表す,表示大小,1
-grade_5_0005,happy,幸せ,幸福,adj,I am happy today.,私は今日幸せです。,我今天很幸福。,気分を表す,表示心情,1
+grade_5_0005,happy,幸せな・うれしい,幸福,adj,I am happy today.,私は今日幸せです。,我今天很幸福。,気分を表す,表示心情,1
 grade_5_0006,school,学校,學校,n,I go to school every day.,私は毎日学校に行きます。,我每天去學校。,勉強する場所,學習的地方,1
 grade_5_0007,friend,友達,朋友,n,My friend is coming over.,私の友達が来ます。,我的朋友來了。,仲の良い人,關係好的人,1
 grade_5_0008,family,家族,家人,n,I love my family.,私は私の家族を愛しています。,我愛我的家人。,血縁関係,血緣關係,1
@@ -226,17 +226,17 @@ grade_5_0224,whale,クジラ,鯨魚,n,I saw a whale at the aquarium.,私は水�
 grade_5_0225,xerox,コピー,複印,v,I will xerox this document.,私はこの文書をコピーします。,我會複製這個文檔。,複製する,複製,2
 grade_5_0226,yacht,ヨット,遊艇,n,I like sailing on a yacht.,私はヨットで航海することが好きです。,我喜歡乘遊艇航行。,豪華な船,豪華船,2
 grade_5_0227,zoo,動物園,動物園,n,I like visiting the zoo.,私は動物園を訪れることが好きです。,我喜歡參觀動物園。,動物の住む場所,動物居住的地方,1
-grade_5_0228,cloudy,曇り,陰,adj,Today is cloudy.,今日は曇りです。,今天多雲。,太陽が見えない,看不見太陽,1
+grade_5_0228,cloudy,曇りの,陰,adj,Today is cloudy.,今日は曇りです。,今天多雲。,太陽が見えない,看不見太陽,1
 grade_5_0229,listen,聞く,聽,v,I listen to music every day.,私は毎日音楽を聞きます。,我每天都聽音樂。,耳で感じる,用耳朵感受,1
 grade_5_0230,paint,絵を描く,畫圖,v,I like to paint pictures.,私は絵を描くことが好きです。,我喜歡畫畫。,色で表現,用顏色表達,1
 grade_5_0231,phone,電話,電話,n,I use my phone to call my friends.,私は友達に電話するために携帯電話を使います。,我爲了給朋友打電話用手機。,声で会話,用聲音對話,1
-grade_5_0232,rainy,雨,雨,adj,Today is rainy.,今日は雨です。,今天下雨。,傘が必要,需要一把傘,1
-grade_5_0233,snowy,雪,雪,adj,Today is snowy.,今日は雪です。,今天下雪。,白くて冷たい,又白又冷,1
+grade_5_0232,rainy,雨の,雨,adj,Today is rainy.,今日は雨です。,今天下雨。,傘が必要,需要一把傘,1
+grade_5_0233,snowy,雪の,雪,adj,Today is snowy.,今日は雪です。,今天下雪。,白くて冷たい,又白又冷,1
 grade_5_0234,yesterday,昨日,昨天,n,I went to the park yesterday.,私は昨日公園に行きました。,昨天去了公園。,一日前に,一天前,2
 grade_5_0235,ball,ボール,球,n,I like to play with a ball.,私はボールで遊ぶことが好きです。,我喜歡玩球。,丸い物,圓形的東西,1
 grade_5_0236,brush,ブラシ,刷子,n,I use a brush to clean my teeth.,私はブラシで歯を磨きます。,我用刷子刷牙。,毛でできている,毛做的,1
 grade_5_0237,cake,ケーキ,蛋糕,n,I like to eat cake.,私はケーキを食べることが好きです。,我喜歡吃蛋糕。,甘い食事,甜的食物,1
-grade_5_0238,cloudless,晴れ,晴天,adj,Today is cloudless.,今日は晴れです。,今天是晴天。,太陽が見える,看到太陽,2
+grade_5_0238,cloudless,雲ひとつない・よく晴れた,晴天,adj,Today is cloudless.,今日は晴れです。,今天是晴天。,太陽が見える,看到太陽,2
 grade_5_0239,cookie,クッキー,餅乾,n,I like to eat cookies.,私はクッキーを食べることが好きです。,我喜歡吃餅乾。,甘い食べ物,甜的食物,1
 grade_5_0240,dictionary,辞書,詞典,n,I use a dictionary to learn new words.,私は辞書で新しい言葉を覚えます。,我用字典記新詞。,言葉の意味,詞語的含義,2
 grade_5_0241,eggplant,ナス,茄子,n,I like to eat eggplant.,私はナスを食べることが好きです。,我喜歡吃茄子。,紫色の野菜,紫色蔬菜,2
@@ -368,11 +368,11 @@ grade_5_0366,smell,におう,氣味,v,I smell a flower.,私は花のにおいを
 grade_5_0367,taste,味わう,品嚐,v,I taste a cake.,私はケーキの味を味わいます。,我品嚐蛋糕的味道。,,,1
 grade_5_0368,touch,さわる,摸,v,I touch a cat.,私は猫にさわります。,摸貓。,,,1
 grade_5_0369,hard,難しい,很難,adj,This problem is hard.,この問題は難しいです。,這個問題很難。,難しいと成長する,困難和成長,1
-grade_5_0370,easy,簡単,簡單,adj,This problem is easy.,この問題は簡単です。,這個問題很簡單。,簡単なものは安心,簡單的東西放心,1
+grade_5_0370,easy,簡単な・やさしい,簡單,adj,This problem is easy.,この問題は簡単です。,這個問題很簡單。,簡単なものは安心,簡單的東西放心,1
 grade_5_0371,tall,背が高い,個子高,adj,He is tall.,彼は背が高いです。,個子很高。,,,1
 grade_5_0372,go,行く,去,v,I will go to school.,私は学校に行きます。,我去學校。,行く英語はgo,去英語go,1
 grade_5_0373,surprised,驚いた,嚇了一跳,adj,I am surprised today.,私は今日驚いています。,我今天很驚訝。,,,2
-grade_5_0374,excited,ワクワク,興奮,adj,I am excited today.,私は今日ワクワクしています。,我今天很興奮。,,,2
+grade_5_0374,excited,ワクワクした,興奮,adj,I am excited today.,私は今日ワクワクしています。,我今天很興奮。,,,2
 grade_5_0375,boring,面白くない,沒意思,adj,This movie is boring.,この映画は面白くないです。,這部電影不好玩。,,,2
 grade_5_0376,interesting,面白い,有趣,adj,This book is interesting.,この本は面白いです。,這本書很有趣。,,,2
 grade_5_0377,beautiful,美しい,美麗,adj,This flower is beautiful.,この花は美しいです。,這朵花很美。,,,2

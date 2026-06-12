@@ -118,6 +118,38 @@ if not st.session_state.logged_in:
             '<div style="text-align:center;color:#666;font-size:.85rem;margin-top:24px;">'
             '現在 <b>' + str(len(users)) + '</b> 人の勇者が冒険中！'
             '</div>', unsafe_allow_html=True)
+
+    # PWA（ホーム画面アイコン）の動作診断。実ブラウザ内から配信とタグ注入を検査する
+    with st.expander("🔧 アイコン診断"):
+        from core.compat import html_embed
+        html_embed(
+            '<div id="r" style="font-family:monospace;font-size:12px;color:#333;'
+            'white-space:pre-wrap;line-height:1.7;">検査中...</div>'
+            '<script>(async function(){'
+            'var out=[];'
+            'var urls=['
+            '"/component/core.pwa.eiken_pwa_assets/icon-180.png",'
+            '"/app/static/icon-180.png"'
+            '];'
+            'for(var i=0;i<urls.length;i++){'
+            'try{var r=await fetch(urls[i]);'
+            'var ct=r.headers.get("content-type")||"";'
+            'out.push((ct.indexOf("image")>=0?"✓":"✗")+" "+urls[i]+" → "+r.status+" "+ct);'
+            '}catch(e){out.push("✗ "+urls[i]+" → ERROR "+e);}'
+            '}'
+            'try{'
+            'var d=window.parent.document;'
+            'var mf=d.querySelector(\'link[rel="manifest"]\');'
+            'var ic=d.querySelector(\'link[rel~="apple-touch-icon"]\');'
+            'var tt=d.querySelector(\'meta[name="apple-mobile-web-app-title"]\');'
+            'out.push("manifest: "+(mf?mf.getAttribute("href"):"なし"));'
+            'out.push("touch-icon: "+(ic?ic.getAttribute("href"):"なし"));'
+            'out.push("app-title: "+(tt?tt.content:"なし"));'
+            '}catch(e){out.push("親ページ参照: 不可 "+e);}'
+            'out.push("ビルド: 2026-06-12-D");'
+            'document.getElementById("r").innerText=out.join("\\n");'
+            '})();</script>',
+            height=170)
     st.stop()
 
 

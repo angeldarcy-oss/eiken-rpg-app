@@ -4,14 +4,20 @@ core/pwa.py ― スマホの「ホーム画面に追加」対応
 Streamlitは<head>を直接編集できないため、iframe内のスクリプトから
 親ページの<head>にPWAマニフェストとiOS用メタタグを注入する。
 
-必要な静的ファイル（.streamlit/config.toml の enableStaticServing で配信）:
-  - static/manifest.json   … Android / Chrome 用
-  - static/icon-192.png, icon-512.png … マニフェスト用アイコン
-  - static/icon-180.png    … iOS の apple-touch-icon
+アイコンとマニフェストは core/pwa_assets/ に置き、カスタムコンポーネントの
+アセット配信（/component/... パス）で配る。server.enableStaticServing と
+違いサーバ設定に依存しないため、Streamlit Cloudでも確実に動く。
 """
 
 from __future__ import annotations
+from pathlib import Path
+
 import streamlit.components.v1 as components
+
+# アセット配信専用のダミーコンポーネント（呼び出しはしない）
+_ASSETS_DIR = Path(__file__).parent / "pwa_assets"
+components.declare_component("eiken_pwa_assets", path=str(_ASSETS_DIR))
+_BASE = "/component/core.pwa.eiken_pwa_assets"
 
 
 def inject_pwa_tags() -> None:
@@ -33,8 +39,8 @@ def inject_pwa_tags() -> None:
         'if(!el.id||el.id.indexOf("eiken-pwa")!==0)el.remove();'
         '});'
         'var tags=['
-        '["link",{rel:"manifest",href:"/app/static/manifest.json",id:"eiken-pwa"}],'
-        '["link",{rel:"apple-touch-icon",sizes:"180x180",href:"/app/static/icon-180.png",id:"eiken-pwa-icon"}],'
+        '["link",{rel:"manifest",href:"' + _BASE + '/manifest.json",id:"eiken-pwa"}],'
+        '["link",{rel:"apple-touch-icon",sizes:"180x180",href:"' + _BASE + '/icon-180.png",id:"eiken-pwa-icon"}],'
         '["meta",{name:"apple-mobile-web-app-capable",content:"yes"}],'
         '["meta",{name:"mobile-web-app-capable",content:"yes"}],'
         '["meta",{name:"apple-mobile-web-app-status-bar-style",content:"black-translucent"}],'

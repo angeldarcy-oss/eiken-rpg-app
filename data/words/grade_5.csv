@@ -439,3 +439,74 @@ grade_5_0437,weather,天気,天氣,n,The weather is sunny.,天気は晴れてい
 grade_5_0438,toys,玩具,玩具,n,I play with toys.,私は玩具で遊びます。,我玩玩具。,,,1
 grade_5_0439,forward,前,前,adv,I move forward.,私は前進します。,我前進。,,,1
 grade_5_0440,backward,後ろ,後面,adv,I move backward.,私は後ろに移動します。,我向後移動。,,,1
+grade_5_0441,Monday,月曜日,星期一,n,I have piano lessons on Monday.,月曜日にピアノのレッスンがあります。,我星期一有鋼琴課。,,,1
+grade_5_0442,Tuesday,火曜日,星期二,n,We have math on Tuesday.,火曜日に数学があります。,我們星期二有數學課。,,,1
+grade_5_0443,Wednesday,水曜日,星期三,n,Wednesday is in the middle of the week.,水曜日は週の真ん中です。,星期三在一週的中間。,,,1
+grade_5_0444,Thursday,木曜日,星期四,n,I play soccer on Thursday.,木曜日にサッカーをします。,我星期四踢足球。,,,1
+grade_5_0445,Friday,金曜日,星期五,n,Friday is my favorite day.,金曜日は大好きな日です。,星期五是我最喜歡的日子。,,,1
+grade_5_0446,Saturday,土曜日,星期六,n,We go shopping on Saturday.,土曜日に買い物に行きます。,我們星期六去購物。,,,1
+grade_5_0447,Sunday,日曜日,星期日,n,I relax at home on Sunday.,日曜日は家でゆっくりします。,我星期日在家休息。,,,1
+grade_5_0448,January,1月,一月,n,January is the first month.,1月は最初の月です。,一月是第一個月。,,,1
+grade_5_0449,February,2月,二月,n,February is very cold.,2月はとても寒いです。,二月很冷。,,,1
+grade_5_0450,March,3月,三月,n,School ends in March.,学校は3月に終わります。,學校三月結束。,,,1
+grade_5_0451,April,4月,四月,n,School starts in April in Japan.,日本では学校は4月に始まります。,日本的學校四月開學。,,,1
+grade_5_0452,May,5月,五月,n,May has many holidays.,5月は祝日が多いです。,五月有很多假日。,,,1
+grade_5_0453,June,6月,六月,n,It rains a lot in June.,6月は雨がたくさん降ります。,六月常下雨。,,,1
+grade_5_0454,July,7月,七月,n,Summer vacation starts in July.,夏休みは7月に始まります。,暑假七月開始。,,,1
+grade_5_0455,August,8月,八月,n,August is the hottest month.,8月は一番暑い月です。,八月是最熱的月份。,,,1
+grade_5_0456,September,9月,九月,n,School starts again in September.,9月にまた学校が始まります。,九月學校再次開學。,,,1
+grade_5_0457,October,10月,十月,n,We have a sports day in October.,10月に運動会があります。,我們十月有運動會。,,,1
+grade_5_0458,November,11月,十一月,n,Leaves turn red in November.,11月に葉が赤くなります。,十一月樹葉變紅。,,,1
+grade_5_0459,December,12月,十二月,n,Christmas is in December.,クリスマスは12月です。,聖誕節在十二月。,,,1
+grade_5_0460,eleven,11（の）,十一,n,My brother is eleven years old.,弟は11歳です。,我弟弟十一歲。,,,1
+grade_5_0461,twelve,12（の）,十二,n,There are twelve months in a year.,1年には12か月あります。,一年有十二個月。,,,1
+grade_5_0462,twenty,20（の）,二十,n,Twenty students are in my class.,私のクラスには20人の生徒がいます。,我們班有二十個學生。,,,1
+grade_5_0463,thirty,30（の）,三十,n,My mother is thirty years old.,母は30歳です。,我媽媽三十歲。,,,1
+grade_5_0464,forty,40（の）,四十,n,The test has forty questions.,テストは40問あります。,考試有四十題。,,,1
+grade_5_0465,fifty,50（の）,五十,n,This book has fifty pages.,この本は50ページあります。,這本書有五十頁。,,,1
+grade_5_0466,hundred,100（の）,一百,n,A hundred people came to the party.,100人がパーティーに来ました。,一百個人來參加派對。,,,1
+grade_5_0467,thousand,1000（の）,一千,n,This watch costs two thousand yen.,この時計は2千円です。,這支手錶兩千日圓。,,,1
+grade_5_0468,brown,茶色（の）,棕色,adj,I have brown shoes.,茶色のくつを持っています。,我有棕色的鞋子。,,,1
+grade_5_0469,pink,ピンク（の）,粉紅色,adj,She likes pink flowers.,彼女はピンクの花が好きです。,她喜歡粉紅色的花。,,,1
+grade_5_0470,purple,むらさき（の）,紫色,adj,The grapes are purple.,ぶどうはむらさき色です。,葡萄是紫色的。,,,1
+grade_5_0471,gray,灰色（の）,灰色,adj,The sky is gray today.,今日は空が灰色です。,今天天空是灰色的。,,,1
+grade_5_0472,ant,アリ,螞蟻,n,An ant is very small.,アリはとても小さいです。,螞蟻很小。,,,1
+grade_5_0473,arm,うで,手臂,n,I hurt my arm.,うでをけがしました。,我的手臂受傷了。,,,1
+grade_5_0474,aunt,おば,阿姨、姑姑,n,My aunt lives near my house.,おばは家の近くに住んでいます。,我阿姨住在我家附近。,,,1
+grade_5_0475,badminton,バドミントン,羽毛球,n,Let's play badminton.,バドミントンをしましょう。,我們打羽毛球吧。,,,1
+grade_5_0476,baseball,野球,棒球,n,Baseball is popular in Japan.,野球は日本で人気です。,棒球在日本很受歡迎。,,,1
+grade_5_0477,basketball,バスケットボール,籃球,n,He plays basketball after school.,彼は放課後バスケをします。,他放學後打籃球。,,,1
+grade_5_0478,bench,ベンチ,長椅,n,Let's sit on the bench.,ベンチにすわりましょう。,我們坐在長椅上吧。,,,1
+grade_5_0479,blackboard,黒板,黑板,n,Look at the blackboard.,黒板を見なさい。,看黑板。,,,1
+grade_5_0480,bowl,ボウル・どんぶり,碗,n,I eat rice from a bowl.,どんぶりでごはんを食べます。,我用碗吃飯。,,,1
+grade_5_0481,butter,バター,奶油,n,I put butter on my bread.,パンにバターをぬります。,我在麵包上塗奶油。,,,1
+grade_5_0482,cabbage,キャベツ,高麗菜,n,Rabbits like cabbage.,ウサギはキャベツが好きです。,兔子喜歡高麗菜。,,,1
+grade_5_0483,calendar,カレンダー,日曆,n,The calendar is on the wall.,カレンダーはかべにあります。,日曆在牆上。,,,1
+grade_5_0484,cap,ぼうし（つばつき）,棒球帽,n,He wears a blue cap.,彼は青いぼうしをかぶっています。,他戴著藍色棒球帽。,,,1
+grade_5_0485,chalk,チョーク,粉筆,n,The teacher writes with chalk.,先生はチョークで書きます。,老師用粉筆寫字。,,,1
+grade_5_0486,chicken,ニワトリ・チキン,雞、雞肉,n,I like fried chicken.,フライドチキンが好きです。,我喜歡炸雞。,,,1
+grade_5_0487,chopsticks,はし,筷子,n,I eat with chopsticks.,はしで食べます。,我用筷子吃飯。,,,1
+grade_5_0488,circle,円・まる,圓圈,n,Draw a circle on the paper.,紙にまるをかきなさい。,在紙上畫一個圓。,,,1
+grade_5_0489,crayon,クレヨン,蠟筆,n,The child draws with crayons.,子どもはクレヨンで絵をかきます。,小孩用蠟筆畫畫。,,,1
+grade_5_0490,cup,カップ・茶わん,杯子,n,"A cup of tea, please.",お茶を1杯ください。,請給我一杯茶。,,,1
+grade_5_0491,dad,お父さん,爸爸,n,My dad is a good cook.,お父さんは料理が上手です。,我爸爸很會做菜。,,,1
+grade_5_0492,diary,日記,日記,n,I write in my diary every night.,毎晩日記を書きます。,我每天晚上寫日記。,,,1
+grade_5_0493,drum,たいこ・ドラム,鼓,n,He plays the drums.,彼はドラムをたたきます。,他打鼓。,,,1
+grade_5_0494,duck,アヒル・カモ,鴨子,n,Ducks swim in the pond.,アヒルが池で泳いでいます。,鴨子在池塘游泳。,,,1
+grade_5_0495,fox,キツネ,狐狸,n,A fox lives in the forest.,キツネは森に住んでいます。,狐狸住在森林裡。,,,1
+grade_5_0496,knee,ひざ,膝蓋,n,I hurt my knee.,ひざをけがしました。,我的膝蓋受傷了。,,,1
+grade_5_0497,knife,ナイフ・包丁,刀子,n,Cut the apple with a knife.,ナイフでりんごを切りなさい。,用刀子切蘋果。,,,1
+grade_5_0498,koala,コアラ,無尾熊,n,Koalas sleep a lot.,コアラはたくさん寝ます。,無尾熊睡很多覺。,,,1
+grade_5_0499,lunch box,お弁当箱,便當盒,n,I bring my lunch box to school.,学校にお弁当を持っていきます。,我帶便當盒去學校。,,,1
+grade_5_0500,mom,お母さん,媽媽,n,My mom makes breakfast.,お母さんは朝ごはんを作ります。,我媽媽做早餐。,,,1
+grade_5_0501,pet,ペット,寵物,n,Do you have any pets?,ペットを飼っていますか。,你有養寵物嗎？,,,1
+grade_5_0502,pie,パイ,派,n,Grandma made an apple pie.,おばあちゃんがアップルパイを作りました。,奶奶做了蘋果派。,,,1
+grade_5_0503,pilot,パイロット,飛行員,n,The pilot flies the plane.,パイロットは飛行機を操縦します。,飛行員駕駛飛機。,,,1
+grade_5_0504,pond,池,池塘,n,There are fish in the pond.,池には魚がいます。,池塘裡有魚。,,,1
+grade_5_0505,pumpkin,カボチャ,南瓜,n,We made pumpkin soup.,カボチャのスープを作りました。,我們做了南瓜湯。,,,1
+grade_5_0506,racket,ラケット,球拍,n,I got a new tennis racket.,新しいテニスラケットを買ってもらいました。,我得到一支新網球拍。,,,1
+grade_5_0507,rainbow,にじ,彩虹,n,A rainbow has seven colors.,にじは7色あります。,彩虹有七種顏色。,,,1
+grade_5_0508,salad,サラダ,沙拉,n,I eat salad every morning.,毎朝サラダを食べます。,我每天早上吃沙拉。,,,1
+grade_5_0509,soccer,サッカー,足球,n,Soccer is fun.,サッカーは楽しいです。,足球很好玩。,,,1
+grade_5_0510,soup,スープ,湯,n,This soup is hot.,このスープは熱いです。,這湯很燙。,,,1
+grade_5_0511,spoon,スプーン,湯匙,n,I eat soup with a spoon.,スプーンでスープを飲みます。,我用湯匙喝湯。,,,1

@@ -257,3 +257,56 @@ grade_pre2_0255,crime,犯罪,犯罪,n,The police prevent crime.,警察は犯罪�
 grade_pre2_0256,crisis,危機,危機,n,The country faced an economic crisis.,その国は経済危機に直面しました。,那個國家面臨經濟危機。,,,3
 grade_pre2_0257,cure,治す・治療法,治癒,v,This medicine cures headaches.,この薬は頭痛を治します。,這種藥能治頭痛。,,,2
 grade_pre2_0258,current,現在の,目前的,adj,What is your current address?,現在の住所はどこですか。,你目前的地址是什麼？,,,3
+grade_pre2_0259,decade,10年間,十年,n,Prices rose over the past decade.,この10年で物価が上がりました。,過去十年物價上漲了。,,,3
+grade_pre2_0260,declare,宣言する,宣布,v,The country declared independence.,その国は独立を宣言しました。,那個國家宣布獨立。,,,3
+grade_pre2_0261,decline,断る・減少する,婉拒、下降,v,He declined the invitation.,彼は招待を断りました。,他婉拒了邀請。,,,3
+grade_pre2_0262,decorate,かざる,裝飾,v,We decorated the room for the party.,パーティーのために部屋をかざりました。,我們為派對佈置了房間。,デコレーションケーキ,裝飾蛋糕decoration,2
+grade_pre2_0263,decrease,減る・減らす,減少,v,The population is decreasing.,人口が減っています。,人口在減少。,increaseの反対,Increase的相反,3
+grade_pre2_0264,defeat,打ち負かす,打敗,v,Our team defeated the champions.,私たちのチームは王者を打ち負かしました。,我們隊打敗了冠軍。,,,3
+grade_pre2_0265,defend,守る,防守,v,They defended their goal well.,彼らはゴールをよく守りました。,他們把球門守得很好。,ディフェンス＝守備,防守defense,3
+grade_pre2_0266,define,定義する,定義,v,How do you define success?,成功をどう定義しますか。,你如何定義成功？,,,3
+grade_pre2_0267,degree,度・学位,度、學位,n,It's 30 degrees today.,今日は30度です。,今天三十度。,,,2
+grade_pre2_0268,delay,遅らせる・遅れ,延誤,n,The train had a 30-minute delay.,電車は30分遅れました。,火車誤點三十分鐘。,,,3
+grade_pre2_0269,demand,要求する・需要,要求、需求,v,Workers demanded higher pay.,労働者たちは賃上げを要求しました。,工人們要求加薪。,,,3
+grade_pre2_0270,demonstrate,実演する・示す,示範,v,She demonstrated how to use the app.,彼女はアプリの使い方を実演しました。,她示範如何使用APP。,デモンストレーション,示範demonstration,3
+grade_pre2_0271,deny,否定する,否認,v,He denied breaking the window.,彼は窓を割ったことを否定しました。,他否認打破窗戶。,,,3
+grade_pre2_0272,depend,頼る・〜次第である,依賴、取決於,v,It depends on the weather.,それは天気次第です。,那要看天氣。,depend on＝〜による,Depend on＝取決於,2
+grade_pre2_0273,describe,描写する・説明する,描述,v,Describe the picture in English.,その絵を英語で説明しなさい。,用英文描述那張圖。,,,2
+grade_pre2_0274,deserve,〜に値する,值得,v,You deserve the prize.,あなたはその賞に値します。,你值得那個獎。,,,3
+grade_pre2_0275,destroy,破壊する,破壞,v,The fire destroyed the building.,火事が建物を破壊しました。,大火摧毀了建築物。,,,2
+grade_pre2_0276,detail,詳細,細節,n,Tell me the details later.,あとで詳細を教えてください。,稍後告訴我細節。,ディテール,細節detail,3
+grade_pre2_0277,device,装置・機器,裝置,n,This device measures temperature.,この装置は温度を測ります。,這個裝置測量溫度。,デバイス,裝置device,3
+grade_pre2_0278,dig,掘る,挖,v,The dog dug a hole in the yard.,犬は庭に穴を掘りました。,狗在院子裡挖了個洞。,,,2
+grade_pre2_0279,direction,方向,方向,n,We walked in the wrong direction.,私たちはまちがった方向に歩きました。,我們走錯了方向。,,,2
+grade_pre2_0280,disagree,意見が合わない,不同意,v,I disagree with your opinion.,あなたの意見には反対です。,我不同意你的意見。,dis＋agree（賛成）,Dis＋agree（同意）,3
+grade_pre2_0281,disappear,消える,消失,v,The cat disappeared into the bushes.,ネコはしげみに消えました。,貓消失在灌木叢中。,dis＋appear（現れる）,Dis＋appear（出現）,3
+grade_pre2_0282,disappoint,がっかりさせる,使失望,v,The result disappointed everyone.,その結果はみんなをがっかりさせました。,結果讓大家失望。,,,3
+grade_pre2_0283,disaster,災害,災害,n,The town recovered from the disaster.,町は災害から復興しました。,小鎮從災害中復原。,,,3
+grade_pre2_0284,discount,割引,折扣,n,Students get a 20% discount.,学生は2割引です。,學生有八折優惠。,ディスカウント,折扣discount,2
+grade_pre2_0285,discuss,話し合う,討論,v,Let's discuss the plan tomorrow.,明日その計画を話し合いましょう。,我們明天討論計畫吧。,ディスカッション,討論discussion,2
+grade_pre2_0286,disease,病気,疾病,n,The doctor studies heart disease.,その医師は心臓病を研究しています。,那位醫生研究心臟病。,,,3
+grade_pre2_0287,display,展示する・表示,展示,n,The museum has a new display.,博物館に新しい展示があります。,博物館有新的展示。,ディスプレイ,顯示器display,2
+grade_pre2_0288,distinguish,区別する,區分,v,Can you distinguish the twins?,その双子を区別できますか。,你能分辨那對雙胞胎嗎？,,,4
+grade_pre2_0289,distribute,配布する,分發,v,They distributed food to the people.,彼らは人々に食料を配りました。,他們向人們分發食物。,,,4
+grade_pre2_0290,district,地区,地區,n,This is a shopping district.,ここは商業地区です。,這是商業區。,,,3
+grade_pre2_0291,disturb,じゃまする,打擾,v,Don't disturb your sister. She's studying.,お姉ちゃんのじゃまをしないで。勉強中だよ。,別打擾你姊姊，她在讀書。,,,3
+grade_pre2_0292,divide,分ける,分割,v,Divide the class into four groups.,クラスを4つのグループに分けなさい。,把班級分成四組。,,,3
+grade_pre2_0293,domestic,国内の・家庭の,國內的,adj,I took a domestic flight.,国内便に乗りました。,我搭了國內航班。,,,4
+grade_pre2_0294,donate,寄付する,捐贈,v,She donated money to the school.,彼女は学校にお金を寄付しました。,她捐錢給學校。,,,3
+grade_pre2_0295,downtown,繁華街・中心街,市中心,n,Let's go downtown for shopping.,買い物に繁華街へ行きましょう。,我們去市中心購物吧。,,,2
+grade_pre2_0296,due,期限の・予定で,到期的,adj,The report is due on Friday.,レポートの期限は金曜日です。,報告星期五截止。,due to＝〜のため,Due to＝由於,3
+grade_pre2_0297,duty,義務・職務,義務,n,It is our duty to help them.,彼らを助けるのは私たちの義務です。,幫助他們是我們的義務。,,,3
+grade_pre2_0298,eager,熱心な,渴望的,adj,She is eager to learn English.,彼女は英語を熱心に学びたがっています。,她渴望學英文。,,,4
+grade_pre2_0299,economic,経済の,經濟的,adj,The country has economic problems.,その国は経済問題をかかえています。,那個國家有經濟問題。,economy（経済）の形容詞,Economy的形容詞,3
+grade_pre2_0300,edge,ふち・端,邊緣,n,Don't stand near the edge.,端の近くに立たないで。,別站在邊緣附近。,,,3
+grade_pre2_0301,edit,編集する,編輯,v,I edited the video on my phone.,スマホで動画を編集しました。,我用手機剪輯影片。,エディター＝編集者,編輯器editor,2
+grade_pre2_0302,educate,教育する,教育,v,The school educates 500 students.,その学校は500人の生徒を教育しています。,那所學校教育五百名學生。,education（教育）の動詞,Education的動詞,3
+grade_pre2_0303,effective,効果的な,有效的,adj,This is an effective way to learn.,これは効果的な学習方法です。,這是有效的學習方法。,effect（効果）の形容詞,Effect（效果）的形容詞,3
+grade_pre2_0304,efficient,効率的な,有效率的,adj,The new system is more efficient.,新しいシステムはより効率的です。,新系統更有效率。,,,4
+grade_pre2_0305,either,どちらか・〜もまた,任一,adv,You can choose either color.,どちらの色でも選べます。,你可以選任一種顏色。,,,3
+grade_pre2_0306,elect,選出する,選舉,v,They elected her as president.,彼らは彼女を会長に選びました。,他們選她當會長。,election（選挙）の動詞,Election（選舉）的動詞,3
+grade_pre2_0307,emergency,緊急事態,緊急情況,n,Call 119 in an emergency.,緊急時は119番に電話しなさい。,緊急時打119。,,,3
+grade_pre2_0308,emotion,感情,情感,n,Music expresses emotions.,音楽は感情を表現します。,音樂表達情感。,,,3
+grade_pre2_0309,emphasize,強調する,強調,v,The teacher emphasized the point.,先生はその点を強調しました。,老師強調了那一點。,,,4
+grade_pre2_0310,employ,雇う,僱用,v,The factory employs 200 workers.,その工場は200人を雇っています。,那家工廠僱用兩百名工人。,,,3
+grade_pre2_0311,encourage,励ます,鼓勵,v,My parents encouraged me to try.,両親は挑戦するよう励ましてくれました。,我父母鼓勵我嘗試。,,,3

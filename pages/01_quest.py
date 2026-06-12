@@ -1167,3 +1167,10 @@ if st.session_state.answered and st.session_state.last_result:
     if st.button(btn_label, use_container_width=True, type="primary"):
         load_next_question()
         st.rerun()
+    # 単語数が多く全問クリアは現実的でないため、任意のタイミングで
+    # 結果画面（履歴・苦手単語・ランキング保存）に進めるようにする
+    if st.session_state.session_total >= 5 and remaining > 0:
+        if st.button(("🏁 今日はここまで（結果を見る）" if lang == "ja" else "🏁 今天到此為止（看結果）"),
+                     use_container_width=True):
+            st.session_state.quest_finished = True
+            st.rerun()

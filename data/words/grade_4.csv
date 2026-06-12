@@ -542,3 +542,48 @@ grade_4_0540,wait for,〜を待つ,等待,phr,I'm waiting for the bus.,バスを
 grade_4_0541,look like,〜のように見える,看起來像,phr,You look like your mother.,あなたはお母さんに似ていますね。,你看起來像你媽媽。,,,2
 grade_4_0542,be good at,〜が得意だ,擅長,phr,She is good at singing.,彼女は歌うのが得意です。,她擅長唱歌。,,,2
 grade_4_0543,have fun,楽しむ,玩得開心,phr,We had fun at the party.,パーティーで楽しみました。,我們在派對上玩得很開心。,,,1
+grade_4_0544,ago,〜前に,以前,adv,I came here two years ago.,私は2年前にここに来ました。,我兩年前來到這裡。,,,2
+grade_4_0545,animal,動物,動物,n,What animal do you like?,どんな動物が好きですか。,你喜歡什麼動物？,,,1
+grade_4_0546,ask,たずねる・たのむ,問、請求,v,Ask the teacher a question.,先生に質問しなさい。,問老師問題。,,,1
+grade_4_0547,candy,キャンディー・あめ,糖果,n,The children love candy.,子どもたちはあめが大好きです。,孩子們喜歡糖果。,,,1
+grade_4_0548,cheese,チーズ,起司,n,I like cheese pizza.,チーズピザが好きです。,我喜歡起司披薩。,,,1
+grade_4_0549,cherry,サクランボ・桜,櫻桃、櫻花,n,Cherry blossoms are beautiful.,桜の花は美しいです。,櫻花很美。,,,1
+grade_4_0550,cute,かわいい,可愛的,adj,Your puppy is so cute!,あなたの子犬はとてもかわいい！,你的小狗好可愛！,,,1
+grade_4_0551,dear,親愛なる,親愛的,adj,"Dear Mr. Smith, ...",親愛なるスミス先生、…,親愛的史密斯先生……,手紙の書き出し,信的開頭,2
+grade_4_0552,driver,運転手,司機,n,The bus driver is kind.,バスの運転手は親切です。,公車司機很親切。,drive（運転する）人,Drive（開車）的人,1
+grade_4_0553,fence,フェンス・さく,圍欄,n,The dog jumped over the fence.,犬はさくを飛びこえました。,狗跳過了圍欄。,,,2
+grade_4_0554,field,野原・畑・競技場,田野、場地,n,The children play in the field.,子どもたちは野原で遊びます。,孩子們在田野裡玩。,,,2
+grade_4_0555,free,自由な・ひまな・無料の,自由的、免費的,adj,Are you free this afternoon?,今日の午後はひまですか。,你今天下午有空嗎？,,,1
+grade_4_0556,fresh,新鮮な,新鮮的,adj,These eggs are fresh.,この卵は新鮮です。,這些蛋很新鮮。,,,2
+grade_4_0557,glass,ガラス・コップ,玻璃、玻璃杯,n,"A glass of water, please.",水を1杯ください。,請給我一杯水。,,,1
+grade_4_0558,ground,地面・運動場,地面、操場,n,The ball fell to the ground.,ボールは地面に落ちました。,球掉到地上。,,,2
+grade_4_0559,heart,心臓・心,心臟、心,n,My heart is beating fast.,心臓がドキドキしています。,我的心跳得很快。,ハートマーク,愛心heart,1
+grade_4_0560,job,仕事,工作,n,My father got a new job.,父は新しい仕事につきました。,我爸爸找到了新工作。,,,1
+grade_4_0561,lazy,なまけものの,懶惰的,adj,Don't be lazy. Do your homework.,なまけないで。宿題をしなさい。,別偷懶，去做作業。,,,2
+grade_4_0562,leaf,葉,葉子,n,The leaf fell from the tree.,葉が木から落ちました。,葉子從樹上掉下來。,複数形はleaves,複數是leaves,2
+grade_4_0563,math,数学,數學,n,Math is difficult but fun.,数学は難しいけど楽しいです。,數學很難但很有趣。,mathematicsの略,Mathematics的縮寫,1
+grade_4_0564,office,事務所・会社,辦公室,n,My mother works in an office.,母は会社で働いています。,我媽媽在辦公室工作。,オフィス,辦公室office,1
+grade_4_0565,poor,貧しい・かわいそうな,貧窮的、可憐的,adj,The poor cat looks hungry.,かわいそうなネコはおなかがすいているようです。,可憐的貓看起來很餓。,richの反対,Rich的相反,2
+grade_4_0566,ready,用意ができて,準備好的,adj,Are you ready to go?,出かける準備はできましたか。,你準備好出發了嗎？,レディー、ゴー！,"預備，跑Ready, go！",1
+grade_4_0567,salty,しょっぱい,鹹的,adj,This soup is too salty.,このスープはしょっぱすぎます。,這湯太鹹了。,salt（塩）の味,Salt（鹽）的味道,2
+grade_4_0568,shoulder,肩,肩膀,n,He carried the bag on his shoulder.,彼はかばんを肩にかけました。,他把包包扛在肩上。,,,2
+grade_4_0569,shy,はずかしがりの,害羞的,adj,She is shy with new people.,彼女は初対面の人にははずかしがりです。,她對陌生人很害羞。,シャイな性格,個性害羞shy,2
+grade_4_0570,snack,おやつ・軽食,點心,n,Let's have a snack after school.,放課後におやつを食べましょう。,放學後我們吃點心吧。,,,1
+grade_4_0571,sour,すっぱい,酸的,adj,This lemon is very sour.,このレモンはとてもすっぱいです。,這顆檸檬很酸。,,,2
+grade_4_0572,spicy,からい,辣的,adj,This curry is too spicy.,このカレーはからすぎます。,這咖哩太辣了。,スパイス（香辛料）の味,Spice（香料）的味道,2
+grade_4_0573,stomach,胃・おなか,胃、肚子,n,My stomach is full.,おなかがいっぱいです。,我的肚子很飽。,,,2
+grade_4_0574,subway,地下鉄,地鐵,n,I go to school by subway.,地下鉄で学校に行きます。,我搭地鐵上學。,sub（下）のway（道）,Sub（下面）的way（路）,2
+grade_4_0575,textbook,教科書,課本,n,Open your textbook to page ten.,教科書の10ページを開きなさい。,把課本翻到第十頁。,text（文章）のbook,Text（文字）的book,1
+grade_4_0576,theater,劇場・映画館,劇院、電影院,n,We watched a movie at the theater.,映画館で映画を見ました。,我們在電影院看了電影。,シアター,劇場theater,2
+grade_4_0577,tonight,今夜,今晚,adv,Let's watch the stars tonight.,今夜星を見ましょう。,今晚我們看星星吧。,to＋night（夜）,To＋night（夜晚）,1
+grade_4_0578,vet,獣医,獸醫,n,We took our dog to the vet.,犬を獣医に連れていきました。,我們帶狗去看獸醫。,veterinarianの略,Veterinarian的縮寫,2
+grade_4_0579,wallet,さいふ,錢包,n,I lost my wallet.,さいふをなくしました。,我弄丟了錢包。,,,2
+grade_4_0580,wet,ぬれた,濕的,adj,My shoes are wet from the rain.,くつが雨でぬれました。,我的鞋子被雨淋濕了。,dryの反対,Dry的相反,2
+grade_4_0581,winner,勝者・優勝者,獲勝者,n,She was the winner of the race.,彼女はレースの優勝者でした。,她是比賽的優勝者。,win（勝つ）人,Win（獲勝）的人,1
+grade_4_0582,yard,庭,院子,n,The children play in the yard.,子どもたちは庭で遊びます。,孩子們在院子裡玩。,,,2
+grade_4_0583,cafeteria,食堂・カフェテリア,自助餐廳,n,We eat lunch in the cafeteria.,私たちは食堂で昼食を食べます。,我們在自助餐廳吃午餐。,,,2
+grade_4_0584,fireworks,花火,煙火,n,We watched fireworks last night.,昨夜花火を見ました。,我們昨晚看了煙火。,fire（火）のwork（作品）,Fire（火）的work（作品）,2
+grade_4_0585,midnight,真夜中,午夜,n,He came home at midnight.,彼は真夜中に帰宅しました。,他午夜回到家。,mid（真ん中）のnight,Mid（中間）的night,2
+grade_4_0586,playground,遊び場・校庭,遊樂場,n,The playground is full of children.,遊び場は子どもでいっぱいです。,遊樂場滿是孩子。,play（遊ぶ）ground（場所）,Play（玩）的ground（場地）,1
+grade_4_0587,shrine,神社,神社,n,We visited a shrine on New Year's Day.,元日に神社に行きました。,我們元旦去了神社。,,,2
+grade_4_0588,temple,寺,寺廟,n,The old temple is famous.,その古いお寺は有名です。,那座古老的寺廟很有名。,,,2

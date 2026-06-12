@@ -279,3 +279,69 @@ grade_2_0277,crude,粗雑な・原油の,粗糙的、原油的,adj,Crude oil pri
 grade_2_0278,cultivate,耕す・育てる,耕種、培養,v,Farmers cultivate rice here.,ここでは農家が米を育てています。,農夫在這裡種稻。,,,4
 grade_2_0279,currency,通貨,貨幣,n,The yen is the currency of Japan.,円は日本の通貨です。,日圓是日本的貨幣。,current（流通している）もの,流通的（current）東西,4
 grade_2_0280,curriculum,カリキュラム・教育課程,課程,n,The school changed its curriculum.,学校はカリキュラムを変えました。,學校改變了課程。,,,3
+grade_2_0281,debate,討論・討論する,辯論,n,We had a debate about school rules.,校則について討論しました。,我們就校規進行了辯論。,ディベート,辯論debate,3
+grade_2_0282,dedicate,ささげる,奉獻,v,She dedicated her life to science.,彼女は人生を科学にささげました。,她將一生奉獻給科學。,,,4
+grade_2_0283,delicate,繊細な,精緻的、脆弱的,adj,This flower is very delicate.,この花はとても繊細です。,這朵花非常嬌嫩。,デリケート,細膩delicate,4
+grade_2_0284,dense,密集した・濃い,濃密的,adj,The forest is very dense.,その森はとても密集しています。,那片森林非常茂密。,,,4
+grade_2_0285,depart,出発する,出發,v,The train departs at nine.,列車は9時に出発します。,火車九點出發。,デパーチャー＝出発,出發departure,3
+grade_2_0286,depression,うつ・不景気,憂鬱、蕭條,n,The country suffered an economic depression.,その国は不景気に苦しみました。,那個國家遭受經濟蕭條。,,,4
+grade_2_0287,desperate,必死の・絶望的な,絕望的,adj,He made a desperate effort.,彼は必死の努力をしました。,他拚命努力。,,,4
+grade_2_0288,destination,目的地,目的地,n,We finally reached our destination.,ついに目的地に着きました。,我們終於到達目的地。,,,3
+grade_2_0289,destruction,破壊,破壞,n,The storm caused great destruction.,嵐は大きな破壊をもたらしました。,暴風雨造成嚴重破壞。,destroy（破壊する）の名詞,Destroy的名詞,4
+grade_2_0290,develop,発展させる・開発する,發展,v,The company developed a new product.,その会社は新製品を開発しました。,那家公司開發了新產品。,,,3
+grade_2_0291,diagnose,診断する,診斷,v,The doctor diagnosed the disease early.,医師は早期に病気を診断しました。,醫生及早診斷出疾病。,,,4
+grade_2_0292,dialect,方言,方言,n,She speaks the Osaka dialect.,彼女は大阪弁を話します。,她說大阪方言。,,,4
+grade_2_0293,diligent,勤勉な,勤奮的,adj,He is a diligent student.,彼は勤勉な学生です。,他是勤奮的學生。,,,4
+grade_2_0294,dimension,次元・寸法,維度、尺寸,n,Measure the dimensions of the box.,箱の寸法を測りなさい。,測量箱子的尺寸。,3D＝3次元,3D＝三維,4
+grade_2_0295,diminish,減少する,減少,v,His influence has diminished.,彼の影響力は減少しました。,他的影響力減弱了。,,,4
+grade_2_0296,diplomat,外交官,外交官,n,She wants to become a diplomat.,彼女は外交官になりたいです。,她想成為外交官。,,,4
+grade_2_0297,discipline,規律・しつけ,紀律,n,Discipline is important in sports.,スポーツでは規律が重要です。,運動中紀律很重要。,,,4
+grade_2_0298,discrimination,差別,歧視,n,We must fight against discrimination.,私たちは差別と戦わなければなりません。,我們必須對抗歧視。,,,4
+grade_2_0299,dismiss,解雇する・退ける,解僱、駁回,v,The company dismissed ten workers.,会社は10人を解雇しました。,公司解僱了十名員工。,,,4
+grade_2_0300,disorder,混乱・障害,混亂、失調,n,The room was in complete disorder.,部屋は完全に散らかっていました。,房間一片混亂。,dis＋order（秩序）,Dis＋order（秩序）,4
+grade_2_0301,dispose,処分する,處理,v,Dispose of the garbage properly.,ごみを適切に処分しなさい。,妥善處理垃圾。,,,4
+grade_2_0302,dispute,論争,爭議,n,The two countries settled the dispute.,両国は論争を解決しました。,兩國解決了爭端。,,,4
+grade_2_0303,dissolve,溶ける・解散する,溶解,v,Sugar dissolves in water.,砂糖は水に溶けます。,糖溶於水。,,,4
+grade_2_0304,distinct,明確に異なる,明顯不同的,adj,The two plans are distinct.,2つの計画は明確に異なります。,這兩個計畫明顯不同。,,,4
+grade_2_0305,distract,気を散らす,使分心,v,The noise distracted me from studying.,騒音で勉強に集中できませんでした。,噪音讓我無法專心讀書。,,,4
+grade_2_0306,diverse,多様な,多樣的,adj,The city has a diverse population.,その都市には多様な人々が住んでいます。,那座城市人口多元。,ダイバーシティ＝多様性,多元diversity,4
+grade_2_0307,divorce,離婚,離婚,n,They got a divorce last year.,彼らは昨年離婚しました。,他們去年離婚了。,,,3
+grade_2_0308,dominate,支配する,支配,v,The team dominated the game.,そのチームは試合を支配しました。,那支隊伍主宰了比賽。,,,4
+grade_2_0309,draft,下書き,草稿,n,I wrote the first draft of my essay.,作文の最初の下書きを書きました。,我寫了文章的初稿。,,,3
+grade_2_0310,drastic,思い切った・大胆な,激烈的,adj,We need drastic changes.,思い切った変化が必要です。,我們需要大刀闊斧的改變。,,,4
+grade_2_0311,drought,干ばつ,乾旱,n,The drought damaged the crops.,干ばつが作物に被害を与えました。,乾旱損害了農作物。,,,4
+grade_2_0312,duration,期間,期間,n,The duration of the movie is two hours.,映画の上映時間は2時間です。,電影片長兩小時。,,,4
+grade_2_0313,dynamic,活動的な・動的な,有活力的,adj,She has a dynamic personality.,彼女は活動的な性格です。,她個性充滿活力。,ダイナミック,有活力dynamic,3
+grade_2_0314,ecology,生態学・生態系,生態學,n,He studies the ecology of rivers.,彼は川の生態を研究しています。,他研究河川生態。,エコ＝ecologyから,環保eco來自ecology,4
+grade_2_0315,economical,経済的な・節約になる,經濟實惠的,adj,This car is economical on fuel.,この車は燃費が経済的です。,這輛車很省油。,,,4
+grade_2_0316,ecosystem,生態系,生態系統,n,The forest ecosystem is fragile.,森林の生態系はこわれやすいです。,森林生態系統很脆弱。,,,4
+grade_2_0317,edible,食べられる,可食用的,adj,Are these mushrooms edible?,このキノコは食べられますか。,這些菇可以吃嗎？,,,4
+grade_2_0318,elaborate,手のこんだ・詳しく述べる,精心製作的,adj,She made an elaborate plan.,彼女は手のこんだ計画を立てました。,她制定了精心的計畫。,,,4
+grade_2_0319,elegant,優雅な,優雅的,adj,She wore an elegant dress.,彼女は優雅なドレスを着ていました。,她穿著優雅的洋裝。,エレガント,優雅elegant,3
+grade_2_0320,element,要素,元素、要素,n,Trust is an important element of friendship.,信頼は友情の重要な要素です。,信任是友誼的重要元素。,,,3
+grade_2_0321,eligible,資格のある,有資格的,adj,You are eligible for the scholarship.,あなたは奨学金の資格があります。,你有資格申請獎學金。,,,4
+grade_2_0322,embrace,抱きしめる・受け入れる,擁抱,v,She embraced her old friend.,彼女は旧友を抱きしめました。,她擁抱老朋友。,,,4
+grade_2_0323,emerge,現れる,出現,v,The sun emerged from the clouds.,太陽が雲から現れました。,太陽從雲層中出現。,,,4
+grade_2_0324,emission,排出,排放,n,CO2 emissions are increasing.,CO2の排出が増えています。,二氧化碳排放量在增加。,,,4
+grade_2_0325,emphasis,強調,強調,n,The school puts emphasis on reading.,その学校は読書を重視しています。,那所學校重視閱讀。,emphasize（強調する）の名詞,Emphasize的名詞,4
+grade_2_0326,empire,帝国,帝國,n,The Roman Empire was vast.,ローマ帝国は広大でした。,羅馬帝國幅員遼闊。,,,3
+grade_2_0327,endure,耐える,忍耐,v,They endured the long winter.,彼らは長い冬に耐えました。,他們熬過了漫長的冬天。,,,4
+grade_2_0328,enforce,施行する,執行,v,The police enforce the law.,警察は法律を執行します。,警察執法。,,,4
+grade_2_0329,enhance,高める,提升,v,Reading enhances your vocabulary.,読書は語彙力を高めます。,閱讀提升你的詞彙量。,,,4
+grade_2_0330,enroll,入学する・登録する,註冊,v,She enrolled in a cooking class.,彼女は料理教室に登録しました。,她報名了烹飪課。,,,4
+grade_2_0331,ensure,保証する・確実にする,確保,v,Check twice to ensure accuracy.,正確を期すために2回確認しなさい。,為確保準確要檢查兩次。,,,4
+grade_2_0332,enterprise,企業・事業,企業,n,He started a new enterprise.,彼は新しい事業を始めました。,他開創了新事業。,,,4
+grade_2_0333,enthusiasm,熱意,熱情,n,She showed great enthusiasm for the project.,彼女はそのプロジェクトに大きな熱意を見せました。,她對這個專案表現出極大熱情。,,,4
+grade_2_0334,entire,全体の,整個的,adj,I read the entire book in one day.,1日で本を全部読みました。,我一天讀完整本書。,,,3
+grade_2_0335,envy,うらやむ,羨慕,v,I envy your talent.,あなたの才能がうらやましいです。,我羨慕你的才華。,,,3
+grade_2_0336,equip,備え付ける,配備,v,The lab is equipped with computers.,実験室にはコンピュータが備え付けられています。,實驗室配備了電腦。,装備＝equipment,裝備equipment,4
+grade_2_0337,era,時代,時代,n,We live in the digital era.,私たちはデジタル時代に生きています。,我們生活在數位時代。,,,3
+grade_2_0338,erupt,噴火する,爆發,v,The volcano erupted last month.,その火山は先月噴火しました。,那座火山上個月爆發了。,,,4
+grade_2_0339,essential,不可欠な,必不可少的,adj,Water is essential for life.,水は生命に不可欠です。,水是生命所必需的。,,,3
+grade_2_0340,establish,設立する,建立,v,The school was established in 1900.,その学校は1900年に設立されました。,那所學校創立於1900年。,,,4
+grade_2_0341,estimate,見積もる,估計,v,"I estimate the cost at 10,000 yen.",費用を1万円と見積もります。,我估計費用為一萬日圓。,,,4
+grade_2_0342,ethnic,民族の,民族的,adj,The city has many ethnic restaurants.,その都市には多くの民族料理店があります。,那座城市有許多異國料理餐廳。,エスニック料理,異國風味ethnic,4
+grade_2_0343,evaluate,評価する,評估,v,The teacher evaluated our reports.,先生は私たちのレポートを評価しました。,老師評估了我們的報告。,,,4
+grade_2_0344,evidence,証拠,證據,n,The police found new evidence.,警察は新しい証拠を見つけました。,警察找到了新證據。,,,3
+grade_2_0345,evolve,進化する,進化,v,Technology evolves quickly.,技術は速く進化します。,科技快速進化。,,,4
+grade_2_0346,exaggerate,誇張する,誇大,v,Don't exaggerate the story.,話を誇張しないで。,別誇大那個故事。,,,4

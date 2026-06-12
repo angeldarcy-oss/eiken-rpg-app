@@ -191,7 +191,7 @@ if not st.session_state.player.get("character"):
 _lang = (st.session_state.get("player") or {}).get("language", "ja")
 pg = st.navigation(
     [
-        st.Page("home.py",               title="英検Quest",                              default=True),
+        st.Page("pages/00_home.py",     title="英検Quest",                              default=True),
         st.Page("pages/01_quest.py",    title=t("pt_quest",    _lang) + " | 英検Quest"),
         st.Page("pages/02_dungeon.py",  title=t("pt_dungeon",  _lang) + " | 英検Quest"),
         st.Page("pages/03_daily.py",    title=t("pt_daily",    _lang) + " | 英検Quest"),

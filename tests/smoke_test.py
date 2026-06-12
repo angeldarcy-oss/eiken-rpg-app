@@ -32,7 +32,7 @@ def check(name, fn):
 # ── 1. コンパイル ───────────────────────────────────────────
 def compile_all():
     targets = list((ROOT / "core").glob("*.py")) + list((ROOT / "pages").glob("*.py"))
-    targets += [ROOT / "app.py", ROOT / "home.py"]
+    targets += [ROOT / "app.py"]
     for f in targets:
         py_compile.compile(str(f), doraise=True)
 

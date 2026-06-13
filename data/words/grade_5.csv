@@ -560,3 +560,18 @@ grade_5_0558,snail,カタツムリ,蝸牛,n,A snail moves very slowly.,カタツ
 grade_5_0559,spider,クモ,蜘蛛,n,A spider makes a web.,クモは巣を作ります。,蜘蛛結網。,,,1
 grade_5_0560,grasshopper,バッタ,蚱蜢,n,A grasshopper jumps high.,バッタは高くとびます。,蚱蜢跳得很高。,,,1
 grade_5_0561,goldfish,金魚,金魚,n,I have three goldfish.,金魚を3びき飼っています。,我養了三條金魚。,gold（金）のfish,Gold（金）的fish,1
+grade_5_0562,get up,起きる,起床,phr,I get up at six every day.,私は毎日6時に起きます。,我每天六點起床。,ベッドから上がる(up),從床上起來(up),1
+grade_5_0563,stand up,立ち上がる,站起來,phr,Please stand up.,立ってください。,請站起來。,up＝上に立つ,up＝站起來,1
+grade_5_0564,sit down,すわる,坐下,phr,"Sit down, please.",すわってください。,請坐下。,down＝下に,down＝坐下,1
+grade_5_0565,go to bed,寝る,上床睡覺,phr,I go to bed at nine.,私は9時に寝ます。,我九點上床睡覺。,ベッドに行く,去床上,1
+grade_5_0566,get to,〜に着く,到達,phr,I get to school at eight.,私は8時に学校に着きます。,我八點到學校。,,,1
+grade_5_0567,look at,〜を見る,看,phr,Look at the blackboard.,黒板を見なさい。,看黑板。,atは「〜を」,at是「對著」,1
+grade_5_0568,listen to,〜を聞く,聽,phr,Listen to the music.,音楽を聞きなさい。,聽音樂。,,,1
+grade_5_0569,come from,〜出身である,來自,phr,I come from Japan.,私は日本出身です。,我來自日本。,,,1
+grade_5_0570,get on,（乗り物に）乗る,上車,phr,Get on the bus here.,ここでバスに乗りなさい。,在這裡上公車。,onは接触,on是接觸,1
+grade_5_0571,a lot of,たくさんの,許多,phr,I have a lot of books.,私はたくさんの本を持っています。,我有很多書。,,,1
+grade_5_0572,a glass of,コップ1杯の,一杯,phr,I want a glass of water.,水を1杯ほしいです。,我想要一杯水。,,,1
+grade_5_0573,a cup of,カップ1杯の,一杯,phr,She drinks a cup of tea.,彼女はお茶を1杯飲みます。,她喝一杯茶。,,,1
+grade_5_0574,over there,あそこに,在那邊,phr,The station is over there.,駅はあそこです。,車站在那邊。,,,1
+grade_5_0575,every day,毎日,每天,phr,I study English every day.,私は毎日英語を勉強します。,我每天學英文。,,,1
+grade_5_0576,right now,今すぐ,現在馬上,phr,Do it right now.,今すぐやりなさい。,現在馬上做。,,,1
